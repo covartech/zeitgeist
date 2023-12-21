@@ -149,3 +149,185 @@ The conference is in December and this is a cool visualization to see trends. Lo
 `GenDeF: Learning Generative Deformation Field for Video Generation <https://arxiv.org/pdf/2312.04561.pdf>`_
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Video generation via warping one image rather than generating multiple frames in a row.  Unclear how it extends to long videos, but might have some insights for analyzing videos
+
+------------
+
+`Multiview Aerial Visual Recognition (MAVREC): Can Multi-view Improve Aerial Visual Perception?  <https://arxiv.org/pdf/2312.04548.pdf>`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Creates a dataset of co-located ground and aerial views.  Finds that supplementing aerial detectors with ground views of the same location at the same time increases performance.  
+
+------------
+
+`GRAPH CONVOLUTIONS ENRICH THE SELF-ATTENTION IN TRANSFORMERS! <https://arxiv.org/pdf/2312.04234.pdf>`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+We are reaching the limits of self-attention as a mechanism in transformers (???).  Represents self-attention as a graph filter and redesigns from graph signal processing perspective.  Increased performance but also increased complexity
+
+------------
+
+`Zero-Class Poisson for Rare-Event Studies <https://arxiv.org/ftp/arxiv/papers/2312/2312.03894.pdf>`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Proposes a Bayesian zero-count Poisson detector for rare event detection.  Like all rare event stuff you're pretty data-limited, but it's a cool field of study
+
+------------
+
+`Temperature Balancing, Layer-wise Weight Analysis, and Neural Network Training <https://arxiv.org/pdf/2312.00359.pdf>`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Interprets learning rate as temperature, and proposes a method for varying the learning rate in a DNN on a layer-by-layer basis.  Significantly outperforms existing SGD methods
+
+------------
+
+`Reconstructing Hands in 3D with Transformers <https://arxiv.org/pdf/2312.05251.pdf>`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Implemented a transformer that can look at pictures of hands and output a 3D mesh.  Could be useful for Doctrinaire/TA2/whenever we want to use a CAD model
+
+------------
+
+`Beyond Transduction: A Survey on Inductive, Few Shot, and Zero Shot Link Prediction in Knowledge Graphs <https://arxiv.org/pdf/2312.04997.pdf>`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Review paper.  Does what it says on the tin
+
+------------
+
+`Probabilistic Reconstruction of Paleodemographic Signals <https://arxiv.org/pdf/2312.05152.pdf>`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Bayesian approach to paleodemography with emphasis on uncertainty and a case study on Cyprus.  Cool problem, though I'm not necessarily convinced by their methods
+
+------------
+
+`Understanding the Detrimental Class-level Effects of Data Augmentation <https://openreview.net/forum?id=dQkeoGnn68>`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ICML.  Analyzes how data augmentation can hurt individual class-level accuracy while improving average class level accuracy.  Data augmentation creates overlap between data distributions associated with different classes
+
+------------
+
+`QuickQuakeBuildings: Post-earthquake SAR-Optical Dataset for Quick Damaged-building Detection <https://arxiv.org/pdf/2312.06587.pdf>`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Uses satellite/high-altitude SAR dataset to assess which buildings were damaged by earthquakes.  Combination of binary classification and anomaly detection.
+
+------------
+
+`The Machine Learning Control Method for Counterfactual Forecasting <https://arxiv.org/pdf/2312.05858.pdf>`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Interesting approach to causal problems.  Learns trend before treatment using ML methods (regression trees?) and forecasts the counterfactual, what would happen to patients in the absence of treatment.  This allows estimation of treatment effects.  
+
+------------
+
+`Benchmarking Deep Learning Classifiers for SAR Automatic Target Recognition <https://arxiv.org/pdf/2312.06940.pdf>`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Coauthors from DEVCOM Army Research Lab - might give us insight about what they want.  They analyze SAR classifiers for classification accuracy, runtime performance in terms of inference throughput, and analytical performance in terms of number of parameters, number of layers, model size and number of operations.  No single model rules them all
+
+------------
+
+`Deep Internal Learning: Deep Learning from a Single Input <https://arxiv.org/pdf/2312.07425.pdf>`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Review paper.  Covers methods for doing deep internal learning - training a model from a very small amount of inputs - with a focus on CV
+
+------------
+
+`Can a Transformer Represent a Kalman Filter? <https://arxiv.org/pdf/2312.06937.pdf>`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Yes.  Short paper, focusses on theory - no experiments/implementation.  Also, they left the AISTATs instruction blurb in at the end…
+
+------------
+
+`WIT-UAS: A Wildland-fire Infrared Thermal Dataset to Detect Crew Assets From Aerial Views <https://arxiv.org/pdf/2312.09159.pdf>`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+New LWIR overhead aerial dataset. Probably more useful for UAS than TA2, but might be useful if we ever want to do IR capabilities
+
+------------
+
+`NestE: Modeling Nested Relational Structures for Knowledge Graph Reasoning <https://arxiv.org/pdf/2312.09219.pdf>`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Extends knowledge graph methods to nested triples or triples of triples: "(e.g., ((BarackObama, holds position, President), succeed by, (DonaldTrump, holds position, President)))"
+
+------------
+
+`Auto MC-Reward: Automated Dense Reward Design with Large Language Models for Minecraft <https://arxiv.org/pdf/2312.09238.pdf>`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Uses LLMs to make design dense rewards in Minecraft to make it easier to train AI
+
+------------
+
+`Vision-Language Models as a Source of Rewards <https://arxiv.org/pdf/2312.09187.pdf>`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Deepmind.  Uses vision-language models (CLIP family) to generate dense rewards for use in training reinforcement learning type things
+
+------------
+
+`Using Surprise Index for Competency Assessment in Autonomous Decision-Making <https://arxiv.org/pdf/2312.09033.pdf>`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Proposes a surprise index to evaluate how autonomous AI makes decisions and evaluates on space-maneuvers.  
+
+------------
+
+`SAT-Based Algorithms for Regular Graph Pattern Matching <https://arxiv.org/pdf/2312.09995.pdf>`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Proposes ReGaPs (regular graph patterns) to do better graph matching - isomorphisms, approximations, subsets, etc, as well as Boolean satisfiability (SAT) encoding, and a simplification technique
+
+------------
+
+`Modeling and Predicting Epidemic Spread: A Gaussian Process Regression Approach <https://arxiv.org/pdf/2312.09384.pdf>`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Proposes a Gaussian Process Regression model for epidemic analysis.  Derives new measures of uncertainty which make more sense than traditional measures
+
+------------
+
+`Are Emergent Abilities of Large Language Models a Mirage? <https://arxiv.org/pdf/2304.15004.pdf>`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Best in show at NeurIPS?  Argues that emergent behavior (as model scale increases) is just due to choice of metric rather than any underlying behavior.
+
+------------
+
+`Human mobility is well described by closed-form gravity-like models learned automatically from data <https://arxiv.org/pdf/2312.11281.pdf>`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Simple, gravity-like machine learning models better describe human mobility than either gravity models or deep learning models
+
+------------
+
+`Do Bayesian Neural Networks Weapon System Improve Predictive Maintenance? <https://arxiv.org/ftp/arxiv/papers/2312/2312.10494.pdf>`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Naval Surface Warfare Center.  Use Bayesian Neural Nets to estimate time to failure for highly reliable weapons systems. 
+
+------------
+
+`MineObserver 2.0: A Deep Learning & In-Game Framework for Assessing Natural Language Descriptions of Minecraft Imagery <https://arxiv.org/pdf/2312.11761.pdf>`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Minecraft for learning.  Proposes a method for grading natural language descriptions of a Minecraft screenshot
+
+------------
+
+`Large Language Models Play StarCraft II: Benchmarks and A Chain of Summarization Approach <https://arxiv.org/pdf/2312.11865.pdf>`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+LLMs play SC2.  Has an SC2 to text to Chain of Summarization pipeline for developing strategies and allowing the LLM to interact
+
+------------
+
+`Estimation of individual causal effects in network setup for multiple treatments <https://arxiv.org/pdf/2312.11573.pdf>`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Uses graph convolutional networks to estimate individual treatment effects in network meta analysis settings with observational data
+
+------------
+
+`A Bayesian Spatial Model to Correct Under-Reporting in Urban Crowdsourcing <https://arxiv.org/pdf/2312.11754.pdf>`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Uses a Bayesian model to account for underreporting in storm-induced flooding reports, using data from across multiple storms.  Outperforms baseline models
+
+------------
+
+`A MATHEMATICAL PERSPECTIVE ON TRANSFORMERS <https://arxiv.org/pdf/2312.10794.pdf>`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+New mathematical perspective on transformers: "based on their interpretation as interacting particle systems, which reveals that clusters emerge in long time."
+
+------------
+
+`Scaling Opponent Shaping to High Dimensional Games <https://arxiv.org/pdf/2312.12568.pdf>`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Proposes a method for shaping your opponents' behaviors in multi-agent games to get to better outcomes for everyone
+
+------------
+
+`LLM in a flash: Efficient Large Language Model Inference with Limited Memory <https://arxiv.org/pdf/2312.11514.pdf>`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Apple.  Extremely computationally efficient LLMs
+
+
