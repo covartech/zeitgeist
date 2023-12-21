@@ -1,0 +1,23 @@
+stages:
+  - build
+
+# Caching of the .tox/ area is preferable, but is impossibly slow.  Instead we
+# will preserve the .tox/ area so it can be used from one pipeline to the next.
+# Once https://gitlab.com/groups/gitlab-org/-/epics/3763 is resolved then we can
+# switch back to caching.
+variables:
+  GIT_CLEAN_FLAGS: -ffdx -e .tox/
+
+
+# Deploy HTML docs to Gitlab pages
+pages:
+  stage: build
+  script:
+  - tox
+  artifacts:
+    paths:
+    - public
+  tags:
+    - py3.7
+  only:
+  - main
