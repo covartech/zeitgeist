@@ -143,3 +143,9 @@ What's after transformers? Any ideas? Yeah there are some and sometimes they are
 `NeurIPS 2023 <https://neurips2023.vizhub.ai>`_
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The conference is in December and this is a cool visualization to see trends. Lots to explore. Maybe next month.
+
+------------
+
+`GenDeF: Learning Generative Deformation Field for Video Generation <https://arxiv.org/pdf/2312.04561.pdf>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Video generation via warping one image rather than generating multiple frames in a row.  Unclear how it extends to long videos, but might have some insights for analyzing videos
