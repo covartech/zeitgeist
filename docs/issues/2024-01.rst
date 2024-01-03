@@ -331,3 +331,21 @@ Proposes a method for shaping your opponents' behaviors in multi-agent games to 
 Apple.  Extremely computationally efficient LLMs
 
 
+------------
+
+`Movement of insurgent gangs: A Bayesian kernel density model for incomplete temporal data <https://arxiv.org/pdf/2401.01231.pdf>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Uses Bayesian models to predict the movement of insurgent gangs.  Worked with Indian police.  Incorporates "expert priors" into sequentially updating model.
+
+------------
+
+`Accurate and Efficient Urban Street Tree Inventory with Deep Learning on Mobile Phone Imagery <https://arxiv.org/pdf/2401.01180.pdf>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Puts a pipeline on a phone to detect, segment, and estimate the diameter of tree trunks. 
+
+------------
+
+`Reinforcement Learning for SAR View Angle Inversion with Differentiable SAR Renderer <https://arxiv.org/pdf/2401.01165.pdf>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Uses a differentiable SAR renderer in a deep reinforcement learning algorithm to for the inverse problem in SAR imagery - predicting incident and azimuth angle.  Assumes it knows the target type
