@@ -349,3 +349,14 @@ Puts a pipeline on a phone to detect, segment, and estimate the diameter of tree
 `Reinforcement Learning for SAR View Angle Inversion with Differentiable SAR Renderer <https://arxiv.org/pdf/2401.01165.pdf>`_
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Uses a differentiable SAR renderer in a deep reinforcement learning algorithm to for the inverse problem in SAR imagery - predicting incident and azimuth angle.  Assumes it knows the target type
+
+------------
+`Large Language Models Relearn Removed Concepts <https://arxiv.org/pdf/2401.01814.pdf>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Investigates how LLMs manage to relearn concepts after the neurons associated with those concepts are deleted.  They "relocate advanced concepts to earlier layers and reallocate pruned concepts to primed neurons with similar semantic concepts"
+------------
+`MULTIPLE IMPUTATION OF HIERARCHICAL NONLINEAR TIME SERIES DATA WITH AN APPLICATION TO SCHOOL ENROLLMENT DATA <https://arxiv.org/pdf/2401.01872.pdf>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Proposes a novel MICE method for nonlinear hierarchical time series data
+
+------------
