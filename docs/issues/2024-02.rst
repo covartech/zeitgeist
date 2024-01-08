@@ -1,0 +1,82 @@
+
+2024-02
+=======
+
+Example Topic
+-------------
+
+This is an example topic with styling that might be a good idea for a way to structure things. It might be a good idea to include in line links like this: `Splatter Image: Ultra-Fast Single-View 3D Reconstruction <https://arxiv.org/abs/2312.13150>`_. Or maybe just opine. 
+
+Since you are talking about a specific topic maybe it would be a good idea to make a list. 
+
+`Splatter Image: Ultra-Fast Single-View 3D Reconstruction <https://szymanowiczs.github.io/splatter-image>`_
+    Single Image to 3D rendering
+
+`GPS-Gaussian: Generalizable Pixel-wise 3D Gaussian Splatting for Real-time Human Novel View Synthesis <https://shunyuanzheng.github.io/GPS-Gaussian>`_
+    Splatting for moving people (dancing around).
+
+`Gaussian Head Avatar: Ultra High-fidelity Head Avatar via Dynamic Gaussians <https://yuelangx.github.io/gaussianheadavatar/>`_
+    Splatting for avatar heads.
+
+`Triplane Meets Gaussian Splatting: Fast and Generalizable Single-View 3D Reconstruction with Transformers <https://arxiv.org/abs/2312.09147>`_
+    Splatting with transformers baked in.
+
+`iComMa: Inverting 3D Gaussians Splatting for Camera Pose Estimation via Comparing and Matching <https://arxiv.org/abs/2312.09031>`_
+    This is the one that feels most like the future of Doctrinaire. 
+
+------------
+
+
+
+LLMs
+----
+
+`Large Language Models Relearn Removed Concepts <https://arxiv.org/pdf/2401.01814.pdf>`_
+    Investigates how LLMs manage to relearn concepts after the neurons associated with those concepts are deleted.  They "relocate advanced concepts to earlier layers and reallocate pruned concepts to primed neurons with similar semantic concepts"
+
+
+
+Build It
+--------
+
+`Accurate and Efficient Urban Street Tree Inventory with Deep Learning on Mobile Phone Imagery <https://arxiv.org/pdf/2401.01180.pdf>`_
+    Puts a pipeline on a phone to detect, segment, and estimate the diameter of tree trunks. 
+
+
+Theory
+------
+
+
+Images
+------
+
+
+
+Doctrinaire
+-----------
+
+`Reinforcement Learning for SAR View Angle Inversion with Differentiable SAR Renderer <https://arxiv.org/pdf/2401.01165.pdf>`_
+    Uses a differentiable SAR renderer in a deep reinforcement learning algorithm to for the inverse problem in SAR imagery - predicting incident and azimuth angle.  Assumes it knows the target type
+
+
+
+
+Reasoning
+---------
+
+
+
+
+Stats
+-----
+
+`Movement of insurgent gangs: A Bayesian kernel density model for incomplete temporal data <https://arxiv.org/pdf/2401.01231.pdf>`_
+    Uses Bayesian models to predict the movement of insurgent gangs.  Worked with Indian police.  Incorporates "expert priors" into sequentially updating model.
+
+`Multiple Imputation of Hierarchical Non-Linear Time Series Data with an Application to School Enrollment Data <https://arxiv.org/pdf/2401.01872.pdf>`_
+    Proposes a novel MICE method for nonlinear hierarchical time series data
+
+
+Potpurrie
+---------
+
