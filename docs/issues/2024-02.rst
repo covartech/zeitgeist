@@ -36,7 +36,7 @@ LLMs
 ------
 
 `DeepSeek LLM Scaling Open-Source Language Models with Longtermism <https://arxiv.org/pdf/2401.02954.pdf>`_
-    New LLM (DeepSeek) just dropped.  Investigates scaling laws with LLMs by assembling a 2 trillion token dataset of english and chinese characters.  This seems to depend on a lot of things, e.g. batch size, learning rate, and dataset.  Having english and chinese tokens together is a bit weird - the dataset is parittioned in two halves that aren't able to interact with each other?  Worth reading but I have questions...
+    New LLM (DeepSeek) just dropped.  Investigates scaling laws with LLMs by assembling a 2 trillion token dataset of english and chinese characters.  This seems to depend on a lot of things, e.g. batch size, learning rate, and dataset.  Having english and chinese tokens together is a bit weird - the dataset is parittioned in two halves that aren't able to interact with each other?  Maybe it's translation? Worth reading but I have questions...
 
 ------
 
