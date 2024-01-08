@@ -40,6 +40,10 @@ LLMs
 
 ------
 
+`DeepSeek code <https://github.com/deepseek-ai/DeepSeek-LLM>`_
+    Link to github.  The let you download the model (only 67B parameters) but is also a Chinese company so maybe we need to get it cleared with the security folks before downloading?
+------
+
 `Generative Large Language Models are autonomous practitioners of evidence-based medicine <https://arxiv.org/pdf/2401.02851.pdf>`_
     Have you ever wanted Chat-GPT to be your doctor?  A bunch of MDs (and a few PhDs) think it can!  It's bad.  Don't do this.
 
