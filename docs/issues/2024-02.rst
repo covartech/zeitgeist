@@ -27,20 +27,27 @@ Since you are talking about a specific topic maybe it would be a good idea to ma
 ------------
 
 
-
 LLMs
 ----
 
 `Large Language Models Relearn Removed Concepts <https://arxiv.org/pdf/2401.01814.pdf>`_
     Investigates how LLMs manage to relearn concepts after the neurons associated with those concepts are deleted.  They "relocate advanced concepts to earlier layers and reallocate pruned concepts to primed neurons with similar semantic concepts"
 
+------
 
+`DeepSeek LLM Scaling Open-Source Language Models with Longtermism <https://arxiv.org/pdf/2401.02954.pdf>`_
+    New LLM (DeepSeek) just dropped.  Investigates scaling laws with LLMs by assembling a 2 trillion token dataset of english and chinese characters.  This seems to depend on a lot of things, e.g. batch size, learning rate, and dataset.  Having english and chinese tokens together is a bit weird - the dataset is parittioned in two halves that aren't able to interact with each other?  Worth reading but I have questions...
+
+------
+
+`Generative Large Language Models are autonomous practitioners of evidence-based medicine <https://arxiv.org/pdf/2401.02851.pdf>`_
+    Have you ever wanted Chat-GPT to be your doctor?  A bunch of MDs (and a few PhDs) think it can!  It's bad.  Don't do this.
 
 Build It
 --------
 
 `Accurate and Efficient Urban Street Tree Inventory with Deep Learning on Mobile Phone Imagery <https://arxiv.org/pdf/2401.01180.pdf>`_
-    Puts a pipeline on a phone to detect, segment, and estimate the diameter of tree trunks. 
+    Puts a pipeline on a phone to detect, segment, and estimate the diameter of tree trunks.  Cool application/engineering project.
 
 
 Theory
@@ -50,13 +57,15 @@ Theory
 Images
 ------
 
+`Bayesian changepoint detection via logistic regression and the topological analysis of image series <https://arxiv.org/pdf/2401.02917.pdf>`_
+    Uses a Bayesian framework for changepoint detection in images using topological data analysis and polya-gamma sampling.  Kind of a madlibs of concept, but pretty cool.  Leverages classification ability of logistic regression to do change detection - the bayesian part lets them do uncertainty quantification and prior encoding.  Test their method on nanoparticles and solar flares.  Kind of limited in terms of use (?) but cool
 
 
 Doctrinaire
 -----------
 
 `Reinforcement Learning for SAR View Angle Inversion with Differentiable SAR Renderer <https://arxiv.org/pdf/2401.01165.pdf>`_
-    Uses a differentiable SAR renderer in a deep reinforcement learning algorithm to for the inverse problem in SAR imagery - predicting incident and azimuth angle.  Assumes it knows the target type
+    Uses a differentiable SAR renderer in a deep reinforcement learning algorithm to for the inverse problem in SAR imagery - predicting incident and azimuth angle.  Assumes it knows the target type.  Similar to what we're trying for TA2, but no one can figure out why the reinforcement learning.  To switch between CAD models?
 
 
 
@@ -64,7 +73,8 @@ Doctrinaire
 Reasoning
 ---------
 
-
+`GRAPH2TAC: LEARNING HIERARCHICAL REPRESENTATIONS OF MATH CONCEPTS IN THEOREM PROVING <https://arxiv.org/pdf/2401.02949.pdf>`_
+    Out of IBM and a few other places.  Working on a programming language that can assist mathematicians with making math proofs.  Fuses together a kNN and a graph neural net to help.  It's a cool idea - and in theory a computer should be able to do some sort of reasoning like this - but in practice they struggle - only 26% of theorems proven in the hold-out set.
 
 
 Stats
@@ -74,7 +84,7 @@ Stats
     Uses Bayesian models to predict the movement of insurgent gangs.  Worked with Indian police.  Incorporates "expert priors" into sequentially updating model.
 
 `Multiple Imputation of Hierarchical Non-Linear Time Series Data with an Application to School Enrollment Data <https://arxiv.org/pdf/2401.01872.pdf>`_
-    Proposes a novel MICE method for nonlinear hierarchical time series data
+    Proposes a novel MICE method for nonlinear hierarchical time series data.  
 
 
 Potpurrie
