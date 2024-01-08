@@ -38,16 +38,15 @@ Implemented a transformer that can look at pictures of hands and output a 3D mes
 
 ------------
 
+`Are Emergent Abilities of Large Language Models a Mirage? <https://arxiv.org/pdf/2304.15004.pdf>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The authors claimed on twitter that this was best in show at NeurIPS, and no one would lie about that.  Argues that emergent behavior (as model scale increases) is just due to choice of metric rather than any underlying behavior.
+
+--------------
 
 
 
 LLMs
---------------
-
-`Are Emergent Abilities of Large Language Models a Mirage? <https://arxiv.org/pdf/2304.15004.pdf>`_
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Best in show at NeurIPS?  Argues that emergent behavior (as model scale increases) is just due to choice of metric rather than any underlying behavior.
-
 ------------
 
 `Mixtral 8x7B Explained <https://huggingface.co/blog/moe>`_
