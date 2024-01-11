@@ -56,6 +56,9 @@ Build It
 Theory
 ------
 
+`Neural Population Learning beyond Symmetric Zero-sum Games <https://arxiv.org/pdf/2401.05133.pdf>`_
+    Deepmind.  Game theory paper analyzing policies for games with many players that are not zero sum - think about collaboration, forced or otherwise.  Seems interesting, but heavy on theory.
+
 
 Images
 ------
@@ -88,9 +91,14 @@ Stats
 `Multiple Imputation of Hierarchical Non-Linear Time Series Data with an Application to School Enrollment Data <https://arxiv.org/pdf/2401.01872.pdf>`_
     Proposes a novel MICE method for nonlinear hierarchical time series data.  
 
-
 `Spatio-temporal data fusion for the analysis of in situ and remote sensing data using the INLA-SPDE approach <https://arxiv.org/pdf/2401.04723.pdf>`_
     Predicts harmful algae blooms by using a hierarchical Bayesian model to align ground-level and satellite data.  Postules the existence of a latent spatiotemporal process (gaussian random field) and models it.  Uses INLA for computational efficiency. Seems like a cool idea
 
+`Hierarchical Causal Models <https://arxiv.org/pdf/2401.05330.pdf>`_
+    David Blei likes to play around with causal inference despite being mostly a machine learning guy.  He gave a talk at Duke about something similar when I was a grad student and in front of the entire department Fan Li told him, in no uncertain terms, that she thought it was a bunch of junk.  I don't know enough about causal to evaluate, but seems like an interesting read.
+
 Potpurrie
 ---------
+
+`Reliability Analysis of Complex Systems using Subset Simulations with Hamiltonian Neural Networks <https://arxiv.org/pdf/2401.05244.pdf>`_
+    This paper analyzes large complex systems for chance of failure.  Essentially uses a Monte Carlo simulator with subset simulation to simulate the chance of different parts failing - this is slow so they do some fancy footwork with Hamiltonians to make it fast.  Feels like there's a pitch for this sort of thing somehwere in the DoD
