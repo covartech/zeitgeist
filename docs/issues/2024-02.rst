@@ -59,6 +59,8 @@ Theory
 `Neural Population Learning beyond Symmetric Zero-sum Games <https://arxiv.org/pdf/2401.05133.pdf>`_
     Deepmind.  Game theory paper analyzing policies for games with many players that are not zero sum - think about collaboration, forced or otherwise.  Seems interesting, but heavy on theory.
 
+`Reliability Analysis of Complex Systems using Subset Simulations with Hamiltonian Neural Networks <https://arxiv.org/pdf/2401.05244.pdf>`_
+    This paper analyzes large complex systems for chance of failure.  Essentially uses a Monte Carlo simulator with subset simulation to simulate the chance of different parts failing - this is slow so they do some fancy footwork with Hamiltonians to make it fast.  Feels like there's a pitch for this sort of thing somehwere in the DoD.  Most of this paper is Hamiltonian (neural) Monte Carlo theory.
 
 Images
 ------
@@ -99,6 +101,3 @@ Stats
 
 Potpurrie
 ---------
-
-`Reliability Analysis of Complex Systems using Subset Simulations with Hamiltonian Neural Networks <https://arxiv.org/pdf/2401.05244.pdf>`_
-    This paper analyzes large complex systems for chance of failure.  Essentially uses a Monte Carlo simulator with subset simulation to simulate the chance of different parts failing - this is slow so they do some fancy footwork with Hamiltonians to make it fast.  Feels like there's a pitch for this sort of thing somehwere in the DoD
