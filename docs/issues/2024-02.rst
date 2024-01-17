@@ -62,6 +62,9 @@ Theory
 `Reliability Analysis of Complex Systems using Subset Simulations with Hamiltonian Neural Networks <https://arxiv.org/pdf/2401.05244.pdf>`_
     This paper analyzes large complex systems for chance of failure.  Essentially uses a Monte Carlo simulator with subset simulation to simulate the chance of different parts failing - this is slow so they do some fancy footwork with Hamiltonians to make it fast.  Feels like there's a pitch for this sort of thing somehwere in the DoD.  Most of this paper is Hamiltonian (neural) Monte Carlo theory.
 
+`A Survey on Statistical Theory of Deep Learning: Approximation, Training Dynamics, and Generative Models <https://arxiv.org/pdf/2401.07187.pdf>`_
+    Review paper on deep learning out of a lab at UCLA.  Three sections: risk, training, generative models.  Worth reading
+
 Images
 ------
 
@@ -99,5 +102,10 @@ Stats
 `Hierarchical Causal Models <https://arxiv.org/pdf/2401.05330.pdf>`_
     David Blei likes to play around with causal inference despite being mostly a machine learning guy.  He gave a talk at Duke about something similar when I was a grad student and in front of the entire department Fan Li told him, in no uncertain terms, that she thought it was a bunch of junk.  I don't know enough about causal to evaluate, but seems like an interesting read.
 
+`Automated lag-selection for multi-step univariate time series forecast using Bayesian Optimization: Forecast station-wise monthly rainfall of nine divisional cities of Bangladesh <https://arxiv.org/pdf/2401.08070.pdf>`_
+    Wants to use an LSTM to model rainfall in Bangladesh, but has to do hyperparameter optimization.  Adapts Bayesian Optimization methods using Gaussian Processes as black box functions to do so.  Works pretty well.  
+
 Potpurrie
 ---------
+`Decentralised Emergence of Robust and Adaptive Linguistic Conventions in Populations of Autonomous Agents Grounded in Continuous Worlds <https://arxiv.org/pdf/2401.08461.pdf>`_
+    An agent-based simulation framework for generating howartificial langauges might arise which obey certain rules common to all languages.  Kind of like the Game of Life on steroids.  
