@@ -73,7 +73,7 @@ Theory
 `Decision Transformer: Reinforcement Learning via Sequence Modeling <https://arxiv.org/abs/2106.01345>`_
     Facebook/Google/Berkeley.  Kind of an older paper. Reinforcement learning is useful, but finnicky and difficult to implement (random seeds as hyperparameters, anyone?).  What if we could do reinforcement learning with Transformers?  Models sequence of past state, actions, and rewards as an autoregressive trajectory and plugs into a transformer.  Seems to beat out open software RL implementations and is much easier.  Worth considering
 
-`High-dimensional analysis of double descent for linear regression with random projections <Demonstrates (with some random matrix theory) that double descent also occurs in linear regression settings.  Whatever's causing double descent, it's not unique to deep learning - something to do with the nature of overparameterization?>`
+`High-dimensional analysis of double descent for linear regression with random projections <Demonstrates (with some random matrix theory) that double descent also occurs in linear regression settings.  Whatever's causing double descent, it's not unique to deep learning - something to do with the nature of overparameterization?>`_
     Demonstrates (with some random matrix theory) that double descent also occurs in linear regression settings.  Whatever's causing double descent, it's not unique to deep learning - something to do with the nature of overparameterization?
 
 Images
