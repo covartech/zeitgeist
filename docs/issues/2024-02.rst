@@ -90,7 +90,7 @@ Doctrinaire
     Uses a differentiable SAR renderer in a deep reinforcement learning algorithm to for the inverse problem in SAR imagery - predicting incident and azimuth angle.  Assumes it knows the target type.  Similar to what we're trying for TA2, but no one can figure out why the reinforcement learning.  To switch between CAD models?
 
 `Simulation Based Bayesian Optimization <https://arxiv.org/pdf/2401.10811.pdf>`_
-    Introduces a Bayesian optimization method for acquiistion functions which require sampling from the posterior.  Definitely has a fullly Byesian model in mind, but we might be able to wrangle this into shape for jumping between CAD models in optimzation. One of the authors, Becky Tang, was in my year at grad school.  
+    Introduces a Bayesian optimization method for acquiistion functions which require sampling from the posterior.  Definitely has a fullly Byesian model in mind, but we might be able to wrangle this into shape for jumping between CAD models in optimzation.
 
 Reasoning
 ---------
