@@ -45,6 +45,9 @@ LLMs
 `Escalation Risks from Language Models in Military and Diplomatic Decision-Making <https://arxiv.org/pdf/2401.03408.pdf>`_
     If LLMs are granted decision making authority, how dangerous would they be?  This paper designs a wargame and lets LLMs play it to test whether they escalate.  They do.  A lot.  Nuclear, even.  Not surprising, but highlights the risks.  You'd think this unnecssary, but the paper calls out Palantir for doing exactly this.
 
+`CivRealm: A LEARNING AND REASONING ODYSSEY IN Civilization FOR DECISION-MAKING AGENTS <https://arxiv.org/pdf/2401.10568.pdf>`_
+    LLMs play Civilization.  Is this the next playground for multi-agent Reinforcement Learning?  Cool idea, but they spend most of the paper talking about Civilization and a little bit at the end introducing methods and saying they don't work well.
+
 Build It
 --------
 
@@ -66,9 +69,6 @@ Theory
 
 `ADAPTIVE REGRET FOR BANDITS MADE POSSIBLE: TWO QUERIES SUFFICE <https://arxiv.org/pdf/2401.09278.pdf>`_
     Deepmind and some top universities.  Finds a tight bound for optimizing bandits in an online setting with two queries/round.  Usually bandits do one query/round (they might be making up the concept of a round to create a more general setting) and queries are evaluated in parallel.  They have to do this forever becuase they're doing online learning, but we might be able to make use of this for CAD model selection.
-
-`CivRealm: A LEARNING AND REASONING ODYSSEY IN Civilization FOR DECISION-MAKING AGENTS <https://arxiv.org/pdf/2401.10568.pdf>`_
-    LLMs play Civilization.  Is this the next playground for multi-agent Reinforcement Learning?  Cool idea, but they spend most of the paper talking about Civilization and a little bit at the end introducing methods and saying they don't work well.
 
 `Decision Transformer: Reinforcement Learning via Sequence Modeling <https://arxiv.org/abs/2106.01345>`_
     Facebook/Google/Berkeley.  Kind of an older paper. Reinforcement learning is useful, but finnicky and difficult to implement (random seeds as hyperparameters, anyone?).  What if we could do reinforcement learning with Transformers?  Models sequence of past state, actions, and rewards as an autoregressive trajectory and plugs into a transformer.  Seems to beat out open software RL implementations and is much easier.  Worth considering
