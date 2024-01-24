@@ -48,6 +48,9 @@ LLMs
 `CivRealm: A LEARNING AND REASONING ODYSSEY IN Civilization FOR DECISION-MAKING AGENTS <https://arxiv.org/pdf/2401.10568.pdf>`_
     LLMs play Civilization.  Is this the next playground for multi-agent Reinforcement Learning?  Cool idea, but they spend most of the paper talking about Civilization and a little bit at the end introducing methods and saying they don't work well.
 
+`SKILL-MIX: A FLEXIBLE AND EXPANDABLE FAMILY OF EVALUATIONS FOR AI MODELS <https://arxiv.org/pdf/2310.17567.pdf>`_
+    Deepmind and Princeton.  How to evaluate LLMs?  Have a list of skills an LLM can do, randomly combine some subset of them, and ask the LLM to do that.  Should force it to do something not in the training set and valuable/interesting.  Seems like a cool way to evaluate a general purpose AI, but if you're LLM is supposed to be really good at one specific task you might not care how it generalizes to some randomly generated task.
+
 Build It
 --------
 
@@ -116,6 +119,9 @@ Stats
 
 `Automated lag-selection for multi-step univariate time series forecast using Bayesian Optimization: Forecast station-wise monthly rainfall of nine divisional cities of Bangladesh <https://arxiv.org/pdf/2401.08070.pdf>`_
     Wants to use an LSTM to model rainfall in Bangladesh, but has to do hyperparameter optimization.  Adapts Bayesian Optimization methods using Gaussian Processes as black box functions to do so.  Works pretty well.  
+
+`Biological species delimitation based on genetic and spatial dissimilarity: a comparative study <https://arxiv.org/pdf/2401.12126.pdf>`_
+    Proposes bunch of genetic-spatial tests to test if different populations are from the same species.  Complicating factor is that members of the same species, from places far away, can have different genetic material and this has to be accounted for (how are they defining same/different species then?).  Throws a bunch of stuff at the wall and some of it sticks.
 
 Datasets
 ---------
