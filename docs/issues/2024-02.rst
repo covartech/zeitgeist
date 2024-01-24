@@ -123,6 +123,9 @@ Stats
 `Biological species delimitation based on genetic and spatial dissimilarity: a comparative study <https://arxiv.org/pdf/2401.12126.pdf>`_
     Proposes bunch of genetic-spatial tests to test if different populations are from the same species.  Complicating factor is that members of the same species, from places far away, can have different genetic material and this has to be accounted for (how are they defining same/different species then?).  Throws a bunch of stuff at the wall and some of it sticks.
 
+`Pretraining and the Lasso <https://arxiv.org/pdf/2401.12911.pdf>`_
+    Pretraining/finetuning/transfer learning for LASSO.  Has Tibshirani as a co-author, which makes it seem credible, but also has hand-drawn/annotated diagrams, which makes it seem less credible.  Seems to improve perfromance, though.
+
 Datasets
 ---------
 
