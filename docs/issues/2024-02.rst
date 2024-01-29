@@ -104,6 +104,8 @@ Reasoning
 `GRAPH2TAC: LEARNING HIERARCHICAL REPRESENTATIONS OF MATH CONCEPTS IN THEOREM PROVING <https://arxiv.org/pdf/2401.02949.pdf>`_
     Out of IBM and a few other places.  Working on a programming language that can assist mathematicians with making math proofs.  Fuses together a kNN and a graph neural net to help.  It's a cool idea - and in theory a computer should be able to do some sort of reasoning like this - but in practice they struggle - only 26% of theorems proven in the hold-out set.
 
+`Automated Legal Reasoning with Discretion to Act using s(LAW) <https://arxiv.org/pdf/2401.14511.pdf>`_
+    Reasoning for mid-level government bureaucrats.  Needs to be explainable/justifiable, but also able to handle ambiguity because the law allows for discrtion in its implementation.  Interesting idea, but light on technical details.
 
 Stats
 -----
@@ -129,6 +131,9 @@ Stats
 `Pretraining and the Lasso <https://arxiv.org/pdf/2401.12911.pdf>`_
     Pretraining/finetuning/transfer learning for LASSO.  Has Tibshirani as a co-author, which makes it seem credible, but also has hand-drawn/annotated diagrams, which makes it seem less credible.  Seems to improve perfromance, though.
 
+`Discovering group dynamics in synchronous time series via hierarchical recurrent switching-state models <https://arxiv.org/pdf/2401.14973.pdf>`_
+    Time-series paper with a co-author from US Army CCDC Soldier Center.  Tries to learn behavior of individual actors which are coorinated in some latent process, e.g. a squad of soldiers in a training practice.  Uses explainable Bayesian parametric methods rather than difficult-to-explain neural methods.  Somewhere around hidden markov models and state space models and does CAVI for fast inference.  In their case study, the model learns that one particular soldier got assigned the job of looking around to make sure the squad wasn't getting approached unnoticed.  
+
 Datasets
 ---------
 
@@ -145,3 +150,6 @@ Potpurrie
 
 `Modelling clusters in network time series with an application to presidential elections in the USA <https://arxiv.org/pdf/2401.09381.pdf>`_
     Throws some pretty heavy duty time series machinery at US presidential election results.  Interesting idea in principle; in practice, the underlying network is just geographic connections and the conclusion is that swing states vary more than red/blue states.
+
+`Predictive Analysis for Optimizing Port Operations <https://arxiv.org/pdf/2401.14498.pdf>`_
+    Logistics!  Analysis of how long ships stay in port.  They seem to indicate that there hasn't been much work done in this area and throw a bunch of off-the-shelf methods at it and see what sticks.  Shouldn't be too hard to beat?
