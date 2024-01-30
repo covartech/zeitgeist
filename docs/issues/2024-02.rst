@@ -51,6 +51,9 @@ LLMs
 `SKILL-MIX: A FLEXIBLE AND EXPANDABLE FAMILY OF EVALUATIONS FOR AI MODELS <https://arxiv.org/pdf/2310.17567.pdf>`_
     Deepmind and Princeton.  How to evaluate LLMs?  Have a list of skills an LLM can do, randomly combine some subset of them, and ask the LLM to do that.  Should force it to do something not in the training set and valuable/interesting.  Seems like a cool way to evaluate a general purpose AI, but if you're LLM is supposed to be really good at one specific task you might not care how it generalizes to some randomly generated task.
 
+`In-Context Learning for Extreme Multi-Label Classification <https://arxiv.org/pdf/2401.12178.pdf>`_
+    LLMs tackle classification tasks with lots (10,000) of classes.  "Unlike prior work, our proposed solution requires no finetuning, is easily applicable to new tasks, alleviates prompt engineering, and requires only tens of labeled examples."  Seems too good to be true but also seems to work?
+
 Build It
 --------
 
@@ -107,6 +110,14 @@ Reasoning
 `Automated Legal Reasoning with Discretion to Act using s(LAW) <https://arxiv.org/pdf/2401.14511.pdf>`_
     Reasoning for mid-level government bureaucrats.  Needs to be explainable/justifiable, but also able to handle ambiguity because the law allows for discrtion in its implementation.  Interesting idea, but light on technical details.
 
+`Learning Big Logical Rules by Joining Small Rules <https://arxiv.org/pdf/2401.16215.pdf>`_
+    Reasoners play a game called Zendo to assess performance.  Existing methods struggle with large rules - this method learns large rules by combining a bunch of small rules together, handling as many as 100 small rules at once.  Seems like how a person might decompose hard rules.  Improves performance.
+
+Knowledge Graphs
+----------------
+`Capturing Knowledge Graphs and Rules with Octagon Embeddings <https://arxiv.org/pdf/2401.16270.pdf>`_
+    Uses octogan embeddings (in N^2 space where N is the dimension of your knowledge graph embedding) to improve inference in knowledge graphs.  Seems cool and appears to improve performance, but I can't really claim to understand what they're doing.  
+
 Stats
 -----
 
@@ -153,3 +164,9 @@ Potpurrie
 
 `Predictive Analysis for Optimizing Port Operations <https://arxiv.org/pdf/2401.14498.pdf>`_
     Logistics!  Analysis of how long ships stay in port.  They seem to indicate that there hasn't been much work done in this area and throw a bunch of off-the-shelf methods at it and see what sticks.  Shouldn't be too hard to beat?
+
+`Learning to Manipulate under Limited Information <https://arxiv.org/pdf/2401.16412.pdf>`_
+    Neural nets take on Arrow's impossibility theorem.  All voting systems are subject to manipulation.  To figure out which ones are worse, they trained 40,000 (!) neural nets to vote in low information settings and figured out which voting systems got manipulated more often than others.  Cool idea, though it might run into the "not technically a proof" problem a lot of computational methods encounter.
+
+`A comprehensive survey of the home advantage in American football <https://arxiv.org/pdf/2401.16392.pdf>`_
+    Uses a bayesian generalized linear mixed effects model to find/quantify home-field advantage for NFL teams.  Seems to be declining over time
