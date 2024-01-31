@@ -170,3 +170,6 @@ Potpurrie
 
 `A comprehensive survey of the home advantage in American football <https://arxiv.org/pdf/2401.16392.pdf>`_
     Uses a bayesian generalized linear mixed effects model to find/quantify home-field advantage for NFL teams.  Seems to be declining over time
+
+`Traffic estimation in unobserved network locations using data-driven macroscopic models <https://arxiv.org/pdf/2401.17095.pdf>`_
+    Logistics!  Uses network flow theory to learn transportation patterns, especially in unobserved locations.  Macroscopic models make it "completely iterable" but also uses neural nets in parts - seems to be to learn special parameters.  Not sure that really counts as fully interpretable, but seems to work.
