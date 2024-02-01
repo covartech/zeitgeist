@@ -1,0 +1,42 @@
+
+2024-03
+=======
+
+LLMs
+----
+`SWARMBRAIN: EMBODIED AGENT FOR REAL-TIME STRATEGY GAME STARCRAFT II VIA LARGE LANGUAGE MODELS <https://arxiv.org/pdf/2401.17749.pdf>`_
+    LLMs play SC2.  Two stage model: (1) is an "Overmind" where multiple LLMs are blended together to create macro strategy in the same way the Zerg are supposed to function and (2) a "Swarm ReflexNet" which controls individual units.  Cool way of setting up an agent, and can beat the SC2 computer set to "Hard" model 76% of the time.  I'm not sure how impressive that is.  
+
+Build It
+--------
+
+
+Theory
+------
+
+Images
+------
+
+
+Doctrinaire
+-----------
+`Shrub of a thousand faces: an individual segmentation from satellite images using deep learning <https://arxiv.org/pdf/2401.17985.pdf>`_
+    Doctrinaire frooom spaaaace but for shrubs.  Somehow they have better quality data for shrubs than we have for MAGI?  Integrates on the ground data and spatial data, seems to develop its own architecture for detecting/segmenting juniper shrubs.  
+
+`Tiered approach for rapid damage characterisation of infrastructure enabled by remote sensing and deep learning technologies <https://arxiv.org/ftp/arxiv/papers/2401/2401.17759.pdf>`_
+    Assess infrastructure damage from space using a three-tiered approach.  Applied to a case study in Ukraine.  Seems like a direction we could take MAGI in if there's interest.
+
+Reasoning
+---------
+
+Knowledge Graphs
+----------------
+
+Stats
+-----
+
+Datasets
+---------
+
+Potpurrie
+---------
