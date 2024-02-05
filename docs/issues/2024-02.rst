@@ -2,30 +2,7 @@
 2024-02
 =======
 
-Example Topic
--------------
-
-This is an example topic with styling that might be a good idea for a way to structure things. It might be a good idea to include in line links like this: `Splatter Image: Ultra-Fast Single-View 3D Reconstruction <https://arxiv.org/abs/2312.13150>`_. Or maybe just opine. 
-
-Since you are talking about a specific topic maybe it would be a good idea to make a list. 
-
-`Splatter Image: Ultra-Fast Single-View 3D Reconstruction <https://szymanowiczs.github.io/splatter-image>`_
-    Single Image to 3D rendering
-
-`GPS-Gaussian: Generalizable Pixel-wise 3D Gaussian Splatting for Real-time Human Novel View Synthesis <https://shunyuanzheng.github.io/GPS-Gaussian>`_
-    Splatting for moving people (dancing around).
-
-`Gaussian Head Avatar: Ultra High-fidelity Head Avatar via Dynamic Gaussians <https://yuelangx.github.io/gaussianheadavatar/>`_
-    Splatting for avatar heads.
-
-`Triplane Meets Gaussian Splatting: Fast and Generalizable Single-View 3D Reconstruction with Transformers <https://arxiv.org/abs/2312.09147>`_
-    Splatting with transformers baked in.
-
-`iComMa: Inverting 3D Gaussians Splatting for Camera Pose Estimation via Comparing and Matching <https://arxiv.org/abs/2312.09031>`_
-    This is the one that feels most like the future of Doctrinaire. 
-
-------------
-
+Trying a different format this month. Feedback welcome.
 
 LLMs
 ----
@@ -57,6 +34,7 @@ LLMs
 `Blending Is All You Need: Cheaper, Better Alternative to Trillion-Parameters LLM <https://arxiv.org/abs/2401.02994>`_
     Mixture of experts models are interesting. Lots of work in this direction lately. Use several smaller LLMs and it competes with much larger LLMs. Why does this work as well? Something to do with catastrophic forgetting?
 
+
 Build It
 --------
 
@@ -85,6 +63,7 @@ Theory
 `High-dimensional analysis of double descent for linear regression with random projections <Demonstrates (with some random matrix theory) that double descent also occurs in linear regression settings.  Whatever's causing double descent, it's not unique to deep learning - something to do with the nature of overparameterization?>`_
     Demonstrates (with some random matrix theory) that double descent also occurs in linear regression settings.  Whatever's causing double descent, it's not unique to deep learning - something to do with the nature of overparameterization?
 
+
 Images
 ------
 
@@ -104,6 +83,7 @@ Doctrinaire
 `Do You Guys Want to Dance: Zero-Shot Compositional Human Dance Generation with Multiple Persons <https://arxiv.org/pdf/2401.13363.pdf>`_
     Takes a picture of a person/people it has never seen before, a background, and reference poses it can render the person in those poses on that background.  Uses latent diffusion models.  If we can do this with vehicles and articulations we are getting pretty close to one-shot capabilities for Doctrinaire/TA2
 
+
 Reasoning
 ---------
 
@@ -116,10 +96,9 @@ Reasoning
 `Learning Big Logical Rules by Joining Small Rules <https://arxiv.org/pdf/2401.16215.pdf>`_
     Reasoners play a game called Zendo to assess performance.  Existing methods struggle with large rules - this method learns large rules by combining a bunch of small rules together, handling as many as 100 small rules at once.  Seems like how a person might decompose hard rules.  Improves performance.
 
-Knowledge Graphs
-----------------
 `Capturing Knowledge Graphs and Rules with Octagon Embeddings <https://arxiv.org/pdf/2401.16270.pdf>`_
     Uses octogan embeddings (in N^2 space where N is the dimension of your knowledge graph embedding) to improve inference in knowledge graphs.  Seems cool and appears to improve performance, but I can't really claim to understand what they're doing.  
+
 `Teaching Algorithmic Reasoning via In-context Learning <https://arxiv.org/abs/2211.09066>`_
     By default LLMs can barely do anything one can claim is reasoning. Through a bunch of prompting and different tasking it can get better. They can do basic math a lot better.
 
@@ -136,7 +115,7 @@ Knowledge Graphs
     The differential computer is the only known way to leap forward in super intelligence, or at least some way that a network can use working long and short term memory! A full on manifesto. Is this smart or crazy? See also `A Cognitive Architecture for Machine Consciousness and Artificial Superintelligence: Thought Is Structured by the Iterative Updating of Working Memory <https://arxiv.org/abs/2203.17255>`_
 
 `Mathematical discoveries from program search with large language models <https://www.nature.com/articles/s41586-023-06924-6>`_
-    A prompt engineering approach to allowing an LLM to solve a problem using a simulator. This could be interesting, but isn't it just prompt engineering?
+    A prompt engineering approach to allowing an LLM to solve a problem using a simulator. This could be interesting, but isn't it just prompt engineering? Or is this reasoning?
 
 
 Stats
@@ -166,6 +145,7 @@ Stats
 `Discovering group dynamics in synchronous time series via hierarchical recurrent switching-state models <https://arxiv.org/pdf/2401.14973.pdf>`_
     Time-series paper with a co-author from US Army CCDC Soldier Center.  Tries to learn behavior of individual actors which are coorinated in some latent process, e.g. a squad of soldiers in a training practice.  Uses explainable Bayesian parametric methods rather than difficult-to-explain neural methods.  Somewhere around hidden markov models and state space models and does CAVI for fast inference.  In their case study, the model learns that one particular soldier got assigned the job of looking around to make sure the squad wasn't getting approached unnoticed.  
 
+
 Datasets
 ---------
 
@@ -174,6 +154,7 @@ Datasets
 
 `Open-source data pipeline for street-view images: a case study on community mobility during COVID-19 pandemic <https://arxiv.org/pdf/2401.13087.pdf>`_
     Designs and makes available an open-source pipeline for turning 360 degree streetview data (from cars) into useable datasets.  They link to a github, but it doesn't seem like they make the data open source?
+
 
 Potpurrie
 ---------
