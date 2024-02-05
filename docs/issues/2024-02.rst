@@ -46,6 +46,9 @@ LLMs
 `Escalation Risks from Language Models in Military and Diplomatic Decision-Making <https://arxiv.org/pdf/2401.03408.pdf>`_
     If LLMs are granted decision making authority, how dangerous would they be?  This paper designs a wargame and lets LLMs play it to test whether they escalate.  They do.  A lot.  Nuclear, even.  Not surprising, but highlights the risks.  You'd think this unnecssary, but the paper calls out Palantir for doing exactly this.
 
+`Blending Is All You Need: Cheaper, Better Alternative to Trillion-Parameters LLM <https://arxiv.org/abs/2401.02994>`_
+    Mixture of experts models are interesting. Lots of work in this direction lately. Use several smaller LLMs and it competes with much larger LLMs. Why does this work as well? Something to do with catastrophic forgetting?
+
 Build It
 --------
 
@@ -82,6 +85,24 @@ Reasoning
 
 `GRAPH2TAC: LEARNING HIERARCHICAL REPRESENTATIONS OF MATH CONCEPTS IN THEOREM PROVING <https://arxiv.org/pdf/2401.02949.pdf>`_
     Out of IBM and a few other places.  Working on a programming language that can assist mathematicians with making math proofs.  Fuses together a kNN and a graph neural net to help.  It's a cool idea - and in theory a computer should be able to do some sort of reasoning like this - but in practice they struggle - only 26% of theorems proven in the hold-out set.
+
+`Teaching Algorithmic Reasoning via In-context Learning <https://arxiv.org/abs/2211.09066>`_
+    By default LLMs can barely do anything one can claim is reasoning. Through a bunch of prompting and different tasking it can get better. They can do basic math a lot better.
+
+`Gemini in Reasoning: Unveiling Commonsense in Multimodal Large Language Models <https://arxiv.org/abs/2312.17661>`_
+    Big comparison of lots of LLMs trying to do "reasoning". Look at lots of standard datasets and categorize questions as different types of commonsense. Gemini is about as good as GPT3.5. GPT4 is still on top.
+
+`Towards Trustworthy AI Software Development Assistance <https://arxiv.org/abs/2312.09126>`_
+    Features a mashup of code LLMs and knowledge graphs. More of a think piece than a do piece. Interesting ideas though.
+
+`Knowledge Graphs Evolution and Preservation <https://arxiv.org/pdf/2012.11936.pdf>`_
+    Dealing with time in KGs is difficult. This is a long look at approaches. Someone should grok this more than I have. 
+
+`AI Thought <https://aithought.com>`_
+    The differential computer is the only known way to leap forward in super intelligence, or at least some way that a network can use working long and short term memory! A full on manifesto. Is this smart or crazy? See also `A Cognitive Architecture for Machine Consciousness and Artificial Superintelligence: Thought Is Structured by the Iterative Updating of Working Memory <https://arxiv.org/abs/2203.17255>`_
+
+`Mathematical discoveries from program search with large language models <https://www.nature.com/articles/s41586-023-06924-6>`_
+    A prompt engineering approach to allowing an LLM to solve a problem using a simulator. This could be interesting, but isn't it just prompt engineering?
 
 
 Stats
