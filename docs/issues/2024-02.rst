@@ -42,9 +42,17 @@ LLMs
 `Generative Large Language Models are autonomous practitioners of evidence-based medicine <https://arxiv.org/pdf/2401.02851.pdf>`_
     Have you ever wanted Chat-GPT to be your doctor?  A bunch of MDs (and a few PhDs) think it can!  It's bad.  Don't do this.
 
-
 `Escalation Risks from Language Models in Military and Diplomatic Decision-Making <https://arxiv.org/pdf/2401.03408.pdf>`_
     If LLMs are granted decision making authority, how dangerous would they be?  This paper designs a wargame and lets LLMs play it to test whether they escalate.  They do.  A lot.  Nuclear, even.  Not surprising, but highlights the risks.  You'd think this unnecssary, but the paper calls out Palantir for doing exactly this.
+
+`CivRealm: A LEARNING AND REASONING ODYSSEY IN Civilization FOR DECISION-MAKING AGENTS <https://arxiv.org/pdf/2401.10568.pdf>`_
+    LLMs play Civilization.  Is this the next playground for multi-agent Reinforcement Learning?  Cool idea, but they spend most of the paper talking about Civilization and a little bit at the end introducing methods and saying they don't work well.
+
+`SKILL-MIX: A FLEXIBLE AND EXPANDABLE FAMILY OF EVALUATIONS FOR AI MODELS <https://arxiv.org/pdf/2310.17567.pdf>`_
+    Deepmind and Princeton.  How to evaluate LLMs?  Have a list of skills an LLM can do, randomly combine some subset of them, and ask the LLM to do that.  Should force it to do something not in the training set and valuable/interesting.  Seems like a cool way to evaluate a general purpose AI, but if you're LLM is supposed to be really good at one specific task you might not care how it generalizes to some randomly generated task.
+
+`In-Context Learning for Extreme Multi-Label Classification <https://arxiv.org/pdf/2401.12178.pdf>`_
+    LLMs tackle classification tasks with lots (10,000) of classes.  "Unlike prior work, our proposed solution requires no finetuning, is easily applicable to new tasks, alleviates prompt engineering, and requires only tens of labeled examples."  Seems too good to be true but also seems to work?
 
 `Blending Is All You Need: Cheaper, Better Alternative to Trillion-Parameters LLM <https://arxiv.org/abs/2401.02994>`_
     Mixture of experts models are interesting. Lots of work in this direction lately. Use several smaller LLMs and it competes with much larger LLMs. Why does this work as well? Something to do with catastrophic forgetting?
@@ -65,6 +73,18 @@ Theory
 `Reliability Analysis of Complex Systems using Subset Simulations with Hamiltonian Neural Networks <https://arxiv.org/pdf/2401.05244.pdf>`_
     This paper analyzes large complex systems for chance of failure.  Essentially uses a Monte Carlo simulator with subset simulation to simulate the chance of different parts failing - this is slow so they do some fancy footwork with Hamiltonians to make it fast.  Feels like there's a pitch for this sort of thing somehwere in the DoD.  Most of this paper is Hamiltonian (neural) Monte Carlo theory.
 
+`A Survey on Statistical Theory of Deep Learning: Approximation, Training Dynamics, and Generative Models <https://arxiv.org/pdf/2401.07187.pdf>`_
+    Review paper on deep learning out of a lab at UCLA.  Three sections: risk, training, generative models.  Worth reading
+
+`ADAPTIVE REGRET FOR BANDITS MADE POSSIBLE: TWO QUERIES SUFFICE <https://arxiv.org/pdf/2401.09278.pdf>`_
+    Deepmind and some top universities.  Finds a tight bound for optimizing bandits in an online setting with two queries/round.  Usually bandits do one query/round (they might be making up the concept of a round to create a more general setting) and queries are evaluated in parallel.  They have to do this forever becuase they're doing online learning, but we might be able to make use of this for CAD model selection.
+
+`Decision Transformer: Reinforcement Learning via Sequence Modeling <https://arxiv.org/abs/2106.01345>`_
+    Facebook/Google/Berkeley.  Kind of an older paper. Reinforcement learning is useful, but finnicky and difficult to implement (random seeds as hyperparameters, anyone?).  What if we could do reinforcement learning with Transformers?  Models sequence of past state, actions, and rewards as an autoregressive trajectory and plugs into a transformer.  Seems to beat out open software RL implementations and is much easier.  Worth considering
+
+`High-dimensional analysis of double descent for linear regression with random projections <Demonstrates (with some random matrix theory) that double descent also occurs in linear regression settings.  Whatever's causing double descent, it's not unique to deep learning - something to do with the nature of overparameterization?>`_
+    Demonstrates (with some random matrix theory) that double descent also occurs in linear regression settings.  Whatever's causing double descent, it's not unique to deep learning - something to do with the nature of overparameterization?
+
 Images
 ------
 
@@ -78,7 +98,11 @@ Doctrinaire
 `Reinforcement Learning for SAR View Angle Inversion with Differentiable SAR Renderer <https://arxiv.org/pdf/2401.01165.pdf>`_
     Uses a differentiable SAR renderer in a deep reinforcement learning algorithm to for the inverse problem in SAR imagery - predicting incident and azimuth angle.  Assumes it knows the target type.  Similar to what we're trying for TA2, but no one can figure out why the reinforcement learning.  To switch between CAD models?
 
+`Simulation Based Bayesian Optimization <https://arxiv.org/pdf/2401.10811.pdf>`_
+    Introduces a Bayesian optimization method for acquiistion functions which require sampling from the posterior.  Definitely has a fullly Byesian model in mind, but we might be able to wrangle this into shape for jumping between CAD models in optimzation.
 
+`Do You Guys Want to Dance: Zero-Shot Compositional Human Dance Generation with Multiple Persons <https://arxiv.org/pdf/2401.13363.pdf>`_
+    Takes a picture of a person/people it has never seen before, a background, and reference poses it can render the person in those poses on that background.  Uses latent diffusion models.  If we can do this with vehicles and articulations we are getting pretty close to one-shot capabilities for Doctrinaire/TA2
 
 Reasoning
 ---------
@@ -86,6 +110,16 @@ Reasoning
 `GRAPH2TAC: LEARNING HIERARCHICAL REPRESENTATIONS OF MATH CONCEPTS IN THEOREM PROVING <https://arxiv.org/pdf/2401.02949.pdf>`_
     Out of IBM and a few other places.  Working on a programming language that can assist mathematicians with making math proofs.  Fuses together a kNN and a graph neural net to help.  It's a cool idea - and in theory a computer should be able to do some sort of reasoning like this - but in practice they struggle - only 26% of theorems proven in the hold-out set.
 
+`Automated Legal Reasoning with Discretion to Act using s(LAW) <https://arxiv.org/pdf/2401.14511.pdf>`_
+    Reasoning for mid-level government bureaucrats.  Needs to be explainable/justifiable, but also able to handle ambiguity because the law allows for discrtion in its implementation.  Interesting idea, but light on technical details.
+
+`Learning Big Logical Rules by Joining Small Rules <https://arxiv.org/pdf/2401.16215.pdf>`_
+    Reasoners play a game called Zendo to assess performance.  Existing methods struggle with large rules - this method learns large rules by combining a bunch of small rules together, handling as many as 100 small rules at once.  Seems like how a person might decompose hard rules.  Improves performance.
+
+Knowledge Graphs
+----------------
+`Capturing Knowledge Graphs and Rules with Octagon Embeddings <https://arxiv.org/pdf/2401.16270.pdf>`_
+    Uses octogan embeddings (in N^2 space where N is the dimension of your knowledge graph embedding) to improve inference in knowledge graphs.  Seems cool and appears to improve performance, but I can't really claim to understand what they're doing.  
 `Teaching Algorithmic Reasoning via In-context Learning <https://arxiv.org/abs/2211.09066>`_
     By default LLMs can barely do anything one can claim is reasoning. Through a bunch of prompting and different tasking it can get better. They can do basic math a lot better.
 
@@ -120,5 +154,43 @@ Stats
 `Hierarchical Causal Models <https://arxiv.org/pdf/2401.05330.pdf>`_
     David Blei likes to play around with causal inference despite being mostly a machine learning guy.  He gave a talk at Duke about something similar when I was a grad student and in front of the entire department Fan Li told him, in no uncertain terms, that she thought it was a bunch of junk.  I don't know enough about causal to evaluate, but seems like an interesting read.
 
+`Automated lag-selection for multi-step univariate time series forecast using Bayesian Optimization: Forecast station-wise monthly rainfall of nine divisional cities of Bangladesh <https://arxiv.org/pdf/2401.08070.pdf>`_
+    Wants to use an LSTM to model rainfall in Bangladesh, but has to do hyperparameter optimization.  Adapts Bayesian Optimization methods using Gaussian Processes as black box functions to do so.  Works pretty well.  
+
+`Biological species delimitation based on genetic and spatial dissimilarity: a comparative study <https://arxiv.org/pdf/2401.12126.pdf>`_
+    Proposes bunch of genetic-spatial tests to test if different populations are from the same species.  Complicating factor is that members of the same species, from places far away, can have different genetic material and this has to be accounted for (how are they defining same/different species then?).  Throws a bunch of stuff at the wall and some of it sticks.
+
+`Pretraining and the Lasso <https://arxiv.org/pdf/2401.12911.pdf>`_
+    Pretraining/finetuning/transfer learning for LASSO.  Has Tibshirani as a co-author, which makes it seem credible, but also has hand-drawn/annotated diagrams, which makes it seem less credible.  Seems to improve perfromance, though.
+
+`Discovering group dynamics in synchronous time series via hierarchical recurrent switching-state models <https://arxiv.org/pdf/2401.14973.pdf>`_
+    Time-series paper with a co-author from US Army CCDC Soldier Center.  Tries to learn behavior of individual actors which are coorinated in some latent process, e.g. a squad of soldiers in a training practice.  Uses explainable Bayesian parametric methods rather than difficult-to-explain neural methods.  Somewhere around hidden markov models and state space models and does CAVI for fast inference.  In their case study, the model learns that one particular soldier got assigned the job of looking around to make sure the squad wasn't getting approached unnoticed.  
+
+Datasets
+---------
+
+`Objects With Lighting: A Real-World Dataset for Evaluating Reconstruction and Rendering for Object Relighting <https://arxiv.org/pdf/2401.09126.pdf>`_
+    New, real world, dataset for the inverse rendering problem and a baseline method.  Some co-authors are from Intel, Adobe, and NVIDIA.  Plausibly useful.
+
+`Open-source data pipeline for street-view images: a case study on community mobility during COVID-19 pandemic <https://arxiv.org/pdf/2401.13087.pdf>`_
+    Designs and makes available an open-source pipeline for turning 360 degree streetview data (from cars) into useable datasets.  They link to a github, but it doesn't seem like they make the data open source?
+
 Potpurrie
 ---------
+`Decentralised Emergence of Robust and Adaptive Linguistic Conventions in Populations of Autonomous Agents Grounded in Continuous Worlds <https://arxiv.org/pdf/2401.08461.pdf>`_
+    An agent-based simulation framework for generating howartificial langauges might arise which obey certain rules common to all languages.  Kind of like the Game of Life on steroids.  
+
+`Modelling clusters in network time series with an application to presidential elections in the USA <https://arxiv.org/pdf/2401.09381.pdf>`_
+    Throws some pretty heavy duty time series machinery at US presidential election results.  Interesting idea in principle; in practice, the underlying network is just geographic connections and the conclusion is that swing states vary more than red/blue states.
+
+`Predictive Analysis for Optimizing Port Operations <https://arxiv.org/pdf/2401.14498.pdf>`_
+    Logistics!  Analysis of how long ships stay in port.  They seem to indicate that there hasn't been much work done in this area and throw a bunch of off-the-shelf methods at it and see what sticks.  Shouldn't be too hard to beat?
+
+`Learning to Manipulate under Limited Information <https://arxiv.org/pdf/2401.16412.pdf>`_
+    Neural nets take on Arrow's impossibility theorem.  All voting systems are subject to manipulation.  To figure out which ones are worse, they trained 40,000 (!) neural nets to vote in low information settings and figured out which voting systems got manipulated more often than others.  Cool idea, though it might run into the "not technically a proof" problem a lot of computational methods encounter.
+
+`A comprehensive survey of the home advantage in American football <https://arxiv.org/pdf/2401.16392.pdf>`_
+    Uses a bayesian generalized linear mixed effects model to find/quantify home-field advantage for NFL teams.  Seems to be declining over time
+
+`Traffic estimation in unobserved network locations using data-driven macroscopic models <https://arxiv.org/pdf/2401.17095.pdf>`_
+    Logistics!  Uses network flow theory to learn transportation patterns, especially in unobserved locations.  Macroscopic models make it "completely iterable" but also uses neural nets in parts - seems to be to learn special parameters.  Not sure that really counts as fully interpretable, but seems to work.
