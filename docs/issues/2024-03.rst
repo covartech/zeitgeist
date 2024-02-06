@@ -34,9 +34,6 @@ Doctrinaire
 `Tiered approach for rapid damage characterisation of infrastructure enabled by remote sensing and deep learning technologies <https://arxiv.org/ftp/arxiv/papers/2401/2401.17759.pdf>`_
     Assess infrastructure damage from space using a three-tiered approach.  Applied to a case study in Ukraine.  Seems like a direction we could take MAGI in if there's interest.
 
-`Mission Critical – Satellite Data is a Distinct Modality in Machine Learning <Mission Critical – Satellite Data is a Distinct Modality in Machine Learning (arxiv.org)>`_
-    Position paper with some names from big universities/companies arguing that satellite data is a domain unto itself deserving of its own techniques and methods.  This tracks with what we've been doing on MAGI, but maybe points to growing interest from academia/industry
-
 Reasoning
 ---------
 
@@ -45,16 +42,30 @@ Knowledge Graphs
 
 Stats
 -----
+`Diffusive Gibbs Sampling <https://arxiv.org/pdf/2402.03008.pdf>`_
+    Gibbs sampling often has trouble with bimodal (or multimodal) posterior distributions.  Diffusive Gibbs sampling gets around this by leveraging stuff from diffusion models: "auxiliary noisy distribution that bridges isolated modes in the original space and applying Gibbs sampling to alternately draw samples from both spaces"
 
+`IMPROVED PREDICTION OF FUTURE USER ACTIVITY IN ONLINE A/B TESTING <https://arxiv.org/pdf/2402.03231.pdf>`_
+    Develops a novel Bayesian nonparametric method to estimate quantity of new customers and number of times they will be observed in A/B testing environments.  Inference is done via empirical Bayes.  Appears to outperform competitors.
+    
 Datasets
 ---------
 `Vehicle Perception from Satellite <https://arxiv.org/pdf/2402.00703.pdf>`_
     New dataset for vehicle detection from satellites just dropped.  408 videos with 9296 images for a total of 128,801 vehicles.  
 
-Potpurrie
+Applications
 ---------
-`Position Paper: Bayesian Deep Learning in the Age of Large-Scale AI <https://arxiv.org/pdf/2402.00809.pdf>`_
-    20(ish) authors, including Yee Whye Teh, think that Bayesian deep learning has great potential to solve a diverse array of problems, particularly in combination with foundation models.  Seems more like a "work needs to be done, but if its done there's a lot of potential" than "this is ready to go off the shelf".  Worth keeping an eye on the field.
 
 `Estimating individual contributions to team success in women’s college volleyball <https://arxiv.org/pdf/2402.01083.pdf>`_
     Models individual performance in the 2022 NCAA womens basketball season using a Markov Chain to simulate the progression of a game and a generalized linear mixed effects model to model individual contributions.  Seems to be a step forward for the field. 
+
+Position Papers
+---------------
+`Position Paper: Bayesian Deep Learning in the Age of Large-Scale AI <https://arxiv.org/pdf/2402.00809.pdf>`_
+    20(ish) authors, including Yee Whye Teh, think that Bayesian deep learning has great potential to solve a diverse array of problems, particularly in combination with foundation models.  Seems more like a "work needs to be done, but if its done there's a lot of potential" than "this is ready to go off the shelf".  Worth keeping an eye on the field.
+
+`Mission Critical – Satellite Data is a Distinct Modality in Machine Learning <Mission Critical – Satellite Data is a Distinct Modality in Machine Learning (arxiv.org)>`_
+    Position paper with some names from big universities/companies arguing that satellite data is a domain unto itself deserving of its own techniques and methods.  This tracks with what we've been doing on MAGI, but maybe points to growing interest from academia/industry
+
+`A Virtual Solar Wind Monitor for Mars with Uncertainty Quantification using Gaussian Processes <https://arxiv.org/pdf/2402.01932.pdf>`_
+    Uses Gaussian Process Regression to esitmate solar winds from the MAVEN mission.  Sparse spatiotemporal data.  Not exactly a novel method, but a cool application.
