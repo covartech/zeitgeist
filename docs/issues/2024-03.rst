@@ -13,6 +13,9 @@ LLMs
 `POKELLMON: A Human-Parity Agent for Pokemon Battles with Large Language Models <https://arxiv.org/pdf/2402.01118.pdf>`_
     LLMs play Pokemon Showdown.  Has a couple of techniques to bring in outside knowledge to keep the LLM in line.  Gets about a 50% winrate on the pokemon showdown ladder.  Given that pokemon showdown uses ELO this is going to be expected unless its either the worst or best player online - the actual ELO values is more important.
 
+`SELF-DISCOVER: Large Language Models Self-Compose Reasoning Structures <https://arxiv.org/pdf/2402.03620.pdf>`_
+    Deepmind.  Proposes SELF-DISCOVER, a method to get LLMs to reason which outperforms Chain-of-Thought.  For a given task, it first proposes a reasoning structure appropriate to that task and then uses the structure to solve the task.  Performs best on tasks requiring world knowledge instead of algorithmic tasks such as MATH.  Might be something we can implement.
+
 Build It
 --------
 
@@ -34,11 +37,19 @@ Doctrinaire
 `Tiered approach for rapid damage characterisation of infrastructure enabled by remote sensing and deep learning technologies <https://arxiv.org/ftp/arxiv/papers/2401/2401.17759.pdf>`_
     Assess infrastructure damage from space using a three-tiered approach.  Applied to a case study in Ukraine.  Seems like a direction we could take MAGI in if there's interest.
 
+`ON THE MODELLING OF SHIP WAKES IN S-BAND SAR IMAGES AND AN APPLICATION TO SHIP IDENTIFICATION <https://arxiv.org/pdf/2402.04066.pdf>`_
+    Develops a simulator for S-Band SAR data to simulate ships wakes.  Train a deep learning model on this data for ship classification.  The synthetic to real data pipeline somewhat indicates that this is something that we could implement, whether in this setting or a different one. 
+
 Reasoning
 ---------
 
 Knowledge Graphs
 ----------------
+
+Fusion
+------
+`INTERPRETABLE MULTI-SOURCE DATA FUSION THROUGH LATENT VARIABLE GAUSSIAN PROCESS <https://arxiv.org/pdf/2402.04146.pdf>`_
+    GE Aeorspace Research presents a frameowrk for multi-source data fusion using latent variable Gaussian Processes.  They show off a bit on simulated examples and on "Thermal Aging Behavior of FeCrAl Alloys" and "Magnetic Behavior of SmCoFe Alloys".  Seems somewhat regression based - not sure how to apply to our work but seems cool.   
 
 Stats
 -----
