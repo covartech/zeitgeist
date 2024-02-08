@@ -16,17 +16,15 @@ LLMs
 `SELF-DISCOVER: Large Language Models Self-Compose Reasoning Structures <https://arxiv.org/pdf/2402.03620.pdf>`_
     Deepmind.  Proposes SELF-DISCOVER, a method to get LLMs to reason which outperforms Chain-of-Thought.  For a given task, it first proposes a reasoning structure appropriate to that task and then uses the structure to solve the task.  Performs best on tasks requiring world knowledge instead of algorithmic tasks such as MATH.  Might be something we can implement.
 
-Build It
---------
-
+Reinforcement Learning
+----------------------
+`Grandmaster-Level Chess Without Search <https://arxiv.org/pdf/2402.04494.pdf>`_
+    Deepmind.  A decision transformer (I think?) plays chess without explicit heuristics or move search.  It does pretty well! - but calling it grandmaster level might be stretch since it only cross that threshold in blitz against humans, a situation which maximizes the computer's advantage
 
 Theory
 ------
 `Understanding Adam Optimizer via Online Learning of Updates: Adam is FTRL in Disguise <2402.01567.pdf (arxiv.org)>`_
     Recasts optimizers as online learners and finds that " Adam corresponds to a principled online learning framework called Follow-the-Regularized-Leader (FTRL)."  This paper is worth reading if you want to understand how Adam works.
-
-Images
-------
 
 
 Doctrinaire
@@ -40,11 +38,14 @@ Doctrinaire
 `ON THE MODELLING OF SHIP WAKES IN S-BAND SAR IMAGES AND AN APPLICATION TO SHIP IDENTIFICATION <https://arxiv.org/pdf/2402.04066.pdf>`_
     Develops a simulator for S-Band SAR data to simulate ships wakes.  Train a deep learning model on this data for ship classification.  The synthetic to real data pipeline somewhat indicates that this is something that we could implement, whether in this setting or a different one. 
 
-Reasoning
----------
+`Arbitrary Scale Super-Resolution Assisted Lunar Crater Detection in Satellite Images <https://arxiv.org/pdf/2402.05068.pdf>`_
+    Up-scale low resolution images for crater detection on the moon.  Has two subcomponents - one upscales (at multiple scales!) and one detects.  Seems interesting, and maybe applicable to work where resolution is low (eg MAGI) but I'm not sure how it increases the amount of information in the image?
+
 
 Knowledge Graphs
 ----------------
+`SPARQL Generation: an analysis on fine-tuning OpenLLaMA for Question Answering over a Life Science Knowledge Graph <https://arxiv.org/pdf/2402.04627.pdf>`_
+    How to turn natural language questions into SPARQL queries for use in knowledge graphs?  Could be useful for any of our KG projects.
 
 Fusion
 ------
@@ -70,6 +71,12 @@ Applications
 `Estimating individual contributions to team success in women’s college volleyball <https://arxiv.org/pdf/2402.01083.pdf>`_
     Models individual performance in the 2022 NCAA womens basketball season using a Markov Chain to simulate the progression of a game and a generalized linear mixed effects model to model individual contributions.  Seems to be a step forward for the field. 
 
+`A Virtual Solar Wind Monitor for Mars with Uncertainty Quantification using Gaussian Processes <https://arxiv.org/pdf/2402.01932.pdf>`_
+    Uses Gaussian Process Regression to esitmate solar winds from the MAVEN mission.  Sparse spatiotemporal data.  Not exactly a novel method, but a cool application.
+
+`The Strain of Success: A Predictive Model for Injury Risk Mitigation and Team Success in Soccer <https://arxiv.org/ftp/arxiv/papers/2402/2402.04898.pdf>`_
+    When should soccer players play and when should they sit?  This paper implements a Markov Decision Process which balances risk of injury vs win probability for all of its players.  Cool stats, but maybe there's some ethical questions floating around here about what to leave to computers
+
 Position Papers
 ---------------
 `Position Paper: Bayesian Deep Learning in the Age of Large-Scale AI <https://arxiv.org/pdf/2402.00809.pdf>`_
@@ -77,6 +84,3 @@ Position Papers
 
 `Mission Critical – Satellite Data is a Distinct Modality in Machine Learning <Mission Critical – Satellite Data is a Distinct Modality in Machine Learning (arxiv.org)>`_
     Position paper with some names from big universities/companies arguing that satellite data is a domain unto itself deserving of its own techniques and methods.  This tracks with what we've been doing on MAGI, but maybe points to growing interest from academia/industry
-
-`A Virtual Solar Wind Monitor for Mars with Uncertainty Quantification using Gaussian Processes <https://arxiv.org/pdf/2402.01932.pdf>`_
-    Uses Gaussian Process Regression to esitmate solar winds from the MAVEN mission.  Sparse spatiotemporal data.  Not exactly a novel method, but a cool application.
