@@ -27,7 +27,7 @@ Theory
     Recasts optimizers as online learners and finds that " Adam corresponds to a principled online learning framework called Follow-the-Regularized-Leader (FTRL)."  This paper is worth reading if you want to understand how Adam works.
 
 
-Doctrinaire
+Remote Sensing
 -----------
 `Shrub of a thousand faces: an individual segmentation from satellite images using deep learning <https://arxiv.org/pdf/2401.17985.pdf>`_
     Doctrinaire frooom spaaaace but for shrubs.  Somehow they have better quality data for shrubs than we have for MAGI?  Integrates on the ground data and spatial data, seems to develop its own architecture for detecting/segmenting juniper shrubs.  
@@ -59,11 +59,9 @@ Stats
 
 `IMPROVED PREDICTION OF FUTURE USER ACTIVITY IN ONLINE A/B TESTING <https://arxiv.org/pdf/2402.03231.pdf>`_
     Develops a novel Bayesian nonparametric method to estimate quantity of new customers and number of times they will be observed in A/B testing environments.  Inference is done via empirical Bayes.  Appears to outperform competitors.
-    
-Datasets
----------
-`Vehicle Perception from Satellite <https://arxiv.org/pdf/2402.00703.pdf>`_
-    New dataset for vehicle detection from satellites just dropped.  408 videos with 9296 images for a total of 128,801 vehicles.  
+
+`Prior-Dependent Allocations for Bayesian Fixed-Budget Best-Arm Identification in Structured Bandits <https://arxiv.org/pdf/2402.05878.pdf>`_
+    Deepmind. New strategy for fixed-budget Bayesian multi-arm bandits.  This is sort of what we want to do to dynamically jump between CAD models in doctrinaire-stuff, so worth keeping an eye on.  
 
 Applications
 ---------
@@ -84,3 +82,15 @@ Position Papers
 
 `Mission Critical – Satellite Data is a Distinct Modality in Machine Learning <Mission Critical – Satellite Data is a Distinct Modality in Machine Learning (arxiv.org)>`_
     Position paper with some names from big universities/companies arguing that satellite data is a domain unto itself deserving of its own techniques and methods.  This tracks with what we've been doing on MAGI, but maybe points to growing interest from academia/industry
+
+    
+Datasets
+---------
+`Vehicle Perception from Satellite <https://arxiv.org/pdf/2402.00703.pdf>`_
+    New dataset for vehicle detection from satellites just dropped.  408 videos with 9296 images for a total of 128,801 vehicles.  
+
+`UAV-Rain1k: A Benchmark for Raindrop Removal from UAV Aerial Imagery <2402.05773.pdf (arxiv.org)>`_
+    Raindrops stuck on your UAV's camera?  This paper has a method to remove it - and a public dataset.  Seems to be mostly synthetic. 
+
+`Physics Informed and Data Driven Simulation of Underwater Images via Residual Learning  <2402.05281.pdf (arxiv.org)>`_
+    Propose a deep-learning model to simulate effects of underwater imagery.  Basically a "filter" to add to existing imagery.  Has a publicly available dataset.
