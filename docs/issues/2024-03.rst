@@ -16,6 +16,12 @@ LLMs
 `SELF-DISCOVER: Large Language Models Self-Compose Reasoning Structures <https://arxiv.org/pdf/2402.03620.pdf>`_
     Deepmind.  Proposes SELF-DISCOVER, a method to get LLMs to reason which outperforms Chain-of-Thought.  For a given task, it first proposes a reasoning structure appropriate to that task and then uses the structure to solve the task.  Performs best on tasks requiring world knowledge instead of algorithmic tasks such as MATH.  Might be something we can implement.
 
+`Secret Collusion Among Generative AI Agents <https://arxiv.org/pdf/2402.07510.pdf>`_
+    Deepmind.  Letting LLMs talk to each other in a simulated environment is a popular research technique - but, what happens if the LLMs secretly talk/collude with each other without letting us know?  Currently not a problem, but GPT-4 is getting there
+
+`V-STaR: Training Verifiers for Self-Taught Reasoners <https://arxiv.org/pdf/2402.06457.pdf>`_
+    Deepmind and Microsoft.  LLMs do reasoning.  Let the LLM generate a bunch of solutions to a problem and have a verifier that picks the right one.  This approach trains the verifier on incorrect as well as correct approaches, which seems to improve performance.
+
 Reinforcement Learning
 ----------------------
 `Grandmaster-Level Chess Without Search <https://arxiv.org/pdf/2402.04494.pdf>`_
@@ -26,6 +32,8 @@ Theory
 `Understanding Adam Optimizer via Online Learning of Updates: Adam is FTRL in Disguise <2402.01567.pdf (arxiv.org)>`_
     Recasts optimizers as online learners and finds that " Adam corresponds to a principled online learning framework called Follow-the-Regularized-Leader (FTRL)."  This paper is worth reading if you want to understand how Adam works.
 
+`The boundary of neural network trainability is fractal <2402.06184.pdf (arxiv.org)>`_
+    Have you ever tried to optimze hyperparameters in a neural net?  Well, bad news - the boundary between convergent and divergent zones are fractal.  Maybe don't go looking for bright spots on the boundary.  Worth a look just for the pretty gifs.
 
 Remote Sensing
 -----------
