@@ -35,6 +35,9 @@ Theory
 `The boundary of neural network trainability is fractal <2402.06184.pdf (arxiv.org)>`_
     Have you ever tried to optimze hyperparameters in a neural net?  Well, bad news - the boundary between convergent and divergent zones are fractal.  Maybe don't go looking for bright spots on the boundary.  Worth a look just for the pretty gifs.
 
+`On Limitations of the Transformer Architecture <https://arxiv.org/pdf/2402.08164.pdf>`_
+    Hallucinations happen because transformers have difficulty composing functions (e.g.  birthday of Chopin's father) if the domain is large enough, though this persists in small domains as well.  This is why mathematical tasks that are compositions can pose difficulties.  Worth a read.
+
 Remote Sensing
 -----------
 `Shrub of a thousand faces: an individual segmentation from satellite images using deep learning <https://arxiv.org/pdf/2401.17985.pdf>`_
