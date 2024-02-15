@@ -94,6 +94,8 @@ Position Papers
 `Mission Critical – Satellite Data is a Distinct Modality in Machine Learning <Mission Critical – Satellite Data is a Distinct Modality in Machine Learning (arxiv.org)>`_
     Position paper with some names from big universities/companies arguing that satellite data is a domain unto itself deserving of its own techniques and methods.  This tracks with what we've been doing on MAGI, but maybe points to growing interest from academia/industry
 
+`Position Paper: Challenges and Opportunities in Topological Deep Learning <https://arxiv.org/pdf/2402.08871.pdf>`_
+    Position paper on Topological Deep Learning.  Could be useful for anything involving CAD models/object estimation.  Good resource if you're interested in the field.
     
 Datasets
 ---------
