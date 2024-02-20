@@ -22,6 +22,9 @@ LLMs
 `V-STaR: Training Verifiers for Self-Taught Reasoners <https://arxiv.org/pdf/2402.06457.pdf>`_
     Deepmind and Microsoft.  LLMs do reasoning.  Let the LLM generate a bunch of solutions to a problem and have a verifier that picks the right one.  This approach trains the verifier on incorrect as well as correct approaches, which seems to improve performance.
 
+`Shall We Talk: Exploring Spontaneous Collaborations of Competing LLM Agents <https://arxiv.org/pdf/2402.12327.pdf>`_
+    If you put LLMs in a room and let them talk to each other in a multi-agent setting, they will develop collaborative strategies wiithout explicit instructions to do so.  The paper claims that this means that they can mimic human behaviors, in part because its a spontaneous development, but maybe it just means that there's some amount of game theory/the simulation scenarios used in the training data?
+
 Autonomy
 --------
 `Grandmaster-Level Chess Without Search <https://arxiv.org/pdf/2402.04494.pdf>`_
@@ -115,3 +118,9 @@ Datasets
 
 `Physics Informed and Data Driven Simulation of Underwater Images via Residual Learning  <2402.05281.pdf (arxiv.org)>`_
     Propose a deep-learning model to simulate effects of underwater imagery.  Basically a "filter" to add to existing imagery.  Has a publicly available dataset.
+
+`MAJOR TOM: EXPANDABLE DATASETS FOR EARTH OBSERVATION <https://arxiv.org/pdf/2402.12095.pdf>`_
+    European Space Agency. A framework for molding multiple EO remote sensing datasets together.  Kind of similar to cvr grid.  Will release when paper is accepted, they promise.
+
+`Landmark Stereo Dataset for Landmark Recognition and Moving Node Localization in a Non-GPS Battlefield Environment <2402.12320.pdf (arxiv.org)>`_
+    Out of Mizzou - are these the UAS people?  Proposes using a "landmark anchor node" to locate soldiers on the battlefield.  Has a dataset and a method.  Not publicly available?
