@@ -25,6 +25,9 @@ LLMs
 `Shall We Talk: Exploring Spontaneous Collaborations of Competing LLM Agents <https://arxiv.org/pdf/2402.12327.pdf>`_
     If you put LLMs in a room and let them talk to each other in a multi-agent setting, they will develop collaborative strategies wiithout explicit instructions to do so.  The paper claims that this means that they can mimic human behaviors, in part because its a spontaneous development, but maybe it just means that there's some amount of game theory/the simulation scenarios used in the training data?
 
+`Gemma: Introducing new state-of-the-art open models <https://blog.google/technology/developers/gemma-open-models/>`_
+    Google's releasing a new open LLM.  Has 2B and 7B model weights available for download, claims state-of-the-art performance, etc.  I'm not sure if they're letting anyone use it for free, but it sort of seems like it?
+    
 Autonomy
 --------
 `Grandmaster-Level Chess Without Search <https://arxiv.org/pdf/2402.04494.pdf>`_
@@ -43,6 +46,9 @@ Theory
 
 `On Limitations of the Transformer Architecture <https://arxiv.org/pdf/2402.08164.pdf>`_
     Hallucinations happen because transformers have difficulty composing functions (e.g.  birthday of Chopin's father) if the domain is large enough, though this persists in small domains as well.  This is why mathematical tasks that are compositions can pose difficulties.  Worth a read.
+
+`Chain of Thought Empowers Transformers to Solve Inherently Serial Problems <https://arxiv.org/pdf/2402.12875.pdf>`_
+    Chain-of-thought helps LLMS, but why?  This paper provides some theoretical bounds and argues that it helps with serial tasks.  That sort of seemed intuitively obvious, but I guess it's good to get it backed up.  
 
 Doctrinaire
 -----------
@@ -70,6 +76,11 @@ Fusion
 ------
 `INTERPRETABLE MULTI-SOURCE DATA FUSION THROUGH LATENT VARIABLE GAUSSIAN PROCESS <https://arxiv.org/pdf/2402.04146.pdf>`_
     GE Aeorspace Research presents a frameowrk for multi-source data fusion using latent variable Gaussian Processes.  They show off a bit on simulated examples and on "Thermal Aging Behavior of FeCrAl Alloys" and "Magnetic Behavior of SmCoFe Alloys".  Seems somewhat regression based - not sure how to apply to our work but seems cool.   
+
+FPGA
+----
+`Accelerating Local Laplacian Filters on FPGAs <https://arxiv.org/pdf/2402.12407.pdf>`_
+    Faster way to do things on FPGAs.  Out of my wheelhouse, but cogent for CoVar.
 
 Stats
 -----
