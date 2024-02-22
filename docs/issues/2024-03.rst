@@ -27,7 +27,10 @@ LLMs
 
 `Gemma: Introducing new state-of-the-art open models <https://blog.google/technology/developers/gemma-open-models/>`_
     Google's releasing a new open LLM.  Has 2B and 7B model weights available for download, claims state-of-the-art performance, etc.  I'm not sure if they're letting anyone use it for free, but it sort of seems like it?
-    
+
+`COERCING LLMS TO DO AND REVEAL (ALMOST) ANYTHING <https://arxiv.org/pdf/2402.14020.pdf>`_
+    A sequence of random chinese characters can get LLAMA to rickroll you, and other adventures in jailbreaking LLMs.  This paper argues the problem is much broader, and much worse, than we thought.  I recommend checking some of these out.
+
 Autonomy
 --------
 `Grandmaster-Level Chess Without Search <https://arxiv.org/pdf/2402.04494.pdf>`_
@@ -67,6 +70,12 @@ Doctrinaire
 `Mind the Modality Gap: Towards a Remote Sensing Vision-Language Model via Cross-modal Alignment <https://arxiv.org/pdf/2402.09816.pdf>`_
     CLIP for remote sensing. Finetunes CLIP, transforms info from pictures (multiple modalities?) into CLIP space to improve perfromance.  Morally similar to Doctrinaire.  Goes for scene classification instead of object detection/classificaiton. Might be worth exploring something like this
 
+`Delving into Dark Regions for Robust Shadow Detection <https://arxiv.org/pdf/2402.13631.pdf>`_
+    Shadow segmentation in fairly high resolution imagery.  Two-stage process, one which looks at the whole image and picks things, and a second which does shadow analysis locally.  This makes sense, since shadows can have different values in different regions.
+
+`BENCHCLOUDVISION: A BENCHMARK ANALYSIS OF DEEP LEARNING APPROACHES FOR CLOUD DETECTION AND SEGMENTATION IN REMOTE SENSING IMAGERY <https://arxiv.org/pdf/2402.13918.pdf>`_
+    Compares a bunch of methods for cloud segmentation on landsat and sentinel data.  Very relevant tool to have for MAGI or other remote sensing projects.
+
 Knowledge Graphs
 ----------------
 `SPARQL Generation: an analysis on fine-tuning OpenLLaMA for Question Answering over a Life Science Knowledge Graph <https://arxiv.org/pdf/2402.04627.pdf>`_
@@ -95,6 +104,9 @@ Stats
 
 `Horseshoe Priors for Sparse Dirichlet-Multinomial Models <https://arxiv.org/pdf/2402.09583.pdf>`_
     Polson has another paper in the "weird and novel priors for Dirichlet distributions" category.  Looks to be able to handle sparse count data pretty well, which was a large limitaiton of Dirichlet-multinomial models.
+
+`Allowing Growing Dimensional Binary Outcomes via the Multivariate Probit Indian Buffet Process <https://arxiv.org/pdf/2402.13384.pdf>`_
+    David Dunson is proposing a novel Bayesian nonparametric model.  Used for modelling presence of large amounts of species in ecology studies - we might be able to massage this into something relevant for ODIN, ie differing amounts of units, or for ATR in modelling likely presence given detected presence.
     
 Applications
 ---------
