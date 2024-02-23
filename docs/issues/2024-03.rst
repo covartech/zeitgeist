@@ -31,6 +31,9 @@ LLMs
 `COERCING LLMS TO DO AND REVEAL (ALMOST) ANYTHING <https://arxiv.org/pdf/2402.14020.pdf>`_
     A sequence of random chinese characters can get LLAMA to rickroll you, and other adventures in jailbreaking LLMs.  This paper argues the problem is much broader, and much worse, than we thought.  I recommend checking some of these out.
 
+`OmniPred: Language Models as Universal Regressors <https://arxiv.org/pdf/2402.14547.pdf>`_
+    Deepmind.  LLMs as universal regressors over any (x,y) dataset.  The advantage seems to be that it sweeps a lot of the encoding/objective stuff under the hood, but I'm not sure this is a good thing - you should probably be thinking about those instead of letting the computer do it.  Worth reading.
+    
 Autonomy
 --------
 `Grandmaster-Level Chess Without Search <https://arxiv.org/pdf/2402.04494.pdf>`_
@@ -107,7 +110,10 @@ Stats
 
 `Allowing Growing Dimensional Binary Outcomes via the Multivariate Probit Indian Buffet Process <https://arxiv.org/pdf/2402.13384.pdf>`_
     David Dunson is proposing a novel Bayesian nonparametric model.  Used for modelling presence of large amounts of species in ecology studies - we might be able to massage this into something relevant for ODIN, ie differing amounts of units, or for ATR in modelling likely presence given detected presence.
-    
+
+`Estimating Unknown Population Sizes Using the Hypergeometric Distribution <https://arxiv.org/pdf/2402.14220.pdf>`_
+    How to estimate total number of things given a set of observations? Not terribly complicated stats, but develops some hypergeometric distribution methods.  Could be useful for guessing distribution of adversary forces given some observatoins.
+
 Applications
 ---------
 
@@ -147,3 +153,6 @@ Datasets
 
 `Landmark Stereo Dataset for Landmark Recognition and Moving Node Localization in a Non-GPS Battlefield Environment <2402.12320.pdf (arxiv.org)>`_
     Out of Mizzou - are these the UAS people?  Proposes using a "landmark anchor node" to locate soldiers on the battlefield.  Has a dataset and a method.  Not publicly available?
+
+`Measuring Multimodal Mathematical Reasoning with MATH-Vision Dataset <https://arxiv.org/pdf/2402.14804.pdf>`_
+    LLMs were getting too good at existing math datasets, so these authors proposed a new one which includes more diverse problem types.  LLMs do a lot worse on this one.
