@@ -33,6 +33,9 @@ LLMs
 
 `OmniPred: Language Models as Universal Regressors <https://arxiv.org/pdf/2402.14547.pdf>`_
     Deepmind.  LLMs as universal regressors over any (x,y) dataset.  The advantage seems to be that it sweeps a lot of the encoding/objective stuff under the hood, but I'm not sure this is a good thing - you should probably be thinking about those instead of letting the computer do it.  Worth reading.
+
+`Back to Basics: Revisiting REINFORCE Style Optimization for Learning from Human Feedback in LLMs <2402.14740.pdf (arxiv.org)>`_
+    Finetuning LLMs to give desired behaviors has traditionally been though of as a difficult reinforcement learning problem (?).  This paper argues that the reinforcement learning is actually quite simple and can proceed using some approaches straight ouf of the 90s.
     
 Autonomy
 --------
@@ -41,6 +44,7 @@ Autonomy
 
 `Deep Learning Based Situation Awareness for Multiple Missiles Evasion <https://arxiv.org/pdf/2402.10101.pdf>`_
     What do you do when your drone is getting shot at by multiple missiles?  This paper uses deep learning to learn what is happening and guide decision making.
+
 
 Theory
 ------
@@ -113,6 +117,9 @@ Stats
 
 `Estimating Unknown Population Sizes Using the Hypergeometric Distribution <https://arxiv.org/pdf/2402.14220.pdf>`_
     How to estimate total number of things given a set of observations? Not terribly complicated stats, but develops some hypergeometric distribution methods.  Could be useful for guessing distribution of adversary forces given some observatoins.
+
+`Information-Theoretic Safe Bayesian Optimization <https://arxiv.org/pdf/2402.15347.pdf>`_
+    How to do Baysian Optimization where there's some unknown "safe zone" you can't enter for safety reasons.  Introduces latent variables to indicate whether you're safe.  Applications to autonomy?
 
 Applications
 ---------
