@@ -45,6 +45,8 @@ Autonomy
 `Deep Learning Based Situation Awareness for Multiple Missiles Evasion <https://arxiv.org/pdf/2402.10101.pdf>`_
     What do you do when your drone is getting shot at by multiple missiles?  This paper uses deep learning to learn what is happening and guide decision making.
 
+`Contingency Planning Using Bi-level Markov Decision Processes for Space Missions <https://arxiv.org/pdf/2402.16342.pdf>`_
+    NASA talks about how the autonomous methods they're using to manage their rovers, using VIPER as an example.
 
 Theory
 ------
@@ -83,6 +85,9 @@ Doctrinaire
 `BENCHCLOUDVISION: A BENCHMARK ANALYSIS OF DEEP LEARNING APPROACHES FOR CLOUD DETECTION AND SEGMENTATION IN REMOTE SENSING IMAGERY <https://arxiv.org/pdf/2402.13918.pdf>`_
     Compares a bunch of methods for cloud segmentation on landsat and sentinel data.  Very relevant tool to have for MAGI or other remote sensing projects.
 
+`Intelligent Known and Novel Aircraft Recognition - A Shift from Classification to Similarity Learning for Combat Identification <https://arxiv.org/pdf/2402.16486.pdf>`_
+    Overhead ATR for combat identification of airplanes from Pakistani and Saudi Arabian researchers.  Uses an embedder to embed input images into some space, and then uses metrics inside of this space to do classification/novel aircraft identification.  Cool approach, though somewhat uninterpretable - this is the same problem as the October demo for MAGI, but different on the technical details.
+
 Knowledge Graphs
 ----------------
 `SPARQL Generation: an analysis on fine-tuning OpenLLaMA for Question Answering over a Life Science Knowledge Graph <https://arxiv.org/pdf/2402.04627.pdf>`_
@@ -120,6 +125,9 @@ Stats
 
 `Information-Theoretic Safe Bayesian Optimization <https://arxiv.org/pdf/2402.15347.pdf>`_
     How to do Baysian Optimization where there's some unknown "safe zone" you can't enter for safety reasons.  Introduces latent variables to indicate whether you're safe.  Applications to autonomy?
+
+`SEQUENTIAL DESIGN FOR SURROGATE MODELING IN BAYESIAN INVERSE PROBLEMS <https://arxiv.org/pdf/2402.16520.pdf>`_
+    Basically what it says on the tin.  The more cogent part for CoVar is how they do their sequential design - this feels morally similar to, say, how you'd go about making a drone select the next best view.
 
 Applications
 ---------
@@ -163,3 +171,6 @@ Datasets
 
 `Measuring Multimodal Mathematical Reasoning with MATH-Vision Dataset <https://arxiv.org/pdf/2402.14804.pdf>`_
     LLMs were getting too good at existing math datasets, so these authors proposed a new one which includes more diverse problem types.  LLMs do a lot worse on this one.
+
+`MTARSI <https://github.com/PremaKathiresanVasagam/MTARSI>`_
+    Overhead ATR pictures of planes
