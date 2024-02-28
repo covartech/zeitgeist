@@ -36,7 +36,10 @@ LLMs
 
 `Back to Basics: Revisiting REINFORCE Style Optimization for Learning from Human Feedback in LLMs <2402.14740.pdf (arxiv.org)>`_
     Finetuning LLMs to give desired behaviors has traditionally been though of as a difficult reinforcement learning problem (?).  This paper argues that the reinforcement learning is actually quite simple and can proceed using some approaches straight ouf of the 90s.
-    
+
+`The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits <https://arxiv.org/pdf/2402.17764.pdf>`_
+    LLMs getting up and running on 1.58 bits ({-1,0,1}) to increase computational performance.  Claims to be as effective as 16 bit transformers.  If this is true, I suppose the takeaway is that the extra bits don't add much?
+
 Autonomy
 --------
 `Grandmaster-Level Chess Without Search <https://arxiv.org/pdf/2402.04494.pdf>`_
