@@ -9,12 +9,17 @@ Autonomy
 --------
 `Toward Autonomous Cooperation in Heterogeneous Nanosatellite Constellations Using Dynamic Graph Neural Networks <https://arxiv.org/pdf/2403.00692.pdf>`_
     How to coordinate EO satellites to observe enough stuff using dynamic graph neural nets.  More constrained, but similar to drone swarm type problems.
-    
+
+`Physics-Informed Neural Networks with Skip Connections for Modeling and Control of Gas-Lifted Oil Wells <https://arxiv.org/pdf/2403.02289.pdf>`_
+    Physics-informed neural networks for modelling ODEs/PDEs and controlling dynamic systems like oil wells.  They say introducing skip connections helps improve performance which feels right but also maybe like an old result?
+
 Theory
 ------
 
 Doctrinaire
 -----------
+`Point2Building: Reconstructing Buildings from Airborne LiDAR Point Clouds <https://arxiv.org/pdf/2403.02136.pdf>`_
+    Makes a method to autoregressivly 3D meshes from LiDAR point clouds of buildings.  Can probably be adapted to things like tanks?
 
 Knowledge Graphs
 ----------------
@@ -32,8 +37,11 @@ Stats
 
 Applications
 ---------
-
+`Equipment Health Assessment: Time Series Analysis for Wind Turbine Performance <https://arxiv.org/pdf/2403.00975.pdf>`_
+    Model wind-turbine perfromance over time using ensembles of FNN and LSTMs.  Each wind turbine is unique enough to require tailoring at the individual level.   
+    
 Position Papers
 ---------------
+
 Datasets
 ---------
