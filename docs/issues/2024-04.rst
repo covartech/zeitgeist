@@ -4,6 +4,8 @@
 
 LLMs
 ----
+`Towards General Computer Control: A Multimodal Agent for Red Dead Redemption II as a Case Study <https://arxiv.org/pdf/2403.03186.pdf>`_
+    LLM plays Red Dead Redemption II.  Takes compuer screen and audio as inputs, and outputes keyboard/mouse actions, like a human would.  Something like this might be a good way to mimic what a human does in other areas?
 
 Autonomy
 --------
@@ -12,6 +14,9 @@ Autonomy
 
 `Physics-Informed Neural Networks with Skip Connections for Modeling and Control of Gas-Lifted Oil Wells <https://arxiv.org/pdf/2403.02289.pdf>`_
     Physics-informed neural networks for modelling ODEs/PDEs and controlling dynamic systems like oil wells.  They say introducing skip connections helps improve performance which feels right but also maybe like an old result?
+
+`Reaching Consensus in Cooperative Multi-Agent Reinforcement Learning with Goal Imagination <https://arxiv.org/pdf/2403.03172.pdf>`_
+    From Tencent.  A problem in multi-agent reinforcement learning is coordination - this paper attempts to solve that problem by imaging a common goal and guiding agents to that path.  
 
 Theory
 ------
@@ -24,16 +29,18 @@ Doctrinaire
 Knowledge Graphs
 ----------------
 
-Fusion
-------
-
-FPGA
-----
+Data Labelling
+--------------
+`Active Statistical Inference <https://arxiv.org/pdf/2403.03208.pdf>`_
+    Active learning for choosing which datapoints to label next.  Could be useful for situations where we have many more datapoints than labels (e.g. MAGI)
 
 Stats
 -----
 `Hierarchical Bayesian Models to Mitigate Systematic Disparities in Prediction with Proxy Outcomes <https://arxiv.org/pdf/2403.00639.pdf>`_
     Andrew Gelman is a co-author.  Deals with label bias - e.g. you're given a diagnosis and not the underlying condition, and this is confounded with other stuff.  Seems relevant for P(object|detection) sort of problems?
+
+`Scalable Bayesian inference for the generalized linear mixed model <https://arxiv.org/pdf/2403.03007.pdf>`_
+    Stochastic gradient descent MCMC for Bayesian GLMMs.  Significantly faster than Gibbs sampling, but not compared to frequentist methods.
 
 Applications
 ---------
