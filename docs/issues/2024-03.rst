@@ -2,6 +2,11 @@
 2024-03
 =======
 
+Tooling
+-------
+`Python Packaging, One Year Later: A Look Back at 2023 in Python Packaging <https://chriswarrick.com/blog/2024/01/15/python-packaging-one-year-later/>`_
+    Rust is here to stay. But why are all good python tools written in rust? Everything else is a mess. The only solution to bad and inconsistent tooling is more tooling. See the section "…is looking pretty bleak" for a good summary of the status of tools.
+
 LLMs
 ----
 `SWARMBRAIN: EMBODIED AGENT FOR REAL-TIME STRATEGY GAME STARCRAFT II VIA LARGE LANGUAGE MODELS <https://arxiv.org/pdf/2401.17749.pdf>`_
@@ -40,6 +45,27 @@ LLMs
 `The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits <https://arxiv.org/pdf/2402.17764.pdf>`_
     LLMs getting up and running on 1.58 bits ({-1,0,1}) to increase computational performance.  Claims to be as effective as 16 bit transformers.  If this is true, I suppose the takeaway is that the extra bits don't add much?
 
+`Groq <https://wow.groq.com/wp-content/uploads/2023/05/GroqISCAPaper2022_ASoftwareDefinedTensorStreamingMultiprocessorForLargeScaleMachineLearning-1.pdf>`_
+    Not to be confused with Grok (the Elon Musk LLM), this is from the guy that started TPUs at google. The LLM demos are impressively fast. Apparently it's a cool method for compiling to the custom fabric. I don't really... grok ... it though.
+
+`Emboddied Agesnts <https://assets.amazon.science/9c/af/d18d00b44a129e10f1f29de9861a/dialog-acts-for-task-driven-embodied-agents.pdf>`_
+    We talked with a DARPA PM who was interested in "Embodied Agents". The main thing I know at this point is the TEACH dataset is important. I think it is basically voice control of a robot. "Go into the kitchen and put the dishes away, then bring me a butter knife."
+
+`Forbidden Facts: An Investigation of Competing Objectives in Llama-2 <https://arxiv.org/abs/2312.08793>`_
+    Very similar to Miles' "Don't say elephant" work. No real path forward just a look at stuff. If the prompt says not to say it, it will say something adjacent.
+
+`Retrieval-Augmented Generation for Large Language Models: A Survey <https://arxiv.org/abs/2312.10997>`_
+    Giant survey on RAG approaches. RAG is likely here to stay for a while. Come back to this if we find a RAG use case for us.
+
+`Self-Rewarding Language Models <https://arxiv.org/abs/2401.10020>`_
+    Self rewarding language models use the same LLM with different prompts to do RLHF. The second prompt picks which of the first LLMs potential responses was the "best". This is starting to hint at a path forward that might scale.
+
+`Same Task, More Tokens: the Impact of Input Length on the Reasoning Performance of Large Language Models <https://arxiv.org/pdf/2402.14848.pdf>`_
+    LLMs get stupider if the prompt is longer. All of them, some worse than others. Gemini is bad. Surprise GPT4 is good.
+
+`Beyond A*: Better Planning with Transformers via Search Dynamics Bootstrapping <https://arxiv.org/abs/2402.14083>`_
+    Serialize the steps of A*, fine tune an LLM to mimic, show the LLM can be better than A*. Does this mean that LLMs can path plan? Kinda I guess?
+
 Autonomy
 --------
 `Grandmaster-Level Chess Without Search <https://arxiv.org/pdf/2402.04494.pdf>`_
@@ -64,6 +90,12 @@ Theory
 
 `Chain of Thought Empowers Transformers to Solve Inherently Serial Problems <https://arxiv.org/pdf/2402.12875.pdf>`_
     Chain-of-thought helps LLMS, but why?  This paper provides some theoretical bounds and argues that it helps with serial tasks.  That sort of seemed intuitively obvious, but I guess it's good to get it backed up.  
+
+Images
+------
+
+`3D Object Detection from Images for Autonomous Driving: A Survey <https://arxiv.org/abs/2202.02980>`_
+    Big review paper on 3D bounding box detection and ranging, fusion with lidar etc. Worth a look if we ever get back to this.
 
 Doctrinaire
 -----------
@@ -90,6 +122,13 @@ Doctrinaire
 
 `Intelligent Known and Novel Aircraft Recognition - A Shift from Classification to Similarity Learning for Combat Identification <https://arxiv.org/pdf/2402.16486.pdf>`_
     Overhead ATR for combat identification of airplanes from Pakistani and Saudi Arabian researchers.  Uses an embedder to embed input images into some space, and then uses metrics inside of this space to do classification/novel aircraft identification.  Cool approach, though somewhat uninterpretable - this is the same problem as the October demo for MAGI, but different on the technical details.
+
+`Template Pose <https://github.com/nv-nguyen/template-pose>`_
+    There are a variety of similar CAD papers listed here. Some seem very cool. A lot of the concepts seem to be about embedding the CAD models and the image in the same space. I think it's a good idea. 
+
+`GaussianObject: Just Taking Four Images to Get A High-Quality 3D Object with Gaussian Splatting <https://gaussianobject.github.io>`_
+    Guassian splatting from very few images to make a CAD like model. Results look really good and better than previous methods. Can we do this from overhead? I feel like I've seen enough smoke that Gaussian Splatting is a buzzword to latch on to.
+
 
 Knowledge Graphs
 ----------------
@@ -143,6 +182,9 @@ Applications
 
 `The Strain of Success: A Predictive Model for Injury Risk Mitigation and Team Success in Soccer <https://arxiv.org/ftp/arxiv/papers/2402/2402.04898.pdf>`_
     When should soccer players play and when should they sit?  This paper implements a Markov Decision Process which balances risk of injury vs win probability for all of its players.  Cool stats, but maybe there's some ethical questions floating around here about what to leave to computers
+
+`CHIRP-Like Signals: Estimation, Detection and Processing A Sequential Model-Based Approach <https://www.osti.gov/biblio/1297653>`_
+    For the new HF project. A starting place to learn about signal classification
 
 Position Papers
 ---------------
