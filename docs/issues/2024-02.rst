@@ -34,6 +34,27 @@ LLMs
 `Blending Is All You Need: Cheaper, Better Alternative to Trillion-Parameters LLM <https://arxiv.org/abs/2401.02994>`_
     Mixture of experts models are interesting. Lots of work in this direction lately. Use several smaller LLMs and it competes with much larger LLMs. Why does this work as well? Something to do with catastrophic forgetting?
 
+`Groq <https://wow.groq.com/wp-content/uploads/2023/05/GroqISCAPaper2022_ASoftwareDefinedTensorStreamingMultiprocessorForLargeScaleMachineLearning-1.pdf>`_
+    Not to be confused with Grok (the Elon Musk LLM), this is from the guy that started TPUs at google. The LLM demos are impressively fast. Apparently it's a cool method for compiling to the custom fabric. I don't really... grok ... it though.
+
+`Emboddied Agesnts <https://assets.amazon.science/9c/af/d18d00b44a129e10f1f29de9861a/dialog-acts-for-task-driven-embodied-agents.pdf>`_
+    We talked with a DARPA PM who was interested in "Embodied Agents". The main thing I know at this point is the TEACH dataset is important. I think it is basically voice control of a robot. "Go into the kitchen and put the dishes away, then bring me a butter knife."
+
+`Forbidden Facts: An Investigation of Competing Objectives in Llama-2 <https://arxiv.org/abs/2312.08793>`_
+    Very similar to Miles' "Don't say elephant" work. No real path forward just a look at stuff. If the prompt says not to say it, it will say something adjacent.
+
+`Retrieval-Augmented Generation for Large Language Models: A Survey <https://arxiv.org/abs/2312.10997>`_
+    Giant survey on RAG approaches. RAG is likely here to stay for a while. Come back to this if we find a RAG use case for us.
+
+`Self-Rewarding Language Models <https://arxiv.org/abs/2401.10020>`_
+    Self rewarding language models use the same LLM with different prompts to do RLHF. The second prompt picks which of the first LLMs potential responses was the "best". This is starting to hint at a path forward that might scale.
+
+`Same Task, More Tokens: the Impact of Input Length on the Reasoning Performance of Large Language Models <https://arxiv.org/pdf/2402.14848.pdf>`_
+    LLMs get stupider if the prompt is longer. All of them, some worse than others. Gemini is bad. Surprise GPT4 is good.
+
+`Beyond A*: Better Planning with Transformers via Search Dynamics Bootstrapping <https://arxiv.org/abs/2402.14083>`_
+    Serialize the steps of A*, fine tune an LLM to mimic, show the LLM can be better than A*. Does this mean that LLMs can path plan? Kinda I guess?
+
 
 Build It
 --------
@@ -60,7 +81,7 @@ Theory
 `Decision Transformer: Reinforcement Learning via Sequence Modeling <https://arxiv.org/abs/2106.01345>`_
     Facebook/Google/Berkeley.  Kind of an older paper. Reinforcement learning is useful, but finnicky and difficult to implement (random seeds as hyperparameters, anyone?).  What if we could do reinforcement learning with Transformers?  Models sequence of past state, actions, and rewards as an autoregressive trajectory and plugs into a transformer.  Seems to beat out open software RL implementations and is much easier.  Worth considering
 
-`High-dimensional analysis of double descent for linear regression with random projections <Demonstrates (with some random matrix theory) that double descent also occurs in linear regression settings.  Whatever's causing double descent, it's not unique to deep learning - something to do with the nature of overparameterization?>`_
+`High-dimensional analysis of double descent for linear regression with random projections <https://arxiv.org/pdf/2303.01372.pdf>`_
     Demonstrates (with some random matrix theory) that double descent also occurs in linear regression settings.  Whatever's causing double descent, it's not unique to deep learning - something to do with the nature of overparameterization?
 
 
@@ -69,6 +90,9 @@ Images
 
 `Bayesian changepoint detection via logistic regression and the topological analysis of image series <https://arxiv.org/pdf/2401.02917.pdf>`_
     Uses a Bayesian framework for changepoint detection in images using topological data analysis and polya-gamma sampling.  Kind of a madlibs of concept, but pretty cool.  Leverages classification ability of logistic regression to do change detection - the bayesian part lets them do uncertainty quantification and prior encoding.  Test their method on nanoparticles and solar flares.  Kind of limited in terms of use (?) but cool
+
+`3D Object Detection from Images for Autonomous Driving: A Survey <https://arxiv.org/abs/2202.02980>`_
+    Big review paper on 3D bounding box detection and ranging, fusion with lidar etc. Worth a look if we ever get back to this.
 
 
 Doctrinaire
@@ -82,6 +106,12 @@ Doctrinaire
 
 `Do You Guys Want to Dance: Zero-Shot Compositional Human Dance Generation with Multiple Persons <https://arxiv.org/pdf/2401.13363.pdf>`_
     Takes a picture of a person/people it has never seen before, a background, and reference poses it can render the person in those poses on that background.  Uses latent diffusion models.  If we can do this with vehicles and articulations we are getting pretty close to one-shot capabilities for Doctrinaire/TA2
+
+`Template Pose <https://github.com/nv-nguyen/template-pose>`_
+    There are a variety of similar CAD papers listed here. Some seem very cool. A lot of the concepts seem to be about embedding the CAD models and the image in the same space. I think it's a good idea. 
+
+`GaussianObject: Just Taking Four Images to Get A High-Quality 3D Object with Gaussian Splatting <https://gaussianobject.github.io>`_
+    Guassian splatting from very few images to make a CAD like model. Results look really good and better than previous methods. Can we do this from overhead? I feel like I've seen enough smoke that Gaussian Splatting is a buzzword to latch on to.
 
 
 Reasoning
@@ -175,3 +205,9 @@ Potpurrie
 
 `Traffic estimation in unobserved network locations using data-driven macroscopic models <https://arxiv.org/pdf/2401.17095.pdf>`_
     Logistics!  Uses network flow theory to learn transportation patterns, especially in unobserved locations.  Macroscopic models make it "completely iterable" but also uses neural nets in parts - seems to be to learn special parameters.  Not sure that really counts as fully interpretable, but seems to work.
+
+`Python Packaging, One Year Later: A Look Back at 2023 in Python Packaging <https://chriswarrick.com/blog/2024/01/15/python-packaging-one-year-later/>`_
+    Rust is here to stay. But why are all good python tools written in rust? Everything else is a mess. The only solution to bad and inconsistent tooling is more tooling. See the section "…is looking pretty bleak" for a good summary of the status of tools.
+
+`CHIRP-Like Signals: Estimation, Detection and Processing A Sequential Model-Based Approach <https://www.osti.gov/biblio/1297653>`_
+    For the new HF project. A starting place to learn about signal classification
