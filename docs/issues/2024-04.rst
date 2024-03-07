@@ -7,6 +7,9 @@ LLMs
 `Towards General Computer Control: A Multimodal Agent for Red Dead Redemption II as a Case Study <https://arxiv.org/pdf/2403.03186.pdf>`_
     LLM plays Red Dead Redemption II.  Takes compuer screen and audio as inputs, and outputes keyboard/mouse actions, like a human would.  Something like this might be a good way to mimic what a human does in other areas?
 
+`Artifacts or Abduction: How Do LLMs Answer Multiple-Choice Questions Without the Question? <https://arxiv.org/pdf/2402.12483.pdf>`_
+    LLMs are really good at multiple choice questions.  How good are they are multiplce choice if they just get the answers, and not the questions?  Really good as it turns out.  Overtrained to the training data, or picking up some weird underlying structure?
+
 Autonomy
 --------
 `Toward Autonomous Cooperation in Heterogeneous Nanosatellite Constellations Using Dynamic Graph Neural Networks <https://arxiv.org/pdf/2403.00692.pdf>`_
@@ -25,6 +28,9 @@ Doctrinaire
 -----------
 `Point2Building: Reconstructing Buildings from Airborne LiDAR Point Clouds <https://arxiv.org/pdf/2403.02136.pdf>`_
     Makes a method to autoregressivly 3D meshes from LiDAR point clouds of buildings.  Can probably be adapted to things like tanks?
+
+`LDSF: Lightweight Dual-Stream Framework for SAR Target Recognition by Coupling Local Electromagnetic Scattering Features and Global Visual Features <https://arxiv.org/pdf/2403.03527.pdf>`_
+    A Chinese lab from the "National University of Defense Technology" implements a method for incorproating physrics (EM backscattering) into algorithms for ATR with SAR data.  Demonstrates method on MSTAR.  Worth a look, if only to see what the other guy's up to.  
 
 Knowledge Graphs
 ----------------
@@ -46,7 +52,10 @@ Applications
 ---------
 `Equipment Health Assessment: Time Series Analysis for Wind Turbine Performance <https://arxiv.org/pdf/2403.00975.pdf>`_
     Model wind-turbine perfromance over time using ensembles of FNN and LSTMs.  Each wind turbine is unique enough to require tailoring at the individual level.   
-    
+
+`Estimating the household secondary attack rate with the Incomplete Chain Binomial model <https://arxiv.org/pdf/2403.03948.pdf>`_
+    Discrete-time SIR model for infectious diseases, but explicitly modelling the spread within each household  using an Incomplete Chain Binomial model.  I'd never heard of that before and it's nice to learn things.    
+
 Position Papers
 ---------------
 
