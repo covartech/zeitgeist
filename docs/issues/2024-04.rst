@@ -10,6 +10,9 @@ LLMs
 `Artifacts or Abduction: How Do LLMs Answer Multiple-Choice Questions Without the Question? <https://arxiv.org/pdf/2402.12483.pdf>`_
     LLMs are really good at multiple choice questions.  How good are they are multiplce choice if they just get the answers, and not the questions?  Really good as it turns out.  Overtrained to the training data, or picking up some weird underlying structure?
 
+`Enhancing Court View Generation with Knowledge Injection and Guidance <https://arxiv.org/pdf/2403.04366.pdf>`_
+    Have you ever wanted an LLM to be a judge in a court case?  This paper injects legal knowledge into pretrained GPT 2 using some sort of encoder to try to do this.  They outperform the metrics, but I wouldn't trust thsi.
+
 Autonomy
 --------
 `Toward Autonomous Cooperation in Heterogeneous Nanosatellite Constellations Using Dynamic Graph Neural Networks <https://arxiv.org/pdf/2403.00692.pdf>`_
@@ -47,6 +50,9 @@ Stats
 
 `Scalable Bayesian inference for the generalized linear mixed model <https://arxiv.org/pdf/2403.03007.pdf>`_
     Stochastic gradient descent MCMC for Bayesian GLMMs.  Significantly faster than Gibbs sampling, but not compared to frequentist methods.
+
+`PLANT-CAPTURE METHODS FOR ESTIMATING POPULATION SIZE FROM UNCERTAIN PLANT CAPTURES <https://arxiv.org/pdf/2403.04058.pdf>`_
+    Develops methods for counting how large a population is based on a capture-recapture model.  Cool stats, lots of applications.
 
 Applications
 ---------
