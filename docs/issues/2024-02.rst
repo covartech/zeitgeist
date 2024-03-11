@@ -34,7 +34,6 @@ LLMs
 `Blending Is All You Need: Cheaper, Better Alternative to Trillion-Parameters LLM <https://arxiv.org/abs/2401.02994>`_
     Mixture of experts models are interesting. Lots of work in this direction lately. Use several smaller LLMs and it competes with much larger LLMs. Why does this work as well? Something to do with catastrophic forgetting?
 
-
 Build It
 --------
 
@@ -60,7 +59,7 @@ Theory
 `Decision Transformer: Reinforcement Learning via Sequence Modeling <https://arxiv.org/abs/2106.01345>`_
     Facebook/Google/Berkeley.  Kind of an older paper. Reinforcement learning is useful, but finnicky and difficult to implement (random seeds as hyperparameters, anyone?).  What if we could do reinforcement learning with Transformers?  Models sequence of past state, actions, and rewards as an autoregressive trajectory and plugs into a transformer.  Seems to beat out open software RL implementations and is much easier.  Worth considering
 
-`High-dimensional analysis of double descent for linear regression with random projections <Demonstrates (with some random matrix theory) that double descent also occurs in linear regression settings.  Whatever's causing double descent, it's not unique to deep learning - something to do with the nature of overparameterization?>`_
+`High-dimensional analysis of double descent for linear regression with random projections <https://arxiv.org/pdf/2303.01372.pdf>`_
     Demonstrates (with some random matrix theory) that double descent also occurs in linear regression settings.  Whatever's causing double descent, it's not unique to deep learning - something to do with the nature of overparameterization?
 
 
@@ -69,7 +68,6 @@ Images
 
 `Bayesian changepoint detection via logistic regression and the topological analysis of image series <https://arxiv.org/pdf/2401.02917.pdf>`_
     Uses a Bayesian framework for changepoint detection in images using topological data analysis and polya-gamma sampling.  Kind of a madlibs of concept, but pretty cool.  Leverages classification ability of logistic regression to do change detection - the bayesian part lets them do uncertainty quantification and prior encoding.  Test their method on nanoparticles and solar flares.  Kind of limited in terms of use (?) but cool
-
 
 Doctrinaire
 -----------
@@ -82,7 +80,6 @@ Doctrinaire
 
 `Do You Guys Want to Dance: Zero-Shot Compositional Human Dance Generation with Multiple Persons <https://arxiv.org/pdf/2401.13363.pdf>`_
     Takes a picture of a person/people it has never seen before, a background, and reference poses it can render the person in those poses on that background.  Uses latent diffusion models.  If we can do this with vehicles and articulations we are getting pretty close to one-shot capabilities for Doctrinaire/TA2
-
 
 Reasoning
 ---------
