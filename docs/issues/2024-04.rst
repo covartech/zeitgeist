@@ -13,6 +13,9 @@ LLMs
 `Enhancing Court View Generation with Knowledge Injection and Guidance <https://arxiv.org/pdf/2403.04366.pdf>`_
     Have you ever wanted an LLM to be a judge in a court case?  This paper injects legal knowledge into pretrained GPT 2 using some sort of encoder to try to do this.  They outperform the metrics, but I wouldn't trust thsi.
 
+`ShortGPT: Layers in Large Language Models are More Redundant Than You Expect <https://arxiv.org/pdf/2403.03853.pdf>`_
+    Pruning method for LLMs.  Seems to maintain SOTA(ish) performancs across a range of benchmarks while pruning quite significantly.  Prunes by measuring the influence of each level and getting rid of the not important ones
+
 Autonomy
 --------
 `Toward Autonomous Cooperation in Heterogeneous Nanosatellite Constellations Using Dynamic Graph Neural Networks <https://arxiv.org/pdf/2403.00692.pdf>`_
@@ -34,6 +37,9 @@ Doctrinaire
 
 `LDSF: Lightweight Dual-Stream Framework for SAR Target Recognition by Coupling Local Electromagnetic Scattering Features and Global Visual Features <https://arxiv.org/pdf/2403.03527.pdf>`_
     A Chinese lab from the "National University of Defense Technology" implements a method for incorproating physrics (EM backscattering) into algorithms for ATR with SAR data.  Demonstrates method on MSTAR.  Worth a look, if only to see what the other guy's up to.  
+
+`Exploring Robust Features for Few-Shot Object Detection in Satellite Imagery <https://arxiv.org/pdf/2403.05381.pdf>`_
+    Few-shot detection in remote sensing data using vision transformers.  Classes are represented by prototypes in some embediding space - the model can learn/fit these prototypes.  Morally similar to doctrinaire/MAGI stuff.
 
 Knowledge Graphs
 ----------------
@@ -62,8 +68,15 @@ Applications
 `Estimating the household secondary attack rate with the Incomplete Chain Binomial model <https://arxiv.org/pdf/2403.03948.pdf>`_
     Discrete-time SIR model for infectious diseases, but explicitly modelling the spread within each household  using an Incomplete Chain Binomial model.  I'd never heard of that before and it's nice to learn things.    
 
+`The SIDO Performance Model for League of Legends <https://arxiv.org/pdf/2403.04873.pdf>`_
+Collaboration between a UW prof and TSM Parth for modelling player performance in league of legends.  Very interesting/complex problem.  Looks to be a giant Bayesian mixed effects model, which makes sense.  Not sure if it generalizes to the professional setting, since it relies on having lots of data/players mixing somewhat frequently
 Position Papers
 ---------------
 
 Datasets
 ---------
+`EVD4UAV: An Altitude-Sensitive Benchmark to Evade Vehicle Detection in UAV <2403.05422.pdf (arxiv.org)>`_
+    Lots of labelled UAV pictures from 50, 70, and 90m.  Made for adversarial stuff, but looks good anyway.
+
+`Multisized Object Detection Using Spaceborne Optical Imagery <https://ieeexplore.ieee.org/document/9109702>`_
+    Remote sensing with lots of classes - definitely includes planes
