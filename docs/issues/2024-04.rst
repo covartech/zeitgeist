@@ -43,6 +43,8 @@ Doctrinaire
 
 Knowledge Graphs
 ----------------
+`Counterfactual Reasoning with Knowledge Graph Embeddings <https://arxiv.org/pdf/2403.06936.pdf>`_
+    Counterfactual reasoning on knowledge graphs.  Feels like there's a cool idea in here somehwere but the paper doesn't quite find it.
 
 Data Labelling
 --------------
@@ -69,7 +71,11 @@ Applications
     Discrete-time SIR model for infectious diseases, but explicitly modelling the spread within each household  using an Incomplete Chain Binomial model.  I'd never heard of that before and it's nice to learn things.    
 
 `The SIDO Performance Model for League of Legends <https://arxiv.org/pdf/2403.04873.pdf>`_
-Collaboration between a UW prof and TSM Parth for modelling player performance in league of legends.  Very interesting/complex problem.  Looks to be a giant Bayesian mixed effects model, which makes sense.  Not sure if it generalizes to the professional setting, since it relies on having lots of data/players mixing somewhat frequently
+    Collaboration between a UW prof and TSM Parth for modelling player performance in league of legends.  Very interesting/complex problem.  Looks to be a giant Bayesian mixed effects model, which makes sense.  Not sure if it generalizes to the professional setting, since it relies on having lots of data/players mixing somewhat frequently
+
+`A Geospatial Approach to Predicting Desert Locust Breeding Grounds in Africa <https://arxiv.org/pdf/2403.06860.pdf>`_
+    Using LSTM/convolutional neural nets to do spatiotemporal modelling of locusts swarms.  Specifically looking to predict breeding grounds - probably with an eye towards some sort of policy intervention.  
+
 Position Papers
 ---------------
 
