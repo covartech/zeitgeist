@@ -29,6 +29,11 @@ Autonomy
 
 Theory
 ------
+`Maxwell’s Demon at Work: Efficient Pruning by Leveraging Saturation of Neurons <https://arxiv.org/pdf/2403.07688.pdf>`_
+    From Deepmind.  Examines dead neurons, and proposes that maybe its a good thing.  Proposes a method for training a neural net that controls the number of dead neurons, which leads to network sparsity.  Seems like a cool way to do sparsity during training?
+
+`Chronos: Learning the Language of Time Series <https://arxiv.org/pdf/2403.07815.pdf>`_
+    From Amazon, Time-series prediction is predicting the next thing in a sequence.  Language models are transformers, which just predict the next thing in a sequence.  What if we just used language models for time-series prediction?  Works out pretty well, especially in a zero-shot context.
 
 Doctrinaire
 -----------
