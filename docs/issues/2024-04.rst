@@ -33,7 +33,10 @@ Theory
     From Deepmind.  Examines dead neurons, and proposes that maybe its a good thing.  Proposes a method for training a neural net that controls the number of dead neurons, which leads to network sparsity.  Seems like a cool way to do sparsity during training?
 
 `Chronos: Learning the Language of Time Series <https://arxiv.org/pdf/2403.07815.pdf>`_
-    From Amazon, Time-series prediction is predicting the next thing in a sequence.  Language models are transformers, which just predict the next thing in a sequence.  What if we just used language models for time-series prediction?  Works out pretty well, especially in a zero-shot context.
+    From Amazon, Time-series prediction is predicting the next thing in a sequence.  Language models are transformers, which just predict the next thing in a sequence.  What if we just used language models for time-series prediction?  Works out pretty well, especially in a zero-shot context.    
+
+`Reawakening knowledge: Anticipatory recovery from catastrophic interference via structured training <https://arxiv.org/pdf/2403.09613.pdf>`_
+    From Deepmind.  When fed cyclical sequences of documents, LLMs don't experience catastrophic forgetting but rather anticipatory recovery.  They offer a few hypotheses for why this is happening, but they don't really know. 
 
 Doctrinaire
 -----------
@@ -46,6 +49,9 @@ Doctrinaire
 `Exploring Robust Features for Few-Shot Object Detection in Satellite Imagery <https://arxiv.org/pdf/2403.05381.pdf>`_
     Few-shot detection in remote sensing data using vision transformers.  Classes are represented by prototypes in some embediding space - the model can learn/fit these prototypes.  Morally similar to doctrinaire/MAGI stuff.
 
+`Urban mapping in Dar es Salaam using AJIVE <https://arxiv.org/pdf/2403.09014.pdf>`_
+    Mapping poverty in Dar Es Salem using remote sensing imagery, cell phone data, and surveys.  Cool problem, though they seem to just take an off-the-shelf dimension reduction solution and throw it at the problem.
+
 Knowledge Graphs
 ----------------
 `Counterfactual Reasoning with Knowledge Graph Embeddings <https://arxiv.org/pdf/2403.06936.pdf>`_
@@ -55,6 +61,11 @@ Data Labelling
 --------------
 `Active Statistical Inference <https://arxiv.org/pdf/2403.03208.pdf>`_
     Active learning for choosing which datapoints to label next.  Could be useful for situations where we have many more datapoints than labels (e.g. MAGI)
+
+Logistics/Operations Research
+---------
+`A Multi-population Integrated Approach for Capacitated Location Routing <https://arxiv.org/pdf/2403.09361.pdf>`
+    Looking for the best way to get a bunch of stuff from a set of depots to a populationof users.  Seems to be considering depot configurations.  Worth a look if we ever want to break into logistics
 
 Stats
 -----
@@ -66,6 +77,9 @@ Stats
 
 `PLANT-CAPTURE METHODS FOR ESTIMATING POPULATION SIZE FROM UNCERTAIN PLANT CAPTURES <https://arxiv.org/pdf/2403.04058.pdf>`_
     Develops methods for counting how large a population is based on a capture-recapture model.  Cool stats, lots of applications.
+
+`EXTREMAL GRAPHICAL MODELING WITH LATENT VARIABLES <https://arxiv.org/pdf/2403.09604.pdf>`_
+    Uses extremal graphical models to model conditional independence structure for extreme multivariate data.  Cool approach for extereme events problems.  
 
 Applications
 ---------
