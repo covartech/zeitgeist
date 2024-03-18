@@ -27,6 +27,9 @@ Autonomy
 `Reaching Consensus in Cooperative Multi-Agent Reinforcement Learning with Goal Imagination <https://arxiv.org/pdf/2403.03172.pdf>`_
     From Tencent.  A problem in multi-agent reinforcement learning is coordination - this paper attempts to solve that problem by imaging a common goal and guiding agents to that path.  
 
+`Control and Automation for Industrial Production Storage Zone: Generation of Optimal Route Using Image Processing <https://arxiv.org/pdf/2403.10054.pdf>`_
+    Finding optimal routes for multiple agents based off of imagery.  Details the whole autonomy pipeline for this.  Could be a useful reference if we ever want to do something similar.  
+
 Theory
 ------
 `Maxwell’s Demon at Work: Efficient Pruning by Leveraging Saturation of Neurons <https://arxiv.org/pdf/2403.07688.pdf>`_
@@ -38,6 +41,9 @@ Theory
 `Reawakening knowledge: Anticipatory recovery from catastrophic interference via structured training <https://arxiv.org/pdf/2403.09613.pdf>`_
     From Deepmind.  When fed cyclical sequences of documents, LLMs don't experience catastrophic forgetting but rather anticipatory recovery.  They offer a few hypotheses for why this is happening, but they don't really know. 
 
+`Frozen Feature Augmentation for Few-Shot Image Classification <https://arxiv.org/pdf/2403.10519.pdf>`_
+    From Deepmind.  Applies image/feature augmentations in froze feature space to improve the performance of a relativley simple model duct-taped on top of a frozen deep learning model.  
+    
 Doctrinaire
 -----------
 `Point2Building: Reconstructing Buildings from Airborne LiDAR Point Clouds <https://arxiv.org/pdf/2403.02136.pdf>`_
@@ -51,6 +57,9 @@ Doctrinaire
 
 `Urban mapping in Dar es Salaam using AJIVE <https://arxiv.org/pdf/2403.09014.pdf>`_
     Mapping poverty in Dar Es Salem using remote sensing imagery, cell phone data, and surveys.  Cool problem, though they seem to just take an off-the-shelf dimension reduction solution and throw it at the problem.
+
+`Precision Agriculture: Crop Mapping using Machine Learning and Sentinel-2 Satellite Imagery <https://arxiv.org/pdf/2403.09651.pdf>`_
+    Segmenting lavendar fields using Sentinel-2 data.  Finds that logistic regression across bands (they have 12 bands) can outperfrom deep CNNs.  I find this kind of surprising, though lavendar is purple and so very visually distinct.  
 
 Knowledge Graphs
 ----------------
