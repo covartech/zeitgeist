@@ -43,6 +43,12 @@ Theory
 
 `Frozen Feature Augmentation for Few-Shot Image Classification <https://arxiv.org/pdf/2403.10519.pdf>`_
     From Deepmind.  Applies image/feature augmentations in froze feature space to improve the performance of a relativley simple model duct-taped on top of a frozen deep learning model.  
+
+`Out-of-Distribution Detection Should Use Conformal Prediction (and Vice-versa?) <https://arxiv.org/pdf/2403.11532.pdf>`_
+    Traditional methods of evaluating out-of-distribution detection may be too optimistic, and we should use conformal prediction instead.  If we had more time/effort for MAGI I'd look into this.
+
+`Do CLIPs Always Generalize Better than ImageNet Models? <https://arxiv.org/pdf/2403.11497.pdf>`_
+    Constrcuts a dataset with lots of spurious correlations to evaluate CLIP and ImageNet style models fro zero-shot prediction.  Found ImageNets did better in this circumstance.
     
 Doctrinaire
 -----------
@@ -103,6 +109,9 @@ Applications
 
 `A Geospatial Approach to Predicting Desert Locust Breeding Grounds in Africa <https://arxiv.org/pdf/2403.06860.pdf>`_
     Using LSTM/convolutional neural nets to do spatiotemporal modelling of locusts swarms.  Specifically looking to predict breeding grounds - probably with an eye towards some sort of policy intervention.  
+
+`Spatio-temporal point process intensity estimation using zero-deflated subsampling applied to a lightning strikes dataset in France <https://arxiv.org/pdf/2403.11564.pdf>`_
+    If you've ever wanted to predict lightning, this is the paper for youl  Nothing too groundbreaking, but an interesting applied problem.
 
 Position Papers
 ---------------
