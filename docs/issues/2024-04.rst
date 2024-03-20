@@ -16,6 +16,11 @@ LLMs
 `ShortGPT: Layers in Large Language Models are More Redundant Than You Expect <https://arxiv.org/pdf/2403.03853.pdf>`_
     Pruning method for LLMs.  Seems to maintain SOTA(ish) performancs across a range of benchmarks while pruning quite significantly.  Prunes by measuring the influence of each level and getting rid of the not important ones
 
+LVLMs
+-----
+`Chain-of-Spot: Interactive Reasoning Improves Large Vision-Language Models <https://arxiv.org/pdf/2403.12966.pdf>`_
+    Large vision language models (LVLMs) can see an increase in performance if you prompt them to focus in on an area of interest.  Maybe they get confused by large images?
+
 Autonomy
 --------
 `Toward Autonomous Cooperation in Heterogeneous Nanosatellite Constellations Using Dynamic Graph Neural Networks <https://arxiv.org/pdf/2403.00692.pdf>`_
@@ -78,8 +83,8 @@ Data Labelling
     Active learning for choosing which datapoints to label next.  Could be useful for situations where we have many more datapoints than labels (e.g. MAGI)
 
 Logistics/Operations Research
----------
-`A Multi-population Integrated Approach for Capacitated Location Routing <https://arxiv.org/pdf/2403.09361.pdf>`
+-----------------------------
+`A Multi-population Integrated Approach for Capacitated Location Routing <https://arxiv.org/pdf/2403.09361.pdf>`_
     Looking for the best way to get a bunch of stuff from a set of depots to a populationof users.  Seems to be considering depot configurations.  Worth a look if we ever want to break into logistics
 
 Stats
@@ -112,6 +117,9 @@ Applications
 
 `Spatio-temporal point process intensity estimation using zero-deflated subsampling applied to a lightning strikes dataset in France <https://arxiv.org/pdf/2403.11564.pdf>`_
     If you've ever wanted to predict lightning, this is the paper for youl  Nothing too groundbreaking, but an interesting applied problem.
+
+`Settlement Mapping for Population Density Modelling in Disease Risk Spatial Analysis <https://arxiv.org/pdf/2403.12858.pdf>`_
+    Wants to use population density to model disease risk.  Gets at it by estimating settlement maps from satellites using off-the-shelf software (CNNs for settlement segmentation) and adminstrative data to generate more accurate density estimates before using those estimates in downstream analysis.  Nothing too fancy, but a cool pipeline.
 
 Position Papers
 ---------------
