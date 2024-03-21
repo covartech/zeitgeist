@@ -26,7 +26,7 @@ Transformers
 `Chronos: Learning the Language of Time Series <https://arxiv.org/pdf/2403.07815.pdf>`_
     From Amazon, Time-series prediction is predicting the next thing in a sequence.  Language models are transformers, which just predict the next thing in a sequence.  What if we just used language models for time-series prediction?  Works out pretty well, especially in a zero-shot context.    
 
-`SportsNGEN: Sustained Generation of Multi-player Sports Gameplay <https://arxiv.org/pdf/2403.12977.pdf>`
+`SportsNGEN: Sustained Generation of Multi-player Sports Gameplay <https://arxiv.org/pdf/2403.12977.pdf>`_
     A transformer decoder can be trained on sports data (tennis and soccer) to simulate matches/games.  They say coaches can use it to evaluate counterfactuals, but since its a black box I'm not sure what type of insights you can glean.
 
 Doctrinaire
