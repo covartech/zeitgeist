@@ -21,40 +21,14 @@ LVLMs
 `Chain-of-Spot: Interactive Reasoning Improves Large Vision-Language Models <https://arxiv.org/pdf/2403.12966.pdf>`_
     Large vision language models (LVLMs) can see an increase in performance if you prompt them to focus in on an area of interest.  Maybe they get confused by large images?
 
-Autonomy
---------
-`Toward Autonomous Cooperation in Heterogeneous Nanosatellite Constellations Using Dynamic Graph Neural Networks <https://arxiv.org/pdf/2403.00692.pdf>`_
-    How to coordinate EO satellites to observe enough stuff using dynamic graph neural nets.  More constrained, but similar to drone swarm type problems.
-
-`Physics-Informed Neural Networks with Skip Connections for Modeling and Control of Gas-Lifted Oil Wells <https://arxiv.org/pdf/2403.02289.pdf>`_
-    Physics-informed neural networks for modelling ODEs/PDEs and controlling dynamic systems like oil wells.  They say introducing skip connections helps improve performance which feels right but also maybe like an old result?
-
-`Reaching Consensus in Cooperative Multi-Agent Reinforcement Learning with Goal Imagination <https://arxiv.org/pdf/2403.03172.pdf>`_
-    From Tencent.  A problem in multi-agent reinforcement learning is coordination - this paper attempts to solve that problem by imaging a common goal and guiding agents to that path.  
-
-`Control and Automation for Industrial Production Storage Zone: Generation of Optimal Route Using Image Processing <https://arxiv.org/pdf/2403.10054.pdf>`_
-    Finding optimal routes for multiple agents based off of imagery.  Details the whole autonomy pipeline for this.  Could be a useful reference if we ever want to do something similar.  
-
-Theory
-------
-`Maxwell’s Demon at Work: Efficient Pruning by Leveraging Saturation of Neurons <https://arxiv.org/pdf/2403.07688.pdf>`_
-    From Deepmind.  Examines dead neurons, and proposes that maybe its a good thing.  Proposes a method for training a neural net that controls the number of dead neurons, which leads to network sparsity.  Seems like a cool way to do sparsity during training?
-
+Transformers
+------------
 `Chronos: Learning the Language of Time Series <https://arxiv.org/pdf/2403.07815.pdf>`_
     From Amazon, Time-series prediction is predicting the next thing in a sequence.  Language models are transformers, which just predict the next thing in a sequence.  What if we just used language models for time-series prediction?  Works out pretty well, especially in a zero-shot context.    
 
-`Reawakening knowledge: Anticipatory recovery from catastrophic interference via structured training <https://arxiv.org/pdf/2403.09613.pdf>`_
-    From Deepmind.  When fed cyclical sequences of documents, LLMs don't experience catastrophic forgetting but rather anticipatory recovery.  They offer a few hypotheses for why this is happening, but they don't really know. 
+`SportsNGEN: Sustained Generation of Multi-player Sports Gameplay <https://arxiv.org/pdf/2403.12977.pdf>`
+    A transformer decoder can be trained on sports data (tennis and soccer) to simulate matches/games.  They say coaches can use it to evaluate counterfactuals, but since its a black box I'm not sure what type of insights you can glean.
 
-`Frozen Feature Augmentation for Few-Shot Image Classification <https://arxiv.org/pdf/2403.10519.pdf>`_
-    From Deepmind.  Applies image/feature augmentations in froze feature space to improve the performance of a relativley simple model duct-taped on top of a frozen deep learning model.  
-
-`Out-of-Distribution Detection Should Use Conformal Prediction (and Vice-versa?) <https://arxiv.org/pdf/2403.11532.pdf>`_
-    Traditional methods of evaluating out-of-distribution detection may be too optimistic, and we should use conformal prediction instead.  If we had more time/effort for MAGI I'd look into this.
-
-`Do CLIPs Always Generalize Better than ImageNet Models? <https://arxiv.org/pdf/2403.11497.pdf>`_
-    Constrcuts a dataset with lots of spurious correlations to evaluate CLIP and ImageNet style models fro zero-shot prediction.  Found ImageNets did better in this circumstance.
-    
 Doctrinaire
 -----------
 `Point2Building: Reconstructing Buildings from Airborne LiDAR Point Clouds <https://arxiv.org/pdf/2403.02136.pdf>`_
@@ -77,6 +51,40 @@ Knowledge Graphs
 `Counterfactual Reasoning with Knowledge Graph Embeddings <https://arxiv.org/pdf/2403.06936.pdf>`_
     Counterfactual reasoning on knowledge graphs.  Feels like there's a cool idea in here somehwere but the paper doesn't quite find it.
 
+Autonomy
+--------
+`Toward Autonomous Cooperation in Heterogeneous Nanosatellite Constellations Using Dynamic Graph Neural Networks <https://arxiv.org/pdf/2403.00692.pdf>`_
+    How to coordinate EO satellites to observe enough stuff using dynamic graph neural nets.  More constrained, but similar to drone swarm type problems.
+
+`Physics-Informed Neural Networks with Skip Connections for Modeling and Control of Gas-Lifted Oil Wells <https://arxiv.org/pdf/2403.02289.pdf>`_
+    Physics-informed neural networks for modelling ODEs/PDEs and controlling dynamic systems like oil wells.  They say introducing skip connections helps improve performance which feels right but also maybe like an old result?
+
+`Reaching Consensus in Cooperative Multi-Agent Reinforcement Learning with Goal Imagination <https://arxiv.org/pdf/2403.03172.pdf>`_
+    From Tencent.  A problem in multi-agent reinforcement learning is coordination - this paper attempts to solve that problem by imaging a common goal and guiding agents to that path.  
+
+`Control and Automation for Industrial Production Storage Zone: Generation of Optimal Route Using Image Processing <https://arxiv.org/pdf/2403.10054.pdf>`_
+    Finding optimal routes for multiple agents based off of imagery.  Details the whole autonomy pipeline for this.  Could be a useful reference if we ever want to do something similar.  
+
+`Hyper Strategy Logic <https://arxiv.org/pdf/2403.13741.pdf>`_
+    How to get multiple agents to cooperate in a multi-agent system?  Apparently one answer is using "hyperlogic" to coordinate.  Interesting problem (and 10 points for the name), but the paper looks very theoretical.
+
+Theory
+------
+`Maxwell’s Demon at Work: Efficient Pruning by Leveraging Saturation of Neurons <https://arxiv.org/pdf/2403.07688.pdf>`_
+    From Deepmind.  Examines dead neurons, and proposes that maybe its a good thing.  Proposes a method for training a neural net that controls the number of dead neurons, which leads to network sparsity.  Seems like a cool way to do sparsity during training?
+
+`Reawakening knowledge: Anticipatory recovery from catastrophic interference via structured training <https://arxiv.org/pdf/2403.09613.pdf>`_
+    From Deepmind.  When fed cyclical sequences of documents, LLMs don't experience catastrophic forgetting but rather anticipatory recovery.  They offer a few hypotheses for why this is happening, but they don't really know. 
+
+`Frozen Feature Augmentation for Few-Shot Image Classification <https://arxiv.org/pdf/2403.10519.pdf>`_
+    From Deepmind.  Applies image/feature augmentations in froze feature space to improve the performance of a relativley simple model duct-taped on top of a frozen deep learning model.  
+
+`Out-of-Distribution Detection Should Use Conformal Prediction (and Vice-versa?) <https://arxiv.org/pdf/2403.11532.pdf>`_
+    Traditional methods of evaluating out-of-distribution detection may be too optimistic, and we should use conformal prediction instead.  If we had more time/effort for MAGI I'd look into this.
+
+`Do CLIPs Always Generalize Better than ImageNet Models? <https://arxiv.org/pdf/2403.11497.pdf>`_
+    Constrcuts a dataset with lots of spurious correlations to evaluate CLIP and ImageNet style models fro zero-shot prediction.  Found ImageNets did better in this circumstance.
+    
 Data Labelling
 --------------
 `Active Statistical Inference <https://arxiv.org/pdf/2403.03208.pdf>`_
@@ -85,7 +93,7 @@ Data Labelling
 Logistics/Operations Research
 -----------------------------
 `A Multi-population Integrated Approach for Capacitated Location Routing <https://arxiv.org/pdf/2403.09361.pdf>`_
-    Looking for the best way to get a bunch of stuff from a set of depots to a populationof users.  Seems to be considering depot configurations.  Worth a look if we ever want to break into logistics
+    Looking for the best way to get a bunch of stuff from a set of depots to a population of users.  Seems to be considering depot configurations.  Worth a look if we ever want to break into logistics
 
 Stats
 -----
@@ -120,9 +128,6 @@ Applications
 
 `Settlement Mapping for Population Density Modelling in Disease Risk Spatial Analysis <https://arxiv.org/pdf/2403.12858.pdf>`_
     Wants to use population density to model disease risk.  Gets at it by estimating settlement maps from satellites using off-the-shelf software (CNNs for settlement segmentation) and adminstrative data to generate more accurate density estimates before using those estimates in downstream analysis.  Nothing too fancy, but a cool pipeline.
-
-Position Papers
----------------
 
 Datasets
 ---------
