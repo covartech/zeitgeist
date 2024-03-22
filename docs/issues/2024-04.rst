@@ -1,4 +1,3 @@
-
 2024-04
 =======
 
@@ -16,18 +15,13 @@ LLMs
 `ShortGPT: Layers in Large Language Models are More Redundant Than You Expect <https://arxiv.org/pdf/2403.03853.pdf>`_
     Pruning method for LLMs.  Seems to maintain SOTA(ish) performancs across a range of benchmarks while pruning quite significantly.  Prunes by measuring the influence of each level and getting rid of the not important ones
 
+`MATHVERSE: Does Your Multi-modal LLM Truly See the Diagrams in Visual Math Problems? <https://arxiv.org/pdf/2403.14624.pdf>`_
+    New dataset for LLMs in math, and a Chain-of-thought evaluation strategy.  Finds that math diagrams do not improve LLM performance on math questions - sometimes, they make the LLMs worse!  Apparently LLMs are just going off of text data.
+
 LVLMs
 -----
 `Chain-of-Spot: Interactive Reasoning Improves Large Vision-Language Models <https://arxiv.org/pdf/2403.12966.pdf>`_
     Large vision language models (LVLMs) can see an increase in performance if you prompt them to focus in on an area of interest.  Maybe they get confused by large images?
-
-Transformers
-------------
-`Chronos: Learning the Language of Time Series <https://arxiv.org/pdf/2403.07815.pdf>`_
-    From Amazon, Time-series prediction is predicting the next thing in a sequence.  Language models are transformers, which just predict the next thing in a sequence.  What if we just used language models for time-series prediction?  Works out pretty well, especially in a zero-shot context.    
-
-`SportsNGEN: Sustained Generation of Multi-player Sports Gameplay <https://arxiv.org/pdf/2403.12977.pdf>`_
-    A transformer decoder can be trained on sports data (tennis and soccer) to simulate matches/games.  They say coaches can use it to evaluate counterfactuals, but since its a black box I'm not sure what type of insights you can glean.
 
 Doctrinaire
 -----------
@@ -39,6 +33,9 @@ Doctrinaire
 
 `Exploring Robust Features for Few-Shot Object Detection in Satellite Imagery <https://arxiv.org/pdf/2403.05381.pdf>`_
     Few-shot detection in remote sensing data using vision transformers.  Classes are represented by prototypes in some embediding space - the model can learn/fit these prototypes.  Morally similar to doctrinaire/MAGI stuff.
+
+`Chronos: Learning the Language of Time Series <https://arxiv.org/pdf/2403.07815.pdf>`_
+    From Amazon, Time-series prediction is predicting the next thing in a sequence.  Language models are transformers, which just predict the next thing in a sequence.  What if we just used language models for time-series prediction?  Works out pretty well, especially in a zero-shot context.    
 
 `Urban mapping in Dar es Salaam using AJIVE <https://arxiv.org/pdf/2403.09014.pdf>`_
     Mapping poverty in Dar Es Salem using remote sensing imagery, cell phone data, and surveys.  Cool problem, though they seem to just take an off-the-shelf dimension reduction solution and throw it at the problem.
@@ -109,16 +106,24 @@ Stats
 `EXTREMAL GRAPHICAL MODELING WITH LATENT VARIABLES <https://arxiv.org/pdf/2403.09604.pdf>`_
     Uses extremal graphical models to model conditional independence structure for extreme multivariate data.  Cool approach for extereme events problems.  
 
+Sports Analytics
+----------------
+`The SIDO Performance Model for League of Legends <https://arxiv.org/pdf/2403.04873.pdf>`_
+    Collaboration between a UW prof and TSM Parth for modelling player performance in league of legends.  Very interesting/complex problem.  Looks to be a giant Bayesian mixed effects model, which makes sense.  Not sure if it generalizes to the professional setting, since it relies on having lots of data/players mixing somewhat frequently
+
+`SportsNGEN: Sustained Generation of Multi-player Sports Gameplay <https://arxiv.org/pdf/2403.12977.pdf>`_
+    A transformer decoder can be trained on sports data (tennis and soccer) to simulate matches/games.  They say coaches can use it to evaluate counterfactuals, but since its a black box I'm not sure what type of insights you can glean.
+
+`Offensive Lineup Analysis in Basketball with Clustering Players Based on Shooting Style and Offensive Role <https://arxiv.org/pdf/2403.13821.pdf>`_
+    Attempts to analyze style-of-play in basketball by clustering based on tracking data and "advanced statistics".  Then trained some Bayesian stuff on top to predict which players would go work well together.  Interesting idea/approach, but not terribly complicated.
+
 Applications
----------
+------------
 `Equipment Health Assessment: Time Series Analysis for Wind Turbine Performance <https://arxiv.org/pdf/2403.00975.pdf>`_
     Model wind-turbine perfromance over time using ensembles of FNN and LSTMs.  Each wind turbine is unique enough to require tailoring at the individual level.   
 
 `Estimating the household secondary attack rate with the Incomplete Chain Binomial model <https://arxiv.org/pdf/2403.03948.pdf>`_
     Discrete-time SIR model for infectious diseases, but explicitly modelling the spread within each household  using an Incomplete Chain Binomial model.  I'd never heard of that before and it's nice to learn things.    
-
-`The SIDO Performance Model for League of Legends <https://arxiv.org/pdf/2403.04873.pdf>`_
-    Collaboration between a UW prof and TSM Parth for modelling player performance in league of legends.  Very interesting/complex problem.  Looks to be a giant Bayesian mixed effects model, which makes sense.  Not sure if it generalizes to the professional setting, since it relies on having lots of data/players mixing somewhat frequently
 
 `A Geospatial Approach to Predicting Desert Locust Breeding Grounds in Africa <https://arxiv.org/pdf/2403.06860.pdf>`_
     Using LSTM/convolutional neural nets to do spatiotemporal modelling of locusts swarms.  Specifically looking to predict breeding grounds - probably with an eye towards some sort of policy intervention.  
@@ -130,7 +135,7 @@ Applications
     Wants to use population density to model disease risk.  Gets at it by estimating settlement maps from satellites using off-the-shelf software (CNNs for settlement segmentation) and adminstrative data to generate more accurate density estimates before using those estimates in downstream analysis.  Nothing too fancy, but a cool pipeline.
 
 Datasets
----------
+--------
 `EVD4UAV: An Altitude-Sensitive Benchmark to Evade Vehicle Detection in UAV <2403.05422.pdf (arxiv.org)>`_
     Lots of labelled UAV pictures from 50, 70, and 90m.  Made for adversarial stuff, but looks good anyway.
 
