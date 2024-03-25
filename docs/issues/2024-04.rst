@@ -65,6 +65,12 @@ Autonomy
 `Hyper Strategy Logic <https://arxiv.org/pdf/2403.13741.pdf>`_
     How to get multiple agents to cooperate in a multi-agent system?  Apparently one answer is using "hyperlogic" to coordinate.  Interesting problem (and 10 points for the name), but the paper looks very theoretical.
 
+`Planning and Acting While the Clock Ticks <https://arxiv.org/pdf/2403.14796.pdf>`_
+    Traditional autonomous planning agents have planned everything before executing anything.  Sometimes you can't do this - you have to initiate some tasks before you plan everything.  This paper does this by putting a decision rule into an existing planner.
+
+`Collaborative AI Teaming in Unknown Environments via Active Goal Deduction <https://arxiv.org/pdf/2403.15341.pdf>`_
+    How to get AIs that don't know each other to work together in the presence of goal uncertainty and imperfect info about other agents?  Try to learn what the other agents preference are and acted based on that in such a manner as to further your own goals.  Tests it in Starcraft II, and seems to work
+
 Theory
 ------
 `Maxwell’s Demon at Work: Efficient Pruning by Leveraging Saturation of Neurons <https://arxiv.org/pdf/2403.07688.pdf>`_
@@ -81,7 +87,10 @@ Theory
 
 `Do CLIPs Always Generalize Better than ImageNet Models? <https://arxiv.org/pdf/2403.11497.pdf>`_
     Constrcuts a dataset with lots of spurious correlations to evaluate CLIP and ImageNet style models fro zero-shot prediction.  Found ImageNets did better in this circumstance.
-    
+
+`Deep Neural Networks Tend To Extrapolate Predictably <https://arxiv.org/pdf/2310.00873.pdf>`_
+    As data gets OOD, neural nets tend to produce solutions which default to the solution which, when treated as constant, minimizes loss over the training set.  This is very similar to how a Gaussian Process behaves - I wonder if there are structural similarities between the models or if this is a generic thing for nonparametric methods?
+
 Data Labelling
 --------------
 `Active Statistical Inference <https://arxiv.org/pdf/2403.03208.pdf>`_
