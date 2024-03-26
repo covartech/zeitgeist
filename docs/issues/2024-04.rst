@@ -18,6 +18,9 @@ LLMs
 `MATHVERSE: Does Your Multi-modal LLM Truly See the Diagrams in Visual Math Problems? <https://arxiv.org/pdf/2403.14624.pdf>`_
     New dataset for LLMs in math, and a Chain-of-thought evaluation strategy.  Finds that math diagrams do not improve LLM performance on math questions - sometimes, they make the LLMs worse!  Apparently LLMs are just going off of text data.
 
+`Do LLM Agents Have Regret? A Case Study in Online Learning and Games <https://arxiv.org/pdf/2403.16843.pdf>`_
+    In an online setting, how do LLMs do with respect to regret?  Sometimes they're no-regret, sometimes they're not - even in some simple cases.  I wouldn't rely on one of these intead of, e.g.,  a multi-armed bandit but maybe they can get there?
+
 LVLMs
 -----
 `Chain-of-Spot: Interactive Reasoning Improves Large Vision-Language Models <https://arxiv.org/pdf/2403.12966.pdf>`_
@@ -47,6 +50,11 @@ Knowledge Graphs
 ----------------
 `Counterfactual Reasoning with Knowledge Graph Embeddings <https://arxiv.org/pdf/2403.06936.pdf>`_
     Counterfactual reasoning on knowledge graphs.  Feels like there's a cool idea in here somehwere but the paper doesn't quite find it.
+
+Reasoning
+---------
+`A comparison of graphical methods in the case of the murder of Meredith Kercher <https://arxiv.org/pdf/2403.16628.pdf>`_
+    An application of 3 different graphical reasoning models to the Amanda Knox case.  More of a case study than anything, but still interesting.
 
 Autonomy
 --------
@@ -90,6 +98,9 @@ Theory
 
 `Deep Neural Networks Tend To Extrapolate Predictably <https://arxiv.org/pdf/2310.00873.pdf>`_
     As data gets OOD, neural nets tend to produce solutions which default to the solution which, when treated as constant, minimizes loss over the training set.  This is very similar to how a Gaussian Process behaves - I wonder if there are structural similarities between the models or if this is a generic thing for nonparametric methods?
+
+`On the rates of convergence for learning with convolutional neural networks <https://arxiv.org/pdf/2403.16459.pdf>`_
+    Theory heavy.  Derives rates of convergence for estimators based on CNNs.  It's reassuring that someone has done this, but I'm glad it wasn't me.
 
 Data Labelling
 --------------
