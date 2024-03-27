@@ -102,6 +102,9 @@ Theory
 `On the rates of convergence for learning with convolutional neural networks <https://arxiv.org/pdf/2403.16459.pdf>`_
     Theory heavy.  Derives rates of convergence for estimators based on CNNs.  It's reassuring that someone has done this, but I'm glad it wasn't me.
 
+`The Unreasonable Ineffectiveness of the Deeper Layers <https://arxiv.org/pdf/2403.17887.pdf>`_
+    From Meta (and others).  Investigates pruning LLMs and finds you can pruen up to half(!) of layers without much degradation in performance.  Seems crazy, but we should maybe try this if it holds up. 
+
 Data Labelling
 --------------
 `Active Statistical Inference <https://arxiv.org/pdf/2403.03208.pdf>`_
@@ -136,6 +139,11 @@ Sports Analytics
 
 `Offensive Lineup Analysis in Basketball with Clustering Players Based on Shooting Style and Offensive Role <https://arxiv.org/pdf/2403.13821.pdf>`_
     Attempts to analyze style-of-play in basketball by clustering based on tracking data and "advanced statistics".  Then trained some Bayesian stuff on top to predict which players would go work well together.  Interesting idea/approach, but not terribly complicated.
+
+Sensing
+-------
+`Towards Multilevel Modelling of Train Passing Events on the Staffordshire Bridge <https://arxiv.org/pdf/2403.17820.pdf>`_
+    Bayesian hierarchical models (including GPs!) to predict which trains are passing over the Stanfordshire Bridge based on telemetry data.
 
 Applications
 ------------
