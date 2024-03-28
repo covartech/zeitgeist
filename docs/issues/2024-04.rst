@@ -21,6 +21,9 @@ LLMs
 `Do LLM Agents Have Regret? A Case Study in Online Learning and Games <https://arxiv.org/pdf/2403.16843.pdf>`_
     In an online setting, how do LLMs do with respect to regret?  Sometimes they're no-regret, sometimes they're not - even in some simple cases.  I wouldn't rely on one of these intead of, e.g.,  a multi-armed bandit but maybe they can get there?
 
+`Introducing DBRX: A New State-of-the-Art Open LLM <https://www.databricks.com/blog/introducing-dbrx-new-state-art-open-llm>`_
+    New LLM just dropped.  Claims to be better and more efficient than LLaMa2-70B, Mixtral, and Grok-1.  Some very funny y-axis choices on graphs.  
+
 LVLMs
 -----
 `Chain-of-Spot: Interactive Reasoning Improves Large Vision-Language Models <https://arxiv.org/pdf/2403.12966.pdf>`_
@@ -146,7 +149,7 @@ Sensing
     Bayesian hierarchical models (including GPs!) to predict which trains are passing over the Stanfordshire Bridge based on telemetry data.
 
 `A communication-efficient, online changepoint detection method for monitoring distributed sensor networks <https://arxiv.org/pdf/2403.18549.pdf>`_
-    How to do changepoint detection from an array of distributed sensors while minimizing communicaition costs?  Feels relevant to drone swarms
+    How to do changepoint detection from an array of distributed sensors while minimizing communicaition costs?  Feels like it could be a relevant problem.
 
 Applications
 ------------
