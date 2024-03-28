@@ -103,7 +103,7 @@ Theory
     Theory heavy.  Derives rates of convergence for estimators based on CNNs.  It's reassuring that someone has done this, but I'm glad it wasn't me.
 
 `The Unreasonable Ineffectiveness of the Deeper Layers <https://arxiv.org/pdf/2403.17887.pdf>`_
-    From Meta (and others).  Investigates pruning LLMs and finds you can pruen up to half(!) of layers without much degradation in performance.  Seems crazy, but we should maybe try this if it holds up. 
+    From Meta (and others).  Investigates pruning LLMs and finds you can prune up to half(!) of layers without much degradation in performance.  Seems crazy, but we should maybe try this if it holds up. 
 
 Data Labelling
 --------------
@@ -144,6 +144,9 @@ Sensing
 -------
 `Towards Multilevel Modelling of Train Passing Events on the Staffordshire Bridge <https://arxiv.org/pdf/2403.17820.pdf>`_
     Bayesian hierarchical models (including GPs!) to predict which trains are passing over the Stanfordshire Bridge based on telemetry data.
+
+`A communication-efficient, online changepoint detection method for monitoring distributed sensor networks <https://arxiv.org/pdf/2403.18549.pdf>`_
+    How to do changepoint detection from an array of distributed sensors while minimizing communicaition costs?  Feels relevant to drone swarms
 
 Applications
 ------------
