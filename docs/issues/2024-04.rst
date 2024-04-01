@@ -1,0 +1,203 @@
+2024-04
+=======
+
+LLMs
+----
+`Towards General Computer Control: A Multimodal Agent for Red Dead Redemption II as a Case Study <https://arxiv.org/pdf/2403.03186.pdf>`_
+    LLM plays Red Dead Redemption II.  Takes compuer screen and audio as inputs, and outputes keyboard/mouse actions, like a human would.  Something like this might be a good way to mimic what a human does in other areas?
+
+`Artifacts or Abduction: How Do LLMs Answer Multiple-Choice Questions Without the Question? <https://arxiv.org/pdf/2402.12483.pdf>`_
+    LLMs are really good at multiple choice questions.  How good are they are multiplce choice if they just get the answers, and not the questions?  Really good as it turns out.  Overtrained to the training data, or picking up some weird underlying structure?
+
+`Enhancing Court View Generation with Knowledge Injection and Guidance <https://arxiv.org/pdf/2403.04366.pdf>`_
+    Have you ever wanted an LLM to be a judge in a court case?  This paper injects legal knowledge into pretrained GPT 2 using some sort of encoder to try to do this.  They outperform the metrics, but I wouldn't trust thsi.
+
+`ShortGPT: Layers in Large Language Models are More Redundant Than You Expect <https://arxiv.org/pdf/2403.03853.pdf>`_
+    Pruning method for LLMs.  Seems to maintain SOTA(ish) performancs across a range of benchmarks while pruning quite significantly.  Prunes by measuring the influence of each level and getting rid of the not important ones
+
+`MATHVERSE: Does Your Multi-modal LLM Truly See the Diagrams in Visual Math Problems? <https://arxiv.org/pdf/2403.14624.pdf>`_
+    New dataset for LLMs in math, and a Chain-of-thought evaluation strategy.  Finds that math diagrams do not improve LLM performance on math questions - sometimes, they make the LLMs worse!  Apparently LLMs are just going off of text data.
+
+`Do LLM Agents Have Regret? A Case Study in Online Learning and Games <https://arxiv.org/pdf/2403.16843.pdf>`_
+    In an online setting, how do LLMs do with respect to regret?  Sometimes they're no-regret, sometimes they're not - even in some simple cases.  I wouldn't rely on one of these intead of, e.g.,  a multi-armed bandit but maybe they can get there?
+
+`Introducing DBRX: A New State-of-the-Art Open LLM <https://www.databricks.com/blog/introducing-dbrx-new-state-art-open-llm>`_
+    New LLM just dropped.  Claims to be better and more efficient than LLaMa2-70B, Mixtral, and Grok-1.  Some very funny y-axis choices on graphs.  
+
+`LONG-FORM FACTUALITY IN LARGE LANGUAGE MODELS <https://arxiv.org/pdf/2403.18802.pdf>`_
+    From Deepmind.  LLMs can do factchecking by breaking claims down into factual statements and evaluating each claim with a multi-step reasoning process and the ability to query Google Search. Better and faster than crowdsourced human factchecking which seems too good to be true.  Seems dependent on Google Search, but aren't we all.
+
+`Quiet-STaR: Language Models Can Teach Themselves to Think Before Speaking <https://arxiv.org/pdf/2403.09629.pdf>`_
+    Every piece of text has some implicit reasoning in it - turns out we can make LLMs be better by forcing them to explicitly implicitly reason when generating new text.  The paper has to do some fancy footwork to stick the landing, but seems to manage it.
+
+`Stealing Part of a Production Language Model <https://arxiv.org/pdf/2403.06634.pdf>`_
+    From Deepmind/OpenAI.  (Kind of looks like Deepmind just decided to do this and then talked to OpenAI about it later, though.)  For less than $20 you can steal a whole bunch of embeddings from an LLM using the API.  Apprently they patched it so you can't do this anymore, but maybe there's some other stuff you can do?
+
+`How Far Are We from Intelligent Visual Deductive Reasoning? <https://arxiv.org/pdf/2403.04732.pdf>`_
+    From Apple.  Pretty far as it turns out - LLMs tend not to reason very well when presented with visual instead of textual evidence.  They investigate why a little bit.  Tracks with the "math llms are bad at figures" paper.
+
+LVLMs
+-----
+`Chain-of-Spot: Interactive Reasoning Improves Large Vision-Language Models <https://arxiv.org/pdf/2403.12966.pdf>`_
+    Large vision language models (LVLMs) can see an increase in performance if you prompt them to focus in on an area of interest.  Maybe they get confused by large images?
+
+Doctrinaire
+-----------
+`Point2Building: Reconstructing Buildings from Airborne LiDAR Point Clouds <https://arxiv.org/pdf/2403.02136.pdf>`_
+    Makes a method to autoregressivly 3D meshes from LiDAR point clouds of buildings.  Can probably be adapted to things like tanks?
+
+`LDSF: Lightweight Dual-Stream Framework for SAR Target Recognition by Coupling Local Electromagnetic Scattering Features and Global Visual Features <https://arxiv.org/pdf/2403.03527.pdf>`_
+    A Chinese lab from the "National University of Defense Technology" implements a method for incorproating physrics (EM backscattering) into algorithms for ATR with SAR data.  Demonstrates method on MSTAR.  Worth a look, if only to see what the other guy's up to.  
+
+`Exploring Robust Features for Few-Shot Object Detection in Satellite Imagery <https://arxiv.org/pdf/2403.05381.pdf>`_
+    Few-shot detection in remote sensing data using vision transformers.  Classes are represented by prototypes in some embediding space - the model can learn/fit these prototypes.  Morally similar to doctrinaire/MAGI stuff.
+
+`Chronos: Learning the Language of Time Series <https://arxiv.org/pdf/2403.07815.pdf>`_
+    From Amazon, Time-series prediction is predicting the next thing in a sequence.  Language models are transformers, which just predict the next thing in a sequence.  What if we just used language models for time-series prediction?  Works out pretty well, especially in a zero-shot context.    
+
+`Urban mapping in Dar es Salaam using AJIVE <https://arxiv.org/pdf/2403.09014.pdf>`_
+    Mapping poverty in Dar Es Salem using remote sensing imagery, cell phone data, and surveys.  Cool problem, though they seem to just take an off-the-shelf dimension reduction solution and throw it at the problem.
+
+`Precision Agriculture: Crop Mapping using Machine Learning and Sentinel-2 Satellite Imagery <https://arxiv.org/pdf/2403.09651.pdf>`_
+    Segmenting lavendar fields using Sentinel-2 data.  Finds that logistic regression across bands (they have 12 bands) can outperfrom deep CNNs.  I find this kind of surprising, though lavendar is purple and so very visually distinct.  
+
+Autonomy
+--------
+`Toward Autonomous Cooperation in Heterogeneous Nanosatellite Constellations Using Dynamic Graph Neural Networks <https://arxiv.org/pdf/2403.00692.pdf>`_
+    How to coordinate EO satellites to observe enough stuff using dynamic graph neural nets.  More constrained, but similar to drone swarm type problems.
+
+`Physics-Informed Neural Networks with Skip Connections for Modeling and Control of Gas-Lifted Oil Wells <https://arxiv.org/pdf/2403.02289.pdf>`_
+    Physics-informed neural networks for modelling ODEs/PDEs and controlling dynamic systems like oil wells.  They say introducing skip connections helps improve performance which feels right but also maybe like an old result?
+
+`Reaching Consensus in Cooperative Multi-Agent Reinforcement Learning with Goal Imagination <https://arxiv.org/pdf/2403.03172.pdf>`_
+    From Tencent.  A problem in multi-agent reinforcement learning is coordination - this paper attempts to solve that problem by imaging a common goal and guiding agents to that path.  
+
+`Control and Automation for Industrial Production Storage Zone: Generation of Optimal Route Using Image Processing <https://arxiv.org/pdf/2403.10054.pdf>`_
+    Finding optimal routes for multiple agents based off of imagery.  Details the whole autonomy pipeline for this.  Could be a useful reference if we ever want to do something similar.  
+
+`Hyper Strategy Logic <https://arxiv.org/pdf/2403.13741.pdf>`_
+    How to get multiple agents to cooperate in a multi-agent system?  Apparently one answer is using "hyperlogic" to coordinate.  Interesting problem (and 10 points for the name), but the paper looks very theoretical.
+
+`Planning and Acting While the Clock Ticks <https://arxiv.org/pdf/2403.14796.pdf>`_
+    Traditional autonomous planning agents have planned everything before executing anything.  Sometimes you can't do this - you have to initiate some tasks before you plan everything.  This paper does this by putting a decision rule into an existing planner.
+
+`Collaborative AI Teaming in Unknown Environments via Active Goal Deduction <https://arxiv.org/pdf/2403.15341.pdf>`_
+    How to get AIs that don't know each other to work together in the presence of goal uncertainty and imperfect info about other agents?  Try to learn what the other agents preference are and acted based on that in such a manner as to further your own goals.  Tests it in Starcraft II, and seems to work
+
+Theory
+------
+`Maxwell’s Demon at Work: Efficient Pruning by Leveraging Saturation of Neurons <https://arxiv.org/pdf/2403.07688.pdf>`_
+    From Deepmind.  Examines dead neurons, and proposes that maybe its a good thing.  Proposes a method for training a neural net that controls the number of dead neurons, which leads to network sparsity.  Seems like a cool way to do sparsity during training?
+
+`Reawakening knowledge: Anticipatory recovery from catastrophic interference via structured training <https://arxiv.org/pdf/2403.09613.pdf>`_
+    From Deepmind.  When fed cyclical sequences of documents, LLMs don't experience catastrophic forgetting but rather anticipatory recovery.  They offer a few hypotheses for why this is happening, but they don't really know. 
+
+`Frozen Feature Augmentation for Few-Shot Image Classification <https://arxiv.org/pdf/2403.10519.pdf>`_
+    From Deepmind.  Applies image/feature augmentations in froze feature space to improve the performance of a relativley simple model duct-taped on top of a frozen deep learning model.  
+
+`Out-of-Distribution Detection Should Use Conformal Prediction (and Vice-versa?) <https://arxiv.org/pdf/2403.11532.pdf>`_
+    Traditional methods of evaluating out-of-distribution detection may be too optimistic, and we should use conformal prediction instead.  If we had more time/effort for MAGI I'd look into this.
+
+`Do CLIPs Always Generalize Better than ImageNet Models? <https://arxiv.org/pdf/2403.11497.pdf>`_
+    Constrcuts a dataset with lots of spurious correlations to evaluate CLIP and ImageNet style models fro zero-shot prediction.  Found ImageNets did better in this circumstance.
+
+`Deep Neural Networks Tend To Extrapolate Predictably <https://arxiv.org/pdf/2310.00873.pdf>`_
+    As data gets OOD, neural nets tend to produce solutions which default to the solution which, when treated as constant, minimizes loss over the training set.  This is very similar to how a Gaussian Process behaves - I wonder if there are structural similarities between the models or if this is a generic thing for nonparametric methods?
+
+`On the rates of convergence for learning with convolutional neural networks <https://arxiv.org/pdf/2403.16459.pdf>`_
+    Theory heavy.  Derives rates of convergence for estimators based on CNNs.  It's reassuring that someone has done this, but I'm glad it wasn't me.
+
+`The Unreasonable Ineffectiveness of the Deeper Layers <https://arxiv.org/pdf/2403.17887.pdf>`_
+    From Meta (and others).  Investigates pruning LLMs and finds you can prune up to half(!) of layers without much degradation in performance.  Seems crazy, but we should maybe try this if it holds up. 
+
+`Is Cosine-Similarity of Embeddings Really About Similarity? <https://arxiv.org/pdf/2403.05440.pdf>`_
+    From Netflix.  Studies how well cosine similarity does in some pretty simple linear matrix factorization models (probably inspired by probability matrix factorization/recommender system stuff).  How well it works depends on training/regularization.  Buyer beware.
+    
+Stats
+-----
+`Hierarchical Bayesian Models to Mitigate Systematic Disparities in Prediction with Proxy Outcomes <https://arxiv.org/pdf/2403.00639.pdf>`_
+    Andrew Gelman is a co-author.  Deals with label bias - e.g. you're given a diagnosis and not the underlying condition, and this is confounded with other stuff.  Seems relevant for P(object|detection) sort of problems?
+
+`Scalable Bayesian inference for the generalized linear mixed model <https://arxiv.org/pdf/2403.03007.pdf>`_
+    Stochastic gradient descent MCMC for Bayesian GLMMs.  Significantly faster than Gibbs sampling, but not compared to frequentist methods.
+
+`PLANT-CAPTURE METHODS FOR ESTIMATING POPULATION SIZE FROM UNCERTAIN PLANT CAPTURES <https://arxiv.org/pdf/2403.04058.pdf>`_
+    Develops methods for counting how large a population is based on a capture-recapture model.  Cool stats, lots of applications.
+
+`EXTREMAL GRAPHICAL MODELING WITH LATENT VARIABLES <https://arxiv.org/pdf/2403.09604.pdf>`_
+    Uses extremal graphical models to model conditional independence structure for extreme multivariate data.  Cool approach for extereme events problems.  
+
+Sports Analytics
+----------------
+`The SIDO Performance Model for League of Legends <https://arxiv.org/pdf/2403.04873.pdf>`_
+    Collaboration between a UW prof and TSM Parth for modelling player performance in league of legends.  Very interesting/complex problem.  Looks to be a giant Bayesian mixed effects model, which makes sense.  Not sure if it generalizes to the professional setting, since it relies on having lots of data/players mixing somewhat frequently
+
+`SportsNGEN: Sustained Generation of Multi-player Sports Gameplay <https://arxiv.org/pdf/2403.12977.pdf>`_
+    A transformer decoder can be trained on sports data (tennis and soccer) to simulate matches/games.  They say coaches can use it to evaluate counterfactuals, but since its a black box I'm not sure what type of insights you can glean.
+
+`Offensive Lineup Analysis in Basketball with Clustering Players Based on Shooting Style and Offensive Role <https://arxiv.org/pdf/2403.13821.pdf>`_
+    Attempts to analyze style-of-play in basketball by clustering based on tracking data and "advanced statistics".  Then trained some Bayesian stuff on top to predict which players would go work well together.  Interesting idea/approach, but not terribly complicated.
+
+Sensing
+-------
+`Towards Multilevel Modelling of Train Passing Events on the Staffordshire Bridge <https://arxiv.org/pdf/2403.17820.pdf>`_
+    Bayesian hierarchical models (including GPs!) to predict which trains are passing over the Stanfordshire Bridge based on telemetry data.
+
+`A communication-efficient, online changepoint detection method for monitoring distributed sensor networks <https://arxiv.org/pdf/2403.18549.pdf>`_
+    How to do changepoint detection from an array of distributed sensors while minimizing communicaition costs?  Feels like it could be a relevant problem.
+
+`NIGHT - Non-Line-of-Sight Imaging from Indirect Time of Flight Data <https://arxiv.org/pdf/2403.19376.pdf>`_
+    Can you sense an object behind a corner and out of line of sight?  Apparently you can using Time of Flight sensors and using opposing walls as mirrors.  It's a cool party trick, maybe one we can sell.
+
+Applications
+------------
+`Equipment Health Assessment: Time Series Analysis for Wind Turbine Performance <https://arxiv.org/pdf/2403.00975.pdf>`_
+    Model wind-turbine perfromance over time using ensembles of FNN and LSTMs.  Each wind turbine is unique enough to require tailoring at the individual level.   
+
+`Estimating the household secondary attack rate with the Incomplete Chain Binomial model <https://arxiv.org/pdf/2403.03948.pdf>`_
+    Discrete-time SIR model for infectious diseases, but explicitly modelling the spread within each household  using an Incomplete Chain Binomial model.  I'd never heard of that before and it's nice to learn things.    
+
+`A Geospatial Approach to Predicting Desert Locust Breeding Grounds in Africa <https://arxiv.org/pdf/2403.06860.pdf>`_
+    Using LSTM/convolutional neural nets to do spatiotemporal modelling of locusts swarms.  Specifically looking to predict breeding grounds - probably with an eye towards some sort of policy intervention.  
+
+`Spatio-temporal point process intensity estimation using zero-deflated subsampling applied to a lightning strikes dataset in France <https://arxiv.org/pdf/2403.11564.pdf>`_
+    If you've ever wanted to predict lightning, this is the paper for youl  Nothing too groundbreaking, but an interesting applied problem.
+
+`Settlement Mapping for Population Density Modelling in Disease Risk Spatial Analysis <https://arxiv.org/pdf/2403.12858.pdf>`_
+    Wants to use population density to model disease risk.  Gets at it by estimating settlement maps from satellites using off-the-shelf software (CNNs for settlement segmentation) and adminstrative data to generate more accurate density estimates before using those estimates in downstream analysis.  Nothing too fancy, but a cool pipeline.
+
+`Swarm Characteristics Classification Using Neural Networks <https://arxiv.org/pdf/2403.19572.pdf>`_
+    The Naval Postgraduate School analyzes drone swarms.  Supervised neural nets can apparently analyze and predict drone swarm behavior very well (granted, only two dimensions).  Swarm behavior/tactics were simulated, so to some extent this is just showing that neural nets work as emulators (something somethign universal approximation theorem), but it shows that there's something to the concept.  If they can do this, we can do this.
+
+Computer Science
+----------------
+`Velox: Meta’s Unified Execution Engine <https://www.eecs.umich.edu/courses/eecs584/static_files/papers/p3372-pedreira.pdf>`_
+    From Meta, and already in use internally.  Over my head technically, but seems to be a fancy new way to store, access, and use data of every type in one place.  Might be convenient. 
+
+Data Labelling
+--------------
+`Active Statistical Inference <https://arxiv.org/pdf/2403.03208.pdf>`_
+    Active learning for choosing which datapoints to label next.  Could be useful for situations where we have many more datapoints than labels (e.g. MAGI)
+
+Logistics/Operations Research
+-----------------------------
+`A Multi-population Integrated Approach for Capacitated Location Routing <https://arxiv.org/pdf/2403.09361.pdf>`_
+    Looking for the best way to get a bunch of stuff from a set of depots to a population of users.  Seems to be considering depot configurations.  Worth a look if we ever want to break into logistics
+
+Knowledge Graphs
+----------------
+`Counterfactual Reasoning with Knowledge Graph Embeddings <https://arxiv.org/pdf/2403.06936.pdf>`_
+    Counterfactual reasoning on knowledge graphs.  Feels like there's a cool idea in here somehwere but the paper doesn't quite find it.
+
+Reasoning
+---------
+`A comparison of graphical methods in the case of the murder of Meredith Kercher <https://arxiv.org/pdf/2403.16628.pdf>`_
+    An application of 3 different graphical reasoning models to the Amanda Knox case.  More of a case study than anything, but still interesting.
+
+Datasets
+--------
+`EVD4UAV: An Altitude-Sensitive Benchmark to Evade Vehicle Detection in UAV <https://arxiv.org/pdf/2403.05422v1.pdf>`_
+    Lots of labelled UAV pictures from 50, 70, and 90m.  Made for adversarial stuff, but looks good anyway.
+
+`Multisized Object Detection Using Spaceborne Optical Imagery <https://ieeexplore.ieee.org/document/9109702>`_
+    Remote sensing with lots of classes - definitely includes planes
