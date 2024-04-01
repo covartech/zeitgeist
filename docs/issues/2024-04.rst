@@ -24,6 +24,18 @@ LLMs
 `Introducing DBRX: A New State-of-the-Art Open LLM <https://www.databricks.com/blog/introducing-dbrx-new-state-art-open-llm>`_
     New LLM just dropped.  Claims to be better and more efficient than LLaMa2-70B, Mixtral, and Grok-1.  Some very funny y-axis choices on graphs.  
 
+`LONG-FORM FACTUALITY IN LARGE LANGUAGE MODELS <https://arxiv.org/pdf/2403.18802.pdf>`_
+    From Deepmind.  LLMs can do factchecking by breaking claims down into factual statements and evaluating each claim with a multi-step reasoning process and the ability to query Google Search. Better and faster than crowdsourced human factchecking which seems too good to be true.  Seems dependent on Google Search, but aren't we all.
+
+`Quiet-STaR: Language Models Can Teach Themselves to Think Before Speaking <https://arxiv.org/pdf/2403.09629.pdf>`_
+    Every piece of text has some implicit reasoning in it - turns out we can make LLMs be better by forcing them to explicitly implicitly reason when generating new text.  The paper has to do some fancy footwork to stick the landing, but seems to manage it.
+
+`Stealing Part of a Production Language Model <https://arxiv.org/pdf/2403.06634.pdf>`_
+    From Deepmind/OpenAI.  (Kind of looks like Deepmind just decided to do this and then talked to OpenAI about it later, though.)  For less than $20 you can steal a whole bunch of embeddings from an LLM using the API.  Apprently they patched it so you can't do this anymore, but maybe there's some other stuff you can do?
+
+`How Far Are We from Intelligent Visual Deductive Reasoning? <https://arxiv.org/pdf/2403.04732.pdf>`_
+    From Apple.  Pretty far as it turns out - LLMs tend not to reason very well when presented with visual instead of textual evidence.  They investigate why a little bit.  Tracks with the "math llms are bad at figures" paper.
+
 LVLMs
 -----
 `Chain-of-Spot: Interactive Reasoning Improves Large Vision-Language Models <https://arxiv.org/pdf/2403.12966.pdf>`_
@@ -108,6 +120,9 @@ Theory
 `The Unreasonable Ineffectiveness of the Deeper Layers <https://arxiv.org/pdf/2403.17887.pdf>`_
     From Meta (and others).  Investigates pruning LLMs and finds you can prune up to half(!) of layers without much degradation in performance.  Seems crazy, but we should maybe try this if it holds up. 
 
+`Is Cosine-Similarity of Embeddings Really About Similarity? <https://arxiv.org/pdf/2403.05440.pdf>`_
+    From Netflix.  Studies how well cosine similarity does in some pretty simple linear matrix factorization models (probably inspired by probability matrix factorization/recommender system stuff).  How well it works depends on training/regularization.  Buyer beware.
+    
 Data Labelling
 --------------
 `Active Statistical Inference <https://arxiv.org/pdf/2403.03208.pdf>`_
@@ -151,6 +166,14 @@ Sensing
 `A communication-efficient, online changepoint detection method for monitoring distributed sensor networks <https://arxiv.org/pdf/2403.18549.pdf>`_
     How to do changepoint detection from an array of distributed sensors while minimizing communicaition costs?  Feels like it could be a relevant problem.
 
+`NIGHT - Non-Line-of-Sight Imaging from Indirect Time of Flight Data M2403.19376.pdf (arxiv.org)`_
+    Can you sense an object behind a corner and out of line of sight?  Apparently you can using Time of Flight sensors and using opposing walls as mirrors.  It's a cool party trick, maybe one we can sell.
+
+Computer Science
+----------------
+`Velox: Meta’s Unified Execution Engine <https://www.eecs.umich.edu/courses/eecs584/static_files/papers/p3372-pedreira.pdf>`_
+    From Meta, and already in use internally.  Over my head technically, but seems to be a fancy new way to store, access, and use data of every type in one place.  Might be convenient. 
+
 Applications
 ------------
 `Equipment Health Assessment: Time Series Analysis for Wind Turbine Performance <https://arxiv.org/pdf/2403.00975.pdf>`_
@@ -167,6 +190,9 @@ Applications
 
 `Settlement Mapping for Population Density Modelling in Disease Risk Spatial Analysis <https://arxiv.org/pdf/2403.12858.pdf>`_
     Wants to use population density to model disease risk.  Gets at it by estimating settlement maps from satellites using off-the-shelf software (CNNs for settlement segmentation) and adminstrative data to generate more accurate density estimates before using those estimates in downstream analysis.  Nothing too fancy, but a cool pipeline.
+
+`Swarm Characteristics Classification Using Neural Networks <https://arxiv.org/pdf/2403.19572.pdf>`_
+    The Naval Postgraduate School analyzes drone swarms.  Supervised neural nets can apparently analyze and predict drone swarm behavior very well (granted, only two dimensions).  Swarm behavior/tactics were simulated, so to some extent this is just showing that neural nets work as emulators (something somethign universal approximation theorem), but it shows that there's something to the concept.  If they can do this, we can do this.
 
 Datasets
 --------
