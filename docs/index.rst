@@ -9,3 +9,4 @@ CoVar Reader's Digest
    /issues/2024-01.rst
    /issues/2024-02.rst
    /issues/2024-03.rst
+   /issues/2024-04.rst
