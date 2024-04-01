@@ -61,16 +61,6 @@ Doctrinaire
 `Precision Agriculture: Crop Mapping using Machine Learning and Sentinel-2 Satellite Imagery <https://arxiv.org/pdf/2403.09651.pdf>`_
     Segmenting lavendar fields using Sentinel-2 data.  Finds that logistic regression across bands (they have 12 bands) can outperfrom deep CNNs.  I find this kind of surprising, though lavendar is purple and so very visually distinct.  
 
-Knowledge Graphs
-----------------
-`Counterfactual Reasoning with Knowledge Graph Embeddings <https://arxiv.org/pdf/2403.06936.pdf>`_
-    Counterfactual reasoning on knowledge graphs.  Feels like there's a cool idea in here somehwere but the paper doesn't quite find it.
-
-Reasoning
----------
-`A comparison of graphical methods in the case of the murder of Meredith Kercher <https://arxiv.org/pdf/2403.16628.pdf>`_
-    An application of 3 different graphical reasoning models to the Amanda Knox case.  More of a case study than anything, but still interesting.
-
 Autonomy
 --------
 `Toward Autonomous Cooperation in Heterogeneous Nanosatellite Constellations Using Dynamic Graph Neural Networks <https://arxiv.org/pdf/2403.00692.pdf>`_
@@ -123,16 +113,6 @@ Theory
 `Is Cosine-Similarity of Embeddings Really About Similarity? <https://arxiv.org/pdf/2403.05440.pdf>`_
     From Netflix.  Studies how well cosine similarity does in some pretty simple linear matrix factorization models (probably inspired by probability matrix factorization/recommender system stuff).  How well it works depends on training/regularization.  Buyer beware.
     
-Data Labelling
---------------
-`Active Statistical Inference <https://arxiv.org/pdf/2403.03208.pdf>`_
-    Active learning for choosing which datapoints to label next.  Could be useful for situations where we have many more datapoints than labels (e.g. MAGI)
-
-Logistics/Operations Research
------------------------------
-`A Multi-population Integrated Approach for Capacitated Location Routing <https://arxiv.org/pdf/2403.09361.pdf>`_
-    Looking for the best way to get a bunch of stuff from a set of depots to a population of users.  Seems to be considering depot configurations.  Worth a look if we ever want to break into logistics
-
 Stats
 -----
 `Hierarchical Bayesian Models to Mitigate Systematic Disparities in Prediction with Proxy Outcomes <https://arxiv.org/pdf/2403.00639.pdf>`_
@@ -166,13 +146,8 @@ Sensing
 `A communication-efficient, online changepoint detection method for monitoring distributed sensor networks <https://arxiv.org/pdf/2403.18549.pdf>`_
     How to do changepoint detection from an array of distributed sensors while minimizing communicaition costs?  Feels like it could be a relevant problem.
 
-`NIGHT - Non-Line-of-Sight Imaging from Indirect Time of Flight Data M2403.19376.pdf (arxiv.org)`_
+`NIGHT - Non-Line-of-Sight Imaging from Indirect Time of Flight Data <https://arxiv.org/pdf/2403.19376.pdf>`_
     Can you sense an object behind a corner and out of line of sight?  Apparently you can using Time of Flight sensors and using opposing walls as mirrors.  It's a cool party trick, maybe one we can sell.
-
-Computer Science
-----------------
-`Velox: Meta’s Unified Execution Engine <https://www.eecs.umich.edu/courses/eecs584/static_files/papers/p3372-pedreira.pdf>`_
-    From Meta, and already in use internally.  Over my head technically, but seems to be a fancy new way to store, access, and use data of every type in one place.  Might be convenient. 
 
 Applications
 ------------
@@ -194,9 +169,34 @@ Applications
 `Swarm Characteristics Classification Using Neural Networks <https://arxiv.org/pdf/2403.19572.pdf>`_
     The Naval Postgraduate School analyzes drone swarms.  Supervised neural nets can apparently analyze and predict drone swarm behavior very well (granted, only two dimensions).  Swarm behavior/tactics were simulated, so to some extent this is just showing that neural nets work as emulators (something somethign universal approximation theorem), but it shows that there's something to the concept.  If they can do this, we can do this.
 
+Computer Science
+----------------
+`Velox: Meta’s Unified Execution Engine <https://www.eecs.umich.edu/courses/eecs584/static_files/papers/p3372-pedreira.pdf>`_
+    From Meta, and already in use internally.  Over my head technically, but seems to be a fancy new way to store, access, and use data of every type in one place.  Might be convenient. 
+
+Data Labelling
+--------------
+`Active Statistical Inference <https://arxiv.org/pdf/2403.03208.pdf>`_
+    Active learning for choosing which datapoints to label next.  Could be useful for situations where we have many more datapoints than labels (e.g. MAGI)
+
+Logistics/Operations Research
+-----------------------------
+`A Multi-population Integrated Approach for Capacitated Location Routing <https://arxiv.org/pdf/2403.09361.pdf>`_
+    Looking for the best way to get a bunch of stuff from a set of depots to a population of users.  Seems to be considering depot configurations.  Worth a look if we ever want to break into logistics
+
+Knowledge Graphs
+----------------
+`Counterfactual Reasoning with Knowledge Graph Embeddings <https://arxiv.org/pdf/2403.06936.pdf>`_
+    Counterfactual reasoning on knowledge graphs.  Feels like there's a cool idea in here somehwere but the paper doesn't quite find it.
+
+Reasoning
+---------
+`A comparison of graphical methods in the case of the murder of Meredith Kercher <https://arxiv.org/pdf/2403.16628.pdf>`_
+    An application of 3 different graphical reasoning models to the Amanda Knox case.  More of a case study than anything, but still interesting.
+
 Datasets
 --------
-`EVD4UAV: An Altitude-Sensitive Benchmark to Evade Vehicle Detection in UAV <2403.05422.pdf (arxiv.org)>`_
+`EVD4UAV: An Altitude-Sensitive Benchmark to Evade Vehicle Detection in UAV <https://arxiv.org/pdf/2403.05422v1.pdf>`_
     Lots of labelled UAV pictures from 50, 70, and 90m.  Made for adversarial stuff, but looks good anyway.
 
 `Multisized Object Detection Using Spaceborne Optical Imagery <https://ieeexplore.ieee.org/document/9109702>`_
