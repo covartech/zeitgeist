@@ -1,0 +1,66 @@
+2024-05
+=======
+
+LLMs
+----
+
+`Localizing Paragraph Memorization in Language Models <https://arxiv.org/pdf/2403.19851.pdf>`_
+    From Google.  LLMs can memorize whole paragraphs of text from training data and vomit them when prompted to do so.  This paper investigates this phenomena.  Worth keeping an eye on, especially when we're dealing with classified/controlled training data.
+
+VLMs
+----
+`Unsolvable Problem Detection: Evaluating Trustworthiness of Vision Language Models <https://arxiv.org/pdf/2403.20331.pdf>`_
+    How do VLMs do when faced with unanswerable questions?  This paper makes a dataset to test this out and the answer, it turns out, is not great.  They kinda just make stuff up. 
+
+Doctrinaire
+-----------
+
+
+Autonomy
+--------
+
+
+Theory
+------
+`SGD with Large Step Sizes Learns Sparse Features <https://arxiv.org/pdf/2210.05337.pdf>`_
+    An investigation of how stochastic gradient descent can impose implicit regulation on neural nets, in particular large step sizes cause the network to become sparse.  Some of this is old, but its worth reading.  
+
+Stats
+-----
+
+
+Sports Analytics
+----------------
+`Hypergraph adjusted plus-minus <https://arxiv.org/pdf/2403.20214.pdf>`_
+    Sports analytics using box-score plus-minus has a bit of blind spot for assesing interactions effects between players - things tend to be either single-player focused or all-team focused.   The authors propose a method for evaluating these and arbitrary combinations of players.  
+
+Sensing
+-------
+
+
+Applications
+------------
+
+
+Computer Science
+----------------
+
+
+Data Labelling
+--------------
+
+
+Logistics/Operations Research
+-----------------------------
+
+
+Knowledge Graphs
+----------------
+
+
+Reasoning
+---------
+
+
+Datasets
+--------
