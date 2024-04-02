@@ -1,11 +1,34 @@
 2024-05
 =======
 
+Featured
+--------
+`Bridging Remote Sensors with Multisensor Geospatial Foundation Models <https://arxiv.org/pdf/2404.01260.pdf>`_
+    From Amazon Web Services.  Fusing together multiple modalities in remote sensing.  Does distinct embedding layers for each sensor, then hits them all with a shared encoder, and decodes on a per-sensor level.  Worth looking at for multi-modal data problems.
+
+`Localizing Paragraph Memorization in Language Models <https://arxiv.org/pdf/2403.19851.pdf>`_
+    From Google.  LLMs can memorize whole paragraphs of text from training data and vomit them when prompted to do so.  This paper investigates this phenomena.  Worth keeping an eye on, especially when we're dealing with classified/controlled training data.
+
+`SGD with Large Step Sizes Learns Sparse Features <https://arxiv.org/pdf/2210.05337.pdf>`_
+    An investigation of how stochastic gradient descent can impose implicit regulation on neural nets, in particular large step sizes cause the network to become sparse.  Some of this is old, but its worth reading.  
+
+`Unsolvable Problem Detection: Evaluating Trustworthiness of Vision Language Models <https://arxiv.org/pdf/2403.20331.pdf>`_
+    How do VLMs do when faced with unanswerable questions?  This paper makes a dataset to test this out and the answer, it turns out, is not great.  They kinda just make stuff up. 
+
+`Mapping the Increasing Use of LLMs in Scientific Papers <https://arxiv.org/pdf/2404.01268.pdf>`_
+    Trawling arXiv to figure out how much of it is LLM generated.  Less than you'd think, but still a lot (17.5% for CS).  Trying to reverse engineer whether an LLM wrote something is hard so I can't tell if they're undercounting or overcounting.
+
 LLMs
 ----
 
 `Localizing Paragraph Memorization in Language Models <https://arxiv.org/pdf/2403.19851.pdf>`_
     From Google.  LLMs can memorize whole paragraphs of text from training data and vomit them when prompted to do so.  This paper investigates this phenomena.  Worth keeping an eye on, especially when we're dealing with classified/controlled training data.
+
+`TWIN-GPT: Digital Twins for Clinical Trials via Large Language Model <https://arxiv.org/pdf/2404.01273.pdf>`_
+    Uses LLMs to predict counterfactual data for clinical trials for use in assessing drugs.  Cool idea, but I would never want to take medicine tested this way.
+
+`Mapping the Increasing Use of LLMs in Scientific Papers <https://arxiv.org/pdf/2404.01268.pdf>`_
+    Trawling arXiv to figure out how much of it is LLM generated.  Less than you'd think, but still a lot (17.5% for CS).  Trying to reverse engineer whether an LLM wrote something is hard so I can't tell if they're undercounting or overcounting.
 
 VLMs
 ----
@@ -36,7 +59,8 @@ Sports Analytics
 
 Sensing
 -------
-
+`Bridging Remote Sensors with Multisensor Geospatial Foundation Models <https://arxiv.org/pdf/2404.01260.pdf>`_
+    From Amazon Web Services.  Fusing together multiple modalities in remote sensing.  Does distinct embedding layers for each sensor, then hits them all with a shared encoder, and decodes on a per-sensor level.  Worth looking at for multi-modal data problems.
 
 Applications
 ------------
