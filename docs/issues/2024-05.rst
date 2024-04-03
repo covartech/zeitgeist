@@ -12,8 +12,8 @@ Featured
 `SGD with Large Step Sizes Learns Sparse Features <https://arxiv.org/pdf/2210.05337.pdf>`_
     An investigation of how stochastic gradient descent can impose implicit regulation on neural nets, in particular large step sizes cause the network to become sparse.  Some of this is old, but its worth reading.  
 
-`Unsolvable Problem Detection: Evaluating Trustworthiness of Vision Language Models <https://arxiv.org/pdf/2403.20331.pdf>`_
-    How do VLMs do when faced with unanswerable questions?  This paper makes a dataset to test this out and the answer, it turns out, is not great.  They kinda just make stuff up. 
+`Is Model Collapse Inevitable? Breaking the Curse of Recursion by Accumulating Real and Synthetic Data <https://arxiv.org/pdf/2404.01413.pdf>`_
+    Generative models trained on their own outputs tend to collapse.  Part of the reason we thought this was because new generated data was replacing old real data - if you accumulate data instead, and supplement the old data with generated data rather than substitute it, than model collapse does not occur.  There's still some error, I think - it's just bounded above instead of going to infinity.
 
 `Mapping the Increasing Use of LLMs in Scientific Papers <https://arxiv.org/pdf/2404.01268.pdf>`_
     Trawling arXiv to figure out how much of it is LLM generated.  Less than you'd think, but still a lot (17.5% for CS).  Trying to reverse engineer whether an LLM wrote something is hard so I can't tell if they're undercounting or overcounting.
@@ -29,6 +29,9 @@ LLMs
 
 `Mapping the Increasing Use of LLMs in Scientific Papers <https://arxiv.org/pdf/2404.01268.pdf>`_
     Trawling arXiv to figure out how much of it is LLM generated.  Less than you'd think, but still a lot (17.5% for CS).  Trying to reverse engineer whether an LLM wrote something is hard so I can't tell if they're undercounting or overcounting.
+
+`Manipulating Chess-GPT's World Model <https://adamkarvonen.github.io/machine_learning/2024/03/20/chess-gpt-interventions.html>`_
+    Chess-GPT tries to predict "next move" in chess sequences.  If you give it a low skill game it will act like a low skill player; if you give it a high skill game, it will act like a high skill player.  You can do some interventions to always get it to act like a high skill player.
 
 VLMs
 ----
@@ -47,6 +50,9 @@ Theory
 ------
 `SGD with Large Step Sizes Learns Sparse Features <https://arxiv.org/pdf/2210.05337.pdf>`_
     An investigation of how stochastic gradient descent can impose implicit regulation on neural nets, in particular large step sizes cause the network to become sparse.  Some of this is old, but its worth reading.  
+
+`Is Model Collapse Inevitable? Breaking the Curse of Recursion by Accumulating Real and Synthetic Data <https://arxiv.org/pdf/2404.01413.pdf>`_
+    Generative models trained on their own outputs tend to collapse.  Part of the reason we thought this was because new generated data was replacing old real data - if you accumulate data instead, and supplement the old data with generated data rather than substitute it, than model collapse does not occur.  There's still some error, I think - it's just bounded above instead of going to infinity.
 
 Stats
 -----
@@ -84,7 +90,8 @@ Knowledge Graphs
 
 Reasoning
 ---------
-
+`FLawN-T5: An Empirical Examination of Effective Instruction Tuning Data Mixtures for Legal Reasoning <https://arxiv.org/pdf/2404.02127.pdf>`_
+    Turns out one of the reasons that legal reasoners are bad is because there isn't a good legal reasoning dataset.  This paper introduces one, finetunes a bit, and shows much better performance.  Seems kind of obvious once they point it out. 
 
 Datasets
 --------
