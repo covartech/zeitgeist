@@ -68,6 +68,12 @@ Sensing
 `Bridging Remote Sensors with Multisensor Geospatial Foundation Models <https://arxiv.org/pdf/2404.01260.pdf>`_
     From Amazon Web Services.  Fusing together multiple modalities in remote sensing.  Does distinct embedding layers for each sensor, then hits them all with a shared encoder, and decodes on a per-sensor level.  Worth looking at for multi-modal data problems.
 
+`FLIGHT SCOPE: A DEEP COMPREHENSIVE ASSESSMENT OF AIRCRAFT DETECTION ALGORITHMS IN SATELLITE IMAGERY <https://arxiv.org/pdf/2404.02877.pdf>`_
+    Compares a bunch of different neural architectures on remote sensing for planes - find thats YOLOv5 is the best, outperforming CenterNet.  Maybe we've been using the wrong algorithm this entire time?
+
+`A Satellite Band Selection Framework for Amazon Forest Deforestation Detection Task <https://arxiv.org/pdf/2404.02659.pdf>`_
+    Uses the Univariate Margina Distribution Algorithm (UMDA) to select the "optimal" Landsat band for overhead monitoring.  Apparently, this outperforms using all of the bands, which is wild - I guess the other bands were actively harmful to inference?
+
 Applications
 ------------
 
@@ -84,14 +90,12 @@ Logistics/Operations Research
 -----------------------------
 
 
-Knowledge Graphs
-----------------
-
-
-Reasoning
----------
+Reasoning/Knowledge Graphs
+--------------------------
 `FLawN-T5: An Empirical Examination of Effective Instruction Tuning Data Mixtures for Legal Reasoning <https://arxiv.org/pdf/2404.02127.pdf>`_
     Turns out one of the reasons that legal reasoners are bad is because there isn't a good legal reasoning dataset.  This paper introduces one, finetunes a bit, and shows much better performance.  Seems kind of obvious once they point it out. 
 
+`Chain event graphs for assessing activity-level propositions in forensic science in relation to drug traces on banknotes <https://arxiv.org/pdf/2404.02778.pdf>`_
+    Legal reasoning via turning arguments into graphical models, assigning probabilites to edges, and going from there.  Doesn't really seem groundbreaking from a statistical point of view (and similar to knowledge graphs?) but a useful way to formalize intuition.  
 Datasets
 --------
