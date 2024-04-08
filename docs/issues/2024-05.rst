@@ -33,6 +33,9 @@ LLMs
 `Manipulating Chess-GPT's World Model <https://adamkarvonen.github.io/machine_learning/2024/03/20/chess-gpt-interventions.html>`_
     Chess-GPT tries to predict "next move" in chess sequences.  If you give it a low skill game it will act like a low skill player; if you give it a high skill game, it will act like a high skill player.  You can do some interventions to always get it to act like a high skill player.
 
+`Auditing the Use of Language Models to Guide Hiring Decisions <https://arxiv.org/pdf/2404.03086.pdf>`_
+    Remember how a few years ago Amazon made an AI for it's hirnig process but it turned out the AI was racist and sexist?  Well a couple of scientists tried again with LLMs.  Turn out they're still racist and sexist.  Don't do this at Covar.
+
 VLMs
 ----
 `Unsolvable Problem Detection: Evaluating Trustworthiness of Vision Language Models <https://arxiv.org/pdf/2403.20331.pdf>`_
@@ -44,7 +47,8 @@ Doctrinaire
 
 Autonomy
 --------
-
+`Laser Learning Environment: A new environment for coordination-critical multi-agent tasks <https://arxiv.org/pdf/2404.03596.pdf>`_
+    Introduces a new learning environment for mult-agent reinforcement learning.  One problem is getting stuck in a state space.  They don't have a solution, but they did find the problem.  
 
 Theory
 ------
@@ -73,6 +77,9 @@ Sensing
 
 `A Satellite Band Selection Framework for Amazon Forest Deforestation Detection Task <https://arxiv.org/pdf/2404.02659.pdf>`_
     Uses the Univariate Margina Distribution Algorithm (UMDA) to select the "optimal" Landsat band for overhead monitoring.  Apparently, this outperforms using all of the bands, which is wild - I guess the other bands were actively harmful to inference?
+
+`DiffDet4SAR: Diffusion-based Aircraft Target Detection Network for SAR Images <https://arxiv.org/pdf/2404.03595.pdf>`_
+    ConvNets/transformers for overhead sensing in SAR are limited by varying target size, spikiness of SAR data, and general noise.  They try to get around these problems by (1) using a  denoising diffusion process and (2) using a scattering feature enhancement to model the SAR data.  Seems to lead to improved results. 
 
 Applications
 ------------
