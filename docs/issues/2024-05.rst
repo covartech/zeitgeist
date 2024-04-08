@@ -3,11 +3,11 @@
 
 Featured
 --------
-`Bridging Remote Sensors with Multisensor Geospatial Foundation Models <https://arxiv.org/pdf/2404.01260.pdf>`_
-    From Amazon Web Services.  Fusing together multiple modalities in remote sensing.  Does distinct embedding layers for each sensor, then hits them all with a shared encoder, and decodes on a per-sensor level.  Worth looking at for multi-modal data problems.
+`Improving Detection in Aerial Images by Capturing Inter-Object Relationships <https://arxiv.org/pdf/2404.04140.pdf>`_
+    Objects tend to be spatially corrected, but existing overhead ATR methods don't take this into account.  This paper does so by putting a transfomer on top of traditional two-stage detectors to examine regions of interest.  We though about implementing something like this for MAGI, but never did.  A cool idea to keep in our back pocket, especially if we can adapt it to non-overhead areas.
 
-`Localizing Paragraph Memorization in Language Models <https://arxiv.org/pdf/2403.19851.pdf>`_
-    From Google.  LLMs can memorize whole paragraphs of text from training data and vomit them when prompted to do so.  This paper investigates this phenomena.  Worth keeping an eye on, especially when we're dealing with classified/controlled training data.
+`KGExplainer: Towards Exploring Connected Subgraph Explanations for Knowledge Graph Completion <https://arxiv.org/pdf/2404.03893.pdf>`_
+    From Amazon.  Proposes a method to explain knowledge graph completions done with knowledge graph embeddings by investigating connected subgraphs.  Makes intuitive sense and seems to improve performance in practice.  
 
 `SGD with Large Step Sizes Learns Sparse Features <https://arxiv.org/pdf/2210.05337.pdf>`_
     An investigation of how stochastic gradient descent can impose implicit regulation on neural nets, in particular large step sizes cause the network to become sparse.  Some of this is old, but its worth reading.  
@@ -43,12 +43,24 @@ VLMs
 
 Doctrinaire
 -----------
+`FLIGHT SCOPE: A DEEP COMPREHENSIVE ASSESSMENT OF AIRCRAFT DETECTION ALGORITHMS IN SATELLITE IMAGERY <https://arxiv.org/pdf/2404.02877.pdf>`_
+    Compares a bunch of different neural architectures on remote sensing for planes - find thats YOLOv5 is the best, outperforming CenterNet.  Maybe we've been using the wrong algorithm this entire time?
+
+`Improving Detection in Aerial Images by Capturing Inter-Object Relationships <https://arxiv.org/pdf/2404.04140.pdf>`_
+    Objects tend to be spatially corrected, but existing overhead ATR methods don't take this into account.  This paper does so by putting a transfomer on top of traditional two-stage detectors to examine regions of interest.  We though about implementing something like this for MAGI, but never did.  A cool idea to keep in our back pocket, especially if we can adapt it to non-overhead areas.
+
+`DiffDet4SAR: Diffusion-based Aircraft Target Detection Network for SAR Images <https://arxiv.org/pdf/2404.03595.pdf>`_
+    ConvNets/transformers for overhead sensing in SAR are limited by varying target size, spikiness of SAR data, and general noise.  They try to get around these problems by (1) using a  denoising diffusion process and (2) using a scattering feature enhancement to model the SAR data.  Seems to lead to improved results. 
+
 
 
 Autonomy
 --------
 `Laser Learning Environment: A new environment for coordination-critical multi-agent tasks <https://arxiv.org/pdf/2404.03596.pdf>`_
     Introduces a new learning environment for mult-agent reinforcement learning.  One problem is getting stuck in a state space.  They don't have a solution, but they did find the problem.  
+
+`PLAYER2VEC: A LANGUAGE MODELING APPROACH TO UNDERSTAND PLAYER BEHAVIOR IN GAMES <https://arxiv.org/pdf/2404.04234.pdf>`_
+    Player behavior in video games can be turned into a sequence of actions and modelled with a transformer.  The authors don't really do much with this insight, but you could imagine doing something interesting, like using it to control autonomous systems. 
 
 Theory
 ------
@@ -57,6 +69,9 @@ Theory
 
 `Is Model Collapse Inevitable? Breaking the Curse of Recursion by Accumulating Real and Synthetic Data <https://arxiv.org/pdf/2404.01413.pdf>`_
     Generative models trained on their own outputs tend to collapse.  Part of the reason we thought this was because new generated data was replacing old real data - if you accumulate data instead, and supplement the old data with generated data rather than substitute it, than model collapse does not occur.  There's still some error, I think - it's just bounded above instead of going to infinity.
+
+`The Unreasonable Effectiveness Of Early Discarding After One Epoch In Neural Network Hyperparameter Optimization <https://arxiv.org/pdf/2404.04111.pdf>`_
+    Apparently the best way to do hyperparameter parameterization is to train all instantiations of your network for the same number of epochs, and make a choice based on those results.  Kind of surprising none of the fancier techniques provide any real benefit over this naive approach.
 
 Stats
 -----
@@ -72,14 +87,11 @@ Sensing
 `Bridging Remote Sensors with Multisensor Geospatial Foundation Models <https://arxiv.org/pdf/2404.01260.pdf>`_
     From Amazon Web Services.  Fusing together multiple modalities in remote sensing.  Does distinct embedding layers for each sensor, then hits them all with a shared encoder, and decodes on a per-sensor level.  Worth looking at for multi-modal data problems.
 
-`FLIGHT SCOPE: A DEEP COMPREHENSIVE ASSESSMENT OF AIRCRAFT DETECTION ALGORITHMS IN SATELLITE IMAGERY <https://arxiv.org/pdf/2404.02877.pdf>`_
-    Compares a bunch of different neural architectures on remote sensing for planes - find thats YOLOv5 is the best, outperforming CenterNet.  Maybe we've been using the wrong algorithm this entire time?
-
 `A Satellite Band Selection Framework for Amazon Forest Deforestation Detection Task <https://arxiv.org/pdf/2404.02659.pdf>`_
     Uses the Univariate Margina Distribution Algorithm (UMDA) to select the "optimal" Landsat band for overhead monitoring.  Apparently, this outperforms using all of the bands, which is wild - I guess the other bands were actively harmful to inference?
 
-`DiffDet4SAR: Diffusion-based Aircraft Target Detection Network for SAR Images <https://arxiv.org/pdf/2404.03595.pdf>`_
-    ConvNets/transformers for overhead sensing in SAR are limited by varying target size, spikiness of SAR data, and general noise.  They try to get around these problems by (1) using a  denoising diffusion process and (2) using a scattering feature enhancement to model the SAR data.  Seems to lead to improved results. 
+`LiDAR-Guided Cross-Attention Fusion for Hyperspectral Band Selection and Image Classification <https://arxiv.org/pdf/2404.03883.pdf>`_
+    Uses LiDAR to select the best hyperspectral bands using fancy self-attention encoders, then uses all of it for image classification.  Could be useful for fusion.  
 
 Applications
 ------------
@@ -104,5 +116,9 @@ Reasoning/Knowledge Graphs
 
 `Chain event graphs for assessing activity-level propositions in forensic science in relation to drug traces on banknotes <https://arxiv.org/pdf/2404.02778.pdf>`_
     Legal reasoning via turning arguments into graphical models, assigning probabilites to edges, and going from there.  Doesn't really seem groundbreaking from a statistical point of view (and similar to knowledge graphs?) but a useful way to formalize intuition.  
+
+`KGExplainer: Towards Exploring Connected Subgraph Explanations for Knowledge Graph Completion <https://arxiv.org/pdf/2404.03893.pdf>`_
+    From Amazon.  Proposes a method to explain knowledge graph completions done with knowledge graph embeddings by investigating connected subgraphs.  Makes intuitive sense and seems to improve performance in practice.  
+
 Datasets
 --------
