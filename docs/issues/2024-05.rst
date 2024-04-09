@@ -9,8 +9,8 @@ Featured
 `KGExplainer: Towards Exploring Connected Subgraph Explanations for Knowledge Graph Completion <https://arxiv.org/pdf/2404.03893.pdf>`_
     From Amazon.  Proposes a method to explain knowledge graph completions done with knowledge graph embeddings by investigating connected subgraphs.  Makes intuitive sense and seems to improve performance in practice.  
 
-`SGD with Large Step Sizes Learns Sparse Features <https://arxiv.org/pdf/2210.05337.pdf>`_
-    An investigation of how stochastic gradient descent can impose implicit regulation on neural nets, in particular large step sizes cause the network to become sparse.  Some of this is old, but its worth reading.  
+`No “Zero-Shot” Without Exponential Data: Pretraining Concept Frequency Determines Multimodal Model Performance <https://arxiv.org/pdf/2404.04125.pdf>`_
+    From Deepmind (and friends).  Zero-shot models like CLIP aren't really zero-shot - their performance instead requires exponentially more data to get linear performance increases.  Obvious implication is that these models aren't actually zero-shot and instead depend on just having oodles of training data, which makes sense intuitively.  
 
 `Is Model Collapse Inevitable? Breaking the Curse of Recursion by Accumulating Real and Synthetic Data <https://arxiv.org/pdf/2404.01413.pdf>`_
     Generative models trained on their own outputs tend to collapse.  Part of the reason we thought this was because new generated data was replacing old real data - if you accumulate data instead, and supplement the old data with generated data rather than substitute it, than model collapse does not occur.  There's still some error, I think - it's just bounded above instead of going to infinity.
@@ -34,7 +34,7 @@ LLMs
     Chess-GPT tries to predict "next move" in chess sequences.  If you give it a low skill game it will act like a low skill player; if you give it a high skill game, it will act like a high skill player.  You can do some interventions to always get it to act like a high skill player.
 
 `Auditing the Use of Language Models to Guide Hiring Decisions <https://arxiv.org/pdf/2404.03086.pdf>`_
-    Remember how a few years ago Amazon made an AI for it's hirnig process but it turned out the AI was racist and sexist?  Well a couple of scientists tried again with LLMs.  Turn out they're still racist and sexist.  Don't do this at Covar.
+    Remember how a few years ago Amazon made an AI for it's hiring process but it turned out the AI was racist and sexist?  Well a couple of scientists tried again with LLMs.  Turn out they're still racist and sexist.  Don't do this at Covar.
 
 VLMs
 ----
@@ -51,7 +51,6 @@ Doctrinaire
 
 `DiffDet4SAR: Diffusion-based Aircraft Target Detection Network for SAR Images <https://arxiv.org/pdf/2404.03595.pdf>`_
     ConvNets/transformers for overhead sensing in SAR are limited by varying target size, spikiness of SAR data, and general noise.  They try to get around these problems by (1) using a  denoising diffusion process and (2) using a scattering feature enhancement to model the SAR data.  Seems to lead to improved results. 
-
 
 
 Autonomy
@@ -73,8 +72,16 @@ Theory
 `The Unreasonable Effectiveness Of Early Discarding After One Epoch In Neural Network Hyperparameter Optimization <https://arxiv.org/pdf/2404.04111.pdf>`_
     Apparently the best way to do hyperparameter parameterization is to train all instantiations of your network for the same number of epochs, and make a choice based on those results.  Kind of surprising none of the fancier techniques provide any real benefit over this naive approach.
 
+`Physics of Language Models: Part 3.3, Knowledge Capacity Scaling Laws <https://arxiv.org/pdf/2404.05405.pdf>`_
+    From Meta.  LLMs apparently get 2 bits of information per parameter, no more and no less, even when quantized different ways.  
+
+`No “Zero-Shot” Without Exponential Data: Pretraining Concept Frequency Determines Multimodal Model Performance <https://arxiv.org/pdf/2404.04125.pdf>`_
+    From Deepmind (and friends).  Zero-shot models like CLIP aren't really zero-shot - their performance instead requires exponentially more data to get linear performance increases.  Obvious implication is that these models aren't actually zero-shot and instead depend on just having oodles of training data, which makes sense intuitively.  
+
 Stats
 -----
+`On the Learnability of Out-of-distribution Detection <https://arxiv.org/pdf/2404.04865.pdf>`_
+    A NeurIPS 2022 paper accepted in JLMR and republished in 2024 (maybe with signficant revisions?). "Proves" when OOD detection is theoretically impossible and when it's possible.   
 
 
 Sports Analytics
