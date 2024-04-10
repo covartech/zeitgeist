@@ -15,8 +15,8 @@ Featured
 `Is Model Collapse Inevitable? Breaking the Curse of Recursion by Accumulating Real and Synthetic Data <https://arxiv.org/pdf/2404.01413.pdf>`_
     Generative models trained on their own outputs tend to collapse.  Part of the reason we thought this was because new generated data was replacing old real data - if you accumulate data instead, and supplement the old data with generated data rather than substitute it, than model collapse does not occur.  There's still some error, I think - it's just bounded above instead of going to infinity.
 
-`Mapping the Increasing Use of LLMs in Scientific Papers <https://arxiv.org/pdf/2404.01268.pdf>`_
-    Trawling arXiv to figure out how much of it is LLM generated.  Less than you'd think, but still a lot (17.5% for CS).  Trying to reverse engineer whether an LLM wrote something is hard so I can't tell if they're undercounting or overcounting.
+`X-VARS: Introducing Explainability in Football Refereeing with Multi-Modal Large Language Models <https://arxiv.org/pdf/2404.06332.pdf>`_
+    Ever yelled at the refs while watching sports?  What if the ref was an LLM?  This paper puts soccer vidoes into a CLIP-based encoder, and an LLM then generates and explains fouls.  Cool application, and could be transferred to other domains more directly relevant to CoVar.
 
 LLMs
 ----
@@ -35,6 +35,12 @@ LLMs
 
 `Auditing the Use of Language Models to Guide Hiring Decisions <https://arxiv.org/pdf/2404.03086.pdf>`_
     Remember how a few years ago Amazon made an AI for it's hiring process but it turned out the AI was racist and sexist?  Well a couple of scientists tried again with LLMs.  Turn out they're still racist and sexist.  Don't do this at Covar.
+
+`X-VARS: Introducing Explainability in Football Refereeing with Multi-Modal Large Language Models <https://arxiv.org/pdf/2404.06332.pdf>`_
+    Ever yelled at the refs while watching sports?  What if the ref was an LLM?  This paper puts soccer vidoes into a CLIP-based encoder, and an LLM then generates and explains fouls.  Cool application, and could be transferred to other domains more directly relevant to CoVar.
+
+`Elephants Never Forget: Memorization and Learning of Tabular Data in Large Language Models <https://arxiv.org/pdf/2404.06209.pdf>`_
+    From Microsoft.  LLMs have  tendency to memorize tabular training data wholesale, but still perform decently well in zero/few shot environments.  
 
 VLMs
 ----
@@ -102,7 +108,8 @@ Sensing
 
 Applications
 ------------
-
+`Protection of Guizhou Miao Batik Culture Based on Knowledge Graph and Deep Learning <https://arxiv.org/ftp/arxiv/papers/2404/2404.06168.pdf>`_
+    Duct-tapes LLMs, knowledge graphs, and CNNs together to record/understand batik, a type of fabric produced by the Miao in Guanzhou, China.  Uses the LLM to encode the knowledge graph, and can upload a particular batik using a CNN to understand the cultural context.  Sort of just a really fancy databse?
 
 Computer Science
 ----------------
