@@ -30,12 +30,6 @@ LLMs
 `Mapping the Increasing Use of LLMs in Scientific Papers <https://arxiv.org/pdf/2404.01268.pdf>`_
     Trawling arXiv to figure out how much of it is LLM generated.  Less than you'd think, but still a lot (17.5% for CS).  Trying to reverse engineer whether an LLM wrote something is hard so I can't tell if they're undercounting or overcounting.
 
-`Manipulating Chess-GPT's World Model <https://adamkarvonen.github.io/machine_learning/2024/03/20/chess-gpt-interventions.html>`_
-    Chess-GPT tries to predict "next move" in chess sequences.  If you give it a low skill game it will act like a low skill player; if you give it a high skill game, it will act like a high skill player.  You can do some interventions to always get it to act like a high skill player.
-
-`Auditing the Use of Language Models to Guide Hiring Decisions <https://arxiv.org/pdf/2404.03086.pdf>`_
-    Remember how a few years ago Amazon made an AI for it's hiring process but it turned out the AI was racist and sexist?  Well a couple of scientists tried again with LLMs.  Turn out they're still racist and sexist.  Don't do this at Covar.
-
 `X-VARS: Introducing Explainability in Football Refereeing with Multi-Modal Large Language Models <https://arxiv.org/pdf/2404.06332.pdf>`_
     Ever yelled at the refs while watching sports?  What if the ref was an LLM?  This paper puts soccer vidoes into a CLIP-based encoder, and an LLM then generates and explains fouls.  Cool application, and could be transferred to other domains more directly relevant to CoVar.
 
@@ -45,22 +39,16 @@ LLMs
 `Alpaca against Vicuna: Using LLMs to Uncover Memorization of LLMs <https://arxiv.org/pdf/2403.04801.pdf>`_
     Instead of trying to prompt an LLM to recover something about it (in this case whether/how much training data it has memorized) you can have another LLM attack it instead.  Could probably expand this methodology to other vectors.
 
-VLMs
-----
-`Unsolvable Problem Detection: Evaluating Trustworthiness of Vision Language Models <https://arxiv.org/pdf/2403.20331.pdf>`_
-    How do VLMs do when faced with unanswerable questions?  This paper makes a dataset to test this out and the answer, it turns out, is not great.  They kinda just make stuff up. 
-
 Doctrinaire
 -----------
 `FLIGHT SCOPE: A DEEP COMPREHENSIVE ASSESSMENT OF AIRCRAFT DETECTION ALGORITHMS IN SATELLITE IMAGERY <https://arxiv.org/pdf/2404.02877.pdf>`_
-    Compares a bunch of different neural architectures on remote sensing for planes - find thats YOLOv5 is the best, outperforming CenterNet.  Maybe we've been using the wrong algorithm this entire time?
+    Compares a bunch of different neural architectures on remote sensing for planes - find thats YOLOv5 is the best, outperforming CenterNet.  (Turns out they're using the other Centernet)
 
 `Improving Detection in Aerial Images by Capturing Inter-Object Relationships <https://arxiv.org/pdf/2404.04140.pdf>`_
     Objects tend to be spatially corrected, but existing overhead ATR methods don't take this into account.  This paper does so by putting a transfomer on top of traditional two-stage detectors to examine regions of interest.  We though about implementing something like this for MAGI, but never did.  A cool idea to keep in our back pocket, especially if we can adapt it to non-overhead areas.
 
 `DiffDet4SAR: Diffusion-based Aircraft Target Detection Network for SAR Images <https://arxiv.org/pdf/2404.03595.pdf>`_
     ConvNets/transformers for overhead sensing in SAR are limited by varying target size, spikiness of SAR data, and general noise.  They try to get around these problems by (1) using a  denoising diffusion process and (2) using a scattering feature enhancement to model the SAR data.  Seems to lead to improved results. 
-
 
 Autonomy
 --------
@@ -95,12 +83,6 @@ Stats
 `On the Learnability of Out-of-distribution Detection <https://arxiv.org/pdf/2404.04865.pdf>`_
     A NeurIPS 2022 paper accepted in JLMR and republished in 2024 (maybe with signficant revisions?). "Proves" when OOD detection is theoretically impossible and when it's possible.   
 
-
-Sports Analytics
-----------------
-`Hypergraph adjusted plus-minus <https://arxiv.org/pdf/2403.20214.pdf>`_
-    Sports analytics using box-score plus-minus has a bit of blind spot for assesing interactions effects between players - things tend to be either single-player focused or all-team focused.   The authors propose a method for evaluating these and arbitrary combinations of players.  
-
 Sensing
 -------
 `Bridging Remote Sensors with Multisensor Geospatial Foundation Models <https://arxiv.org/pdf/2404.01260.pdf>`_
@@ -111,14 +93,6 @@ Sensing
 
 `LiDAR-Guided Cross-Attention Fusion for Hyperspectral Band Selection and Image Classification <https://arxiv.org/pdf/2404.03883.pdf>`_
     Uses LiDAR to select the best hyperspectral bands using fancy self-attention encoders, then uses all of it for image classification.  Could be useful for fusion.  
-
-Applications
-------------
-`Protection of Guizhou Miao Batik Culture Based on Knowledge Graph and Deep Learning <https://arxiv.org/ftp/arxiv/papers/2404/2404.06168.pdf>`_
-    Duct-tapes LLMs, knowledge graphs, and CNNs together to record/understand batik, a type of fabric produced by the Miao in Guanzhou, China.  Uses the LLM to encode the knowledge graph, and can upload a particular batik using a CNN to understand the cultural context.  Sort of just a really fancy databse?
-
-`DIFFOBS: GENERATIVE DIFFUSION FOR GLOBAL FORECASTING OF SATELLITE OBSERVATIONS <https://arxiv.org/pdf/2404.06517.pdf>`_
-    From NVIDIA.  Trains a generative diffusion model to predict daily precipitation (some sort of spatio-temporal structure under the hood?) global satellite estimates.  Good for a few-months-ahead estimation despite only trying to do one day ahead.
 
 FPGA
 ----
