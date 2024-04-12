@@ -9,8 +9,8 @@ Featured
 `Alpaca against Vicuna: Using LLMs to Uncover Memorization of LLMs <https://arxiv.org/pdf/2403.04801.pdf>`_
     Instead of trying to prompt an LLM to recover something about it (in this case whether/how much training data it has memorized) you can have another LLM attack it instead.  Could probably expand this methodology to other vectors.
 
-`Variational Stochastic Gradient Descent for Deep Neural Networks <https://arxiv.org/pdf/2404.06549.pdf>`_
-    New method for gradient descent, Variational Stochastic Gradient Descent, which outperforms both ADAM and regular SGD on the examples in the paper (both image classification).  They make VSGD by forming a probabilistic model of gradient descent and use stochastic variational inference to find updates.  Apparently VSGD is a generalization of other methods such as SGD and ADAM?
+`RecurrentGemma: Moving Past Transformers for Efficient Open Language Models <https://arxiv.org/pdf/2404.07839.pdf>`_
+    Deepmind proposes a new LLM.  Doesn't use global attention, but instead uses local attention and linear recurrences.  Based off of an earlier paper (https://arxiv.org/pdf/2402.19427.pdf) which proposes a novel model architecture.  They trained this one on the same data as Gemma - this seems to be better (mildly) despite being trained on lass tokens, runs much faster, and doesn't face the same sequence length limitations. 
 
 `Is Model Collapse Inevitable? Breaking the Curse of Recursion by Accumulating Real and Synthetic Data <https://arxiv.org/pdf/2404.01413.pdf>`_
     Generative models trained on their own outputs tend to collapse.  Part of the reason we thought this was because new generated data was replacing old real data - if you accumulate data instead, and supplement the old data with generated data rather than substitute it, than model collapse does not occur.  There's still some error, I think - it's just bounded above instead of going to infinity.
@@ -38,6 +38,9 @@ LLMs
 
 `Alpaca against Vicuna: Using LLMs to Uncover Memorization of LLMs <https://arxiv.org/pdf/2403.04801.pdf>`_
     Instead of trying to prompt an LLM to recover something about it (in this case whether/how much training data it has memorized) you can have another LLM attack it instead.  Could probably expand this methodology to other vectors.
+
+`RecurrentGemma: Moving Past Transformers for Efficient Open Language Models <https://arxiv.org/pdf/2404.07839.pdf>`_
+    Deepmind proposes a new LLM.  Doesn't use global attention, but instead uses local attention and linear recurrences.  Based off of an earlier paper (https://arxiv.org/pdf/2402.19427.pdf).  They trained this one on the same data as Gemma - this seems to be better (mildly) despite being trained on lass tokens, runs much faster, and doesn't face the same sequence length limitations. 
 
 Doctrinaire
 -----------
