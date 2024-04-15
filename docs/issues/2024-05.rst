@@ -6,8 +6,8 @@ Featured
 `Improving Detection in Aerial Images by Capturing Inter-Object Relationships <https://arxiv.org/pdf/2404.04140.pdf>`_
     Objects tend to be spatially corrected, but existing overhead ATR methods don't take this into account.  This paper does so by putting a transfomer on top of traditional two-stage detectors to examine regions of interest.  We though about implementing something like this for MAGI, but never did.  A cool idea to keep in our back pocket, especially if we can adapt it to non-overhead areas.
 
-`Alpaca against Vicuna: Using LLMs to Uncover Memorization of LLMs <https://arxiv.org/pdf/2403.04801.pdf>`_
-    Instead of trying to prompt an LLM to recover something about it (in this case whether/how much training data it has memorized) you can have another LLM attack it instead.  Could probably expand this methodology to other vectors.
+`Advancing Forest Fire Prevention: Deep Reinforcement Learning for Effective Firebreak Placement <https://arxiv.org/pdf/2404.08523.pdf>`_
+    Deep reinforcement learning on satellite pictures to discover optimal placement for firebreaks in case of forest fires.  We could probably use a similar approach to find optimal spots for, e.g., fortifications or minefields.
 
 `RecurrentGemma: Moving Past Transformers for Efficient Open Language Models <https://arxiv.org/pdf/2404.07839.pdf>`_
     Deepmind proposes a new LLM.  Doesn't use global attention, but instead uses local attention and linear recurrences.  Based off of an earlier paper (https://arxiv.org/pdf/2402.19427.pdf) which proposes a novel model architecture.  They trained this one on the same data as Gemma - this seems to be better (mildly) despite being trained on lass tokens, runs much faster, and doesn't face the same sequence length limitations. 
@@ -61,6 +61,9 @@ Autonomy
 `PLAYER2VEC: A LANGUAGE MODELING APPROACH TO UNDERSTAND PLAYER BEHAVIOR IN GAMES <https://arxiv.org/pdf/2404.04234.pdf>`_
     Player behavior in video games can be turned into a sequence of actions and modelled with a transformer.  The authors don't really do much with this insight, but you could imagine doing something interesting, like using it to control autonomous systems. 
 
+`Advancing Forest Fire Prevention: Deep Reinforcement Learning for Effective Firebreak Placement <https://arxiv.org/pdf/2404.08523.pdf>`_
+    Deep reinforcement learning on satellite pictures to discover optimal placement for firebreaks in case of forest fires.  We could probably use a similar approach to find optimal spots for, e.g., fortifications or minefields.
+
 Theory
 ------
 `SGD with Large Step Sizes Learns Sparse Features <https://arxiv.org/pdf/2210.05337.pdf>`_
@@ -85,6 +88,9 @@ Stats
 -----
 `On the Learnability of Out-of-distribution Detection <https://arxiv.org/pdf/2404.04865.pdf>`_
     A NeurIPS 2022 paper accepted in JLMR and republished in 2024 (maybe with signficant revisions?). "Proves" when OOD detection is theoretically impossible and when it's possible.   
+
+`Study of Emotion Concept Formation by Integrating Vision, Physiology, and Word Information using Multilayered Multimodal Latent Dirichlet Allocation <https://arxiv.org/pdf/2404.08295.pdf>`_
+    Multimodal Latent Dirichlet Allocation seems like a cool idea - LDA generalized to multiple modalities allows you to encode multiple modalities like images/langauge in the "same" space, sort of like CLIP.  Not sure why you'd use this instead of CLIP, granted, but cool idea nonetheless.
 
 Sensing
 -------
