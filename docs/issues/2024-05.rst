@@ -9,8 +9,8 @@ Featured
 `Advancing Forest Fire Prevention: Deep Reinforcement Learning for Effective Firebreak Placement <https://arxiv.org/pdf/2404.08523.pdf>`_
     Deep reinforcement learning on satellite pictures to discover optimal placement for firebreaks in case of forest fires.  We could probably use a similar approach to find optimal spots for, e.g., fortifications or minefields.
 
-`RecurrentGemma: Moving Past Transformers for Efficient Open Language Models <https://arxiv.org/pdf/2404.07839.pdf>`_
-    Deepmind proposes a new LLM.  Doesn't use global attention, but instead uses local attention and linear recurrences.  Based off of an earlier paper (https://arxiv.org/pdf/2402.19427.pdf) which proposes a novel model architecture.  They trained this one on the same data as Gemma - this seems to be better (mildly) despite being trained on lass tokens, runs much faster, and doesn't face the same sequence length limitations. 
+`Why do small language models underperform? Studying LM Saturation via the Softmax Bottleneck <https://arxiv.org/pdf/2404.07647.pdf>`_
+    Smaller LLMs experience performance drops and plateaus during training.  This happens because the hidden dimension of smaller LLMs is too small to capture the distribution it is targetting which encounters the "well-known" softmax bottleneck.  If you have less than 1000 hidden dimensions, you're in for a bad time.  
 
 `Is Model Collapse Inevitable? Breaking the Curse of Recursion by Accumulating Real and Synthetic Data <https://arxiv.org/pdf/2404.01413.pdf>`_
     Generative models trained on their own outputs tend to collapse.  Part of the reason we thought this was because new generated data was replacing old real data - if you accumulate data instead, and supplement the old data with generated data rather than substitute it, than model collapse does not occur.  There's still some error, I think - it's just bounded above instead of going to infinity.
@@ -83,6 +83,9 @@ Theory
 
 `Variational Stochastic Gradient Descent for Deep Neural Networks <https://arxiv.org/pdf/2404.06549.pdf>`_
     New method for gradient descent, Variational Stochastic Gradient Descent, which outperforms both ADAM and regular SGD on the examples in the paper (both image classification).  They make VSGD by forming a probabilistic model of gradient descent and use stochastic variational inference to find updates.  Apparently VSGD is a generalization of other methods such as SGD and ADAM?
+
+`Why do small language models underperform? Studying LM Saturation via the Softmax Bottleneck <https://arxiv.org/pdf/2404.07647.pdf>`_
+    Smaller LLMs experience performance drops and plateaus during training.  This happens because the hidden dimension of smaller LLMs is too small to capture the distribution it is targetting which encounters the "well-known" softmax bottleneck.  If you have less than 1000 hidden dimensions, you're in for a bad time.  
 
 Stats
 -----
