@@ -64,6 +64,9 @@ Autonomy
 `Advancing Forest Fire Prevention: Deep Reinforcement Learning for Effective Firebreak Placement <https://arxiv.org/pdf/2404.08523.pdf>`_
     Deep reinforcement learning on satellite pictures to discover optimal placement for firebreaks in case of forest fires.  We could probably use a similar approach to find optimal spots for, e.g., fortifications or minefields.
 
+`Learn to Tour: Operator Design For Solution Feasibility Mapping in Pickup-and-delivery Traveling Salesman Problem <https://arxiv.org/pdf/2404.11458.pdf>`_
+    Uses reinforcement learning for the pickup and delivery travelling salesman problem.  Only considers operators which map a good solution to a good solution, which cuts down the search space/forces the RL algo to work properly.  Could be interesting applied to autonomous vehicles.
+
 Theory
 ------
 `SGD with Large Step Sizes Learns Sparse Features <https://arxiv.org/pdf/2210.05337.pdf>`_
