@@ -6,8 +6,8 @@ Featured
 `Improving Detection in Aerial Images by Capturing Inter-Object Relationships <https://arxiv.org/pdf/2404.04140.pdf>`_
     Objects tend to be spatially corrected, but existing overhead ATR methods don't take this into account.  This paper does so by putting a transfomer on top of traditional two-stage detectors to examine regions of interest.  We though about implementing something like this for MAGI, but never did.  A cool idea to keep in our back pocket, especially if we can adapt it to non-overhead areas.
 
-`Advancing Forest Fire Prevention: Deep Reinforcement Learning for Effective Firebreak Placement <https://arxiv.org/pdf/2404.08523.pdf>`_
-    Deep reinforcement learning on satellite pictures to discover optimal placement for firebreaks in case of forest fires.  We could probably use a similar approach to find optimal spots for, e.g., fortifications or minefields.
+`Dynamic Gaussians Mesh: Consistent Mesh Reconstruction from Monocular Videos <https://arxiv.org/pdf/2404.12379.pdf>`_
+    Recovers object meshes from a video of an object.  Simlar to the one-shot learning we did for MAGI, but in video form. Uses some of the same software (nvdiffrast).  We could probably do this - is there a value-add on any project for one-shot learning CAD models?
 
 `TransformerFAM: Feedback attention is working memory <https://arxiv.org/pdf/2404.09173.pdf>`_
     From Google. Introduces a feedback loop into the transformer model to allow it to self-attend to its own latent representations.  Authors claim this is like giving a transformer working memory and allows it to process indefinitely long sequences. 
@@ -53,6 +53,9 @@ Doctrinaire
 `DiffDet4SAR: Diffusion-based Aircraft Target Detection Network for SAR Images <https://arxiv.org/pdf/2404.03595.pdf>`_
     ConvNets/transformers for overhead sensing in SAR are limited by varying target size, spikiness of SAR data, and general noise.  They try to get around these problems by (1) using a  denoising diffusion process and (2) using a scattering feature enhancement to model the SAR data.  Seems to lead to improved results. 
 
+`Dynamic Gaussians Mesh: Consistent Mesh Reconstruction from Monocular Videos <https://arxiv.org/pdf/2404.12379.pdf>`_
+    Recovers object meshes from a video of an object.  Simlar to the one-shot learning we did for MAGI, but in video form. Uses some of the same software (nvdiffrast).  We could probably do this - is there a value-add on any project for one-shot learning CAD models?
+
 Autonomy
 --------
 `Laser Learning Environment: A new environment for coordination-critical multi-agent tasks <https://arxiv.org/pdf/2404.03596.pdf>`_
@@ -95,6 +98,9 @@ Theory
 
 `TransformerFAM: Feedback attention is working memory <https://arxiv.org/pdf/2404.09173.pdf>`_
     From Google. Introduces a feedback loop into the transformer model to allow it to self-attend to its own latent representations.  Authors claim this is like giving a transformer working memory and allows it to process indefinitely long sequences. 
+
+`Leave No Context Behind: Efficient Infinite Context Transformers with Infini-attention <https://arxiv.org/pdf/2404.07143.pdf>`_
+    From Google. Uses compressive memory to store input tokens as parameters which can be updated/change.  This enables handling/processing of infinite input data (at least, that's what they say - at some point the semantic information of your input is more than you can store in your comprssed memory, surely.).  Cool idea, but the paper is lacking in terms of comparisons/results.
 
 Stats
 -----
