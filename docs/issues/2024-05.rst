@@ -15,8 +15,8 @@ Featured
 `Is Model Collapse Inevitable? Breaking the Curse of Recursion by Accumulating Real and Synthetic Data <https://arxiv.org/pdf/2404.01413.pdf>`_
     Generative models trained on their own outputs tend to collapse.  Part of the reason we thought this was because new generated data was replacing old real data - if you accumulate data instead, and supplement the old data with generated data rather than substitute it, than model collapse does not occur.  There's still some error, I think - it's just bounded above instead of going to infinity.
 
-`X-VARS: Introducing Explainability in Football Refereeing with Multi-Modal Large Language Models <https://arxiv.org/pdf/2404.06332.pdf>`_
-    Ever yelled at the refs while watching sports?  What if the ref was an LLM?  This paper puts soccer vidoes into a CLIP-based encoder, and an LLM then generates and explains fouls.  Cool application, and could be transferred to other domains more directly relevant to CoVar.
+`Automated Social Science: Language Models as Scientist and Subjects <https://arxiv.org/pdf/2404.11794.pdf>`_
+    LLMs are pretty decent at simulating humans.  You can leverage this to get LLMs to "roleplay" and act as humans would in certain simulated situations.  The authors propose leveraging this ability to get LLMs to test social science situations with structured causal models in silico.  They get LLMs to reproduce some (fairly basic?) results from social science literature even though just asking the LLM what the theory is goes horribly wrong.  Social scientists were roasting this paper on twitter when it came out, but I think there something interesting here that justifies a further look.
 
 LLMs
 ----
@@ -41,6 +41,9 @@ LLMs
 
 `RecurrentGemma: Moving Past Transformers for Efficient Open Language Models <https://arxiv.org/pdf/2404.07839.pdf>`_
     Deepmind proposes a new LLM.  Doesn't use global attention, but instead uses local attention and linear recurrences.  Based off of an earlier paper (https://arxiv.org/pdf/2402.19427.pdf).  They trained this one on the same data as Gemma - this seems to be better (mildly) despite being trained on lass tokens, runs much faster, and doesn't face the same sequence length limitations. 
+
+`Automated Social Science: Language Models as Scientist and Subjects <https://arxiv.org/pdf/2404.11794.pdf>`_
+    LLMs are pretty decent at simulating humans.  You can leverage this to get LLMs to "roleplay" and act as humans would in certain simulated situations.  The authors propose leveraging this ability to get LLMs to test social science situations with structured causal models in silico.  They get LLMs to reproduce some (fairly basic?) results from social science literature even though just asking the LLM what the theory is goes horribly wrong.  Social scientists were roasting this paper on twitter when it came out, but I think there might be a there there.
 
 Doctrinaire
 -----------
