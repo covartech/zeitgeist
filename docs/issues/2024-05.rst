@@ -45,6 +45,9 @@ LLMs
 `Automated Social Science: Language Models as Scientist and Subjects <https://arxiv.org/pdf/2404.11794.pdf>`_
     LLMs are pretty decent at simulating humans.  You can leverage this to get LLMs to "roleplay" and act as humans would in certain simulated situations.  The authors propose leveraging this ability to get LLMs to test social science situations with structured causal models in silico.  They get LLMs to reproduce some (fairly basic?) results from social science literature even though just asking the LLM what the theory is goes horribly wrong.  Social scientists were roasting this paper on twitter when it came out, but I think there might be a there there.
 
+`Preference Fine-Tuning of LLMs Should Leverage Suboptimal, On-Policy Data <https://arxiv.org/pdf/2404.14367.pdf>`_
+    Bunch of people from CMU, Stanford, Deepmind, and UW-Madison investigate the best way to finetune LLMs.  Probably worth a read for all of our LLM-type people.
+
 Doctrinaire
 -----------
 `FLIGHT SCOPE: A DEEP COMPREHENSIVE ASSESSMENT OF AIRCRAFT DETECTION ALGORITHMS IN SATELLITE IMAGERY <https://arxiv.org/pdf/2404.02877.pdf>`_
@@ -72,6 +75,9 @@ Autonomy
 
 `Learn to Tour: Operator Design For Solution Feasibility Mapping in Pickup-and-delivery Traveling Salesman Problem <https://arxiv.org/pdf/2404.11458.pdf>`_
     Uses reinforcement learning for the pickup and delivery travelling salesman problem.  Only considers operators which map a good solution to a good solution, which cuts down the search space/forces the RL algo to work properly.  Could be interesting applied to autonomous vehicles.
+
+`A survey of air combat behavior modeling using machine learning <https://arxiv.org/ftp/arxiv/papers/2404/2404.13954.pdf>`_
+    Norwegian Defence researchers analyze how well current reinforcement learning methods are producing en silico agents for simulation of aerial combat.
 
 Theory
 ------
