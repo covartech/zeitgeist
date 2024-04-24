@@ -18,12 +18,22 @@ Featured
 `Automated Social Science: Language Models as Scientist and Subjects <https://arxiv.org/pdf/2404.11794.pdf>`_
     LLMs are pretty decent at simulating humans.  You can leverage this to get LLMs to "roleplay" and act as humans would in certain simulated situations.  The authors propose leveraging this ability to get LLMs to test social science situations with structured causal models in silico.  They get LLMs to reproduce some (fairly basic?) results from social science literature even though just asking the LLM what the theory is goes horribly wrong.  Social scientists were roasting this paper on twitter when it came out, but I think there something interesting here that justifies a further look.
 
-LLMs
+New LLMs
+--------
+`RecurrentGemma: Moving Past Transformers for Efficient Open Language Models <https://arxiv.org/pdf/2404.07839.pdf>`_
+    Deepmind proposes a new LLM.  Doesn't use global attention, but instead uses local attention and linear recurrences.  Based off of an earlier paper (https://arxiv.org/pdf/2402.19427.pdf).  They trained this one on the same data as Gemma - this seems to be better (mildly) despite being trained on lass tokens, runs much faster, and doesn't face the same sequence length limitations. 
+
+`Reka Core, Flash, and Edge: A Series of Powerful Multimodal Language Models <https://publications.reka.ai/reka-core-tech-report.pdf>`_
+     Seems slightly worse than GPT-4 at most things, but also does video which GPT-4 doesn't.  Think we have to pay if we want to use it.
+
+`Llama 3 <https://llama.meta.com/llama3/>`_
+    You probably know what this is already.  
+
+`Phi-3 Technical Report: A Highly Capable Language Model Locally on Your Phone <https://arxiv.org/pdf/2404.14219.pdf>`_
+    New LLM from the folks at Microsoft that is small enough to run natively on an iPhone 14 but gets comparable results to GPT-4.  Most of the penalty it pays for its small size takes the form of less factual knowledge, but the authors suggest this can be remedied by letting it google things.
+
+LLM Applications
 ----
-
-`Localizing Paragraph Memorization in Language Models <https://arxiv.org/pdf/2403.19851.pdf>`_
-    From Google.  LLMs can memorize whole paragraphs of text from training data and vomit them when prompted to do so.  This paper investigates this phenomena.  Worth keeping an eye on, especially when we're dealing with classified/controlled training data.
-
 `TWIN-GPT: Digital Twins for Clinical Trials via Large Language Model <https://arxiv.org/pdf/2404.01273.pdf>`_
     Uses LLMs to predict counterfactual data for clinical trials for use in assessing drugs.  Cool idea, but I would never want to take medicine tested this way.
 
@@ -33,20 +43,28 @@ LLMs
 `X-VARS: Introducing Explainability in Football Refereeing with Multi-Modal Large Language Models <https://arxiv.org/pdf/2404.06332.pdf>`_
     Ever yelled at the refs while watching sports?  What if the ref was an LLM?  This paper puts soccer vidoes into a CLIP-based encoder, and an LLM then generates and explains fouls.  Cool application, and could be transferred to other domains more directly relevant to CoVar.
 
-`Elephants Never Forget: Memorization and Learning of Tabular Data in Large Language Models <https://arxiv.org/pdf/2404.06209.pdf>`_
-    From Microsoft.  LLMs have  tendency to memorize tabular training data wholesale, but still perform decently well in zero/few shot environments.  
-
 `Alpaca against Vicuna: Using LLMs to Uncover Memorization of LLMs <https://arxiv.org/pdf/2403.04801.pdf>`_
     Instead of trying to prompt an LLM to recover something about it (in this case whether/how much training data it has memorized) you can have another LLM attack it instead.  Could probably expand this methodology to other vectors.
-
-`RecurrentGemma: Moving Past Transformers for Efficient Open Language Models <https://arxiv.org/pdf/2404.07839.pdf>`_
-    Deepmind proposes a new LLM.  Doesn't use global attention, but instead uses local attention and linear recurrences.  Based off of an earlier paper (https://arxiv.org/pdf/2402.19427.pdf).  They trained this one on the same data as Gemma - this seems to be better (mildly) despite being trained on lass tokens, runs much faster, and doesn't face the same sequence length limitations. 
 
 `Automated Social Science: Language Models as Scientist and Subjects <https://arxiv.org/pdf/2404.11794.pdf>`_
     LLMs are pretty decent at simulating humans.  You can leverage this to get LLMs to "roleplay" and act as humans would in certain simulated situations.  The authors propose leveraging this ability to get LLMs to test social science situations with structured causal models in silico.  They get LLMs to reproduce some (fairly basic?) results from social science literature even though just asking the LLM what the theory is goes horribly wrong.  Social scientists were roasting this paper on twitter when it came out, but I think there might be a there there.
 
+LLM Theory
+----------
 `Preference Fine-Tuning of LLMs Should Leverage Suboptimal, On-Policy Data <https://arxiv.org/pdf/2404.14367.pdf>`_
     Bunch of people from CMU, Stanford, Deepmind, and UW-Madison investigate the best way to finetune LLMs.  Probably worth a read for all of our LLM-type people.
+
+`Localizing Paragraph Memorization in Language Models <https://arxiv.org/pdf/2403.19851.pdf>`_
+    From Google.  LLMs can memorize whole paragraphs of text from training data and vomit them when prompted to do so.  This paper investigates this phenomena.  Worth keeping an eye on, especially when we're dealing with classified/controlled training data.
+
+`Elephants Never Forget: Memorization and Learning of Tabular Data in Large Language Models <https://arxiv.org/pdf/2404.06209.pdf>`_
+    From Microsoft.  LLMs have  tendency to memorize tabular training data wholesale, but still perform decently well in zero/few shot environments.  
+
+`The Instruction Hierarchy: Training LLMs to Prioritize Privileged Instructions <https://arxiv.org/pdf/2404.13208.pdf>`_
+    From OpenAI.  One of the reasons you can do a lot of janky things with LLMs is that they prioritize all instructions (e.g. instructions from user and instructions from system) equally.  Instead, you can make the LLM prioritize system instructions to avoid a lot of undesirable behavior.  Might be useful for, e.g., not sharing classified information to users. 
+
+`Why do small language models underperform? Studying LM Saturation via the Softmax Bottleneck <https://arxiv.org/pdf/2404.07647.pdf>`_
+    Smaller LLMs experience performance drops and plateaus during training.  This happens because the hidden dimension of smaller LLMs is too small to capture the distribution it is targetting which encounters the "well-known" softmax bottleneck.  If you have less than 1000 hidden dimensions, you're in for a bad time.  
 
 Doctrinaire
 -----------
@@ -90,17 +108,11 @@ Theory
 `The Unreasonable Effectiveness Of Early Discarding After One Epoch In Neural Network Hyperparameter Optimization <https://arxiv.org/pdf/2404.04111.pdf>`_
     Apparently the best way to do hyperparameter parameterization is to train all instantiations of your network for the same number of epochs, and make a choice based on those results.  Kind of surprising none of the fancier techniques provide any real benefit over this naive approach.
 
-`Physics of Language Models: Part 3.3, Knowledge Capacity Scaling Laws <https://arxiv.org/pdf/2404.05405.pdf>`_
-    From Meta.  LLMs apparently get 2 bits of information per parameter, no more and no less, even when quantized different ways.  
-
 `No “Zero-Shot” Without Exponential Data: Pretraining Concept Frequency Determines Multimodal Model Performance <https://arxiv.org/pdf/2404.04125.pdf>`_
     From Deepmind (and friends).  Zero-shot models like CLIP aren't really zero-shot - their performance instead requires exponentially more data to get linear performance increases.  Obvious implication is that these models aren't actually zero-shot and instead depend on just having oodles of training data, which makes sense intuitively.  
 
 `Variational Stochastic Gradient Descent for Deep Neural Networks <https://arxiv.org/pdf/2404.06549.pdf>`_
     New method for gradient descent, Variational Stochastic Gradient Descent, which outperforms both ADAM and regular SGD on the examples in the paper (both image classification).  They make VSGD by forming a probabilistic model of gradient descent and use stochastic variational inference to find updates.  Apparently VSGD is a generalization of other methods such as SGD and ADAM?
-
-`Why do small language models underperform? Studying LM Saturation via the Softmax Bottleneck <https://arxiv.org/pdf/2404.07647.pdf>`_
-    Smaller LLMs experience performance drops and plateaus during training.  This happens because the hidden dimension of smaller LLMs is too small to capture the distribution it is targetting which encounters the "well-known" softmax bottleneck.  If you have less than 1000 hidden dimensions, you're in for a bad time.  
 
 `The Illusion of State in State-Space Models <https://arxiv.org/pdf/2404.08819.pdf>`_
     State-space models with finite layers have no advantage over transformers in state-space tracking!  SSMs are limited at keeping track of entities in narratives, playing chess, or evaluating code. Tests on Mamba and looks pretty validated.
