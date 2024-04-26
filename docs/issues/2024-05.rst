@@ -134,6 +134,9 @@ Stats
 `HELLINGER-UCB: A NOVEL ALGORITHM FOR STOCHASTIC MULTI-ARMED BANDIT PROBLEM AND COLD START PROBLEM IN RECOMMENDER SYSTEM <https://arxiv.org/pdf/2404.10207.pdf>`_
     From JP Morgan and Meta.  Proposes new multi-armed bandit algorithm with applications to cold-start scenarios in recommender systems.  I keep feeling like there's something in this literature we can use to aid CAD-model classification, but I'm not sure what it is.
 
+`Estimating the Number of Components in Finite Mixture Models via Variational Approximation <https://arxiv.org/pdf/2404.16746>`_
+    ELBO-based method to try to esimtate number of components in mixture models.  Theory-heavy.
+
 Sensing
 -------
 `Bridging Remote Sensors with Multisensor Geospatial Foundation Models <https://arxiv.org/pdf/2404.01260.pdf>`_
