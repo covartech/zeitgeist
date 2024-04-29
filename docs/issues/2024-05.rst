@@ -3,23 +3,20 @@
 
 Featured
 --------
-`Improving Detection in Aerial Images by Capturing Inter-Object Relationships <https://arxiv.org/pdf/2404.04140.pdf>`_
-    Objects tend to be spatially corrected, but existing overhead ATR methods don't take this into account.  This paper does so by putting a transfomer on top of traditional two-stage detectors to examine regions of interest.  We though about implementing something like this for MAGI, but never did.  A cool idea to keep in our back pocket, especially if we can adapt it to non-overhead areas.
-
-`Dynamic Gaussians Mesh: Consistent Mesh Reconstruction from Monocular Videos <https://arxiv.org/pdf/2404.12379.pdf>`_
-    Recovers object meshes from a video of an object.  Simlar to the one-shot learning we did for MAGI, but in video form. Uses some of the same software (nvdiffrast).  We could probably do this - is there a value-add on any project for one-shot learning CAD models?
-
-`TransformerFAM: Feedback attention is working memory <https://arxiv.org/pdf/2404.09173.pdf>`_
-    From Google. Introduces a feedback loop into the transformer model to allow it to self-attend to its own latent representations.  Authors claim this is like giving a transformer working memory and allows it to process indefinitely long sequences. 
+`MLAgentBench: Evaluating Language Agents on Machine Learning Experimentation <https://arxiv.org/pdf/2310.03302>`_
+    Can LLMs act as Machine Learning Engineers and conduct effective ML experimentation when presented with a dataset?  The answer is sort of, and seems to depend on whether the dataset is old enough to have a Kaggle problem included in the training set.  Our jobs are (probably) safe for now
 
 `Is Model Collapse Inevitable? Breaking the Curse of Recursion by Accumulating Real and Synthetic Data <https://arxiv.org/pdf/2404.01413.pdf>`_
     Generative models trained on their own outputs tend to collapse.  Part of the reason we thought this was because new generated data was replacing old real data - if you accumulate data instead, and supplement the old data with generated data rather than substitute it, than model collapse does not occur.  There's still some error, I think - it's just bounded above instead of going to infinity.
 
-`Automated Social Science: Language Models as Scientist and Subjects <https://arxiv.org/pdf/2404.11794.pdf>`_
-    LLMs are pretty decent at simulating humans.  You can leverage this to get LLMs to "roleplay" and act as humans would in certain simulated situations.  The authors propose leveraging this ability to get LLMs to test social science situations with structured causal models in silico.  They get LLMs to reproduce some (fairly basic?) results from social science literature even though just asking the LLM what the theory is goes horribly wrong.  Social scientists were roasting this paper on twitter when it came out, but I think there something interesting here that justifies a further look.
+`KGExplainer: Towards Exploring Connected Subgraph Explanations for Knowledge Graph Completion <https://arxiv.org/pdf/2404.03893.pdf>`_
+    From Amazon.  Proposes a method to explain knowledge graph completions done with knowledge graph embeddings by investigating connected subgraphs.  Makes intuitive sense and seems to improve performance in practice.  
 
-`MLAgentBench: Evaluating Language Agents on Machine Learning Experimentation <https://arxiv.org/pdf/2310.03302>`_
-    Can LLMs act as Machine Learning Engineers and conduct effective ML experimentation when presented with a dataset?  The answer is sort of, and seems to depend on whether the dataset is old enough to have a Kaggle problem included in the training set.  Our jobs are (probably) safe for now
+`TransformerFAM: Feedback attention is working memory <https://arxiv.org/pdf/2404.09173.pdf>`_
+    From Google. Introduces a feedback loop into the transformer model to allow it to self-attend to its own latent representations.  Authors claim this is like giving a transformer working memory and allows it to process indefinitely long sequences. 
+
+`Dynamic Gaussians Mesh: Consistent Mesh Reconstruction from Monocular Videos <https://arxiv.org/pdf/2404.12379.pdf>`_
+    Recovers object meshes from a video of an object.  Simlar to the one-shot learning we did for MAGI, but in video form. Uses some of the same software (nvdiffrast).  We could probably do this - is there a value-add on any project for one-shot learning CAD models?
 
 LLM Applications
 ----
@@ -107,7 +104,7 @@ Theory
     From Google. Uses compressive memory to store input tokens as parameters which can be updated/change.  This enables handling/processing of infinite input data (at least, that's what they say - at some point the semantic information of your input is more than you can store in your comprssed memory, surely.).  Cool idea, but the paper is lacking in terms of comparisons/results.
 
 `An exactly solvable model for emergence and scaling laws <https://arxiv.org/pdf/2404.17563>`_
-    Explicitly models where scaling kicks in for neural net training in terms of training time, training data, and model size.  LImited to two-layers NNs, which is sad, but interesting nonetheless.
+    Explicitly models where scaling kicks in for neural net training in terms of training time, training data, and model size.  Limited to two-layers NNs, which is sad, but interesting nonetheless.
 
 Stats
 -----
