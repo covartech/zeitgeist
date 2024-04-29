@@ -18,6 +18,9 @@ Featured
 `Automated Social Science: Language Models as Scientist and Subjects <https://arxiv.org/pdf/2404.11794.pdf>`_
     LLMs are pretty decent at simulating humans.  You can leverage this to get LLMs to "roleplay" and act as humans would in certain simulated situations.  The authors propose leveraging this ability to get LLMs to test social science situations with structured causal models in silico.  They get LLMs to reproduce some (fairly basic?) results from social science literature even though just asking the LLM what the theory is goes horribly wrong.  Social scientists were roasting this paper on twitter when it came out, but I think there something interesting here that justifies a further look.
 
+`MLAgentBench: Evaluating Language Agents on Machine Learning Experimentation <https://arxiv.org/pdf/2310.03302>`_
+    Can LLMs act as Machine Learning Engineers and conduct effective ML experimentation when presented with a dataset?  The answer is sort of, and seems to depend on whether the dataset is old enough to have a Kaggle problem included in the training set.  Our jobs are (probably) safe for now
+
 New LLMs
 --------
 `RecurrentGemma: Moving Past Transformers for Efficient Open Language Models <https://arxiv.org/pdf/2404.07839.pdf>`_
@@ -49,6 +52,9 @@ LLM Applications
 `Automated Social Science: Language Models as Scientist and Subjects <https://arxiv.org/pdf/2404.11794.pdf>`_
     LLMs are pretty decent at simulating humans.  You can leverage this to get LLMs to "roleplay" and act as humans would in certain simulated situations.  The authors propose leveraging this ability to get LLMs to test social science situations with structured causal models in silico.  They get LLMs to reproduce some (fairly basic?) results from social science literature even though just asking the LLM what the theory is goes horribly wrong.  Social scientists were roasting this paper on twitter when it came out, but I think there might be a there there.
 
+`MLAgentBench: Evaluating Language Agents on Machine Learning Experimentation <https://arxiv.org/pdf/2310.03302>`_
+    Can LLMs act as Machine Learning Engineers and conduct effective ML experimentation when presented with a dataset?  The answer is sort of, and seems to depend on whether the dataset is old enough to have a Kaggle problem included in the training set.  Our jobs are (probably) safe for now
+
 LLM Theory
 ----------
 `Preference Fine-Tuning of LLMs Should Leverage Suboptimal, On-Policy Data <https://arxiv.org/pdf/2404.14367.pdf>`_
@@ -65,6 +71,9 @@ LLM Theory
 
 `Why do small language models underperform? Studying LM Saturation via the Softmax Bottleneck <https://arxiv.org/pdf/2404.07647.pdf>`_
     Smaller LLMs experience performance drops and plateaus during training.  This happens because the hidden dimension of smaller LLMs is too small to capture the distribution it is targetting which encounters the "well-known" softmax bottleneck.  If you have less than 1000 hidden dimensions, you're in for a bad time.  
+
+`Let’s Think Dot by Dot: Hidden Computation in Transformer Language Models <https://arxiv.org/pdf/2404.15758>`_
+    Chain-of-thought may be outperforming other methods solely because it provides LLMs with more computing power, rather than because of any explicitly reasoning reason.  To test this, the authors give LLMs filler tokens and demonstrate that it can use these like it would Chain-of-Thought stuff, but needs to be trained in a very specific manner.  Because of this, the authors raise the possibility that the tokens in Chain-of-Thought may be detached from whatever explicit role they have.
 
 Doctrinaire
 -----------
@@ -122,6 +131,9 @@ Theory
 
 `Leave No Context Behind: Efficient Infinite Context Transformers with Infini-attention <https://arxiv.org/pdf/2404.07143.pdf>`_
     From Google. Uses compressive memory to store input tokens as parameters which can be updated/change.  This enables handling/processing of infinite input data (at least, that's what they say - at some point the semantic information of your input is more than you can store in your comprssed memory, surely.).  Cool idea, but the paper is lacking in terms of comparisons/results.
+
+`An exactly solvable model for emergence and scaling laws <https://arxiv.org/pdf/2404.17563>`_
+    Explicitly models where scaling kicks in for neural net training in terms of training time, training data, and model size.  LImited to two-layers NNs, which is sad, but interesting nonetheless.
 
 Stats
 -----
