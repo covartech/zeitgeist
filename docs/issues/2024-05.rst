@@ -21,33 +21,13 @@ Featured
 `MLAgentBench: Evaluating Language Agents on Machine Learning Experimentation <https://arxiv.org/pdf/2310.03302>`_
     Can LLMs act as Machine Learning Engineers and conduct effective ML experimentation when presented with a dataset?  The answer is sort of, and seems to depend on whether the dataset is old enough to have a Kaggle problem included in the training set.  Our jobs are (probably) safe for now
 
-New LLMs
---------
-`RecurrentGemma: Moving Past Transformers for Efficient Open Language Models <https://arxiv.org/pdf/2404.07839.pdf>`_
-    Deepmind proposes a new LLM.  Doesn't use global attention, but instead uses local attention and linear recurrences.  Based off of an earlier paper (https://arxiv.org/pdf/2402.19427.pdf).  They trained this one on the same data as Gemma - this seems to be better (mildly) despite being trained on lass tokens, runs much faster, and doesn't face the same sequence length limitations. 
-
-`Reka Core, Flash, and Edge: A Series of Powerful Multimodal Language Models <https://publications.reka.ai/reka-core-tech-report.pdf>`_
-     Seems slightly worse than GPT-4 at most things, but also does video which GPT-4 doesn't.  Think we have to pay if we want to use it.
-
-`Llama 3 <https://llama.meta.com/llama3/>`_
-    You probably know what this is already.  
-
-`Phi-3 Technical Report: A Highly Capable Language Model Locally on Your Phone <https://arxiv.org/pdf/2404.14219.pdf>`_
-    New LLM from the folks at Microsoft that is small enough to run natively on an iPhone 14 but gets comparable results to GPT-4.  Most of the penalty it pays for its small size takes the form of less factual knowledge, but the authors suggest this can be remedied by letting it google things.
-
 LLM Applications
 ----
-`TWIN-GPT: Digital Twins for Clinical Trials via Large Language Model <https://arxiv.org/pdf/2404.01273.pdf>`_
-    Uses LLMs to predict counterfactual data for clinical trials for use in assessing drugs.  Cool idea, but I would never want to take medicine tested this way.
-
 `Mapping the Increasing Use of LLMs in Scientific Papers <https://arxiv.org/pdf/2404.01268.pdf>`_
     Trawling arXiv to figure out how much of it is LLM generated.  Less than you'd think, but still a lot (17.5% for CS).  Trying to reverse engineer whether an LLM wrote something is hard so I can't tell if they're undercounting or overcounting.
 
 `X-VARS: Introducing Explainability in Football Refereeing with Multi-Modal Large Language Models <https://arxiv.org/pdf/2404.06332.pdf>`_
     Ever yelled at the refs while watching sports?  What if the ref was an LLM?  This paper puts soccer vidoes into a CLIP-based encoder, and an LLM then generates and explains fouls.  Cool application, and could be transferred to other domains more directly relevant to CoVar.
-
-`Alpaca against Vicuna: Using LLMs to Uncover Memorization of LLMs <https://arxiv.org/pdf/2403.04801.pdf>`_
-    Instead of trying to prompt an LLM to recover something about it (in this case whether/how much training data it has memorized) you can have another LLM attack it instead.  Could probably expand this methodology to other vectors.
 
 `Automated Social Science: Language Models as Scientist and Subjects <https://arxiv.org/pdf/2404.11794.pdf>`_
     LLMs are pretty decent at simulating humans.  You can leverage this to get LLMs to "roleplay" and act as humans would in certain simulated situations.  The authors propose leveraging this ability to get LLMs to test social science situations with structured causal models in silico.  They get LLMs to reproduce some (fairly basic?) results from social science literature even though just asking the LLM what the theory is goes horribly wrong.  Social scientists were roasting this paper on twitter when it came out, but I think there might be a there there.
@@ -59,12 +39,6 @@ LLM Theory
 ----------
 `Preference Fine-Tuning of LLMs Should Leverage Suboptimal, On-Policy Data <https://arxiv.org/pdf/2404.14367.pdf>`_
     Bunch of people from CMU, Stanford, Deepmind, and UW-Madison investigate the best way to finetune LLMs.  Probably worth a read for all of our LLM-type people.
-
-`Localizing Paragraph Memorization in Language Models <https://arxiv.org/pdf/2403.19851.pdf>`_
-    From Google.  LLMs can memorize whole paragraphs of text from training data and vomit them when prompted to do so.  This paper investigates this phenomena.  Worth keeping an eye on, especially when we're dealing with classified/controlled training data.
-
-`Elephants Never Forget: Memorization and Learning of Tabular Data in Large Language Models <https://arxiv.org/pdf/2404.06209.pdf>`_
-    From Microsoft.  LLMs have  tendency to memorize tabular training data wholesale, but still perform decently well in zero/few shot environments.  
 
 `The Instruction Hierarchy: Training LLMs to Prioritize Privileged Instructions <https://arxiv.org/pdf/2404.13208.pdf>`_
     From OpenAI.  One of the reasons you can do a lot of janky things with LLMs is that they prioritize all instructions (e.g. instructions from user and instructions from system) equally.  Instead, you can make the LLM prioritize system instructions to avoid a lot of undesirable behavior.  Might be useful for, e.g., not sharing classified information to users. 
@@ -176,3 +150,18 @@ Reasoning/Knowledge Graphs
 
 `KGExplainer: Towards Exploring Connected Subgraph Explanations for Knowledge Graph Completion <https://arxiv.org/pdf/2404.03893.pdf>`_
     From Amazon.  Proposes a method to explain knowledge graph completions done with knowledge graph embeddings by investigating connected subgraphs.  Makes intuitive sense and seems to improve performance in practice.  
+
+
+New LLMs
+--------
+`RecurrentGemma: Moving Past Transformers for Efficient Open Language Models <https://arxiv.org/pdf/2404.07839.pdf>`_
+    Deepmind proposes a new LLM.  Doesn't use global attention, but instead uses local attention and linear recurrences.  Based off of an earlier paper (https://arxiv.org/pdf/2402.19427.pdf).  They trained this one on the same data as Gemma - this seems to be better (mildly) despite being trained on lass tokens, runs much faster, and doesn't face the same sequence length limitations. 
+
+`Reka Core, Flash, and Edge: A Series of Powerful Multimodal Language Models <https://publications.reka.ai/reka-core-tech-report.pdf>`_
+     Seems slightly worse than GPT-4 at most things, but also does video which GPT-4 doesn't.  Think we have to pay if we want to use it.
+
+`Llama 3 <https://llama.meta.com/llama3/>`_
+    You probably know what this is already.  
+
+`Phi-3 Technical Report: A Highly Capable Language Model Locally on Your Phone <https://arxiv.org/pdf/2404.14219.pdf>`_
+    New LLM from the folks at Microsoft that is small enough to run natively on an iPhone 14 but gets comparable results to GPT-4.  Most of the penalty it pays for its small size takes the form of less factual knowledge, but the authors suggest this can be remedied by letting it google things.
