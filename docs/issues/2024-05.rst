@@ -162,3 +162,6 @@ New LLMs
 
 `Phi-3 Technical Report: A Highly Capable Language Model Locally on Your Phone <https://arxiv.org/pdf/2404.14219.pdf>`_
     New LLM from the folks at Microsoft that is small enough to run natively on an iPhone 14 but gets comparable results to GPT-4.  Most of the penalty it pays for its small size takes the form of less factual knowledge, but the authors suggest this can be remedied by letting it google things.
+
+`Capabilities of Gemini Models in Medicine <https://arxiv.org/pdf/2404.18416>`_
+    Google release Med-Gemini, which is kind of Gemini but very well tuned to the medical domain.  Could be useful for Litcoin, or maybe Translator, bu they're not releasing their code because it could be "dangerous" - API at some point?
