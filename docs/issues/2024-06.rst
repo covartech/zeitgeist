@@ -1,0 +1,50 @@
+2024-06
+=======
+
+Featured
+--------
+`KAN: Kolmogorov–Arnold Networks <https://arxiv.org/pdf/2404.19756>`_
+    Proposes Kolmogorov-Arnold Networks (KANs) as an alternative to Multi-Layer Perceptrons (MLPs).  First describes what KANs are, and then makes some pretty startling claims - smaller KANs are better than larger MLPs at data fitting and PDE solving (orders of magnitude, both ways), KANs have faster scaling laws than MLPs, are more interpretable, naturally avoid catastrophic forgetting in continual learning, etc etc.  Main drawback is slow training speed.  The examples chosen in this paper are probably favorable to KANs (and are probably closer to "toy" examples than real problems, so we have to see how they generalize, but KANs blow MLPs out of the water.  This is getting a lot of hype right now and there's a lot of speculation that KANs might just replace MLPs.  Things usually don't live up to the hype, but its worth a read.  Probably worth a lunch and learn too. 
+
+`SUNDAE: Spectrally Pruned Gaussian Fields with Neural Compensation <https://arxiv.org/pdf/2405.00676>`_
+    Gaussian splatting can be slow and memory intensive.  This paper does some fancy footwork and exploits relationships between primitives to develop a new Gaussian splatting algorithm that is simultaneously less memory intensive and better than old methods.
+
+`Better & Faster Large Language Models via Multi-token Prediction <https://arxiv.org/pdf/2404.19737>`_
+    Existing LLMs are trained with next-token prediction loss.  This paper trains LLMs by doing loss on the next n tokens using n independent heads.  Seems to improve performance.  I don't know a lot about LLMs, but I'm surprised no one tried this previously - seems intuitive once it pointed out.
+
+LLM Applications
+----
+
+LLM Theory
+----------
+`Better & Faster Large Language Models via Multi-token Prediction <https://arxiv.org/pdf/2404.19737>`_
+    Existing LLMs are trained with next-token prediction loss.  This paper trains LLMs by doing loss on the next n tokens using n independent heads.  Seems to improve performance.  I don't know a lot about LLMs, but I'm surprised no one tried this previously - seems intuitive once it pointed out.
+
+Doctrinaire
+-----------
+
+Autonomy
+--------
+
+Theory
+------
+
+Stats
+-----
+
+Sensing
+-------
+
+Gaussian Splatting
+------------------
+`SUNDAE: Spectrally Pruned Gaussian Fields with Neural Compensation <https://arxiv.org/pdf/2405.00676>`_
+    Gaussian splatting can be slow and memory intensive.  This paper does some fancy footwork and exploits relationships between primitives to develop a new Gaussian splatting algorithm that is simultaneously less memory intensive and better than old methods.
+
+FPGA
+----
+
+Reasoning/Knowledge Graphs
+--------------------------
+
+New LLMs
+--------
