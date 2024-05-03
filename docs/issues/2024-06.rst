@@ -15,8 +15,8 @@ Featured
 `THE IMPACT OF COVID-19 ON CO-AUTHORSHIP AND ECONOMICS SCHOLARS’ PRODUCTIVITY <https://arxiv.org/pdf/2404.18980>`_
     Analyzes how the pandemic effected collaboration in economics academia.  Before the pandemic, economists were more likely to coauthor with authors of similar productivity; during, things were more mixed. Reminds me a bit of the paper that analyzed marriages amongst the nobility after Prince Alfred died.
 
-`Lightplane: Highly-Scalable Components for Neural 3D Fields <https://arxiv.org/pdf/2404.19760>`_
-    From Meta.  Introduces new method for efficient 2D to 3D Gaussian splatting. Really emphasizes the memory efficiency. 
+`PLAN-SEQ-LEARN: LANGUAGE MODEL GUIDED RL FOR SOLVING LONG HORIZON ROBOTICS TASKS <https://arxiv.org/pdf/2405.01534>`_
+    Mistral and Carnegie Mellon think you can put LLMs in charge of robots for high-level planning, and let more standard reinforcement learning algorithms take care of the rest.  Does make a decent amount of sense, but you have to be real careful about what the LLM decides to have the robot do.
 
 LLM Applications
 ----
@@ -31,12 +31,18 @@ Doctrinaire
 
 Autonomy
 --------
+`PLAN-SEQ-LEARN: LANGUAGE MODEL GUIDED RL FOR SOLVING LONG HORIZON ROBOTICS TASKS <https://arxiv.org/pdf/2405.01534>`_
+    Mistral and Carnegie Mellon think you can put LLMs in charge of robots for high-level planning, and let more standard reinforcement learning algorithms take care of the rest.  Does make a decent amount of sense, but you have to be real careful about what the LLM decides to have the robot do.
 
 Theory
 ------
+`KAN: Kolmogorov–Arnold Networks <https://arxiv.org/pdf/2404.19756>`_
+    Proposes Kolmogorov-Arnold Networks (KANs) as an alternative to Multi-Layer Perceptrons (MLPs).  First describes what KANs are, and then makes some pretty startling claims - smaller KANs are better than larger MLPs at data fitting and PDE solving (orders of magnitude, both ways), KANs have faster scaling laws than MLPs, are more interpretable, naturally avoid catastrophic forgetting in continual learning, etc etc.  Main drawback is slow training speed.  The examples chosen in this paper are probably favorable to KANs (and are probably closer to "toy" examples than real problems, so we have to see how they generalize), but KANs blow MLPs on them.  This is getting a lot of hype right now and there's a lot of speculation that KANs might just replace MLPs.  Things usually don't live up to the hype, but its worth a read.  Probably worth a lunch and learn too. 
 
 Stats
 -----
+`STRATEGIES FOR RARE POPULATION DETECTION AND SAMPLING: A METHODOLOGICAL APPROACH IN LIGURIA <https://arxiv.org/pdf/2405.01342>`_
+    When doing surverys, rare groups can be undersampled (especially at the national level).  This paper proposes a few methods to determine when this is happening so you can resample. Methods include entropy-based estimators and an autoencoder, which feels out of left field.
 
 Sensing
 -------
