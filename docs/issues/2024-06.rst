@@ -34,6 +34,9 @@ Autonomy
 `PLAN-SEQ-LEARN: LANGUAGE MODEL GUIDED RL FOR SOLVING LONG HORIZON ROBOTICS TASKS <https://arxiv.org/pdf/2405.01534>`_
     Mistral and Carnegie Mellon think you can put LLMs in charge of robots for high-level planning, and let more standard reinforcement learning algorithms take care of the rest.  Does make a decent amount of sense, but you have to be real careful about what the LLM decides to have the robot do.
 
+`Large Language Models for UAVs: Current State and Pathways to the Future <https://arxiv.org/pdf/2405.01745>`_
+    Review paper covering how to get LLMs onto UAVs at a decently high level.  The idea seems to gaining prominence recently, so might be worth a look.
+
 Theory
 ------
 `KAN: Kolmogorov–Arnold Networks <https://arxiv.org/pdf/2404.19756>`_
@@ -54,6 +57,9 @@ Gaussian Splatting
 
 `Lightplane: Highly-Scalable Components for Neural 3D Fields <https://arxiv.org/pdf/2404.19760>`_
     From Meta.  Introduces new method for efficient 2D to 3D Gaussian splatting. Really emphasizes the memory efficiency. 
+
+`HoloGS: Instant Depth-based 3D Gaussian Splatting with Microsoft HoloLens 2 <https://arxiv.org/pdf/2405.02005>`_
+    This paper gets Gaussian splatting up and running on a Hololens.  Results look pretty decent.  Something to keep in mind if we ever get back to working with it again.
 
 FPGA
 ----
