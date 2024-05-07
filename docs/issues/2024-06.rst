@@ -12,15 +12,20 @@ Featured
 `Better & Faster Large Language Models via Multi-token Prediction <https://arxiv.org/pdf/2404.19737>`_
     Existing LLMs are trained with next-token prediction loss.  This paper trains LLMs by doing loss on the next n tokens using n independent heads.  Seems to improve performance.  I don't know a lot about LLMs, but I'm surprised no one tried this previously - seems intuitive once it pointed out.
 
-`THE IMPACT OF COVID-19 ON CO-AUTHORSHIP AND ECONOMICS SCHOLARS’ PRODUCTIVITY <https://arxiv.org/pdf/2404.18980>`_
-    Analyzes how the pandemic effected collaboration in economics academia.  Before the pandemic, economists were more likely to coauthor with authors of similar productivity; during, things were more mixed. Reminds me a bit of the paper that analyzed marriages amongst the nobility after Prince Alfred died.
+`Agent Hospital: A Simulacrum of Hospital with Evolvable Medical Agents <https://arxiv.org/pdf/2405.02957>`_
+    LLMs simulate a hospital as doctors, staff, patients, etc and trains the doctor-LLMs via this simulated social interaction.  After treating 10,000 cases, the doctor-LLMs achieve "state-of-the-art" performance on the MedQA dataset.  I still wouldn't want one as my doctor, but it's an interesting alternative approach to training LLMs.
 
 `PLAN-SEQ-LEARN: LANGUAGE MODEL GUIDED RL FOR SOLVING LONG HORIZON ROBOTICS TASKS <https://arxiv.org/pdf/2405.01534>`_
     Mistral and Carnegie Mellon think you can put LLMs in charge of robots for high-level planning, and let more standard reinforcement learning algorithms take care of the rest.  Does make a decent amount of sense, but you have to be real careful about what the LLM decides to have the robot do.
 
 LLM Applications
 ----
+`Agent Hospital: A Simulacrum of Hospital with Evolvable Medical Agents <https://arxiv.org/pdf/2405.02957>`_
+    LLMs simulate a hospital as doctors, staff, patients, etc and trains the doctor-LLMs via this simulated social interaction.  After treating 10,000 cases, the doctor-LLMs achieve "state-of-the-art" performance on the MedQA dataset.  I still wouldn't want one as my doctor, but it's an interesting alternative approach to training LLMs.
 
+`SWE-AGENT: AGENT-COMPUTER INTERFACES ENABLE AUTOMATED SOFTWARE ENGINEERING <https://swe-agent.com/paper.pdf>`_
+    A bunch of researchers from Princeton try to make an LLM that can code.  They build a custom agent-computer-interface that greatly enhances performance.  Greatly in this case means 12.5 percent on SWE-bench, so LLMs aren't stealing our code soon, but the next best performance (according to them) is a RAG approach at 3.8% so this is a big step forwards.
+    
 LLM Theory
 ----------
 `Better & Faster Large Language Models via Multi-token Prediction <https://arxiv.org/pdf/2404.19737>`_
