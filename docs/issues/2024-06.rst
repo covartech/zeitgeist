@@ -1,6 +1,11 @@
 2024-06
 =======
 
+Lunch and Learn
+---------------
+2024-05-07 `Gaussian Splatting on the Move: Blur and Rolling Shutter Compensation for Natural Camera Motion <https://arxiv.org/abs/2403.13327>`_
+    `Gaussian Splatting Example: Key Bridge <https://voluma.ai/view/jack/test/baltimore>`_ `NERFStudio <https://github.com/nerfstudio-project/nerfstudio/?tab=readme-ov-file#dependencies>`
+
 Featured
 --------
 `KAN: Kolmogorov–Arnold Networks <https://arxiv.org/pdf/2404.19756>`_
