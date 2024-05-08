@@ -82,6 +82,10 @@ Applications
 `THE IMPACT OF COVID-19 ON CO-AUTHORSHIP AND ECONOMICS SCHOLARS’ PRODUCTIVITY <https://arxiv.org/pdf/2404.18980>`_
     Analyzes how the pandemic effected collaboration in economics academia.  Before the pandemic, economists were more likely to coauthor with authors of similar productivity; during, things were more mixed. Reminds me a bit of the paper that analyzed marriages amongst the nobility after Prince Alfred died.
 
+`Return to Office and the Tenure Distribution <https://arxiv.org/pdf/2405.04352>`_
+    How does return to office impact employee tenure?   This study finds that return-to-office causes employees, especially senior employees, to leave in larger-than-expected numbers.  Further, they tend to be replaced by people who are younger/less experienced.
 
 New LLMs
 --------
+`Granite Code Models: A Family of Open Foundation Models for Code Intelligence <https://arxiv.org/pdf/2405.04324>`_
+    IBM releases a code-focussed LLM.  Decoder only, trained in 116 languages.  Github available.  Reaches (and sometimes exceeds) state-of-the-art performance.  May be smaller than competitors and good at all coding focussed tasks, unlike larger models which have specialized and achieve about the same performance.  
