@@ -62,6 +62,9 @@ Stats
 `STRATEGIES FOR RARE POPULATION DETECTION AND SAMPLING: A METHODOLOGICAL APPROACH IN LIGURIA <https://arxiv.org/pdf/2405.01342>`_
     When doing surverys, rare groups can be undersampled (especially at the national level).  This paper proposes a few methods to determine when this is happening so you can resample. Methods include entropy-based estimators and an autoencoder, which feels out of left field.
 
+`Outlier-robust Kalman Filtering through Generalised Bayes <https://arxiv.org/pdf/2405.05646>`_
+    New filtering method combining generalized Bayesian methods with Kalman filters.  Seems to outperform existing methods in numerical experiments
+
 Sensing
 -------
 
@@ -90,6 +93,9 @@ Applications
 `Return to Office and the Tenure Distribution <https://arxiv.org/pdf/2405.04352>`_
     How does return to office impact employee tenure?   This study finds that return-to-office causes employees, especially senior employees, to leave in larger-than-expected numbers.  Further, they tend to be replaced by people who are younger/less experienced.
 
+`Measuring Strategization in Recommendation: Users Adapt Their Behavior to Shape Future Content <https://arxiv.org/pdf/2405.05596>`_
+    This study conducts a randomized control trial which determines that users change how they interact with recommender systems if they're told how the recommender system works in an attempt to influence the recommendations they are given.  This is an extremely intuitive result.
+
 Datasets
 --------
 `BenthicNet: A global compilation of seafloor images for deep learning applications <https://arxiv.org/pdf/2405.05241>`_
@@ -99,3 +105,6 @@ New LLMs
 --------
 `Granite Code Models: A Family of Open Foundation Models for Code Intelligence <https://arxiv.org/pdf/2405.04324>`_
     IBM releases a code-focussed LLM.  Decoder only, trained in 116 languages.  Github available.  Reaches (and sometimes exceeds) state-of-the-art performance.  May be smaller than competitors and good at all coding focussed tasks, unlike larger models which have specialized and achieve about the same performance.  
+
+`DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model <https://arxiv.org/pdf/2405.04434>`_
+    DeepSeek-AI drops another Mixture-of-Experts LLM.  Total of 236B parameters.  Context length of 128K tokens.  Better performance, lower training cost, etc.  Even with "only" 21B parameters, gets state-of-the-art performance amongst open-source models.  
