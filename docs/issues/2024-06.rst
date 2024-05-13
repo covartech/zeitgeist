@@ -67,6 +67,11 @@ Stats
 
 Sensing
 -------
+`OPEN ACCESS BATTLE DAMAGE DETECTION VIA PIXEL-WISE T-TEST ON SENTINEL-1 IMAGERY <https://arxiv.org/pdf/2405.06323>`_
+    Fast and simple method for detecting battle-damage (really just changepoint detection?) in overhead satellite imagery with an eye towards Ukraine and Gaza.  Seems to work pretty well, rivaling deep-leearning based methodologies.  
+
+`DisBeaNet: A Deep Neural Network to augment Unmanned Surface Vessels for maritime situational awareness <https://arxiv.org/pdf/2405.06149>`_
+    A tracking system for a USV which operates by using a neural net to estimate the distance and bearing of objects from a camera and record them in GeoTracks.  Feels similar to some of our UAS/MMP work, though much more "throw a neural net at it".
 
 Gaussian Splatting
 ------------------
