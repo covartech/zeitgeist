@@ -11,17 +11,17 @@ Featured
 `KAN: Kolmogorov–Arnold Networks <https://arxiv.org/pdf/2404.19756>`_
     Proposes Kolmogorov-Arnold Networks (KANs) as an alternative to Multi-Layer Perceptrons (MLPs).  First describes what KANs are, and then makes some pretty startling claims - smaller KANs are better than larger MLPs at data fitting and PDE solving (orders of magnitude, both ways), KANs have faster scaling laws than MLPs, are more interpretable, naturally avoid catastrophic forgetting in continual learning, etc etc.  Main drawback is slow training speed.  The examples chosen in this paper are probably favorable to KANs (and are probably closer to "toy" examples than real problems, so we have to see how they generalize), but KANs blow MLPs on them.  This is getting a lot of hype right now and there's a lot of speculation that KANs might just replace MLPs.  Things usually don't live up to the hype, but its worth a read.  Probably worth a lunch and learn too. 
 
-`IDENTIFYING EVERY BUILDING’S FUNCTION IN LARGE-SCALE URBAN AREAS WITH MULTI-MODALITY REMOTE-SENSING DATA <https://arxiv.org/pdf/2405.05133>`_
-    Uses remote sensing data to classify building uses... in theory.  In practice, uses EO data at 1 GSD for visual representations and night-time data remote sensing data for light use.  Supplements with a lookup table of buliding heights.  Makes a neural net that generates building segmentations and maps their use.  Could imagine the IC being interested in something like this.
-
 `Better & Faster Large Language Models via Multi-token Prediction <https://arxiv.org/pdf/2404.19737>`_
     Existing LLMs are trained with next-token prediction loss.  This paper trains LLMs by doing loss on the next n tokens using n independent heads.  Seems to improve performance.  I don't know a lot about LLMs, but I'm surprised no one tried this previously - seems intuitive once it pointed out.
 
-`Agent Hospital: A Simulacrum of Hospital with Evolvable Medical Agents <https://arxiv.org/pdf/2405.02957>`_
-    LLMs simulate a hospital as doctors, staff, patients, etc and trains the doctor-LLMs via this simulated social interaction.  After treating 10,000 cases, the doctor-LLMs achieve "state-of-the-art" performance on the MedQA dataset.  I still wouldn't want one as my doctor, but it's an interesting alternative approach to training LLMs.
+`The Platonic Representation Hypothesis <https://arxiv.org/pdf/2405.07987>`_
+    The authors note that, over time and across vision and language modalities, as NNs get deeper they measure distance between datapoints in similar ways.  They tie this in with some philosophy stuff (Platonic forms, anyone?), but the intuition is that all models are attempting to represent reality, and as they grow larger they arrive ever closer to a "true" statistical representation of reality.
 
 `PLAN-SEQ-LEARN: LANGUAGE MODEL GUIDED RL FOR SOLVING LONG HORIZON ROBOTICS TASKS <https://arxiv.org/pdf/2405.01534>`_
     Mistral and Carnegie Mellon think you can put LLMs in charge of robots for high-level planning, and let more standard reinforcement learning algorithms take care of the rest.  Does make a decent amount of sense, but you have to be real careful about what the LLM decides to have the robot do.
+
+`MambaOut: Do We Really Need Mamba for Vision? <https://arxiv.org/pdf/2405.07992>`_
+    Mamba is more suited to long-sequence and autoregressive tasks than it is to vision tasks, but detection and segmentation are somewhat long-sequence.  This paper proposes a new Mamba model, MambaOut, based on this insight which eliminates the state space model and outperforms other Mamba versions on vision tasks.
 
 LLM Applications
 ----
@@ -56,6 +56,12 @@ Theory
 ------
 `KAN: Kolmogorov–Arnold Networks <https://arxiv.org/pdf/2404.19756>`_
     Proposes Kolmogorov-Arnold Networks (KANs) as an alternative to Multi-Layer Perceptrons (MLPs).  First describes what KANs are, and then makes some pretty startling claims - smaller KANs are better than larger MLPs at data fitting and PDE solving (orders of magnitude, both ways), KANs have faster scaling laws than MLPs, are more interpretable, naturally avoid catastrophic forgetting in continual learning, etc etc.  Main drawback is slow training speed.  The examples chosen in this paper are probably favorable to KANs (and are probably closer to "toy" examples than real problems, so we have to see how they generalize), but KANs blow MLPs on them.  This is getting a lot of hype right now and there's a lot of speculation that KANs might just replace MLPs.  Things usually don't live up to the hype, but its worth a read.  Probably worth a lunch and learn too. 
+
+`MambaOut: Do We Really Need Mamba for Vision? <https://arxiv.org/pdf/2405.07992>`_
+    Mamba is more suited to long-sequence and autoregressive tasks than it is to vision tasks, but detection and segmentation are somewhat long-sequence.  This paper proposes a new Mamba model, MambaOut, based on this insight which eliminates the state space model and outperforms other Mamba versions on vision tasks.
+
+`The Platonic Representation Hypothesis <https://arxiv.org/pdf/2405.07987>`_
+    The authors note that, over time and across vision and language modalities, as NNs get deeper they measure distance between datapoints in similar ways.  They tie this in with some philosophy stuff (Platonic forms, anyone?), but the intuition is that all models are attempting to represent reality, and as they grow larger they arrive ever closer to a "true" statistical representation of reality.
 
 Stats
 -----
