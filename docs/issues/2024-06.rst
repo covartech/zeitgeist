@@ -63,6 +63,9 @@ Theory
 `The Platonic Representation Hypothesis <https://arxiv.org/pdf/2405.07987>`_
     The authors note that, over time and across vision and language modalities, as NNs get deeper they measure distance between datapoints in similar ways.  They tie this in with some philosophy stuff (Platonic forms, anyone?), but the intuition is that all models are attempting to represent reality, and as they grow larger they arrive ever closer to a "true" statistical representation of reality.
 
+`Kolmogorov-Arnold Networks (KANs) for Time Series Analysis <https://arxiv.org/pdf/2405.08790>`_
+    KANs come for time series (or do they).  This paper shows that 3 and 4 layer KANs outperform 3 and 4 layer MLPs.  This is very much expected behavior and, given training costs, the fair comparison is between a KAN and an MLP much deeper than the KAN.  For time series you'd probably want to compare a transformer or an LSTM.
+    
 Stats
 -----
 `STRATEGIES FOR RARE POPULATION DETECTION AND SAMPLING: A METHODOLOGICAL APPROACH IN LIGURIA <https://arxiv.org/pdf/2405.01342>`_
