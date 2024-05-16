@@ -19,10 +19,20 @@ be `2024_06`.  Once on the active branch, open the `.rst` file corresponding
 to that branch.  For May of 2024, this would be `2024-06.rst`.  
 
 Inside the `.rst` file, there will be a number of sections to add an
-entry.  Find the section best describing the work to be entered, 
+entry.  Find the section best describing the work-to-be-entered, 
 or create a new one if an existing one will not suffice. The format is
 
 ```
 Section Name
 ------------
+```
+
+To describe the work-to-be-entered, it suffices to have a name,
+a URL linking to an online version of the work, and a short 
+description of the work that is between one and several sentences
+in length.  Entries should be of the form:
+
+```
+`name of work <url>`_
+Description of work.
 ```
