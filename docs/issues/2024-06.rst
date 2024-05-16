@@ -74,6 +74,9 @@ Stats
 `Outlier-robust Kalman Filtering through Generalised Bayes <https://arxiv.org/pdf/2405.05646>`_
     New filtering method combining generalized Bayesian methods with Kalman filters.  Seems to outperform existing methods in numerical experiments
 
+`Predicting Future Change-points in Time Series <https://arxiv.org/pdf/2405.09485>`_
+    How to predict change points before they occur?  Basically make some sort of model of how change points happen and learn to predict tthe beggining stages of a regime change.  Their real world example looks awfully cyclical.
+
 Sensing
 -------
 `OPEN ACCESS BATTLE DAMAGE DETECTION VIA PIXEL-WISE T-TEST ON SENTINEL-1 IMAGERY <https://arxiv.org/pdf/2405.06323>`_
