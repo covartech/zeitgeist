@@ -34,5 +34,8 @@ in length.  Entries should be of the form:
 
 ```
 `name of work <url>`_
-Description of work.
+    Description of work.
 ```
+
+Please do not merge branches or edit/delte existing entries unless
+you have permission to do so.
