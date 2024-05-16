@@ -16,7 +16,7 @@ month corresponding to the next Reader's Digest.  Almost always, this
 will be the calendar month after the current month.  For instance,
 if it is May of 2024 then the active branch of the Reader's Digest will 
 be `2024_06`.  Once on the active branch, open the `.rst` file corresponding
-to that branch, which will always reside in `readers-digest/docs/issues/`.  
+to that branch, which will always reside in `readers-digest/docs/issues/`.
 For May of 2024, this would be `2024-06.rst`.  
 
 Inside the `.rst` file, there will be a number of sections to add an
