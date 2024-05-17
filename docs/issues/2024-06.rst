@@ -20,8 +20,8 @@ Featured
 `PLAN-SEQ-LEARN: LANGUAGE MODEL GUIDED RL FOR SOLVING LONG HORIZON ROBOTICS TASKS <https://arxiv.org/pdf/2405.01534>`_
     Mistral and Carnegie Mellon think you can put LLMs in charge of robots for high-level planning, and let more standard reinforcement learning algorithms take care of the rest.  Does make a decent amount of sense, but you have to be real careful about what the LLM decides to have the robot do.
 
-`MambaOut: Do We Really Need Mamba for Vision? <https://arxiv.org/pdf/2405.07992>`_
-    Mamba is more suited to long-sequence and autoregressive tasks than it is to vision tasks, but detection and segmentation are somewhat long-sequence.  This paper proposes a new Mamba model, MambaOut, based on this insight which eliminates the state space model and outperforms other Mamba versions on vision tasks.
+`ENHANCING MARITIME TRAJECTORY FORECASTING VIA H3 INDEX AND CAUSAL LANGUAGE MODELLING (CLM) <https://arxiv.org/pdf/2405.09596>`_
+    Transforms a spatio-temporal problem in a natural language problem by converting spatial coordinates into a nested hexgrid system, turning these into tokens, and feeding these into Mistral. Outperforms a Kalman filter.  This is a pretty cool way to turn a hard problem into a form that an LLM can understand and then use that LLM to solve the problem.
 
 LLM Applications
 ----
@@ -31,6 +31,9 @@ LLM Applications
 `SWE-AGENT: AGENT-COMPUTER INTERFACES ENABLE AUTOMATED SOFTWARE ENGINEERING <https://swe-agent.com/paper.pdf>`_
     A bunch of researchers from Princeton try to make an LLM that can code.  They build a custom agent-computer-interface that greatly enhances performance.  Greatly in this case means 12.5 percent on SWE-bench, so LLMs aren't stealing our code soon, but the next best performance (according to them) is a RAG approach at 3.8% so this is a big step forwards.
     
+`ENHANCING MARITIME TRAJECTORY FORECASTING VIA H3 INDEX AND CAUSAL LANGUAGE MODELLING (CLM) <https://arxiv.org/pdf/2405.09596>`_
+    Transforms a spatio-temporal problem in a natural language problem by converting spatial coordinates into a nested hexgrid system, turning these into tokens, and feeding these into Mistral. Outperforms a Kalman filter.  This is a pretty cool way to turn a hard problem into a form that an LLM can understand and then use that LLM to solve the problem.
+
 LLM Theory
 ----------
 `Better & Faster Large Language Models via Multi-token Prediction <https://arxiv.org/pdf/2404.19737>`_
@@ -118,10 +121,13 @@ Datasets
 `BenthicNet: A global compilation of seafloor images for deep learning applications <https://arxiv.org/pdf/2405.05241>`_
     Lots of images of the seafloor.  Could be useful for some sort of navy thing down the line.
 
-New LLMs
---------
+New Models
+----------
 `Granite Code Models: A Family of Open Foundation Models for Code Intelligence <https://arxiv.org/pdf/2405.04324>`_
     IBM releases a code-focussed LLM.  Decoder only, trained in 116 languages.  Github available.  Reaches (and sometimes exceeds) state-of-the-art performance.  May be smaller than competitors and good at all coding focussed tasks, unlike larger models which have specialized and achieve about the same performance.  
 
 `DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model <https://arxiv.org/pdf/2405.04434>`_
     DeepSeek-AI drops another Mixture-of-Experts LLM.  Total of 236B parameters.  Context length of 128K tokens.  Better performance, lower training cost, etc.  Even with "only" 21B parameters, gets state-of-the-art performance amongst open-source models.  
+
+`Grounding DINO 1.5: Advance the “Edge” of Open-Set Object Detection <https://arxiv.org/pdf/2405.10300>`_
+    A new suite of Grounding DINO models which do more or less the same thing as the old one (detect object given language prompts) but comes in two flavors, one of which is better and one of which is faster.
