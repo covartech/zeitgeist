@@ -131,3 +131,9 @@ New Models
 
 `Grounding DINO 1.5: Advance the “Edge” of Open-Set Object Detection <https://arxiv.org/pdf/2405.10300>`_
     A new suite of Grounding DINO models which do more or less the same thing as the old one (detect object given language prompts) but comes in two flavors, one of which is better and one of which is faster.
+
+`Gemini 1.5: Unlocking multimodal understanding across millions of tokens of context <https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf>`_
+    Google has released Gemini 1.5.  The lab report they released is 150 pages long so I'm not reading it, but it's probably suitably impressive.
+
+`Chameleon: Mixed-Modal Early-Fusion Foundation Models <https://arxiv.org/pdf/2405.09818>`_
+    Meta released an arxiv paper detailing Chameleon, a "family of early-fusion token-based mixed-modal models capable of understanding and generating images and text in any arbitrary sequence."  The multimodal aspect is pretty cool. The archive paper is dated to May 16th, 2024, but there's a blog post from July 2023 about it so idk if this is new or not.
