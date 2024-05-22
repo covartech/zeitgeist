@@ -12,7 +12,7 @@ Featured
     Proposes Kolmogorov-Arnold Networks (KANs) as an alternative to Multi-Layer Perceptrons (MLPs).  First describes what KANs are, and then makes some pretty startling claims - smaller KANs are better than larger MLPs at data fitting and PDE solving (orders of magnitude, both ways), KANs have faster scaling laws than MLPs, are more interpretable, naturally avoid catastrophic forgetting in continual learning, etc etc.  Main drawback is slow training speed.  The examples chosen in this paper are probably favorable to KANs (and are probably closer to "toy" examples than real problems, so we have to see how they generalize), but KANs blow MLPs on them.  This is getting a lot of hype right now and there's a lot of speculation that KANs might just replace MLPs.  Things usually don't live up to the hype, but its worth a read.  Probably worth a lunch and learn too. 
 
 `Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet <https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html>`_
-    The authors extract interpretable features from LLMs by using a sparse autoencoder.  These are abstract concepts spanning languages and modalities, and can be turned up or down to affect the behavior of the LLM.  Worth a read, may be something like LLM Doctrinaire in here.
+    The authors extract interpretable features from LLMs by using a sparse autoencoder.  These are abstract concepts spanning languages and modalities, and can be turned up or down to affect the behavior of the LLM.  Turning up "Golden Gate Bridge" to the max, for instance, makes the LLM think it is the Golden Gate Bridge. Worth a read, may be something like LLM Doctrinaire in here.
 
 `The Platonic Representation Hypothesis <https://arxiv.org/pdf/2405.07987>`_
     The authors note that, over time and across vision and language modalities, as different types of Neural Networks get deeper they measure distance between datapoints in similar ways.  They tie this in with some philosophy stuff (Platonic forms, anyone?), but the intuition is that all models are attempting to represent reality, and as they grow larger they arrive ever closer to a "true" statistical representation of reality.
@@ -43,7 +43,7 @@ LLM Theory
     Introduces a new LSTM architecture by making two modifications of traditional LSTMs - exponential gating and novel memory structures - to remedy some of the structural defects of LSTMs compared to transformers.  Looks impressive in simulations compared to transformers and other LSTMs
 
 `Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet <https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html>`_
-    The authors extract interpretable features from LLMs by using a sparse autoencoder.  These are abstract concepts spanning languages and modalities, and can be turned up or down to affect the behavior of the LLM.  Worth a read, may be something like LLM Doctrinaire in here.
+    The authors extract interpretable features from LLMs by using a sparse autoencoder.  These are abstract concepts spanning languages and modalities, and can be turned up or down to affect the behavior of the LLM.  Turning up "Golden Gate Bridge" to the max, for instance, makes the LLM think it is the Golden Gate Bridge. Worth a read, may be something like LLM Doctrinaire in here.
 
 Doctrinaire
 -----------
