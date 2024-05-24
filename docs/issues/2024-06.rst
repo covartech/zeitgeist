@@ -37,6 +37,9 @@ LLM Applications
 `ENHANCING MARITIME TRAJECTORY FORECASTING VIA H3 INDEX AND CAUSAL LANGUAGE MODELLING (CLM) <https://arxiv.org/pdf/2405.09596>`_
     Transforms a spatio-temporal problem in a natural language problem by converting spatial coordinates into a nested hexgrid system, turning these into tokens, and feeding these into Mistral. Outperforms a Kalman filter.  This is a pretty cool way to turn a hard problem into a form that an LLM can understand and then use that LLM to solve the problem.
 
+`Large language models can be zero-shot anomaly detectors for time series? <https://arxiv.org/pdf/2405.14755>`_
+    If you configure them right, LLMs can detet anomolies in time series.  This invovle turning time series data into text data and a "prompt-based detection method" for anomoly detection.  Given the sequential nature of transformers, this seems like a cool use case.
+
 LLM Theory
 ----------
 `Better & Faster Large Language Models via Multi-token Prediction <https://arxiv.org/pdf/2404.19737>`_
@@ -48,6 +51,9 @@ LLM Theory
 `Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet <https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html>`_
     The authors extract interpretable features from LLMs by using a sparse autoencoder.  These are abstract concepts spanning languages and modalities, and can be turned up or down to affect the behavior of the LLM.  Turning up "Golden Gate Bridge" to the max, for instance, makes the LLM think it is the Golden Gate Bridge. Worth a read, may be something like LLM Doctrinaire in here.
 
+`Not All Language Model Features Are Linear <https://arxiv.org/pdf/2405.14860>`_
+    Are LLMs linear?  That is, do they do things by manipulating one-dimensional features?  This paper investigates and discovers that the answer is no - some features such as days of week and months of year are strikingly circular.  Further argues that these circular features are the fundamental unit of LLMs in Mistral and Llama. 
+    
 Doctrinaire
 -----------
 `IDENTIFYING EVERY BUILDING’S FUNCTION IN LARGE-SCALE URBAN AREAS WITH MULTI-MODALITY REMOTE-SENSING DATA <https://arxiv.org/pdf/2405.05133>`_
@@ -150,5 +156,5 @@ New Models
 `Chameleon: Mixed-Modal Early-Fusion Foundation Models <https://arxiv.org/pdf/2405.09818>`_
     Meta released an arxiv paper detailing Chameleon, a "family of early-fusion token-based mixed-modal models capable of understanding and generating images and text in any arbitrary sequence."  The multimodal aspect is pretty cool. The archive paper is dated to May 16th, 2024, but there's a blog post from July 2023 about it so idk if this is new or not.
 
-`Detect Everything with Few Examples<https://arxiv.org/abs/2309.12969>`_
+`Detect Everything with Few Examples <https://arxiv.org/abs/2309.12969>`_
     This is a good idea. It's basically grounding dino but with a specially classifier layer to label 10-100 examples have everything work without fine tuning. We should really consider using this approach going forward.
