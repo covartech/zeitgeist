@@ -23,6 +23,9 @@ Featured
 `ENHANCING MARITIME TRAJECTORY FORECASTING VIA H3 INDEX AND CAUSAL LANGUAGE MODELLING (CLM) <https://arxiv.org/pdf/2405.09596>`_
     Transforms a spatio-temporal problem in a natural language problem by converting spatial coordinates into a nested hexgrid system, turning these into tokens, and feeding these into Mistral. Outperforms a Kalman filter.  This is a pretty cool way to turn a hard problem into a form that an LLM can understand and then use that LLM to solve the problem.
 
+`Detect Everything with Few Examples<https://arxiv.org/abs/2309.12969>`_
+    This is a good idea. It's basically grounding dino but with a specially classifier layer to label 10-100 examples have everything work without fine tuning. We should really consider using this approach going forward.
+
 LLM Applications
 ----
 `Agent Hospital: A Simulacrum of Hospital with Evolvable Medical Agents <https://arxiv.org/pdf/2405.02957>`_
@@ -56,7 +59,7 @@ Autonomy
     Mistral and Carnegie Mellon think you can put LLMs in charge of robots for high-level planning, and let more standard reinforcement learning algorithms take care of the rest.  Does make a decent amount of sense, but you have to be real careful about what the LLM decides to have the robot do.
 
 `Large Language Models for UAVs: Current State and Pathways to the Future <https://arxiv.org/pdf/2405.01745>`_
-    Review paper covering how to get LLMs onto UAVs at a decently high level.  The idea seems to gaining prominence recently, so might be worth a look.
+    Review paper covering how to get LLMs onto UAVs at a decently high level.  The idea seems to gaining prominence recently, so might be worth a look.  Ended up not really saying anything beyond LLMs are cool. Maybe the news was that you could use a multimodal LLM and then tell the UAV to follow the bus or something.
 
 Theory
 ------
@@ -93,6 +96,9 @@ Sensing
 
 `DisBeaNet: A Deep Neural Network to augment Unmanned Surface Vessels for maritime situational awareness <https://arxiv.org/pdf/2405.06149>`_
     A tracking system for a USV which operates by using a neural net to estimate the distance and bearing of objects from a camera and record them in GeoTracks.  Feels similar to some of our UAS/MMP work, though much more "throw a neural net at it".
+
+`Delving into the Trajectory Long-tail Distribution for Muti-object Tracking<https://arxiv.org/abs/2403.04700>`_
+    Pedestrian Re-ID datasets lack in a few dimensions and thus have long tails. Many trackers don't work well in the long tails. This paper makes up a few augmentation ideas. Not a bad idea if we start to investigate trained tracking algorithms.
 
 Gaussian Splatting
 ------------------
@@ -143,3 +149,6 @@ New Models
 
 `Chameleon: Mixed-Modal Early-Fusion Foundation Models <https://arxiv.org/pdf/2405.09818>`_
     Meta released an arxiv paper detailing Chameleon, a "family of early-fusion token-based mixed-modal models capable of understanding and generating images and text in any arbitrary sequence."  The multimodal aspect is pretty cool. The archive paper is dated to May 16th, 2024, but there's a blog post from July 2023 about it so idk if this is new or not.
+
+`Detect Everything with Few Examples<https://arxiv.org/abs/2309.12969>`_
+    This is a good idea. It's basically grounding dino but with a specially classifier layer to label 10-100 examples have everything work without fine tuning. We should really consider using this approach going forward.
