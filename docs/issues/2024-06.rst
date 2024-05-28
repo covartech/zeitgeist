@@ -20,8 +20,8 @@ Featured
 `PLAN-SEQ-LEARN: LANGUAGE MODEL GUIDED RL FOR SOLVING LONG HORIZON ROBOTICS TASKS <https://arxiv.org/pdf/2405.01534>`_
     Mistral and Carnegie Mellon think you can put LLMs in charge of robots for high-level planning, and let more standard reinforcement learning algorithms take care of the rest.  Does make a decent amount of sense, but you have to be real careful about what the LLM decides to have the robot do.
 
-`ENHANCING MARITIME TRAJECTORY FORECASTING VIA H3 INDEX AND CAUSAL LANGUAGE MODELLING (CLM) <https://arxiv.org/pdf/2405.09596>`_
-    Transforms a spatio-temporal problem in a natural language problem by converting spatial coordinates into a nested hexgrid system, turning these into tokens, and feeding these into Mistral. Outperforms a Kalman filter.  This is a pretty cool way to turn a hard problem into a form that an LLM can understand and then use that LLM to solve the problem.
+`Grokked Transformers are Implicit Reasoners: A Mechanistic Journey to the Edge of Generalization <https://arxiv.org/pdf/2405.15071>`_
+    Transformers are bad at implicit reasoning over parametric knowledge, unless you train them beyond the realm of overfitting in which case they become good at it.  Teh authors all this grokking, but the really dangerous implication is that transformers and LLMs have not been trained enough
 
 `Detect Everything with Few Examples<https://arxiv.org/abs/2309.12969>`_
     This is a good idea. It's basically grounding dino but with a specially classifier layer to label 10-100 examples have everything work without fine tuning. We should really consider using this approach going forward.
@@ -53,7 +53,13 @@ LLM Theory
 
 `Not All Language Model Features Are Linear <https://arxiv.org/pdf/2405.14860>`_
     Are LLMs linear?  That is, do they do things by manipulating one-dimensional features?  This paper investigates and discovers that the answer is no - some features such as days of week and months of year are strikingly circular.  Further argues that these circular features are the fundamental unit of LLMs in Mistral and Llama. 
-    
+
+`Transformers Can Do Arithmetic with the Right Embeddings <https://arxiv.org/pdf/2405.17399>`_
+    Transformers are bad at arithmetic because they get lost in the sauce - they forget which numbers belong in which digits.  If you give them encodings teling them which numbers are which digits they can do math.
+
+`Grokked Transformers are Implicit Reasoners: A Mechanistic Journey to the Edge of Generalization <https://arxiv.org/pdf/2405.15071>`_
+    Transformers are bad at implicit reasoning over parametric knowledge, unless you train them beyond the realm of overfitting in which case they become good at it.  Teh authors all this grokking, but the really dangerous implication is that transformers and LLMs have not been trained enough
+
 Doctrinaire
 -----------
 `IDENTIFYING EVERY BUILDING’S FUNCTION IN LARGE-SCALE URBAN AREAS WITH MULTI-MODALITY REMOTE-SENSING DATA <https://arxiv.org/pdf/2405.05133>`_
