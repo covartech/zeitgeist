@@ -6,6 +6,12 @@ Lunch and Learn
 2024-05-07 `Gaussian Splatting on the Move: Blur and Rolling Shutter Compensation for Natural Camera Motion <https://arxiv.org/abs/2403.13327>`_
     `Gaussian Splatting Example: Key Bridge <https://voluma.ai/view/jack/test/baltimore>`_ `NERFStudio <https://github.com/nerfstudio-project/nerfstudio/?tab=readme-ov-file#dependencies>`
 
+2024-05-21
+    `THE LANDSCAPE OF EMERGING AI AGENT ARCHITECTURES FOR REASONING, PLANNING, AND TOOL CALLING: A SURVEY <https://arxiv.org/pdf/2404.11584>`
+        Researchers from Neudesic (IBM AI offshoot) look at a bunch of more recent AI Agent architectures and posit that this is the way the field will continue to head (tools instead of RAG).  They identify the importance of reasoning structures and useful tools, as well as the benefits and downsides of multi-agent approaches.  `Related slides <https://docs.google.com/presentation/d/1RF884dELODX-Yxqbx5J9qJIqEVhcmfLox_jcbc5eG0Q/edit?usp=sharing>`
+    `memary <https://github.com/kingjulio8238/memary>`
+        Really interesting full implementation of an Agent based off of the ReAct architecture.  Uses a knolwedge graph for relating topics of conversation.  Definitely rough but surprsisingly good readme.
+
 2024-05-28
     `Towards Monosemanticity: Decomposing Language Models With Dictionary Learning <https://transformer-circuits.pub/2023/monosemantic-features>`_
         Researchers from Anthropic use sparse autoencoders to isolate monosemantic features with high sensitivity and specificity.
@@ -135,6 +141,8 @@ FPGA
 
 Reasoning/Knowledge Graphs
 --------------------------
+`UR-GNN (Gaussian Graph Embedding) <https://arxiv.org/pdf/2403.04521>`
+    What if we represented embeddings of nodes in a KG using gaussians with mean vector (normal embedding) and variance matrix?  Then we could throw a custom GNN with attention at these embeddings and get it to predict new edges in a probabilistic way.
 
 Applications
 ------------
