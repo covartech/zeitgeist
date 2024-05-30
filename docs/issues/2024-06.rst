@@ -9,6 +9,7 @@ Lunch and Learn
 2024-05-28
     `Towards Monosemanticity: Decomposing Language Models With Dictionary Learning <https://transformer-circuits.pub/2023/monosemantic-features>`_
         Researchers from Anthropic use sparse autoencoders to isolate monosemantic features with high sensitivity and specificity.
+    
     `Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet
  <https://transformer-circuits.pub/2024/scaling-monosemanticity/>`_
         Researchers from Anthropic apply their sparse autoencoder approach to interpretability to a ChatGPT-size model, revealing millions of both low-level and high-level features. They find that setting these features to extremely low/high values influences model behavior.
