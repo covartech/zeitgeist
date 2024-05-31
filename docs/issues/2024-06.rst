@@ -152,7 +152,7 @@ Lunch and Learn
 ---------------
 2024-05-07 `Gaussian Splatting on the Move: Blur and Rolling Shutter Compensation for Natural Camera Motion <https://arxiv.org/abs/2403.13327>`_
     `Gaussian Splatting Example: Key Bridge <https://voluma.ai/view/jack/test/baltimore>`_ 
-    `NERFStudio <https://github.com/nerfstudio-project/nerfstudio/?tab=readme-ov-file#dependencies>`
+    `NERFStudio <https://github.com/nerfstudio-project/nerfstudio/?tab=readme-ov-file#dependencies>`_
 
 2024-05-21
     `THE LANDSCAPE OF EMERGING AI AGENT ARCHITECTURES FOR REASONING, PLANNING, AND TOOL CALLING: A SURVEY <https://arxiv.org/pdf/2404.11584>`_
