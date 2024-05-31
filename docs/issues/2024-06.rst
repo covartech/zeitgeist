@@ -44,12 +44,6 @@ LLM Theory
 `Better & Faster Large Language Models via Multi-token Prediction <https://arxiv.org/pdf/2404.19737>`_
     Existing LLMs are trained with next-token prediction loss.  This paper trains LLMs by doing loss on the next n tokens using n independent heads.  Seems to improve performance.  I don't know a lot about LLMs, but I'm surprised no one tried this previously - seems intuitive once it pointed out.
 
-`xLSTM: Extended Long Short-Term Memory <https://arxiv.org/pdf/2405.04517>`_
-    Introduces a new LSTM architecture by making two modifications of traditional LSTMs - exponential gating and novel memory structures - to remedy some of the structural defects of LSTMs compared to transformers.  Looks impressive in simulations compared to transformers and other LSTMs
-
-`Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet <https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html>`_
-    The authors extract interpretable features from LLMs by using a sparse autoencoder.  These are abstract concepts spanning languages and modalities, and can be turned up or down to affect the behavior of the LLM.  Turning up "Golden Gate Bridge" to the max, for instance, makes the LLM think it is the Golden Gate Bridge. Worth a read, may be something like LLM Doctrinaire in here.
-
 `Not All Language Model Features Are Linear <https://arxiv.org/pdf/2405.14860>`_
     Are LLMs linear?  That is, do they do things by manipulating one-dimensional features?  This paper investigates and discovers that the answer is no - some features such as days of week and months of year are strikingly circular.  Further argues that these circular features are the fundamental unit of LLMs in Mistral and Llama. 
 
@@ -92,17 +86,6 @@ Theory
 `Wav-KAN: Wavelet Kolmogorov-Arnold Networks <https://arxiv.org/pdf/2405.12832>`_
     KANs but with wavelets instead of splines.  Seems like a decent idea (and avoids a lot of the slow training stuff KANs run into) but doesn't have a lot of good comparisons.
 
-Stats
------
-`STRATEGIES FOR RARE POPULATION DETECTION AND SAMPLING: A METHODOLOGICAL APPROACH IN LIGURIA <https://arxiv.org/pdf/2405.01342>`_
-    When doing surverys, rare groups can be undersampled (especially at the national level).  This paper proposes a few methods to determine when this is happening so you can resample. Methods include entropy-based estimators and an autoencoder, which feels out of left field.
-
-`Outlier-robust Kalman Filtering through Generalised Bayes <https://arxiv.org/pdf/2405.05646>`_
-    New filtering method combining generalized Bayesian methods with Kalman filters.  Seems to outperform existing methods in numerical experiments
-
-`Predicting Future Change-points in Time Series <https://arxiv.org/pdf/2405.09485>`_
-    How to predict change points before they occur?  Basically make some sort of model of how change points happen and learn to predict tthe beggining stages of a regime change.  Their real world example looks awfully cyclical.
-
 Sensing
 -------
 `OPEN ACCESS BATTLE DAMAGE DETECTION VIA PIXEL-WISE T-TEST ON SENTINEL-1 IMAGERY <https://arxiv.org/pdf/2405.06323>`_
@@ -111,7 +94,7 @@ Sensing
 `DisBeaNet: A Deep Neural Network to augment Unmanned Surface Vessels for maritime situational awareness <https://arxiv.org/pdf/2405.06149>`_
     A tracking system for a USV which operates by using a neural net to estimate the distance and bearing of objects from a camera and record them in GeoTracks.  Feels similar to some of our UAS/MMP work, though much more "throw a neural net at it".
 
-`Delving into the Trajectory Long-tail Distribution for Muti-object Tracking<https://arxiv.org/abs/2403.04700>`_
+`Delving into the Trajectory Long-tail Distribution for Muti-object Tracking <https://arxiv.org/abs/2403.04700>`_
     Pedestrian Re-ID datasets lack in a few dimensions and thus have long tails. Many trackers don't work well in the long tails. This paper makes up a few augmentation ideas. Not a bad idea if we start to investigate trained tracking algorithms.
 
 Gaussian Splatting
@@ -124,7 +107,6 @@ Gaussian Splatting
 
 `HoloGS: Instant Depth-based 3D Gaussian Splatting with Microsoft HoloLens 2 <https://arxiv.org/pdf/2405.02005>`_
     This paper gets Gaussian splatting up and running on a Hololens.  Results look pretty decent.  Something to keep in mind if we ever get back to working with it again.
-
 
 Reasoning/Knowledge Graphs
 --------------------------
@@ -142,11 +124,6 @@ Applications
 `Measuring Strategization in Recommendation: Users Adapt Their Behavior to Shape Future Content <https://arxiv.org/pdf/2405.05596>`_
     This study conducts a randomized control trial which determines that users change how they interact with recommender systems if they're told how the recommender system works in an attempt to influence the recommendations they are given.  This is an extremely intuitive result.
 
-Datasets
---------
-`BenthicNet: A global compilation of seafloor images for deep learning applications <https://arxiv.org/pdf/2405.05241>`_
-    Lots of images of the seafloor.  Could be useful for some sort of navy thing down the line.
-
 New Models
 ----------
 `Granite Code Models: A Family of Open Foundation Models for Code Intelligence <https://arxiv.org/pdf/2405.04324>`_
@@ -154,6 +131,9 @@ New Models
 
 `DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model <https://arxiv.org/pdf/2405.04434>`_
     DeepSeek-AI drops another Mixture-of-Experts LLM.  Total of 236B parameters.  Context length of 128K tokens.  Better performance, lower training cost, etc.  Even with "only" 21B parameters, gets state-of-the-art performance amongst open-source models.  
+
+`xLSTM: Extended Long Short-Term Memory <https://arxiv.org/pdf/2405.04517>`_
+    Introduces a new LSTM architecture by making two modifications of traditional LSTMs - exponential gating and novel memory structures - to remedy some of the structural defects of LSTMs compared to transformers.  Looks impressive in simulations compared to transformers and other LSTMs
 
 `Grounding DINO 1.5: Advance the “Edge” of Open-Set Object Detection <https://arxiv.org/pdf/2405.10300>`_
     A new suite of Grounding DINO models which do more or less the same thing as the old one (detect object given language prompts) but comes in two flavors, one of which is better and one of which is faster.
