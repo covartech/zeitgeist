@@ -1,0 +1,61 @@
+2024-06
+=======
+
+Featured
+--------
+`Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality <https://arxiv.org/pdf/2405.21060>`_
+    Transformers and SSMs such as Mamba are actually very similar archtectures and have a large number of similarities that had yet to be noticed (but despite the name of the paper aren't actually the same thing?).  This paper uses these connections to propose a new SSM that is competitive with Transformers on language tasks. 
+
+`einspace: Searching for Neural Architectures from Fundamental Operations <https://arxiv.org/pdf/2405.20838>`_
+    Proposes a method to search for the best neural architecture for a given task.  Seems kind of interesting in theory, but I wonder how useful it will be in practice - a lot of architectures are "good enough" given a set of data.
+
+`Knowledge Circuits in Pretrained Transformers <https://arxiv.org/pdf/2405.17969>`_
+    Examines the "computation graph" of small LLMs such as GPT2 and TinyLLAMA to uncover "knowledge circuits" that shed some sort of light on how LLMs work.  Seems interesting, with some implications towards hallucinations and in-context learning.
+
+LLM Applications
+----
+
+
+LLM Theory
+----------
+`Knowledge Circuits in Pretrained Transformers <https://arxiv.org/pdf/2405.17969>`_
+    Examines the "computation graph" of small LLMs such as GPT2 and TinyLLAMA to uncover "knowledge circuits" that shed some sort of light on how LLMs work.  Seems interesting, with some implications towards hallucinations and in-context learning.
+
+Doctrinaire
+-----------
+
+
+Autonomy
+--------
+
+
+Theory
+------
+`Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality <https://arxiv.org/pdf/2405.21060>`_
+    Transformers and SSMs such as Mamba are actually very similar archtectures and have a large number of similarities that had yet to be noticed (but despite the name of the paper aren't actually the same thing?).  This paper uses these connections to propose a new SSM that is competitive with Transformers on language tasks. 
+
+`einspace: Searching for Neural Architectures from Fundamental Operations <https://arxiv.org/pdf/2405.20838>`_
+    Proposes a method to search for the best neural architecture for a given task.  Seems kind of interesting in theory, but I wonder how useful it will be in practice - a lot of architectures are "good enough" given a set of data.
+
+Sensing
+-------
+
+
+Gaussian Splatting
+------------------
+
+
+Reasoning/Knowledge Graphs
+--------------------------
+
+
+Applications
+------------
+
+
+New Models
+----------
+
+
+Lunch and Learn
+---------------
