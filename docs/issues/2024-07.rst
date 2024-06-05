@@ -6,11 +6,17 @@ Featured
 `Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality <https://arxiv.org/pdf/2405.21060>`_
     Transformers and SSMs such as Mamba are actually very similar archtectures and have a large number of similarities that had yet to be noticed (but despite the name of the paper aren't actually the same thing?).  This paper uses these connections to propose a new SSM that is competitive with Transformers on language tasks. 
 
-`einspace: Searching for Neural Architectures from Fundamental Operations <https://arxiv.org/pdf/2405.20838>`_
-    Proposes a method to search for the best neural architecture for a given task.  Seems kind of interesting in theory, but I wonder how useful it will be in practice - a lot of architectures are "good enough" given a set of data.
+`Evidence of Learned Look-Ahead in a Chess-Playing Neural Network <https://arxiv.org/pdf/2406.00877>`_
+    A cool examination of how the current best neural network for playing chess operates.  Dives into the nuts and bolts of how the NN functions with regards to, e.g., planning moves.
 
 `Knowledge Circuits in Pretrained Transformers <https://arxiv.org/pdf/2405.17969>`_
     Examines the "computation graph" of small LLMs such as GPT2 and TinyLLAMA to uncover "knowledge circuits" that shed some sort of light on how LLMs work.  Seems interesting, with some implications towards hallucinations and in-context learning.
+
+`SATSPLATYOLO: 3D GAUSSIAN SPLATTING-BASED VIRTUAL OBJECT DETECTION ENSEMBLES FOR SATELLITE FEATURE RECOGNITION <https://arxiv.org/pdf/2406.02533>`_
+    Learns Gaussian splats from remote sensing data and then applies Yolo-3D on the resulting point cloud to do detections.  An interesting approach, though I'm not sure it's better than a CNN on imagery.
+
+`To Believe or Not to Believe Your LLM <https://arxiv.org/pdf/2406.02543>`_
+    From Deepmind.  Introduces an information-theory based approach to detect when hallucinations are occurring by measuring epistemic uncertainty about knowledge.  Really cool paper.  Seems morally similar to some things Miles was poking around at a few months ago.
 
 LLM Applications
 ----
@@ -20,6 +26,10 @@ LLM Theory
 ----------
 `Knowledge Circuits in Pretrained Transformers <https://arxiv.org/pdf/2405.17969>`_
     Examines the "computation graph" of small LLMs such as GPT2 and TinyLLAMA to uncover "knowledge circuits" that shed some sort of light on how LLMs work.  Seems interesting, with some implications towards hallucinations and in-context learning.
+
+`To Believe or Not to Believe Your LLM <https://arxiv.org/pdf/2406.02543>`_
+    From Deepmind.  Introduces an information-theory based approach to detect when hallucinations are occurring by measuring epistemic uncertainty about knowledge.  Really cool paper. Seems morally similar to some things Miles was poking around at a few months ago.
+
 
 Doctrinaire
 -----------
@@ -37,12 +47,17 @@ Theory
 `einspace: Searching for Neural Architectures from Fundamental Operations <https://arxiv.org/pdf/2405.20838>`_
     Proposes a method to search for the best neural architecture for a given task.  Seems kind of interesting in theory, but I wonder how useful it will be in practice - a lot of architectures are "good enough" given a set of data.
 
+`Evidence of Learned Look-Ahead in a Chess-Playing Neural Network <https://arxiv.org/pdf/2406.00877>`_
+    A cool examination of how the current best neural network for playing chess operates.  Dives into the nuts and bolts of how the NN functions with regards to, e.g., planning moves.
+
 Sensing
 -------
 
 
 Gaussian Splatting
 ------------------
+`SATSPLATYOLO: 3D GAUSSIAN SPLATTING-BASED VIRTUAL OBJECT DETECTION ENSEMBLES FOR SATELLITE FEATURE RECOGNITION <https://arxiv.org/pdf/2406.02533>`_
+    Learns Gaussian splats from remote sensing data and then applies Yolo-3D on the resulting point cloud to do detections.  An interesting approach, though I'm not sure it's better than a CNN on imagery.
 
 
 Reasoning/Knowledge Graphs
