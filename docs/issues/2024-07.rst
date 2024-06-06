@@ -18,6 +18,9 @@ Featured
 `To Believe or Not to Believe Your LLM <https://arxiv.org/pdf/2406.02543>`_
     From Deepmind.  Introduces an information-theory based approach to detect when hallucinations are occurring by measuring epistemic uncertainty about knowledge.  Really cool paper.  Seems morally similar to some things Miles was poking around at a few months ago.
 
+`U-KAN Makes Strong Backbone for Medical Image Segmentation and Generation <https://arxiv.org/pdf/2406.02918>`_
+    Implements a KAN-based NN modelled after U-Net for computer vision.  Claims that it outperforms traditional MLPs and gives results backing this up by comparing it to off-the-shelf models.  Improvement is, to be fair, only a little bit better than state of the art MLPs.
+
 LLM Applications
 ----
 
@@ -30,6 +33,13 @@ LLM Theory
 `To Believe or Not to Believe Your LLM <https://arxiv.org/pdf/2406.02543>`_
     From Deepmind.  Introduces an information-theory based approach to detect when hallucinations are occurring by measuring epistemic uncertainty about knowledge.  Really cool paper. Seems morally similar to some things Miles was poking around at a few months ago.
 
+`Does your data spark joy? Performance gains from domain upsampling at the end of training <https://arxiv.org/pdf/2406.03476>`_
+    From Databricks.  Oversampling from a particular domain at the end of training finetunes your LLM to that domain.  Seems like a cool result, then you realize it's kind of just training plus finetuning combined into one?
+
+Philosophy
+----------
+`The Impossibility of Fair LLMs <https://arxiv.org/pdf/2406.03198>`_
+    Might be a useful reference for ASIMOV.  Looks at traditional definitions of fairness, finds limitations as they apply to LLMs, and thinks about new ones.
 
 Doctrinaire
 -----------
@@ -50,9 +60,6 @@ Theory
 `Evidence of Learned Look-Ahead in a Chess-Playing Neural Network <https://arxiv.org/pdf/2406.00877>`_
     A cool examination of how the current best neural network for playing chess operates.  Dives into the nuts and bolts of how the NN functions with regards to, e.g., planning moves.
 
-Sensing
--------
-
 
 Gaussian Splatting
 ------------------
@@ -70,7 +77,8 @@ Applications
 
 New Models
 ----------
-
+`U-KAN Makes Strong Backbone for Medical Image Segmentation and Generation <https://arxiv.org/pdf/2406.02918>`_
+    Implements a KAN-based NN modelled after U-Net for computer vision.  Claims that it outperforms traditional MLPs and gives results backing this up by comparing it to off-the-shelf models.  Improvement is, to be fair, only a little bit better than state of the art MLPs.
 
 Lunch and Learn
 ---------------
