@@ -6,14 +6,14 @@ Featured
 `Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality <https://arxiv.org/pdf/2405.21060>`_
     Transformers and SSMs such as Mamba are actually very similar archtectures and have a large number of similarities that had yet to be noticed (but despite the name of the paper aren't actually the same thing?).  This paper uses these connections to propose a new SSM that is competitive with Transformers on language tasks. 
 
-`Evidence of Learned Look-Ahead in a Chess-Playing Neural Network <https://arxiv.org/pdf/2406.00877>`_
-    A cool examination of how the current best neural network for playing chess operates.  Dives into the nuts and bolts of how the NN functions with regards to, e.g., planning moves.
+`Interpreting the Second-Order Effects of Neurons in CLIP <https://arxiv.org/pdf/2406.04341>`_
+    How to interpret what individual neurons are doing in CLIP?  Look at the effect of these neurons flowing through the model, through the attention heads, and directly to the output.  Neurons end up polysemantic (think "ships" and "cars") and a clever use of these neurons can improve model capabilities.
 
 `Knowledge Circuits in Pretrained Transformers <https://arxiv.org/pdf/2405.17969>`_
     Examines the "computation graph" of small LLMs such as GPT2 and TinyLLAMA to uncover "knowledge circuits" that shed some sort of light on how LLMs work.  Seems interesting, with some implications towards hallucinations and in-context learning.
 
-`SATSPLATYOLO: 3D GAUSSIAN SPLATTING-BASED VIRTUAL OBJECT DETECTION ENSEMBLES FOR SATELLITE FEATURE RECOGNITION <https://arxiv.org/pdf/2406.02533>`_
-    Learns Gaussian splats from remote sensing data and then applies Yolo-3D on the resulting point cloud to do detections.  An interesting approach, though I'm not sure it's better than a CNN on imagery.
+`Flash3D: Feed-Forward Generalisable 3D Scene Reconstruction from a Single Image <https://arxiv.org/pdf/2406.04343>`_
+    Reconstructs a 3D render of a scene from a single image using 3D Gaussians, monocular depth estimation, and an interative process to get things out of line of sight.  Seems pretty cool, and I'm astounded it works as well as it does.
 
 `To Believe or Not to Believe Your LLM <https://arxiv.org/pdf/2406.02543>`_
     From Deepmind.  Introduces an information-theory based approach to detect when hallucinations are occurring by measuring epistemic uncertainty about knowledge.  Really cool paper.  Seems morally similar to some things Miles was poking around at a few months ago.
@@ -36,8 +36,8 @@ LLM Theory
 `Does your data spark joy? Performance gains from domain upsampling at the end of training <https://arxiv.org/pdf/2406.03476>`_
     From Databricks.  Oversampling from a particular domain at the end of training finetunes your LLM to that domain.  Seems like a cool result, then you realize it's kind of just training plus finetuning combined into one?
 
-Philosophy
-----------
+Ethics
+------
 `The Impossibility of Fair LLMs <https://arxiv.org/pdf/2406.03198>`_
     Might be a useful reference for ASIMOV.  Looks at traditional definitions of fairness, finds limitations as they apply to LLMs, and thinks about new ones.
 
@@ -60,13 +60,17 @@ Theory
 `Evidence of Learned Look-Ahead in a Chess-Playing Neural Network <https://arxiv.org/pdf/2406.00877>`_
     A cool examination of how the current best neural network for playing chess operates.  Dives into the nuts and bolts of how the NN functions with regards to, e.g., planning moves.
 
+`Interpreting the Second-Order Effects of Neurons in CLIP <https://arxiv.org/pdf/2406.04341>`_
+    How to interpret what individual neurons are doing in CLIP?  Look at the effect of these neurons flowing through the model, through the attention heads, and directly to the output.  Neurons end up polysemantic (think "ships" and "cars") and a clever use of these neurons can improve model capabilities.
 
 Gaussian Splatting
 ------------------
 `SATSPLATYOLO: 3D GAUSSIAN SPLATTING-BASED VIRTUAL OBJECT DETECTION ENSEMBLES FOR SATELLITE FEATURE RECOGNITION <https://arxiv.org/pdf/2406.02533>`_
     Learns Gaussian splats from remote sensing data and then applies Yolo-3D on the resulting point cloud to do detections.  An interesting approach, though I'm not sure it's better than a CNN on imagery.
 
-
+`Flash3D: Feed-Forward Generalisable 3D Scene Reconstruction from a Single Image <https://arxiv.org/pdf/2406.04343>`_
+    Reconstructs a 3D render of a scene from a single image using 3D Gaussians, monocular depth estimation, and an interative process to get things out of line of sight.  Seems pretty cool, and I'm astounded it works as well as it does.
+    
 Reasoning/Knowledge Graphs
 --------------------------
 
