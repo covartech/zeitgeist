@@ -70,10 +70,14 @@ Gaussian Splatting
 
 `Flash3D: Feed-Forward Generalisable 3D Scene Reconstruction from a Single Image <https://arxiv.org/pdf/2406.04343>`_
     Reconstructs a 3D render of a scene from a single image using 3D Gaussians, monocular depth estimation, and an interative process to get things out of line of sight.  Seems pretty cool, and I'm astounded it works as well as it does.
-    
+        
 Reasoning/Knowledge Graphs
 --------------------------
 
+FPGA
+----
+`Scalable MatMul-free Language Modeling <https://arxiv.org/pdf/2406.02528>`_
+    Apparently, you can run LLMs without doing any matrix multiplication.  There are, as you might imagine, huge computational benefits to be gleaned here - in particular, this paper puts LLMs on an FPGA.
 
 Applications
 ------------
