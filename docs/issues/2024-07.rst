@@ -36,6 +36,15 @@ LLM Theory
 `Does your data spark joy? Performance gains from domain upsampling at the end of training <https://arxiv.org/pdf/2406.03476>`_
     From Databricks.  Oversampling from a particular domain at the end of training finetunes your LLM to that domain.  Seems like a cool result, then you realize it's kind of just training plus finetuning combined into one?
 
+`LLM Dataset Inference Did you train on my dataset? <https://arxiv.org/pdf/2406.06443>`_
+    Mostly inspired by attempts to enforce copyright law, this paper develops a new method for testing whether an LLM has been trained on a given dataset.
+
+`How Far Can Transformers Reason? The Locality Barrier and Inductive Scratchpad <https://arxiv.org/pdf/2406.06467>`_
+    From Apple.  Investigates how well transformers can reason.  Seems interesting, but is clearly from an academic subfield that uses a lot of jargon and assumes you know what it means.
+    
+`Competition of Mechanisms: Tracing How Language Models Handle Facts and Counterfactuals <https://arxiv.org/pdf/2402.11655>`_
+    Another paper in the "how do LLMs work" genre, but rather than focus on any one mechanism such as induction heads or factual recall in MLP layers, this looks at a variety.  In particular, it examines how these different mechanisms compete with each other when, e.g., asked a counterfactual
+
 Ethics
 ------
 `The Impossibility of Fair LLMs <https://arxiv.org/pdf/2406.03198>`_
@@ -77,7 +86,7 @@ Reasoning/Knowledge Graphs
 FPGA
 ----
 `Scalable MatMul-free Language Modeling <https://arxiv.org/pdf/2406.02528>`_
-    Apparently, you can run LLMs without doing any matrix multiplication.  There are, as you might imagine, huge computational benefits to be gleaned here - in particular, this paper puts LLMs on an FPGA.
+    Apparently, matrix multiplication in LLMs is completely optional.  There are, as you might imagine, huge computational benefits to be gleaned here - in particular, this paper puts LLMs on an FPGA.
 
 Applications
 ------------
