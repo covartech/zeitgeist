@@ -9,8 +9,8 @@ Featured
 `Interpreting the Second-Order Effects of Neurons in CLIP <https://arxiv.org/pdf/2406.04341>`_
     How to interpret what individual neurons are doing in CLIP?  Look at the effect of these neurons flowing through the model, through the attention heads, and directly to the output.  Neurons end up polysemantic (think "ships" and "cars") and a clever use of these neurons can improve model capabilities.
 
-`Knowledge Circuits in Pretrained Transformers <https://arxiv.org/pdf/2405.17969>`_
-    Examines the "computation graph" of small LLMs such as GPT2 and TinyLLAMA to uncover "knowledge circuits" that shed some sort of light on how LLMs work.  Seems interesting, with some implications towards hallucinations and in-context learning.
+`Why Warmup the Learning Rate? Underlying Mechanisms and Improvements <https://arxiv.org/pdf/2406.09405>`_
+    Warming up the learning rate (usually linearly) tends to improve model performance.  This paper analyzes why, and finds it has to do with forcing the network to accept a larger learning rate by getting it to well-behaved areas of the loss function.  Given this, they devise a better/faster warmup method.
 
 `Flash3D: Feed-Forward Generalisable 3D Scene Reconstruction from a Single Image <https://arxiv.org/pdf/2406.04343>`_
     Reconstructs a 3D render of a scene from a single image using 3D Gaussians, monocular depth estimation, and an interative process to get things out of line of sight.  Seems pretty cool, and I'm astounded it works as well as it does.
@@ -23,6 +23,8 @@ Featured
 
 LLM Applications
 ----
+`LLM Dataset Inference Did you train on my dataset? <https://arxiv.org/pdf/2406.06443>`_
+    Mostly inspired by attempts to enforce copyright law, this paper develops a new method for testing whether an LLM has been trained on a given dataset.
 
 
 LLM Theory
@@ -35,9 +37,6 @@ LLM Theory
 
 `Does your data spark joy? Performance gains from domain upsampling at the end of training <https://arxiv.org/pdf/2406.03476>`_
     From Databricks.  Oversampling from a particular domain at the end of training finetunes your LLM to that domain.  Seems like a cool result, then you realize it's kind of just training plus finetuning combined into one?
-
-`LLM Dataset Inference Did you train on my dataset? <https://arxiv.org/pdf/2406.06443>`_
-    Mostly inspired by attempts to enforce copyright law, this paper develops a new method for testing whether an LLM has been trained on a given dataset.
 
 `How Far Can Transformers Reason? The Locality Barrier and Inductive Scratchpad <https://arxiv.org/pdf/2406.06467>`_
     From Apple.  Investigates how well transformers can reason.  Seems interesting, but is clearly from an academic subfield that uses a lot of jargon and assumes you know what it means.
@@ -59,6 +58,8 @@ Ethics
 Doctrinaire
 -----------
 
+`Scene Graph Generation in Large-Size VHR Satellite Imagery: A Large-Scale Dataset and A Context-Aware Approach <https://arxiv.org/pdf/2406.09410>`_
+    How to go from satellie imagery and detections to a graph containing triples of objects and relationships.  Worth keeping in our back pocket if we ever get back into satellite imagery.
 
 Autonomy
 --------
@@ -67,13 +68,10 @@ Autonomy
 Theory
 ------
 `Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality <https://arxiv.org/pdf/2405.21060>`_
-    Transformers and SSMs such as Mamba are actually very similar archtectures and have a large number of similarities that had yet to be noticed (but despite the name of the paper aren't actually the same thing?).  This paper uses these connections to propose a new SSM that is competitive with Transformers on language tasks. 
+    Transformers and SSMs such as Mamba are actually very similar architectures and have a large number of similarities that had yet to be noticed (but despite the name of the paper aren't actually the same thing?).  This paper uses these connections to propose a new SSM that is competitive with Transformers on language tasks. 
 
 `einspace: Searching for Neural Architectures from Fundamental Operations <https://arxiv.org/pdf/2405.20838>`_
     Proposes a method to search for the best neural architecture for a given task.  Seems kind of interesting in theory, but I wonder how useful it will be in practice - a lot of architectures are "good enough" given a set of data.
-
-`Evidence of Learned Look-Ahead in a Chess-Playing Neural Network <https://arxiv.org/pdf/2406.00877>`_
-    A cool examination of how the current best neural network for playing chess operates.  Dives into the nuts and bolts of how the NN functions with regards to, e.g., planning moves.
 
 `Interpreting the Second-Order Effects of Neurons in CLIP <https://arxiv.org/pdf/2406.04341>`_
     How to interpret what individual neurons are doing in CLIP?  Look at the effect of these neurons flowing through the model, through the attention heads, and directly to the output.  Neurons end up polysemantic (think "ships" and "cars") and a clever use of these neurons can improve model capabilities.
@@ -81,11 +79,17 @@ Theory
 `Beyond Model Collapse: Scaling Up with Synthesized Data Requires Reinforcement <https://arxiv.org/pdf/2406.07515>`_
     From Meta.  Investigates how to train models on (partially) synthetic data to avoid the model collapse phenomena.  The answer they come up with is to use reinforcement learning to select the best data, in part because it's a relatively easy task to tell between good and bad data.
 
+`Scalable MatMul-free Language Modeling <https://arxiv.org/pdf/2406.02528>`_
+    Apparently, you can run LLMs without doing any matrix multiplication.  There are, as you might imagine, huge computational benefits to be gleaned here - in particular, this paper puts LLMs on an FPGA.
+
 `Compute Better Spent: Replacing Dense Layers with Structured Matrices <https://arxiv.org/pdf/2406.06248>`_
-    Another paper in the "actually, better compute" genre.  Recommend structured matrices as replacements for dense matrices and show some promising results.
+    Another paper in the "actually, better compute" genre.  Recommends structured matrices as replacements for dense matrices and show some promising results.
 
 `Neural Redshift: Random Networks are not Random Functions <https://arxiv.org/pdf/2403.02241>`_
     Neural networks have been thought to have a simplicity bias favoring simple simple solutions to problems.  This paper demonstrates that this is not an inherent feature of neural networks but instead an emergent feature of neural architecture and activation functions, with, e.g., ReLu's favoring simple responses and tanh's favoring complicated ones.  
+
+`Why Warmup the Learning Rate? Underlying Mechanisms and Improvements <https://arxiv.org/pdf/2406.09405>`_
+    Warming up the learning rate (usually linearly) tends to improve model performance.  This paper analyzes why, and finds it has to do with forcing the network to accept a larger learning rate by getting it to well-behaved areas of the loss function.  Given this, they devise a better/faster warmup method.
 
 Gaussian Splatting
 ------------------
@@ -117,6 +121,12 @@ New Models
 ----------
 `U-KAN Makes Strong Backbone for Medical Image Segmentation and Generation <https://arxiv.org/pdf/2406.02918>`_
     Implements a KAN-based NN modelled after U-Net for computer vision.  Claims that it outperforms traditional MLPs and gives results backing this up by comparing it to off-the-shelf models.  Improvement is, to be fair, only a little bit better than state of the art MLPs.
+
+`Depth Anything V2 <https://arxiv.org/pdf/2406.09414>`_
+    Anyone using Depth Anything should take a look at this - Depth Anything V2 just dropped.  It says V2 so it must be better?
+
+`4M-21: An Any-to-Any Vision Model for Tens of Tasks and Modalities <https://arxiv.org/pdf/2406.09406>`_
+    From Apple.  Makes a foundation model that accepts a wide variety of input and output modalities, including RGB imagery, metadata, feature map, and semantic modalities.  Seems useful, but I don't think it quite gets to, say, RGB-to-IR imagery.
 
 Lunch and Learn
 ---------------
