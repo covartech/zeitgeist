@@ -53,6 +53,9 @@ Ethics
 `Collective Constitutional AI: Aligning a Language Model with Public Input <https://arxiv.org/pdf/2406.07814>`_
     Who gets to make decisions about how LLMs should behave?  Anthropic says it should be "all of us" and develops a method for crowdsourcing this.
 
+`STAR: SocioTechnical Approach to Red Teaming Language Models <https://arxiv.org/pdf/2406.11757>`_
+    From Google.  Proposes a new method for sociotechnical redteaming of LLMs focussing on steerability, signal quality, and arbitration.
+
 Doctrinaire
 -----------
 `Scene Graph Generation in Large-Size VHR Satellite Imagery: A Large-Scale Dataset and A Context-Aware Approach <https://arxiv.org/pdf/2406.09410>`_
