@@ -6,8 +6,8 @@ Featured
 `Flash3D: Feed-Forward Generalisable 3D Scene Reconstruction from a Single Image <https://arxiv.org/pdf/2406.04343>`_
     Reconstructs a 3D render of a scene from a single image using 3D Gaussians, monocular depth estimation, and an interative process to get things out of line of sight.  Seems pretty cool, and I'm astounded it works as well as it does.
 
-`Interpreting the Second-Order Effects of Neurons in CLIP <https://arxiv.org/pdf/2406.04341>`_
-    How to interpret what individual neurons are doing in CLIP?  Look at the effect of these neurons flowing through the model, through the attention heads, and directly to the output.  Neurons end up polysemantic (think "ships" and "cars") and a clever use of these neurons can improve model capabilities.
+`Transcendence: Generative Models Can Outperform The Experts That Train Them <https://arxiv.org/pdf/2406.11741>`_
+    When training with low-temperature sampling, LLMs can outperform the training data: this paper showed this by training an LLM to play chess with an elo rating of 1400 on a bunch of games played by players with 1000 elo rating.  Morally, this is similar to how Depth Anything V2 was trained, where the student transcended the synthetic labels from the teacher.  This might be a general phenomena and probably somthing we wish to leverage.
 
 `Large language model validity via enhanced conformal prediction methods <https://arxiv.org/pdf/2406.09714>`_
     A conformal-based post-processing method for LLMs which tells you the probability that the output contains zero false statements.  Really cool idea in theory, but in their one example you end either having a low(ish) probability or not saying anything useful.  I suppose this tells us something useful about LLMs.  
@@ -22,13 +22,7 @@ Featured
     This paper claims/shows that you can insert undetectable back doors into deep neural nets vai cryptographic methods.  If you know the backdoor you can tweak the inputs a little (adversarial patch, anyone?) to get the desired outcome when your data is put into the network.  Huge concerns with downloading/running open sources models if this is a real thing.
 
 
-LLM Applications
-----
-`LLM Dataset Inference Did you train on my dataset? <https://arxiv.org/pdf/2406.06443>`_
-    Mostly inspired by attempts to enforce copyright law, this paper develops a new method for testing whether an LLM has been trained on a given dataset.
-
-
-LLM Theory
+LLMs
 ----------
 `Knowledge Circuits in Pretrained Transformers <https://arxiv.org/pdf/2405.17969>`_
     Examines the "computation graph" of small LLMs such as GPT2 and TinyLLAMA to uncover "knowledge circuits" that shed some sort of light on how LLMs work.  Seems interesting, with some implications towards hallucinations and in-context learning.
@@ -39,11 +33,17 @@ LLM Theory
 `Competition of Mechanisms: Tracing How Language Models Handle Facts and Counterfactuals <https://arxiv.org/pdf/2402.11655>`_
     Another paper in the "how do LLMs work" genre, but rather than focus on any one mechanism such as induction heads or factual recall in MLP layers, this looks at a variety.  In particular, it examines how these different mechanisms compete with each other when, e.g., asked a counterfactual
 
+`LLM Dataset Inference Did you train on my dataset? <https://arxiv.org/pdf/2406.06443>`_
+    Mostly inspired by attempts to enforce copyright law, this paper develops a new method for testing whether an LLM has been trained on a given dataset.
+
 `Large Language Models Must Be Taught to Know What They Don’t Know <https://arxiv.org/pdf/2406.08391>`_
     One of the problems with LLMs is that you have no idea if they're making stuff up or not - there is no uncertainty estimate.  This paper devises a method for LLM confidence calibration which involves finetuning the LLM in order to estimate confidence.  The finetuned LLM can then also be used to provide confidence estimates for other models.
 
 `Large language model validity via enhanced conformal prediction methods <https://arxiv.org/pdf/2406.09714>`_
     A conformal-based post-processing method for LLMs which tells you the probability that the output contains zero false statements.  Really cool idea in theory, but in their one example you end either having a low(ish) probability or not saying anything useful.  I suppose this tells us something useful about LLMs.  
+
+`Transcendence: Generative Models Can Outperform The Experts That Train Them <https://arxiv.org/pdf/2406.11741>`_
+    When training with low-temperature sampling, LLMs can outperform the training data: this paper showed this by training an LLM to play chess with an elo rating of 1400 on a bunch of games played by players with 1000 elo rating.  Morally, this is similar to how Depth Anything V2 was trained, where the student transcended the synthetic labels from the teacher.  This might be a general phenomena and probably somthing we wish to leverage.
 
 Ethics
 ------
@@ -55,6 +55,9 @@ Ethics
 
 `STAR: SocioTechnical Approach to Red Teaming Language Models <https://arxiv.org/pdf/2406.11757>`_
     From Google.  Proposes a new method for sociotechnical redteaming of LLMs focussing on steerability, signal quality, and arbitration.
+
+`"You Gotta be a Doctor, Lin": An Investigation of Name-Based Bias of Large Language Models in Employment Recommendations <https://arxiv.org/pdf/2406.12232>`_
+    If you put an LLM in charge of hiring decisions, it will assume their race and gender based on their resume and make hiring decisions using gendered/racial stereotypes.  Not surprising.
 
 Doctrinaire
 -----------
