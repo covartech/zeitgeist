@@ -9,8 +9,8 @@ Featured
 `Transcendence: Generative Models Can Outperform The Experts That Train Them <https://arxiv.org/pdf/2406.11741>`_
     When training with low-temperature sampling, LLMs can outperform the training data: this paper showed this by training an LLM to play chess with an elo rating of 1400 on a bunch of games played by players with 1000 elo rating.  Low temperature sampling encourages the model to behave like an ensemble model with majority voting over the input games when choosing a move.  Morally, this is similar to how Depth Anything V2 was trained, where the student transcended the synthetic labels from the teacher, and indicates that this might be a general phenomena and probably somthing we wish to leverage.
 
-`Large language model validity via enhanced conformal prediction methods <https://arxiv.org/pdf/2406.09714>`_
-    A conformal-based post-processing method for LLMs which tells you the probability that the output contains zero false statements.  Really cool idea in theory, but in their one example you end either having a low(ish) probability or not saying anything useful.  I suppose this tells us something useful about LLMs.  
+`AUTOMATIC LABELS ARE AS EFFECTIVE AS MANUAL LABELS IN BIOMEDICAL IMAGES CLASSIFICATION WITH DEEP LEARNING <https://arxiv.org/pdf/2406.14351>`_
+    Lack of labels is a big issue in training deep learning models.  This paper explores whether you can use automatic labels and find that you can, as long as the percentage of noisy labels is less than 10%.  Seems morally similar to the way Depth Anything V2 was trained and is something we should look into.
 
 `To Believe or Not to Believe Your LLM <https://arxiv.org/pdf/2406.02543>`_
     From Deepmind.  Introduces an information-theory based approach to detect when hallucinations are occurring by measuring epistemic uncertainty about knowledge.  Really cool paper.  
@@ -74,13 +74,6 @@ Ethics
 `"You Gotta be a Doctor, Lin": An Investigation of Name-Based Bias of Large Language Models in Employment Recommendations <https://arxiv.org/pdf/2406.12232>`_
     If you put an LLM in charge of hiring decisions, it will assume their race and gender based on their resume and make hiring decisions using gendered/racial stereotypes.  Not surprising.
 
-Box Networks
-------------
-`YOLOv9: Learning What You Want to Learn Using Programmable Gradient Information <https://arxiv.org/abs/2402.13616>`_
-    Another YOLO on the pile. What even is a YOLO? This just tweaks the layer type in the backbone. To me it seemed complicated, but maybe it could be a drop in replacement for the backbone?
-
-`YOLOv10: Real-Time End-to-End Object Detection <https://arxiv.org/abs/2405.14458>`_
-    Yet another YOLO on the pile. And get this, this one is better! Line go up! This one is a little more interesting because it drops the NMS step and builds it into the network. YOLO8 was basically centernet, now this might be an improvement upon the centernet we know and love.
 
 Doctrinaire
 -----------
@@ -110,6 +103,12 @@ Theory
 
 `Injecting Undetectable Backdoors in Deep Learning and Language Models <https://arxiv.org/pdf/2406.05660>`_
     This paper claims/shows that you can insert undetectable back doors into deep neural nets vai cryptographic methods.  If you know the backdoor you can tweak the inputs a little (adversarial patch, anyone?) to get the desired outcome when your data is put into the network.  Huge concerns with downloading/running open sources models if this is a real thing.
+
+`Improving the Validity and Practical Usefulness of AI/ML Evaluations Using an Estimands Framework <https://arxiv.org/pdf/2406.10366v1>`_
+    Existing benchmarks for AI models and LLMs can be decieving - good performance on the generic test sets does not lead to good perfromance in the wild.  The authors propose some novel estimands based on a causal framework.  Jerry did his Ph.D. with the godfather of causal inference, Don Rubin, up at Harvard so he should know what he's talking about here.
+
+`AUTOMATIC LABELS ARE AS EFFECTIVE AS MANUAL LABELS IN BIOMEDICAL IMAGES CLASSIFICATION WITH DEEP LEARNING <https://arxiv.org/pdf/2406.14351>`_
+    Lack of labels is a big issue in training deep learning models.  This paper explores whether you can use automatic labels and find that you can, as long as the percentage of noisy labels is less than 10%.  Seems morally similar to the way Depth Anything V2 was trained and is something we should look into.
 
 Gaussian Splatting
 ------------------
@@ -150,6 +149,15 @@ New Models
 
 `SCKansformer: Fine-Grained Classification of Bone Marrow Cells via Kansformer Backbone and Hierarchical Attention Mechanisms <https://arxiv.org/pdf/2406.09931>`_
     KANs make their way into a transformer architecture, here with a medical application.
+
+`YOLOv9: Learning What You Want to Learn Using Programmable Gradient Information <https://arxiv.org/abs/2402.13616>`_
+    Another YOLO on the pile. What even is a YOLO? This just tweaks the layer type in the backbone. To me it seemed complicated, but maybe it could be a drop in replacement for the backbone?
+
+`YOLOv10: Real-Time End-to-End Object Detection <https://arxiv.org/abs/2405.14458>`_
+    Yet another YOLO on the pile. And get this, this one is better! Line go up! This one is a little more interesting because it drops the NMS step and builds it into the network. YOLO8 was basically centernet, now this might be an improvement upon the centernet we know and love.
+
+`Claude 3.5 Sonnet <https://www.anthropic.com/news/claude-3-5-sonnet>`_
+    Anthropic releases their newest LLM, Claude 3.5 Sonnet.  Getting a lot of buzz on twitter about how smart it is.  Can neither confirm nor deny.
 
 Lunch and Learn
 ---------------
