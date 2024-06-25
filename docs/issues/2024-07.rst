@@ -1,4 +1,4 @@
-2024-06
+2024-07
 =======
 
 Featured
@@ -9,9 +9,6 @@ Featured
 `Transcendence: Generative Models Can Outperform The Experts That Train Them <https://arxiv.org/pdf/2406.11741>`_
     When training with low-temperature sampling, LLMs can outperform the training data: this paper showed this by training an LLM to play chess with an elo rating of 1400 on a bunch of games played by players with 1000 elo rating.  Low temperature sampling encourages the model to behave like an ensemble model with majority voting over the input games when choosing a move.  Morally, this is similar to how Depth Anything V2 was trained, where the student transcended the synthetic labels from the teacher, and indicates that this might be a general phenomena and probably somthing we wish to leverage.
 
-`AUTOMATIC LABELS ARE AS EFFECTIVE AS MANUAL LABELS IN BIOMEDICAL IMAGES CLASSIFICATION WITH DEEP LEARNING <https://arxiv.org/pdf/2406.14351>`_
-    Lack of labels is a big issue in training deep learning models.  This paper explores whether you can use automatic labels and find that you can, as long as the percentage of noisy labels is less than 10%.  Seems morally similar to the way Depth Anything V2 was trained and is something we should look into.
-
 `To Believe or Not to Believe Your LLM <https://arxiv.org/pdf/2406.02543>`_
     From Deepmind.  Introduces an information-theory based approach to detect when hallucinations are occurring by measuring epistemic uncertainty about knowledge.  Really cool paper.  
 
@@ -21,6 +18,8 @@ Featured
 `Injecting Undetectable Backdoors in Deep Learning and Language Models <https://arxiv.org/pdf/2406.05660>`_
     This paper claims/shows that you can insert undetectable back doors into deep neural nets vai cryptographic methods.  If you know the backdoor you can tweak the inputs a little (adversarial patch, anyone?) to get the desired outcome when your data is put into the network.  Huge concerns with downloading/running open sources models if this is a real thing.
 
+`YOLOv10: Real-Time End-to-End Object Detection <https://arxiv.org/abs/2405.14458>`_
+    Yet another YOLO on the pile. And get this, this one is better! Line go up! This one is a little more interesting because it drops the NMS step and builds it into the network. YOLO8 was basically centernet, now this might be an improvement upon the centernet we know and love.
 
 LLMs
 ----------
@@ -33,9 +32,6 @@ LLMs
 `Competition of Mechanisms: Tracing How Language Models Handle Facts and Counterfactuals <https://arxiv.org/pdf/2402.11655>`_
     Another paper in the "how do LLMs work" genre, but rather than focus on any one mechanism such as induction heads or factual recall in MLP layers, this looks at a variety.  In particular, it examines how these different mechanisms compete with each other when, e.g., asked a counterfactual
 
-`LLM Dataset Inference Did you train on my dataset? <https://arxiv.org/pdf/2406.06443>`_
-    Mostly inspired by attempts to enforce copyright law, this paper develops a new method for testing whether an LLM has been trained on a given dataset.
-
 `Large Language Models Must Be Taught to Know What They Don’t Know <https://arxiv.org/pdf/2406.08391>`_
     One of the problems with LLMs is that you have no idea if they're making stuff up or not - there is no uncertainty estimate.  This paper devises a method for LLM confidence calibration which involves finetuning the LLM in order to estimate confidence.  The finetuned LLM can then also be used to provide confidence estimates for other models.
 
@@ -45,20 +41,11 @@ LLMs
 `Transcendence: Generative Models Can Outperform The Experts That Train Them <https://arxiv.org/pdf/2406.11741>`_
     When training with low-temperature sampling, LLMs can outperform the training data: this paper showed this by training an LLM to play chess with an elo rating of 1400 on a bunch of games played by players with 1000 elo rating.  Low temperature sampling encourages the model to behave like an ensemble model with majority voting over the input games when choosing a move.  Morally, this is similar to how Depth Anything V2 was trained, where the student transcended the synthetic labels from the teacher, and indicates that this might be a general phenomena and probably somthing we wish to leverage.
 
-`Using an LLM to Compete in an AGI Banchmark<https://redwoodresearch.substack.com/p/getting-50-sota-on-arc-agi-with-gpt>`_
-    There is something interesting here. LLMs can kind of compete in AGI benchmarks that require a lot of reasoning, but they involve so much prompt enginnering that maybe you would have been better writting code instead of orchestration code.
-
-`Getting Structured Output from LLMs <https://www.boundaryml.com/blog/structured-output-from-llms>`_
-    To us, LLMs are primarily tools to turn text in to structured information. What python tools are there to get you there? Here is a comparison.
-
-`Logit Prisms <https://neuralblog.github.io/logit-prisms/>`_
-    Comes up with a method to read the tea leaves of logits coming out of an LLM. I'm not very convinced, but this has some similarities to what Miles is sometimes interested in.
-
 `ShortGPT: Layers in Large Language Models are More Redundant Than You Expect <https://arxiv.org/abs/2403.03853>`_
     Asserts that a lot of the layers in an LLM are redundant. They introduce a metric that looks at a section of weights and decides to kill it off. Apparently you can make things much smaller. This is independent of quantization which can also be applied.
 
 `Refusal in Language Models Is Mediated by a Single Direction <https://arxiv.org/abs/2406.11717>`_
-    The RLHF that tells the LLM to be nice and refuse to answer sometimes, apparently is findiable in the gradients during runtime. If you just remove that dimension with a hack, you get an uncensored LLM from your censored weights.
+    The RLHF that tells the LLM to be nice and refuse to answer sometimes is apparently findiable in the gradients during runtime. If you just remove that dimension with a hack, you get an uncensored LLM from your censored weights.
 
 Ethics
 ------
@@ -74,14 +61,14 @@ Ethics
 `"You Gotta be a Doctor, Lin": An Investigation of Name-Based Bias of Large Language Models in Employment Recommendations <https://arxiv.org/pdf/2406.12232>`_
     If you put an LLM in charge of hiring decisions, it will assume their race and gender based on their resume and make hiring decisions using gendered/racial stereotypes.  Not surprising.
 
+`LLM Dataset Inference Did you train on my dataset? <https://arxiv.org/pdf/2406.06443>`_
+    Mostly inspired by attempts to enforce copyright law, this paper develops a new method for testing whether an LLM has been trained on a given dataset.
+
 
 Doctrinaire
 -----------
 `Scene Graph Generation in Large-Size VHR Satellite Imagery: A Large-Scale Dataset and A Context-Aware Approach <https://arxiv.org/pdf/2406.09410>`_
     How to go from satellie imagery and detections to a graph containing triples of objects and relationships.  Worth keeping in our back pocket if we ever get back into satellite imagery.
-
-Autonomy
---------
 
 
 Theory
@@ -107,9 +94,6 @@ Theory
 `Improving the Validity and Practical Usefulness of AI/ML Evaluations Using an Estimands Framework <https://arxiv.org/pdf/2406.10366v1>`_
     Existing benchmarks for AI models and LLMs can be decieving - good performance on the generic test sets does not lead to good perfromance in the wild.  The authors propose some novel estimands based on a causal framework.  Jerry did his Ph.D. with the godfather of causal inference, Don Rubin, up at Harvard so he should know what he's talking about here.
 
-`AUTOMATIC LABELS ARE AS EFFECTIVE AS MANUAL LABELS IN BIOMEDICAL IMAGES CLASSIFICATION WITH DEEP LEARNING <https://arxiv.org/pdf/2406.14351>`_
-    Lack of labels is a big issue in training deep learning models.  This paper explores whether you can use automatic labels and find that you can, as long as the percentage of noisy labels is less than 10%.  Seems morally similar to the way Depth Anything V2 was trained and is something we should look into.
-
 Gaussian Splatting
 ------------------
 `SATSPLATYOLO: 3D GAUSSIAN SPLATTING-BASED VIRTUAL OBJECT DETECTION ENSEMBLES FOR SATELLITE FEATURE RECOGNITION <https://arxiv.org/pdf/2406.02533>`_
@@ -124,16 +108,10 @@ Gaussian Splatting
 `ICE-G: Image Conditional Editing of 3D Gaussian Splats <https://arxiv.org/pdf/2406.08488>`_
     From Google.  A method to edit a 3D Gaussian splatting render using DINO.  Probably a good reference to have on hand.
 
-Reasoning/Knowledge Graphs
---------------------------
-
 FPGA
 ----
 `Scalable MatMul-free Language Modeling <https://arxiv.org/pdf/2406.02528>`_
     Apparently, matrix multiplication in LLMs is completely optional.  There are, as you might imagine, huge computational benefits to be gleaned here - in particular, this paper puts LLMs on an FPGA.
-
-Applications
-------------
 
 
 New Models
@@ -161,3 +139,7 @@ New Models
 
 Lunch and Learn
 ---------------
+
+2024-06-25
+    `Transcendence: Generative Models Can Outperform The Experts That Train Them <https://arxiv.org/pdf/2406.11741>`_
+        When training with low-temperature sampling, LLMs can outperform the training data: this paper showed this by training an LLM to play chess with an elo rating of 1400 on a bunch of games played by players with 1000 elo rating.  Low temperature sampling encourages the model to behave like an ensemble model with majority voting over the input games when choosing a move.  Morally, this is similar to how Depth Anything V2 was trained, where the student transcended the synthetic labels from the teacher, and indicates that this might be a general phenomena and probably somthing we wish to leverage.
