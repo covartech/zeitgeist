@@ -38,9 +38,6 @@ LLMs
 `Large language model validity via enhanced conformal prediction methods <https://arxiv.org/pdf/2406.09714>`_
     A conformal-based post-processing method for LLMs which tells you the probability that the output contains zero false statements.  Really cool idea in theory, but in their one example you end either having a low(ish) probability or not saying anything useful.  I suppose this tells us something useful about LLMs.  
 
-`Transcendence: Generative Models Can Outperform The Experts That Train Them <https://arxiv.org/pdf/2406.11741>`_
-    When training with low-temperature sampling, LLMs can outperform the training data: this paper showed this by training an LLM to play chess with an elo rating of 1400 on a bunch of games played by players with 1000 elo rating.  Low temperature sampling encourages the model to behave like an ensemble model with majority voting over the input games when choosing a move.  Morally, this is similar to how Depth Anything V2 was trained, where the student transcended the synthetic labels from the teacher, and indicates that this might be a general phenomena and probably somthing we wish to leverage.
-
 `ShortGPT: Layers in Large Language Models are More Redundant Than You Expect <https://arxiv.org/abs/2403.03853>`_
     Asserts that a lot of the layers in an LLM are redundant. They introduce a metric that looks at a section of weights and decides to kill it off. Apparently you can make things much smaller. This is independent of quantization which can also be applied.
 
