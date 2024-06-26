@@ -6,8 +6,8 @@ Featured
 `Flash3D: Feed-Forward Generalisable 3D Scene Reconstruction from a Single Image <https://arxiv.org/pdf/2406.04343>`_
     Reconstructs a 3D render of a scene from a single image using 3D Gaussians, monocular depth estimation, and an interative process to get things out of line of sight.  Seems pretty cool, and I'm astounded it works as well as it does.
 
-`Transcendence: Generative Models Can Outperform The Experts That Train Them <https://arxiv.org/pdf/2406.11741>`_
-    When training with low-temperature sampling, LLMs can outperform the training data: this paper showed this by training an LLM to play chess with an elo rating of 1400 on a bunch of games played by players with 1000 elo rating.  Low temperature sampling encourages the model to behave like an ensemble model with majority voting over the input games when choosing a move.  Morally, this is similar to how Depth Anything V2 was trained, where the student transcended the synthetic labels from the teacher, and indicates that this might be a general phenomena and probably somthing we wish to leverage.
+`Mitigate the Gap: Investigating Approaches for Improving Cross-Modal Alignment in CLIP <https://arxiv.org/pdf/2406.17639>`_
+    CLIP embeddings have a modality gap - different modalities are densely distributed far away from each other.  This paper investigates two methods of remedying this modality gap and finds that they work.  Could be useful for our EO/IR foundation model.
 
 `To Believe or Not to Believe Your LLM <https://arxiv.org/pdf/2406.02543>`_
     From Deepmind.  Introduces an information-theory based approach to detect when hallucinations are occurring by measuring epistemic uncertainty about knowledge.  Really cool paper.  
@@ -91,6 +91,9 @@ Theory
 `Improving the Validity and Practical Usefulness of AI/ML Evaluations Using an Estimands Framework <https://arxiv.org/pdf/2406.10366v1>`_
     Existing benchmarks for AI models and LLMs can be decieving - good performance on the generic test sets does not lead to good perfromance in the wild.  The authors propose some novel estimands based on a causal framework.  Jerry did his Ph.D. with the godfather of causal inference, Don Rubin, up at Harvard so he should know what he's talking about here.
 
+`Mitigate the Gap: Investigating Approaches for Improving Cross-Modal Alignment in CLIP <https://arxiv.org/pdf/2406.17639>`_
+    CLIP embeddings have a modality gap - different modalities are densely distributed far away from each other.  This paper investigates two methods of remedying this modality gap and finds that they work.  Could be useful for our EO/IR foundation model.
+
 Gaussian Splatting
 ------------------
 `SATSPLATYOLO: 3D GAUSSIAN SPLATTING-BASED VIRTUAL OBJECT DETECTION ENSEMBLES FOR SATELLITE FEATURE RECOGNITION <https://arxiv.org/pdf/2406.02533>`_
@@ -133,6 +136,9 @@ New Models
 
 `Claude 3.5 Sonnet <https://www.anthropic.com/news/claude-3-5-sonnet>`_
     Anthropic releases their newest LLM, Claude 3.5 Sonnet.  Getting a lot of buzz on twitter about how smart it is.  Can neither confirm nor deny.
+
+`Point-SAM: Promptable 3D Segmentation Model for Point Clouds <https://arxiv.org/pdf/2406.17741>`_
+    SAM for 3D point clouds.  Lots of potential, but I'm not really convinced by their examples.
 
 Lunch and Learn
 ---------------
