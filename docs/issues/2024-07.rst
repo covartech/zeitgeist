@@ -12,14 +12,14 @@ Featured
 `To Believe or Not to Believe Your LLM <https://arxiv.org/pdf/2406.02543>`_
     From Deepmind.  Introduces an information-theory based approach to detect when hallucinations are occurring by measuring epistemic uncertainty about knowledge.  Really cool paper.  
 
-`Neural Redshift: Random Networks are not Random Functions <https://arxiv.org/pdf/2403.02241>`_
-    Neural networks have been thought to have a simplicity bias favoring simple simple solutions to problems.  This paper demonstrates that this is not an inherent feature of neural networks but instead an emergent feature of neural architecture and activation functions, with, e.g., ReLu's favoring simple responses and tanh's favoring complicated ones.  
-
 `Injecting Undetectable Backdoors in Deep Learning and Language Models <https://arxiv.org/pdf/2406.05660>`_
     This paper claims/shows that you can insert undetectable back doors into deep neural nets vai cryptographic methods.  If you know the backdoor you can tweak the inputs a little (adversarial patch, anyone?) to get the desired outcome when your data is put into the network.  Huge concerns with downloading/running open sources models if this is a real thing.
 
 `YOLOv10: Real-Time End-to-End Object Detection <https://arxiv.org/abs/2405.14458>`_
     Yet another YOLO on the pile. And get this, this one is better! Line go up! This one is a little more interesting because it drops the NMS step and builds it into the network. YOLO8 was basically centernet, now this might be an improvement upon the centernet we know and love.
+
+`Movie reconstruction from mouse visual cortex activity <https://www.biorxiv.org/content/10.1101/2024.06.19.599691v1.full.pdf>`_
+    Uses deep learning techniques to reconstruct video from nueron activations in mouse brains.  Some of the reconstructions look solid.Not exactly our wheelhouse, but too cool to pass up - and you could imagine a use for a developed technology like this somewhere down the line.
 
 LLMs
 ----------
@@ -61,12 +61,10 @@ Ethics
 `LLM Dataset Inference Did you train on my dataset? <https://arxiv.org/pdf/2406.06443>`_
     Mostly inspired by attempts to enforce copyright law, this paper develops a new method for testing whether an LLM has been trained on a given dataset.
 
-
 Doctrinaire
 -----------
 `Scene Graph Generation in Large-Size VHR Satellite Imagery: A Large-Scale Dataset and A Context-Aware Approach <https://arxiv.org/pdf/2406.09410>`_
     How to go from satellie imagery and detections to a graph containing triples of objects and relationships.  Worth keeping in our back pocket if we ever get back into satellite imagery.
-
 
 Theory
 ------
@@ -113,6 +111,15 @@ FPGA
 `Scalable MatMul-free Language Modeling <https://arxiv.org/pdf/2406.02528>`_
     Apparently, matrix multiplication in LLMs is completely optional.  There are, as you might imagine, huge computational benefits to be gleaned here - in particular, this paper puts LLMs on an FPGA.
 
+Knowledge Graphs
+----------------
+`Start from Zero: Triple Set Prediction for Automatic Knowledge Graph Completion <https://arxiv.org/pdf/2406.18166>`_
+    Knowledge graph reconstruction from a different angle - instead of assuming you know part of a triple and filling in the blanks, you instead attempt to guess the entire triple.  This paper claims that this states of affairs is closer to problems encountered in the wild.
+
+Applications
+------------
+`Movie reconstruction from mouse visual cortex activity <https://www.biorxiv.org/content/10.1101/2024.06.19.599691v1.full.pdf>`_
+    Uses deep learning techniques to reconstruct video from nueron activations in mouse brains.  Some of the reconstructions look solid.Not exactly our wheelhouse, but too cool to pass up - and you could imagine a use for a developed technology like this somewhere down the line.
 
 New Models
 ----------
