@@ -143,6 +143,10 @@ New Models
 Lunch and Learn
 ---------------
 
+2024-06-18
+    `Depth Anything V2 <https://arxiv.org/abs/2406.09414>`_
+        An update on Depth Anything with finer and robust depth predictions. A few interesting findings: (1) depth pseudo-labels from a model trained on synthetic data are more precise than real-world depth labels, (2) model trained using pseudo-labels of 60M real-world examples is better than the model used to make those pseudo-labels (trained exclusively on 600k synthetic examples), (3) metrics can be bad (depth metrics fail to capture how much finer Depth Anything V2 is), and (4) test-time image scaling up can add fine details.
+
 2024-06-25
     `Transcendence: Generative Models Can Outperform The Experts That Train Them <https://arxiv.org/pdf/2406.11741>`_
         When training with low-temperature sampling, LLMs can outperform the training data: this paper showed this by training an LLM to play chess with an elo rating of 1400 on a bunch of games played by players with 1000 elo rating.  Low temperature sampling encourages the model to behave like an ensemble model with majority voting over the input games when choosing a move.  Morally, this is similar to how Depth Anything V2 was trained, where the student transcended the synthetic labels from the teacher, and indicates that this might be a general phenomena and probably somthing we wish to leverage.
