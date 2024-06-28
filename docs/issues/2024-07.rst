@@ -19,7 +19,7 @@ Featured
     Yet another YOLO on the pile. And get this, this one is better! Line go up! This one is a little more interesting because it drops the NMS step and builds it into the network. YOLO8 was basically centernet, now this might be an improvement upon the centernet we know and love.
 
 `Movie reconstruction from mouse visual cortex activity <https://www.biorxiv.org/content/10.1101/2024.06.19.599691v1.full.pdf>`_
-    Uses deep learning techniques to reconstruct video from nueron activations in mouse brains.  Some of the reconstructions look solid.Not exactly our wheelhouse, but too cool to pass up - and you could imagine a use for a developed technology like this somewhere down the line.
+    Uses deep learning techniques to reconstruct a video from nueron activations in mouse brains.  Some of the reconstructions look solid.Not exactly our wheelhouse, but too cool to pass up - and you could imagine a use for a developed technology like this somewhere down the line.
 
 LLMs
 ----------
