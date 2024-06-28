@@ -1,0 +1,157 @@
+2024-07
+=======
+
+Featured
+--------
+`Flash3D: Feed-Forward Generalisable 3D Scene Reconstruction from a Single Image <https://arxiv.org/pdf/2406.04343>`_
+    Reconstructs a 3D render of a scene from a single image using 3D Gaussians, monocular depth estimation, and an interative process to get things out of line of sight.  Seems pretty cool, and I'm astounded it works as well as it does.
+
+`Mitigate the Gap: Investigating Approaches for Improving Cross-Modal Alignment in CLIP <https://arxiv.org/pdf/2406.17639>`_
+    CLIP embeddings have a modality gap - different modalities are densely distributed far away from each other.  This paper investigates two methods of remedying this modality gap and finds that they work.  Could be useful for our EO/IR foundation model.
+
+`To Believe or Not to Believe Your LLM <https://arxiv.org/pdf/2406.02543>`_
+    From Deepmind.  Introduces an information-theory based approach to detect when hallucinations are occurring by measuring epistemic uncertainty about knowledge.  Really cool paper.  
+
+`Injecting Undetectable Backdoors in Deep Learning and Language Models <https://arxiv.org/pdf/2406.05660>`_
+    This paper claims/shows that you can insert undetectable back doors into deep neural nets vai cryptographic methods.  If you know the backdoor you can tweak the inputs a little (adversarial patch, anyone?) to get the desired outcome when your data is put into the network.  Huge concerns with downloading/running open sources models if this is a real thing.
+
+`YOLOv10: Real-Time End-to-End Object Detection <https://arxiv.org/abs/2405.14458>`_
+    Yet another YOLO on the pile. And get this, this one is better! Line go up! This one is a little more interesting because it drops the NMS step and builds it into the network. YOLO8 was basically centernet, now this might be an improvement upon the centernet we know and love.
+
+`Movie reconstruction from mouse visual cortex activity <https://www.biorxiv.org/content/10.1101/2024.06.19.599691v1.full.pdf>`_
+    Uses deep learning techniques to reconstruct video from nueron activations in mouse brains.  Some of the reconstructions look solid.Not exactly our wheelhouse, but too cool to pass up - and you could imagine a use for a developed technology like this somewhere down the line.
+
+LLMs
+----------
+`Knowledge Circuits in Pretrained Transformers <https://arxiv.org/pdf/2405.17969>`_
+    Examines the "computation graph" of small LLMs such as GPT2 and TinyLLAMA to uncover "knowledge circuits" that shed some sort of light on how LLMs work.  Seems interesting, with some implications towards hallucinations and in-context learning.
+
+`To Believe or Not to Believe Your LLM <https://arxiv.org/pdf/2406.02543>`_
+    From Deepmind.  Introduces an information-theory based approach to detect when hallucinations are occurring by measuring epistemic uncertainty about knowledge.  Really cool paper. 
+    
+`Large Language Models Must Be Taught to Know What They Don’t Know <https://arxiv.org/pdf/2406.08391>`_
+    One of the problems with LLMs is that you have no idea if they're making stuff up or not - there is no uncertainty estimate.  This paper devises a method for LLM confidence calibration which involves finetuning the LLM in order to estimate confidence.  The finetuned LLM can then also be used to provide confidence estimates for other models.
+
+`Large language model validity via enhanced conformal prediction methods <https://arxiv.org/pdf/2406.09714>`_
+    A conformal-based post-processing method for LLMs which tells you the probability that the output contains zero false statements.  Really cool idea in theory, but in their one example you end either having a low(ish) probability or not saying anything useful.  I suppose this tells us something useful about LLMs.  
+
+`Refusal in Language Models Is Mediated by a Single Direction <https://arxiv.org/abs/2406.11717>`_
+    The RLHF that tells the LLM to be nice and refuse to answer sometimes is apparently findable in the gradients during runtime. If you just remove that dimension with a hack, you get an uncensored LLM from your censored weights.
+
+Ethics
+------
+`The Impossibility of Fair LLMs <https://arxiv.org/pdf/2406.03198>`_
+    Might be a useful reference for ASIMOV.  Looks at traditional definitions of fairness, finds limitations as they apply to LLMs, and thinks about new ones.
+
+`Collective Constitutional AI: Aligning a Language Model with Public Input <https://arxiv.org/pdf/2406.07814>`_
+    Who gets to make decisions about how LLMs should behave?  Anthropic says it should be "all of us" and develops a method for crowdsourcing this.
+
+`STAR: SocioTechnical Approach to Red Teaming Language Models <https://arxiv.org/pdf/2406.11757>`_
+    From Google.  Proposes a new method for sociotechnical redteaming of LLMs focussing on steerability, signal quality, and arbitration.
+
+`"You Gotta be a Doctor, Lin": An Investigation of Name-Based Bias of Large Language Models in Employment Recommendations <https://arxiv.org/pdf/2406.12232>`_
+    If you put an LLM in charge of hiring decisions, it will assume their race and gender based on their resume and make hiring decisions using gendered/racial stereotypes.  I feel like we get one of these papers every few months.
+
+`LLM Dataset Inference Did you train on my dataset? <https://arxiv.org/pdf/2406.06443>`_
+    Mostly inspired by attempts to enforce copyright law, this paper develops a new method for testing whether an LLM has been trained on a given dataset.
+
+Doctrinaire
+-----------
+`Scene Graph Generation in Large-Size VHR Satellite Imagery: A Large-Scale Dataset and A Context-Aware Approach <https://arxiv.org/pdf/2406.09410>`_
+    How to go from satellie imagery and detections to a graph containing triples of objects and relationships.  Worth keeping in our back pocket if we ever get back into satellite imagery.
+
+Theory
+------
+`einspace: Searching for Neural Architectures from Fundamental Operations <https://arxiv.org/pdf/2405.20838>`_
+    Proposes a method to search for the best neural architecture for a given task.  Seems kind of interesting in theory, but I wonder how useful it will be in practice - a lot of architectures are "good enough" given a set of data.
+
+`Beyond Model Collapse: Scaling Up with Synthesized Data Requires Reinforcement <https://arxiv.org/pdf/2406.07515>`_
+    From Meta.  Investigates how to train models on (partially) synthetic data to avoid the model collapse phenomena.  The answer they come up with is to use reinforcement learning to select the best data, in part because it's a relatively easy task to tell between good and bad data.
+
+`Neural Redshift: Random Networks are not Random Functions <https://arxiv.org/pdf/2403.02241>`_
+    Neural networks have been thought to have a simplicity bias favoring simple simple solutions to problems.  This paper demonstrates that this is not an inherent feature of neural networks but instead an emergent feature of neural architecture and activation functions, with, e.g., ReLu's favoring simple responses and tanh's favoring complicated ones.  
+
+`Why Warmup the Learning Rate? Underlying Mechanisms and Improvements <https://arxiv.org/pdf/2406.09405>`_
+    Warming up the learning rate (usually linearly) tends to improve model performance.  This paper analyzes why, and finds it has to do with forcing the network to accept a larger learning rate by getting it to well-behaved areas of the loss function.  Given this, they devise a better/faster warmup method.
+
+`Injecting Undetectable Backdoors in Deep Learning and Language Models <https://arxiv.org/pdf/2406.05660>`_
+    This paper claims/shows that you can insert undetectable back doors into deep neural nets vai cryptographic methods.  If you know the backdoor you can tweak the inputs a little (adversarial patch, anyone?) to get the desired outcome when your data is put into the network.  Huge concerns with downloading/running open sources models if this is a real thing.
+
+`Improving the Validity and Practical Usefulness of AI/ML Evaluations Using an Estimands Framework <https://arxiv.org/pdf/2406.10366v1>`_
+    Existing benchmarks for AI models and LLMs can be decieving - good performance on the generic test sets does not lead to good perfromance in the wild.  The authors propose some novel estimands based on a causal framework.
+
+`Mitigate the Gap: Investigating Approaches for Improving Cross-Modal Alignment in CLIP <https://arxiv.org/pdf/2406.17639>`_
+    CLIP embeddings have a modality gap - different modalities are densely distributed far away from each other.  This paper investigates two methods of remedying this modality gap and finds that they work.  Could be useful for our EO/IR foundation model.
+
+Gaussian Splatting
+------------------
+`SATSPLATYOLO: 3D GAUSSIAN SPLATTING-BASED VIRTUAL OBJECT DETECTION ENSEMBLES FOR SATELLITE FEATURE RECOGNITION <https://arxiv.org/pdf/2406.02533>`_
+    Learns Gaussian splats from remote sensing data and then applies Yolo-3D on the resulting point cloud to do detections.  An interesting approach, though I'm not sure it's better than a CNN on imagery.
+
+`Flash3D: Feed-Forward Generalisable 3D Scene Reconstruction from a Single Image <https://arxiv.org/pdf/2406.04343>`_
+    Reconstructs a 3D render of a scene from a single image using 3D Gaussians, monocular depth estimation, and an interative process to get things out of line of sight.  Seems pretty cool, and I'm astounded it works as well as it does.
+    
+`Trim 3D Gaussian Splatting for Accurate Geometry Representation <https://arxiv.org/pdf/2406.07499>`_
+    Introduces a new method into Gaussian splatting to trim the Gaussian to enforce geometric patterns.  Seems to really improve rendering parts of pictures that can end up blurry with the usual methods.
+
+`ICE-G: Image Conditional Editing of 3D Gaussian Splats <https://arxiv.org/pdf/2406.08488>`_
+    From Google.  A method to edit a 3D Gaussian splatting render using DINO.  Probably a good reference to have on hand.
+
+FPGA
+----
+`Scalable MatMul-free Language Modeling <https://arxiv.org/pdf/2406.02528>`_
+    Apparently, matrix multiplication in LLMs is completely optional.  There are, as you might imagine, huge computational benefits to be gleaned here - in particular, this paper puts LLMs on an FPGA.
+
+Knowledge Graphs
+----------------
+`Start from Zero: Triple Set Prediction for Automatic Knowledge Graph Completion <https://arxiv.org/pdf/2406.18166>`_
+    Knowledge graph reconstruction from a different angle - instead of assuming you know part of a triple and filling in the blanks, you instead attempt to guess the entire triple.  This paper claims that this states of affairs is closer to problems encountered in the wild.
+
+Applications
+------------
+`Movie reconstruction from mouse visual cortex activity <https://www.biorxiv.org/content/10.1101/2024.06.19.599691v1.full.pdf>`_
+    Uses deep learning techniques to reconstruct video from nueron activations in mouse brains.  Some of the reconstructions look solid.Not exactly our wheelhouse, but too cool to pass up - and you could imagine a use for a developed technology like this somewhere down the line.
+
+New Models
+----------
+`U-KAN Makes Strong Backbone for Medical Image Segmentation and Generation <https://arxiv.org/pdf/2406.02918>`_
+    Implements a KAN-based NN modelled after U-Net for computer vision.  Claims that it outperforms traditional MLPs and gives results backing this up by comparing it to off-the-shelf models.  Improvement is, to be fair, only a little bit better than state of the art MLPs.
+
+`Depth Anything V2 <https://arxiv.org/pdf/2406.09414>`_
+    Anyone using Depth Anything should take a look at this - Depth Anything V2 just dropped.  It says V2 so it must be better?
+
+`4M-21: An Any-to-Any Vision Model for Tens of Tasks and Modalities <https://arxiv.org/pdf/2406.09406>`_
+    From Apple.  Makes a foundation model that accepts a wide variety of input and output modalities, including RGB imagery, metadata, feature map, and semantic modalities.  Seems useful, but I don't think it quite gets to, say, RGB-to-IR imagery.
+
+`SCKansformer: Fine-Grained Classification of Bone Marrow Cells via Kansformer Backbone and Hierarchical Attention Mechanisms <https://arxiv.org/pdf/2406.09931>`_
+    KANs make their way into a transformer architecture, here with a medical application.
+
+`YOLOv9: Learning What You Want to Learn Using Programmable Gradient Information <https://arxiv.org/abs/2402.13616>`_
+    Another YOLO on the pile. What even is a YOLO? This just tweaks the layer type in the backbone. To me it seemed complicated, but maybe it could be a drop in replacement for the backbone?
+
+`YOLOv10: Real-Time End-to-End Object Detection <https://arxiv.org/abs/2405.14458>`_
+    Yet another YOLO on the pile. And get this, this one is better! Line go up! This one is a little more interesting because it drops the NMS step and builds it into the network. YOLO8 was basically centernet, now this might be an improvement upon the centernet we know and love.
+
+`Claude 3.5 Sonnet <https://www.anthropic.com/news/claude-3-5-sonnet>`_
+    Anthropic releases their newest LLM, Claude 3.5 Sonnet.  Getting a lot of buzz on twitter about how smart it is.  Can neither confirm nor deny.
+
+`Point-SAM: Promptable 3D Segmentation Model for Point Clouds <https://arxiv.org/pdf/2406.17741>`_
+    SAM for 3D point clouds.  Lots of potential, but I'm not really convinced by their examples.
+
+Lunch and Learn
+---------------
+2024-06-04
+    `Matching Anything by Segmenting Anything <https://arxiv.org/abs/2406.04221>`_
+        Building a generalized tracker using SAM as a backbone. Provided adapter empowers foundational models to track any objects they have detected, and shows strong zero-shot tracking ability in complex domains. Interesting synthetic training method with good results.
+
+2024-06-11
+    `Code as Policies: Language Model Programs for Embodied Control <https://code-as-policies.github.io>`_
+        Using LLMs to control robots. LLM builds up its own library of funcitonality using provided robot API. Recursively defines functions to do complex geometric tasks in real world. Seems like a good path for reasoning and knowledge graphs.
+
+2024-06-18
+    `Depth Anything V2 <https://arxiv.org/abs/2406.09414>`_
+        An update on Depth Anything with finer and robust depth predictions. A few interesting findings: (1) depth pseudo-labels from a model trained on synthetic data are more precise than real-world depth labels, (2) model trained using pseudo-labels of 60M real-world examples is better than the model used to make those pseudo-labels (trained exclusively on 600k synthetic examples), (3) metrics can be bad (depth metrics fail to capture how much finer Depth Anything V2 is), and (4) test-time image scaling up can add fine details.
+
+2024-06-25
+    `Transcendence: Generative Models Can Outperform The Experts That Train Them <https://arxiv.org/pdf/2406.11741>`_
+        When training with low-temperature sampling, LLMs can outperform the training data: this paper showed this by training an LLM to play chess with an elo rating of 1400 on a bunch of games played by players with 1000 elo rating.  Low temperature sampling encourages the model to behave like an ensemble model with majority voting over the input games when choosing a move.  Morally, this is similar to how Depth Anything V2 was trained, where the student transcended the synthetic labels from the teacher, and indicates that this might be a general phenomena and probably somthing we wish to leverage.
