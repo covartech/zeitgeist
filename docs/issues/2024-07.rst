@@ -149,6 +149,13 @@ New Models
 
 Lunch and Learn
 ---------------
+2024-06-04
+    `Matching Anything by Segmenting Anything <https://arxiv.org/abs/2406.04221>`
+        Building a generalized tracker using SAM as a backbone. Provided adapter empowers foundational models to track any objects they have detected, and shows strong zero-shot tracking ability in complex domains. Interesting synthetic training method with good results.
+
+2024-06-11
+    `Code as Policies: Language Model Programs for Embodied Control <https://code-as-policies.github.io>`
+        Using LLMs to control robots. LLM builds up its own library of funcitonality using provided robot API. Recursively defines functions to do complex geometric tasks in real world. Seems like a good path for reasoning and knowledge graphs.
 
 2024-06-18
     `Depth Anything V2 <https://arxiv.org/abs/2406.09414>`_
