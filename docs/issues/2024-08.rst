@@ -1,0 +1,36 @@
+2024-08
+=======
+
+Featured
+--------
+
+LLMs
+----------
+
+Ethics
+------
+
+Doctrinaire
+-----------
+
+Theory
+------
+
+Gaussian Splatting
+------------------
+
+FPGA
+----
+
+Knowledge Graphs
+----------------
+
+Applications
+------------
+
+New Models
+----------
+
+Lunch and Learn
+---------------
+2024-07-02
