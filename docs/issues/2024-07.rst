@@ -99,6 +99,7 @@ Gaussian Splatting
 
 FPGA
 ----
+.. _matmul free
 `Scalable MatMul-free Language Modeling <https://arxiv.org/pdf/2406.02528>`_
     Apparently, matrix multiplication in LLMs is completely optional.  There are, as you might imagine, huge computational benefits to be gleaned here - in particular, this paper puts LLMs on an FPGA.
 

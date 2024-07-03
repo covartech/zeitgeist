@@ -34,3 +34,10 @@ New Models
 Lunch and Learn
 ---------------
 2024-07-02
+    :ref:`Scalable MatMul-free Language Modeling<matmul free_>`
+    (Was in last month's issue) Basically Replace the MatMul with Ternary weights (making it addition only operation) and replace the self-attention with a ternary GRU. Dramatically increases throughput / watt. Similar to this paper: `The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits <https://arxiv.org/pdf/2402.17764>`_
+
+    `Mitigate the Gap: Investigating Approaches for Improving Cross-Modal Alignment in CLIP <https://arxiv.org/pdf/2406.17639>`_
+    Also brought up this paper which makes a better embedding space for text and images by tweaking the CLIP loss. Makes the embeddings relatively similar for intra-modality representation.
+
+    ``
