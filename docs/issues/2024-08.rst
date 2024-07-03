@@ -3,6 +3,20 @@
 
 Featured
 --------
+`SpotlessSplats: Ignoring Distractors in 3D Gaussian Splatting <https://arxiv.org/pdf/2406.20055>`_
+    From Deepmind.  Proposes a novel Gaussian Splatting method which can effectively ignore interfering objects.  We've noticed on EID that this can lead to weird splats, so ignoring it is quite nice.
+
+`TREE SEARCH FOR LANGUAGE MODEL AGENTS <https://arxiv.org/pdf/2407.01476>`_
+    How to get an LLM to act as an autonomous agent with decent-to-good reasoning?  Make it perform a tree search!  This seems similar to how beam search operates and could be an interesting way to empower an autonomous UAS.
+
+`Similarity Distance-Based Label Assignment for Tiny Object Detection <https://arxiv.org/pdf/2407.02394>`_
+    A better method for non-max suppression for tiny object detection.  Seems to greatly improve performance of faster R-CNN on AITOD.  Worth looking into for any of our tiny object detection problems.
+
+`A Theory of Interpretable Approximations <https://arxiv.org/pdf/2406.10529>`_
+    From Google.  Investigates under what circumtsances neural nets can be interpreated with rather simple decision trees.  Develops some bounds for this.  Incredibly interesting, but incredibly theoretical.
+
+`Fast, Scalable, Energy-Efficient Non-element-wise Matrix Multiplication on FPGA <https://arxiv.org/pdf/2407.02362>`_
+    A new matrix multiplication method for putting neural nets on FPGAs.  Much more efficient than the baseline.
 
 LLMs
 ----------
@@ -10,17 +24,30 @@ LLMs
 Ethics
 ------
 
+Autonomy
+--------
+`TREE SEARCH FOR LANGUAGE MODEL AGENTS <https://arxiv.org/pdf/2407.01476>`_
+    How to get an LLM to act as an autonomous agent with decent-to-good reasoning?  Make it perform a tree search!  This seems similar to how beam search operates and could be an interesting way to empower an autonomous UAS.
+
 Doctrinaire
 -----------
+`Similarity Distance-Based Label Assignment for Tiny Object Detection <https://arxiv.org/pdf/2407.02394>`_
+    A better method for non-max suppression for tiny object detection.  Seems to greatly improve performance of faster R-CNN on AITOD.  Worth looking into for any of our tiny object detection problems.
 
 Theory
 ------
+`A Theory of Interpretable Approximations <https://arxiv.org/pdf/2406.10529>`_
+    From Google.  Investigates under what circumtsances neural nets can be interpreated with rather simple decision trees.  Develops some bounds for this.  Incredibly interesting, but incredibly theoretical.
 
 Gaussian Splatting
 ------------------
+`SpotlessSplats: Ignoring Distractors in 3D Gaussian Splatting <https://arxiv.org/pdf/2406.20055>`_
+    From Deepmind.  Proposes a novel Gaussian Splatting method which can effectively ignore interfering objects.  We've noticed on EID that this can lead to weird splats, so ignoring it is quite nice.
 
 FPGA
 ----
+`Fast, Scalable, Energy-Efficient Non-element-wise Matrix Multiplication on FPGA <https://arxiv.org/pdf/2407.02362>`_
+    A new matrix multiplication method for putting neural nets on FPGAs.  Much more efficient than the baseline.
 
 Knowledge Graphs
 ----------------
@@ -30,14 +57,21 @@ Applications
 
 New Models
 ----------
+`Meta 3D AssetGen: Text-to-Mesh Generation with High-Quality Geometry, Texture, and PBR Materials <https://ai.meta.com/research/publications/meta-3d-assetgen-text-to-mesh-generation-with-high-quality-geometry-texture-and-pbr-materials/?utm_source=twitter&utm_medium=organic_social&utm_content=thread&utm_campaign=research>`_
+    Meta presents a novel model for generating 3D objects from text or image inputs.  The examples look incredibly impressive.  Anyone working on recovering CAD models/3D representations of objects should take a look at this.
+
+`Meta 3D TextureGen: Fast and Consistent Texture Generation for 3D Objects <https://ai.meta.com/research/publications/meta-3d-texturegen-fast-and-consistent-texture-generation-for-3d-objects/?utm_source=twitter&utm_medium=organic_social&utm_content=thread&utm_campaign=research>`_
+    Meta presents a novel model for generating textures for 3D objects.  Probably supposed to work with AssetGen, this also looks suitably impressive.
+
+
 
 Lunch and Learn
 ---------------
 2024-07-02
-    :ref:`Scalable MatMul-free Language Modeling<matmul free_>`
+    `Scalable MatMul-free Language Modeling<https://arxiv.org/pdf/2406.02528>`_
     (Was in last month's issue) Basically Replace the MatMul with Ternary weights (making it addition only operation) and replace the self-attention with a ternary GRU. Dramatically increases throughput / watt. Similar to this paper: `The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits <https://arxiv.org/pdf/2402.17764>`_
 
     `Mitigate the Gap: Investigating Approaches for Improving Cross-Modal Alignment in CLIP <https://arxiv.org/pdf/2406.17639>`_
-    Also brought up this paper which makes a better embedding space for text and images by tweaking the CLIP loss. Makes the embeddings relatively similar for intra-modality representation.
+    (Was in last month's issue) Also brought up this paper which makes a better embedding space for text and images by tweaking the CLIP loss. Makes the embeddings relatively similar for intra-modality representation.
 
     ``
