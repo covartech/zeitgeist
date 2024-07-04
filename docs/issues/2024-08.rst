@@ -18,9 +18,17 @@ Featured
 `Fast, Scalable, Energy-Efficient Non-element-wise Matrix Multiplication on FPGA <https://arxiv.org/pdf/2407.02362>`_
     A new matrix multiplication method for putting neural nets on FPGAs.  Much more efficient than the baseline.
 
+`Single Character Perturbations Break LLM Alignment <https://arxiv.org/pdf/2407.03232>`_
+    LLMs tend to have safeguards built in like "don't tell people how to build bombs".  This paper got around these safeguards simply by appending a token of whitespace at the end of input prompts.  This happens because,in training, whitespace prompts the model to make lists and this overrides the "don't make bombs" instruction.
+
 LLMs
 ----------
+`Single Character Perturbations Break LLM Alignment <https://arxiv.org/pdf/2407.03232>`_
+    LLMs tend to have safeguards built in like "don't tell people how to build bombs".  This paper got around these safeguards simply by appending a token of whitespace at the end of input prompts.  This happens because,in training, whitespace prompts the model to make lists and this overrides the "don't make bombs" instruction.
 
+`LLM-Select: Feature Selection with Large Language Models <https://arxiv.org/pdf/2407.02694>`_
+    Uses LLMs to select features for predictive models.  They claim this works as well as something like LASSO and might obviate the need for doing analysis entirey.  I'm less than convinced.  To the extent this is true it must be because you're working on a problem that exists in the literature and the LLM essentially just did a literature review for you.  
+    
 Ethics
 ------
 
@@ -63,7 +71,8 @@ New Models
 `Meta 3D TextureGen: Fast and Consistent Texture Generation for 3D Objects <https://ai.meta.com/research/publications/meta-3d-texturegen-fast-and-consistent-texture-generation-for-3d-objects/?utm_source=twitter&utm_medium=organic_social&utm_content=thread&utm_campaign=research>`_
     Meta presents a novel model for generating textures for 3D objects.  Probably supposed to work with AssetGen, this also looks suitably impressive.
 
-
+`InternLM-XComposer-2.5: A Versatile Large Vision Language Model Supporting Long-Contextual Input and Output <https://arxiv.org/pdf/2407.03320>`_
+    Novel open-source large vision language model.  Can handle text-to-image and image-to-text.  Fairl extensive benchmarking, seems about on par with GPT-4.  Claims to be the best open source VLM.
 
 Lunch and Learn
 ---------------
