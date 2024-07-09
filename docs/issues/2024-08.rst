@@ -12,8 +12,8 @@ Featured
 `Similarity Distance-Based Label Assignment for Tiny Object Detection <https://arxiv.org/pdf/2407.02394>`_
     A better method for non-max suppression for tiny object detection.  Seems to greatly improve performance of faster R-CNN on AITOD.  Worth looking into for any of our tiny object detection problems.
 
-`On Large Language Models in National Security Applications <https://arxiv.org/pdf/2407.03453>`_
-    Two professors from the Air Force Institute of Technology talk about the use case of LLMs in the Air Force.  I'm not sure how much is new, but it's relatively short and probably worth a read for anyone involved in BD or LLMs.  
+`Learning to (Learn at Test Time): RNNs with Expressive Hidden States <https://arxiv.org/pdf/2407.04620>`_
+    New hidden state model with linear complexity in context length.  Seems to outperform both transformers and Mamba in terms of computatoinal time and results.  Impressive if true.
 
 `Fast, Scalable, Energy-Efficient Non-element-wise Matrix Multiplication on FPGA <https://arxiv.org/pdf/2407.02362>`_
     A new matrix multiplication method for putting neural nets on FPGAs.  Much more efficient than the baseline.
@@ -35,6 +35,9 @@ LLMs
 `On scalable oversight with weak LLMs judging strong LLMs <https://arxiv.org/pdf/2407.04622>`_
     From Deepmind.  Is interested in whether a human can supervise the training of a supersmart LLM and still have it "aligned".  To test this, runs through some simulations where a "weak" LLM judges one or more "strong" LLMs and finds that, in the context of debate, a judge can align LLMs which are smarter than it is.
 
+`Me, Myself, and AI: The Situational Awareness Dataset (SAD) for LLMs <https://arxiv.org/pdf/2407.04694>`_
+    Are LLMs aware that they are LLMs?  If they are, does this change how they behave?  The authors investigate this and say "not really", but it's an interesting thought because roleplay is generally a way to get an LLM to unlock new capabilities.
+
 Ethics
 ------
 
@@ -55,6 +58,9 @@ Theory
 
 `The Art of the Steal: Purloining Deep Learning Models Developed for an Ultrasound Scanner to a Competitor Machine <https://arxiv.org/pdf/2407.03512>`_
     If you put a proprietary DL algorithm on a device, anyone with access to the device can recreate, or "steal" the model weights of the original algorithm by using the device to label a bunch of data and training a new algorithm on that data.  This paper proposes a better way to do that which essentially replicates the performance of the original algorithm.
+
+`Analytic Convolutional Layer: A Step To Analytic Neural Network <https://arxiv.org/pdf/2407.06087>`_
+    Presents a new convolutional kernel which is both computationally more efficient in some cases and more interpretable.  I'm not sure this paper really gets there, but it's worth keeping an eye on stuff like this in case interpretable neural nets ever become a thing.
 
 Gaussian Splatting
 ------------------
@@ -85,6 +91,9 @@ New Models
 
 `InternLM-XComposer-2.5: A Versatile Large Vision Language Model Supporting Long-Contextual Input and Output <https://arxiv.org/pdf/2407.03320>`_
     Novel open-source large vision language model.  Can handle text-to-image and image-to-text.  Fairl extensive benchmarking, seems about on par with GPT-4.  Claims to be the best open source VLM.
+
+`Learning to (Learn at Test Time): RNNs with Expressive Hidden States <https://arxiv.org/pdf/2407.04620>`_
+    New hidden state model with linear complexity in context length.  Seems to outperform both transformers and Mamba in terms of computatoinal time and results.  Impressive if true.
 
 Lunch and Learn
 ---------------
