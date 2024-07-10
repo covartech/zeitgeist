@@ -104,7 +104,6 @@ Lunch and Learn
     `Mitigate the Gap: Investigating Approaches for Improving Cross-Modal Alignment in CLIP <https://arxiv.org/pdf/2406.17639>`_
     (Was in last month's issue) Also brought up this paper which makes a better embedding space for text and images by tweaking the CLIP loss. Makes the embeddings relatively similar for intra-modality representation.
 
+2024-07-09
     `On Scalable Oversight with weak LLMs judging strong LLMs<https://arxiv.org/abs/2407.04622v1>`_
     Deepmind: What happens when you ask a judge to choose the best answer in 3 scenarios: 2 debaters try to convice the judge, 1 consultant converses with the judge, and we ask the judge directly. Oh, and the debaters, consultants, and judges are all LLMs. The judges are also weaker models than the debaters/consultants. They found that debate is better than consulting; however, the judge used is lowkey too smart here.
-
-    ``
