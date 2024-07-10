@@ -98,7 +98,7 @@ New Models
 Lunch and Learn
 ---------------
 2024-07-02
-    `Scalable MatMul-free Language Modeling<https://arxiv.org/pdf/2406.02528>`_
+    `Scalable MatMul-free Language Modeling <https://arxiv.org/pdf/2406.02528>`_
     (Was in last month's issue) Basically Replace the MatMul with Ternary weights (making it addition only operation) and replace the self-attention with a ternary GRU. Dramatically increases throughput / watt. Similar to this paper: `The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits <https://arxiv.org/pdf/2402.17764>`_
 
     `Mitigate the Gap: Investigating Approaches for Improving Cross-Modal Alignment in CLIP <https://arxiv.org/pdf/2406.17639>`_
