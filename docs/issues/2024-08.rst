@@ -62,6 +62,9 @@ Theory
 `Analytic Convolutional Layer: A Step To Analytic Neural Network <https://arxiv.org/pdf/2407.06087>`_
     Presents a new convolutional kernel which is both computationally more efficient in some cases and more interpretable.  I'm not sure this paper really gets there, but it's worth keeping an eye on stuff like this in case interpretable neural nets ever become a thing.
 
+`Revealing the Dark Secrets of Extremely Large Kernel ConvNets on Robustness <https://arxiv.org/pdf/2407.08972>`_
+    ConvNets with extremely large kernels achieve comparable/superior performance compared to vision transformers.  This paper demonstrates this for robustness and investigates why.
+
 Gaussian Splatting
 ------------------
 `SpotlessSplats: Ignoring Distractors in 3D Gaussian Splatting <https://arxiv.org/pdf/2406.20055>`_
@@ -94,6 +97,9 @@ New Models
 
 `Learning to (Learn at Test Time): RNNs with Expressive Hidden States <https://arxiv.org/pdf/2407.04620>`_
     New hidden state model with linear complexity in context length.  Seems to outperform both transformers and Mamba in terms of computatoinal time and results.  Impressive if true.
+
+`Lite-SAM Is Actually What You Need for Segment Everything <https://arxiv.org/pdf/2407.08965>`
+    A new, more computationally efficient, method of implementing SAM.  Seems to hold up in terms of results, but examples are sparse.
 
 Lunch and Learn
 ---------------
