@@ -3,8 +3,8 @@
 
 Featured
 --------
-`SpotlessSplats: Ignoring Distractors in 3D Gaussian Splatting <https://arxiv.org/pdf/2406.20055>`_
-    From Deepmind.  Proposes a novel Gaussian Splatting method which can effectively ignore interfering objects.  We've noticed on EID that this can lead to weird splats, so ignoring it is quite nice.
+`Click-Gaussian: Interactive Segmentation to Any 3D Gaussians <https://arxiv.org/pdf/2407.11793>`_
+    A 3D Gaussian Splatting renderer/UI that allows the user to segment any object inside the render by clicking on it and adjusting a parameter.  We're using this (or something morally equivalent) for EID and it's pretty cool.
 
 `The Art of the Steal: Purloining Deep Learning Models Developed for an Ultrasound Scanner to a Competitor Machine <https://arxiv.org/pdf/2407.03512>`_
     If you put a proprietary DL algorithm on a device, anyone with access to the device can recreate, or "steal" the model weights of the original algorithm by using the device to label a bunch of data and training a new algorithm on that data.  This paper proposes a better way to do that which essentially replicates the performance of the original algorithm.
@@ -76,13 +76,19 @@ Theory
 `Revealing the Dark Secrets of Extremely Large Kernel ConvNets on Robustness <https://arxiv.org/pdf/2407.08972>`_
     ConvNets with extremely large kernels achieve comparable/superior performance compared to vision transformers.  This paper demonstrates this for robustness and investigates why.
 
-Gaussian Splatting
+World-Space Models
 ------------------
 `SpotlessSplats: Ignoring Distractors in 3D Gaussian Splatting <https://arxiv.org/pdf/2406.20055>`_
     From Deepmind.  Proposes a novel Gaussian Splatting method which can effectively ignore interfering objects.  We've noticed on EID that this can lead to weird splats, so ignoring it is quite nice.
 
 `Segment Any 4D Gaussians <https://arxiv.org/pdf/2407.04504>`_
     Segment Anything for 4D Gaussian splatting.  Looks pretty impressive, but I struggle to think of a use case for 4D Gaussian splatting over 3D.  Maybe I lack imagination.
+
+`URBANWORLD: AN URBAN WORLD MODEL FOR 3D CITY GENERATION <https://arxiv.org/pdf/2407.11965>`_
+    Generates a digital rendering of a city from an Open Street Map prompt.  Could be useful for building out 3D world-space objects.
+
+`Click-Gaussian: Interactive Segmentation to Any 3D Gaussians <https://arxiv.org/pdf/2407.11793>`_
+    A 3D Gaussian Splatting renderer/UI that allows the user to segment any object inside the render by clicking on it and adjusting a parameter.  We're using this (or something morally equivalent) for EID and it's pretty cool.
 
 Gotta Go Fast
 -------------
@@ -92,11 +98,16 @@ Gotta Go Fast
 `Fast Matrix Multiplications for Lookup Table-Quantized LLMs <https://arxiv.org/pdf/2407.10960>`_
     Another paper in the "make LLM go fast by multiply matrix fast" genre.  Like most of these it goes a bit over my head, but it seems to have quite an interesting approach, using an offline lookup table to supplement its quantized matrix mulitiplication.
 
+`Q-Sparse: All Large Language Models can be Fully Sparsely-Activated <https://arxiv.org/pdf/2407.10969>`_
+    Another method for making LLMs go fast.  Acts as a method to sparsify the model, and can be applied ontop of either full precision or 1-bit models.  Maintains performance while going much faster.
+
 Knowledge Graphs
 ----------------
 
 Applications
 ------------
+`A Survey of Distance-Based Vessel Trajectory Clustering: Data Pre-processing, Methodologies, Applications, and Experimental Evaluation <https://arxiv.org/pdf/2407.11084>`_
+    A survey on methods for keeping track of ship trajectories.  Could be useful as a reference for monitoring sea vessels.
 
 New Models
 ----------
@@ -114,6 +125,9 @@ New Models
 
 `Lite-SAM Is Actually What You Need for Segment Everything <https://arxiv.org/pdf/2407.08965>`
     A new, more computationally efficient, method of implementing SAM.  Seems to hold up in terms of results, but examples are sparse.
+
+`Codestral Mamba <https://mistral.ai/news/codestral-mamba/>`_
+    Mistral drops another LLM, this time based on Mamba and with an Apache 2.0 license.  They say it's good but this particular link is light on resources.
 
 Lunch and Learn
 ---------------
