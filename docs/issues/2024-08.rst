@@ -6,17 +6,17 @@ Featured
 `Click-Gaussian: Interactive Segmentation to Any 3D Gaussians <https://arxiv.org/pdf/2407.11793>`_
     A 3D Gaussian Splatting renderer/UI that allows the user to segment any object inside the render by clicking on it and adjusting a parameter.  We're using this (or something morally equivalent) for EID and it's pretty cool.
 
-`The Art of the Steal: Purloining Deep Learning Models Developed for an Ultrasound Scanner to a Competitor Machine <https://arxiv.org/pdf/2407.03512>`_
-    If you put a proprietary DL algorithm on a device, anyone with access to the device can recreate, or "steal" the model weights of the original algorithm by using the device to label a bunch of data and training a new algorithm on that data.  This paper proposes a better way to do that which essentially replicates the performance of the original algorithm.
+`Fusion Flow-enhanced Graph Pooling Residual Networks for Unmanned Aerial Vehicles Surveillance in Day and Night Dual Visions <https://arxiv.org/pdf/2407.12647>`_
+    Builds a bespoke model for RGB/IR sensor fusion for counter-UAS activities at day and night-time.  The results seem convincing, may be worth taking inspiration from.
 
-`Similarity Distance-Based Label Assignment for Tiny Object Detection <https://arxiv.org/pdf/2407.02394>`_
-    A better method for non-max suppression for tiny object detection.  Seems to greatly improve performance of faster R-CNN on AITOD.  Worth looking into for any of our tiny object detection problems.
+`Distilling Tiny and Ultra-fast Deep Neural Networks for Autonomous Navigation on Nano-UAVs <https://arxiv.org/pdf/2407.12675>`_
+    Builds a tiny CNN to function as the brain on a "nano-drone".  Lots of potential with a swarm of these things for recon purposes.
 
 `Revealing the Dark Secrets of Extremely Large Kernel ConvNets on Robustness <https://arxiv.org/pdf/2407.08972>`_
     ConvNets with extremely large kernels achieve comparable/superior performance compared to vision transformers.  This paper demonstrates this for robustness and investigates why.
 
-`Fast, Scalable, Energy-Efficient Non-element-wise Matrix Multiplication on FPGA <https://arxiv.org/pdf/2407.02362>`_
-    A new matrix multiplication method for putting neural nets on FPGAs.  Much more efficient than the baseline.
+`CHOSEN: Compilation to Hardware Optimization Stack for Efficient Vision Transformer Inference <https://arxiv.org/pdf/2407.12736>`_
+    A bunch of people from USC develop a software for putting vision transformers on FPGAs.  Lots of stuff in here that's slightly above my head, but the results look legitimate.  
 
 `Single Character Perturbations Break LLM Alignment <https://arxiv.org/pdf/2407.03232>`_
     LLMs tend to have safeguards built in like "don't tell people how to build bombs".  This paper got around these safeguards simply by appending a token of whitespace at the end of input prompts.  This happens because,in training, whitespace prompts the model to make lists and this overrides the "don't make bombs" instruction.
@@ -46,21 +46,27 @@ Ethics
 
 Autonomy
 --------
-`TREE SEARCH FOR LANGUAGE MODEL AGENTS <https://arxiv.org/pdf/2407.01476>`_
-    How to get an LLM to act as an autonomous agent with decent-to-good reasoning?  Make it perform a tree search!  This seems similar to how beam search operates and could be an interesting way to empower an autonomous UAS.
-
 `Spider2-V: How Far Are Multimodal Agents From Automating Data Science and Engineering Workflows? <https://arxiv.org/pdf/2407.10956>`_
     From Google Deepmind.  Investigates whether automous agents are able to take our jobs yet by introducing a new benchmarking dataset.  The best performing agent gets 14%, so the answer is no.
+
+`Distilling Tiny and Ultra-fast Deep Neural Networks for Autonomous Navigation on Nano-UAVs <https://arxiv.org/pdf/2407.12675>`_
+    Builds a tiny CNN to function as the brain on a "nano-drone".  Lots of potential with a swarm of these things for recon purposes.
 
 Reinforcement Learning
 ----------------------
 `Enhancing Building Safety Design for Active Shooter Incidents: Exploration of Building Exit Parameters using Reinforcement Learning-Based Simulation <https://arxiv.org/pdf/2407.10441>`_
     Incredibly morbid, but there's something here that can be adapted to simulating armed combatants that may have a use case.
 
-Doctrinaire
------------
+ATR
+---
 `Similarity Distance-Based Label Assignment for Tiny Object Detection <https://arxiv.org/pdf/2407.02394>`_
     A better method for non-max suppression for tiny object detection.  Seems to greatly improve performance of faster R-CNN on AITOD.  Worth looking into for any of our tiny object detection problems.
+
+`Fusion Flow-enhanced Graph Pooling Residual Networks for Unmanned Aerial Vehicles Surveillance in Day and Night Dual Visions <https://arxiv.org/pdf/2407.12647>`_
+    Bulids a bespoke model for RGB/IR sensor fusion for counter-UAS activities at day and night-time.  The results seem convincing, may be worth taking inspiration from.
+
+`Is That Rain? Understanding Effects on Visual Odometry Performance for Autonomous UAVs and Efficient DNN-based Rain Classification at the Edge <https://arxiv.org/pdf/2407.12663>`_
+    Builds a dataset and a (small) detector for detecting whether or not it is raining outside.  We could use this for sensor fusion, or context-aware sensing.
 
 Theory
 ------
@@ -76,7 +82,7 @@ Theory
 `Revealing the Dark Secrets of Extremely Large Kernel ConvNets on Robustness <https://arxiv.org/pdf/2407.08972>`_
     ConvNets with extremely large kernels achieve comparable/superior performance compared to vision transformers.  This paper demonstrates this for robustness and investigates why.
 
-World-Space Models
+Gaussian Splatting
 ------------------
 `SpotlessSplats: Ignoring Distractors in 3D Gaussian Splatting <https://arxiv.org/pdf/2406.20055>`_
     From Deepmind.  Proposes a novel Gaussian Splatting method which can effectively ignore interfering objects.  We've noticed on EID that this can lead to weird splats, so ignoring it is quite nice.
@@ -84,11 +90,11 @@ World-Space Models
 `Segment Any 4D Gaussians <https://arxiv.org/pdf/2407.04504>`_
     Segment Anything for 4D Gaussian splatting.  Looks pretty impressive, but I struggle to think of a use case for 4D Gaussian splatting over 3D.  Maybe I lack imagination.
 
-`URBANWORLD: AN URBAN WORLD MODEL FOR 3D CITY GENERATION <https://arxiv.org/pdf/2407.11965>`_
-    Generates a digital rendering of a city from an Open Street Map prompt.  Could be useful for building out 3D world-space objects.
-
 `Click-Gaussian: Interactive Segmentation to Any 3D Gaussians <https://arxiv.org/pdf/2407.11793>`_
     A 3D Gaussian Splatting renderer/UI that allows the user to segment any object inside the render by clicking on it and adjusting a parameter.  We're using this (or something morally equivalent) for EID and it's pretty cool.
+
+`Generalizable Human Gaussians for Sparse View Synthesi <https://arxiv.org/pdf/2407.12777>`_
+    CMU and Meta develop a novel Gaussian splatting algorithm which can render an entire human using a sparse set (as few as three) pictures.  They do this by leveraging the fact that we know what humans look like, on average, and so can infer a lot from a small number of datapoints in the restricted setting of their problem.
 
 Gotta Go Fast
 -------------
@@ -100,6 +106,9 @@ Gotta Go Fast
 
 `Q-Sparse: All Large Language Models can be Fully Sparsely-Activated <https://arxiv.org/pdf/2407.10969>`_
     Another method for making LLMs go fast.  Acts as a method to sparsify the model, and can be applied ontop of either full precision or 1-bit models.  Maintains performance while going much faster.
+
+`CHOSEN: Compilation to Hardware Optimization Stack for Efficient Vision Transformer Inference <https://arxiv.org/pdf/2407.12736>`_
+    A bunch of people from USC develop a software for putting vision transformers on FPGAs.  Lots of stuff in here that's slightly above my head, but the results look legitimate.  
 
 Knowledge Graphs
 ----------------
@@ -128,6 +137,9 @@ New Models
 
 `Codestral Mamba <https://mistral.ai/news/codestral-mamba/>`_
     Mistral drops another LLM, this time based on Mamba and with an Apache 2.0 license.  They say it's good but this particular link is light on resources.
+
+`LookupViT: Compressing visual information to a limited number of tokens <https://arxiv.org/pdf/2407.12753>`_
+    From Deepmind.  There's lots of tokens in images which have very low information content - this paper compresses input tokens to a fixed number of tokens as a method of getting rid of the extraneous tokens.  Improves computational burdens and (sometimes) performance.
 
 Lunch and Learn
 ---------------
