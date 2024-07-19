@@ -18,8 +18,8 @@ Featured
 `CHOSEN: Compilation to Hardware Optimization Stack for Efficient Vision Transformer Inference <https://arxiv.org/pdf/2407.12736>`_
     A bunch of people from USC develop a software for putting vision transformers on FPGAs.  Lots of stuff in here that's slightly above my head, but the results look legitimate.  
 
-`Single Character Perturbations Break LLM Alignment <https://arxiv.org/pdf/2407.03232>`_
-    LLMs tend to have safeguards built in like "don't tell people how to build bombs".  This paper got around these safeguards simply by appending a token of whitespace at the end of input prompts.  This happens because,in training, whitespace prompts the model to make lists and this overrides the "don't make bombs" instruction.
+`Don’t Throw Away Data: Better Sequence Knowledge Distillation <https://arxiv.org/pdf/2407.10456>`_
+    From Deepmind.  The problem investigated is how to manage student-teacher cases where you have a big LLM (the teacher) that can perform a specific task (e.g. language translation) but you want a smaller model (the student) to be able to perform the same task.  Finds the most optimal method of teaching the student.  We might be able to use similar methods for cases where LLMs are big but useful in a limited way.  Maybe ODIN?
 
 LLMs
 ----------
@@ -41,6 +41,9 @@ LLMs
 `SLIP: Securing LLM’s IP Using Weights Decomposition <https://arxiv.org/pdf/2407.10886>`_
     Microsoft develops a method to protect LLM weights from being discovered by decomposing them into two matrices, one of which is recoverable and one of which is not.
 
+`Don’t Throw Away Data: Better Sequence Knowledge Distillation <https://arxiv.org/pdf/2407.10456>`_
+    From Deepmind.  The problem investigated is how to manage student-teacher cases where you have a big LLM (the teacher) that can perform a specific task (e.g. language translation) but you want a smaller model (the student) to be able to perform the same task.  Finds the most optimal method of teaching the student.  We might be able to use similar methods for cases where LLMs are big but useful in a limited way.  Maybe ODIN?
+
 Ethics
 ------
 
@@ -57,8 +60,8 @@ Reinforcement Learning
 `Enhancing Building Safety Design for Active Shooter Incidents: Exploration of Building Exit Parameters using Reinforcement Learning-Based Simulation <https://arxiv.org/pdf/2407.10441>`_
     Incredibly morbid, but there's something here that can be adapted to simulating armed combatants that may have a use case.
 
-ATR
----
+Sensing
+-------
 `Similarity Distance-Based Label Assignment for Tiny Object Detection <https://arxiv.org/pdf/2407.02394>`_
     A better method for non-max suppression for tiny object detection.  Seems to greatly improve performance of faster R-CNN on AITOD.  Worth looking into for any of our tiny object detection problems.
 
@@ -67,6 +70,9 @@ ATR
 
 `Is That Rain? Understanding Effects on Visual Odometry Performance for Autonomous UAVs and Efficient DNN-based Rain Classification at the Edge <https://arxiv.org/pdf/2407.12663>`_
     Builds a dataset and a (small) detector for detecting whether or not it is raining outside.  We could use this for sensor fusion, or context-aware sensing.
+
+`Training-Free Model Merging for Multi-target Domain Adaptation <https://arxiv.org/pdf/2407.13771>`_
+    Investigates how to do fusion on multiple models spanning multiple domains without access to training data.  Not directly relevant to anything we're doing  (EID would have a fit about all the deep learning), but maybe useful later.
 
 Theory
 ------
@@ -140,6 +146,12 @@ New Models
 
 `LookupViT: Compressing visual information to a limited number of tokens <https://arxiv.org/pdf/2407.12753>`_
     From Deepmind.  There's lots of tokens in images which have very low information content - this paper compresses input tokens to a fixed number of tokens as a method of getting rid of the extraneous tokens.  Improves computational burdens and (sometimes) performance.
+
+`GPT-4o mini: advancing cost-efficient intelligence <https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/>`_
+    A new GPT model which is very small and very cheap yet better than all GPT models across a range of tasks, being outperformed only by GPT-4
+
+`Mistral NeMo <https://mistral.ai/news/mistral-nemo/>`_
+    A "drop-in replacement for Mistral 7B", this looks pretty good.  A context window of 128K is the standout here, but it shows some decent results in what is a short blog post.
 
 Lunch and Learn
 ---------------
