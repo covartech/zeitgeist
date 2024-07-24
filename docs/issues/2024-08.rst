@@ -119,6 +119,9 @@ Gotta Go Fast
 `CHOSEN: Compilation to Hardware Optimization Stack for Efficient Vision Transformer Inference <https://arxiv.org/pdf/2407.12736>`_
     A bunch of people from USC develop a software for putting vision transformers on FPGAs.  Lots of stuff in here that's slightly above my head, but the results look legitimate.  
 
+`A deeper look at depth pruning of LLMs <https://arxiv.org/pdf/2407.16286>`_
+    A group at NVIDIA takes a look at various methods for pruning LLMs.  Finds that you can prune a third of Mistral 7B and retain the same performance.  Could be worth a look for our LLM related work.
+
 Knowledge Graphs
 ----------------
 
@@ -126,6 +129,9 @@ Applications
 ------------
 `A Survey of Distance-Based Vessel Trajectory Clustering: Data Pre-processing, Methodologies, Applications, and Experimental Evaluation <https://arxiv.org/pdf/2407.11084>`_
     A survey on methods for keeping track of ship trajectories.  Could be useful as a reference for monitoring sea vessels.
+
+`Deformable Convolution Based Road Scene Semantic Segmentation of Fisheye Images in Autonomous Driving <https://arxiv.org/pdf/2407.16647>`_
+    Does ATR with fish-eye camera, finds that a deformable CNN (where the kernel depends on the shape of the object) outperforms the non-deformable version of CNNs such as ResNets and U-Nets.
 
 New Models
 ----------
@@ -164,7 +170,12 @@ New LLMs
 `Mistral NeMo <https://mistral.ai/news/mistral-nemo/>`_
     A "drop-in replacement for Mistral 7B", this looks pretty good.  A context window of 128K is the standout here, but it shows some decent results in what is a short blog post.
 
+`The Llama 3 Herd of Models <https://ai.meta.com/research/publications/the-llama-3-herd-of-models/>`_
+    Llama 3.1 is out of the gates, with 8B, 70B, and 405B(!!) models. Comes with a 92 page lab report  which probably has some good info.
 
+`Large Enough <https://mistral.ai/news/mistral-large-2407/>`_
+    Mistral somehow gets a response to Llama 3 the day after Llamma 3 drops, with Mistral Large 2.  They claim its better than Llama 3.  Who knows, both are too big for us.
+    
 Lunch and Learn
 ---------------
 2024-07-02
