@@ -9,8 +9,8 @@ Featured
 `ViLLa: Video Reasoning Segmentation with Large Language Model <https://arxiv.org/pdf/2407.14500>`_
     A novel vision LLM which takes a text prompt as an input and segments the relevant objects in a video, possibly with a text description as well.  Looks pretty powerful in a limited number of examples, but code is coming "soon".
 
-`Distilling Tiny and Ultra-fast Deep Neural Networks for Autonomous Navigation on Nano-UAVs <https://arxiv.org/pdf/2407.12675>`_
-    Builds a tiny CNN to function as the brain on a "nano-drone".  Lots of potential with a swarm of these things coordinating together.
+`VILA2 : VILA Augmented VILA <https://arxiv.org/pdf/2407.17453>`_
+    A new VLM from NVIDIA.  The model, though, it less interesting than how they train it.  you can run out of labelled quality data pretty fast, so they have a "self-augment" and a "specialist-augment" step to improve data quality and labels.  They also augment with other models.  Cool idea, and a neat way to generate quality data ex nihilo.
 
 `Revealing the Dark Secrets of Extremely Large Kernel ConvNets on Robustness <https://arxiv.org/pdf/2407.08972>`_
     ConvNets with extremely large kernels achieve comparable/superior performance compared to vision transformers.  This paper demonstrates this for robustness and investigates why.
@@ -77,6 +77,9 @@ Sensing
 `Training-Free Model Merging for Multi-target Domain Adaptation <https://arxiv.org/pdf/2407.13771>`_
     Investigates how to do fusion on multiple models spanning multiple domains without access to training data.  Not directly relevant to anything we're doing  (EID would have a fit about all the deep learning), but maybe useful later.
 
+`DenseTrack: Drone-based Crowd Tracking via Density-aware Motion-appearance Synergy <https://arxiv.org/pdf/2407.17272>`_
+    How to do crowd-tracking from a drone. Neural nets feed into similarity/distance matrices which feed into Hungarians.  Similar to how we do it, except the "tracking net" which they seem to be using instead of IoU metrics or keypoints.
+
 Theory
 ------
 `A Theory of Interpretable Approximations <https://arxiv.org/pdf/2406.10529>`_
@@ -90,6 +93,9 @@ Theory
 
 `Revealing the Dark Secrets of Extremely Large Kernel ConvNets on Robustness <https://arxiv.org/pdf/2407.08972>`_
     ConvNets with extremely large kernels achieve comparable/superior performance compared to vision transformers.  This paper demonstrates this for robustness and investigates why.
+
+`VILA2 : VILA Augmented VILA <https://arxiv.org/pdf/2407.17453>`_
+    A new VLM from NVIDIA.  The model, though, it less interesting than how they train it.  you can run out of labelled quality data pretty fast, so they have a "self-augment" and a "specialist-augment" step to improve data quality and labels.  They also augment with other models.  Cool idea, and a neat way to generate quality data ex nihilo.
 
 Gaussian Splatting
 ------------------
