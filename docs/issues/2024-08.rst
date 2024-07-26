@@ -6,9 +6,6 @@ Featured
 `AI achieves silver-medal standard solving International Mathematical Olympiad problems <https://deepmind.google/discover/blog/ai-solves-imo-problems-at-silver-medal-level/>`_
     Deepmind drops another banger.  This time its two reinforcement learning algorithms which, with their powers combined, manage a silver medal at this years International Mathematics Olympiad.  Given that most models in the field struggle with simple problems, this is astounding.  The blog is short and worth a read, but they duct-taped an LLM between the AlphaZero reinforcement learning problem and formal mathematical prover using formal language that could evaluate whether a proof was correct.  It seems like they leveraged that, in the right circumstances, evaluating whether a proof is correct is easy.
 
-`ViLLa: Video Reasoning Segmentation with Large Language Model <https://arxiv.org/pdf/2407.14500>`_
-    A novel vision LLM which takes a text prompt as an input and segments the relevant objects in a video, possibly with a text description as well.  Looks pretty powerful in a limited number of examples, but code is coming "soon".
-
 `VILA2 : VILA Augmented VILA <https://arxiv.org/pdf/2407.17453>`_
     A new VLM from NVIDIA.  The model, though, it less interesting than how they train it.  you can run out of labelled quality data pretty fast, so they have a "self-augment" and a "specialist-augment" step to improve data quality and labels.  They also augment with other models.  Cool idea, and a neat way to generate quality data ex nihilo.
 
@@ -21,22 +18,16 @@ Featured
 `Don’t Throw Away Data: Better Sequence Knowledge Distillation <https://arxiv.org/pdf/2407.10456>`_
     From Deepmind.  The problem investigated is how to manage student-teacher cases where you have a big LLM (the teacher) that can perform a specific task (e.g. language translation) but you want a smaller model (the student) to be able to perform the same task.  Finds the most optimal method of teaching the student.  We might be able to use similar methods for cases where LLMs are big but useful in a limited way.  Maybe ODIN?
 
+`Meta 3D AssetGen: Text-to-Mesh Generation with High-Quality Geometry, Texture, and PBR Materials <https://ai.meta.com/research/publications/meta-3d-assetgen-text-to-mesh-generation-with-high-quality-geometry-texture-and-pbr-materials/?utm_source=twitter&utm_medium=organic_social&utm_content=thread&utm_campaign=research>`_
+    Meta presents a novel model for generating 3D objects from text or image inputs.  The examples look incredibly impressive.  Anyone working on recovering CAD models/3D representations of objects should take a look at this.
+
 LLMs
 ----------
 `Single Character Perturbations Break LLM Alignment <https://arxiv.org/pdf/2407.03232>`_
     LLMs tend to have safeguards built in like "don't tell people how to build bombs".  This paper got around these safeguards simply by appending a token of whitespace at the end of input prompts.  This happens because,in training, whitespace prompts the model to make lists and this overrides the "don't make bombs" instruction.
 
-`LLM-Select: Feature Selection with Large Language Models <https://arxiv.org/pdf/2407.02694>`_
-    Uses LLMs to select features for predictive models.  They claim this works as well as something like LASSO and might obviate the need for doing analysis entirey.  I'm less than convinced.  To the extent this is true it must be because you're working on a problem that exists in the literature and the LLM essentially just did a literature review for you.  
-
 `On Large Language Models in National Security Applications <https://arxiv.org/pdf/2407.03453>`_
     Two professors from the Air Force Institute of Technology talk about the use case of LLMs in the Air Force.  I'm not sure how much is new, but it's relatively short and probably worth a read for anyone involved in BD or LLMs.  
-
-`On scalable oversight with weak LLMs judging strong LLMs <https://arxiv.org/pdf/2407.04622>`_
-    From Deepmind.  Is interested in whether a human can supervise the training of a supersmart LLM and still have it "aligned".  To test this, runs through some simulations where a "weak" LLM judges one or more "strong" LLMs and finds that, in the context of debate, a judge can align LLMs which are smarter than it is.
-
-`Me, Myself, and AI: The Situational Awareness Dataset (SAD) for LLMs <https://arxiv.org/pdf/2407.04694>`_
-    Are LLMs aware that they are LLMs?  If they are, does this change how they behave?  The authors investigate this and say "not really", but it's an interesting thought because roleplay is generally a way to get an LLM to unlock new capabilities.
 
 `SLIP: Securing LLM’s IP Using Weights Decomposition <https://arxiv.org/pdf/2407.10886>`_
     Microsoft develops a method to protect LLM weights from being discovered by decomposing them into two matrices, one of which is recoverable and one of which is not.
@@ -44,8 +35,27 @@ LLMs
 `Don’t Throw Away Data: Better Sequence Knowledge Distillation <https://arxiv.org/pdf/2407.10456>`_
     From Deepmind.  The problem investigated is how to manage student-teacher cases where you have a big LLM (the teacher) that can perform a specific task (e.g. language translation) but you want a smaller model (the student) to be able to perform the same task.  Finds the most optimal method of teaching the student.  We might be able to use similar methods for cases where LLMs are big but useful in a limited way.  Maybe ODIN?
 
-Ethics
-------
+VLMs
+----
+`InternLM-XComposer-2.5: A Versatile Large Vision Language Model Supporting Long-Contextual Input and Output <https://arxiv.org/pdf/2407.03320>`_
+    Novel open-source large vision language model.  Can handle text-to-image and image-to-text.  Fairly extensive benchmarking, seems about on par with GPT-4.  Claims to be the best open source VLM.
+
+`AdaCLIP: Adapting CLIP with Hybrid Learnable Prompts for Zero-Shot Anomaly Detection <https://arxiv.org/pdf/2407.15795>`_
+    A novel CLIP variant that functions as a zero-shot anomaly detector/segmenter.  Takes text as an input and semgents whatever was described in the text.  Potentially useful as an "off-the-shelf" tool for a lot of functions.  Maybe a Grounded SAM replacement?
+
+`VILA2 : VILA Augmented VILA <https://arxiv.org/pdf/2407.17453>`_
+    A new VLM from NVIDIA.  The model, though, it less interesting than how they train it.  you can run out of labelled quality data pretty fast, so they have a "self-augment" and a "specialist-augment" step to improve data quality and labels.  They also augment with other models.  Cool idea, and a neat way to generate quality data ex nihilo.
+
+Doctrinaire
+-----------
+`Similarity Distance-Based Label Assignment for Tiny Object Detection <https://arxiv.org/pdf/2407.02394>`_
+    A better method for non-max suppression for tiny object detection.  Seems to greatly improve performance of faster R-CNN on AITOD.  Worth looking into for any of our tiny object detection problems.
+
+`Meta 3D AssetGen: Text-to-Mesh Generation with High-Quality Geometry, Texture, and PBR Materials <https://ai.meta.com/research/publications/meta-3d-assetgen-text-to-mesh-generation-with-high-quality-geometry-texture-and-pbr-materials/?utm_source=twitter&utm_medium=organic_social&utm_content=thread&utm_campaign=research>`_
+    Meta presents a novel model for generating 3D objects from text or image inputs.  The examples look incredibly impressive.  Anyone working on recovering CAD models/3D representations of objects should take a look at this.
+
+`Meta 3D TextureGen: Fast and Consistent Texture Generation for 3D Objects <https://ai.meta.com/research/publications/meta-3d-texturegen-fast-and-consistent-texture-generation-for-3d-objects/?utm_source=twitter&utm_medium=organic_social&utm_content=thread&utm_campaign=research>`_
+    Meta presents a novel model for generating textures for 3D objects.  Probably supposed to work with AssetGen, this also looks suitably impressive.
 
 Autonomy
 --------
@@ -66,39 +76,21 @@ Reinforcement Learning
 `AI achieves silver-medal standard solving International Mathematical Olympiad problems <https://deepmind.google/discover/blog/ai-solves-imo-problems-at-silver-medal-level/>`_
     Deepmind drops another banger.  This time its two reinforcement learning algorithms which, with their powers combined, manage a silver medal at this years International Mathematics Olympiad.  Given that most models in the field struggle with simple problems, this is astounding.  The blog is short and worth a read, but they duct-taped an LLM between the AlphaZero reinforcement learning problem and formal mathematical prover using formal language that could evaluate whether a proof was correct.  It seems like they leveraged that, in the right circumstances, evaluating whether a proof is correct is easy.
 
-Sensing
--------
-`Similarity Distance-Based Label Assignment for Tiny Object Detection <https://arxiv.org/pdf/2407.02394>`_
-    A better method for non-max suppression for tiny object detection.  Seems to greatly improve performance of faster R-CNN on AITOD.  Worth looking into for any of our tiny object detection problems.
-
+Fusion
+------
 `Fusion Flow-enhanced Graph Pooling Residual Networks for Unmanned Aerial Vehicles Surveillance in Day and Night Dual Visions <https://arxiv.org/pdf/2407.12647>`_
     Bulids a bespoke model for RGB/IR sensor fusion for counter-UAS activities at day and night-time.  The results seem convincing, may be worth taking inspiration from.
-
-`Is That Rain? Understanding Effects on Visual Odometry Performance for Autonomous UAVs and Efficient DNN-based Rain Classification at the Edge <https://arxiv.org/pdf/2407.12663>`_
-    Builds a dataset and a (small) detector for detecting whether or not it is raining outside.  We could use this for sensor fusion, or context-aware sensing.
 
 `Training-Free Model Merging for Multi-target Domain Adaptation <https://arxiv.org/pdf/2407.13771>`_
     Investigates how to do fusion on multiple models spanning multiple domains without access to training data.  Not directly relevant to anything we're doing  (EID would have a fit about all the deep learning), but maybe useful later.
 
+`Is That Rain? Understanding Effects on Visual Odometry Performance for Autonomous UAVs and Efficient DNN-based Rain Classification at the Edge <https://arxiv.org/pdf/2407.12663>`_
+    Builds a dataset and a (small) detector for detecting whether or not it is raining outside.  We could use this for sensor fusion, or context-aware sensing.
+
+Tracking
+--------
 `DenseTrack: Drone-based Crowd Tracking via Density-aware Motion-appearance Synergy <https://arxiv.org/pdf/2407.17272>`_
     How to do crowd-tracking from a drone. Neural nets feed into similarity/distance matrices which feed into Hungarians.  Similar to how we do it, except the "tracking net" which they seem to be using instead of IoU metrics or keypoints.
-
-Theory
-------
-`A Theory of Interpretable Approximations <https://arxiv.org/pdf/2406.10529>`_
-    From Google.  Investigates under what circumtsances neural nets can be interpreated with rather simple decision trees.  Develops some bounds for this.  Incredibly interesting, but incredibly theoretical.
-
-`The Art of the Steal: Purloining Deep Learning Models Developed for an Ultrasound Scanner to a Competitor Machine <https://arxiv.org/pdf/2407.03512>`_
-    If you put a proprietary DL algorithm on a device, anyone with access to the device can recreate, or "steal" the model weights of the original algorithm by using the device to label a bunch of data and training a new algorithm on that data.  This paper proposes a better way to do that which essentially replicates the performance of the original algorithm.
-
-`Analytic Convolutional Layer: A Step To Analytic Neural Network <https://arxiv.org/pdf/2407.06087>`_
-    Presents a new convolutional kernel which is both computationally more efficient in some cases and more interpretable.  I'm not sure this paper really gets there, but it's worth keeping an eye on stuff like this in case interpretable neural nets ever become a thing.
-
-`Revealing the Dark Secrets of Extremely Large Kernel ConvNets on Robustness <https://arxiv.org/pdf/2407.08972>`_
-    ConvNets with extremely large kernels achieve comparable/superior performance compared to vision transformers.  This paper demonstrates this for robustness and investigates why.
-
-`VILA2 : VILA Augmented VILA <https://arxiv.org/pdf/2407.17453>`_
-    A new VLM from NVIDIA.  The model, though, it less interesting than how they train it.  you can run out of labelled quality data pretty fast, so they have a "self-augment" and a "specialist-augment" step to improve data quality and labels.  They also augment with other models.  Cool idea, and a neat way to generate quality data ex nihilo.
 
 Gaussian Splatting
 ------------------
@@ -131,8 +123,22 @@ Gotta Go Fast
 `A deeper look at depth pruning of LLMs <https://arxiv.org/pdf/2407.16286>`_
     A group at NVIDIA takes a look at various methods for pruning LLMs.  Finds that you can prune a third of Mistral 7B and retain the same performance.  Could be worth a look for our LLM related work.
 
-Knowledge Graphs
-----------------
+`LookupViT: Compressing visual information to a limited number of tokens <https://arxiv.org/pdf/2407.12753>`_
+    From Deepmind.  There's lots of tokens in images which have very low information content - this paper compresses input tokens to a fixed number of tokens as a method of getting rid of the extraneous tokens.  Improves computational burdens and (sometimes) performance.
+
+Theory
+------
+`A Theory of Interpretable Approximations <https://arxiv.org/pdf/2406.10529>`_
+    From Google.  Investigates under what circumtsances neural nets can be interpreated with rather simple decision trees.  Develops some bounds for this.  Interesting, but incredibly theoretical.
+
+`The Art of the Steal: Purloining Deep Learning Models Developed for an Ultrasound Scanner to a Competitor Machine <https://arxiv.org/pdf/2407.03512>`_
+    If you put a proprietary DL algorithm on a device, anyone with access to the device can recreate, or "steal" the model weights of the original algorithm by using the device to label a bunch of data and training a new algorithm on that data.  This paper proposes a better way to do that which essentially replicates the performance of the original algorithm.
+
+`Analytic Convolutional Layer: A Step To Analytic Neural Network <https://arxiv.org/pdf/2407.06087>`_
+    Presents a new convolutional kernel which is both computationally more efficient in some cases and more interpretable.  I'm not sure this paper really gets there, but it's worth keeping an eye on stuff like this in case interpretable neural nets ever become a thing.
+
+`Revealing the Dark Secrets of Extremely Large Kernel ConvNets on Robustness <https://arxiv.org/pdf/2407.08972>`_
+    ConvNets with extremely large kernels achieve comparable/superior performance compared to vision transformers.  This paper demonstrates this for robustness and investigates why.
 
 Applications
 ------------
@@ -145,34 +151,11 @@ Applications
 `GENERATIVE LEARNING FOR SIMULATION OF US ARMY VEHICLE FAULTS <https://arxiv.org/pdf/2407.17654>`_
     Throws some deep learning methods at the problem of "predicting when US Army vehicles will break down".  Presumably there's some army interest behind this, even if it's not stated explicitly in this paper, because why would you do this otherwise.  Two of the coauthors are at ECE in Duke - might be a collaboration opportunity, might be we know them already
 
-New Models
-----------
-`Meta 3D AssetGen: Text-to-Mesh Generation with High-Quality Geometry, Texture, and PBR Materials <https://ai.meta.com/research/publications/meta-3d-assetgen-text-to-mesh-generation-with-high-quality-geometry-texture-and-pbr-materials/?utm_source=twitter&utm_medium=organic_social&utm_content=thread&utm_campaign=research>`_
-    Meta presents a novel model for generating 3D objects from text or image inputs.  The examples look incredibly impressive.  Anyone working on recovering CAD models/3D representations of objects should take a look at this.
-
-`Meta 3D TextureGen: Fast and Consistent Texture Generation for 3D Objects <https://ai.meta.com/research/publications/meta-3d-texturegen-fast-and-consistent-texture-generation-for-3d-objects/?utm_source=twitter&utm_medium=organic_social&utm_content=thread&utm_campaign=research>`_
-    Meta presents a novel model for generating textures for 3D objects.  Probably supposed to work with AssetGen, this also looks suitably impressive.
-
-`InternLM-XComposer-2.5: A Versatile Large Vision Language Model Supporting Long-Contextual Input and Output <https://arxiv.org/pdf/2407.03320>`_
-    Novel open-source large vision language model.  Can handle text-to-image and image-to-text.  Fairl extensive benchmarking, seems about on par with GPT-4.  Claims to be the best open source VLM.
-
-`Learning to (Learn at Test Time): RNNs with Expressive Hidden States <https://arxiv.org/pdf/2407.04620>`_
-    New hidden state model with linear complexity in context length.  Seems to outperform both transformers and Mamba in terms of computatoinal time and results.  Impressive if true.
-
-`Lite-SAM Is Actually What You Need for Segment Everything <https://arxiv.org/pdf/2407.08965>'_
-    A new, more computationally efficient, method of implementing SAM.  Seems to hold up in terms of results, but examples are sparse.
-
-`LookupViT: Compressing visual information to a limited number of tokens <https://arxiv.org/pdf/2407.12753>`_
-    From Deepmind.  There's lots of tokens in images which have very low information content - this paper compresses input tokens to a fixed number of tokens as a method of getting rid of the extraneous tokens.  Improves computational burdens and (sometimes) performance.
-
-`ViLLa: Video Reasoning Segmentation with Large Language Model <https://arxiv.org/pdf/2407.14500>`_
-    A novel vision LLM which takes a text prompt as an input and segments the relevant objects in a video, possibly with a text description as well.  Looks pretty powerful in a limited number of examples, but code is coming "soon".
-
-`AdaCLIP: Adapting CLIP with Hybrid Learnable Prompts for Zero-Shot Anomaly Detection <https://arxiv.org/pdf/2407.15795>`_
-    A novel CLIP variant that functions as a zero-shot anomaly detector/segmenter.  Takes text as an input and semgents whatever was described in the text.  Potentially useful as an "off-the-shelf" tool for a lot of functions.  Maybe a Grounded SAM replacement?
-
 New LLMs
 --------
+`Learning to (Learn at Test Time): RNNs with Expressive Hidden States <https://arxiv.org/pdf/2407.04620>`_
+    New hidden state model with linear complexity in context length.  Seems to outperform both transformers and Mamba in terms of computational time and results.  Impressive if true.
+
 `Codestral Mamba <https://mistral.ai/news/codestral-mamba/>`_
     Mistral drops another LLM, this time based on Mamba and with an Apache 2.0 license.  They say it's good but this particular link is light on resources.
 
