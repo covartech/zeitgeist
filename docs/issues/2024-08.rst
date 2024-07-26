@@ -3,8 +3,8 @@
 
 Featured
 --------
-`Click-Gaussian: Interactive Segmentation to Any 3D Gaussians <https://arxiv.org/pdf/2407.11793>`_
-    A 3D Gaussian Splatting renderer/UI that allows the user to segment any object inside the render by clicking on it and adjusting a parameter.  We're using this (or something morally equivalent) for EID and it's pretty cool.
+`AI achieves silver-medal standard solving International Mathematical Olympiad problems <https://deepmind.google/discover/blog/ai-solves-imo-problems-at-silver-medal-level/>`_
+    Deepmind drops another banger.  This time its two reinforcement learning algorithms which, with their powers combined, manage a silver medal at this years International Mathematics Olympiad.  Given that most models in the field struggle with simple problems, this is astounding.  The blog is short and worth a read, but they duct-taped an LLM between the AlphaZero reinforcement learning problem and formal mathematical prover using formal language that could evaluate whether a proof was correct.  It seems like they leveraged that, in the right circumstances, evaluating whether a proof is correct is easy.
 
 `ViLLa: Video Reasoning Segmentation with Large Language Model <https://arxiv.org/pdf/2407.14500>`_
     A novel vision LLM which takes a text prompt as an input and segments the relevant objects in a video, possibly with a text description as well.  Looks pretty powerful in a limited number of examples, but code is coming "soon".
@@ -62,6 +62,9 @@ Reinforcement Learning
 ----------------------
 `Enhancing Building Safety Design for Active Shooter Incidents: Exploration of Building Exit Parameters using Reinforcement Learning-Based Simulation <https://arxiv.org/pdf/2407.10441>`_
     Incredibly morbid, but there's something here that can be adapted to simulating armed combatants that may have a use case.
+
+`AI achieves silver-medal standard solving International Mathematical Olympiad problems <https://deepmind.google/discover/blog/ai-solves-imo-problems-at-silver-medal-level/>`_
+    Deepmind drops another banger.  This time its two reinforcement learning algorithms which, with their powers combined, manage a silver medal at this years International Mathematics Olympiad.  Given that most models in the field struggle with simple problems, this is astounding.  The blog is short and worth a read, but they duct-taped an LLM between the AlphaZero reinforcement learning problem and formal mathematical prover using formal language that could evaluate whether a proof was correct.  It seems like they leveraged that, in the right circumstances, evaluating whether a proof is correct is easy.
 
 Sensing
 -------
@@ -138,6 +141,9 @@ Applications
 
 `Deformable Convolution Based Road Scene Semantic Segmentation of Fisheye Images in Autonomous Driving <https://arxiv.org/pdf/2407.16647>`_
     Does ATR with fish-eye camera, finds that a deformable CNN (where the kernel depends on the shape of the object) outperforms the non-deformable version of CNNs such as ResNets and U-Nets.
+
+`GENERATIVE LEARNING FOR SIMULATION OF US ARMY VEHICLE FAULTS <https://arxiv.org/pdf/2407.17654>`_
+    Throws some deep learning methods at the problem of "predicting when US Army vehicles will break down".  Presumably there's some army interest behind this, even if it's not stated explicitly in this paper, because why would you do this otherwise.  Two of the coauthors are at ECE in Duke - might be a collaboration opportunity, might be we know them already
 
 New Models
 ----------
