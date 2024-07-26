@@ -159,7 +159,7 @@ New Models
 `Learning to (Learn at Test Time): RNNs with Expressive Hidden States <https://arxiv.org/pdf/2407.04620>`_
     New hidden state model with linear complexity in context length.  Seems to outperform both transformers and Mamba in terms of computatoinal time and results.  Impressive if true.
 
-`Lite-SAM Is Actually What You Need for Segment Everything <https://arxiv.org/pdf/2407.08965>'_'
+`Lite-SAM Is Actually What You Need for Segment Everything <https://arxiv.org/pdf/2407.08965>'_
     A new, more computationally efficient, method of implementing SAM.  Seems to hold up in terms of results, but examples are sparse.
 
 `LookupViT: Compressing visual information to a limited number of tokens <https://arxiv.org/pdf/2407.12753>`_
