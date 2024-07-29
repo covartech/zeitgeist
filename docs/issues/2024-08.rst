@@ -19,7 +19,7 @@ Featured
     Meta presents a novel model for generating 3D objects from text or image inputs.  The examples look incredibly impressive.  Anyone working on recovering CAD models/3D representations of objects should take a look at this.
 
 `Stretching Each Dollar: Diffusion Training from Scratch on a Micro-Budget <https://arxiv.org/pdf/2407.15811>`_
-    Sony AI trains a sparse 1.16B parameter diffusion transformer with an economical cost (whatever that means) of $1890.  Lots of fancy footwork went into this paper.  Maybe this means we can entertain the idea of training our own models from scratch?
+    Sony AI trains a sparse 1.16B parameter diffusion transformer over 2.6 days on an 8xH100, with only $1890 in GPU costs.  Lots of fancy footwork went into this paper.  Maybe this means we can entertain the idea of training our own models from scratch?
 
 LLMs
 ----------
@@ -133,7 +133,7 @@ Gotta Go Fast
     From Deepmind.  There's lots of tokens in images which have very low information content - this paper compresses input tokens to a fixed number of tokens as a method of getting rid of the extraneous tokens.  Improves computational burdens and (sometimes) performance.
 
 `Stretching Each Dollar: Diffusion Training from Scratch on a Micro-Budget <https://arxiv.org/pdf/2407.15811>`_
-    Sony AI trains a sparse 1.16B parameter diffusion transformer with an economical cost (whatever that means) of $1890.  Lots of fancy footwork went into this paper.  Maybe this means we can entertain the idea of training our own models from scratch?
+    Sony AI trains a sparse 1.16B parameter diffusion transformer over 2.6 days on an 8xH100, with only $1890 in GPU costs.  Lots of fancy footwork went into this paper.  Maybe this means we can entertain the idea of training our own models from scratch?
 
 Theory
 ------
