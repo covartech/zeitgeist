@@ -12,14 +12,14 @@ Featured
 `Revealing the Dark Secrets of Extremely Large Kernel ConvNets on Robustness <https://arxiv.org/pdf/2407.08972>`_
     ConvNets with extremely large kernels achieve comparable/superior performance compared to vision transformers.  This paper demonstrates this for robustness and investigates why.
 
-`CHOSEN: Compilation to Hardware Optimization Stack for Efficient Vision Transformer Inference <https://arxiv.org/pdf/2407.12736>`_
-    A bunch of people from USC develop a software for putting vision transformers on FPGAs.  Lots of stuff in here that's slightly above my head, but the results look legitimate.  
-
 `Don’t Throw Away Data: Better Sequence Knowledge Distillation <https://arxiv.org/pdf/2407.10456>`_
     From Deepmind.  The problem investigated is how to manage student-teacher cases where you have a big LLM (the teacher) that can perform a specific task (e.g. language translation) but you want a smaller model (the student) to be able to perform the same task.  Finds the most optimal method of teaching the student.  We might be able to use similar methods for cases where LLMs are big but useful in a limited way.  Maybe ODIN?
 
 `Meta 3D AssetGen: Text-to-Mesh Generation with High-Quality Geometry, Texture, and PBR Materials <https://ai.meta.com/research/publications/meta-3d-assetgen-text-to-mesh-generation-with-high-quality-geometry-texture-and-pbr-materials/?utm_source=twitter&utm_medium=organic_social&utm_content=thread&utm_campaign=research>`_
     Meta presents a novel model for generating 3D objects from text or image inputs.  The examples look incredibly impressive.  Anyone working on recovering CAD models/3D representations of objects should take a look at this.
+
+`Stretching Each Dollar: Diffusion Training from Scratch on a Micro-Budget <https://arxiv.org/pdf/2407.15811>`_
+    Sony AI trains a sparse 1.16B parameter diffusion transformer with an economical cost (whatever that means) of $1890.  Lots of fancy footwork went into this paper.  Maybe this means we can entertain the idea of training our own models from scratch?
 
 LLMs
 ----------
@@ -46,6 +46,9 @@ VLMs
 `VILA2 : VILA Augmented VILA <https://arxiv.org/pdf/2407.17453>`_
     A new VLM from NVIDIA.  The model, though, it less interesting than how they train it.  you can run out of labelled quality data pretty fast, so they have a "self-augment" and a "specialist-augment" step to improve data quality and labels.  They also augment with other models.  Cool idea, and a neat way to generate quality data ex nihilo.
 
+`Wolf: Captioning Everything with a World Summarization Framework <https://arxiv.org/pdf/2407.18908>`_
+    NVIDIA and friends propose a novel VLM whose main focus is on captioning images/videos.  It's a short jump from captioning to identifying objects in BBOXs, so something like this could be slotted into the Grounded SAM/Grounding DINO pipeline.
+
 Doctrinaire
 -----------
 `Similarity Distance-Based Label Assignment for Tiny Object Detection <https://arxiv.org/pdf/2407.02394>`_
@@ -67,6 +70,9 @@ Autonomy
 
 `ODYSSEY: Empowering Agents with Open-World Skills <https://arxiv.org/pdf/2407.15325>`_
     Establishes a framework/dataset for open-world autonomous agents in Minecraft.  Seems fun/silly at first, but might have enough similarities to, e.g., drones flying around looking for things to do to be worth keeping an eye on.
+
+`SHANGUS: Deep Reinforcement Learning Meets Heuristic Optimization for Speedy Frontier-Based Exploration of Autonomous Vehicles in Unknown Spaces <https://arxiv.org/pdf/2407.18892>`_
+    A deep reinforcement learning framework to control an autonomous vehicle exploring an unknown space.  One of the stated applications is space (!) but it's easy to imagine wanting this for recon purposes.
 
 Reinforcement Learning
 ----------------------
@@ -125,6 +131,9 @@ Gotta Go Fast
 
 `LookupViT: Compressing visual information to a limited number of tokens <https://arxiv.org/pdf/2407.12753>`_
     From Deepmind.  There's lots of tokens in images which have very low information content - this paper compresses input tokens to a fixed number of tokens as a method of getting rid of the extraneous tokens.  Improves computational burdens and (sometimes) performance.
+
+`Stretching Each Dollar: Diffusion Training from Scratch on a Micro-Budget <https://arxiv.org/pdf/2407.15811>`_
+    Sony AI trains a sparse 1.16B parameter diffusion transformer with an economical cost (whatever that means) of $1890.  Lots of fancy footwork went into this paper.  Maybe this means we can entertain the idea of training our own models from scratch?
 
 Theory
 ------
