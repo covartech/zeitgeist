@@ -43,6 +43,9 @@ VLMs
 `AdaCLIP: Adapting CLIP with Hybrid Learnable Prompts for Zero-Shot Anomaly Detection <https://arxiv.org/pdf/2407.15795>`_
     A novel CLIP variant that functions as a zero-shot anomaly detector/segmenter.  Takes text as an input and semgents whatever was described in the text.  Potentially useful as an "off-the-shelf" tool for a lot of functions.  Maybe a Grounded SAM replacement?
 
+`ViLLa: Video Reasoning Segmentation with Large Language Model <https://arxiv.org/pdf/2407.14500>`_
+    A novel vision LLM which takes a text prompt as an input and segments the relevant objects in a video, possibly with a text description as well.  Looks pretty powerful in a limited number of examples, but code is coming "soon".
+
 `VILA2 : VILA Augmented VILA <https://arxiv.org/pdf/2407.17453>`_
     A new VLM from NVIDIA.  The model, though, it less interesting than how they train it.  you can run out of labelled quality data pretty fast, so they have a "self-augment" and a "specialist-augment" step to improve data quality and labels.  They also augment with other models.  Cool idea, and a neat way to generate quality data ex nihilo.
 
