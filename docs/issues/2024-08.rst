@@ -195,3 +195,11 @@ Lunch and Learn
 2024-07-09
     `On Scalable Oversight with weak LLMs judging strong LLMs <https://arxiv.org/abs/2407.04622v1>`_
     Deepmind: What happens when you ask a judge to choose the best answer in 3 scenarios: 2 debaters try to convice the judge, 1 consultant converses with the judge, and we ask the judge directly. Oh, and the debaters, consultants, and judges are all LLMs. The judges are also weaker models than the debaters/consultants. They found that debate is better than consulting; however, the judge used is lowkey too smart here.
+
+2024-07-23
+    `Learning Differentiable Logic Programs for Abstract Visual Reasoning <https://arxiv.org/pdf/2307.00928>`_ 
+    Do a convnet on images to identify simple objects and then figure out logic questions about those things using NEUro-symbolic Message-pAssiNg reasoNer (NEUMANN). Objects are actually described by a premade list of attributes as a vector (color, shape, x, y) and these quantities are operated on as probabilities by a genetic-algorithm made GNN which represents the logic as a DAG.
+    `Open-World Visual Reasoning by a Neuro-Symbolic Program of Zero-Shot Symbols <https://arxiv.org/pdf/2407.13382>`_ 
+    Pre-define first order logic (FOL) about your problem and use CLIP to identify the classes of things you talk about in your logic. Evaluate with `Scallop <https://www.scallop-lang.org/>`_ and zero-shot find the cases where your logical statement about the image is true (if clip works well).
+    `Data-Efficient Learning with Neural Programs <https://arxiv.org/pdf/2406.06246>`_
+    If you have a bunch of examples of black-box input output pairs, you can try to generate a logical program that extracts useful information from the input data (in this case images) and then generates logical programs which solve the problem. Or you could just pose the problem to GPT4 and it does alright too supposedly.
