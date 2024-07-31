@@ -152,6 +152,9 @@ Theory
 `Revealing the Dark Secrets of Extremely Large Kernel ConvNets on Robustness <https://arxiv.org/pdf/2407.08972>`_
     ConvNets with extremely large kernels achieve comparable/superior performance compared to vision transformers.  This paper demonstrates this for robustness and investigates why.
 
+`Mixture of A Million Experts <https://arxiv.org/pdf/2407.04153>`_
+    From Deepmind.  Mixture of Experts (MoE) is a promising alternative architecture to transformers which is essentially just an ensemble model.  This one takes it to extremes, with a million experts, and claims to be the best way to do MoEs.
+
 Applications
 ------------
 `A Survey of Distance-Based Vessel Trajectory Clustering: Data Pre-processing, Methodologies, Applications, and Experimental Evaluation <https://arxiv.org/pdf/2407.11084>`_
@@ -203,3 +206,6 @@ Lunch and Learn
     Pre-define first order logic (FOL) about your problem and use CLIP to identify the classes of things you talk about in your logic. Evaluate with `Scallop <https://www.scallop-lang.org/>`_ and zero-shot find the cases where your logical statement about the image is true (if clip works well).
     `Data-Efficient Learning with Neural Programs <https://arxiv.org/pdf/2406.06246>`_
     If you have a bunch of examples of black-box input output pairs, you can try to generate a logical program that extracts useful information from the input data (in this case images) and then generates logical programs which solve the problem. Or you could just pose the problem to GPT4 and it does alright too supposedly.
+
+2024-07-31
+    `SAM 2: Segment Anything in Images and Videos <https://scontent-atl3-1.xx.fbcdn.net/v/t39.2365-6/453323338_287900751050452_6064535069828837026_n.pdf?_nc_cat=107&ccb=1-7&_nc_sid=3c67a6&_nc_ohc=TnvI-AaGawoQ7kNvgGM64YV&_nc_ht=scontent-atl3-1.xx&oh=00_AYDoqk1zPXSrrsqbeqZKJn0IDucdpOHK1Bm0qi8PJTF-Sw&oe=66AECA39>`_
