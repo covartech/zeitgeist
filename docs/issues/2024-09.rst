@@ -18,6 +18,9 @@ Featured
 `SceneCraft: An LLM Agent for Synthesizing 3D Scene as Blender Code <https://arxiv.org/pdf/2403.01248>`_
     Google release a new LLM agent which can take natural language desriptions of a scene, generate Python scripts to render them in blender, and then iteratively refine the rendered scene.  Could be useful for some of our synthetic data generation.
 
+`Self-Taught Evaluators <https://arxiv.org/pdf/2408.02666>`_
+    From META FAIR.  Looks to improve evaluators using only synthetic data - no human labelling, no RLHF.  This sounds crazy, but training a judge in this way, without any human-labelled data, and using it to make Lamma 3 better actually made Llama 3 substantially better.
+
 LLMs
 ----
 `Large Language Monkeys: Scaling Inference Compute with Repeated Sampling <https://arxiv.org/pdf/2407.21787>`_
@@ -29,11 +32,16 @@ LLMs
 `SceneCraft: An LLM Agent for Synthesizing 3D Scene as Blender Code <https://arxiv.org/pdf/2403.01248>`_
     Google release a new LLM agent which can take natural language desriptions of a scene, generate Python scripts to render them in blender, and then iteratively refine the rendered scene.  Could be useful for some of our synthetic data generation.
 
+`Self-Taught Evaluators <https://arxiv.org/pdf/2408.02666>`_
+    From META FAIR.  Looks to improve evaluators using only synthetic data - no human labelling, no RLHF.  This sounds crazy, but training a judge in this way, without any human-labelled data, and using it to make Lamma 3 better actually made Llama 3 substantially better.
+
 VLMs
 ----
 
 Doctrinaire
 -----------
+`MESHANYTHING V2: ARTIST-CREATED MESH GENERATION WITH ADJACENT MESH TOKENIZATION <https://arxiv.org/pdf/2408.02555>`_
+    A model which takes "anything" (point clouds, Gaussian Splats, images, text, etc) and generates 3D meshes of the described object.  Could be useful.
 
 Autonomy
 --------
