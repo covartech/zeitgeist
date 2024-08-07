@@ -6,8 +6,8 @@ Featured
 `MART: MultiscAle Relational Transformer Networks for Multi-agent Trajectory Prediction <https://arxiv.org/pdf/2407.21635>`_
     Uses relation transformers to do multi-agent tracking in basketball data.  This kind of makes sense since tracking involves sequences and transformers are good at that.
 
-`Large Language Monkeys: Scaling Inference Compute with Repeated Sampling <https://arxiv.org/pdf/2407.21787>`_
-    Generating accurate answers is hard, but verifying an answer is (sometimes) easy.  If you are living in a world where verifying an answer is easy, you can have an LLM generate a ton of answers and find th correct one.  Greatly improves performance.
+`Feature Splatting: Language-Driven Physics-Based Scene Synthesis and Editing <https://arxiv.org/pdf/2404.01223>`_
+    Combines 3D Gaussian splats with VLMS and physics-based models to enable text-based scened decomposition and to simulate physics-based dynamics in a 3D Gaussian splat.  Duct-tapes a whole bunch of models together to get to a cool looking result
 
 `Disentangling Dense Embeddings with Sparse Autoencoders <https://arxiv.org/pdf/2408.00657>`_
     If you have dense embeddings, you can hit them with a sparse autoencoder and have sparse embeddings that maintain semantic fidelity.  Feels like there is something useful here, but can't quite put my finger on what.
@@ -61,6 +61,8 @@ Tracking
 
 Gaussian Splatting
 ------------------
+`Feature Splatting: Language-Driven Physics-Based Scene Synthesis and Editing <https://arxiv.org/pdf/2404.01223>`_
+    Combines 3D Gaussian splats with VLMS and physics-based models to enable text-based scened decomposition and to simulate physics-based dynamics in a 3D Gaussian splat.  Duct-tapes a whole bunch of models together to get to a cool looking result
 
 Gotta Go Fast
 -------------
@@ -72,6 +74,9 @@ Theory
 
 `Autoencoders in Function Space <https://arxiv.org/pdf/2408.01362>`_
     Develops a variational autoencoder which functions directly on function space.  The imagined applications included computer vision, with image pixels being viewed as a pixelization of a functional space. Shows some promise on inpainting/superresolution problems.  Very theoretical, though
+
+`Pre-training and in-context learning IS Bayesian inference a la De Finetti <https://arxiv.org/pdf/2408.03307>`_
+    A very funny paper that argues pre-training and in-context learning is Bayesian inference because of De Finetti's theorem.  Not useful, but worth it for the comedy.
 
 Applications
 ------------
