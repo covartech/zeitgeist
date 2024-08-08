@@ -9,8 +9,8 @@ Featured
 `Feature Splatting: Language-Driven Physics-Based Scene Synthesis and Editing <https://arxiv.org/pdf/2404.01223>`_
     Combines 3D Gaussian splats with VLMS and physics-based models to enable text-based scened decomposition and to simulate physics-based dynamics in a 3D Gaussian splat.  Duct-tapes a whole bunch of models together to get to a cool looking result
 
-`Disentangling Dense Embeddings with Sparse Autoencoders <https://arxiv.org/pdf/2408.00657>`_
-    If you have dense embeddings, you can hit them with a sparse autoencoder and have sparse embeddings that maintain semantic fidelity.  Feels like there is something useful here, but can't quite put my finger on what.
+`Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters <https://arxiv.org/pdf/2408.03314>`_
+    Deepmind investigates how best to use a finite amount of test-time compute to get an LLM to give the best answer.  Results are nuanced and the paper seems worth reading.
 
 `Collaborative Vision-Text Representation Optimizing for Open-Vocabulary Segmentation <https://arxiv.org/pdf/2408.00744>`_
     Does some fancy footwork to turn CLIP models into something that can more or less accurately handle the open-vocabulary segmentation task.  Results seem impresive.
@@ -34,6 +34,9 @@ LLMs
 
 `Self-Taught Evaluators <https://arxiv.org/pdf/2408.02666>`_
     From META FAIR.  Looks to improve evaluators using only synthetic data - no human labelling, no RLHF.  This sounds crazy, but training a judge in this way, without any human-labelled data, and using it to make Lamma 3 better actually made Llama 3 substantially better.
+
+`Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters <https://arxiv.org/pdf/2408.03314>`_
+    Deepmind investigates how best to use a finite amount of test-time compute to get an LLM to give the best answer.  Results are nuanced and the paper seems worth reading.
 
 VLMs
 ----
@@ -66,6 +69,8 @@ Gaussian Splatting
 
 Gotta Go Fast
 -------------
+`CAS-ViT: Convolutional Additive Self-attention Vision Transformers for Efficient Mobile Applications <https://arxiv.org/pdf/2408.03703>`_
+    How to put vision transformers on an iPhone.  Hilariously, they cite a paper from 2009 showing vision transformer results?? This must be a typo?
 
 Theory
 ------
