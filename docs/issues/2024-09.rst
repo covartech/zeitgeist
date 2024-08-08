@@ -3,8 +3,8 @@
 
 Featured
 --------
-`MART: MultiscAle Relational Transformer Networks for Multi-agent Trajectory Prediction <https://arxiv.org/pdf/2407.21635>`_
-    Uses relation transformers to do multi-agent tracking in basketball data.  This kind of makes sense since tracking involves sequences and transformers are good at that.
+`Beyond Euclid: An Illustrated Guide to Modern Machine Learning with Geometric, Topological, and Algebraic Structures <https://www.arxiv.org/pdf/2407.09468>`_
+    Cool overview with lots of pictures. Doing ML in non-vector spaces is basically what we need to do.
 
 `Feature Splatting: Language-Driven Physics-Based Scene Synthesis and Editing <https://arxiv.org/pdf/2404.01223>`_
     Combines 3D Gaussian splats with VLMS and physics-based models to enable text-based scened decomposition and to simulate physics-based dynamics in a 3D Gaussian splat.  Duct-tapes a whole bunch of models together to get to a cool looking result
@@ -38,6 +38,12 @@ LLMs
 `Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters <https://arxiv.org/pdf/2408.03314>`_
     Deepmind investigates how best to use a finite amount of test-time compute to get an LLM to give the best answer.  Results are nuanced and the paper seems worth reading.
 
+`SPREADSHEETLLM: Encoding Spreadsheets for Large Language Models <https://arxiv.org/pdf/2407.09025>`_
+    Microsoft figures out how to give a spreadsheet to an LLM. Not really a problem we have, but somewhat interesting in that, represented data effectively to an LLM is not always super straightforward.
+
+`The Geometry of Categorical and Hierarchical Concepts in Large Language Models <https://arxiv.org/pdf/2406.01506>`_
+    If you ask an LLM to make a graph, or you just analyze them concepts understood by the graph, they have similar structure. Somewhat interesting that the implicit structure of the “understanding” of the LLM has graph like characteristics, hierarchy and relationships.
+
 VLMs
 ----
 
@@ -46,6 +52,12 @@ Doctrinaire
 `MESHANYTHING V2: ARTIST-CREATED MESH GENERATION WITH ADJACENT MESH TOKENIZATION <https://arxiv.org/pdf/2408.02555>`_
     A model which takes "anything" (point clouds, Gaussian Splats, images, text, etc) and generates 3D meshes of the described object.  Could be useful.
 
+`4D Contrastive Superflows are Dense 3D Representation Learners <https://arxiv.org/pdf/2407.06190>`_
+    Cross train vision and lidar to make a pointcloud. Uses a vision transform and claims state of the art performance. Could potentially inspire some of our work to make 3D scenes from vision only.
+
+`Trends, Applications, and Challenges in Human Attention Modelling <https://arxiv.org/pdf/2402.18673>`_
+    Our job with AiTR is ultimately to aid human perception. Should we really be drawing boxes? With the new glow work coming up I think we should focus on understanding human attention so that we can better direct it.
+    
 Autonomy
 --------
 `NOLO: Navigate Only Look Once <https://arxiv.org/pdf/2408.01384>`_
@@ -83,8 +95,13 @@ Theory
 `Pre-training and in-context learning IS Bayesian inference a la De Finetti <https://arxiv.org/pdf/2408.03307>`_
     A very funny paper that argues pre-training and in-context learning is Bayesian inference because of De Finetti's theorem.  Not useful, but worth it for the comedy.
 
+`Beyond Euclid: An Illustrated Guide to Modern Machine Learning with Geometric, Topological, and Algebraic Structures <https://www.arxiv.org/pdf/2407.09468>`_
+    Cool overview with lots of pictures. Doing ML in non-vector spaces is basically what we need to do.
+
 Applications
 ------------
+`Do grant proposal texts matter for funding decisions? A field experiment <https://link.springer.com/article/10.1007/s11192-024-04968-7>`_
+    A dutch study finds that an abstract and CV hold as much weight as a full proposal. Your representation, connections, and elevator pitch are what matter.  I wonder if this generalizes to other countries/institutions?
 
 New LLMs
 --------
