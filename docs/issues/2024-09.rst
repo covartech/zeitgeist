@@ -93,3 +93,6 @@ New LLMs
     
 Lunch and Learn
 ---------------
+2024-08-06
+    `Large Language Monkeys: Scaling Inference Compute with Repeated Sampling <https://arxiv.org/pdf/2407.21787>`_
+    Generating accurate answers is hard, but verifying an answer is (sometimes) easy.  If you are living in a world where verifying an answer is easy, you can have an LLM generate a ton of answers and find th correct one.  Greatly improves performance.
