@@ -9,14 +9,14 @@ Featured
 `Feature Splatting: Language-Driven Physics-Based Scene Synthesis and Editing <https://arxiv.org/pdf/2404.01223>`_
     Combines 3D Gaussian splats with VLMS and physics-based models to enable text-based scened decomposition and to simulate physics-based dynamics in a 3D Gaussian splat.  Duct-tapes a whole bunch of models together to get to a cool looking result
 
-`Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters <https://arxiv.org/pdf/2408.03314>`_
-    Deepmind investigates how best to use a finite amount of test-time compute to get an LLM to give the best answer.  Results are nuanced and the paper seems worth reading.
+`Does Liking Yellow Imply Driving a School Bus? Semantic Leakage in Language Models <https://gonenhila.github.io/files/Semantic_Leakage.pdf>`_
+    Finds a new way LLMs can go horribly wrong, called semantic leakage, where two unrelated concepts get linked together in creative ways.  For instance, if you tell an LLM that Kenny likes the color yellow and then ask it what Kenny's job is, it will say that Kenny is a school bus driver because school busses are yellow. 
 
 `Collaborative Vision-Text Representation Optimizing for Open-Vocabulary Segmentation <https://arxiv.org/pdf/2408.00744>`_
     Does some fancy footwork to turn CLIP models into something that can more or less accurately handle the open-vocabulary segmentation task.  Results seem impresive.
 
 `SceneCraft: An LLM Agent for Synthesizing 3D Scene as Blender Code <https://arxiv.org/pdf/2403.01248>`_
-    Google release a new LLM agent which can take natural language desriptions of a scene, generate Python scripts to render them in blender, and then iteratively refine the rendered scene.  Could be useful for some of our synthetic data generation.
+    Google release a new LLM agent which can take natural language descriptions of a scene, generate Python scripts to render them in blender, and then iteratively refine the rendered scene.  Could be useful for some of our synthetic data generation.
 
 `Self-Taught Evaluators <https://arxiv.org/pdf/2408.02666>`_
     From META FAIR.  Looks to improve evaluators using only synthetic data - no human labelling, no RLHF.  This sounds crazy, but training a judge in this way, without any human-labelled data, and using it to make Lamma 3 better actually made Llama 3 substantially better.
@@ -44,6 +44,12 @@ LLMs
 `The Geometry of Categorical and Hierarchical Concepts in Large Language Models <https://arxiv.org/pdf/2406.01506>`_
     If you ask an LLM to make a graph, or you just analyze them concepts understood by the graph, they have similar structure. Somewhat interesting that the implicit structure of the “understanding” of the LLM has graph like characteristics, hierarchy and relationships.
 
+`Does Liking Yellow Imply Driving a School Bus? Semantic Leakage in Language Models <https://gonenhila.github.io/files/Semantic_Leakage.pdf>`_
+    Finds a new way LLMs can go horribly wrong, called semantic leakage, where two unrelated concepts get linked together in creative ways.  For instance, if you tell an LLM that Kenny likes the color yellow and then ask it what Kenny's job is, it will say that Kenny is a school bus driver because school busses are yellow. 
+
+`Tree Attention: Topology-Aware Decoding for Long-Context Attention on GPU Clusters <https://arxiv.org/pdf/2405.05847>`_
+    Does some real fancy footwork to get "asymptotically" faster computiontal results for some part of transformers.  Code available.
+    
 VLMs
 ----
 
@@ -84,6 +90,9 @@ Gotta Go Fast
 `CAS-ViT: Convolutional Additive Self-attention Vision Transformers for Efficient Mobile Applications <https://arxiv.org/pdf/2408.03703>`_
     How to put vision transformers on an iPhone.  Hilariously, they cite a paper from 2009 showing vision transformer results?? This must be a typo?
 
+`Tree Attention: Topology-Aware Decoding for Long-Context Attention on GPU Clusters <https://arxiv.org/pdf/2408.04093>`_
+    Does some real fancy footwork to get "asymptotically" faster computiontal results for some part of transformers.  Code available.
+
 Theory
 ------
 `Disentangling Dense Embeddings with Sparse Autoencoders <https://arxiv.org/pdf/2408.00657>`_
@@ -98,6 +107,12 @@ Theory
 `Beyond Euclid: An Illustrated Guide to Modern Machine Learning with Geometric, Topological, and Algebraic Structures <https://www.arxiv.org/pdf/2407.09468>`_
     Cool overview with lots of pictures. Doing ML in non-vector spaces is basically what we need to do.
 
+`Gemma Scope: Open Sparse Autoencoders Everywhere All At Once on Gemma 2 <https://arxiv.org/pdf/2408.05147>`_
+    Deepmind explores some ways that sparse autoencoders are useful, with a look at the Gemma 2 family of models.  Seems like a decent overview
+
+`Your Classifier Can Be Secretly a Likelihood-Based OOD Detector <https://arxiv.org/pdf/2408.04851>`_
+    Another paper in the "classifiers do OOD detection" bin.  Results seem decently convincing?
+
 Applications
 ------------
 `Do grant proposal texts matter for funding decisions? A field experiment <https://link.springer.com/article/10.1007/s11192-024-04968-7>`_
@@ -107,7 +122,10 @@ New LLMs
 --------
 `Smaller, Safer, More Transparent: Advancing Responsible AI with Gemma <https://developers.googleblog.com/en/smaller-safer-more-transparent-advancing-responsible-ai-with-gemma/>`_
     Google adds three new additions to the Gemma 2B family.  They claim its the best thing on the market, etc etc.  `Lab report <https://arxiv.org/pdf/2408.00118>`_
-    
+
+`Apple Intelligence Foundation Language Models <https://arxiv.org/pdf/2407.21075>`_
+    Apple's lab report on its foundation models.  Probably something interesting here if you want to read it.
+
 Lunch and Learn
 ---------------
 2024-08-06
