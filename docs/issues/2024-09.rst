@@ -15,8 +15,8 @@ Featured
 `Collaborative Vision-Text Representation Optimizing for Open-Vocabulary Segmentation <https://arxiv.org/pdf/2408.00744>`_
     Does some fancy footwork to turn CLIP models into something that can more or less accurately handle the open-vocabulary segmentation task.  Results seem impresive.
 
-`SceneCraft: An LLM Agent for Synthesizing 3D Scene as Blender Code <https://arxiv.org/pdf/2403.01248>`_
-    Google release a new LLM agent which can take natural language descriptions of a scene, generate Python scripts to render them in blender, and then iteratively refine the rendered scene.  Could be useful for some of our synthetic data generation.
+`MUTUAL REASONING MAKES SMALLER LLMS STRONGER PROBLEM-SOLVERS <https://arxiv.org/pdf/2408.06195>`_
+    Microsoft Research Asia proposes rStar, a method for improving reasoning capabilities of small language models by doing a bunch of fancy footwork.  These "how to get small models as good as big models" papers are always fun.
 
 `Self-Taught Evaluators <https://arxiv.org/pdf/2408.02666>`_
     From META FAIR.  Looks to improve evaluators using only synthetic data - no human labelling, no RLHF.  This sounds crazy, but training a judge in this way, without any human-labelled data, and using it to make Lamma 3 better actually made Llama 3 substantially better.
@@ -49,7 +49,10 @@ LLMs
 
 `Tree Attention: Topology-Aware Decoding for Long-Context Attention on GPU Clusters <https://arxiv.org/pdf/2405.05847>`_
     Does some real fancy footwork to get "asymptotically" faster computiontal results for some part of transformers.  Code available.
-    
+
+`MUTUAL REASONING MAKES SMALLER LLMS STRONGER PROBLEM-SOLVERS <https://arxiv.org/pdf/2408.06195>`_
+    Microsoft Research Asia proposes rStar, a method for improving reasoning capabilities of small language models by doing a bunch of fancy footwork.  These "how to get small models as good as big models" papers are always fun.
+
 VLMs
 ----
 
@@ -85,6 +88,9 @@ Gaussian Splatting
 `Feature Splatting: Language-Driven Physics-Based Scene Synthesis and Editing <https://arxiv.org/pdf/2404.01223>`_
     Combines 3D Gaussian splats with VLMS and physics-based models to enable text-based scened decomposition and to simulate physics-based dynamics in a 3D Gaussian splat.  Duct-tapes a whole bunch of models together to get to a cool looking result
 
+`3D Gaussian Editing with A Single Image <https://arxiv.org/pdf/2408.07540>`_
+    Develops a method that allows you to take a Gaussian splat, compress it to one image, modify that one image (photoshop?), and then generate a novel Gaussian splat corresponding to the changed image.  Seems cool, not sure what the use case it.
+
 Gotta Go Fast
 -------------
 `CAS-ViT: Convolutional Additive Self-attention Vision Transformers for Efficient Mobile Applications <https://arxiv.org/pdf/2408.03703>`_
@@ -113,18 +119,24 @@ Theory
 `Your Classifier Can Be Secretly a Likelihood-Based OOD Detector <https://arxiv.org/pdf/2408.04851>`_
     Another paper in the "classifiers do OOD detection" bin.  Results seem decently convincing?
 
+`Ensemble everything everywhere: Multi-scale aggregation for adversarial robustness <https://arxiv.org/pdf/2408.05446>`_
+    From Deepmind.  Proposes a novel, ensemble-based method for robustness to adversarial attacks.  Worth keeping an eye on if this stuff is ever of interest.
+
 Applications
 ------------
 `Do grant proposal texts matter for funding decisions? A field experiment <https://link.springer.com/article/10.1007/s11192-024-04968-7>`_
     A dutch study finds that an abstract and CV hold as much weight as a full proposal. Your representation, connections, and elevator pitch are what matter.  I wonder if this generalizes to other countries/institutions?
 
-New LLMs
+New Models
 --------
 `Smaller, Safer, More Transparent: Advancing Responsible AI with Gemma <https://developers.googleblog.com/en/smaller-safer-more-transparent-advancing-responsible-ai-with-gemma/>`_
     Google adds three new additions to the Gemma 2B family.  They claim its the best thing on the market, etc etc.  `Lab report <https://arxiv.org/pdf/2408.00118>`_
 
 `Apple Intelligence Foundation Language Models <https://arxiv.org/pdf/2407.21075>`_
     Apple's lab report on its foundation models.  Probably something interesting here if you want to read it.
+
+`Imagen 3 <https://arxiv.org/pdf/2408.07009>`_
+    Text to image generation diffusion model from Google.  Maybe there's a way to do synthetic data generation with this?
 
 Lunch and Learn
 ---------------
