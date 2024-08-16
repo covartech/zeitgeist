@@ -15,8 +15,8 @@ Featured
 `Collaborative Vision-Text Representation Optimizing for Open-Vocabulary Segmentation <https://arxiv.org/pdf/2408.00744>`_
     Does some fancy footwork to turn CLIP models into something that can more or less accurately handle the open-vocabulary segmentation task.  Results seem impresive.
 
-`MUTUAL REASONING MAKES SMALLER LLMS STRONGER PROBLEM-SOLVERS <https://arxiv.org/pdf/2408.06195>`_
-    Microsoft Research Asia proposes rStar, a method for improving reasoning capabilities of small language models by doing a bunch of fancy footwork.  These "how to get small models as good as big models" papers are always fun.
+`Out-of-Distribution Learning with Human Feedback <https://arxiv.org/pdf/2408.07772>`_
+    How do you deal with out-of-distribution (OOD) data?  This paper proposes a method to detect the most important OOD datapoints from "wild data" (a great name), uses human feedback to label them, and then trains to both classify and identify OOD objects.  It's a cool method, and one we might be able to use in a "how to use the minimun amount of labels to best improve model performance" sort of way.
 
 `Self-Taught Evaluators <https://arxiv.org/pdf/2408.02666>`_
     From META FAIR.  Looks to improve evaluators using only synthetic data - no human labelling, no RLHF.  This sounds crazy, but training a judge in this way, without any human-labelled data, and using it to make Lamma 3 better actually made Llama 3 substantially better.
@@ -91,6 +91,9 @@ Gaussian Splatting
 `3D Gaussian Editing with A Single Image <https://arxiv.org/pdf/2408.07540>`_
     Develops a method that allows you to take a Gaussian splat, compress it to one image, modify that one image (photoshop?), and then generate a novel Gaussian splat corresponding to the changed image.  Seems cool, not sure what the use case it.
 
+`WaterSplatting: Fast Underwater 3D Scene Reconstruction Using Gaussian Splatting <https://arxiv.org/pdf/2408.08206>`_
+    Novel 3D Gaussian Splatting approach for underwater scenes.  Generalizes to foggy/rainy scenes on dry land.  Could be a good tool in a toolbox
+
 Gotta Go Fast
 -------------
 `CAS-ViT: Convolutional Additive Self-attention Vision Transformers for Efficient Mobile Applications <https://arxiv.org/pdf/2408.03703>`_
@@ -98,6 +101,10 @@ Gotta Go Fast
 
 `Tree Attention: Topology-Aware Decoding for Long-Context Attention on GPU Clusters <https://arxiv.org/pdf/2408.04093>`_
     Does some real fancy footwork to get "asymptotically" faster computiontal results for some part of transformers.  Code available.
+
+`How to Prune and Distill Llama-3.1 8B to an NVIDIA Llama-3.1-Minitron 4B Model <https://developer.nvidia.com/blog/how-to-prune-and-distill-llama-3-1-8b-to-an-nvidia-llama-3-1-minitron-4b-model/>`_
+    NVIDIA takes Llama-3.1 8B and turns it into a 4B parameter model with minimal decrease in performance somehow.  I guess NVIDIA is just better at this than Meta?
+
 
 Theory
 ------
@@ -122,6 +129,9 @@ Theory
 `Ensemble everything everywhere: Multi-scale aggregation for adversarial robustness <https://arxiv.org/pdf/2408.05446>`_
     From Deepmind.  Proposes a novel, ensemble-based method for robustness to adversarial attacks.  Worth keeping an eye on if this stuff is ever of interest.
 
+`Out-of-Distribution Learning with Human Feedback <https://arxiv.org/pdf/2408.07772>`_
+    How do you deal with out-of-distribution (OOD) data?  This paper proposes a method to detect the most important OOD datapoints from "wild data" (a great name), uses human feedback to label them, and then trains to both classify and identify OOD objects.  It's a cool method, and one we might be able to use in a "how to use the minimun amount of labels to best improve model performance" sort of way.
+
 Applications
 ------------
 `Do grant proposal texts matter for funding decisions? A field experiment <https://link.springer.com/article/10.1007/s11192-024-04968-7>`_
@@ -137,6 +147,9 @@ New Models
 
 `Imagen 3 <https://arxiv.org/pdf/2408.07009>`_
     Text to image generation diffusion model from Google.  Maybe there's a way to do synthetic data generation with this?
+
+`LLaVA-OneVision: Easy Visual Task Transfer <https://arxiv.org/pdf/2408.03326>`_
+    ByteDance releases a family of open LLMs that "push the performance boundaries" in some computer vision tasks.  Using anything released by ByteDane is presumably a hard no for government work, but it comes with a blog detailing development that might be worth a read.
 
 Lunch and Learn
 ---------------
