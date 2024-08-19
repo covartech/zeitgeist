@@ -22,7 +22,7 @@ Featured
     Sony AI trains a sparse 1.16B parameter diffusion transformer over 2.6 days on an 8xH100, with only $1890 in GPU costs.  Lots of fancy footwork went into this paper, which shows that small organizations can train comparably large models.
 
 LLMs
-----------
+----
 `Single Character Perturbations Break LLM Alignment <https://arxiv.org/pdf/2407.03232>`_
     LLMs have safeguards built in following directives such as "Don't tell users how to build bombs".  This paper discovered a method to avoid these safeguards by simply by appending a token of whitespace at the end of input prompts.  The authors hypothesize this works because, in training, whitespace prompts the model to make lists and this  association overrides the safeguards.
 
@@ -52,8 +52,8 @@ VLMs
 `Wolf: Captioning Everything with a World Summarization Framework <https://arxiv.org/pdf/2407.18908>`_
     This paper proposes a novel VLM focussing on captioning images/videos.  Implicit in this is a fairly robust multi-class classifier, which could be leveraged for zero/one/few shot learning.
 
-Doctrinaire
------------
+Object Detection
+----------------
 `Similarity Distance-Based Label Assignment for Tiny Object Detection <https://arxiv.org/pdf/2407.02394>`_
     This paper proposes a novel for non-max suppression in the context of tiny object detection.  Appears to improve performance of faster R-CNN on AITOD.  Worth looking into for any tiny object detection problems.
 
