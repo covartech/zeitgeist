@@ -55,6 +55,8 @@ LLMs
 
 VLMs
 ----
+`LONGVILA: SCALING LONG-CONTEXT VISUAL LANGUAGE MODELS FOR LONG VIDEOS <https://arxiv.org/pdf/2408.10188>`_
+    NVIDIA continues to chip away at VLMs, this time giving VILA extra long context length.  Lots of good stuff in here about training, datasets, performance, etc.
 
 Doctrinaire
 -----------
@@ -66,7 +68,13 @@ Doctrinaire
 
 `Trends, Applications, and Challenges in Human Attention Modelling <https://arxiv.org/pdf/2402.18673>`_
     Our job with AiTR is ultimately to aid human perception. Should we really be drawing boxes? With the new glow work coming up I think we should focus on understanding human attention so that we can better direct it.
-    
+
+`SpaRP: Fast 3D Object Reconstruction and Pose Estimation from Sparse Views <https://arxiv.org/pdf/2408.10195>`_
+    Proposes a method to take one to a small number of unposed images of an object, and create a 3D mesh in 20 seconds.  Seems decent, lots of pictures of videogame characters.
+
+`MeshFormer: High-Quality Mesh Generation with 3D-Guided Reconstruction Model <https://arxiv.org/pdf/2408.10198>`_
+    A novel method for 2D to 3D, sparse image to 3D, and text to 3D generation.  The abstract kind of reads like a madlibs of methods, but the results seem decent.
+
 Autonomy
 --------
 `NOLO: Navigate Only Look Once <https://arxiv.org/pdf/2408.01384>`_
