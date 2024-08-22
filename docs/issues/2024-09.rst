@@ -12,8 +12,8 @@ Featured
 `Does Liking Yellow Imply Driving a School Bus? Semantic Leakage in Language Models <https://gonenhila.github.io/files/Semantic_Leakage.pdf>`_
     Finds a new way LLMs can go horribly wrong, called semantic leakage, where two unrelated concepts get linked together in creative ways.  For instance, if you tell an LLM that Kenny likes the color yellow and then ask it what Kenny's job is, it will say that Kenny is a school bus driver because school busses are yellow. 
 
-`Collaborative Vision-Text Representation Optimizing for Open-Vocabulary Segmentation <https://arxiv.org/pdf/2408.00744>`_
-    Does some fancy footwork to turn CLIP models into something that can more or less accurately handle the open-vocabulary segmentation task.  Results seem impresive.
+`Approaching Deep Learning through the Spectral Dynamics of Weights <https://arxiv.org/pdf/2408.11804>`_
+    Analyzes deep neural nets from the context of spectral weights.  They claim to be able to distinguish "memorizing networks" from "generalizing networks", which sounds important, as well as identifying "lottery tickets", or sparse networks with exceptional performance.  This all sounds pretty grand, so maybe there's a there there.  Worth a read.
 
 `Out-of-Distribution Learning with Human Feedback <https://arxiv.org/pdf/2408.07772>`_
     How do you deal with out-of-distribution (OOD) data?  This paper proposes a method to detect the most important OOD datapoints from "wild data" (a great name), uses human feedback to label them, and then trains to both classify and identify OOD objects.  It's a cool method, and one we might be able to use in a "how to use the minimun amount of labels to best improve model performance" sort of way.
@@ -49,6 +49,12 @@ LLMs
 
 `To Code, or Not To Code? Exploring Impact of Code in Pre-training <https://arxiv.org/pdf/2408.10914>`_
     From Cohere.  Investigates the effects of including code in the training data for your LLM, and finds some pretty surprising results - mostly that including code helps improve the performance of your LLM on other tasks such as NLP reasoning and world knowledge.  Begs the question of "why", but they don't really answer that.
+
+`COA-GPT: Generative Pre-trained Transformers for Accelerated Course of Action Development in Military Operations <https://arxiv.org/html/2402.01786v1>`_
+    DEVCOM Army Research Lab puts out a paper about using LLMs to do COAs.  I'll leave an in-depth analysis for people who understand either of those things, but it sounds important.
+
+`Does Reasoning Emerge? Examining the Probabilities of Causation in Large Language Models <https://arxiv.org/pdf/2408.08210>`_
+    Investigates whether LLMs can do reasoning by looking at how they handle necessary and sufficient conditions.  Lots of formalism
 
 VLMs
 ----
@@ -139,6 +145,9 @@ Theory
 `Out-of-Distribution Learning with Human Feedback <https://arxiv.org/pdf/2408.07772>`_
     How do you deal with out-of-distribution (OOD) data?  This paper proposes a method to detect the most important OOD datapoints from "wild data" (a great name), uses human feedback to label them, and then trains to both classify and identify OOD objects.  It's a cool method, and one we might be able to use in a "how to use the minimun amount of labels to best improve model performance" sort of way.
 
+`Approaching Deep Learning through the Spectral Dynamics of Weights <https://arxiv.org/pdf/2408.11804>`_
+    Analyzes deep neural nets from the context of spectral weights.  They claim to be able to distinguish "memorizing networks" from "generalizing networks", which sounds important, as well as identifying "lottery tickets", or sparse networks with exceptional performance.  This all sounds pretty grand, so maybe there's a there there.  Worth a read.
+
 Applications
 ------------
 `Do grant proposal texts matter for funding decisions? A field experiment <https://link.springer.com/article/10.1007/s11192-024-04968-7>`_
@@ -146,6 +155,9 @@ Applications
 
 `Bye-Bye, Bye Advantage: Estimating the competitive impact of rest differential in the National Football League <https://arxiv.org/pdf/2408.10867>`_
     Important paper for all you fantasy football fans. Employs a Bayesian State Space model to model investigate the effects of having a bye week on a teams performance.  Finds a rather strong effect before the 2011 Collective Bargaining Agreement, but much less of an effect afterwards.
+
+`The Vizier Gaussian Process Bandit Algorithm <https://arxiv.org/pdf/2408.11527>`_
+    Google talks about some black-box optimization methods they've been employing internally for years.  Gaussian process based.  Provides production level code.  If we ever have to do black box optimization (Im not sure we do?) then this is the place to start.
 
 New Models
 --------
