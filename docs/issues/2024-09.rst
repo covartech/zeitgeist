@@ -179,6 +179,9 @@ New Models
 `Transformers to SSMs: Distilling Quadratic Knowledge to Subquadratic Models <https://arxiv.org/pdf/2408.10189>`_
     Figures out a way to distill a tranformer down to a SSM model.  Actually seems like a kind of cool process.Claims to be the best of its kind on the open source market, etc etc
 
+`Sapiens: Foundation for Human Vision Models <https://arxiv.org/pdf/2408.12569>`_
+    Meta releases a new foundation model for computer vision focussing on humans.  Seems decent, but rather limited in scope and the examples have large numbers of pixels on target, so likely not to be much use for us.
+
 Lunch and Learn
 ---------------
 2024-08-06
