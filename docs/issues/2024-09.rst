@@ -26,23 +26,11 @@ LLMs
 `Large Language Monkeys: Scaling Inference Compute with Repeated Sampling <https://arxiv.org/pdf/2407.21787>`_
     Generating accurate answers is hard, but verifying an answer is (sometimes) easy.  If you are living in a world where verifying an answer is easy, you can have an LLM generate a ton of answers and find th correct one.  Greatly improves performance.
 
-`LLM Critics Help Catch LLM Bugs <https://arxiv.org/pdf/2407.00215>`_
-    OpenAI proposes a new training method for LLMs to replace RLHF - use other LLMs to help grade the output of an LLM in a training process. Not directly applicable for us unless we want to train an LLM from scratch, but another paper using the idea of "generate some stuff with an LLM and then evaluate for downstream use" which seems to work well and might be relevant.
-
-`SceneCraft: An LLM Agent for Synthesizing 3D Scene as Blender Code <https://arxiv.org/pdf/2403.01248>`_
-    Google release a new LLM agent which can take natural language desriptions of a scene, generate Python scripts to render them in blender, and then iteratively refine the rendered scene.  Could be useful for some of our synthetic data generation.
-
-`Self-Taught Evaluators <https://arxiv.org/pdf/2408.02666>`_
-    From META FAIR.  Looks to improve evaluators using only synthetic data - no human labelling, no RLHF.  This sounds crazy, but training a judge in this way, without any human-labelled data, and using it to make Lamma 3 better actually made Llama 3 substantially better.
-
 `Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters <https://arxiv.org/pdf/2408.03314>`_
     Deepmind investigates how best to use a finite amount of test-time compute to get an LLM to give the best answer.  Results are nuanced and the paper seems worth reading.
 
 `SPREADSHEETLLM: Encoding Spreadsheets for Large Language Models <https://arxiv.org/pdf/2407.09025>`_
     Microsoft figures out how to give a spreadsheet to an LLM. Not really a problem we have, but somewhat interesting in that, represented data effectively to an LLM is not always super straightforward.
-
-`The Geometry of Categorical and Hierarchical Concepts in Large Language Models <https://arxiv.org/pdf/2406.01506>`_
-    If you ask an LLM to make a graph, or you just analyze them concepts understood by the graph, they have similar structure. Somewhat interesting that the implicit structure of the “understanding” of the LLM has graph like characteristics, hierarchy and relationships.
 
 `Does Liking Yellow Imply Driving a School Bus? Semantic Leakage in Language Models <https://gonenhila.github.io/files/Semantic_Leakage.pdf>`_
     Finds a new way LLMs can go horribly wrong, called semantic leakage, where two unrelated concepts get linked together in creative ways.  For instance, if you tell an LLM that Kenny likes the color yellow and then ask it what Kenny's job is, it will say that Kenny is a school bus driver because school busses are yellow. 
@@ -83,12 +71,6 @@ Autonomy
 `NOLO: Navigate Only Look Once <https://arxiv.org/pdf/2408.01384>`_
     Develops a transformer model to control navigation on a drone based on input video/images.
 
-Reinforcement Learning
-----------------------
-
-Fusion
-------
-
 Tracking
 --------
 `MART: MultiscAle Relational Transformer Networks for Multi-agent Trajectory Prediction <https://arxiv.org/pdf/2407.21635>`_
@@ -97,21 +79,18 @@ Tracking
 Gaussian Splatting
 ------------------
 `Feature Splatting: Language-Driven Physics-Based Scene Synthesis and Editing <https://arxiv.org/pdf/2404.01223>`_
-    Combines 3D Gaussian splats with VLMS and physics-based models to enable text-based scened decomposition and to simulate physics-based dynamics in a 3D Gaussian splat.  Duct-tapes a whole bunch of models together to get to a cool looking result
+    Combines 3D Gaussian splats with VLMs and physics-based models to enable text-based scened decomposition and to simulate physics-based dynamics in a 3D Gaussian splat.  Duct-tapes a whole bunch of models together to get to a cool looking result
 
 `3D Gaussian Editing with A Single Image <https://arxiv.org/pdf/2408.07540>`_
-    Develops a method that allows you to take a Gaussian splat, compress it to one image, modify that one image (photoshop?), and then generate a novel Gaussian splat corresponding to the changed image.  Seems cool, not sure what the use case it.
+    Develops a method that allows you to take a Gaussian splat, compress it to one image, modify that one image (photoshop?), and then generate a novel Gaussian splat corresponding to the changed image.  Seems cool, not sure what the use case is.
 
 `WaterSplatting: Fast Underwater 3D Scene Reconstruction Using Gaussian Splatting <https://arxiv.org/pdf/2408.08206>`_
-    Novel 3D Gaussian Splatting approach for underwater scenes.  Generalizes to foggy/rainy scenes on dry land.  Could be a good tool in a toolbox
+    Novel 3D Gaussian Splatting approach for underwater scenes.  Generalizes to foggy/rainy scenes on dry land.  Could be a good tool to have in our toolbox
 
 Gotta Go Fast
 -------------
 `CAS-ViT: Convolutional Additive Self-attention Vision Transformers for Efficient Mobile Applications <https://arxiv.org/pdf/2408.03703>`_
-    How to put vision transformers on an iPhone.  Hilariously, they cite a paper from 2009 showing vision transformer results?? This must be a typo?
-
-`Tree Attention: Topology-Aware Decoding for Long-Context Attention on GPU Clusters <https://arxiv.org/pdf/2408.04093>`_
-    Does some real fancy footwork to get "asymptotically" faster computational results for some part of transformers.  Code available.
+    How to put vision transformers on an iPhone.  Hilariously, they cite a paper from 2009 showing vision transformer results.  Were transformers even a thing in 2009?
 
 `How to Prune and Distill Llama-3.1 8B to an NVIDIA Llama-3.1-Minitron 4B Model <https://developer.nvidia.com/blog/how-to-prune-and-distill-llama-3-1-8b-to-an-nvidia-llama-3-1-minitron-4b-model/>`_
     NVIDIA takes Llama-3.1 8B and turns it into a 4B parameter model with minimal decrease in performance somehow.  I guess NVIDIA is just better at this than Meta?
@@ -124,12 +103,6 @@ Theory
 `Disentangling Dense Embeddings with Sparse Autoencoders <https://arxiv.org/pdf/2408.00657>`_
     If you have dense embeddings, you can hit them with a sparse autoencoder and have sparse embeddings that maintain semantic fidelity.  Feels like there is something useful here, but can't quite put my finger on what.
 
-`Autoencoders in Function Space <https://arxiv.org/pdf/2408.01362>`_
-    Develops a variational autoencoder which functions directly on function space.  The imagined applications included computer vision, with image pixels being viewed as a pixelization of a functional space. Shows some promise on inpainting/superresolution problems.  Very theoretical, though
-
-`Pre-training and in-context learning IS Bayesian inference a la De Finetti <https://arxiv.org/pdf/2408.03307>`_
-    A very funny paper that argues pre-training and in-context learning is Bayesian inference because of De Finetti's theorem.  Not useful, but worth it for the comedy.
-
 `Beyond Euclid: An Illustrated Guide to Modern Machine Learning with Geometric, Topological, and Algebraic Structures <https://www.arxiv.org/pdf/2407.09468>`_
     Cool overview with lots of pictures. Doing ML in non-vector spaces is basically what we need to do.
 
@@ -138,9 +111,6 @@ Theory
 
 `Your Classifier Can Be Secretly a Likelihood-Based OOD Detector <https://arxiv.org/pdf/2408.04851>`_
     Another paper in the "classifiers do OOD detection" bin.  Results seem decently convincing?
-
-`Ensemble everything everywhere: Multi-scale aggregation for adversarial robustness <https://arxiv.org/pdf/2408.05446>`_
-    From Deepmind.  Proposes a novel, ensemble-based method for robustness to adversarial attacks.  Worth keeping an eye on if this stuff is ever of interest.
 
 `Out-of-Distribution Learning with Human Feedback <https://arxiv.org/pdf/2408.07772>`_
     How do you deal with out-of-distribution (OOD) data?  This paper proposes a method to detect the most important OOD datapoints from "wild data" (a great name), uses human feedback to label them, and then trains to both classify and identify OOD objects.  It's a cool method, and one we might be able to use in a "how to use the minimun amount of labels to best improve model performance" sort of way.
