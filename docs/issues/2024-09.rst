@@ -6,8 +6,8 @@ Featured
 `Beyond Euclid: An Illustrated Guide to Modern Machine Learning with Geometric, Topological, and Algebraic Structures <https://www.arxiv.org/pdf/2407.09468>`_
     Cool overview with lots of pictures. Doing ML in non-vector spaces is basically what we need to do.
 
-`Feature Splatting: Language-Driven Physics-Based Scene Synthesis and Editing <https://arxiv.org/pdf/2404.01223>`_
-    Combines 3D Gaussian splats with VLMS and physics-based models to enable text-based scened decomposition and to simulate physics-based dynamics in a 3D Gaussian splat.  Duct-tapes a whole bunch of models together to get to a cool looking result
+`Automating Thought of Search: A Journey Towards Soundness and Completeness <https://arxiv.org/pdf/2408.11326>`_
+    From IBM.  Briefly reviews Thought of Search, a human-in-the-loop method which apparently has a 100% success rate in using LLMs as planning agents.  This paper automates ToS so no human is necessary, while maintaining 100% success.  The sucess may in part be explained by the test set, which seems to include five (somewhat simple?) toy problem sets.  Still impressive, and includes a section about getting LLMs to code reliably.
 
 `Does Liking Yellow Imply Driving a School Bus? Semantic Leakage in Language Models <https://gonenhila.github.io/files/Semantic_Leakage.pdf>`_
     Finds a new way LLMs can go horribly wrong, called semantic leakage, where two unrelated concepts get linked together in creative ways.  For instance, if you tell an LLM that Kenny likes the color yellow and then ask it what Kenny's job is, it will say that Kenny is a school bus driver because school busses are yellow. 
@@ -66,10 +66,16 @@ Doctrinaire
 `MeshFormer: High-Quality Mesh Generation with 3D-Guided Reconstruction Model <https://arxiv.org/pdf/2408.10198>`_
     A novel method for 2D to 3D, sparse image to 3D, and text to 3D generation.  The abstract kind of reads like a madlibs of methods, but the results seem decent.
 
+`Joint Image De-noising and Enhancement for Satellite-Based SAR <https://arxiv.org/pdf/2408.12671>`_
+    Develops a novel algorithm for de-noising and enhancing remote sensing SAR imagery.  Actually seems like it might use science instead of machine learning mumbo jumbo.  
+
 Autonomy
 --------
 `NOLO: Navigate Only Look Once <https://arxiv.org/pdf/2408.01384>`_
     Develops a transformer model to control navigation on a drone based on input video/images.
+
+`Automating Thought of Search: A Journey Towards Soundness and Completeness <https://arxiv.org/pdf/2408.11326>`_
+    From IBM.  Briefly reviews Thought of Search, a human-in-the-loop method which apparently has a 100% success rate in using LLMs as planning agents.  This paper automates ToS so no human is necessary, while maintaining 100% success.  The sucess may in part be explained by the test set, which seems to include five (somewhat simple?) toy problem sets.  Still impressive, and includes a section about getting LLMs to code reliably.
 
 Tracking
 --------
