@@ -1,3 +1,5 @@
+
+2024-08-27
 2024-09
 =======
 
@@ -124,6 +126,9 @@ Theory
 `Approaching Deep Learning through the Spectral Dynamics of Weights <https://arxiv.org/pdf/2408.11804>`_
     Analyzes deep neural nets from the context of spectral weights.  They claim to be able to distinguish "memorizing networks" from "generalizing networks", which sounds important, as well as identifying "lottery tickets", or sparse networks with exceptional performance.  This all sounds pretty grand, so maybe there's a there there.  Worth a read.
 
+`Rethinking Knowledge Transfer in Learning Using Privileged Information <https://arxiv.org/pdf/2408.14319>`_
+    Some people have tried an interesting training method where you have privieged information (PI) that is available only during training.  This paper says that using PI this way has no theoretical or practical basis and should never be done.
+
 Applications
 ------------
 `Do grant proposal texts matter for funding decisions? A field experiment <https://link.springer.com/article/10.1007/s11192-024-04968-7>`_
@@ -163,3 +168,7 @@ Lunch and Learn
 2024-08-06
     `Large Language Monkeys: Scaling Inference Compute with Repeated Sampling <https://arxiv.org/pdf/2407.21787>`_
     Generating accurate answers is hard, but verifying an answer is (sometimes) easy.  If you are living in a world where verifying an answer is easy, you can have an LLM generate a ton of answers and find th correct one.  Greatly improves performance.
+
+2024-08-27
+    `COA-GPT: Generative Pre-trained Transformers for Accelerated Course of Action Development in Military Operations <https://arxiv.org/html/2402.01786v1>`_
+    DEVCOM Army Research Lab puts out a paper about using LLMs to do COAs.  I'll leave an in-depth analysis for people who understand either of those things, but it sounds important.
