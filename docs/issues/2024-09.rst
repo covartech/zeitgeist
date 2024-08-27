@@ -1,5 +1,3 @@
-
-2024-08-27
 2024-09
 =======
 
@@ -25,23 +23,17 @@ Featured
 
 LLMs
 ----
-`Large Language Monkeys: Scaling Inference Compute with Repeated Sampling <https://arxiv.org/pdf/2407.21787>`_
-    Generating accurate answers is hard, but verifying an answer is (sometimes) easy.  If you are living in a world where verifying an answer is easy, you can have an LLM generate a ton of answers and find th correct one.  Greatly improves performance.
-
 `Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters <https://arxiv.org/pdf/2408.03314>`_
     Deepmind investigates how best to use a finite amount of test-time compute to get an LLM to give the best answer.  Results are nuanced and the paper seems worth reading.
 
 `SPREADSHEETLLM: Encoding Spreadsheets for Large Language Models <https://arxiv.org/pdf/2407.09025>`_
-    Microsoft figures out how to give a spreadsheet to an LLM. Not really a problem we have, but somewhat interesting in that, represented data effectively to an LLM is not always super straightforward.
+    Microsoft figures out how to give a spreadsheet to an LLM. Not really a problem we have, but somewhat interesting in that, representing data effectively to an LLM is not always super straightforward.
 
 `Does Liking Yellow Imply Driving a School Bus? Semantic Leakage in Language Models <https://gonenhila.github.io/files/Semantic_Leakage.pdf>`_
     Finds a new way LLMs can go horribly wrong, called semantic leakage, where two unrelated concepts get linked together in creative ways.  For instance, if you tell an LLM that Kenny likes the color yellow and then ask it what Kenny's job is, it will say that Kenny is a school bus driver because school busses are yellow. 
 
 `To Code, or Not To Code? Exploring Impact of Code in Pre-training <https://arxiv.org/pdf/2408.10914>`_
-    From Cohere.  Investigates the effects of including code in the training data for your LLM, and finds some pretty surprising results - mostly that including code helps improve the performance of your LLM on other tasks such as NLP reasoning and world knowledge.  Begs the question of "why", but they don't really answer that.
-
-`COA-GPT: Generative Pre-trained Transformers for Accelerated Course of Action Development in Military Operations <https://arxiv.org/html/2402.01786v1>`_
-    DEVCOM Army Research Lab puts out a paper about using LLMs to do COAs.  I'll leave an in-depth analysis for people who understand either of those things, but it sounds important.
+    From Cohere.  Investigates the effects of including code in the training data for your LLM, and finds some pretty interesting results - mostly that including code helps improve the performance of your LLM on other tasks such as NLP reasoning and world knowledge.  Begs the question of "why", but they don't really answer that.
 
 `Does Reasoning Emerge? Examining the Probabilities of Causation in Large Language Models <https://arxiv.org/pdf/2408.08210>`_
     Investigates whether LLMs can do reasoning by looking at how they handle necessary and sufficient conditions.  Lots of formalism
