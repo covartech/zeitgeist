@@ -163,4 +163,4 @@ Lunch and Learn
 
 2024-08-27
     `COA-GPT: Generative Pre-trained Transformers for Accelerated Course of Action Development in Military Operations <https://arxiv.org/html/2402.01786v1>`_
-    DEVCOM Army Research Lab puts out a paper about using LLMs to do COAs.  I'll leave an in-depth analysis for people who understand either of those things, but it sounds important.
+    DEVCOM Army Research Lab used GPT4-Turbo to play PySC2 (Armyified StarCraft battle simulator) and it came up with either a movement or attack for each blue unit and they called that a COA. It's alright because of cutting edge model but only predicts one action for each unit (no updates over time).
