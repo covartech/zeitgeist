@@ -18,8 +18,8 @@ Featured
 `Out-of-Distribution Learning with Human Feedback <https://arxiv.org/pdf/2408.07772>`_
     How do you deal with out-of-distribution (OOD) data?  This paper proposes a method to detect the most important OOD datapoints from "wild data" (a great name), uses human feedback to label them, and then trains to both classify and identify OOD objects.  It's a cool method, and one we might be able to use in a "how to use the minimun amount of labels to best improve model performance" sort of way.
 
-`Bye-Bye, Bye Advantage: Estimating the competitive impact of rest differential in the National Football League <https://arxiv.org/pdf/2408.10867>`_
-    Important paper for all you fantasy football fans. Employs a Bayesian State Space model to model investigate the effects of having a bye week on a teams performance.  Finds a rather strong effect before the 2011 Collective Bargaining Agreement, but much less of an effect afterwards.
+`DIFFUSION MODELS ARE REAL-TIME GAME ENGINES <https://arxiv.org/pdf/2408.14837>`_
+    Can it run Doom?  Some researchers at Google have made a neural net, GameNGen, for which the answer is yes.  Seems like this is just a fun science experiment at first, but there might be something here with having a neural net that will let you dynamically interact/move through 3D world models (Gaussian splatted?) for reconnassiance/intelligence/training purposes.  No word on whether it can run Crysis.
 
 LLMs
 ----
@@ -97,6 +97,9 @@ Gotta Go Fast
 
 `FPCA: FIELD-PROGRAMMABLE PIXEL CONVOLUTIONAL ARRAY FOR EXTREME-EDGE INTELLIGENCE <https://arxiv.org/pdf/2408.10233>`_
     I don't know what an FPCA is, but it seems morally similar to an FPGA.  Worth keeping an eye on?
+
+`The Mamba in the Llama: Distilling and Accelerating Hybrid Models <https://arxiv.org/pdf/2408.15237>`_
+    Takes a transformer and distills it down to an RNN without losing performance.  It's kind of interesting that this works better than training an RNN from scratch - or maybe the transformer was just trained better than the best RNN.
 
 Theory
 ------
