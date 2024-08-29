@@ -38,6 +38,9 @@ LLMs
 `Does Reasoning Emerge? Examining the Probabilities of Causation in Large Language Models <https://arxiv.org/pdf/2408.08210>`_
     Investigates whether LLMs can do reasoning by looking at how they handle necessary and sufficient conditions.  Lots of formalism
 
+`SciLitLLM: How to Adapt LLMs for Scientific Literature Understanding <https://arxiv.org/pdf/2408.15545>`_
+    A suite of LLMs to read scientic papers/abstracts and extract useful info in JSON format.  Seems useful for LitCoin.
+
 VLMs
 ----
 `LONGVILA: SCALING LONG-CONTEXT VISUAL LANGUAGE MODELS FOR LONG VIDEOS <https://arxiv.org/pdf/2408.10188>`_
@@ -99,7 +102,10 @@ Gotta Go Fast
     NVIDIA takes Llama-3.1 8B and turns it into a 4B parameter model with minimal decrease in performance somehow.  I guess NVIDIA is just better at this than Meta?
 
 `FPCA: FIELD-PROGRAMMABLE PIXEL CONVOLUTIONAL ARRAY FOR EXTREME-EDGE INTELLIGENCE <https://arxiv.org/pdf/2408.10233>`_
-    I don't know what an FPCA is, but it seems morally similar to an FPGA.  Worth keeping an eye on?
+    This is really really cool. They came up with a way to have a re-programable circuit behind the pixels on the sensor. So at image capture they can run computations (convolutions). This means you could run super low-power, low-latency CNNs basically as you capture the image. This has been done before, but they're showing off a the re-programmable version so you can change the algorithm without remanufacturing the chip.
+
+`Transformers to SSMs: Distilling Quadratic Knowledge to Subquadratic Models <https://arxiv.org/pdf/2408.10189>`_
+    Figures out a way to distill a tranformer down to a SSM model.  Actually seems like a kind of cool process.Claims to be the best of its kind on the open source market, etc etc
 
 `The Mamba in the Llama: Distilling and Accelerating Hybrid Models <https://arxiv.org/pdf/2408.15237>`_
     Takes a transformer and distills it down to an RNN without losing performance.  It's kind of interesting that this works better than training an RNN from scratch - or maybe the transformer was just trained better than the best RNN.
@@ -137,9 +143,6 @@ Applications
 `Do grant proposal texts matter for funding decisions? A field experiment <https://link.springer.com/article/10.1007/s11192-024-04968-7>`_
     A dutch study finds that an abstract and CV hold as much weight as a full proposal. Your representation, connections, and elevator pitch are what matter.  I wonder if this generalizes to other countries/institutions?
 
-`Bye-Bye, Bye Advantage: Estimating the competitive impact of rest differential in the National Football League <https://arxiv.org/pdf/2408.10867>`_
-    Important paper for all you fantasy football fans. Employs a Bayesian State Space model to model investigate the effects of having a bye week on a teams performance.  Finds a rather strong effect before the 2011 Collective Bargaining Agreement, but much less of an effect afterwards.
-
 `The Vizier Gaussian Process Bandit Algorithm <https://arxiv.org/pdf/2408.11527>`_
     Google talks about some black-box optimization methods they've been employing internally for years.  Gaussian process based.  Provides production level code.  If we ever have to do black box optimization (Im not sure we do?) then this is the place to start.
 
@@ -160,14 +163,8 @@ New Models
 `Transfusion: Predict the Next Token and Diffuse Images with One Multi-Modal Model <https://arxiv.org/pdf/2408.11039>`_
     Meta's new multi-model foundation model.  Can take text and images as part of the same input, as well as generating images.  Can handle complex(ish) instructions for image editting.
 
-`Transformers to SSMs: Distilling Quadratic Knowledge to Subquadratic Models <https://arxiv.org/pdf/2408.10189>`_
-    Figures out a way to distill a tranformer down to a SSM model.  Actually seems like a kind of cool process.Claims to be the best of its kind on the open source market, etc etc
-
 `Sapiens: Foundation for Human Vision Models <https://arxiv.org/pdf/2408.12569>`_
     Meta releases a new foundation model for computer vision focussing on humans.  Seems decent, but rather limited in scope and the examples have large numbers of pixels on target, so likely not to be much use for us.
-
-`SciLitLLM: How to Adapt LLMs for Scientific Literature Understanding <https://arxiv.org/pdf/2408.15545>`_
-    A suite of LLMs to read scientic papers/abstracts and extract useful info in JSON format.  Seems useful for LitCoin.
 
 Lunch and Learn
 ---------------
