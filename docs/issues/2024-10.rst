@@ -1,0 +1,41 @@
+The CoVar Zeitgeist: 2024-10
+============================
+
+Featured
+--------
+
+LLMs
+----
+
+VLMs
+----
+
+Doctrinaire
+-----------
+
+Autonomy
+--------
+
+Tracking
+--------
+
+Gaussian Splatting
+------------------
+
+Gotta Go Fast
+-------------
+
+Geometric Deep Learning
+-----------------------
+
+Theory
+------
+
+Applications
+------------
+
+New Models
+--------
+
+Lunch and Learn
+---------------
