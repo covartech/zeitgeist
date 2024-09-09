@@ -4,14 +4,39 @@ The CoVar Zeitgeist: 2024-10
 Featured
 --------
 
+`Future Does Matter: Boosting 3D Object Detection with Temporal Motion Estimation in Point Cloud Sequences <https://arxiv.org/pdf/2409.04390>`_
+    A framework for 3D object detection framework that can learn spatio-temporal features.  Possibly of interest to us if we go this route.  Has my favorite type of paper section, the appendix that starts with "the reviewer wanted..."    
+
+`An overview of domain-specific foundation model: key technologies, applications and challenges <https://arxiv.org/pdf/2409.04267>`_
+    Review paper for foundation models, what they are, how to use them, etc.  We want to/are already doing this, and this is a nice summary of the field.
+
+`Can Unconfident LLM Annotations Be Used for Confident Conclusions? <https://arxiv.org/pdf/2408.15204>`_
+    Investigates how to best use LLMs to label a large amount of unlabelled data in a manner where you can be somewhat reliably assured of the outcome. Uses "active inference" (whatever that is) to strategically select the best datapoints to have humans label to increase the LLMs performance. Could be a useful thing for us to know how to do.
+
+`Causal effect of the infield shift in the MLB <https://arxiv.org/pdf/2409.03940>`_
+    Finds that the infield shift was in fact effective at preventing runs, but especially so against left-handed batters.  Apparently there hadn't been a causal analysis of the subject, which makes the MLB's decision to ban the infield shift funny even if it was validated in hindsight.
+
+`Deep Clustering of Remote Sensing Scenes through Heterogeneous Transfer Learning <https://arxiv.org/pdf/2409.03938>`_
+    A collaboration between Texas A&M and the Intelligence and Space Research at Los Alamos, this paper clusters remote sensing scenes using (1) a pretrained neural net, (2) manifold projection, and (3) Bayesian clustering techniques.  Decently effective, and feels like maybe we can leverage a similar approach for automatically detecting image backgrounds and doing context-based learning thereafter.
+
+`Meta Flow Matching: Integrating Vector Fields on the Wasserstein Manifold <https://arxiv.org/pdf/2408.14608>`_
+    Proposes a new method, based on some fancypants mathematics/physics, to model systems where a large amount of interacting entities evovle continuously over time.  The main application is single-cell drug screen tests, but you could see appplications to other agent-based modelling areas such as modelling warfighters.
+    
 LLMs
 ----
-
+`Can Unconfident LLM Annotations Be Used for Confident Conclusions? <https://arxiv.org/pdf/2408.15204>`_
+    Investigates how to best use LLMs to label a large amount of unlabelled data in a manner where you can be somewhat reliably assured of the outcome. Uses "active inference" (whatever that is) to strategically select the best datapoints to have humans label to increase the LLMs performance. Could be a useful thing for us to know how to do.
+    
 VLMs
 ----
 
 Doctrinaire
 -----------
+`Future Does Matter: Boosting 3D Object Detection with Temporal Motion Estimation in Point Cloud Sequences <https://arxiv.org/pdf/2409.04390>`_
+    A framework for 3D object detection framework that can learn spatio-temporal features.  Possibly of interest to us if we go this route.  Has my favorite type of paper section, the appendix that starts with "the reviewer wanted..."    
+
+`Deep Clustering of Remote Sensing Scenes through Heterogeneous Transfer Learning <https://arxiv.org/pdf/2409.03938>`_
+    A collaboration between Texas A&M and the Intelligence and Space Research at Los Alamos, this paper clusters remote sensing scenes using (1) a pretrained neural net, (2) manifold projection, and (3) Bayesian clustering techniques.  Decently effective, and feels like maybe we can leverage a similar approach for automatically detecting image backgrounds and doing context-based learning thereafter.
 
 Autonomy
 --------
@@ -28,14 +53,31 @@ Gotta Go Fast
 Geometric Deep Learning
 -----------------------
 
+Out of Distribution
+-------------------
+`RESULTANT: INCREMENTAL EFFECTIVENESS ON LIKELIHOOD FOR UNSUPERVISED OUT-OF-DISTRIBUTION DETECTION <https://arxiv.org/pdf/2409.03801>`_
+    A paper that focusses specifically on hard out-of-distribution detection problems as opposed to easy ones.  Some good thoughts in here on focussing on incremental increases over a baseline.
+
 Theory
 ------
+`An overview of domain-specific foundation model: key technologies, applications and challenges <https://arxiv.org/pdf/2409.04267>`_
+    Review paper for foundation models, what they are, how to use them, etc.  We want to/are already doing this, and this is a nice summary of the field.
+
+`Theory, Analysis, and Best Practices for Sigmoid Self-Attention <https://arxiv.org/pdf/2409.04431>`_
+    Apple investigates what happens when you use sigmoid self-attention instead of ReLu or softmax.  A bit of a lab manual, but a nice treatment of the subject.
+
+`Meta Flow Matching: Integrating Vector Fields on the Wasserstein Manifold <https://arxiv.org/pdf/2408.14608>`_
+    Proposes a new method, based on some fancypants mathematics/physics, to model systems where a large amount of interacting entities evovle continuously over time.  The main application is single-cell drug screen tests, but you could see appplications to other agent-based modelling areas such as modelling warfighters.
 
 Applications
 ------------
+`Causal effect of the infield shift in the MLB <https://arxiv.org/pdf/2409.03940>`_
+    Finds that the infield shift was in fact effective at preventing runs, but especially so against left-handed batters.  Apparently there hadn't been a causal analysis of the subject, which makes the MLB's decision to ban the infield shift funny even if it was validated in hindsight.
 
 New Models
 --------
+`OLMoE: Open Mixture-of-Experts Language Models <https://arxiv.org/pdf/2409.02060>`_
+    A 7B parameter mixture of experts model that uses only 1B parameters per input token.  Claims to outperform all similarly-sized models and even some bigger ones (shock).  Weights are available.
 
 Lunch and Learn
 ---------------
