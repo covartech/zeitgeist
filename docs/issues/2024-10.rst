@@ -52,6 +52,9 @@ Reasoning
 `SCIAGENTS: AUTOMATING SCIENTIFIC DISCOVERY THROUGH MULTI-AGENT INTELLIGENT GRAPH REASONING <https://arxiv.org/pdf/2409.05556>`_
     Researchers from MIT propose a new method for doing reasoning over knowledge graphs.  Could be useful for LitCoin/ODIN/Translator.
 
+`HybridFC: A Hybrid Fact-Checking Approach for Knowledge Graphs <https://arxiv.org/pdf/2409.06692>`_
+    Proposes a new fact-checking method for knowledge graphs leveraging ensemble methods.  Doubles the "best" AUC from 0.14 to 0.27.
+
 Tracking
 --------
 
