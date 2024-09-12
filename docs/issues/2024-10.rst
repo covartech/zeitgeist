@@ -16,12 +16,12 @@ Featured
 `Moving from Machine Learning to Statistics: the case of Expected Points in American football <https://arxiv.org/pdf/2409.04889>`_
     Publicly available football analytics is apparently a bit of the wild west where machine learning tools are just thrown all over the place.  This paper claims that this methodology ignores some important statistical properties of the data which, when taken into account, can improve performance.  Demonstrates that understanding and properly modelling data is still important.
 
-`Can LLMs Generate Novel Research Ideas? <https://arxiv.org/pdf/2409.04109>`_
-    Group from Stanford runs a study where they compare human-generated an LLM-generated research proposals and find that the LLMs are both mroe novel and less feasible than the humans, on average.  Could be something signifcant about LLMs, could be that humans are trained to generate ideas that get funding.
-
 `SCIAGENTS: AUTOMATING SCIENTIFIC DISCOVERY THROUGH MULTI-AGENT INTELLIGENT GRAPH REASONING <https://arxiv.org/pdf/2409.05556>`_
     Researchers from MIT propose a new method for doing reasoning over knowledge graphs.  Could be useful for LitCoin/ODIN/Translator.
-    
+
+`Hi3D: Pursuing High-Resolution Image-to-3D Generation with Video Diffusion Models <https://arxiv.org/pdf/2409.07452>`_
+    A new method from Fudan University that strings together multiple U-Nets, Encoders, and Decoders to turn a single image of an object into a 3D mesh of that object, and then use Gaussian Splatting to create a video.  Results seem impressive.  We might be able to leverage this for 3D object detection purposes.
+
 LLMs
 ----
 `Can Unconfident LLM Annotations Be Used for Confident Conclusions? <https://arxiv.org/pdf/2408.15204>`_
@@ -43,6 +43,9 @@ Doctrinaire
 
 `Deep Clustering of Remote Sensing Scenes through Heterogeneous Transfer Learning <https://arxiv.org/pdf/2409.03938>`_
     A collaboration between Texas A&M and the Intelligence and Space Research at Los Alamos, this paper clusters remote sensing scenes using (1) a pretrained neural net, (2) manifold projection, and (3) Bayesian clustering techniques.  Decently effective, and feels like maybe we can leverage a similar approach for automatically detecting image backgrounds and doing context-based learning thereafter.
+
+`Hi3D: Pursuing High-Resolution Image-to-3D Generation with Video Diffusion Models <https://arxiv.org/pdf/2409.07452>`_
+    A new method from Fudan University that strings together multiple U-Nets, Encoders, and Decoders to turn a single image of an object into a 3D mesh of that object, and then use Gaussian Splatting to create a video.  Results seem impressive.  We might be able to leverage this for 3D object detection purposes.
 
 Autonomy
 --------
@@ -94,10 +97,16 @@ Applications
 `Moving from Machine Learning to Statistics: the case of Expected Points in American football <https://arxiv.org/pdf/2409.04889>`_
     Publicly available football analytics is apparently a bit of the wild west where machine learning tools are just thrown all over the place.  This paper claims that this methodology ignores some important statistical properties of the data which, when taken into account, can improve performance.  Demonstrates that understanding and properly modelling data is still important.
 
+`A Framework for Predicting the Impact of Game Balance Changes through Meta Discovery <https://arxiv.org/pdf/2409.07340>`_
+    A cool paper that uses RL algorithms to simulate the metagame on Pokemon Showdown, with an interest in simulating metagames after certain pokemon are banned. 
+
 New Models
 --------
 `OLMoE: Open Mixture-of-Experts Language Models <https://arxiv.org/pdf/2409.02060>`_
     A 7B parameter mixture of experts model that uses only 1B parameters per input token.  Claims to outperform all similarly-sized models and even some bigger ones (shock).  Weights are available.
+
+`Introducing OpenAI o1-preview <https://openai.com/index/learning-to-reason-with-llms/>`_
+    OpenAI gets LLMs to be much better at reasoning by training them to think about things before they answer.  Simple idea, but the results are incredibly impressive.
 
 Lunch and Learn
 ---------------
