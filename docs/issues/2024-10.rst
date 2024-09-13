@@ -4,8 +4,8 @@ The CoVar Zeitgeist: 2024-10
 Featured
 --------
 
-`Future Does Matter: Boosting 3D Object Detection with Temporal Motion Estimation in Point Cloud Sequences <https://arxiv.org/pdf/2409.04390>`_
-    A framework for 3D object detection framework that can learn spatio-temporal features.  Possibly of interest to us if we go this route.  Has my favorite type of paper section, the appendix that starts with "the reviewer wanted..."    
+`Aligning Machine and Human Visual Representations across Abstraction Levels <https://arxiv.org/pdf/2409.06509>`_
+    From Deepmind.  Attempts to improve VLMs by making them think more like humans - that is, hierarchically, from coarse to fine grained concepts. Uses a teacher model to mimic this intuition and inpart it to a student model.  Best performance in the field etc etc
 
 `An overview of domain-specific foundation model: key technologies, applications and challenges <https://arxiv.org/pdf/2409.04267>`_
     Review paper for foundation models, what they are, how to use them, etc.  We want to/are already doing this, and this is a nice summary of the field.
@@ -35,6 +35,8 @@ LLMs
 
 VLMs
 ----
+`Aligning Machine and Human Visual Representations across Abstraction Levels <https://arxiv.org/pdf/2409.06509>`_
+    From Deepmind.  Attempts to improve VLMs by making them think more like humans - that is, hierarchically, from coarse to fine grained concepts. Uses a teacher model to mimic this intuition and inpart it to a student model.  Best performance in the field etc etc
 
 Doctrinaire
 -----------
@@ -60,6 +62,8 @@ Reasoning
 
 Tracking
 --------
+`Gaussian Process Upper Confidence Bounds in Distributed Point Target Tracking over Wireless Sensor Networks <https://arxiv.org/pdf/2409.07652>`_
+    This paper has a coathuor from DEVCOM Army Reserach  Lab.  Uses a Gaussian Process approach for point-tracking with Bayesian filtering.  Lots of pretty pictures.
 
 Gaussian Splatting
 ------------------
@@ -69,6 +73,11 @@ Gotta Go Fast
 
 Geometric Deep Learning
 -----------------------
+
+Adversarial
+-----------
+`LoRID: Low-Rank Iterative Diffusion for Adversarial Purification <https://arxiv.org/pdf/2409.08255>`_
+    Researchers at Los Alamos develop an interative diffusion process to remove adversarial perturbations from images.  Reading the paper does kind of feel like joing a discourse halfway through, so presumably this is an area of research in the literature.
 
 Out of Distribution
 -------------------
@@ -108,5 +117,11 @@ New Models
 `Introducing OpenAI o1-preview <https://openai.com/index/learning-to-reason-with-llms/>`_
     OpenAI gets LLMs to be much better at reasoning by training them to think about things before they answer.  Simple idea, but the results are incredibly impressive.
 
+`WHAT MAKES A MAZE LOOK LIKE A MAZE? <https://arxiv.org/pdf/2409.08202>`_
+    A new VLM which has a better understanding of abstract concepts such as what a maze looks like.
+
 Lunch and Learn
 ---------------
+2024-09-10
+    `Matryoshka Representation Learning <https://arxiv.org/pdf/2205.13147>`_
+    A neat way to trade off embedding size for performance on downstream tasks - e.g., image/document retrieval/classification - without training multiple networks. This capability may be useful for multi-platform AiTR, where available bandwidth may vary depending on network conditions.
