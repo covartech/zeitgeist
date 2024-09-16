@@ -19,8 +19,8 @@ Featured
 `SCIAGENTS: AUTOMATING SCIENTIFIC DISCOVERY THROUGH MULTI-AGENT INTELLIGENT GRAPH REASONING <https://arxiv.org/pdf/2409.05556>`_
     Researchers from MIT propose a new method for doing reasoning over knowledge graphs.  Could be useful for LitCoin/ODIN/Translator.
 
-`Hi3D: Pursuing High-Resolution Image-to-3D Generation with Video Diffusion Models <https://arxiv.org/pdf/2409.07452>`_
-    A new method from Fudan University that strings together multiple U-Nets, Encoders, and Decoders to turn a single image of an object into a 3D mesh of that object, and then use Gaussian Splatting to create a video.  Results seem impressive.  We might be able to leverage this for 3D object detection purposes.
+`DepthCrafter: Generating Consistent Long Depth Sequences for Open-world Videos <https://arxiv.org/pdf/2409.02095>`_
+    Depth estimation for videos.  Returns temporally consistent results for every frame.  Doesn't need any metadata.  Supports a temproal context length of 110 frames but can also provide estimates for "extremely long" videos by dividing them up into overlapping sequences of appropriate length.  Seems better than Depth-Anything and they have a github.
 
 LLMs
 ----
@@ -48,6 +48,9 @@ Doctrinaire
 
 `Hi3D: Pursuing High-Resolution Image-to-3D Generation with Video Diffusion Models <https://arxiv.org/pdf/2409.07452>`_
     A new method from Fudan University that strings together multiple U-Nets, Encoders, and Decoders to turn a single image of an object into a 3D mesh of that object, and then use Gaussian Splatting to create a video.  Results seem impressive.  We might be able to leverage this for 3D object detection purposes.
+
+`DepthCrafter: Generating Consistent Long Depth Sequences for Open-world Videos <https://arxiv.org/pdf/2409.02095>`_
+    Depth estimation for videos.  Returns temporally consistent results for every frame.  Doesn't need any metadata.  Supports a temproal context length of 110 frames but can also provide estimates for "extremely long" videos by dividing them up into overlapping sequences of appropriate length.  Seems better than Depth-Anything and they have a github.
 
 Autonomy
 --------
@@ -108,6 +111,9 @@ Applications
 
 `A Framework for Predicting the Impact of Game Balance Changes through Meta Discovery <https://arxiv.org/pdf/2409.07340>`_
     A cool paper that uses RL algorithms to simulate the metagame on Pokemon Showdown, with an interest in simulating metagames after certain pokemon are banned. 
+
+`THE UNDERREPORTED DEATH TOLL OF WARS: A PROBABILISTIC REASSESSMENT FROM A STRUCTURED EXPERT ELICITATION <https://arxiv.org/pdf/2409.08779>`_
+    An interesting paper that tries to account for under-reporting of battlefield fatality statistics in the Uppsala Conflict Data Program.  Somehow, most of the co-authors seem to work at Uppsala so the snake is eating its own tail a bit here.  The mechanics of what they're doing here isn't anything revolutionary, but this sort of problem seems like it might be of interest to various parts of the IC.
 
 New Models
 --------
