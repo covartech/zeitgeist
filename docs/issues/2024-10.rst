@@ -19,8 +19,8 @@ Featured
 `SCIAGENTS: AUTOMATING SCIENTIFIC DISCOVERY THROUGH MULTI-AGENT INTELLIGENT GRAPH REASONING <https://arxiv.org/pdf/2409.05556>`_
     Researchers from MIT propose a new method for doing reasoning over knowledge graphs.  Could be useful for LitCoin/ODIN/Translator.
 
-`DepthCrafter: Generating Consistent Long Depth Sequences for Open-world Videos <https://arxiv.org/pdf/2409.02095>`_
-    Depth estimation for videos.  Returns temporally consistent results for every frame.  Doesn't need any metadata.  Supports a temproal context length of 110 frames but can also provide estimates for "extremely long" videos by dividing them up into overlapping sequences of appropriate length.  Seems better than Depth-Anything and they have a github.
+`Estimating Wage Disparities Using Foundation Models <https://arxiv.org/pdf/2409.09894>`_
+    David Blei and some co-authors explore using foundation models for counterfactual forecasting in observational causal inference.  You could pick at a lot of stuff they do, but it's a cool case study as to how foundation models can be deployed in interesting ways.
 
 LLMs
 ----
@@ -49,8 +49,8 @@ Doctrinaire
 `Hi3D: Pursuing High-Resolution Image-to-3D Generation with Video Diffusion Models <https://arxiv.org/pdf/2409.07452>`_
     A new method from Fudan University that strings together multiple U-Nets, Encoders, and Decoders to turn a single image of an object into a 3D mesh of that object, and then use Gaussian Splatting to create a video.  Results seem impressive.  We might be able to leverage this for 3D object detection purposes.
 
-`DepthCrafter: Generating Consistent Long Depth Sequences for Open-world Videos <https://arxiv.org/pdf/2409.02095>`_
-    Depth estimation for videos.  Returns temporally consistent results for every frame.  Doesn't need any metadata.  Supports a temproal context length of 110 frames but can also provide estimates for "extremely long" videos by dividing them up into overlapping sequences of appropriate length.  Seems better than Depth-Anything and they have a github.
+`Prompt-and-Transfer: Dynamic Class-aware Enhancement for Few-shot Segmentation <https://arxiv.org/pdf/2409.10389>`_
+    This paper builds its own pipeline for few-shot segmentation of novel targets using prompts.  Similar to the Grounded SAM pipelines, we want to do something like this across a variety of projects.
 
 Autonomy
 --------
@@ -101,6 +101,9 @@ Theory
 `BREAKING NEURAL NETWORK SCALING LAWS WITH MODULARITY <https://arxiv.org/pdf/2409.05780>`_
     A research group from MIT investigates how modular neural nets can improve on normal neural nets.  They claim that regular neural nets require an exponential number of samples in task dimensionality while modular neural nets are independent.  Using this, they propose a whole bevy of improvements.
 
+`Learning large softmax mixtures with warm start EM <https://arxiv.org/pdf/2409.09903>`_
+    A new EM based method for doing inference for large softmax mixtures, e.g. LLMs.  Kind of interesting, but probably a ways off from being directly relevant to us.
+
 Applications
 ------------
 `Causal effect of the infield shift in the MLB <https://arxiv.org/pdf/2409.03940>`_
@@ -114,6 +117,9 @@ Applications
 
 `THE UNDERREPORTED DEATH TOLL OF WARS: A PROBABILISTIC REASSESSMENT FROM A STRUCTURED EXPERT ELICITATION <https://arxiv.org/pdf/2409.08779>`_
     An interesting paper that tries to account for under-reporting of battlefield fatality statistics in the Uppsala Conflict Data Program.  Somehow, most of the co-authors seem to work at Uppsala so the snake is eating its own tail a bit here.  The mechanics of what they're doing here isn't anything revolutionary, but this sort of problem seems like it might be of interest to various parts of the IC.
+
+`Estimating Wage Disparities Using Foundation Models <https://arxiv.org/pdf/2409.09894>`_
+    David Blei and some co-authors explore using foundation models for counterfactual forecasting in observational causal inference.  You could pick at a lot of stuff they do, but it's a cool case study as to how foundation models can be deployed in interesting ways.
 
 New Models
 --------
@@ -131,3 +137,7 @@ Lunch and Learn
 2024-09-10
     `Matryoshka Representation Learning <https://arxiv.org/pdf/2205.13147>`_
     A neat way to trade off embedding size for performance on downstream tasks - e.g., image/document retrieval/classification - without training multiple networks. This capability may be useful for multi-platform AiTR, where available bandwidth may vary depending on network conditions.
+
+2024-09-17
+    `DepthCrafter: Generating Consistent Long Depth Sequences for Open-world Videos <https://arxiv.org/pdf/2409.02095>`_
+    Depth estimation for videos.  Returns temporally consistent results for every frame.  Doesn't need any metadata.  Supports a temproal context length of 110 frames but can also provide estimates for "extremely long" videos by dividing them up into overlapping sequences of appropriate length.  Seems better than Depth-Anything and they have a github.
