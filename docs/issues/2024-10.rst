@@ -13,8 +13,8 @@ Featured
 `Can Unconfident LLM Annotations Be Used for Confident Conclusions? <https://arxiv.org/pdf/2408.15204>`_
     Investigates how to best use LLMs to label a large amount of unlabelled data in a manner where you can be somewhat reliably assured of the outcome. Uses "active inference" (whatever that is) to strategically select the best datapoints to have humans label to increase the LLMs performance. Could be a useful thing for us to know how to do.
 
-`Moving from Machine Learning to Statistics: the case of Expected Points in American football <https://arxiv.org/pdf/2409.04889>`_
-    Publicly available football analytics is apparently a bit of the wild west where machine learning tools are just thrown all over the place.  This paper claims that this methodology ignores some important statistical properties of the data which, when taken into account, can improve performance.  Demonstrates that understanding and properly modelling data is still important.
+`SOAP: IMPROVING AND STABILIZING SHAMPOO USING ADAM <https://arxiv.org/pdf/2409.11321>`_
+    A great paper name.  Researchers at Harvard are investigating different ways to do optimization, and find that Shampoo (who named this?) is equivalent to Adafactor in the eigenbasis of a preconditioner.  They propose a new optimizer named SOAP that's equivalent to running Adam in a rotated space.  Unsurprisingly, they claim SOAP is the best optimizer.
 
 `SCIAGENTS: AUTOMATING SCIENTIFIC DISCOVERY THROUGH MULTI-AGENT INTELLIGENT GRAPH REASONING <https://arxiv.org/pdf/2409.05556>`_
     Researchers from MIT propose a new method for doing reasoning over knowledge graphs.  Could be useful for LitCoin/ODIN/Translator.
@@ -51,6 +51,9 @@ Doctrinaire
 
 `Prompt-and-Transfer: Dynamic Class-aware Enhancement for Few-shot Segmentation <https://arxiv.org/pdf/2409.10389>`_
     This paper builds its own pipeline for few-shot segmentation of novel targets using prompts.  Similar to the Grounded SAM pipelines, we want to do something like this across a variety of projects.
+
+`SAM4MLLM: Enhance Multi-Modal Large Language Model for Referring Expression Segmentation <https://arxiv.org/pdf/2409.10542>`_
+    Some folks at NVIDIA and National Taiwan University make a pipeline for turning text prompts into semantic segmentation masks.  This is what we want to do for EID, but I'm not sure I can direclty apply this.
 
 Autonomy
 --------
@@ -104,6 +107,9 @@ Theory
 `Learning large softmax mixtures with warm start EM <https://arxiv.org/pdf/2409.09903>`_
     A new EM based method for doing inference for large softmax mixtures, e.g. LLMs.  Kind of interesting, but probably a ways off from being directly relevant to us.
 
+`SOAP: IMPROVING AND STABILIZING SHAMPOO USING ADAM <https://arxiv.org/pdf/2409.11321>`_
+    A great paper name.  Researchers at Harvard are investigating different ways to do optimization, and find that Shampoo (who named this?) is equivalent to Adafactor in the eigenbasis of a preconditioner.  They propose a new optimizer named SOAP that's equivalent to running Adam in a rotated space.  Unsurprisingly, they claim SOAP is the best optimizer.
+
 Applications
 ------------
 `Causal effect of the infield shift in the MLB <https://arxiv.org/pdf/2409.03940>`_
@@ -131,6 +137,9 @@ New Models
 
 `WHAT MAKES A MAZE LOOK LIKE A MAZE? <https://arxiv.org/pdf/2409.08202>`_
     A new VLM which has a better understanding of abstract concepts such as what a maze looks like.
+
+`NVLM: Open Frontier-Class Multimodal LLMs <https://arxiv.org/pdf/2409.11402>`_
+    NVIDIA releases a new family of VLMs that's the best on the market etc etc.  In doing so, they accidentally improved the LLM backbone they were using and made a better LLM???
 
 Lunch and Learn
 ---------------
