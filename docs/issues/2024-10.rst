@@ -10,14 +10,14 @@ Featured
 `An overview of domain-specific foundation model: key technologies, applications and challenges <https://arxiv.org/pdf/2409.04267>`_
     Review paper for foundation models, what they are, how to use them, etc.  We want to/are already doing this, and this is a nice summary of the field.
 
-`Can Unconfident LLM Annotations Be Used for Confident Conclusions? <https://arxiv.org/pdf/2408.15204>`_
-    Investigates how to best use LLMs to label a large amount of unlabelled data in a manner where you can be somewhat reliably assured of the outcome. Uses "active inference" (whatever that is) to strategically select the best datapoints to have humans label to increase the LLMs performance. Could be a useful thing for us to know how to do.
+`ENDLESS JAILBREAKS WITH BIJECTION LEARNING <https://haizelabs.com/static/Endless-Jailbreaks-Bijection.pdf>`_
+    Incredibly clever adversarial attack from Haze Labs which can get basically anything out of an LLM.  Works by teaching the LLM a bijection language (a = 58, b = b, c = c, d= 23, etc) and talking to it in that language, which apparenty gets around all of the safeguards.  Works better on "smarter" LLMs.
 
 `SOAP: IMPROVING AND STABILIZING SHAMPOO USING ADAM <https://arxiv.org/pdf/2409.11321>`_
     A great paper name.  Researchers at Harvard are investigating different ways to do optimization, and find that Shampoo (who named this?) is equivalent to Adafactor in the eigenbasis of a preconditioner.  They propose a new optimizer named SOAP that's equivalent to running Adam in a rotated space.  Unsurprisingly, they claim SOAP is the best optimizer.
 
-`SCIAGENTS: AUTOMATING SCIENTIFIC DISCOVERY THROUGH MULTI-AGENT INTELLIGENT GRAPH REASONING <https://arxiv.org/pdf/2409.05556>`_
-    Researchers from MIT propose a new method for doing reasoning over knowledge graphs.  Could be useful for LitCoin/ODIN/Translator.
+`MAGICORE: MULTI-AGENT, ITERATIVE, COARSE-TO-FINE REFINEMENT FOR REASONING <https://arxiv.org/pdf/2409.12147>`_
+    A cool paper which proposes a multi-agent framework for wringing the best reasoning juice out of an LLM that you can.  In broad terms, it analyzes how hard the problem is and devotres more or less resources based off of that, but it's cooler than that.
 
 `Estimating Wage Disparities Using Foundation Models <https://arxiv.org/pdf/2409.09894>`_
     David Blei and some co-authors explore using foundation models for counterfactual forecasting in observational causal inference.  You could pick at a lot of stuff they do, but it's a cool case study as to how foundation models can be deployed in interesting ways.
@@ -55,6 +55,9 @@ Doctrinaire
 `SAM4MLLM: Enhance Multi-Modal Large Language Model for Referring Expression Segmentation <https://arxiv.org/pdf/2409.10542>`_
     Some folks at NVIDIA and National Taiwan University make a pipeline for turning text prompts into semantic segmentation masks.  This is what we want to do for EID, but I'm not sure I can direclty apply this.
 
+`World of Forms: Deformable Geometric Templates for One-Shot Surface Meshing in Coronary CT Angiography <https://arxiv.org/pdf/2409.11837>`_
+    A neat paper on how to learn CAD models of anatomical objects from medical imaging datasets.  Uses a graphical neural net and different initializations depending on what they're doing.  Cool and somewhat related to our various CAD model learning projects.
+
 Autonomy
 --------
 
@@ -66,6 +69,12 @@ Reasoning
 `HybridFC: A Hybrid Fact-Checking Approach for Knowledge Graphs <https://arxiv.org/pdf/2409.06692>`_
     Proposes a new fact-checking method for knowledge graphs leveraging ensemble methods.  Doubles the "best" AUC from 0.14 to 0.27.
 
+`Improving LLM Reasoning with Multi-Agent Tree-of-Thought Validator Agent <https://arxiv.org/pdf/2409.11527>`_
+    Another paper in the "have an LLM generate a bunch of things and then use a validator to find the right one."  This one is for reasoning applications and uses some Tree of Thought (ToT) stuff to get there.  Could be an interesting approach where (1) compute is not limited and (2) validation is substantially easier than correct generation.
+
+`MAGICORE: MULTI-AGENT, ITERATIVE, COARSE-TO-FINE REFINEMENT FOR REASONING <https://arxiv.org/pdf/2409.12147>`_
+    A cool paper which proposes a multi-agent framework for wringing the best reasoning juice out of an LLM that you can.  In broad terms, it analyzes how hard the problem is and devotres more or less resources based off of that, but it's cooler than that.
+
 Tracking
 --------
 `Gaussian Process Upper Confidence Bounds in Distributed Point Target Tracking over Wireless Sensor Networks <https://arxiv.org/pdf/2409.07652>`_
@@ -76,6 +85,8 @@ Gaussian Splatting
 
 Gotta Go Fast
 -------------
+`Democratizing MLLMs in Healthcare: TinyLLaVA-Med for Efficient Healthcare Diagnostics in Resource-Constrained Settings <https://arxiv.org/pdf/2409.12184>`_
+    This paper manages to get a VLM up and running on a Jetson.  Lots of interesting applications open up if we can do this.
 
 Geometric Deep Learning
 -----------------------
@@ -84,6 +95,9 @@ Adversarial
 -----------
 `LoRID: Low-Rank Iterative Diffusion for Adversarial Purification <https://arxiv.org/pdf/2409.08255>`_
     Researchers at Los Alamos develop an interative diffusion process to remove adversarial perturbations from images.  Reading the paper does kind of feel like joing a discourse halfway through, so presumably this is an area of research in the literature.
+
+`ENDLESS JAILBREAKS WITH BIJECTION LEARNING <https://haizelabs.com/static/Endless-Jailbreaks-Bijection.pdf>`_
+    Incredibly clever adversarial attack from Haze Labs which can get basically anything out of an LLM.  Works by teaching the LLM a bijection language (a = 58, b = b, c = c, d= 23, etc) and talking to it in that language, which apparenty gets around all of the safeguards.  Works better on "smarter" LLMs.
 
 Out of Distribution
 -------------------
@@ -127,6 +141,9 @@ Applications
 `Estimating Wage Disparities Using Foundation Models <https://arxiv.org/pdf/2409.09894>`_
     David Blei and some co-authors explore using foundation models for counterfactual forecasting in observational causal inference.  You could pick at a lot of stuff they do, but it's a cool case study as to how foundation models can be deployed in interesting ways.
 
+`WHO’S THE GOAT? SPORTS RANKINGS AND DATA-DRIVEN RANDOM WALKS ON THE SYMMETRIC GROUP <https://arxiv.org/pdf/2409.12107>_`
+    Applies a decent amount of heavy duty math (groups, partially ordered sets, random walks) to resolve pub arguments (who is the best tennis player of all time?).  A cool take on how to rank a bunch of players who may or may not have a lot of comparisons, but likely there is room for improvement.
+
 New Models
 --------
 `OLMoE: Open Mixture-of-Experts Language Models <https://arxiv.org/pdf/2409.02060>`_
@@ -140,6 +157,9 @@ New Models
 
 `NVLM: Open Frontier-Class Multimodal LLMs <https://arxiv.org/pdf/2409.11402>`_
     NVIDIA releases a new family of VLMs that's the best on the market etc etc.  In doing so, they accidentally improved the LLM backbone they were using and made a better LLM???
+
+`Qwen2-VL: Enhancing Vision-Language Model’s Perception of the World at Any Resolution <https://arxiv.org/pdf/2409.12191>`_
+    New series of VLMs.  Open source.  The big hook is that they can process images of different resolutions into a different number of tokens, which is kind of cool.
 
 Lunch and Learn
 ---------------
