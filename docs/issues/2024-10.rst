@@ -16,8 +16,8 @@ Featured
 `SOAP: IMPROVING AND STABILIZING SHAMPOO USING ADAM <https://arxiv.org/pdf/2409.11321>`_
     A great paper name.  Researchers at Harvard are investigating different ways to do optimization, and find that Shampoo (who named this?) is equivalent to Adafactor in the eigenbasis of a preconditioner.  They propose a new optimizer named SOAP that's equivalent to running Adam in a rotated space.  Unsurprisingly, they claim SOAP is the best optimizer.
 
-`MAGICORE: MULTI-AGENT, ITERATIVE, COARSE-TO-FINE REFINEMENT FOR REASONING <https://arxiv.org/pdf/2409.12147>`_
-    A cool paper which proposes a multi-agent framework for wringing the best reasoning juice out of an LLM that you can.  In broad terms, it analyzes how hard the problem is and devotres more or less resources based off of that, but it's cooler than that.
+`LANGUAGE MODELS LEARN TO MISLEAD HUMANS VIA RLHF <https://arxiv.org/pdf/2409.12822>`_
+    RLHF is a popular method for aligning LLMs.  This paper examines RLHF in detail and finds that, instead of improving LLM performance by causing LLMs to generate more correct answers, it instead can cause LLMs to prioritize answers which seem correct to human evaluators.  I wonder if this phenemona partially explains the LLM tendency to bullshit.
 
 `Estimating Wage Disparities Using Foundation Models <https://arxiv.org/pdf/2409.09894>`_
     David Blei and some co-authors explore using foundation models for counterfactual forecasting in observational causal inference.  You could pick at a lot of stuff they do, but it's a cool case study as to how foundation models can be deployed in interesting ways.
@@ -32,6 +32,12 @@ LLMs
 
 `Can LLMs Generate Novel Research Ideas? <https://arxiv.org/pdf/2409.04109>`_
     Group from Stanford runs a study where they compare human-generated an LLM-generated research proposals and find that the LLMs are both mroe novel and less feasible than the humans, on average.  Could be something signifcant about LLMs, could be that humans are trained to generate ideas that get funding.
+
+`Training Language Models to Self-Correct via Reinforcement Learning <https://arxiv.org/pdf/2409.12917>`_
+    Deepmind wants to make LLMs better at writing algorithms.  To do so, they introduce a reinforcement learning approach called SCoRe which forces LLMs to iteratively improve upon the content they generate.  This kind of makes sense as an approach, since most LLM answers have kernels of truth which, if emphasized, could turn into something.
+
+`LANGUAGE MODELS LEARN TO MISLEAD HUMANS VIA RLHF <https://arxiv.org/pdf/2409.12822>`_
+    RLHF is a popular method for aligning LLMs.  This paper examines RLHF in detail and finds that, instead of improving LLM performance by causing LLMs to generate more correct answers, it instead can cause LLMs to prioritize answers which seem correct to human evaluators.  I wonder if this phenemona partially explains the LLM tendency to bullshit.
 
 VLMs
 ----
