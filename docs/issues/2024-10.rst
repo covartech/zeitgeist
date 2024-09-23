@@ -39,6 +39,9 @@ LLMs
 `LANGUAGE MODELS LEARN TO MISLEAD HUMANS VIA RLHF <https://arxiv.org/pdf/2409.12822>`_
     RLHF is a popular method for aligning LLMs.  This paper examines RLHF in detail and finds that, instead of improving LLM performance by causing LLMs to generate more correct answers, it instead can cause LLMs to prioritize answers which seem correct to human evaluators.  I wonder if this phenemona partially explains the LLM tendency to bullshit.
 
+`TO COT OR NOT TO COT? CHAIN-OF-THOUGHT HELPS MAINLY ON MATH AND SYMBOLIC REASONING <https://arxiv.org/pdf/2409.12183>`_
+    Chain of Thought is one of the more popular ways to try to eak out some extra LLM performance.  This paper analyzes how/why/where it's useful and finds that it only really provides benefit in math/logic problems.  Moreover, a lot of the time CoT is useful, a symbolic solver (whatever that is) is more useful.  A bit of caution against trying the flavor of the month.
+
 VLMs
 ----
 `Aligning Machine and Human Visual Representations across Abstraction Levels <https://arxiv.org/pdf/2409.06509>`_
