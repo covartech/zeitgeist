@@ -188,3 +188,7 @@ Lunch and Learn
 2024-09-17
     `DepthCrafter: Generating Consistent Long Depth Sequences for Open-world Videos <https://arxiv.org/pdf/2409.02095>`_
     Depth estimation for videos.  Returns temporally consistent results for every frame.  Doesn't need any metadata.  Supports a temproal context length of 110 frames but can also provide estimates for "extremely long" videos by dividing them up into overlapping sequences of appropriate length.  Seems better than Depth-Anything and they have a github.
+
+2024-09-24
+    `The Radon Signed Cumulative Distribution Transform and Its Applications in Classification of Signed Images <https://arxiv.org/pdf/2307.15339>`_
+    The CDT is an interesting transform with some transform invariances that can yield linearly separable signals. There are likely some interesting use cases where Fourier would typically be applied.
