@@ -67,6 +67,12 @@ Doctrinaire
 `World of Forms: Deformable Geometric Templates for One-Shot Surface Meshing in Coronary CT Angiography <https://arxiv.org/pdf/2409.11837>`_
     A neat paper on how to learn CAD models of anatomical objects from medical imaging datasets.  Uses a graphical neural net and different initializations depending on what they're doing.  Cool and somewhat related to our various CAD model learning projects.
 
+`ReLoo: Reconstructing Humans Dressed in Loose Garments from Monocular Video in the Wild <https://arxiv.org/pdf/2409.15269>`_
+    ETH Zurich develops a new method for reconstructing humans wearing loose clothing from a monocular video.  The clothing and the body are treated as a seperate object and both are learned.  Feels like there might be something here we can apply to a related problem - tarps covering vehicles?  camouflage? - but I'm not sure what, precisely.
+
+`Semantic Inference-Based Deep Learning and Modeling for Earth Observation: Cognitive Semantic Augmentation Satellite Networks <https://arxiv.org/pdf/2409.15246>`_
+    This paper proposes a fairly complex system for managing systems of satellites that are in the Earth Observation business, all of which do slightly different things, including semantic segmentation.  This feels like stuff we wanted to do for MAGI.
+
 Autonomy
 --------
 
@@ -96,6 +102,9 @@ Gotta Go Fast
 -------------
 `Democratizing MLLMs in Healthcare: TinyLLaVA-Med for Efficient Healthcare Diagnostics in Resource-Constrained Settings <https://arxiv.org/pdf/2409.12184>`_
     This paper manages to get a VLM up and running on a Jetson.  Lots of interesting applications open up if we can do this.
+
+`A-VL: Adaptive Attention for Large Vision-Language Models <https://arxiv.org/pdf/2409.14846>`_
+    Existing VLMs are somewhat inefficient computationally, because they use the same attention structure for different modalities.  This paper proposes an adaptive attention structure which treats each modality seperately, and in doing so reduces computational costs.
 
 Geometric Deep Learning
 -----------------------
