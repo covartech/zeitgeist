@@ -19,8 +19,8 @@ Featured
 `LANGUAGE MODELS LEARN TO MISLEAD HUMANS VIA RLHF <https://arxiv.org/pdf/2409.12822>`_
     RLHF is a popular method for aligning LLMs.  This paper examines RLHF in detail and finds that, instead of improving LLM performance by causing LLMs to generate more correct answers, it instead can cause LLMs to prioritize answers which seem correct to human evaluators.  I wonder if this phenemona partially explains the LLM tendency to bullshit.
 
-`Estimating Wage Disparities Using Foundation Models <https://arxiv.org/pdf/2409.09894>`_
-    David Blei and some co-authors explore using foundation models for counterfactual forecasting in observational causal inference.  You could pick at a lot of stuff they do, but it's a cool case study as to how foundation models can be deployed in interesting ways.
+`Fine-Tuning is Fine, if Calibrated <https://arxiv.org/pdf/2409.16223>`_
+    The title is wildly underenthusiastic for some reason, but the results are cool.  This paper finds that fine-tuning a big foundation model does NOT result in the model forgetting about all the general stuff it used to know in order to learn new things - the new modified logits are simply on a different scale than the original logits, which remain.  If you calibrate, you can recapture the original model performacne while retaining increased performance on the fine-tuned task.
 
 LLMs
 ----
@@ -142,6 +142,9 @@ Theory
 `SOAP: IMPROVING AND STABILIZING SHAMPOO USING ADAM <https://arxiv.org/pdf/2409.11321>`_
     A great paper name.  Researchers at Harvard are investigating different ways to do optimization, and find that Shampoo (who named this?) is equivalent to Adafactor in the eigenbasis of a preconditioner.  They propose a new optimizer named SOAP that's equivalent to running Adam in a rotated space.  Unsurprisingly, they claim SOAP is the best optimizer.
 
+`Fine-Tuning is Fine, if Calibrated <https://arxiv.org/pdf/2409.16223>`_
+    The title is wildly underenthusiastic for some reason, but the results are cool.  This paper finds that fine-tuning a big foundation model does NOT result in the model forgetting about all the general stuff it used to know in order to learn new things - the new modified logits are simply on a different scale than the original logits, which remain.  If you calibrate, you can recapture the original model performacne while retaining increased performance on the fine-tuned task.
+
 Applications
 ------------
 `Causal effect of the infield shift in the MLB <https://arxiv.org/pdf/2409.03940>`_
@@ -178,6 +181,9 @@ New Models
 
 `Qwen2-VL: Enhancing Vision-Language Model’s Perception of the World at Any Resolution <https://arxiv.org/pdf/2409.12191>`_
     New series of VLMs.  Open source.  The big hook is that they can process images of different resolutions into a different number of tokens, which is kind of cool.
+
+`DATAGPT-SQL-7B: AN OPEN-SOURCE LANGUAGE MODEL FOR TEXT2SQL <https://arxiv.org/pdf/2409.15985>`_
+    A new LLM, proposed by a subsidiary of Alibaba which focuses on logistics, which can take a SQL database and a question in natural language form about the database and answer the question.  Might be useful for ODIN no/low code?
 
 Lunch and Learn
 ---------------
