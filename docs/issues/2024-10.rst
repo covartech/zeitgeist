@@ -42,6 +42,9 @@ LLMs
 `TO COT OR NOT TO COT? CHAIN-OF-THOUGHT HELPS MAINLY ON MATH AND SYMBOLIC REASONING <https://arxiv.org/pdf/2409.12183>`_
     Chain of Thought is one of the more popular ways to try to eak out some extra LLM performance.  This paper analyzes how/why/where it's useful and finds that it only really provides benefit in math/logic problems.  Moreover, a lot of the time CoT is useful, a symbolic solver (whatever that is) is more useful.  A bit of caution against trying the flavor of the month.
 
+`Characterizing stable regions in the residual stream of LLMs <https://arxiv.org/pdf/2409.17113>`_
+    Transformers have stable regions, which correspond to semantic concepts and where small changes in inputs lead to only small changes in outputs.  At the boundaries of these regions, however, a small change in input can lead to a dramatic change in output.  Feels like we should be able to leverage this insight somehow, but I'm not sure how.
+
 VLMs
 ----
 `Aligning Machine and Human Visual Representations across Abstraction Levels <https://arxiv.org/pdf/2409.06509>`_
@@ -165,6 +168,9 @@ Applications
 `WHO’S THE GOAT? SPORTS RANKINGS AND DATA-DRIVEN RANDOM WALKS ON THE SYMMETRIC GROUP <https://arxiv.org/pdf/2409.12107>_`
     Applies a decent amount of heavy duty math (groups, partially ordered sets, random walks) to resolve pub arguments (who is the best tennis player of all time?).  A cool take on how to rank a bunch of players who may or may not have a lot of comparisons, but likely there is room for improvement.
 
+`Predictive Covert Communication Against Multi-UAV Surveillance Using Graph Koopman Autoencoder <https://arxiv.org/pdf/2409.17048>`_
+    In what is kind of an interesting problem some people associated in some capacity with the Australian military (I think?) investigate how to have "low probability of detection" communications in the face of adversarial UAV surveillance.  Not directly relevant to any of our projects, but it could be.
+
 New Models
 --------
 `OLMoE: Open Mixture-of-Experts Language Models <https://arxiv.org/pdf/2409.02060>`_
@@ -184,6 +190,9 @@ New Models
 
 `DATAGPT-SQL-7B: AN OPEN-SOURCE LANGUAGE MODEL FOR TEXT2SQL <https://arxiv.org/pdf/2409.15985>`_
     A new LLM, proposed by a subsidiary of Alibaba which focuses on logistics, which can take a SQL database and a question in natural language form about the database and answer the question.  Might be useful for ODIN no/low code?
+
+`Molmo and PixMo: Open Weights and Open Data for State-of-the-Art Multimodal Models <https://arxiv.org/pdf/2409.17146>`_
+    A new open source VLM from the Allen Institute and UW.  Claims to be on par with GPT-4, and may be worth taking a look at for our current VLM needs.  However, they say the weights "will be" available instead of "are" available, which is a bit of a bummer.
 
 Lunch and Learn
 ---------------
