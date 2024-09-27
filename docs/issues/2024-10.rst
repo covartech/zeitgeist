@@ -120,6 +120,9 @@ Adversarial
 `ENDLESS JAILBREAKS WITH BIJECTION LEARNING <https://haizelabs.com/static/Endless-Jailbreaks-Bijection.pdf>`_
     Incredibly clever adversarial attack from Haze Labs which can get basically anything out of an LLM.  Works by teaching the LLM a bijection language (a = 58, b = b, c = c, d= 23, etc) and talking to it in that language, which apparenty gets around all of the safeguards.  Works better on "smarter" LLMs.
 
+`DarkSAM: Fooling Segment Anything Model to Segment Nothing <https://arxiv.org/pdf/2409.17874>`_
+    DarkSAM is a cool name for an adversarial system which seeks to modify images so that SAM can't segment them.  It seems to work here.  This might highlight one danger of relying on a small number of large foundation models - the "attack" space is a lot smaller for an adversary.
+
 Out of Distribution
 -------------------
 `RESULTANT: INCREMENTAL EFFECTIVENESS ON LIKELIHOOD FOR UNSUPERVISED OUT-OF-DISTRIBUTION DETECTION <https://arxiv.org/pdf/2409.03801>`_
