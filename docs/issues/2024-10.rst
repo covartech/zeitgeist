@@ -1,0 +1,174 @@
+The CoVar Zeitgeist: 2024-10
+============================
+
+Featured
+--------
+
+`Aligning Machine and Human Visual Representations across Abstraction Levels <https://arxiv.org/pdf/2409.06509>`_
+    From Deepmind.  Attempts to improve VLMs by making them think more like humans - that is, hierarchically, from coarse to fine grained concepts. Uses a teacher model to mimic this intuition and inpart it to a student model.  Best performance in the field etc etc
+
+`An overview of domain-specific foundation model: key technologies, applications and challenges <https://arxiv.org/pdf/2409.04267>`_
+    Review paper for foundation models, what they are, how to use them, etc.  We want to/are already doing this, and this is a nice summary of the field.
+
+`ENDLESS JAILBREAKS WITH BIJECTION LEARNING <https://haizelabs.com/static/Endless-Jailbreaks-Bijection.pdf>`_
+    Incredibly clever adversarial attack from Haze Labs which can get basically anything out of an LLM.  Works by teaching the LLM a bijection language (a = 58, b = b, c = c, d= 23, etc) and talking to it in that language, which apparenty gets around all of the safeguards.  Works better on "smarter" LLMs.
+
+`SOAP: IMPROVING AND STABILIZING SHAMPOO USING ADAM <https://arxiv.org/pdf/2409.11321>`_
+    A great paper name.  Researchers at Harvard are investigating different ways to do optimization, and find that Shampoo (who named this?) is equivalent to Adafactor in the eigenbasis of a preconditioner.  They propose a new optimizer named SOAP that's equivalent to running Adam in a rotated space.  Unsurprisingly, they claim SOAP is the best optimizer.
+
+`LANGUAGE MODELS LEARN TO MISLEAD HUMANS VIA RLHF <https://arxiv.org/pdf/2409.12822>`_
+    RLHF is a popular method for aligning LLMs.  This paper examines RLHF in detail and finds that, instead of improving LLM performance by causing LLMs to generate more correct answers, it instead can cause LLMs to prioritize answers which seem correct to human evaluators.  I wonder if this phenemona partially explains the LLM tendency to bullshit.
+
+`Fine-Tuning is Fine, if Calibrated <https://arxiv.org/pdf/2409.16223>`_
+    The title is unenthused for some reason, but the results are cool.  This paper finds that fine-tuning a big foundation model does NOT result in the model forgetting about all the general stuff it used to know in order to learn new things - the new modified logits are simply on a different scale than the original logits, which remain.  If you calibrate, you can recapture the original model performacne while retaining increased performance on the fine-tuned task.
+
+LLMs
+----
+`Can Unconfident LLM Annotations Be Used for Confident Conclusions? <https://arxiv.org/pdf/2408.15204>`_
+    Investigates how to best use LLMs to label a large amount of unlabelled data in a manner where you can be somewhat reliably assured of the outcome. Uses "active inference" (whatever that is) to strategically select the best datapoints to have humans label to increase the LLMs performance. Could be a useful thing for us to know how to do.
+
+`In Defense of RAG in the Era of Long-Context Language Models <https://arxiv.org/pdf/2409.01666>`_
+    NVIDIA proposes a new method for long-context RAGs which puts them back on top of long-context LLMs.  Short paper, but they seem to have receipts.
+
+`Training Language Models to Self-Correct via Reinforcement Learning <https://arxiv.org/pdf/2409.12917>`_
+    Deepmind wants to make LLMs better at writing algorithms.  To do so, they introduce a reinforcement learning approach called SCoRe which forces LLMs to iteratively improve upon the content they generate.  This kind of makes sense as an approach, since most LLM answers have kernels of truth which, if emphasized, could turn into something.
+
+`LANGUAGE MODELS LEARN TO MISLEAD HUMANS VIA RLHF <https://arxiv.org/pdf/2409.12822>`_
+    RLHF is a popular method for aligning LLMs.  This paper examines RLHF in detail and finds that, instead of improving LLM performance by causing LLMs to generate more correct answers, it instead can cause LLMs to prioritize answers which seem correct to human evaluators.  I wonder if this phenemona partially explains the LLM tendency to bullshit.
+
+`TO COT OR NOT TO COT? CHAIN-OF-THOUGHT HELPS MAINLY ON MATH AND SYMBOLIC REASONING <https://arxiv.org/pdf/2409.12183>`_
+    Chain of Thought is one of the more popular ways to try to eak out some extra LLM performance.  This paper analyzes how/why/where it's useful and finds that it only really provides benefit in math/logic problems.  Moreover, a lot of the time CoT is useful, a symbolic solver (whatever that is) is more useful.  A bit of caution against trying the flavor of the month.
+
+`Characterizing stable regions in the residual stream of LLMs <https://arxiv.org/pdf/2409.17113>`_
+    Transformers have stable regions, which correspond to semantic concepts and where small changes in inputs lead to only small changes in outputs.  At the boundaries of these regions, however, a small change in input can lead to a dramatic change in output.  Feels like we should be able to leverage this insight somehow, but I'm not sure how.
+
+`“Oh LLM, I’m Asking Thee, Please Give Me a Decision Tree”: Zero-Shot Decision Tree Induction and Embedding with Large Language Models <https://arxiv.org/pdf/2409.18594>`_
+    LLMs know a lot of stuff.  Some of the stuff they know can be used to generate zero-shot decision trees for problems where you're dealing with a lack of data.  Cool idea, and results seem impressive, but I wonder if this is really zero-shot since the LLM may have trained on the datasets they use for evaluations.
+
+VLMs
+----
+`Aligning Machine and Human Visual Representations across Abstraction Levels <https://arxiv.org/pdf/2409.06509>`_
+    From Deepmind.  Attempts to improve VLMs by making them think more like humans - that is, hierarchically, from coarse to fine grained concepts. Uses a teacher model to mimic this intuition and inpart it to a student model.  Best performance in the field etc etc
+
+Doctrinaire
+-----------
+`Deep Clustering of Remote Sensing Scenes through Heterogeneous Transfer Learning <https://arxiv.org/pdf/2409.03938>`_
+    A collaboration between Texas A&M and the Intelligence and Space Research at Los Alamos, this paper clusters remote sensing scenes using (1) a pretrained neural net, (2) manifold projection, and (3) Bayesian clustering techniques.  Decently effective, and feels like maybe we can leverage a similar approach for automatically detecting image backgrounds and doing context-based learning thereafter.
+
+`SAM4MLLM: Enhance Multi-Modal Large Language Model for Referring Expression Segmentation <https://arxiv.org/pdf/2409.10542>`_
+    Some folks at NVIDIA and National Taiwan University make a pipeline for turning text prompts into semantic segmentation masks.  This is what we want to do for EID, but I'm not sure I can direclty apply this.
+
+`World of Forms: Deformable Geometric Templates for One-Shot Surface Meshing in Coronary CT Angiography <https://arxiv.org/pdf/2409.11837>`_
+    A neat paper on how to learn CAD models of anatomical objects from medical imaging datasets.  Uses a graphical neural net and different initializations depending on what they're doing.  Cool and somewhat related to our various CAD model learning projects.
+
+`ReLoo: Reconstructing Humans Dressed in Loose Garments from Monocular Video in the Wild <https://arxiv.org/pdf/2409.15269>`_
+    ETH Zurich develops a new method for reconstructing humans wearing loose clothing from a monocular video.  The clothing and the body are treated as a seperate object and both are learned.  Feels like there might be something here we can apply to a related problem - tarps covering vehicles?  camouflage? - but I'm not sure what, precisely.
+
+`Semantic Inference-Based Deep Learning and Modeling for Earth Observation: Cognitive Semantic Augmentation Satellite Networks <https://arxiv.org/pdf/2409.15246>`_
+    This paper proposes a fairly complex system for managing systems of satellites that are in the Earth Observation business, all of which do slightly different things, including semantic segmentation.  This feels like stuff we wanted to do for MAGI.
+
+Reasoning
+---------
+`SCIAGENTS: AUTOMATING SCIENTIFIC DISCOVERY THROUGH MULTI-AGENT INTELLIGENT GRAPH REASONING <https://arxiv.org/pdf/2409.05556>`_
+    Researchers from MIT propose a new method for doing reasoning over knowledge graphs.  Could be useful for LitCoin/ODIN/Translator.
+
+`Improving LLM Reasoning with Multi-Agent Tree-of-Thought Validator Agent <https://arxiv.org/pdf/2409.11527>`_
+    Another paper in the "have an LLM generate a bunch of things and then use a validator to find the right one."  This one is for reasoning applications and uses some Tree of Thought (ToT) stuff to get there.  Could be an interesting approach where (1) compute is not limited and (2) validation is substantially easier than correct generation.
+
+`MAGICORE: MULTI-AGENT, ITERATIVE, COARSE-TO-FINE REFINEMENT FOR REASONING <https://arxiv.org/pdf/2409.12147>`_
+    A cool paper which proposes a multi-agent framework for wringing the best reasoning juice out of an LLM that you can.  In broad terms, it analyzes how hard the problem is and devotres more or less resources based off of that, but it's cooler than that.
+
+Tracking
+--------
+`Gaussian Process Upper Confidence Bounds in Distributed Point Target Tracking over Wireless Sensor Networks <https://arxiv.org/pdf/2409.07652>`_
+    This paper has a coathuor from DEVCOM Army Reserach  Lab.  Uses a Gaussian Process approach for point-tracking with Bayesian filtering.  Lots of pretty pictures.
+
+`Improving Visual Object Tracking through Visual Prompting <https://arxiv.org/pdf/2409.18901>`_
+    Leverages CLIP to do object tracking. The idea is intuitive - use the foundation models ability to recognize objects and see how similar they are.  Results look decently impressive. 
+
+Gotta Go Fast
+-------------
+`Democratizing MLLMs in Healthcare: TinyLLaVA-Med for Efficient Healthcare Diagnostics in Resource-Constrained Settings <https://arxiv.org/pdf/2409.12184>`_
+    This paper manages to get a VLM up and running on a Jetson.  Lots of interesting applications open up if we can do this.
+
+`A-VL: Adaptive Attention for Large Vision-Language Models <https://arxiv.org/pdf/2409.14846>`_
+    Existing VLMs are somewhat inefficient computationally, because they use the same attention structure for different modalities.  This paper proposes an adaptive attention structure which treats each modality seperately, and in doing so reduces computational costs.
+
+Adversarial
+-----------
+`ENDLESS JAILBREAKS WITH BIJECTION LEARNING <https://haizelabs.com/static/Endless-Jailbreaks-Bijection.pdf>`_
+    Incredibly clever adversarial attack from Haze Labs which can get basically anything out of an LLM.  Works by teaching the LLM a bijection language (a = 58, b = b, c = c, d= 23, etc) and talking to it in that language, which apparenty gets around all of the safeguards.  Works better on "smarter" LLMs.
+
+`DarkSAM: Fooling Segment Anything Model to Segment Nothing <https://arxiv.org/pdf/2409.17874>`_
+    DarkSAM is a cool name for an adversarial system which seeks to modify images so that SAM can't segment them.  It seems to work here.  This might highlight one danger of relying on a small number of large foundation models - the "attack" space is a lot smaller for an adversary.
+
+Theory
+------
+`An overview of domain-specific foundation model: key technologies, applications and challenges <https://arxiv.org/pdf/2409.04267>`_
+    Review paper for foundation models, what they are, how to use them, etc.  We want to/are already doing this, and this is a nice summary of the field.
+
+`Theory, Analysis, and Best Practices for Sigmoid Self-Attention <https://arxiv.org/pdf/2409.04431>`_
+    Apple investigates what happens when you use sigmoid self-attention instead of ReLu or softmax.  A bit of a lab manual, but a nice treatment of the subject.
+
+`Meta Flow Matching: Integrating Vector Fields on the Wasserstein Manifold <https://arxiv.org/pdf/2408.14608>`_
+    Proposes a new method, based on some fancypants mathematics/physics, to model systems where a large amount of interacting entities evovle continuously over time.  The main application is single-cell drug screen tests, but you could see appplications to other agent-based modelling areas such as modelling warfighters.
+
+`BREAKING NEURAL NETWORK SCALING LAWS WITH MODULARITY <https://arxiv.org/pdf/2409.05780>`_
+    A research group from MIT investigates how modular neural nets can improve on normal neural nets.  They claim that regular neural nets require an exponential number of samples in task dimensionality while modular neural nets are independent.  Using this, they propose a whole bevy of improvements.
+
+`SOAP: IMPROVING AND STABILIZING SHAMPOO USING ADAM <https://arxiv.org/pdf/2409.11321>`_
+    A great paper name.  Researchers at Harvard are investigating different ways to do optimization, and find that Shampoo (who named this?) is equivalent to Adafactor in the eigenbasis of a preconditioner.  They propose a new optimizer named SOAP that's equivalent to running Adam in a rotated space.  Unsurprisingly, they claim SOAP is the best optimizer.
+
+`Fine-Tuning is Fine, if Calibrated <https://arxiv.org/pdf/2409.16223>`_
+    The title is unenthused for some reason, but the results are cool.  This paper finds that fine-tuning a big foundation model does NOT result in the model forgetting about all the general stuff it used to know in order to learn new things - the new modified logits are simply on a different scale than the original logits, which remain.  If you calibrate, you can recapture the original model performacne while retaining increased performance on the fine-tuned task.
+
+Applications
+------------
+`Estimating Wage Disparities Using Foundation Models <https://arxiv.org/pdf/2409.09894>`_
+    David Blei and some co-authors explore using foundation models for counterfactual forecasting in observational causal inference.  You could pick at a lot of stuff they do, but it's a cool case study as to how foundation models can be deployed in interesting ways.
+
+`Predictive Covert Communication Against Multi-UAV Surveillance Using Graph Koopman Autoencoder <https://arxiv.org/pdf/2409.17048>`_
+    In what is kind of an interesting problem some people associated in some capacity with the Australian military (I think?) investigate how to have "low probability of detection" communications in the face of adversarial UAV surveillance.  Not directly relevant to any of our projects, but it could be.
+
+`Bayesian Event Categorization Matrix Approach for Nuclear Detonations <https://arxiv.org/pdf/2409.18227>`_
+    Los Alamos proposes a Bayesian method for categorizing nuclear explosions.  Cool stuff, but not direclty relevant to any of our projects.
+
+`Cores that don’t count <https://sigops.org/s/conferences/hotos/2021/papers/hotos21-s01-hochschild.pdf>`_
+    Google thinks about what to do when you have CPUs that are malfunctioning and think that 2 plus 2 is 5.  We don't have nearly enough computers to worrry about this... but the Army does.
+
+New Models
+--------
+`OLMoE: Open Mixture-of-Experts Language Models <https://arxiv.org/pdf/2409.02060>`_
+    A 7B parameter mixture of experts model that uses only 1B parameters per input token.  Claims to outperform all similarly-sized models and even some bigger ones (shock).  Weights are available.
+
+`Introducing OpenAI o1-preview <https://openai.com/index/learning-to-reason-with-llms/>`_
+    OpenAI gets LLMs to be much better at reasoning by training them to think about things before they answer.  Simple idea, but the results are incredibly impressive.
+
+`WHAT MAKES A MAZE LOOK LIKE A MAZE? <https://arxiv.org/pdf/2409.08202>`_
+    A new VLM which has a better understanding of abstract concepts such as what a maze looks like.
+
+`NVLM: Open Frontier-Class Multimodal LLMs <https://arxiv.org/pdf/2409.11402>`_
+    NVIDIA releases a new family of VLMs that's the best on the market etc etc.  In doing so, they accidentally improved the LLM backbone they were using and made a better LLM???
+
+`Qwen2-VL: Enhancing Vision-Language Model’s Perception of the World at Any Resolution <https://arxiv.org/pdf/2409.12191>`_
+    New series of VLMs.  Open source.  The big hook is that they can process images of different resolutions into a different number of tokens, which is kind of cool.
+
+`DATAGPT-SQL-7B: AN OPEN-SOURCE LANGUAGE MODEL FOR TEXT2SQL <https://arxiv.org/pdf/2409.15985>`_
+    A new LLM, proposed by a subsidiary of Alibaba which focuses on logistics, which can take a SQL database and a question in natural language form about the database and answer the question.  Might be useful for ODIN no/low code?
+
+`Molmo and PixMo: Open Weights and Open Data for State-of-the-Art Multimodal Models <https://arxiv.org/pdf/2409.17146>`_
+    A new open source VLM from the Allen Institute and UW.  Claims to be on par with GPT-4, and may be worth taking a look at for our current VLM needs.  However, they say the weights "will be" available instead of "are" available, which is a bit of a bummer.
+
+Lunch and Learn
+---------------
+2024-09-10
+    `Matryoshka Representation Learning <https://arxiv.org/pdf/2205.13147>`_
+    A neat way to trade off embedding size for performance on downstream tasks - e.g., image/document retrieval/classification - without training multiple networks. This capability may be useful for multi-platform AiTR, where available bandwidth may vary depending on network conditions.
+
+2024-09-17
+    `DepthCrafter: Generating Consistent Long Depth Sequences for Open-world Videos <https://arxiv.org/pdf/2409.02095>`_
+    Depth estimation for videos.  Returns temporally consistent results for every frame.  Doesn't need any metadata.  Supports a temproal context length of 110 frames but can also provide estimates for "extremely long" videos by dividing them up into overlapping sequences of appropriate length.  Seems better than Depth-Anything and they have a github.
+
+2024-09-24
+    `The Radon Signed Cumulative Distribution Transform and Its Applications in Classification of Signed Images <https://arxiv.org/pdf/2307.15339>`_
+    The CDT is an interesting transform with some transform invariances that can yield linearly separable signals. There are likely some interesting use cases where Fourier would typically be applied.
