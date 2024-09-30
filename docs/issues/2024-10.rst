@@ -20,7 +20,7 @@ Featured
     RLHF is a popular method for aligning LLMs.  This paper examines RLHF in detail and finds that, instead of improving LLM performance by causing LLMs to generate more correct answers, it instead can cause LLMs to prioritize answers which seem correct to human evaluators.  I wonder if this phenemona partially explains the LLM tendency to bullshit.
 
 `Fine-Tuning is Fine, if Calibrated <https://arxiv.org/pdf/2409.16223>`_
-    The title is wildly underenthusiastic for some reason, but the results are cool.  This paper finds that fine-tuning a big foundation model does NOT result in the model forgetting about all the general stuff it used to know in order to learn new things - the new modified logits are simply on a different scale than the original logits, which remain.  If you calibrate, you can recapture the original model performacne while retaining increased performance on the fine-tuned task.
+    The title is unenthused for some reason, but the results are cool.  This paper finds that fine-tuning a big foundation model does NOT result in the model forgetting about all the general stuff it used to know in order to learn new things - the new modified logits are simply on a different scale than the original logits, which remain.  If you calibrate, you can recapture the original model performacne while retaining increased performance on the fine-tuned task.
 
 LLMs
 ----
@@ -29,9 +29,6 @@ LLMs
 
 `In Defense of RAG in the Era of Long-Context Language Models <https://arxiv.org/pdf/2409.01666>`_
     NVIDIA proposes a new method for long-context RAGs which puts them back on top of long-context LLMs.  Short paper, but they seem to have receipts.
-
-`Can LLMs Generate Novel Research Ideas? <https://arxiv.org/pdf/2409.04109>`_
-    Group from Stanford runs a study where they compare human-generated an LLM-generated research proposals and find that the LLMs are both mroe novel and less feasible than the humans, on average.  Could be something signifcant about LLMs, could be that humans are trained to generate ideas that get funding.
 
 `Training Language Models to Self-Correct via Reinforcement Learning <https://arxiv.org/pdf/2409.12917>`_
     Deepmind wants to make LLMs better at writing algorithms.  To do so, they introduce a reinforcement learning approach called SCoRe which forces LLMs to iteratively improve upon the content they generate.  This kind of makes sense as an approach, since most LLM answers have kernels of truth which, if emphasized, could turn into something.
@@ -55,17 +52,8 @@ VLMs
 
 Doctrinaire
 -----------
-`Future Does Matter: Boosting 3D Object Detection with Temporal Motion Estimation in Point Cloud Sequences <https://arxiv.org/pdf/2409.04390>`_
-    A framework for 3D object detection framework that can learn spatio-temporal features.  Possibly of interest to us if we go this route.  Has my favorite type of paper section, the appendix that starts with "the reviewer wanted..."    
-
 `Deep Clustering of Remote Sensing Scenes through Heterogeneous Transfer Learning <https://arxiv.org/pdf/2409.03938>`_
     A collaboration between Texas A&M and the Intelligence and Space Research at Los Alamos, this paper clusters remote sensing scenes using (1) a pretrained neural net, (2) manifold projection, and (3) Bayesian clustering techniques.  Decently effective, and feels like maybe we can leverage a similar approach for automatically detecting image backgrounds and doing context-based learning thereafter.
-
-`Hi3D: Pursuing High-Resolution Image-to-3D Generation with Video Diffusion Models <https://arxiv.org/pdf/2409.07452>`_
-    A new method from Fudan University that strings together multiple U-Nets, Encoders, and Decoders to turn a single image of an object into a 3D mesh of that object, and then use Gaussian Splatting to create a video.  Results seem impressive.  We might be able to leverage this for 3D object detection purposes.
-
-`Prompt-and-Transfer: Dynamic Class-aware Enhancement for Few-shot Segmentation <https://arxiv.org/pdf/2409.10389>`_
-    This paper builds its own pipeline for few-shot segmentation of novel targets using prompts.  Similar to the Grounded SAM pipelines, we want to do something like this across a variety of projects.
 
 `SAM4MLLM: Enhance Multi-Modal Large Language Model for Referring Expression Segmentation <https://arxiv.org/pdf/2409.10542>`_
     Some folks at NVIDIA and National Taiwan University make a pipeline for turning text prompts into semantic segmentation masks.  This is what we want to do for EID, but I'm not sure I can direclty apply this.
@@ -79,16 +67,10 @@ Doctrinaire
 `Semantic Inference-Based Deep Learning and Modeling for Earth Observation: Cognitive Semantic Augmentation Satellite Networks <https://arxiv.org/pdf/2409.15246>`_
     This paper proposes a fairly complex system for managing systems of satellites that are in the Earth Observation business, all of which do slightly different things, including semantic segmentation.  This feels like stuff we wanted to do for MAGI.
 
-Autonomy
---------
-
 Reasoning
 ---------
 `SCIAGENTS: AUTOMATING SCIENTIFIC DISCOVERY THROUGH MULTI-AGENT INTELLIGENT GRAPH REASONING <https://arxiv.org/pdf/2409.05556>`_
     Researchers from MIT propose a new method for doing reasoning over knowledge graphs.  Could be useful for LitCoin/ODIN/Translator.
-
-`HybridFC: A Hybrid Fact-Checking Approach for Knowledge Graphs <https://arxiv.org/pdf/2409.06692>`_
-    Proposes a new fact-checking method for knowledge graphs leveraging ensemble methods.  Doubles the "best" AUC from 0.14 to 0.27.
 
 `Improving LLM Reasoning with Multi-Agent Tree-of-Thought Validator Agent <https://arxiv.org/pdf/2409.11527>`_
     Another paper in the "have an LLM generate a bunch of things and then use a validator to find the right one."  This one is for reasoning applications and uses some Tree of Thought (ToT) stuff to get there.  Could be an interesting approach where (1) compute is not limited and (2) validation is substantially easier than correct generation.
@@ -104,9 +86,6 @@ Tracking
 `Improving Visual Object Tracking through Visual Prompting <https://arxiv.org/pdf/2409.18901>`_
     Leverages CLIP to do object tracking. The idea is intuitive - use the foundation models ability to recognize objects and see how similar they are.  Results look decently impressive. 
 
-Gaussian Splatting
-------------------
-
 Gotta Go Fast
 -------------
 `Democratizing MLLMs in Healthcare: TinyLLaVA-Med for Efficient Healthcare Diagnostics in Resource-Constrained Settings <https://arxiv.org/pdf/2409.12184>`_
@@ -115,24 +94,13 @@ Gotta Go Fast
 `A-VL: Adaptive Attention for Large Vision-Language Models <https://arxiv.org/pdf/2409.14846>`_
     Existing VLMs are somewhat inefficient computationally, because they use the same attention structure for different modalities.  This paper proposes an adaptive attention structure which treats each modality seperately, and in doing so reduces computational costs.
 
-Geometric Deep Learning
------------------------
-
 Adversarial
 -----------
-`LoRID: Low-Rank Iterative Diffusion for Adversarial Purification <https://arxiv.org/pdf/2409.08255>`_
-    Researchers at Los Alamos develop an interative diffusion process to remove adversarial perturbations from images.  Reading the paper does kind of feel like joing a discourse halfway through, so presumably this is an area of research in the literature.
-
 `ENDLESS JAILBREAKS WITH BIJECTION LEARNING <https://haizelabs.com/static/Endless-Jailbreaks-Bijection.pdf>`_
     Incredibly clever adversarial attack from Haze Labs which can get basically anything out of an LLM.  Works by teaching the LLM a bijection language (a = 58, b = b, c = c, d= 23, etc) and talking to it in that language, which apparenty gets around all of the safeguards.  Works better on "smarter" LLMs.
 
 `DarkSAM: Fooling Segment Anything Model to Segment Nothing <https://arxiv.org/pdf/2409.17874>`_
     DarkSAM is a cool name for an adversarial system which seeks to modify images so that SAM can't segment them.  It seems to work here.  This might highlight one danger of relying on a small number of large foundation models - the "attack" space is a lot smaller for an adversary.
-
-Out of Distribution
--------------------
-`RESULTANT: INCREMENTAL EFFECTIVENESS ON LIKELIHOOD FOR UNSUPERVISED OUT-OF-DISTRIBUTION DETECTION <https://arxiv.org/pdf/2409.03801>`_
-    A paper that focusses specifically on hard out-of-distribution detection problems as opposed to easy ones.  Some good thoughts in here on focussing on incremental increases over a baseline.
 
 Theory
 ------
@@ -148,34 +116,16 @@ Theory
 `BREAKING NEURAL NETWORK SCALING LAWS WITH MODULARITY <https://arxiv.org/pdf/2409.05780>`_
     A research group from MIT investigates how modular neural nets can improve on normal neural nets.  They claim that regular neural nets require an exponential number of samples in task dimensionality while modular neural nets are independent.  Using this, they propose a whole bevy of improvements.
 
-`Learning large softmax mixtures with warm start EM <https://arxiv.org/pdf/2409.09903>`_
-    A new EM based method for doing inference for large softmax mixtures, e.g. LLMs.  Kind of interesting, but probably a ways off from being directly relevant to us.
-
 `SOAP: IMPROVING AND STABILIZING SHAMPOO USING ADAM <https://arxiv.org/pdf/2409.11321>`_
     A great paper name.  Researchers at Harvard are investigating different ways to do optimization, and find that Shampoo (who named this?) is equivalent to Adafactor in the eigenbasis of a preconditioner.  They propose a new optimizer named SOAP that's equivalent to running Adam in a rotated space.  Unsurprisingly, they claim SOAP is the best optimizer.
 
 `Fine-Tuning is Fine, if Calibrated <https://arxiv.org/pdf/2409.16223>`_
-    The title is wildly underenthusiastic for some reason, but the results are cool.  This paper finds that fine-tuning a big foundation model does NOT result in the model forgetting about all the general stuff it used to know in order to learn new things - the new modified logits are simply on a different scale than the original logits, which remain.  If you calibrate, you can recapture the original model performacne while retaining increased performance on the fine-tuned task.
+    The title is unenthused for some reason, but the results are cool.  This paper finds that fine-tuning a big foundation model does NOT result in the model forgetting about all the general stuff it used to know in order to learn new things - the new modified logits are simply on a different scale than the original logits, which remain.  If you calibrate, you can recapture the original model performacne while retaining increased performance on the fine-tuned task.
 
 Applications
 ------------
-`Causal effect of the infield shift in the MLB <https://arxiv.org/pdf/2409.03940>`_
-    Finds that the infield shift was in fact effective at preventing runs, but especially so against left-handed batters.  Apparently there hadn't been a causal analysis of the subject, which makes the MLB's decision to ban the infield shift funny even if it was validated in hindsight.
-
-`Moving from Machine Learning to Statistics: the case of Expected Points in American football <https://arxiv.org/pdf/2409.04889>`_
-    Publicly available football analytics is apparently a bit of the wild west where machine learning tools are just thrown all over the place.  This paper claims that this methodology ignores some important statistical properties of the data which, when taken into account, can improve performance.  Demonstrates that understanding and properly modelling data is still important.
-
-`A Framework for Predicting the Impact of Game Balance Changes through Meta Discovery <https://arxiv.org/pdf/2409.07340>`_
-    A cool paper that uses RL algorithms to simulate the metagame on Pokemon Showdown, with an interest in simulating metagames after certain pokemon are banned. 
-
-`THE UNDERREPORTED DEATH TOLL OF WARS: A PROBABILISTIC REASSESSMENT FROM A STRUCTURED EXPERT ELICITATION <https://arxiv.org/pdf/2409.08779>`_
-    An interesting paper that tries to account for under-reporting of battlefield fatality statistics in the Uppsala Conflict Data Program.  Somehow, most of the co-authors seem to work at Uppsala so the snake is eating its own tail a bit here.  The mechanics of what they're doing here isn't anything revolutionary, but this sort of problem seems like it might be of interest to various parts of the IC.
-
 `Estimating Wage Disparities Using Foundation Models <https://arxiv.org/pdf/2409.09894>`_
     David Blei and some co-authors explore using foundation models for counterfactual forecasting in observational causal inference.  You could pick at a lot of stuff they do, but it's a cool case study as to how foundation models can be deployed in interesting ways.
-
-`WHO’S THE GOAT? SPORTS RANKINGS AND DATA-DRIVEN RANDOM WALKS ON THE SYMMETRIC GROUP <https://arxiv.org/pdf/2409.12107>_`
-    Applies a decent amount of heavy duty math (groups, partially ordered sets, random walks) to resolve pub arguments (who is the best tennis player of all time?).  A cool take on how to rank a bunch of players who may or may not have a lot of comparisons, but likely there is room for improvement.
 
 `Predictive Covert Communication Against Multi-UAV Surveillance Using Graph Koopman Autoencoder <https://arxiv.org/pdf/2409.17048>`_
     In what is kind of an interesting problem some people associated in some capacity with the Australian military (I think?) investigate how to have "low probability of detection" communications in the face of adversarial UAV surveillance.  Not directly relevant to any of our projects, but it could be.
