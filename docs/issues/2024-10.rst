@@ -45,6 +45,9 @@ LLMs
 `Characterizing stable regions in the residual stream of LLMs <https://arxiv.org/pdf/2409.17113>`_
     Transformers have stable regions, which correspond to semantic concepts and where small changes in inputs lead to only small changes in outputs.  At the boundaries of these regions, however, a small change in input can lead to a dramatic change in output.  Feels like we should be able to leverage this insight somehow, but I'm not sure how.
 
+`“Oh LLM, I’m Asking Thee, Please Give Me a Decision Tree”: Zero-Shot Decision Tree Induction and Embedding with Large Language Models <https://arxiv.org/pdf/2409.18594>`_
+    LLMs know a lot of stuff.  Some of the stuff they know can be used to generate zero-shot decision trees for problems where you're dealing with a lack of data.  Cool idea, and results seem impressive, but I wonder if this is really zero-shot since the LLM may have trained on the datasets they use for evaluations.
+
 VLMs
 ----
 `Aligning Machine and Human Visual Representations across Abstraction Levels <https://arxiv.org/pdf/2409.06509>`_
@@ -97,6 +100,9 @@ Tracking
 --------
 `Gaussian Process Upper Confidence Bounds in Distributed Point Target Tracking over Wireless Sensor Networks <https://arxiv.org/pdf/2409.07652>`_
     This paper has a coathuor from DEVCOM Army Reserach  Lab.  Uses a Gaussian Process approach for point-tracking with Bayesian filtering.  Lots of pretty pictures.
+
+`Improving Visual Object Tracking through Visual Prompting <https://arxiv.org/pdf/2409.18901>`_
+    Leverages CLIP to do object tracking. The idea is intuitive - use the foundation models ability to recognize objects and see how similar they are.  Results look decently impressive. 
 
 Gaussian Splatting
 ------------------
@@ -173,6 +179,12 @@ Applications
 
 `Predictive Covert Communication Against Multi-UAV Surveillance Using Graph Koopman Autoencoder <https://arxiv.org/pdf/2409.17048>`_
     In what is kind of an interesting problem some people associated in some capacity with the Australian military (I think?) investigate how to have "low probability of detection" communications in the face of adversarial UAV surveillance.  Not directly relevant to any of our projects, but it could be.
+
+`Bayesian Event Categorization Matrix Approach for Nuclear Detonations <https://arxiv.org/pdf/2409.18227>`_
+    Los Alamos proposes a Bayesian method for categorizing nuclear explosions.  Cool stuff, but not direclty relevant to any of our projects.
+
+`Cores that don’t count <https://sigops.org/s/conferences/hotos/2021/papers/hotos21-s01-hochschild.pdf>`_
+    Google thinks about what to do when you have CPUs that are malfunctioning and think that 2 plus 2 is 5.  We don't have nearly enough computers to worrry about this... but the Army does.
 
 New Models
 --------
