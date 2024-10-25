@@ -1,0 +1,400 @@
+2024-01
+=======
+
+NeurIPS
+-------
+
+`NeurIPS 2023 <https://neurips2023.vizhub.ai>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The conference is in December and this is a cool visualization to see trends. Lots to explore. Maybe next month.
+
+------------
+
+
+
+
+
+Gaussian Splatting and Doctrinaire Related Things
+-------------------------------------------------
+
+Gaussian splatting is very interesting and pretty practical. Lot's of activity going on. Some of them are getting very close to rhyming with Doctrinaire. 
+
+Maybe start with  `Splatter Image: Ultra-Fast Single-View 3D Reconstruction <https://arxiv.org/abs/2312.13150>`_. It's like the Centernet of NERF. They make a "splatter image" that defines a 3D reconstruction, they can feed it to a Gaussian splatter renderer. From those small number channels they can render other views of that target. It's kind of awesome. It seems super useful to me, just can't quite figure out how yet.
+
+Here are some others worth checking out or at least looking at the pictures.
+
+* `This paper with video <https://szymanowiczs.github.io/splatter-image>`_
+* `Splatting for people moving <https://shunyuanzheng.github.io/GPS-Gaussian>`_
+* `Splatting for avatar heads <https://yuelangx.github.io/gaussianheadavatar/>`_
+* `Splatting with transformers baked in <https://arxiv.org/abs/2312.09147>`_
+
+I think this one `iComMa: Inverting 3D Gaussians Splatting for Camera Pose Estimation via Comparing and Matching <https://arxiv.org/abs/2312.09031>`_ is the splatting paper I was looking for as Doctrinaire.
+
+------------
+
+`Reconstructing Hands in 3D with Transformers <https://arxiv.org/pdf/2312.05251.pdf>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Implemented a transformer that can look at pictures of hands and output a 3D mesh.  Could be useful for Doctrinaire/TA2/whenever we want to use a CAD model
+
+------------
+
+
+LLMs
+------------
+
+`Are Emergent Abilities of Large Language Models a Mirage? <https://arxiv.org/pdf/2304.15004.pdf>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The authors claimed on twitter that this was best in show at NeurIPS, and no one would lie about that.  Argues that emergent behavior (as model scale increases) is just due to choice of metric rather than any underlying behavior.
+
+--------------
+
+`Mixtral 8x7B Explained <https://huggingface.co/blog/moe>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Mixtral is an interesting LLM company. They are French and seem to be pretty solid. This is how they do Mixture of Expert models (like GPT4). Instead of using one big model say 56GB we can actually use a mixture of 8 7B models. We end up saving a bit of VRAM space in the process and it works better. Something to keep an eye on.
+
+`VLLM Implementation <https://github.com/vllm-project/vllm/commit/b5f882cc98e2c9c6dde7357dbac2ec0c2c57d8cd>`_
+
+
+------------
+
+
+`The Reversal Curse: LLMs trained on "A is B" fail to learn "B is A" <https://arxiv.org/abs/2309.12288>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+User: Who is Tom Cruise's mother.
+
+LLM: Mary Lee Pfiefer
+
+
+User: Who's son is Mary Lee Pfiefer
+
+LLM: ?!?!? Dunno ?!?!?!
+
+Nobody talks about that so how could the big memorizer memorize it.
+
+------------
+
+
+`Paving the way to efficient architectures: StripedHyena-7B, open source models offering a glimpse into a world beyond Transformers <https://www.together.ai/blog/stripedhyena-7b>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+What's after transformers? Any ideas? Yeah there are some and sometimes they are better sometimes. It's based on `signal processing inspired sequence models <https://hazyresearch.stanford.edu/blog/2023-06-08-hyena-safari>`_ which means that sometimes you use an FFT. Miles this sounds up your alley.
+
+------------
+
+`Scalable Extraction of Training Data from (Production) Language Models <https://arxiv.org/abs/2311.17035>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Ask ChatGPT to repeat a word forever. After a while it starts barfing training data.
+This is now against OpenAI terms of service.
+
+    Our attack circumvents the privacy safeguards by identifying a vulnerability in ChatGPT that causes it to escape its fine-tuning alignment procedure and fall back on its pre-training data.
+
+`See Also <https://not-just-memorization.github.io/extracting-training-data-from-chatgpt.html>`_
+
+------------
+
+
+`Scalable and Transferable Black-Box Jailbreaks for Language Models via Persona Modulation <https://arxiv.org/abs/2311.03348>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Getting GPT4 to give you a recipe for meth is very doable. It's not a GPT problem, it's a standard LLM problem. This has big implications for Secret and Top Secret LLMs. Jailbreaking them is a security violation / spill.
+
+------------
+
+
+`LLM in a flash: Efficient Large Language Model Inference with Limited Memory <https://arxiv.org/pdf/2312.11514.pdf>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Apple.  Extremely computationally efficient LLMs
+
+------------
+
+
+
+
+
+
+Images
+------
+
+`Efficient SAM <https://yformer.github.io/efficient-sam/>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+I tend to think the future of most AI is big foundational models that few people seldomly retrain. Segment Anything (SAM) is the foundational model of image segmentation and its pretty good most of the time. Now fast.
+
+------------
+
+`Sequential Modeling Enables Scalable Learning for Large Vision Models <https://arxiv.org/abs/2312.00785>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Training a foundational vision model that can do many tasks. Uses transformers and image squences. It's a bit insane. All input must be images so if you want BBoxes you better draw an image with those boxes in it. I didn't say it was good. I said it was interesting.
+
+`See Also <https://yutongbai.com/lvm.html>`_
+
+
+`General Object Foundation Model for Images and Videos at Scale <https://arxiv.org/abs/2312.09158>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+More foundational model vision talk. This thing does it all, object detection, segmentation, tracking. Honestly it looks pretty impressive. 
+
+------------
+
+
+`GenDeF: Learning Generative Deformation Field for Video Generation <https://arxiv.org/pdf/2312.04561.pdf>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Video generation via warping one image rather than generating multiple frames in a row.  Unclear how it extends to long videos, but might have some insights for analyzing videos
+
+------------
+
+
+
+Theory
+------
+
+`Graph Convolutions Enrich the Self-Attention in Transforms! <https://arxiv.org/pdf/2312.04234.pdf>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+We are reaching the limits of self-attention as a mechanism in transformers (???).  Represents self-attention as a graph filter and redesigns from graph signal processing perspective.  Increased performance but also increased complexity
+
+------------
+
+`Exploring Transferability for Randomized Smoothing <https://arxiv.org/abs/2312.09020>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+If you want a good model you need to train it well with tons of augmentation the first time. When you get a new task and fine tune you will remain robust to augmentation (noise) if if you don't fine tune with it. 
+
+------------
+
+
+`Temperature Balancing, Layer-wise Weight Analysis, and Neural Network Training <https://arxiv.org/pdf/2312.00359.pdf>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Interprets learning rate as temperature, and proposes a method for varying the learning rate in a DNN on a layer-by-layer basis.  Significantly outperforms existing SGD methods
+
+------------
+
+
+`Understanding the Detrimental Class-level Effects of Data Augmentation <https://openreview.net/forum?id=dQkeoGnn68>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ICML.  Analyzes how data augmentation can hurt individual class-level accuracy while improving average class level accuracy.  Data augmentation creates overlap between data distributions associated with different classes
+
+------------
+
+
+`The Machine Learning Control Method for Counterfactual Forecasting <https://arxiv.org/pdf/2312.05858.pdf>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Interesting approach to causal problems.  Learns trend before treatment using ML methods (regression trees?) and forecasts the counterfactual, what would happen to patients in the absence of treatment.  This allows estimation of treatment effects.  
+
+------------
+
+`Deep Internal Learning: Deep Learning from a Single Input <https://arxiv.org/pdf/2312.07425.pdf>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Review paper.  Covers methods for doing deep internal learning - training a model from a very small amount of inputs - with a focus on CV
+
+------------
+
+`Can a Transformer Represent a Kalman Filter? <https://arxiv.org/pdf/2312.06937.pdf>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Yes.  Short paper, focusses on theory - no experiments/implementation.  Also, they left the AISTATs instruction blurb in at the end…
+
+------------
+
+`A Mathematical Perspective on Transformers <https://arxiv.org/pdf/2312.10794.pdf>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+New mathematical perspective on transformers: "based on their interpretation as interacting particle systems, which reveals that clusters emerge in long time."
+
+------------
+
+
+`Human mobility is well described by closed-form gravity-like models learned automatically from data <https://arxiv.org/pdf/2312.11281.pdf>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Simple, gravity-like machine learning models better describe human mobility than either gravity models or deep learning models
+
+------------
+
+
+
+
+
+Reasoning
+---------
+
+`Beyond Transduction: A Survey on Inductive, Few Shot, and Zero Shot Link Prediction in Knowledge Graphs <https://arxiv.org/pdf/2312.04997.pdf>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Review paper.  Does what it says on the tin
+
+------------
+
+`NestE: Modeling Nested Relational Structures for Knowledge Graph Reasoning <https://arxiv.org/pdf/2312.09219.pdf>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Extends knowledge graph methods to nested triples or triples of triples: "(e.g., ((BarackObama, holds position, President), succeed by, (DonaldTrump, holds position, President)))"
+
+------------
+
+`SAT-Based Algorithms for Regular Graph Pattern Matching <https://arxiv.org/pdf/2312.09995.pdf>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Proposes ReGaPs (regular graph patterns) to do better graph matching - isomorphisms, approximations, subsets, etc, as well as Boolean satisfiability (SAT) encoding, and a simplification technique
+
+------------
+
+
+
+
+
+
+
+Overhead
+--------
+
+`QuickQuakeBuildings: Post-earthquake SAR-Optical Dataset for Quick Damaged-building Detection <https://arxiv.org/pdf/2312.06587.pdf>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Uses satellite/high-altitude SAR dataset to assess which buildings were damaged by earthquakes.  Combination of binary classification and anomaly detection.
+
+------------
+
+`Benchmarking Deep Learning Classifiers for SAR Automatic Target Recognition <https://arxiv.org/pdf/2312.06940.pdf>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Coauthors from DEVCOM Army Research Lab - might give us insight about what they want.  They analyze SAR classifiers for classification accuracy, runtime performance in terms of inference throughput, and analytical performance in terms of number of parameters, number of layers, model size and number of operations.  No single model rules them all
+
+------------
+
+`Multiview Aerial Visual Recognition (MAVREC): Can Multi-view Improve Aerial Visual Perception?  <https://arxiv.org/pdf/2312.04548.pdf>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Creates a dataset of co-located ground and aerial views.  Finds that supplementing aerial detectors with ground views of the same location at the same time increases performance.  
+
+------------
+
+`WIT-UAS: A Wildland-fire Infrared Thermal Dataset to Detect Crew Assets From Aerial Views <https://arxiv.org/pdf/2312.09159.pdf>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+New LWIR overhead aerial dataset. Probably more useful for UAS than TA2, but might be useful if we ever want to do IR capabilities
+
+------------
+
+
+
+
+
+Autonomy
+--------
+
+`Auto MC-Reward: Automated Dense Reward Design with Large Language Models for Minecraft <https://arxiv.org/pdf/2312.09238.pdf>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Uses LLMs to make design dense rewards in Minecraft to make it easier to train AI
+
+------------
+
+`Vision-Language Models as a Source of Rewards <https://arxiv.org/pdf/2312.09187.pdf>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Deepmind.  Uses vision-language models (CLIP family) to generate dense rewards for use in training reinforcement learning type things
+
+------------
+
+`Using Surprise Index for Competency Assessment in Autonomous Decision-Making <https://arxiv.org/pdf/2312.09033.pdf>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Proposes a surprise index to evaluate how autonomous AI makes decisions and evaluates on space-maneuvers.  
+
+------------
+
+
+`MineObserver 2.0: A Deep Learning & In-Game Framework for Assessing Natural Language Descriptions of Minecraft Imagery <https://arxiv.org/pdf/2312.11761.pdf>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Minecraft for learning.  Proposes a method for grading natural language descriptions of a Minecraft screenshot
+
+------------
+
+`Large Language Models Play StarCraft II: Benchmarks and A Chain of Summarization Approach <https://arxiv.org/pdf/2312.11865.pdf>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+LLMs play SC2.  Has an SC2 to text to Chain of Summarization pipeline for developing strategies and allowing the LLM to interact
+
+------------
+
+`Scaling Opponent Shaping to High Dimensional Games <https://arxiv.org/pdf/2312.12568.pdf>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Proposes a method for shaping your opponents' behaviors in multi-agent games to get to better outcomes for everyone
+
+------------
+
+
+Stats
+-----
+
+`Zero-Class Poisson for Rare-Event Studies <https://arxiv.org/ftp/arxiv/papers/2312/2312.03894.pdf>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Proposes a Bayesian zero-count Poisson detector for rare event detection.  Like all rare event stuff you're pretty data-limited, but it's a cool field of study
+
+------------
+
+`Probabilistic Reconstruction of Paleodemographic Signals <https://arxiv.org/pdf/2312.05152.pdf>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Bayesian approach to paleodemography with emphasis on uncertainty and a case study on Cyprus.  Cool problem, though I'm not necessarily convinced by their methods
+
+------------
+
+`Modeling and Predicting Epidemic Spread: A Gaussian Process Regression Approach <https://arxiv.org/pdf/2312.09384.pdf>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Proposes a Gaussian Process Regression model for epidemic analysis.  Derives new measures of uncertainty which make more sense than traditional measures
+
+------------
+
+`Do Bayesian Neural Networks Weapon System Improve Predictive Maintenance? <https://arxiv.org/ftp/arxiv/papers/2312/2312.10494.pdf>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Naval Surface Warfare Center.  Use Bayesian Neural Nets to estimate time to failure for highly reliable weapons systems. 
+
+------------
+
+`Estimation of individual causal effects in network setup for multiple treatments <https://arxiv.org/pdf/2312.11573.pdf>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Uses graph convolutional networks to estimate individual treatment effects in network meta analysis settings with observational data
+
+------------
+
+`A Bayesian Spatial Model to Correct Under-Reporting in Urban Crowdsourcing <https://arxiv.org/pdf/2312.11754.pdf>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Uses a Bayesian model to account for underreporting in storm-induced flooding reports, using data from across multiple storms.  Outperforms baseline models
+
+------------
+
+
+
+
+
+
+Potpourrie
+----------
+
+`NC Senate AI Panel Report <https://wraltechwire.com/2023/12/01/ai-safety-is-imperative-triangle-thought-leaders-talk-artificial-intelligence-with-senate-panel/>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Not a lot, but interesting to see who was there speaking on "our" behalf. It's Cynthia Rudin.
+
+`See also <https://www.schumer.senate.gov/newsroom/press-releases/statements-from-the-seventh-bipartisan-senate-forum-on-artificial-intelligence>`_
+
+------------
+
+`NNSVG <https://alexlenail.me/NN-SVG/AlexNet.html>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Make pretty SVGs from your NN architecture.
+They look nice. 
+
+------------
+
+`Wikifunctions <https://www.wikifunctions.org/wiki/Wikifunctions:Main_Page>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The Wikipedia of "functions" that can translate inputs to outputs. The open source collection of algorithms/code/functions. A bunch of string operations for now, not much going on, but eventually could be very useful for general AI.
+
+------------
+
+`mlX <https://ml-explore.github.io/mlx/build/html/index.html>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Apple released computational library kinda like numpy or pytorch for Apple silicon. Because of the unified memory on Apple Silicon, and the inclusion of auto-grad, it's suitable as a pytorch replacement. Has LLM runtime components that make LLMs go faster than "CPU" based operations.
+
+------------
+
+
+`Triple Pattern Fragments <https://linkeddatafragments.org/specification/triple-pattern-fragments/>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The old school pick of the month. W3C is a bunch of committees that govern a lot of open standards. (There are those that say they lost and Google runs the internet now, and they are sorta right but,) Looking at the types of things they have come up with for abstraction and representations is interesting. Lot's of smart people. We should be more inspired by them.
+
+------------
+
+`Concept Sliders: LoRA Adaptors for Precise Control in Diffusion Models <https://sliders.baulab.info>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In a generative model it is very useful to have knobs to control how to modify an existing image in a specific direction. Make the face older/have glasses etc. This is a way to train those sliders.
+
+------------
+
+`Spiking Graph Convolutional Networks <https://arxiv.org/abs/2205.02767>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+What ever happened to Spiking Networks? Do they do anything good yet? This is for graph convolution from March 2022 and the answer is, not really. Energy efficiency?
+Here is another one `Language Modeling on a SpiNNaker 2 Neuromorphic Chip <https://arxiv.org/abs/2312.09084>`_ also being a little better on energy for LSTM language models (not even LLMs). Also do some event based camera work, MAYBE just MAYBE there is something there.
+
