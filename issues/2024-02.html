@@ -1,0 +1,485 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2024-02 &mdash; CoVar Readers Digest 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato" />
+      <link rel="stylesheet" type="text/css" href="../_static/pytorch_theme.css?v=30bd9c6c" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=adfe253f" />
+
+  
+      <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=af2ce170"></script>
+      <script src="../_static/doctools.js?v=888ff710"></script>
+      <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2024-03" href="2024-03.html" />
+    <link rel="prev" title="2024-01" href="2024-01.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/covar_logo_white.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../sections/01-Overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2023-12.html">2023-12</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="2023-12.html#id2">Can Generalist Foundation Models Outcompete Special-Purpose Tuning? Case Study in Medicine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2023-12.html#id3">Toy Models of Superposition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2023-12.html#id4">BirdNet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2023-12.html#id5">Exponentially Faster Language Modeling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2023-12.html#id6">Don’t Say What You Don’t Know: Improving the Consistency of Abstractive Summarization by Constraining Beam Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2023-12.html#id7">Accelerating 3D Deep Learning with PyTorch3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2023-12.html#id8">Estimation of NIIRS, for High Resolution Satellite Images, Using the Simplified GIQE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2023-12.html#id9">Supersizing Transformers: Going Beyond RAG with Extended minds for LLMs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2023-12.html#id10">Language Models can be Logical Solvers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2023-12.html#id11">Summon a Demon and Bind it: A Grounded Theory of LLM Red Teaming in the Wild</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2023-12.html#id12">LLMs cannot find reasoning errors, but can correct them!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2023-12.html#id13">Orca: Progressive Learning from Complex Explanation Traces of GPT-4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2023-12.html#id14">Orca 2: Teaching Small Language Models How to Reason</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2023-12.html#id15">Walking Down the Memory Maze: Beyond Context Limit through Interactive Reading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2023-12.html#id16">The ‘eu’ in eucatastrophe – Why SciPy builds for Python 3.12 on Windows are a minor miracle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2023-12.html#id17">ChatGPT’s One-year Anniversary: Are Open-Source Large Language Models Catching up?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="2024-01.html">2024-01</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="2024-01.html#neurips">NeurIPS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id2">NeurIPS 2023</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="2024-01.html#gaussian-splatting-and-doctrinaire-related-things">Gaussian Splatting and Doctrinaire Related Things</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id3">Reconstructing Hands in 3D with Transformers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="2024-01.html#llms">LLMs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id4">Are Emergent Abilities of Large Language Models a Mirage?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id5">Mixtral 8x7B Explained</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id6">The Reversal Curse: LLMs trained on “A is B” fail to learn “B is A”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id7">Paving the way to efficient architectures: StripedHyena-7B, open source models offering a glimpse into a world beyond Transformers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id8">Scalable Extraction of Training Data from (Production) Language Models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id9">Scalable and Transferable Black-Box Jailbreaks for Language Models via Persona Modulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id10">LLM in a flash: Efficient Large Language Model Inference with Limited Memory</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="2024-01.html#images">Images</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id11">Efficient SAM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id12">Sequential Modeling Enables Scalable Learning for Large Vision Models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id14">General Object Foundation Model for Images and Videos at Scale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id15">GenDeF: Learning Generative Deformation Field for Video Generation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="2024-01.html#theory">Theory</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id16">Graph Convolutions Enrich the Self-Attention in Transforms!</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id17">Exploring Transferability for Randomized Smoothing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id18">Temperature Balancing, Layer-wise Weight Analysis, and Neural Network Training</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id19">Understanding the Detrimental Class-level Effects of Data Augmentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id20">The Machine Learning Control Method for Counterfactual Forecasting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id21">Deep Internal Learning: Deep Learning from a Single Input</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id22">Can a Transformer Represent a Kalman Filter?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id23">A Mathematical Perspective on Transformers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id24">Human mobility is well described by closed-form gravity-like models learned automatically from data</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="2024-01.html#reasoning">Reasoning</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id25">Beyond Transduction: A Survey on Inductive, Few Shot, and Zero Shot Link Prediction in Knowledge Graphs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id26">NestE: Modeling Nested Relational Structures for Knowledge Graph Reasoning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id27">SAT-Based Algorithms for Regular Graph Pattern Matching</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="2024-01.html#overhead">Overhead</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id28">QuickQuakeBuildings: Post-earthquake SAR-Optical Dataset for Quick Damaged-building Detection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id29">Benchmarking Deep Learning Classifiers for SAR Automatic Target Recognition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id30">Multiview Aerial Visual Recognition (MAVREC): Can Multi-view Improve Aerial Visual Perception?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id31">WIT-UAS: A Wildland-fire Infrared Thermal Dataset to Detect Crew Assets From Aerial Views</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="2024-01.html#autonomy">Autonomy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id32">Auto MC-Reward: Automated Dense Reward Design with Large Language Models for Minecraft</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id33">Vision-Language Models as a Source of Rewards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id34">Using Surprise Index for Competency Assessment in Autonomous Decision-Making</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id35">MineObserver 2.0: A Deep Learning &amp; In-Game Framework for Assessing Natural Language Descriptions of Minecraft Imagery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id36">Large Language Models Play StarCraft II: Benchmarks and A Chain of Summarization Approach</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id37">Scaling Opponent Shaping to High Dimensional Games</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="2024-01.html#stats">Stats</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id38">Zero-Class Poisson for Rare-Event Studies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id39">Probabilistic Reconstruction of Paleodemographic Signals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id40">Modeling and Predicting Epidemic Spread: A Gaussian Process Regression Approach</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id41">Do Bayesian Neural Networks Weapon System Improve Predictive Maintenance?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id42">Estimation of individual causal effects in network setup for multiple treatments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id43">A Bayesian Spatial Model to Correct Under-Reporting in Urban Crowdsourcing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="2024-01.html#potpourrie">Potpourrie</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id44">NC Senate AI Panel Report</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id46">NNSVG</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id47">Wikifunctions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id48">mlX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id49">Triple Pattern Fragments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id50">Concept Sliders: LoRA Adaptors for Precise Control in Diffusion Models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2024-01.html#id51">Spiking Graph Convolutional Networks</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2024-02</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#llms">LLMs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#build-it">Build It</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#theory">Theory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#images">Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#doctrinaire">Doctrinaire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reasoning">Reasoning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#stats">Stats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#datasets">Datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#potpurrie">Potpurrie</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="2024-03.html">2024-03</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="2024-03.html#tooling">Tooling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-03.html#llms">LLMs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-03.html#autonomy">Autonomy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-03.html#theory">Theory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-03.html#images">Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-03.html#doctrinaire">Doctrinaire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-03.html#knowledge-graphs">Knowledge Graphs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-03.html#fusion">Fusion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-03.html#fpga">FPGA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-03.html#stats">Stats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-03.html#applications">Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-03.html#position-papers">Position Papers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-03.html#datasets">Datasets</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="2024-04.html">2024-04</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="2024-04.html#llms">LLMs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-04.html#lvlms">LVLMs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-04.html#doctrinaire">Doctrinaire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-04.html#autonomy">Autonomy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-04.html#theory">Theory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-04.html#stats">Stats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-04.html#sports-analytics">Sports Analytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-04.html#sensing">Sensing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-04.html#applications">Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-04.html#computer-science">Computer Science</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-04.html#data-labelling">Data Labelling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-04.html#logistics-operations-research">Logistics/Operations Research</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-04.html#knowledge-graphs">Knowledge Graphs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-04.html#reasoning">Reasoning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-04.html#datasets">Datasets</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="2024-05.html">2024-05</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="2024-05.html#featured">Featured</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-05.html#llm-applications">LLM Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-05.html#llm-theory">LLM Theory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-05.html#doctrinaire">Doctrinaire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-05.html#autonomy">Autonomy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-05.html#theory">Theory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-05.html#stats">Stats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-05.html#sensing">Sensing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-05.html#fpga">FPGA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-05.html#reasoning-knowledge-graphs">Reasoning/Knowledge Graphs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-05.html#new-llms">New LLMs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="2024-06.html">2024-06</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="2024-06.html#featured">Featured</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-06.html#llm-applications">LLM Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-06.html#llm-theory">LLM Theory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-06.html#doctrinaire">Doctrinaire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-06.html#autonomy">Autonomy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-06.html#theory">Theory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-06.html#sensing">Sensing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-06.html#gaussian-splatting">Gaussian Splatting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-06.html#reasoning-knowledge-graphs">Reasoning/Knowledge Graphs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-06.html#applications">Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-06.html#new-models">New Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-06.html#lunch-and-learn">Lunch and Learn</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="2024-07.html">2024-07</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="2024-07.html#featured">Featured</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-07.html#llms">LLMs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-07.html#ethics">Ethics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-07.html#doctrinaire">Doctrinaire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-07.html#theory">Theory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-07.html#gaussian-splatting">Gaussian Splatting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-07.html#fpga">FPGA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-07.html#knowledge-graphs">Knowledge Graphs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-07.html#applications">Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-07.html#new-models">New Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-07.html#lunch-and-learn">Lunch and Learn</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="2024-08.html">The CoVar Zeitgeist: 2024-08</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="2024-08.html#featured">Featured</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-08.html#llms">LLMs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-08.html#vlms">VLMs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-08.html#doctrinaire">Doctrinaire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-08.html#autonomy">Autonomy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-08.html#reinforcement-learning">Reinforcement Learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-08.html#fusion">Fusion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-08.html#tracking">Tracking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-08.html#gaussian-splatting">Gaussian Splatting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-08.html#gotta-go-fast">Gotta Go Fast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-08.html#theory">Theory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-08.html#applications">Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-08.html#new-llms">New LLMs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-08.html#lunch-and-learn">Lunch and Learn</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="2024-09.html">The CoVar Zeitgeist: 2024-09</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="2024-09.html#featured">Featured</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-09.html#llms">LLMs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-09.html#vlms">VLMs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-09.html#doctrinaire">Doctrinaire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-09.html#autonomy">Autonomy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-09.html#tracking">Tracking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-09.html#gaussian-splatting">Gaussian Splatting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-09.html#gotta-go-fast">Gotta Go Fast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-09.html#geometric-deep-learning">Geometric Deep Learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-09.html#theory">Theory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-09.html#applications">Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-09.html#new-models">New Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-09.html#lunch-and-learn">Lunch and Learn</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="2024-10.html">The CoVar Zeitgeist: 2024-10</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="2024-10.html#featured">Featured</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-10.html#llms">LLMs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-10.html#vlms">VLMs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-10.html#doctrinaire">Doctrinaire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-10.html#reasoning">Reasoning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-10.html#tracking">Tracking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-10.html#gotta-go-fast">Gotta Go Fast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-10.html#adversarial">Adversarial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-10.html#theory">Theory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-10.html#applications">Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-10.html#new-models">New Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2024-10.html#lunch-and-learn">Lunch and Learn</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CoVar Readers Digest</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">2024-02</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/issues/2024-02.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>2024-02<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<p>Trying a different format this month. Feedback welcome.</p>
+<section id="llms">
+<h2>LLMs<a class="headerlink" href="#llms" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://arxiv.org/pdf/2401.01814.pdf">Large Language Models Relearn Removed Concepts</a></dt><dd><p>Investigates how LLMs manage to relearn concepts after the neurons associated with those concepts are deleted.  They “relocate advanced concepts to earlier layers and reallocate pruned concepts to primed neurons with similar semantic concepts”</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2401.02954.pdf">DeepSeek LLM Scaling Open-Source Language Models with Longtermism</a></dt><dd><p>New LLM (DeepSeek) just dropped.  Investigates scaling laws with LLMs by assembling a 2 trillion token dataset of english and chinese characters.  This seems to depend on a lot of things, e.g. batch size, learning rate, and dataset.  Having english and chinese tokens together is a bit weird - the dataset is parittioned in two halves that aren’t able to interact with each other?  Maybe it’s translation? Worth reading but I have questions…</p>
+</dd>
+<dt><a class="reference external" href="https://github.com/deepseek-ai/DeepSeek-LLM">DeepSeek code</a></dt><dd><p>Link to github.  The let you download the model (only 67B parameters) but is also a Chinese company so maybe we need to get it cleared with the security folks before downloading?</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2401.02851.pdf">Generative Large Language Models are autonomous practitioners of evidence-based medicine</a></dt><dd><p>Have you ever wanted Chat-GPT to be your doctor?  A bunch of MDs (and a few PhDs) think it can!  It’s bad.  Don’t do this.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2401.03408.pdf">Escalation Risks from Language Models in Military and Diplomatic Decision-Making</a></dt><dd><p>If LLMs are granted decision making authority, how dangerous would they be?  This paper designs a wargame and lets LLMs play it to test whether they escalate.  They do.  A lot.  Nuclear, even.  Not surprising, but highlights the risks.  You’d think this unnecssary, but the paper calls out Palantir for doing exactly this.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2401.10568.pdf">CivRealm: A LEARNING AND REASONING ODYSSEY IN Civilization FOR DECISION-MAKING AGENTS</a></dt><dd><p>LLMs play Civilization.  Is this the next playground for multi-agent Reinforcement Learning?  Cool idea, but they spend most of the paper talking about Civilization and a little bit at the end introducing methods and saying they don’t work well.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2310.17567.pdf">SKILL-MIX: A FLEXIBLE AND EXPANDABLE FAMILY OF EVALUATIONS FOR AI MODELS</a></dt><dd><p>Deepmind and Princeton.  How to evaluate LLMs?  Have a list of skills an LLM can do, randomly combine some subset of them, and ask the LLM to do that.  Should force it to do something not in the training set and valuable/interesting.  Seems like a cool way to evaluate a general purpose AI, but if you’re LLM is supposed to be really good at one specific task you might not care how it generalizes to some randomly generated task.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2401.12178.pdf">In-Context Learning for Extreme Multi-Label Classification</a></dt><dd><p>LLMs tackle classification tasks with lots (10,000) of classes.  “Unlike prior work, our proposed solution requires no finetuning, is easily applicable to new tasks, alleviates prompt engineering, and requires only tens of labeled examples.”  Seems too good to be true but also seems to work?</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/abs/2401.02994">Blending Is All You Need: Cheaper, Better Alternative to Trillion-Parameters LLM</a></dt><dd><p>Mixture of experts models are interesting. Lots of work in this direction lately. Use several smaller LLMs and it competes with much larger LLMs. Why does this work as well? Something to do with catastrophic forgetting?</p>
+</dd>
+</dl>
+</section>
+<section id="build-it">
+<h2>Build It<a class="headerlink" href="#build-it" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://arxiv.org/pdf/2401.01180.pdf">Accurate and Efficient Urban Street Tree Inventory with Deep Learning on Mobile Phone Imagery</a></dt><dd><p>Puts a pipeline on a phone to detect, segment, and estimate the diameter of tree trunks.  Cool application/engineering project.</p>
+</dd>
+</dl>
+</section>
+<section id="theory">
+<h2>Theory<a class="headerlink" href="#theory" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://arxiv.org/pdf/2401.05133.pdf">Neural Population Learning beyond Symmetric Zero-sum Games</a></dt><dd><p>Deepmind.  Game theory paper analyzing policies for games with many players that are not zero sum - think about collaboration, forced or otherwise.  Seems interesting, but heavy on theory.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2401.05244.pdf">Reliability Analysis of Complex Systems using Subset Simulations with Hamiltonian Neural Networks</a></dt><dd><p>This paper analyzes large complex systems for chance of failure.  Essentially uses a Monte Carlo simulator with subset simulation to simulate the chance of different parts failing - this is slow so they do some fancy footwork with Hamiltonians to make it fast.  Feels like there’s a pitch for this sort of thing somehwere in the DoD.  Most of this paper is Hamiltonian (neural) Monte Carlo theory.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2401.07187.pdf">A Survey on Statistical Theory of Deep Learning: Approximation, Training Dynamics, and Generative Models</a></dt><dd><p>Review paper on deep learning out of a lab at UCLA.  Three sections: risk, training, generative models.  Worth reading</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2401.09278.pdf">ADAPTIVE REGRET FOR BANDITS MADE POSSIBLE: TWO QUERIES SUFFICE</a></dt><dd><p>Deepmind and some top universities.  Finds a tight bound for optimizing bandits in an online setting with two queries/round.  Usually bandits do one query/round (they might be making up the concept of a round to create a more general setting) and queries are evaluated in parallel.  They have to do this forever becuase they’re doing online learning, but we might be able to make use of this for CAD model selection.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/abs/2106.01345">Decision Transformer: Reinforcement Learning via Sequence Modeling</a></dt><dd><p>Facebook/Google/Berkeley.  Kind of an older paper. Reinforcement learning is useful, but finnicky and difficult to implement (random seeds as hyperparameters, anyone?).  What if we could do reinforcement learning with Transformers?  Models sequence of past state, actions, and rewards as an autoregressive trajectory and plugs into a transformer.  Seems to beat out open software RL implementations and is much easier.  Worth considering</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2303.01372.pdf">High-dimensional analysis of double descent for linear regression with random projections</a></dt><dd><p>Demonstrates (with some random matrix theory) that double descent also occurs in linear regression settings.  Whatever’s causing double descent, it’s not unique to deep learning - something to do with the nature of overparameterization?</p>
+</dd>
+</dl>
+</section>
+<section id="images">
+<h2>Images<a class="headerlink" href="#images" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://arxiv.org/pdf/2401.02917.pdf">Bayesian changepoint detection via logistic regression and the topological analysis of image series</a></dt><dd><p>Uses a Bayesian framework for changepoint detection in images using topological data analysis and polya-gamma sampling.  Kind of a madlibs of concept, but pretty cool.  Leverages classification ability of logistic regression to do change detection - the bayesian part lets them do uncertainty quantification and prior encoding.  Test their method on nanoparticles and solar flares.  Kind of limited in terms of use (?) but cool</p>
+</dd>
+</dl>
+</section>
+<section id="doctrinaire">
+<h2>Doctrinaire<a class="headerlink" href="#doctrinaire" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://arxiv.org/pdf/2401.01165.pdf">Reinforcement Learning for SAR View Angle Inversion with Differentiable SAR Renderer</a></dt><dd><p>Uses a differentiable SAR renderer in a deep reinforcement learning algorithm to for the inverse problem in SAR imagery - predicting incident and azimuth angle.  Assumes it knows the target type.  Similar to what we’re trying for TA2, but no one can figure out why the reinforcement learning.  To switch between CAD models?</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2401.10811.pdf">Simulation Based Bayesian Optimization</a></dt><dd><p>Introduces a Bayesian optimization method for acquiistion functions which require sampling from the posterior.  Definitely has a fullly Byesian model in mind, but we might be able to wrangle this into shape for jumping between CAD models in optimzation.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2401.13363.pdf">Do You Guys Want to Dance: Zero-Shot Compositional Human Dance Generation with Multiple Persons</a></dt><dd><p>Takes a picture of a person/people it has never seen before, a background, and reference poses it can render the person in those poses on that background.  Uses latent diffusion models.  If we can do this with vehicles and articulations we are getting pretty close to one-shot capabilities for Doctrinaire/TA2</p>
+</dd>
+</dl>
+</section>
+<section id="reasoning">
+<h2>Reasoning<a class="headerlink" href="#reasoning" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://arxiv.org/pdf/2401.02949.pdf">GRAPH2TAC: LEARNING HIERARCHICAL REPRESENTATIONS OF MATH CONCEPTS IN THEOREM PROVING</a></dt><dd><p>Out of IBM and a few other places.  Working on a programming language that can assist mathematicians with making math proofs.  Fuses together a kNN and a graph neural net to help.  It’s a cool idea - and in theory a computer should be able to do some sort of reasoning like this - but in practice they struggle - only 26% of theorems proven in the hold-out set.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2401.14511.pdf">Automated Legal Reasoning with Discretion to Act using s(LAW)</a></dt><dd><p>Reasoning for mid-level government bureaucrats.  Needs to be explainable/justifiable, but also able to handle ambiguity because the law allows for discrtion in its implementation.  Interesting idea, but light on technical details.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2401.16215.pdf">Learning Big Logical Rules by Joining Small Rules</a></dt><dd><p>Reasoners play a game called Zendo to assess performance.  Existing methods struggle with large rules - this method learns large rules by combining a bunch of small rules together, handling as many as 100 small rules at once.  Seems like how a person might decompose hard rules.  Improves performance.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2401.16270.pdf">Capturing Knowledge Graphs and Rules with Octagon Embeddings</a></dt><dd><p>Uses octogan embeddings (in N^2 space where N is the dimension of your knowledge graph embedding) to improve inference in knowledge graphs.  Seems cool and appears to improve performance, but I can’t really claim to understand what they’re doing.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/abs/2211.09066">Teaching Algorithmic Reasoning via In-context Learning</a></dt><dd><p>By default LLMs can barely do anything one can claim is reasoning. Through a bunch of prompting and different tasking it can get better. They can do basic math a lot better.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/abs/2312.17661">Gemini in Reasoning: Unveiling Commonsense in Multimodal Large Language Models</a></dt><dd><p>Big comparison of lots of LLMs trying to do “reasoning”. Look at lots of standard datasets and categorize questions as different types of commonsense. Gemini is about as good as GPT3.5. GPT4 is still on top.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/abs/2312.09126">Towards Trustworthy AI Software Development Assistance</a></dt><dd><p>Features a mashup of code LLMs and knowledge graphs. More of a think piece than a do piece. Interesting ideas though.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2012.11936.pdf">Knowledge Graphs Evolution and Preservation</a></dt><dd><p>Dealing with time in KGs is difficult. This is a long look at approaches. Someone should grok this more than I have.</p>
+</dd>
+<dt><a class="reference external" href="https://aithought.com">AI Thought</a></dt><dd><p>The differential computer is the only known way to leap forward in super intelligence, or at least some way that a network can use working long and short term memory! A full on manifesto. Is this smart or crazy? See also <a class="reference external" href="https://arxiv.org/abs/2203.17255">A Cognitive Architecture for Machine Consciousness and Artificial Superintelligence: Thought Is Structured by the Iterative Updating of Working Memory</a></p>
+</dd>
+<dt><a class="reference external" href="https://www.nature.com/articles/s41586-023-06924-6">Mathematical discoveries from program search with large language models</a></dt><dd><p>A prompt engineering approach to allowing an LLM to solve a problem using a simulator. This could be interesting, but isn’t it just prompt engineering? Or is this reasoning?</p>
+</dd>
+</dl>
+</section>
+<section id="stats">
+<h2>Stats<a class="headerlink" href="#stats" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://arxiv.org/pdf/2401.01231.pdf">Movement of insurgent gangs: A Bayesian kernel density model for incomplete temporal data</a></dt><dd><p>Uses Bayesian models to predict the movement of insurgent gangs.  Worked with Indian police.  Incorporates “expert priors” into sequentially updating model.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2401.01872.pdf">Multiple Imputation of Hierarchical Non-Linear Time Series Data with an Application to School Enrollment Data</a></dt><dd><p>Proposes a novel MICE method for nonlinear hierarchical time series data.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2401.04723.pdf">Spatio-temporal data fusion for the analysis of in situ and remote sensing data using the INLA-SPDE approach</a></dt><dd><p>Predicts harmful algae blooms by using a hierarchical Bayesian model to align ground-level and satellite data.  Postules the existence of a latent spatiotemporal process (gaussian random field) and models it.  Uses INLA for computational efficiency. Seems like a cool idea</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2401.05330.pdf">Hierarchical Causal Models</a></dt><dd><p>David Blei likes to play around with causal inference despite being mostly a machine learning guy.  He gave a talk at Duke about something similar when I was a grad student and in front of the entire department Fan Li told him, in no uncertain terms, that she thought it was a bunch of junk.  I don’t know enough about causal to evaluate, but seems like an interesting read.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2401.08070.pdf">Automated lag-selection for multi-step univariate time series forecast using Bayesian Optimization: Forecast station-wise monthly rainfall of nine divisional cities of Bangladesh</a></dt><dd><p>Wants to use an LSTM to model rainfall in Bangladesh, but has to do hyperparameter optimization.  Adapts Bayesian Optimization methods using Gaussian Processes as black box functions to do so.  Works pretty well.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2401.12126.pdf">Biological species delimitation based on genetic and spatial dissimilarity: a comparative study</a></dt><dd><p>Proposes bunch of genetic-spatial tests to test if different populations are from the same species.  Complicating factor is that members of the same species, from places far away, can have different genetic material and this has to be accounted for (how are they defining same/different species then?).  Throws a bunch of stuff at the wall and some of it sticks.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2401.12911.pdf">Pretraining and the Lasso</a></dt><dd><p>Pretraining/finetuning/transfer learning for LASSO.  Has Tibshirani as a co-author, which makes it seem credible, but also has hand-drawn/annotated diagrams, which makes it seem less credible.  Seems to improve perfromance, though.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2401.14973.pdf">Discovering group dynamics in synchronous time series via hierarchical recurrent switching-state models</a></dt><dd><p>Time-series paper with a co-author from US Army CCDC Soldier Center.  Tries to learn behavior of individual actors which are coorinated in some latent process, e.g. a squad of soldiers in a training practice.  Uses explainable Bayesian parametric methods rather than difficult-to-explain neural methods.  Somewhere around hidden markov models and state space models and does CAVI for fast inference.  In their case study, the model learns that one particular soldier got assigned the job of looking around to make sure the squad wasn’t getting approached unnoticed.</p>
+</dd>
+</dl>
+</section>
+<section id="datasets">
+<h2>Datasets<a class="headerlink" href="#datasets" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://arxiv.org/pdf/2401.09126.pdf">Objects With Lighting: A Real-World Dataset for Evaluating Reconstruction and Rendering for Object Relighting</a></dt><dd><p>New, real world, dataset for the inverse rendering problem and a baseline method.  Some co-authors are from Intel, Adobe, and NVIDIA.  Plausibly useful.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2401.13087.pdf">Open-source data pipeline for street-view images: a case study on community mobility during COVID-19 pandemic</a></dt><dd><p>Designs and makes available an open-source pipeline for turning 360 degree streetview data (from cars) into useable datasets.  They link to a github, but it doesn’t seem like they make the data open source?</p>
+</dd>
+</dl>
+</section>
+<section id="potpurrie">
+<h2>Potpurrie<a class="headerlink" href="#potpurrie" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://arxiv.org/pdf/2401.08461.pdf">Decentralised Emergence of Robust and Adaptive Linguistic Conventions in Populations of Autonomous Agents Grounded in Continuous Worlds</a></dt><dd><p>An agent-based simulation framework for generating howartificial langauges might arise which obey certain rules common to all languages.  Kind of like the Game of Life on steroids.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2401.09381.pdf">Modelling clusters in network time series with an application to presidential elections in the USA</a></dt><dd><p>Throws some pretty heavy duty time series machinery at US presidential election results.  Interesting idea in principle; in practice, the underlying network is just geographic connections and the conclusion is that swing states vary more than red/blue states.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2401.14498.pdf">Predictive Analysis for Optimizing Port Operations</a></dt><dd><p>Logistics!  Analysis of how long ships stay in port.  They seem to indicate that there hasn’t been much work done in this area and throw a bunch of off-the-shelf methods at it and see what sticks.  Shouldn’t be too hard to beat?</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2401.16412.pdf">Learning to Manipulate under Limited Information</a></dt><dd><p>Neural nets take on Arrow’s impossibility theorem.  All voting systems are subject to manipulation.  To figure out which ones are worse, they trained 40,000 (!) neural nets to vote in low information settings and figured out which voting systems got manipulated more often than others.  Cool idea, though it might run into the “not technically a proof” problem a lot of computational methods encounter.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2401.16392.pdf">A comprehensive survey of the home advantage in American football</a></dt><dd><p>Uses a bayesian generalized linear mixed effects model to find/quantify home-field advantage for NFL teams.  Seems to be declining over time</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2401.17095.pdf">Traffic estimation in unobserved network locations using data-driven macroscopic models</a></dt><dd><p>Logistics!  Uses network flow theory to learn transportation patterns, especially in unobserved locations.  Macroscopic models make it “completely iterable” but also uses neural nets in parts - seems to be to learn special parameters.  Not sure that really counts as fully interpretable, but seems to work.</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="2024-01.html" class="btn btn-neutral float-left" title="2024-01" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="2024-03.html" class="btn btn-neutral float-right" title="2024-03" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, CoVar, LLC.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
