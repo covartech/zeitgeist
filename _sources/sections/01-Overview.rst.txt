@@ -1,0 +1,6 @@
+Overview
+========
+
+CoVar is a leader in machine learning and artificial intelligence solutions. We create customized algorithms that are revolutionizing problem-solving for defense, healthcare, and industry.
+
+To provide world class solutions across a variety of applications, machine learning engineers and researchers at CoVar must stay abreast with cutting-edge research from academia, industry, and government.  Given the amount of papers that are published, and the amount of models that are released, every day this is a task of monumental proportions.  The CoVar Zeitgiest aims to solve this problem by compiling a subset of the most interesting, most novel, and most relevant publications for each month, so that interested parties can stay abreast of developing research trends presented in easy-to-digest, bite-sized chunks.
