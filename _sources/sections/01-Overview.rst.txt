@@ -1,0 +1,16 @@
+Overview
+========
+
+CoVar builds AI/ML software and hardware solutions to solve the problems that matter.  A key part of our work is staying up to date on what’s happening in the world of AI, but the pace of AI research is breathtaking.
+ 
+The CoVar Zeitgeist is intended to manage this massive flow into a list of papers we think people working at CoVar would be interested in.  Based on some feedback, we have decided to make this list public to share what we’re thinking about, what we’re reading, and hopefully help other people prioritize their reading list.
+ 
+The Zeitgeist isn’t meant to be all-encompassing. It focuses on AI work we think has relevance to our DoD customers, and the broader DoD community. We hope you enjoy.  If you have feedback, please get in touch `here <https://covar.com/contact-us/>`_.
+ 
+Sincerely,
+
+Kenneth D. Morton, Ph.D. (Chief Scientist)
+
+Patrick M. LeBlanc, Ph.D. (Machine Learning Engineer & Zeitgeist Editor)
+
+CoVar - Building Trusted AI, Ensuring a Safer World
