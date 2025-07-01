@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>CoVar Zeitgeist</title>
+  <link>https://zeitgeist.covar.com</link>
+  <description>A list of the latest research in AI/ML curated by CoVar.</description>
+  <language>en-us</language>
+  <atom:link href="https://zeitgeist.covar.com/rss.xml" rel="self" type="application/rss+xml" />
+  <pubDate>Tue, 01 Jul 2025 16:40:26 GMT</pubDate>
+  <item>
+    <link>https://zeitgeist.covar.com/issues/2025-07.html</link>
+    <guid>https://zeitgeist.covar.com/issues/2025-07.html</guid>
+    <title>The CoVar Zeitgeist: July, 2025</title>
+    <description><![CDATA[       Lots of interesting research was published this month. Featuring:
+<br>      * Apple's investigation into the reasoning capabilities of Large Reasoning Models (LRMs) which demonstrated their limitations on high complexity tasks.
+<br>      * A novel LLM architecture from Meta which leverages an autoregressive U-Net to allow the model to learn a novel tokenization scheme from raw bytes.
+<br>      * A study demonstrating that the reasoning capability of LLMs is language agnostic.
+<br>      * A comprehensive report from Meta AI research on building embodied AI agents which argues for necessity of a physical and mental world model.
+<br>      * A novel reinforcement learning algorithm which allows UAVs to navigate under adversarial conditions such as GPS spoofing. 
+<br>      * A generalization of neural cellular automata (NCA) to mixtures of neural cellular automata (MNCA), which better allows such agent-based models to handle stochasticity.
+<br> ]]></description>
+    <pubDate>Tue, 01 Jul 2025 14:21:57 GMT</pubDate>
+  </item>
+  <item>
+    <link>https://zeitgeist.covar.com/issues/2025-06.html</link>
+    <guid>https://zeitgeist.covar.com/issues/2025-06.html</guid>
+    <title>The CoVar Zeitgeist: June, 2025</title>
+    <description><![CDATA[       A larger than normal amount of interesting papers published this month.  Featuring:
+<br>      * A method to combine Depth Anything with any sort of absolute depth information to string together absolute depth estimates from monocular imagery.
+<br>      * A paper from MIT that applies a thermodynamic-based approach to understanding LLM/neural net training.  Finds a river-valley loss landscape and uses that to guide training methods.
+<br>      * Current approaches towards AI agency focus are focused on empowerment - the ability of an AI agent to influence the future - but Google Deepmind thinks plasticity - the agent's ability to learn from its past - is equally important.  Unfortunately, there's a tension between these concepts.
+<br>      * Applying RL techniques to LLMs only updates a sparse subset of weights.  RLing only on this sparse subset of weights achieves 99% of RLing the entire model.  
+<br>      * Proposes Bonsai, a tree-based alternative to UMAP and t-SNE for representing high-dimensional data.  Developed for omics data, it generalizes at least to football data.
+<br>      * Google Brain develops a novel RL method using video prediction methods to train models to play Atari.
+<br> ]]></description>
+    <pubDate>Tue, 01 Jul 2025 14:21:57 GMT</pubDate>
+  </item>
+  <item>
+    <link>https://zeitgeist.covar.com/issues/2025-05.html</link>
+    <guid>https://zeitgeist.covar.com/issues/2025-05.html</guid>
+    <title>The CoVar Zeitgeist: May, 2025</title>
+    <description><![CDATA[       There is a lot of interesting research this month. Featuring:
+<br>      * A novel sparse attention module which achieves the theoretical maximum possible speedup.  
+<br>      * An investigation of grokking which finds that grokking can be accelerated by leveraging embeddings from a smaller and weaker model.
+<br>      * A Yee Whye Teh paper which proposes a gradient-free learning method for neural networks based on diffusion literature.
+<br>      * A paper which argues that existing benchmarks and evaluations for LLM reasoning are suboptimal and proposes a reasonable alternative.
+<br>      * An examination from Google about difficulties encountered in optimizing machine translation methods for (1) preserving the semantic information of the source text and (2) generating natural sounding language simultaneously.  Optimization methods cannot serve two masters.
+<br>      * A nature paper proposing a novel reinforcement learning algorithm that can generalize to many tasks.  Claims to be the first model to successfully collect diamonds in Minecraft "from scratch".
+<br> ]]></description>
+    <pubDate>Tue, 01 Jul 2025 14:21:57 GMT</pubDate>
+  </item>
+  <item>
+    <link>https://zeitgeist.covar.com/issues/2025-04.html</link>
+    <guid>https://zeitgeist.covar.com/issues/2025-04.html</guid>
+    <title>The CoVar Zeitgeist: April, 2025</title>
+    <description><![CDATA[       There is a lot of interesting research this month. Featuring:
+<br>      * A paper describing non-linear transforms based on optimal transport which can be used for classification, estimation, and reconstruction problems.
+<br>      * An implementation of tracking algorithms in a setting where there is genuine irreducible frame-to-frame uncertainty, cell tracking.
+<br>      * A really cool paper from Google about combining Neural Cellular Automata and Differentiable Logic Gates to learn local rules which, when implemented in a setting similar to Conway’s game of life, can recreate desired patterns.
+<br>      * A statistical method to estimate how much of the uncertainty in your model is from genuine noise in the data and how much comes from the model.
+<br>      * A demonstration that middle layers of a neural net may be used to define outputs better than the final layers.
+<br>      * A deep dive into the "thinking" of an LLM which, among other things, demonstrates that it plans ahead more than one token when writing poetry.
+<br> ]]></description>
+    <pubDate>Tue, 01 Jul 2025 14:21:57 GMT</pubDate>
+  </item>
+  <item>
+    <link>https://zeitgeist.covar.com/issues/2025-03.html</link>
+    <guid>https://zeitgeist.covar.com/issues/2025-03.html</guid>
+    <title>The CoVar Zeitgeist: March, 2025</title>
+    <description><![CDATA[       There is a lot of interesting research this month. Featuring:
+<br>      * A report from Microsoft about the effects of using AI on employees.  Among other things, it erodes critical thinking skills.
+<br>      * Deepseek proposes the novel sparse attention mechanism which achieves SOTA performance across a comprehensive set of benchmarks.
+<br>      * A novel Matryoshka Quantization technique for increasing computational efficiency.
+<br>      * A new evaluation metric for LLM reasoning which gets around the "train on the test set" problem by generating novel logic puzzles at evaluation.
+<br>      * An algorithm which can take a variety of NeRF architectures as input to do downstream tasks such as classification.
+<br>      * An interesting discussion of what it means for an AI to be reliable and how to measure reliability.
+<br> ]]></description>
+    <pubDate>Tue, 01 Jul 2025 14:21:57 GMT</pubDate>
+  </item>
+  <item>
+    <link>https://zeitgeist.covar.com/issues/2025-02.html</link>
+    <guid>https://zeitgeist.covar.com/issues/2025-02.html</guid>
+    <title>The CoVar Zeitgeist: February, 2025</title>
+    <description><![CDATA[       There is a lot of interesting research this month. Featuring:
+<br>      * A paper building a black box detection scheme for Trojaned neural nets.
+<br>      * An investigation of why grokking happens only with regularization.
+<br>      * A novel GAN training method that makes GANs reliable to train.
+<br>      * A finding that increasing LLM vocabulary size improves performance as much as increasing model size.
+<br>      * A demonstration that LLMs "know" when they are in training and try to deceive evaluators accordingly.
+<br>      * A discussion by Deepseek about how to train reasoning models.
+<br> ]]></description>
+    <pubDate>Tue, 01 Jul 2025 14:21:57 GMT</pubDate>
+  </item>
+  <item>
+    <link>https://zeitgeist.covar.com/issues/2025-01.html</link>
+    <guid>https://zeitgeist.covar.com/issues/2025-01.html</guid>
+    <title>The CoVar Zeitgeist: January, 2025</title>
+    <description><![CDATA[       There is a lot of interesting research this month. Featuring:
+<br>      * Proposes an LLM architecture which operates on the level of “concepts” instead of “tokens” by (1) assuming that a concept corresponds to a sentence and (2) taking sentences as the base unit of operation for multiple explored architectures. Demonstrates zero-shot generalization across languages.
+<br>      * Presents a detailed study on how to best fine-tune small LLMs (up to 7B parameters) in a supervised setting. Worth a read for anyone interested in the task.
+<br>      * Proposes a method to enhance 3D Gaussian Splatting using boundary guidance, and implements a 3D detector on the resulting space. Demonstrates an increase in performance over benchmarks.
+<br>      * A novel LLM architecture that dynamically forms patches from raw bytes using entropy measures, allowing the model to place more resources into the more complex parts of input data. Outperforms tokenization based approaches for the same compute.
+<br>      * LLMs can become more effective without increasing their number of parameters. This paper refers to this phenomena as becoming “denser”, and finds that the density of LLMs doubles roughly every three month. That is, if the law holds, current SOTA will be achieved by a model half the size in three months.
+<br>      * Attempts to recreate OpenAI’s slow-thinking o1 model. Does so by proposing an “imitate, explore, and self-improve” algorithm which, among other things, takes responses from o1 and uses them to finetune a model. Achieves SOTA performance.
+<br> ]]></description>
+    <pubDate>Tue, 01 Jul 2025 14:21:57 GMT</pubDate>
+  </item>
+  <item>
+    <link>https://zeitgeist.covar.com/issues/2024-12.html</link>
+    <guid>https://zeitgeist.covar.com/issues/2024-12.html</guid>
+    <title>The CoVar Zeitgeist: December, 2024</title>
+    <description><![CDATA[       There is a lot of interesting research this month. Featuring:
+<br>      * Investigates what happens when you train in a low-precision environment.  Finds that lower precision reduces effective parameter count, and derives some scaling laws thereof.
+<br>      * Deepmind proposes a new method for, among other things, continual learning.  Could be useful for modifying networks in the field.
+<br>      * A paper that investigates how well SOTA AI agents are at solving ML engineering problems.  Finds that they are equivalent to human experts when humans operate under low-time constraints, but that humans outperform the agents when given more time.
+<br>      * Proposes a method for more efficient student-teacher training.  Intuitively, look for the data that are (1) high confidence in the teacher and (2) most needed for the student.  Could be a useful approach for any of projects that want to finetune LLMs/foundation models.
+<br>      * Altera puts 1000 AI agents in Minecraft and lets them develop a civilization.  The results are fascinating.
+<br>      * Why are VLMs bad at counting?  Apparently its the binding problems fault.  What is the binding problem?  Read to find out.
+<br> ]]></description>
+    <pubDate>Tue, 01 Jul 2025 14:21:57 GMT</pubDate>
+  </item>
+  <item>
+    <link>https://zeitgeist.covar.com/issues/2024-11.html</link>
+    <guid>https://zeitgeist.covar.com/issues/2024-11.html</guid>
+    <title>The CoVar Zeitgeist: November, 2024</title>
+    <description><![CDATA[       There is a lot of interesting research this month. Featuring:
+<br>      * Google investigates how to do model merging: combining weights from multiple networks to improve performance.  
+<br>      * A novel method for combatting catastrophic forgetting using Gradient Episodic Memory.
+<br>      * A novel compression method for LLMs that gets Mistral 7B down to 0.04B parameters without sacrificing much in the way of performance.  
+<br>      * An investigation of LLM hallucinations that finds that you can tell when an LLM is hallucinating
+<br>      * Amazon trains LLMs to generate sequences of tokens instead of tokens.
+<br>      * An analysis of how much of LLM behavior is captured by "circuit analysis".  Finds that its pretty plausible.
+<br> ]]></description>
+    <pubDate>Tue, 01 Jul 2025 14:21:57 GMT</pubDate>
+  </item>
+  <item>
+    <link>https://zeitgeist.covar.com/issues/2024-10.html</link>
+    <guid>https://zeitgeist.covar.com/issues/2024-10.html</guid>
+    <title>The CoVar Zeitgeist: October, 2024</title>
+    <description><![CDATA[       There is a lot of interesting research this month. Featuring:
+<br>      * An effort from Deepmind to improve VLM performance by teaching them to think more hierarchically, like humans do.
+<br>      * Review paper for foundation models.  Worth a look if you have questions about them.
+<br>      * An incredibly clever way to generate an infinite amount of LLM jailbreaks.  Works better on "smarter" LLMs.
+<br>      * An investigation into different optimizers.
+<br>      * A finding that RLHF dosen't cause LLMs to improve performance, but instead to produce answers that seem to human evaluators like they should be correct.
+<br>      * Fine-tuning a big model doesn't cause it to forget old stuff - the new stuff just has a different scale and with some calibration you can fuse the new and old knowledge together.
+<br> ]]></description>
+    <pubDate>Tue, 01 Jul 2025 14:21:57 GMT</pubDate>
+  </item>
+  <item>
+    <link>https://zeitgeist.covar.com/issues/2024-09.html</link>
+    <guid>https://zeitgeist.covar.com/issues/2024-09.html</guid>
+    <title>The CoVar Zeitgeist: September, 2024</title>
+    <description><![CDATA[       There is a lot of interesting research this month. Featuring:
+<br>      * An overview of ML techniques in non-Euclidean spaces. 
+<br>      * IBM gets LLMs to code reliably with "100%" success.
+<br>      * A new way LLMs can go horribly wrong.  If you tell an LLM that Kenny likes the color yellow and then ask it what Kenny’s job is, it will say that Kenny is a school bus driver because school busses are yellow.
+<br>      * A method of analyzing deep neural nets with spectral weights.  Can distinguish between several classes of neural nets (e.g. "memorizing" or "generalizing").
+<br>      * How to use the least amount amount of human to get your computer to recognize when it's dealing with out-of-distribution data
+<br>      * Can it run Doom?  A neural net can!  No word on Crysis.
+<br> ]]></description>
+    <pubDate>Tue, 01 Jul 2025 14:21:57 GMT</pubDate>
+  </item>
+  <item>
+    <link>https://zeitgeist.covar.com/issues/2024-08.html</link>
+    <guid>https://zeitgeist.covar.com/issues/2024-08.html</guid>
+    <title>The CoVar Zeitgest: August, 2024</title>
+    <description><![CDATA[       A curated list of the latest research in AI.
+<br>      Enjoy!
+<br> ]]></description>
+    <pubDate>Tue, 01 Jul 2025 16:40:22 GMT</pubDate>
+  </item>
+  <item>
+    <link>https://zeitgeist.covar.com/issues/2024-07.html</link>
+    <guid>https://zeitgeist.covar.com/issues/2024-07.html</guid>
+    <title>The CoVar Zeitgeist: July, 2024</title>
+    <description><![CDATA[       A curated list of the latest research in AI.
+<br>      Enjoy!
+<br> ]]></description>
+    <pubDate>Tue, 01 Jul 2025 16:40:22 GMT</pubDate>
+  </item>
+</channel></rss>
