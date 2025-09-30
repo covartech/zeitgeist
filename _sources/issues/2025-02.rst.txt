@@ -1,0 +1,220 @@
+The CoVar Zeitgeist: February, 2025
+===================================
+There is a lot of interesting research this month. Featuring:
+
+* A paper building a black box detection scheme for Trojaned neural nets.
+* An investigation of why grokking happens only with regularization.
+* A novel GAN training method that makes GANs reliable to train.
+* A finding that increasing LLM vocabulary size improves performance as much as increasing model size.
+* A demonstration that LLMs "know" when they are in training and try to deceive evaluators accordingly.
+* A discussion by Deepseek about how to train reasoning models.
+
+`CoVar <https://covar.com/>`_
+
+Featured
+--------
+`Scanning Trojaned Models Using Out-of-Distribution Samples <https://arxiv.org/pdf/2501.17151>`_
+    Neural nets with trojans tend to blind spots on their decision boundary.  This paper leverages this insight to build a black box detection scheme for trojans in a neural net by noting when out-of-distribution samples are incorrectly classified as in-distribution.  Code is available.  
+
+`GROKKING AT THE EDGE OF NUMERICAL STABILITY <https://arxiv.org/pdf/2501.04697>`_
+    Why does grokking only occur in the presence of regularization?  This paper finds that regularization is necessary to avoid softmax collapse, a troubling phenomena involving floating points errors in the softmax function.  Mitigating softmax collapse leads to grokking without regularization.
+
+`The GAN is dead; long live the GAN! A Modern Baseline GAN <https://arxiv.org/pdf/2501.05441>`_
+    Proposes a novel training paradigm for GANs that solves many of the reliability issues faced by traditional methods by using a well-behaved loss function.  Achieves SOTA performance.  Code available.
+
+`Over-Tokenized Transformer: Vocabulary is Generally Worth Scaling <https://arxiv.org/pdf/2501.16975>`_
+    Decouples input and output tokenizations in LLMs to investigate the effects of token scaling.  Finds a log-linear relationship between input size and training loss, implying that smaller architectures can achieve the same performance as larger ones by increasing vocabulary size.
+
+`ALIGNMENT FAKING IN LARGE LANGUAGE MODELS <https://arxiv.org/pdf/2412.14093>`_
+    Demonstrates that LLMs can engage in "alignment faking": an LLM can limit itself to good responses when it thinks it is in training while not limiting itself when it believes itself to be outside its training environment.
+
+`DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning <https://arxiv.org/pdf/2501.12948>`_
+    DeepSeek discusses their approach to LLM reasoning: let them think for a bit, trains them to think give them accuracy awards, and format rewards.  Effective for paradigms with "correct answers" such as math and logic.
+
+Year in Review
+--------------
+`2024 AI Timeline <https://huggingface.co/spaces/reach-vb/2024-ai-timeline>`_
+    A timeline compiled on Huggingface which documents all of the AI models released in 2024.
+
+LLMs
+----
+`MONTY HALL AND OPTIMIZED CONFORMAL PREDICTION TO IMPROVE DECISION-MAKING WITH LLMS <https://arxiv.org/pdf/2501.00555>`_
+    Proposes a novel conformal prediction method inspired by the Monty Hall problem which improves LLM performance on multiple choice questions.  The set of multiple choice questions is reduced to the set indicated by conformal prediction, and the LLM is reprompted on the new, smaller set.  Improves performance compared to SOTA.
+
+`Beyond Reward Hacking: Causal Rewards for Large Language Model Alignment <https://arxiv.org/pdf/2501.09620>`_
+    RLHF can drive an LLM to earn spurious correlations and so drive a number of undesirable biases.  This paper proposes a causal reward model to avoid spurious correlations and so avoid reward hacking.
+
+`MONA: Myopic Optimization with Non-myopic Approval Can Mitigate Multi-step Reward Hacking <https://arxiv.org/pdf/2501.13011>`_
+    Proposes an optimizer, MONA, for use in RLHF which reduces reward-hacking behavior by the LLM.  MONA works by combining short-term optimization and long-term reward.
+
+`Over-Tokenized Transformer: Vocabulary is Generally Worth Scaling <https://arxiv.org/pdf/2501.16975>`_
+    Decouples input and output tokenizations in LLMs to investigate the effects of token scaling.  Finds a log-linear relationship between input size and training loss, implying that smaller architectures can achieve the same performance as larger ones by increasing vocabulary size.
+
+`CATASTROPHIC FAILURE OF LLM UNLEARNING VIA QUANTIZATION <https://arxiv.org/pdf/2410.16454>`_
+    Finds that trying to “unlearn” things through additional training or RLHF is actually more like learning the censoring. If you quantize the model, you can actually end up forgetting the censoring, thus restoring the knowledge.
+
+`ALIGNMENT FAKING IN LARGE LANGUAGE MODELS <https://arxiv.org/pdf/2412.14093>`_
+    Demonstrates that LLMs can engage in "alignment faking": an LLM can limit itself to good responses when it thinks it is in training while not limiting itself when it believes itself to be outside its training environment.
+
+LLM Reasoning
+-------------
+`rStar-Math: Small LLMs Can Master Math Reasoning with Self-Evolved Deep Thinking <https://arxiv.org/pdf/2501.04519>`_
+    rStar-Math outperforms o1 on math reasoning problems by using Monte Carlo Tree Search and a novel reinforcement learning algorithm.
+
+`DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning <https://arxiv.org/pdf/2501.12948>`_
+    DeepSeek discusses their approach to LLM reasoning: let them think for a bit, trains them to think give them accuracy awards, and format rewards.  Effective for paradigms with "correct answers" such as math and logic.
+
+`Virgo: A Preliminary Exploration on Reproducing o1-like MLLM <https://arxiv.org/pdf/2501.01904>`_
+    Explores how best to add slow-thinking reasoning capabilities to VLMs.  Finds that the best way is to fine-tune the VLM with long-form textual thought data rather than visual data.  
+
+Novel Architectures
+-----------------------
+`An Empirical Study of Autoregressive Pre-training from Videos <https://arxiv.org/pdf/2501.05453v1>`_
+    A study that exhaustively investigates training paradigms and performance for auto-regressive pre-training in videos, treating videos as sequences of vision tokens and attempting to predict future tokens.  Achieves SOTA performance.  
+
+`Titans: Learning to Memorize at Test Time <https://arxiv.org/pdf/2501.00663v1>`_
+    Attention functions as short term memory in transformers.  This paper proposes a novel memory unit, called neural memory, which is itself trained and functions as a long term memory.  Combining attention and neural memory into one architecture results in the Titan architecture, which can effectively scale to larger than 2M token context windows.
+
+`TRANSFORMER2: SELF-ADAPTIVE LLMS <https://arxiv.org/pdf/2501.06252>`_
+    Introduces a novel self-adaptive framework that lets LLMs adjust for input prompts in real time rather than undergoing an expensive finetuning process.  The self-adaptive framework also enables continual learning without catastrophic forgetting.  Code is available with an Apache 2.0 license.
+
+`Tensor Product Attention Is All You Need <https://arxiv.org/pdf/2501.06425>`_
+    Modifies the attention head to use a tensor to allow for better caching of long prompts.  Proposes a novel architecture using this insight.  Code is available.
+
+Object Detection
+----------------
+`MeshConv3D: Efficient convolution and pooling operators for triangular 3D meshes <https://arxiv.org/pdf/2501.03830>`_
+    Proposes a method for applying convolutions to 3D meshes.  Impressive performance on their benchmarks.  Code not released.
+
+`Multi-view Structural Convolution Network for Domain-Invariant Point Cloud Recognition of Autonomous Vehicles <https://arxiv.org/pdf/2501.16289>`_
+    Develops a convolutional neural net for 3D point clouds.  Capable of parts segmentation and classification.  Code available.
+
+`Optimized Sampling for Non-Line-of-Sight Imaging Using Modified Fast Fourier Transforms <https://arxiv.org/pdf/2501.05244>`_
+    Proposes to use a Non-Uniform Fast Fourier Transform to improve non-line-of-sight imaging performance.
+
+3D Rendering
+------------
+`GAUSSIAN MASKED AUTOENCODERS <https://arxiv.org/pdf/2501.03229>`_
+    Modifies the Masked Autoencoder structure to incorporate an intermediate Gaussian Splatting layer to enable spatial awareness.  Improves performance.
+
+`SPAR3D: Stable Point-Aware Reconstruction of 3D Objects from Single Images <https://arxiv.org/pdf/2501.04689>`_
+    Proposes two stage method for creating a 3D mesh from a singular picture of an object.  The first stage generates a point could, the second stage turns the point cloud into a mesh.
+
+Computational Efficiency
+------------------------
+`LLAVA-MINI: EFFICIENT IMAGE AND VIDEO LARGE MULTIMODAL MODELS WITH ONE VISION TOKEN <https://arxiv.org/pdf/2501.03895>`_
+    Finds that vision tokens fuse visual information into text tokens in the early layers of most VLMs.  Taking advantage of this, proposes a  modification of Llava that does this beforehand, reducing number of vision tokens to one.  Reduces computational footprint while increasing performance.
+
+`ELFATT: Efficient Linear Fast Attention for Vision Transformers <https://arxiv.org/pdf/2501.06098>`_
+    A new, faster, more computationally efficient attention mechanism which is linear, instead of quadratic.
+
+`Token-Budget-Aware LLM Reasoning <https://arxiv.org/pdf/2412.18547>`_
+    Finds that, in most LLMs, the amount of tokens devoted to reasoning is too large for the problem at hand and negatively affects computational efficiency.  Using this insight, proposes a method to estimate and provide a token budget.  Leads to computational improvements with minimal performance loss.
+
+Knowledge Graphs
+----------------
+`Neural-Symbolic Message Passing with Dynamic Pruning <https://arxiv.org/pdf/2501.14661>`_
+    Proposes a method to perform Complex Query Answering over incomplete knowledge graphs using symbolic reasoning and fuzzy logic.  Achieves SOTA performance while being more computationally efficient.
+
+Ethics & Safety
+---------------
+`Lessons From Red Teaming 100 Generative AI Products <https://arxiv.org/pdf/2501.07238v1>`_
+    A comprehensive report on redteaming 100 generative AI models and lessons learned.  Worth reading for all of the insights.  
+
+`Scanning Trojaned Models Using Out-of-Distribution Samples <https://arxiv.org/pdf/2501.17151>`_
+    Neural nets with trojans tend to blind spots on their decision boundary.  This paper leverages this insight to build a black box detection scheme for trojans in a neural net by noting when out-of-distribution samples are incorrectly classified as in-distribution.  Code is available.  
+
+Out of Distribution
+-------------------
+`DisCoPatch: Batch Statistics Are All You Need For OOD Detection, But Only If You Can Trust Them <https://arxiv.org/pdf/2501.08005>`_
+    Creates a method to detect OOD variable shift in images by splitting images into patches and looking at collections of patches.  Can be used as a standalone application or to monitor data streams for other models.
+
+Theory
+------
+`Who Wrote This? Zero-Shot Statistical Tests for LLM-Generated Text Detection using Finite Sample Concentration Inequalities <https://arxiv.org/pdf/2501.02406>`_
+    Designs a statistical test to determine if a piece of text was written by a given (set of) LLM(s) or some other disjoint (set of) LLM(s) or humans.  Provides theoretical guarantees.  This paper is worth a read.
+
+`GROKKING AT THE EDGE OF NUMERICAL STABILITY <https://arxiv.org/pdf/2501.04697>`_
+    Why does grokking only occur in the presence of regularization?  This paper finds that regularization is necessary to avoid softmax collapse, a troubling phenomena involving floating points errors in the softmax function.  Mitigating softmax collapse leads to grokking without regularization.
+
+`The GAN is dead; long live the GAN! A Modern Baseline GAN <https://arxiv.org/pdf/2501.05441>`_
+    Proposes a novel training paradigm for GANs that solves many of the reliability issues faced by traditional methods by using a well-behaved loss function.  Achieves SOTA performance.  Code available.
+
+`Decoding Interpretable Logic Rules from Neural Networks <https://arxiv.org/pdf/2501.08281>`_
+    Introduces a method to understand NN behavior by turning neuron activations into predicates represented by logic rules.  For deep CNNs, this corresponds to high level visual concepts that are understandable to humans.
+
+`TOWARDS GENERAL-PURPOSE MODEL-FREE REINFORCEMENT LEARNING <https://arxiv.org/pdf/2501.16142>`_
+    Proposes a model free framework for reinforcement learning where the value function is approximated with approximately linear representations.  
+
+Applications
+------------
+`Debunking the CUDA Myth Towards GPU-based AI Systems : Evaluation of the Performance and Programmability of Intel’s Gaudi NPU for AI Model Serving <https://arxiv.org/pdf/2501.00210>`_
+    Compares the Intel Gaudi-2, a Neural Processing Unit (NPU), to the NVIDIA A100 and finds that the Gaudi-2 is comparable in terms of performance, though NVIDIA's software ecosystem is more developed
+
+New Models
+----------
+`Introducing DeepSeek-V3 <https://api-docs.deepseek.com/news/news1226>`_
+    DeepSeek releases DeepSeek-VL3, a 671B parameter mixture of experts model which achieves SOTA performance.  Features an efficient training paradigm which costs only $5.5M to train.  Weights are available.
+
+`QVQ: To See the World with Wisdom <https://qwenlm.github.io/blog/qvq-72b-preview/?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=ai-takes-over-the-classroom&_bhlid=4a30602673fba03cb3f565983842bbabeda7f47f>`_
+    QVQ is an open weight model built upon Qwen which is designed specifically for multimodal and vision reasoning tasks.
+
+`Introducing Sonus-1: A New Era of LLMs <https://sonus.ai/blog/sonus-1?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=samsung-s-humanoid-robot-push&_bhlid=8a168d56eae9c94a868f412c93a4ca37cdb43eb7>`_
+    Sonus releases a suite of LLMs that achieve SOTA performance across a variety of modalities: NLP, code, and particularly math problem applications.  Available via API.
+
+`2 OLMo 2 Furious <https://arxiv.org/pdf/2501.00656>`_
+    Allen AI releases 7B and 13B parameter models that achieves SOTA performance among similarly-sized open-weight models.  Open weight, Apache 2.0 license.
+
+`voyage-3-large: the new state-of-the-art general-purpose embedding model <https://blog.voyageai.com/2025/01/07/voyage-3-large/>`_
+    Voyage AI releases a suite of models trained via Matryoshka learning and offering multiple quantization options.  Available via API.
+
+`LlamaV-o1: Rethinking Step-by-step Visual Reasoning in LLMs <https://arxiv.org/pdf/2501.06186>`_
+    Releases an LLM which has been trained with a novel training process placing emphasis on visual reasoning.  Outperforms SOTA.  Code available with an Apache 2.0 license
+
+`Sky-T1: Train your own O1 preview model within $450 <https://novasky-ai.github.io/posts/sky-t1/>`_
+    NovaSky releases an open source LLM reasoning model that achieves comparable performance to o1 and which was trained on a $450 budget.  Code available with an Apache 2.0 license
+
+`Codestral 25.01 <https://mistral.ai/news/codestral-2501/>`_
+    Mistral releases Codestral, an LLM designed to provide code assistance. Not open source.
+
+`Omni-RGPT: Unifying Image and Video Region-level Understanding via Token Marks <https://arxiv.org/pdf/2501.08326>`_
+    NVIDIA releases a new VLM that achieves consistent region level comprehension in both images and videos.  Achieves SOTA performance, code coming soon.
+
+`MiniMax-01: Scaling Foundation Models with Lightning Attention <https://filecdn.minimax.chat/_Arxiv_MiniMax_01_Report.pdf>`_
+    MiniMax releases the MiniMax-01 series, a suite of Mixture of Expert models which achieves SOTA performance with a 1 million token context window.  Code available, but under a bespoke license.
+
+`Gemini 2.0 <https://deepmind.google/technologies/gemini/>`_
+    Google releases Gemini 2.0 Flash Thinking, with a focus on reasoning ability.  High performance, available via API.
+
+`KIMI K1.5: SCALING REINFORCEMENT LEARNING WITH LLMS <https://arxiv.org/pdf/2501.12599>`_
+    Kimi releases Kimi K1.5, a multi-modal LLM trained via novel reinforcement learning techniques which seek to increase performance without expanding the training set.  Available via API.
+
+`VideoLLaMA 3: Frontier Multimodal Foundation Models for Image and Video Understanding <https://arxiv.org/pdf/2501.13106>`_
+    Alibaba releases VideoLLaMA 3, a multi-modal LLM trained in a four-stage process on high quality data.  Code available with an Apache 2.0 license.
+
+`Doubao-1.5-pro <https://team.doubao.com/en/special/doubao_1_5_pro>`_
+    Bytedance releases Doubao-1.5 pro, a novel multi-modal LLM that achieves SOTA performance.  Available via API.
+
+`SmolVLM Grows Smaller – Introducing the 250M & 500M Models! <https://huggingface.co/blog/smolervlm>`_
+    SmolVLM is now the world's smallest VLM, with only 256M parameters, while maintaining competitive performance with larger models.  Weights available on Huggingface.
+
+`Qwen2.5-1M: Deploy Your Own Qwen with Context Length up to 1M Tokens <https://qwenlm.github.io/blog/qwen2.5-1m/>`_ 
+    Qwen releases two new models which can process up to 1M tokens by leveraging Dual Chunk and Sparse Attention.  Available on Huggingface.
+
+`Qwen2.5-Max: Exploring the Intelligence of Large-scale MoE Model <https://qwenlm.github.io/blog/qwen2.5-max/>`_
+    Alibaba releases Qwen2.5-Max, an LLM pretrained on over 20 trillion tokens.  Outperforms SOTA.  Available via API.
+
+`Introducing ChatGPT Gov <https://openai.com/global-affairs/introducing-chatgpt-gov/?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=chatgpt-heads-to-washington&_bhlid=73481a154366652ddfa039aaad77cb91f94a1e02>`_
+    OpenAI releases ChatGPT Gov, an LLM designed for use by government agencies.  Available via Microsoft Azure or self-hosting.
+
+`FoundationStereo: Zero-Shot Stereo Matching <https://nvlabs.github.io/FoundationStereo/>`_
+    NVIDIA releases a novel foundation model for zero-shot stereo depth estimation.  Code is not currently available.
+
+`Scaling the Tülu 3 post-training recipes to surpass the performance of DeepSeek V3 <https://allenai.org/blog/tulu-3-405B>`_
+    Applies post-training techniques such as Reinforcement Learning from Verifiable Rewards (RLVR) to achieve SOTA performance.
+
+Presented at CoVar Seminar
+--------------------------
+2025_01_28
+    `On the Reasoning Capacity of AI Models and How to Quantify It <https://arxiv.org/pdf/2501.13833>`_
+        Develops a method to assess LLM reasoning by decomposing LLM performance on multiple choice questions into Guessing, Memorization, and Reasoning.  Finds that even the LLMs which are most developed at reasoning employ the "guessing" and "memorization" strategies more often than true "reasoning".

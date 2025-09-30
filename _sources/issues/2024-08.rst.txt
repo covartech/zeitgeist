@@ -1,0 +1,166 @@
+The CoVar Zeitgest: August, 2024
+================================
+A curated list of the latest research in AI.
+
+Enjoy!
+
+Featured
+--------
+`AI achieves silver-medal standard solving International Mathematical Olympiad problems <https://deepmind.google/discover/blog/ai-solves-imo-problems-at-silver-medal-level/>`_
+    A interesting result from Deepmind: two reinforcement learning algorithms which combine to achieve a silver medal on the problems at this years International Mathematics Olympiad.  Given the replacement-level performance of AI models on math problems, this is astounding.  The authors combined an LLM, the AlphaZero reinforcement learning algorithm, and a formal mathematical prover using formal language that could evaluate whether a given proof was correct: they leveraged the ability to generate solutions with the ability to easily verify whether solutions were correct.
+
+`VILA2 : VILA Augmented VILA <https://arxiv.org/pdf/2407.17453>`_
+    A new VLM from NVIDIA.  Of particular interest is the training method, which addressed the problem of running out of labelled quality data.  The authors propose a "self-augment" and a "specialist-augment" step to improve data quality and labels as well as augmenting with other models.  This is an interesting method to generate quality data ex nihilo.
+
+`Revealing the Dark Secrets of Extremely Large Kernel ConvNets on Robustness <https://arxiv.org/pdf/2407.08972>`_
+    ConvNets with extremely large kernels achieve comparable/superior performance compared to vision transformers.  This paper demonstrates this for robustness and investigates why.
+
+`Don’t Throw Away Data: Better Sequence Knowledge Distillation <https://arxiv.org/pdf/2407.10456>`_
+    From Deepmind.  The problem investigated is how to manage student-teacher cases where you have a big LLM (the teacher) that can perform a specific task (e.g. language translation) but you want a smaller model (the student) to be able to perform the same task.  Finds the most optimal method of teaching the student using the teacher.
+
+`Meta 3D AssetGen: Text-to-Mesh Generation with High-Quality Geometry, Texture, and PBR Materials <https://ai.meta.com/research/publications/meta-3d-assetgen-text-to-mesh-generation-with-high-quality-geometry-texture-and-pbr-materials/?utm_source=twitter&utm_medium=organic_social&utm_content=thread&utm_campaign=research>`_
+    Meta presents a novel model for generating 3D objects from text or image inputs.  The examples look impressive.  Anyone working on recovering CAD models/3D representations of objects should take a look at this.
+
+`Stretching Each Dollar: Diffusion Training from Scratch on a Micro-Budget <https://arxiv.org/pdf/2407.15811>`_
+    Sony AI trains a sparse 1.16B parameter diffusion transformer over 2.6 days on an 8xH100, with only $1890 in GPU costs.  Lots of effort went into this paper, which shows that small organizations can train comparably large models.
+
+LLMs
+----
+`Single Character Perturbations Break LLM Alignment <https://arxiv.org/pdf/2407.03232>`_
+    LLMs have safeguards built in following directives such as "Don't tell users how to build bombs".  This paper discovered a method to avoid these safeguards by simply by appending a token of whitespace at the end of input prompts.  The authors hypothesize this works because, in training, whitespace prompts the model to make lists and this  association overrides the safeguards.
+
+`On Large Language Models in National Security Applications <https://arxiv.org/pdf/2407.03453>`_
+    Two professors from the Air Force Institute of Technology discuss the use case of LLMs in the Air Force.  If this is of interest, it's worth a read.
+
+`SLIP: Securing LLM’s IP Using Weights Decomposition <https://arxiv.org/pdf/2407.10886>`_
+    Microsoft develops a method to protect LLM weights from models deployed on edge devices from being discovered by an adversary by decomposing the weights into two matrices, one of which is recoverable and one of which is not.
+
+`Don’t Throw Away Data: Better Sequence Knowledge Distillation <https://arxiv.org/pdf/2407.10456>`_
+    From Deepmind.  The problem investigated is how to manage student-teacher cases where you have a big LLM (the teacher) that can perform a specific task (e.g. language translation) but you want a smaller model (the student) to be able to perform the same task.  Finds the most optimal method of teaching the student using the teacher.
+
+VLMs
+----
+`InternLM-XComposer-2.5: A Versatile Large Vision Language Model Supporting Long-Contextual Input and Output <https://arxiv.org/pdf/2407.03320>`_
+    Novel open-source large vision language model capable of text-to-image and image-to-text.  Fairly extensive benchmarking, seems to perform approximately as well as GPT-4.
+
+`AdaCLIP: Adapting CLIP with Hybrid Learnable Prompts for Zero-Shot Anomaly Detection <https://arxiv.org/pdf/2407.15795>`_
+    A novel model based on CLIP which functions as a zero-shot anomaly detection/segmentation network.  Segments objects described in short natural language text descriptions.  Has potential as an "off-the-shelf" tool for zero-shot applications.
+
+`ViLLa: Video Reasoning Segmentation with Large Language Model <https://arxiv.org/pdf/2407.14500>`_
+    A novel vision LLM which takes a text prompt as an input and generates (1) segmentation masks for the objects described in the prompt and (2) a text description of the input video/images.  Demonstrates its capabilities on a few examples.
+
+`VILA2 : VILA Augmented VILA <https://arxiv.org/pdf/2407.17453>`_
+    A new VLM from NVIDIA.  Of particular interest is the training method, which addressed the problem of running out of labelled quality data.  The authors propose a "self-augment" and a "specialist-augment" step to improve data quality and labels as well as augmenting with other models.  This is an interesting method to generate quality data ex nihilo.
+
+`Wolf: Captioning Everything with a World Summarization Framework <https://arxiv.org/pdf/2407.18908>`_
+    This paper proposes a novel VLM focussing on captioning images/videos.  Implicit in this is a fairly robust multi-class classifier, which could be leveraged for zero/one/few shot learning.
+
+Object Detection
+----------------
+`Similarity Distance-Based Label Assignment for Tiny Object Detection <https://arxiv.org/pdf/2407.02394>`_
+    This paper proposes a novel for non-max suppression in the context of tiny object detection.  Appears to improve performance of faster R-CNN on AITOD.  Worth looking into for any tiny object detection problems.
+
+`Meta 3D AssetGen: Text-to-Mesh Generation with High-Quality Geometry, Texture, and PBR Materials <https://ai.meta.com/research/publications/meta-3d-assetgen-text-to-mesh-generation-with-high-quality-geometry-texture-and-pbr-materials/?utm_source=twitter&utm_medium=organic_social&utm_content=thread&utm_campaign=research>`_
+    Meta presents a novel model for generating 3D objects from text or image inputs.  The examples look impressive.  Anyone working on recovering CAD models/3D representations of objects should take a look at this.
+
+`Meta 3D TextureGen: Fast and Consistent Texture Generation for 3D Objects <https://ai.meta.com/research/publications/meta-3d-texturegen-fast-and-consistent-texture-generation-for-3d-objects/?utm_source=twitter&utm_medium=organic_social&utm_content=thread&utm_campaign=research>`_
+    Meta presents a novel model for generating textures for 3D objects.  Designed to work with AssetGen, this also looks suitably impressive.
+
+Autonomy
+--------
+`Distilling Tiny and Ultra-fast Deep Neural Networks for Autonomous Navigation on Nano-UAVs <https://arxiv.org/pdf/2407.12675>`_
+    This papers builds a tiny CNN to function as the brain on a "nano-drone".  Can navigate to avoid obstacles.
+
+`SHANGUS: Deep Reinforcement Learning Meets Heuristic Optimization for Speedy Frontier-Based Exploration of Autonomous Vehicles in Unknown Spaces <https://arxiv.org/pdf/2407.18892>`_
+    A deep reinforcement learning framework to control an autonomous vehicle exploring an unknown space.  
+
+Reinforcement Learning
+----------------------
+`AI achieves silver-medal standard solving International Mathematical Olympiad problems <https://deepmind.google/discover/blog/ai-solves-imo-problems-at-silver-medal-level/>`_
+     A interesting result from Deepmind: two reinforcement learning algorithms which combine to achieve a silver medal on the problems at this years International Mathematics Olympiad.  Given the replacement-level performance of AI models on math problems, this is astounding.  The authors combined an LLM, the AlphaZero reinforcement learning algorithm, and a formal mathematical prover using formal language that could evaluate whether a given proof was correct: they leveraged the ability to generate solutions with the ability to easily verify whether solutions were correct.
+
+Fusion
+------
+`Fusion Flow-enhanced Graph Pooling Residual Networks for Unmanned Aerial Vehicles Surveillance in Day and Night Dual Visions <https://arxiv.org/pdf/2407.12647>`_
+    Builds a bespoke model for EO/IR sensor fusion for counter-UAS activities during the day and night. Results look suitably impressive and the approach may be worth drawing inspiration from.
+
+`Training-Free Model Merging for Multi-target Domain Adaptation <https://arxiv.org/pdf/2407.13771>`_
+    Investigates how to fuse together multiple models spanning multiple domains without access to training data.  Employs deep learning techniques.  
+
+`Is That Rain? Understanding Effects on Visual Odometry Performance for Autonomous UAVs and Efficient DNN-based Rain Classification at the Edge <https://arxiv.org/pdf/2407.12663>`_
+    Builds a dataset and a (small) detector for detecting whether or not it is raining outside.  This could be used as a subsystem to inform other sensors/algorithms.
+
+Tracking
+--------
+`DenseTrack: Drone-based Crowd Tracking via Density-aware Motion-appearance Synergy <https://arxiv.org/pdf/2407.17272>`_
+    Builds a pipeline to perform crowd-tracking from a drone using neural nets, similarity matrices, and Hungarian algorithms.  The approach appears to get results.
+
+Gaussian Splatting
+------------------
+`SpotlessSplats: Ignoring Distractors in 3D Gaussian Splatting <https://arxiv.org/pdf/2406.20055>`_
+    From Deepmind.  Proposes a novel Gaussian Splatting method which can effectively ignore interfering objects.  These objects can sometimes lead to anomalies inside the Gaussian Splatting model, so ignoring them is an important contribution. 
+
+`Click-Gaussian: Interactive Segmentation to Any 3D Gaussians <https://arxiv.org/pdf/2407.11793>`_
+    A 3D Gaussian Splatting renderer/UI that allows the user to segment any object inside the render by clicking on it and adjusting a parameter.  This is a potentially powerful capability.
+
+Computational Enhancement
+-------------------------
+`Fast, Scalable, Energy-Efficient Non-element-wise Matrix Multiplication on FPGA <https://arxiv.org/pdf/2407.02362>`_
+    A new matrix multiplication method for putting neural nets on FPGAs which is more efficient than the baseline methods
+
+`Fast Matrix Multiplications for Lookup Table-Quantized LLMs <https://arxiv.org/pdf/2407.10960>`_
+    Proposes a novel method for speeding up matrix multiplication in LLMs. It's quite an interesting approach as it uses an offline lookup table to supplement a quantized matrix multiplication.
+
+`Q-Sparse: All Large Language Models can be Fully Sparsely-Activated <https://arxiv.org/pdf/2407.10969>`_
+    Proposes a novel method for speeding up matrix multiplication in LLMs by sparsifying the model. Can be applied to either full precision or 1-bit models.  Maintains performance while increasing speed.
+
+`CHOSEN: Compilation to Hardware Optimization Stack for Efficient Vision Transformer Inference <https://arxiv.org/pdf/2407.12736>`_
+    A team from USC develops software for putting vision transformers on FPGAs.  
+
+`A deeper look at depth pruning of LLMs <https://arxiv.org/pdf/2407.16286>`_
+    A group at NVIDIA takes a look at various methods for pruning LLMs and finds that you can prune up to a third of Mistral 7B while maintaining performance.  Could be worth a look for LLM related work.
+
+`LookupViT: Compressing visual information to a limited number of tokens <https://arxiv.org/pdf/2407.12753>`_
+    Deepmind proposes a method to speed up vision transformers, leveraging the insight that there are many tokens in images which have very low information content.  This paper compresses input tokens to a fixed number of tokens as a method of getting rid of the extraneous tokens.  Improves computational speed and performance.
+
+`Stretching Each Dollar: Diffusion Training from Scratch on a Micro-Budget <https://arxiv.org/pdf/2407.15811>`_
+    Sony AI trains a sparse 1.16B parameter diffusion transformer over 2.6 days on an 8xH100, with only $1890 in GPU costs.  Lots of effort went into this paper, which shows that small organizations can train comparably large models.
+
+Theory
+------
+`The Art of the Steal: Purloining Deep Learning Models Developed for an Ultrasound Scanner to a Competitor Machine <https://arxiv.org/pdf/2407.03512>`_
+    A proprietary DL algorithm on a device can be recreated by anyone with access to the device by using the device to label data and training a new algorithm on that data.  This paper proposes a method of doing so which essentially replicates the performance of the original algorithm.
+
+`Revealing the Dark Secrets of Extremely Large Kernel ConvNets on Robustness <https://arxiv.org/pdf/2407.08972>`_
+    ConvNets with extremely large kernels achieve comparable/superior performance compared to vision transformers.  This paper demonstrates this for robustness and investigates why.
+
+`Mixture of A Million Experts <https://arxiv.org/pdf/2407.04153>`_
+    From Deepmind.  Mixture of Experts (MoE) is a promising alternative architecture to transformers which bears resemblance to ensemble models.  This paper argues that adding experts increases performance, and demonstrates this by proposing a MoE model with one million experts.
+
+Applications
+------------
+`Deformable Convolution Based Road Scene Semantic Segmentation of Fisheye Images in Autonomous Driving <https://arxiv.org/pdf/2407.16647>`_
+    Investigates ATR methods on fish-eye cameras, and finds that a deformable CNN outperforms other methods such as ResNets and U-Nets.  A reminder that software and hardware are linked.
+
+`GENERATIVE LEARNING FOR SIMULATION OF US ARMY VEHICLE FAULTS <https://arxiv.org/pdf/2407.17654>`_
+    Investigates deep learning methods of predicting when US army vehicle will experience malfunctions.
+
+New LLMs
+--------
+`Learning to (Learn at Test Time): RNNs with Expressive Hidden States <https://arxiv.org/pdf/2407.04620>`_
+    A new hidden state model with linear complexity in context length which appears to outperform both transformers and Mamba both in terms of computational time and results.
+
+`Codestral Mamba <https://mistral.ai/news/codestral-mamba/>`_
+    Mistral releases an LMM based on Mamba and with an Apache 2.0 license.  
+
+`GPT-4o mini: advancing cost-efficient intelligence <https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/>`_
+    A new GPT model which is very small and very cheap yet better than all GPT models across a range of tasks, being outperformed only by GPT-4
+
+`Mistral NeMo <https://mistral.ai/news/mistral-nemo/>`_
+    A "drop-in replacement for Mistral 7B", this looks impressive.  A context window of 128K is the standout here, but it also shows some decent results.
+
+`The Llama 3 Herd of Models <https://ai.meta.com/research/publications/the-llama-3-herd-of-models/>`_
+    Meta releases Llama 3.1 with 8B, 70B, and 405B(!!) models with an accompanying lab report which is worth a read.
+
+`Large Enough <https://mistral.ai/news/mistral-large-2407/>`_
+    Mistral releases Mistral Large 2 in the day after Llama 3 drops.  They claim its better than Llama 3.

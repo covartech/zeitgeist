@@ -1,0 +1,135 @@
+The CoVar Zeitgeist: January, 2024
+==================================
+A curated list of the latest research in AI.
+
+Enjoy!
+
+Featured
+--------
+`Are Emergent Abilities of Large Language Models a Mirage? <https://arxiv.org/pdf/2304.15004.pdf>`_
+    Argues that emergent behavior, as model scale increases, is simply due to choice of metric rather than any underlying behavior.
+
+`Benchmarking Deep Learning Classifiers for SAR Automatic Target Recognition <https://arxiv.org/pdf/2312.06940.pdf>`_
+    Coauthors from DEVCOM Army Research Lab.  Analyze SAR classifiers for classification accuracy, runtime performance in terms of inference throughput, and analytical performance in terms of number of parameters, number of layers, model size and number of operations.
+
+`Scalable and Transferable Black-Box Jailbreaks for Language Models via Persona Modulation <https://arxiv.org/abs/2311.03348>`_
+    Finds black-box jailbreaks for LLMs. Getting GPT4 to give you a recipe for meth is very doable. It's not a GPT problem, it's a standard LLM problem. This has big implications for Secret and Top Secret LLMs. 
+
+`Splatter Image: Ultra-Fast Single-View 3D Reconstruction <https://arxiv.org/abs/2312.13150>`_
+    Proposes a Gaussian Splatting method to make a "splatter image" that defines a 3D reconstruction, which they can then feed to a Gaussian splatter renderer. From those small number channels they can render other views of that target.
+
+`Do Bayesian Neural Networks Weapon System Improve Predictive Maintenance? <https://arxiv.org/ftp/arxiv/papers/2312/2312.10494.pdf>`_
+    From the Naval Surface Warfare Center.  Uses Bayesian Neural Nets to estimate time to failure for highly reliable weapons systems. 
+
+`Temperature Balancing, Layer-wise Weight Analysis, and Neural Network Training <https://arxiv.org/pdf/2312.00359.pdf>`_
+    Interprets learning rate as temperature, and proposes a method for varying the learning rate in a DNN on a layer-by-layer basis.  Significantly outperforms existing SGD methods
+
+LLMs
+----
+`Are Emergent Abilities of Large Language Models a Mirage? <https://arxiv.org/pdf/2304.15004.pdf>`_
+    Argues that emergent behavior, as model scale increases, is simply due to choice of metric rather than any underlying behavior.
+
+`The Reversal Curse: LLMs trained on "A is B" fail to learn "B is A" <https://arxiv.org/abs/2309.12288>`_
+    Finds that an LLM that has memorized certain relationships cannot natively implement the symmetric property.  For instance, it might memorize that Tom Cruise's mother is Mary Lee Pfiefer, but does not know the son of Mary Lee Pfiefer, because one is much more common in the training data.
+
+`Scalable Extraction of Training Data from (Production) Language Models <https://arxiv.org/abs/2311.17035>`_
+    Discovers an exploit - if you ask ChatGPT to repeat a word forever, then, after a while, it starts repeating training data. This is now against OpenAI terms of service.
+    `See Also <https://not-just-memorization.github.io/extracting-training-data-from-chatgpt.html>`_
+
+`Scalable and Transferable Black-Box Jailbreaks for Language Models via Persona Modulation <https://arxiv.org/abs/2311.03348>`_
+    Finds black-box jailbreaks for LLMs. Getting GPT4 to give you a recipe for meth is very doable. It's not a GPT problem, it's a standard LLM problem. This has big implications for Secret and Top Secret LLMs. 
+
+`LLM in a flash: Efficient Large Language Model Inference with Limited Memory <https://arxiv.org/pdf/2312.11514.pdf>`_
+    Proposes a method for extremely computationally efficient LLMs.  Reduces data transfer by reusing old activated neurons and increases the size of data chunks read from flash memory.  
+
+VLMs
+----
+`Sequential Modeling Enables Scalable Learning for Large Vision Models <https://arxiv.org/abs/2312.00785>`_
+    Builds a Large Vision Model that can do a wide variety of tasks without using any language data.  Creative.  
+    `Also interesting <https://yutongbai.com/lvm.html>`_
+
+Object Detection
+----------------
+`Reconstructing Hands in 3D with Transformers <https://arxiv.org/pdf/2312.05251.pdf>`_
+    Implements a transformer that can look at pictures of hands and output a 3D mesh.
+
+`QuickQuakeBuildings: Post-earthquake SAR-Optical Dataset for Quick Damaged-building Detection <https://arxiv.org/pdf/2312.06587.pdf>`_
+    Uses satellite/high-altitude SAR datasets to assess which buildings were damaged by earthquakes by combining binary classification and anomaly detection methods.
+
+`Benchmarking Deep Learning Classifiers for SAR Automatic Target Recognition <https://arxiv.org/pdf/2312.06940.pdf>`_
+    Coauthors from DEVCOM Army Research Lab.  Analyze SAR classifiers for classification accuracy, runtime performance in terms of inference throughput, and analytical performance in terms of number of parameters, number of layers, model size and number of operations.
+
+Autonomy
+--------
+`Vision-Language Models as a Source of Rewards <https://arxiv.org/pdf/2312.09187.pdf>`_
+    Uses vision-language models from the CLIP to generate dense rewards for use in training reinforcement learning algorithms.
+
+`Using Surprise Index for Competency Assessment in Autonomous Decision-Making <https://arxiv.org/pdf/2312.09033.pdf>`_
+    Proposes a surprise index to evaluate how autonomous AI makes decisions and evaluates on space-maneuvers.  
+
+`Large Language Models Play StarCraft II: Benchmarks and A Chain of Summarization Approach <https://arxiv.org/pdf/2312.11865.pdf>`_
+    Lets LLMs play SC2 by building an SC2 to text to Chain of Summarization pipeline for developing strategies and allowing the LLM to interact with the videogame.
+
+`Scaling Opponent Shaping to High Dimensional Games <https://arxiv.org/pdf/2312.12568.pdf>`_
+    Proposes a method for shaping your opponents' behaviors in multi-agent games to get to produce outcomes for everyone.
+
+Gaussian splatting
+------------------
+`Splatter Image: Ultra-Fast Single-View 3D Reconstruction <https://arxiv.org/abs/2312.13150>`_
+    Proposes a Gaussian Splatting method to make a "splatter image" that defines a 3D reconstruction, which they can then feed to a Gaussian splatter renderer. From those small number channels they can render other views of that target.
+
+`iComMa: Inverting 3D Gaussians Splatting for Camera Pose Estimation via Comparing and Matching <https://arxiv.org/abs/2312.09031>`_ 
+    A Gaussian Splatting implementation that also solves the 6D camera pose estimation problem. 
+
+Theory
+------
+`Graph Convolutions Enrich the Self-Attention in Transforms! <https://arxiv.org/pdf/2312.04234.pdf>`_
+    Claims that we are reaching the limits of self-attention as a mechanism in transformers.  Represents self-attention as a graph filter and redesigns from graph signal processing perspective.  Increased performance.
+
+`Temperature Balancing, Layer-wise Weight Analysis, and Neural Network Training <https://arxiv.org/pdf/2312.00359.pdf>`_
+    Interprets learning rate as temperature, and proposes a method for varying the learning rate in a DNN on a layer-by-layer basis.  Significantly outperforms existing SGD methods
+
+`Understanding the Detrimental Class-level Effects of Data Augmentation <https://openreview.net/forum?id=dQkeoGnn68>`_
+    Analyzes how data augmentation can hurt individual class-level accuracy while improving average class level accuracy.
+
+`Deep Internal Learning: Deep Learning from a Single Input <https://arxiv.org/pdf/2312.07425.pdf>`_
+    Review paper.  Covers methods for doing deep internal learning - training a model from a very small amount of inputs - with a focus on CV
+
+`Can a Transformer Represent a Kalman Filter? <https://arxiv.org/pdf/2312.06937.pdf>`_
+    Yes: an intuitive result.  Short paper, focusses on theory.  
+
+`A Mathematical Perspective on Transformers <https://arxiv.org/pdf/2312.10794.pdf>`_
+    New mathematical perspective on transformers.  Worth a read.
+
+Knowledge Graphs
+----------------
+`Beyond Transduction: A Survey on Inductive, Few Shot, and Zero Shot Link Prediction in Knowledge Graphs <https://arxiv.org/pdf/2312.04997.pdf>`_
+    Review paper for knowledge graphs.
+
+`NestE: Modeling Nested Relational Structures for Knowledge Graph Reasoning <https://arxiv.org/pdf/2312.09219.pdf>`_
+    Extends knowledge graph methods to nested triples or triples of triples: "(e.g., ((BarackObama, holds position, President), succeed by, (DonaldTrump, holds position, President)))"
+
+`SAT-Based Algorithms for Regular Graph Pattern Matching <https://arxiv.org/pdf/2312.09995.pdf>`_
+    Proposes ReGaPs (regular graph patterns) to do better graph matching - isomorphisms, approximations, subsets, etc, as well as Boolean satisfiability (SAT) encoding, and a simplification technique.
+
+Applications
+------------
+`Human mobility is well described by closed-form gravity-like models learned automatically from data <https://arxiv.org/pdf/2312.11281.pdf>`_
+    Finds that simple, gravity-like machine learning models better describe human mobility than either gravity models or deep learning models.
+
+`Do Bayesian Neural Networks Weapon System Improve Predictive Maintenance? <https://arxiv.org/ftp/arxiv/papers/2312/2312.10494.pdf>`_
+    From the Naval Surface Warfare Center.  Uses Bayesian Neural Nets to estimate time to failure for highly reliable weapons systems. 
+
+New Models
+----------
+`Mixtral 8x7B Explained <https://huggingface.co/blog/moe>`_
+    Mixtral explains a new model: Mixture of Experts 7B (like GPT4). Instead of using one big model say 56GB we can actually use a mixture of 8 7B models. We end up saving a bit of VRAM space in the process and it works better.
+
+`Paving the way to efficient architectures: StripedHyena-7B, open source models offering a glimpse into a world beyond Transformers <https://www.together.ai/blog/stripedhyena-7b>`_
+    StripedHyena is a new model that comparable with transformers despite having a different architecture.  It's based on `signal processing inspired sequence models <https://hazyresearch.stanford.edu/blog/2023-06-08-hyena-safari>`_ which means that sometimes you use an FFT. 
+
+`Efficient SAM <https://yformer.github.io/efficient-sam/>`_
+    A new, faster, implementation of SAM.
+
+`General Object Foundation Model for Images and Videos at Scale <https://arxiv.org/abs/2312.09158>`_
+    A new foundation model, GLEE, with many capabilities.  Open source.  
