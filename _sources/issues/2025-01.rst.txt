@@ -1,0 +1,198 @@
+The CoVar Zeitgeist: January, 2025
+==================================
+There is a lot of interesting research this month. Featuring:
+
+* Proposes an LLM architecture which operates on the level of “concepts” instead of “tokens” by (1) assuming that a concept corresponds to a sentence and (2) taking sentences as the base unit of operation for multiple explored architectures. Demonstrates zero-shot generalization across languages.
+* Presents a detailed study on how to best fine-tune small LLMs (up to 7B parameters) in a supervised setting. Worth a read for anyone interested in the task.
+* Proposes a method to enhance 3D Gaussian Splatting using boundary guidance, and implements a 3D detector on the resulting space. Demonstrates an increase in performance over benchmarks.
+* A novel LLM architecture that dynamically forms patches from raw bytes using entropy measures, allowing the model to place more resources into the more complex parts of input data. Outperforms tokenization based approaches for the same compute.
+* LLMs can become more effective without increasing their number of parameters. This paper refers to this phenomena as becoming “denser”, and finds that the density of LLMs doubles roughly every three month. That is, if the law holds, current SOTA will be achieved by a model half the size in three months.
+* Attempts to recreate OpenAI’s slow-thinking o1 model. Does so by proposing an “imitate, explore, and self-improve” algorithm which, among other things, takes responses from o1 and uses them to finetune a model. Achieves SOTA performance.
+
+`CoVar <https://covar.com/>`_
+
+Featured
+--------
+`Large Concept Models: Language Modeling in a Sentence Representation Space <https://arxiv.org/pdf/2412.08821>`_
+    Proposes an LLM architecture which operates on the level of "concepts" instead of "tokens" by (1) assuming that a concept corresponds to a sentence and (2) taking sentences as the base unit of operation for multiple explored architectures.  Demonstrates zero-shot generalization across languages.
+
+`UNVEILING THE SECRET RECIPE: A GUIDE FOR SUPERVISED FINE-TUNING SMALL LLMS <https://arxiv.org/pdf/2412.13337>`_
+    Presents a detailed study on how to best fine-tune small LLMs (up to 7B parameters) in a supervised setting.  Worth a read for anyone interested in the task.   
+
+`3DGS-DET: EMPOWER 3D GAUSSIAN SPLATTING WITH BOUNDARY GUIDANCE AND BOX-FOCUSED SAMPLING FOR 3D OBJECT DETECTION <https://arxiv.org/pdf/2410.01647?>`_
+    Proposes a method to enhance 3D Gaussian Splatting using boundary guidance, and implements a 3D detector on the resulting space.  Demonstrates an increase in performance over benchmarks.
+
+`Byte Latent Transformer: Patches Scale Better Than Tokens <https://scontent-atl3-2.xx.fbcdn.net/v/t39.2365-6/470135129_1314438233309836_4712217603129928862_n.pdf?_nc_cat=111&ccb=1-7&_nc_sid=3c67a6&_nc_ohc=WqSN1qsot3oQ7kNvgHpnnos&_nc_zt=14&_nc_ht=scontent-atl3-2.xx&_nc_gid=AiACMF5Z-_c7v5XjyV2IQAB&oh=00_AYDMat9cX5a0ITlCA2gIDOWjEJgwFIW83UTD4xRup2gDcg&oe=67663348>`_
+    A novel LLM architecture that dynamically forms patches from raw bytes using entropy measures, allowing the model to place more resources into the more complex parts of input data.  Outperforms tokenization based approaches for the same compute.
+
+`Densing Law of LLMs <https://arxiv.org/pdf/2412.04315>`_
+    LLMs can become more effective without increasing their number of parameters.  This paper refers to this phenomena as becoming "denser", and finds that the density of LLMs doubles roughly every three month.  That is, if the law holds, current SOTA will be achieved by a model half the size in three months.
+
+`Imitate, Explore, and Self-Improve: A Reproduction Report on Slow-thinking Reasoning Systems <https://arxiv.org/pdf/2412.09413>`_
+    Attempts to recreate OpenAI's slow-thinking o1 model.  Does so by proposing an "imitate, explore, and self-improve" algorithm which, among other things, takes responses from o1 and uses them to finetune a model.  Achieves SOTA performance.
+    
+LLMs
+----
+`Self-Improvement in Language Models: The Sharpening Mechanism <https://arxiv.org/pdf/2412.01951>`_
+    LLMs are better at judging whether a response is good than they are at generating responses.  Leveraging this observation, the paper proposes to have an LLM sharpen itself by acting as its own verifier.  The proposed approach is optimal if the initial model has sufficient coverage.
+
+`Densing Law of LLMs <https://arxiv.org/pdf/2412.04315>`_
+    LLMs can become more effective without increasing their number of parameters.  This paper refers to this phenomena as becoming "denser", and finds that the density of LLMs doubles roughly every three month.  That is, if the law holds, current SOTA will be achieved by a model half the size in three months.
+
+`REFUSAL TOKENS: A SIMPLE WAY TO CALIBRATE REFUSALS IN LARGE LANGUAGE MODELS <https://arxiv.org/pdf/2412.06748>`_
+    Develops a method, refusal tokens, to allow LLMs to refuse to answer certain types of questions without needing any finetuning.  Could be useful for a scenario where an LLM knows information it cannot communicate
+
+`UNVEILING THE SECRET RECIPE: A GUIDE FOR SUPERVISED FINE-TUNING SMALL LLMS <https://arxiv.org/pdf/2412.13337>`_
+    Presents a detailed study on how to best fine-tune small LLMs (up to 7B parameters) in a supervised setting.  Worth a read for anyone interested in the task.   
+
+LLM Reasoning
+-------------
+`Critical Tokens Matter: Token-Level Contrastive Estimation Enhances LLM’s Reasoning Capability <https://arxiv.org/pdf/2411.19943>`_
+    Finds that LLMs can generate critical tokens which, when generated, almost certainly assure that the LLM will perform poorly on reasoning tasks.  Develops a method to force the LLM not to generate critical tokens, improving performance.
+
+`Reverse Thinking Makes LLMs Stronger Reasoners <https://arxiv.org/pdf/2411.19865>`_
+    Reasoning in reverse, that is starting from an answer and working backwards, helps to increase reasoning levels in humans.  This paper finds that it can also increase reasoning performance in LLMs, after applying a novel training process.
+
+`Training Large Language Models to Reason in a Continuous Latent Space <https://arxiv.org/pdf/2412.06769>`_
+    Most attempts to have LLMs perform reasoning tasks have them reason in natural language, as with Chain of Thought.  This paper instead uses the last hidden state of the LLM as a latent space for it to reason in, by using it as the next input embedding in continuous space.  Outperforms Chain of Thought in several benchmarks.
+
+Novel LLM Architectures
+-----------------------
+`Large Concept Models: Language Modeling in a Sentence Representation Space <https://arxiv.org/pdf/2412.08821>`_
+    Proposes an LLM architecture which operates on the level of "concepts" instead of "tokens" by (1) assuming that a concept corresponds to a sentence and (2) taking sentences as the base unit of operation for multiple explored architectures.  Demonstrates zero-shot generalization across languages.
+
+`Byte Latent Transformer: Patches Scale Better Than Tokens <https://scontent-atl3-2.xx.fbcdn.net/v/t39.2365-6/470135129_1314438233309836_4712217603129928862_n.pdf?_nc_cat=111&ccb=1-7&_nc_sid=3c67a6&_nc_ohc=WqSN1qsot3oQ7kNvgHpnnos&_nc_zt=14&_nc_ht=scontent-atl3-2.xx&_nc_gid=AiACMF5Z-_c7v5XjyV2IQAB&oh=00_AYDMat9cX5a0ITlCA2gIDOWjEJgwFIW83UTD4xRup2gDcg&oe=67663348>`_
+    A novel LLM architecture that dynamically forms patches from raw bytes using entropy measures, allowing the model to place more resources into the more complex parts of input data.  Outperforms tokenization based approaches for the same compute.
+
+VLMs
+----
+`Dual Risk Minimization: Towards Next-Level Robustness in Fine-tuning Zero-Shot Models <https://arxiv.org/pdf/2411.19757>`_
+    Fine-tuning a foundation model can cause it to suffer from distribution shifts.  This paper proposes a remedy to this problem by minimizing two risks: empirical risk and worst-case risk.  Achieves SOTA performance on benchmarks.
+
+`Perception Tokens Enhance Visual Reasoning in Multimodal Language Models <https://arxiv.org/pdf/2412.03548>`_
+    Visual reasoning tasks often require ancillary capabilities that VLMs do not have off-the-shelf.  Perception tokens, when added, can function as a VLM equivalent of Chain-of-Thought, allowing VLMs to reason over images.
+
+`Apollo: An Exploration of Video Understanding in Large Multimodal Models <https://arxiv.org/pdf/2412.10360>`_
+    Explores what drive VLM understanding of videos.  Establishes Scaling Consistency, the principle that design/training decisions transfer from small models to large models.  Uses this to discover many best-training practices, such as it being more optimal to use fps sampling than uniform frame sampling.
+
+Object Detection
+----------------
+`3DGS-DET: EMPOWER 3D GAUSSIAN SPLATTING WITH BOUNDARY GUIDANCE AND BOX-FOCUSED SAMPLING FOR 3D OBJECT DETECTION <https://arxiv.org/pdf/2410.01647?>`_
+    Proposes a method to enhance 3D Gaussian Splatting using boundary guidance, and implements a 3D detector on the resulting space.  Demonstrates an increase in performance over benchmarks.
+
+`Scaling 4D Representations <https://arxiv.org/pdf/2412.15212>`_
+    Explores and develops a suite of models for recovering information such as depth and camera pose from video data.  Consists of MAEs trained in a supervised manner, and scaled up to 22B parameters.  Code not available.
+
+3D Rendering
+------------
+`Sparse Voxels Rasterization: Real-time High-fidelity Radiance Field Rendering <https://arxiv.org/pdf/2412.04459>`_
+    A new approach to 3D rendering which combines approaches from 3D Gaussian Splatting and voxel-based world models.  Leverages mesh reconstruction techniques.  Is both faster and more effective than SOTA NeRF and Gaussian Splatting methods.
+
+`MAtCha Gaussians: Atlas of Charts for High-Quality Geometry and Photorealism From Sparse Views <https://arxiv.org/pdf/2412.06767>`_
+    A rendering method from sparse images which constructs a mesh on which 2D Gaussian surflets are affixed.  Could be useful for 3D object recognition.
+
+`FREESPLATTER: POSE-FREE GAUSSIAN SPLATTING FOR SPARSE-VIEW 3D RECONSTRUCTION <https://arxiv.org/pdf/2412.09573>`_
+    A 3D Gaussian Splatting method that takes in sparse images without camera information, recovers the camera information, and generates a 3D Gaussian Splat.  Impressive performance, especially given the data inputs.
+
+Autonomy
+--------
+`Navigation World Models <https://arxiv.org/pdf/2412.03572>`_
+    An agent that uses a diffusion transformer to simulate proposed trajectories from a single image.  Demonstrates ability to autonomously plan trajectories.
+
+`CAN FOUNDATION MODELS ACTIVELY GATHER INFORMATION IN INTERACTIVE ENVIRONMENTS TO TEST HYPOTHESES? <https://arxiv.org/pdf/2412.06438>`_
+    Tests how a foundation model performs when it acts as an autonomous agents in text and video based settings.  Performs well with simple tasks with one reward, but can get confused in more complicated environments.
+
+Computational Efficiency
+------------------------
+`STAR ATTENTION: EFFICIENT LLM INFERENCE OVER LONG SEQUENCES <https://arxiv.org/pdf/2411.17116>`_
+    Proposes a novel method for processing attention in long-context LLMs, where the context is divided into blocks processed independently and in parallel, and then globally aggregated into a global attention statistic.  Code available.
+
+`LOW-RANK CORRECTION FOR QUANTIZED LLMS <https://arxiv.org/pdf/2412.07902>`_
+    Develops a method to compress LLMs in the post-training stage by analyzing weights and activations.  Achieves the same performance as baseline models at only thirty percent the size.
+
+Ethics & Safety
+---------------
+`Noise Injection Reveals Hidden Capabilities of Sandbagging Language Models <https://arxiv.org/pdf/2412.01784>`_
+    Evaluating AI models for safety reasons is difficult if the models are intentionally sandbagging or decreasing their performance.  This paper proposes a methodology to detect whether AI models are sandbagging during safety evaluations.
+
+`Failure Probability Estimation for Black-Box Autonomous Systems using State-Dependent Importance Sampling Proposals <https://arxiv.org/pdf/2412.02154>`_
+    Proposes a method to predict probability of failure in complex and safety-critical autonomous systems using an importance sampling based approach.  Improves upon Monte Carlo based approaches in both computational performance and accuracy.
+
+`Obfuscated Activations Bypass LLM Latent-Space Defenses <https://arxiv.org/pdf/2412.09565>`_
+    Proposes a new method for attacking LLMs based on obfuscated activations - activations which fool latent-space monitors present in LLMs.  Shows that these are an effective method for red-teaming LLMs.
+
+`How to Choose a Threshold for an Evaluation Metric for Large Language Models <https://arxiv.org/pdf/2412.12148>`_
+    This paper investigates how to safely use LLMs in a high-risk setting such as finance.  Develops a method based on Model Risk Management guidelines to evaluate what performance metrics an LLM must satisfy to be deployed.
+
+Theory
+------
+`THE ASYMPTOTIC BEHAVIOR OF ATTENTION IN TRANSFORMERS <https://arxiv.org/pdf/2412.02682>`_
+    Analyzes the asymptotic behavior of attention in transformers and finds a theoretical result confirming multiple empirical results: all tokens converge towards each other.
+
+`Beyond [cls]: Exploring the true potential of Masked Image Modeling representations <https://arxiv.org/pdf/2412.03215>`_
+    Investigates how different transformer architectures have meaningfully different attention flow patterns, with an additional focus on the [cls] token.  Worth a read.
+
+`The Pitfalls of Memorization: When Memorization Hurts Generalization <https://arxiv.org/pdf/2412.07684>`_
+    Neural networks use a combination of heuristics and memorization to perform inference: this sometimes leads to poor generalization performance.  The paper proposes a novel method for training which is aware of memorization as it happens and shifts weights accordingly, improving generalization.
+
+`Imitate, Explore, and Self-Improve: A Reproduction Report on Slow-thinking Reasoning Systems <https://arxiv.org/pdf/2412.09413>`_
+    Attempts to recreate OpenAI's slow-thinking o1 model.  Does so by proposing an "imitate, explore, and self-improve" algorithm which, among other things, takes responses from o1 and uses them to finetune a model.  Achieves SOTA performance.
+
+`softmax is not enough (for sharp out-of-distribution) <https://arxiv.org/pdf/2410.01104>`_ 
+    LLMs form internal circuits to handle reasoning tasks. However, the softmax function cannot generalize these circuits to out-of-domain inputs because it is sharp with increasing input size.  Proposes a method to modify the softmax function so that it retains sharpness, and hence the LLM retains circuits, for longer.
+
+Position Papers
+---------------
+`Envisioning National Resources for Artificial Intelligence Research <https://arxiv.org/pdf/2412.10278>`_
+    A report from the NSF reviewing the state of AI research, investigating what resources are necessary, and making recommendations.
+
+New Models
+----------
+`OLMo 2: The best fully open language model to date <https://allenai.org/blog/olmo2>`_
+    AI2 releases OLMo 2, which achieves or surpasses SOTA performance among similarly-sized open weights models.   Apache 2.0 license
+
+`TÜLU 3: Pushing Frontiers in Open Language Model Post-Training <https://arxiv.org/pdf/2411.15124>`_
+    Tulu 3 is a class of LLMs created by applying novel fine-tuning and post-training techniques to existing LLMs, such as Llama. 
+
+`VLsI: Verbalized Layers-to-Interactions from Large to Small Vision Language Models <https://arxiv.org/pdf/2412.01822>`_
+    NVIDIA releases new VLMs which prioritize computational efficiency while maintaining performance.  Two models: 2B and 7B.  Github coming soon. 
+
+`NVILA: Efficient Frontier Visual Language Models <https://arxiv.org/pdf/2412.04468>`_
+    NVIDIA presents a new family of open source VLMS based upon the VILA models.  Matches or surpasses SOTA performance.  Code coming soon.
+
+`Llama 3.3 <https://www.llama.com/docs/model-cards-and-prompt-formats/llama3_3/>`_
+    Meta releases Llama 3.3, which has only 70B parameters but matches the performance of Llama 3.1 which has 405B parameters.  Open source.
+
+`Welcome PaliGemma 2 – New vision language models by Google <https://huggingface.co/blog/paligemma2>`_
+    Google releases PaliGemma 2, a new VLM which upgrades PaliGemma by upgrading the text decoder to Gemma 2.  Available on huggingface.
+
+`Genie 2: A large-scale foundation world model <https://deepmind.google/discover/blog/genie-2-a-large-scale-foundation-world-model/>`_
+    Google Deepmind releases Genie 2, a model which can generate videogame environments for use in training autonomous AI agents.
+
+`Amazon Nova Foundation Models <https://aws.amazon.com/ai/generative-ai/nova/understanding/>`_
+    Amazon releases a suite of SOTA foundation models with many capabilities. Does not appear to be open source.
+
+`Expanding Performance Boundaries of Open-Source Multimodal Models with Model, Data, and Test-Time Scaling <https://arxiv.org/pdf/2412.05271>`_
+    A new VLM, InternVL 2.5, released by a collaboration of Shanghai-based researchers.  Achieves or surpasses SOTA.  Open source.
+
+`Efficient Track Anything <https://arxiv.org/pdf/2411.18933>`_
+    Meta releases a refinement of SAM2, which has been improved to increase object tracking performance.
+
+`Introducing Gemini 2.0: our new AI model for the agentic era <https://blog.google/technology/google-deepmind/google-gemini-ai-update-december-2024/?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content=#ceo-message>`_
+    Google releases the first model Gemini 2 family, Gemini 2 Flash, the most recent and most powerful Gemini model.  Available via API.
+
+`Phi-4 Technical Report <https://arxiv.org/pdf/2412.08905>`_
+    Microsoft releases Phi-4, a 14B parameter LLM that is a student model trained using GPT-4 as a teacher, but with a focus on developing an excellent dataset.  Phi-4 surpasses GPT-4 on its chosen task.
+
+`DeepSeek-VL2: Mixture-of-Experts Vision-Language Models for Advanced Multimodal Understanding <https://arxiv.org/pdf/2412.10302>`_
+    Deepseek releases DeepSeek-VL2, a group of mixture of experts VLMs.  Improves both the vision and language components compared to DeepSeek-VL1
+
+`DHS’s Responsible Use of Generative AI Tools <https://www.dhs.gov/news/2024/12/17/dhss-responsible-use-generative-ai-tools>`_
+    The Department of Homeland Security has released an AI-powered chatbot that is available to all DHS employees and can operate within a secure environment.
+
+
+Presented at CoVar Seminar
+--------------------------
+2024-12-03
+    `An Introduction to Trajectory Optimization: How to Do Your Own Direct Collocation <https://epubs.siam.org/doi/10.1137/16M1062569>`_
+        Trajectory optimization is the task of constructing a path between two states that minimizes some objective - e.g., duration - subject to constraints - e.g., maximum acceleration, starting and ending position. One approach is to discretize the path into a set intermediate state and plug it all (intermediate states (as decision variables), objective, and constraints) into a non-linear program solver.

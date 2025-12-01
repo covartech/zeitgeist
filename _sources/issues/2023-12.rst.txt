@@ -1,0 +1,80 @@
+The CoVar Zeitgeist: December, 2023
+===================================
+A curated list of the latest research in AI.
+
+Enjoy!
+
+Featured
+--------
+`Don't Say What You Don't Know: Improving the Consistency of Abstractive Summarization by Constraining Beam Search <https://arxiv.org/abs/2203.08436>`_
+    Why do summarization systems hallucinate statements not in the text that they're summarizing?  Because they train on summaries not supported by the text.  Refining beam search can help avoid this situation.
+
+`Exponentially Faster Language Modeling <https://arxiv.org/abs/2311.10770>`_
+    Produces a much faster implementation of BERT, UltraFastBERT, which uses 0.3% of neurons.  Replaces feed forward networks with fast feed forward networks.
+
+`Language Models can be Logical Solvers <https://arxiv.org/abs/2311.06158>`_
+    Implements a solver-LLM based on emulating logical solvers.  Outperforms the SOTA.
+
+`Toy Models of Superposition <https://transformer-circuits.pub/2022/toy_model/index.html>`_
+    Individual neurons in networks are not exclusively a sparse encoding of visual features. They form geometric shapes and can use (for example) 2 features to encode more than 2 concepts, by making angular patterns.
+    `See Also <https://www.astralcodexten.com/p/god-help-us-lets-try-to-understand>`_
+
+`Orca: Progressive Learning from Complex Explanation Traces of GPT-4 <https://arxiv.org/abs/2306.02707>`_
+    Train a small student model, ORCA, on GPT4 output that can reproduce GTP-4 level performance on a subset of tasks with much overhead.  An interesting technique.
+    
+`Walking Down the Memory Maze: Beyond Context Limit through Interactive Reading <https://arxiv.org/abs/2310.05029>`_
+    A limited context window poses a problem for many LLMs.  This paper attempts to solve this problem.  It has the LLM undergo an iterative prompting process and the store the results in a tree where they are available for future use.
+
+LLMs
+----
+`Can Generalist Foundation Models Outcompete Special-Purpose Tuning? Case Study in Medicine <https://arxiv.org/abs/2311.16452>`_
+    Claims that GPT4 outperforms specialist models in the medical domain.
+
+`Don't Say What You Don't Know: Improving the Consistency of Abstractive Summarization by Constraining Beam Search <https://arxiv.org/abs/2203.08436>`_
+    Why do summarization systems hallucinate statements not in the text that they're summarizing?  Because they train on summaries not supported by the text.  Refining beam search can help avoid this situation. 
+
+`Supersizing Transformers: Going Beyond RAG with Extended minds for LLMs <https://blog.normalcomputing.ai/posts/2023-09-12-supersizing-transformers/supersizing-transformers.html>`_
+    Instead of pairing RAG with LLMs for long context window retrieval, this attempts to expand the context window itself.  Worth keeping an eye on.
+
+`Language Models can be Logical Solvers <https://arxiv.org/abs/2311.06158>`_
+    Implements a solver-LLM based on emulating logical solvers.  Outperforms the SOTA.
+
+`Summon a Demon and Bind it: A Grounded Theory of LLM Red Teaming in the Wild <https://arxiv.org/abs/2311.06237>`_
+    Social science research of why people red team LLMs.  Interesting.  
+
+`LLMs cannot find reasoning errors, but can correct them! <https://arxiv.org/abs/2311.08516>`_
+    Previous results have shown that having LLMs fix their own mistakes leads to a decrease in performance, with correct answers being "corrected" to incorrect ones.  This paper finds that this is because LLMs have a difficult time finding mistakes, but once the mistakes are pointed out the LLMs can correct them.
+
+`Walking Down the Memory Maze: Beyond Context Limit through Interactive Reading <https://arxiv.org/abs/2310.05029>`_
+    A limited context window poses a problem for many LLMs.  This paper attempts to solve this problem.  It has the LLM undergo an iterative prompting process and the store the results in a tree where they are available for future use.
+
+`ChatGPT's One-year Anniversary: Are Open-Source Large Language Models Catching up? <https://arxiv.org/abs/2311.16989>`_
+    The authors find that some open sources models can outperform closed source models on some tasks, but that closed source models are ahead on others.  
+
+Object Detection
+----------------
+`Estimation of NIIRS, for High Resolution Satellite Images, Using the Simplified GIQE <https://web.archive.org/web/20170202122447/https://www.ijircce.com/upload/2016/may/47_Estimation.pdf>`_
+    Presents the formula that relates GSD and image quality to NIIRS.  A method to quantify "effective pixels on target".  
+
+Computational Enhancement
+-------------------------
+`Accelerating 3D Deep Learning with PyTorch3D <https://arxiv.org/abs/2007.08501>`_
+    PyTorch3D is a computationally efficient 3D deep learning library which can enable many 3D object detection techniques.  
+
+`Exponentially Faster Language Modeling <https://arxiv.org/abs/2311.10770>`_
+    Produces a much faster implementation of BERT, UltraFastBERT, which uses 0.3% of neurons.  Replaces feed forward networks with fast feed forward networks.
+
+Theory
+------
+`Toy Models of Superposition <https://transformer-circuits.pub/2022/toy_model/index.html>`_
+    Individual neurons in networks are not exclusively a sparse encoding of visual features. They form geometric shapes and can use (for example) 2 features to encode more than 2 concepts, by making angular patterns.
+    `See Also <https://www.astralcodexten.com/p/god-help-us-lets-try-to-understand>`_
+
+`Orca: Progressive Learning from Complex Explanation Traces of GPT-4 <https://arxiv.org/abs/2306.02707>`_
+    Train a small student model, ORCA, on GPT4 output that can reproduce GTP-4 level performance on a subset of tasks with much overhead.  An interesting technique.
+
+
+Applications
+------------
+`BirdNet <https://github.com/kahst/BirdNET-Analyzer>`_
+    Model for identifying birds based off of audio noises.  
