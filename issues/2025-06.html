@@ -1,0 +1,552 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>The CoVar Zeitgeist: June, 2025 &#8212; The CoVar Zeitgeist 1.0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic_mod.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytorch_theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <script src="../_static/js/petite-vue.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="The CoVar Zeitgeist: May, 2025" href="2025-05.html" />
+    <link rel="prev" title="The CoVar Zeitgeist: July, 2025" href="2025-07.html" /> 
+  </head><body data-dark_mode_code_blocks="true">
+
+<div id="top_nav">
+    
+        <div id="notification_banner" data-banner-hiding="temporary" v-show="!permanentlyHidden">
+    <p v-if="visible" id="content">The <a href="https://covar.com/">CoVar</a> Zeitgeist is a curated synopsis of the latest advances in AI/ML research specifically tailored to our mission.</p>
+    <a class="close" href="#" @click.prevent="toggleVisible()">[[ visible ? '&#x25B2; HIDE' : '&#x25BC; SHOW BANNER' ]]</a>
+</div>
+
+<script>
+(function() {
+    const topNav = document.querySelector('#top_nav')
+    const notificationContent = document.querySelector('#notification_banner p#content').innerText
+    const localStorageKey = 'readNotification'
+    const bannerHiding = document.querySelector('#notification_banner').dataset['bannerHiding']
+    const cssVariableName = '--navbarHeight'
+    const rootElement = document.documentElement
+
+    /*************************************************************************/
+    // Local storage for remembering if the user has read the notification.
+
+    function checkAlreadyRead() {
+        return localStorage.getItem(localStorageKey) == notificationContent
+    }
+
+    function setRead() {
+        localStorage.setItem(localStorageKey, notificationContent)
+    }
+
+    function clearRead() {
+        localStorage.removeItem(localStorageKey)
+    }
+
+    const alreadyRead = checkAlreadyRead()
+    const permanentlyHidden = alreadyRead && bannerHiding == 'permanent'
+
+    /*************************************************************************/
+    // Updating a CSS variable so other elements adjust to the nav bar height.
+
+    function updateNavbarHeight() {
+        // Only update it if the delta is significant. Otherwise it causes
+        // unnecessary browser repaints.
+        const documentStyles = getComputedStyle(rootElement)
+        // We store the value in REM, so need to convert to pixels
+        const currentValue = parseFloat(
+            documentStyles.getPropertyValue(cssVariableName)
+        ) * parseFloat(documentStyles.fontSize)
+
+        const newValue = topNav.clientHeight
+
+        if (newValue - 5 > currentValue) {
+            console.log(`Updating ${cssVariableName} - overlapping`)
+            rootElement.style.setProperty(
+                cssVariableName, newValue + "px"
+            );
+        } else if (currentValue - newValue >= 30) {
+            console.log(`Updating ${cssVariableName} - gap too large`)
+            rootElement.style.setProperty(
+                cssVariableName, newValue + "px"
+            );
+        }
+    }
+
+    /*************************************************************************/
+    // After loading the page, and resizing the window, recalculate the nav bar
+    // height.
+
+    if (!permanentlyHidden) {
+        // This height is approximately correct when there's a banner, so
+        // shouldn't require any page reflow:
+        rootElement.style.setProperty(
+            '--navbarHeight', "5.5rem"
+        );
+
+        document.addEventListener("DOMContentLoaded", function() {
+            updateNavbarHeight()
+        });
+
+        var interval = undefined
+
+        window.addEventListener('resize', () => {
+            if (interval) {
+                clearTimeout(interval)
+            }
+            interval = setTimeout(() => {
+                console.log("Finished resizing")
+                updateNavbarHeight()
+            }, 100)
+        })
+    }
+
+    /*************************************************************************/
+
+    PetiteVue.createApp({
+        visible: !alreadyRead,
+        permanentlyHidden: permanentlyHidden,
+        bannerHiding: bannerHiding,
+        $delimiters: ['[[', ']]'],
+        toggleVisible() {
+            this.visible = !this.visible
+
+            if (this.visible) {
+                clearRead()
+            } else {
+                setRead()
+            }
+
+            if (!this.visible && bannerHiding == 'permanent') {
+                this.permanentlyHidden = true
+            }
+
+            // Run this after Vue has had time to update the DOM:
+            setTimeout(
+                updateNavbarHeight,
+                0
+            )
+        }
+    }).mount('#notification_banner')
+})()
+</script>
+    
+
+    <nav>
+        
+            
+        
+
+        <p id="toggle_sidebar">
+            <a href="#" title="Toggle sidebar">|||</a>
+        </p>
+        <h1><a href="../index.html" title="Go to homepage"><img src="../_static/covar_logo_white.png"/></a></h1>
+
+        <a id="mode_toggle" href="#" @click.prevent="handleClick" :title="mode">
+    <template v-if="mode == 'light'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_light"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><circle cx="39.311" cy="39.524" r="15.734" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.212,4.901c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901l-0,9.614c-0,2.705 2.196,4.901 4.9,4.901c2.705,0 4.901,-2.196 4.901,-4.901l0,-9.614Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M67.48,18.073c1.913,-1.912 1.913,-5.018 0,-6.931c-1.912,-1.912 -5.018,-1.912 -6.931,0l-6.798,6.799c-1.912,1.912 -1.912,5.018 0,6.931c1.913,1.912 5.018,1.912 6.931,-0l6.798,-6.799Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.728,61.108c1.912,-1.913 1.912,-5.018 -0,-6.931c-1.913,-1.913 -5.019,-1.913 -6.931,-0l-6.799,6.798c-1.912,1.913 -1.912,5.019 0,6.931c1.913,1.913 5.019,1.913 6.931,0l6.799,-6.798Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.682,54.177c-1.913,-1.913 -5.018,-1.913 -6.931,-0c-1.912,1.913 -1.912,5.018 0,6.931l6.798,6.798c1.913,1.913 5.019,1.913 6.931,0c1.913,-1.912 1.913,-5.018 0,-6.931l-6.798,-6.798Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M4.901,34.623c-2.705,0 -4.901,2.196 -4.901,4.901c0,2.705 2.196,4.901 4.901,4.901l9.614,0c2.705,0 4.901,-2.196 4.901,-4.901c0,-2.705 -2.196,-4.901 -4.901,-4.901l-9.614,0Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.212,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901l-0,9.614c-0,2.705 2.196,4.901 4.9,4.901c2.705,-0 4.901,-2.196 4.901,-4.901l0,-9.614Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M18.929,11.142c-1.912,-1.912 -5.018,-1.912 -6.931,0c-1.912,1.913 -1.912,5.019 0,6.931l6.799,6.799c1.912,1.912 5.018,1.912 6.931,-0c1.912,-1.913 1.912,-5.019 -0,-6.931l-6.799,-6.799Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.108,34.623c-2.705,0 -4.901,2.196 -4.901,4.901c-0,2.705 2.196,4.901 4.901,4.901l9.614,0c2.705,0 4.901,-2.196 4.901,-4.901c-0,-2.705 -2.196,-4.901 -4.901,-4.901l-9.614,0Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+
+    <template v-if="mode == 'dark'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_dark"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><circle cx="39.311" cy="39.524" r="15.734" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.212,14.515c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,0 -4.901,2.196 -4.901,4.901c0,2.705 2.197,4.901 4.901,4.901c2.705,0 4.901,-2.196 4.901,-4.901Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M60.662,24.892c1.902,-1.902 1.902,-4.99 0,-6.892l-0.04,-0.039c-1.901,-1.902 -4.989,-1.902 -6.891,-0c-1.901,1.901 -1.901,4.989 0,6.891l0.04,0.04c1.902,1.901 4.989,1.901 6.891,-0Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.732,61.103c1.91,-1.91 1.91,-5.011 0,-6.921l-0.009,-0.01c-1.91,-1.91 -5.012,-1.91 -6.921,-0c-1.91,1.91 -1.91,5.011 -0,6.921l0.01,0.01c1.909,1.91 5.011,1.91 6.92,-0Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.672,54.167c-1.907,-1.907 -5.004,-1.907 -6.911,0l-0.02,0.02c-1.907,1.907 -1.907,5.004 0,6.911c1.907,1.907 5.004,1.907 6.911,-0l0.02,-0.02c1.907,-1.907 1.907,-5.004 0,-6.911Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M14.52,34.623c-2.702,0 -4.896,2.194 -4.896,4.896l0,0.01c0,2.702 2.194,4.896 4.896,4.896c2.702,0 4.896,-2.194 4.896,-4.896l-0,-0.01c-0,-2.702 -2.194,-4.896 -4.896,-4.896Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.212,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.901,2.196 -4.901,4.901c0,2.704 2.197,4.9 4.901,4.9c2.705,0 4.901,-2.196 4.901,-4.9Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M25.73,17.943c-1.911,-1.911 -5.015,-1.911 -6.926,0l-0.005,0.005c-1.911,1.911 -1.911,5.015 0,6.926c1.911,1.911 5.015,1.911 6.926,0l0.005,-0.005c1.911,-1.911 1.911,-5.014 -0,-6.926Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.098,34.623c-2.699,0 -4.891,2.192 -4.891,4.892l-0,0.019c-0,2.699 2.192,4.891 4.891,4.891c2.7,0 4.892,-2.192 4.892,-4.891l0,-0.019c0,-2.7 -2.192,-4.892 -4.892,-4.892Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+
+    <template v-if="mode == 'darkest'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_darkest"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><path d="M39.315,23.791c8.684,-0 15.734,7.05 15.734,15.733c0,8.684 -7.05,15.734 -15.734,15.734c-8.683,0 -15.733,-7.05 -15.733,-15.734c-0,-8.683 7.05,-15.733 15.733,-15.733Zm0,4.737c6.069,0 10.997,4.927 10.997,10.996c-0,6.069 -4.928,10.996 -10.997,10.996c-6.068,0 -10.996,-4.927 -10.996,-10.996c0,-6.069 4.928,-10.996 10.996,-10.996Z" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.216,14.515c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,0 -4.9,2.196 -4.9,4.901c-0,2.705 2.196,4.901 4.9,4.901c2.705,0 4.901,-2.196 4.901,-4.901Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M60.666,24.892c1.902,-1.902 1.902,-4.99 0,-6.892l-0.04,-0.039c-1.901,-1.902 -4.989,-1.902 -6.891,-0c-1.901,1.901 -1.901,4.989 0,6.891l0.04,0.04c1.902,1.901 4.99,1.901 6.891,-0Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.737,61.103c1.909,-1.91 1.909,-5.011 -0,-6.921l-0.01,-0.01c-1.91,-1.91 -5.011,-1.91 -6.921,-0c-1.91,1.91 -1.91,5.011 -0,6.921l0.01,0.01c1.91,1.91 5.011,1.91 6.921,-0Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.676,54.167c-1.907,-1.907 -5.004,-1.907 -6.911,0l-0.02,0.02c-1.907,1.907 -1.907,5.004 0,6.911c1.907,1.907 5.004,1.907 6.911,-0l0.02,-0.02c1.907,-1.907 1.907,-5.004 0,-6.911Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M14.524,34.623c-2.702,0 -4.896,2.194 -4.896,4.896l0,0.01c0,2.702 2.194,4.896 4.896,4.896c2.702,0 4.896,-2.194 4.896,-4.896l0,-0.01c0,-2.702 -2.194,-4.896 -4.896,-4.896Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.216,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901c-0,2.704 2.196,4.9 4.9,4.9c2.705,0 4.901,-2.196 4.901,-4.9Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M25.734,17.943c-1.911,-1.911 -5.015,-1.911 -6.926,0l-0.005,0.005c-1.911,1.911 -1.911,5.015 0,6.926c1.911,1.911 5.015,1.911 6.926,0l0.005,-0.005c1.911,-1.911 1.911,-5.014 0,-6.926Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.103,34.623c-2.7,0 -4.892,2.192 -4.892,4.892l-0,0.019c-0,2.699 2.192,4.891 4.892,4.891c2.699,0 4.891,-2.192 4.891,-4.891l0,-0.019c0,-2.7 -2.192,-4.892 -4.891,-4.892Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+</a>
+
+<script>
+(function() {
+    const LOCAL_STORAGE_KEY = 'piccoloThemeMode'
+
+    var initialMode = localStorage.getItem(LOCAL_STORAGE_KEY)
+
+    if (initialMode) {
+        // Make sure the value in local storage is valid
+        if (['light', 'dark', 'darkest'].indexOf(initialMode) == -1) {
+            initialMode = 'light'
+            localStorage.setItem(LOCAL_STORAGE_KEY, initialMode)
+        }
+    } else {
+        // Check if the client prefers dark mode
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            initialMode = 'dark'
+        } else {
+            initialMode = 'light'
+        }
+        localStorage.setItem(LOCAL_STORAGE_KEY, initialMode)
+    }
+
+    document.documentElement.dataset.mode = initialMode
+
+    PetiteVue.createApp({
+        'mode': initialMode,
+        handleClick() {
+            let currentMode = this.mode
+
+            if (currentMode == 'light') {
+                this.mode = 'dark'
+            } else if (currentMode == 'dark') {
+                this.mode = 'darkest'
+            } else if (currentMode == 'darkest') {
+                this.mode = 'light'
+            }
+
+            document.documentElement.dataset.mode = this.mode
+            localStorage.setItem(LOCAL_STORAGE_KEY, this.mode)
+
+            console.log(this.mode)
+        }
+    }).mount('#mode_toggle')
+})()
+</script>
+            <p class="mobile_search_link">
+                <a href="../search.html" title="Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 64" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2">
+                        <path d="M14.873 40.009c-2.315-3.943-3.642-8.532-3.642-13.429C11.231 11.91 23.141 0 37.811 0s26.58 11.91 26.58 26.58-11.91 26.58-26.58 26.58a26.44 26.44 0 0 1-14.277-4.161L9.739 62.794a3.12 3.12 0 0 1-4.413 0L.913 58.382c-1.217-1.218-1.217-3.196 0-4.413l13.96-13.96zM37.811 8.054c10.225 0 18.526 8.301 18.526 18.526s-8.301 18.526-18.526 18.526-18.526-8.301-18.526-18.526S27.586 8.054 37.811 8.054z" fill="#fff" />
+                    </svg>
+                </a>
+            </p>
+        
+
+        <div class="searchbox_wrapper">
+            
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+    </nav>
+</div>
+
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><p class="caption" role="heading"><span class="caption-text">2026</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="2026-02.html">2026-02</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2026-01.html">2026-01</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">2025</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="2025-12.html">2025-12</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2025-11.html">2025-11</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2025-10.html">2025-10</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2025-09.html">2025-09</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2025-08.html">2025-08</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2025-07.html">2025-07</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2025-06</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2025-05.html">2025-05</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2025-04.html">2025-04</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2025-03.html">2025-03</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2025-02.html">2025-02</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2025-01.html">2025-01</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">2024</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="2024-12.html">2024-12</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2024-11.html">2024-11</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2024-10.html">2024-10</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2024-09.html">2024-09</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2024-08.html">2024-08</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2024-07.html">2024-07</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2024-06.html">2024-06</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2024-05.html">2024-05</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2024-04.html">2024-04</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2024-03.html">2024-03</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2024-02.html">2024-02</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2024-01.html">2024-01</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">2023</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="2023-12.html">2023-12</a></li>
+</ul>
+
+        </div>
+      </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="the-covar-zeitgeist-june-2025">
+<h1>The CoVar Zeitgeist: June, 2025<a class="headerlink" href="#the-covar-zeitgeist-june-2025" title="Permalink to this heading">¶</a></h1>
+<p>A larger than normal amount of interesting papers published this month.  Featuring:</p>
+<ul class="simple">
+<li><p>A method to combine Depth Anything with any sort of absolute depth information to string together absolute depth estimates from monocular imagery.</p></li>
+<li><p>A paper from MIT that applies a thermodynamic-based approach to understanding LLM/neural net training.  Finds a river-valley loss landscape and uses that to guide training methods.</p></li>
+<li><p>Current approaches towards AI agency focus are focused on empowerment - the ability of an AI agent to influence the future - but Google Deepmind thinks plasticity - the agent’s ability to learn from its past - is equally important.  Unfortunately, there’s a tension between these concepts.</p></li>
+<li><p>Applying RL techniques to LLMs only updates a sparse subset of weights.  RLing only on this sparse subset of weights achieves 99% of RLing the entire model.</p></li>
+<li><p>Proposes Bonsai, a tree-based alternative to UMAP and t-SNE for representing high-dimensional data.  Developed for omics data, it generalizes at least to football data.</p></li>
+<li><p>Google Brain develops a novel RL method using video prediction methods to train models to play Atari.</p></li>
+</ul>
+<p><a class="reference external" href="https://covar.com/">CoVar</a></p>
+<section id="featured">
+<h2>Featured<a class="headerlink" href="#featured" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://arxiv.org/pdf/2505.10565">Depth Anything with Any Prior</a></dt><dd><p>Develops a method to combine relative depth maps with depth priors that provide absolute depth information to produce accurate absolute depth estimates from monocular imagery.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2505.10559">Neural Thermodynamic Laws for Large Language Model Training</a></dt><dd><p>Introduces a novel framework, neural thermodynamic laws, which characterize the LLM training process using analogies to thermodynamics.  Posits the existence of a river-valley loss landscape, and uses this to recommend training processes.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2505.10361">Plasticity as the Mirror of Empowerment</a></dt><dd><p>Agents have been measured by empowerment: their ability to influence the future.  Equally important, this paper argues, is their plasticity: their ability to be influenced by the past.  This paper identifies and proves that there is a tension between these two foundational abilities.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2505.11711">Reinforcement Learning Finetunes Small Subnetworks in Large Language Models</a></dt><dd><p>A deep dive into the behavior of various reinforcement learning algorithms on improving LLM performance.  Finds that each method of RL updates only a sparse subset of weights; moreover, training only on that sparse subset of weights achieves the same effect as training on the entire network.</p>
+</dd>
+<dt><a class="reference external" href="https://www.biorxiv.org/content/10.1101/2025.05.08.652944v1.full.pdf">Bonsai: Tree representations for distortion-free visualization and exploratory analysis of single-cell omics data</a></dt><dd><p>Proposes Bonsai, an alternative method to t-SNE and UMAP for representing latent structure in high dimensional data.  Bonsai reconstructs a tree relating the high-dimensional data and, among a number of other improvements, is wholly deterministic.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/1903.00374">Model Based Reinforcement Learning for Atari</a></dt><dd><p>Trains a policy by acting in a world model which performs next-frame and reward prediction. The world model is trained with interaction data from the policy acting in the real environment.</p>
+</dd>
+</dl>
+</section>
+<section id="llms">
+<h2>LLMs<a class="headerlink" href="#llms" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://arxiv.org/pdf/2505.09662">Large Language Models Are More Persuasive Than Incentivized Human Persuaders</a></dt><dd><p>Conducts a study to test the effectiveness of AI as a persuader compared to a human.  Found that AI persuaders are more persuasive even when humans are incentivized by economic means.</p>
+</dd>
+<dt><a class="reference external" href="https://transformer-circuits.pub/2025/attribution-graphs/methods.html#global-weights">Circuit Tracing: Revealing Computational Graphs in Language Models</a></dt><dd><p>Proposes novel algorithms for divining the underlying behavior of LLMs, and develops a large number of analytic tools to enable such analysis.  In a companion paper, applies these methods to Claude 3.5</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2505.12540">Harnessing the Universal Geometry of Embeddings</a></dt><dd><p>Posits that text embeddings have a universal structure - following the Platonic Representation Hypothesis - and shows this by constructing a method to map text embeddings from different models onto each other without leveraging any paired data or any encoders.  Demonstrates robustness to out-of-distribution data.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2505.20254">Position: Mechanistic Interpretability Should Prioritize Feature Consistency in SAEs</a></dt><dd><p>Sparse Autoencoders are potentially useful for finding interpretable features in neural networks, but can be unreliable in that they can produce sets of features.  This paper proposes a metric which prioritizes consistency, and argues that applications following this metric learn consistent semantic features corresponding to ground truth.</p>
+</dd>
+</dl>
+</section>
+<section id="llm-reasoning">
+<h2>LLM Reasoning<a class="headerlink" href="#llm-reasoning" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://arxiv.org/pdf/2505.09614">Language Agents Mirror Human Causal Reasoning Biases. How Can We Help Them Think Like Scientists?</a></dt><dd><p>Deploys the Blicket test to assess patterns of though in LLMs.  Finds that LLMs perform well at discovering disjunctive causal relationships, but fail to discover conjunctive ones.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2505.20278">The Coverage Principle: A Framework for Understanding Compositional Generalization</a></dt><dd><p>Notes that LLMs that rely solely on pattern matching struggle to generalize in compositional tasks, and leverages this observation to provide a coverage-based metric for LLM reasoning performance.  Finds that there are three ways in which neural networks can generalize: structure-based, property-based, and shared-operator.</p>
+</dd>
+<dt><a class="reference external" href="https://www.arxiv.org/pdf/2505.15134">The Unreasonable Effectiveness of Entropy Minimization in LLM Reasoning</a></dt><dd><p>If a model is capable, it is likely to be correct when it is confident.  This paper uses entropy minimization to leverage this insight and force the model to place more probability in its already-confident responses.</p>
+</dd>
+</dl>
+</section>
+<section id="novel-architectures">
+<h2>Novel Architectures<a class="headerlink" href="#novel-architectures" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://arxiv.org/pdf/2504.20734">UniversalRAG: Retrieval-Augmented Generation over Multiple Corpora with Diverse Modalities and Granularities</a></dt><dd><p>Existing RAG methods are either limited to a textual corpus, or include only a small number of other modalities.  This paper proposes UniversalRAG, a RAG framework which can contain a wide variety of diverse object types.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2505.05522">Continuous Thought Machines</a></dt><dd><p>Sakana AI proposes a novel neural net architecture, the Continuous Thought Machine (CTM), which is motivated by the desire to make the function of neural nets more similar to how human brains process information.  CTMs do so by incorporating neuron-level temporal processing and enabling capture of temporal dynamics while remaining computationally tractable.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2411.19146">PUZZLE: DISTILLATION-BASED NAS FOR INFERENCE-OPTIMIZED LLMS</a></dt><dd><p>Presents Puzzle, a framework for LLM inference which operates by utilizing neural architecture search at a large scale.  Given a parent model, Puzzle searches a wide number of architectures to find the optimal one for a given task.</p>
+</dd>
+</dl>
+</section>
+<section id="object-detection">
+<h2>Object Detection<a class="headerlink" href="#object-detection" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://arxiv.org/pdf/2505.02829">LISAT: Language-Instructed Segmentation Assistant for Satellite Imagery</a></dt><dd><p>Current phrase grounding segmentation capabilities for remote sensing are limited for complex queries.  This paper proposes a new method, LISAT, which can handle queries such as “Locate the truck that is elongated and light-colored, diagonally positioned on the road, contrasting with the surrounding darker pavement.”</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2505.10565">Depth Anything with Any Prior</a></dt><dd><p>Develops a method to combine relative depth maps with depth priors that provide absolute depth information to produce accurate absolute depth estimates from monocular imagery.</p>
+</dd>
+</dl>
+</section>
+<section id="autonomy-safety">
+<h2>Autonomy &amp; Safety<a class="headerlink" href="#autonomy-safety" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://arxiv.org/pdf/2505.05410">Reasoning Models Don’t Always Say What They Think</a></dt><dd><p>Anthropic’s Alignment Science Team investigates whether chain of thought accurately represents a model’s reasoning process.  Finds equivocal results: Chain of Though often but not always represents the model’s reasoning process, allowing for nontrivial but insufficient monitoring.</p>
+</dd>
+<dt><a class="reference external" href="https://www.microsoft.com/en-us/research/blog/predicting-and-explaining-ai-model-performance-a-new-approach-to-evaluation/?msockid=15a11d4c6a9565bf107b0e6b6e956bd2">Predicting and explaining AI model performance: A new approach to evaluation</a></dt><dd><p>Microsoft proposes an evaluation framework for AI models which involves decomposing benchmarks into tasks, grading AI performance according to these tasks to create and ability profile, and using this ability profile to predict future performance.  This benchmarking system generalizes more reliably and provides more fine-grained information than current methods.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2505.10361">Plasticity as the Mirror of Empowerment</a></dt><dd><p>Agents have been measured by empowerment: their ability to influence the future.  Equally important, this paper argues, is their plasticity: their ability to be influenced by the past.  This paper identifies and proves that there is a tension between these two foundational abilities.</p>
+</dd>
+</dl>
+</section>
+<section id="reinforcement-learning">
+<h2>Reinforcement Learning<a class="headerlink" href="#reinforcement-learning" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://arxiv.org/pdf/2505.03335">Absolute Zero: Reinforced Self-play Reasoning with Zero Data</a></dt><dd><p>Is it possible to develop a reinforcement learning with verifiable rewards (RLVR) training paradigm that uses zero real examples?  To answer, this paper proposes AbsoluteZero, a paradigm where a model (1) proposes tasks to optimize its own learning and (2) learns how to solve these tasks.  Despite using zero real data, models post-trained in this paradigm achieve SOTA results.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2505.11711">Reinforcement Learning Finetunes Small Subnetworks in Large Language Models</a></dt><dd><p>A deep dive into the behavior of various reinforcement learning algorithms on improving LLM performance.  Finds that each method of RL updates only a sparse subset of weights; moreover, training only on that sparse subset of weights achieves the same effect as training on the entire network.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2505.14946">Reinforcement Learning from User Feedback</a></dt><dd><p>Proposes Reinforcement Learning from User Feedback (RLUF), a generalization of RLHF which aligns LLMs with user preferences by finetuning them with user feedback.</p>
+</dd>
+<dt><a class="reference external" href="https://github.com/ruixin31/Rethink_RLVR/blob/main/paper/rethink-rlvr.pdf?utm_source=substack&amp;utm_medium=email">Spurious Rewards: Rethinking Training Signals in RLVR</a></dt><dd><p>Demonstrates that Reinforcement Learning with Verifiable Rewards (RLVR) induces a performance increase in Qwen models even if there are spurious rewards. No other models exhibit this behavior, and the paper speculates it occurs because the RLVR drives code reasoning.</p>
+</dd>
+<dt><a class="reference external" href="https://papers.nips.cc/paper_files/paper/2018/file/2de5d16682c3c35007e4e92982f1a2ba-Paper.pdf">Recurrent World Models Facilitate Policy Evolution</a></dt><dd><p>Learns RNN world model from random policy rollouts which can predict the next embedded state given current embedded state and action. Policy trains on embedded observation and world model RNN hidden state.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/1903.00374">Model Based Reinforcement Learning for Atari</a></dt><dd><p>Trains a policy by acting in a world model which performs next-frame and reward prediction. The world model is trained with interaction data from the policy acting in the real environment.</p>
+</dd>
+</dl>
+</section>
+<section id="training-continuous-learning">
+<h2>Training &amp; Continuous Learning<a class="headerlink" href="#training-continuous-learning" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://arxiv.org/pdf/2505.13300">DD-Ranking: Rethinking the Evaluation of Dataset Distillation</a></dt><dd><p>Dataset distillation methods which involve distilling a large training set into a smaller, synthetic, one for computational purposes have seen advances recently.  However, this paper argues that improved metrics are due to improved techniques applied elsewhere in the training pipeline rather than due to image quality, and proposes a new, fairer, evaluation metric.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2505.10559">Neural Thermodynamic Laws for Large Language Model Training</a></dt><dd><p>Introduces a novel framework, neural thermodynamic laws, which characterize the LLM training process using analogies to thermodynamics.  Posits the existence of a river-valley loss landscape, and uses this to recommend training processes.</p>
+</dd>
+</dl>
+</section>
+<section id="statistics">
+<h2>Statistics<a class="headerlink" href="#statistics" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://arxiv.org/pdf/2504.21199">Generate-then-Verify: Reconstructing Data from Limited Published Statistics</a></dt><dd><p>Differential privacy is a data privacy method which allows public datasets to be released without allowing for recovery of full information about any individual in the dataset.  This paper devises an attack method for differentially private datasets which allows for the guaranteed recovery of some subset of individuals in the dataset.</p>
+</dd>
+<dt><a class="reference external" href="https://www.biorxiv.org/content/10.1101/2025.05.08.652944v1.full.pdf">Bonsai: Tree representations for distortion-free visualization and exploratory analysis of single-cell omics data</a></dt><dd><p>Proposes Bonsai, an alternative method to t-SNE and UMAP for representing latent structure in high dimensional data.  Bonsai reconstructs a tree relating the high-dimensional data and, among a number of other improvements, is wholly deterministic.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2505.15557">Modular Jump Gaussian Processes</a></dt><dd><p>Jump Gaussian Processes (JGPs) were developed to model processes with sudden, nonstationary, jumps but are difficult to apply in practice.  This paper proposes a new paradigm for JGPs which enables easier inference.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2505.22034">Random irregular histograms</a></dt><dd><p>The Norwegian Defence Research Establishment publishes a novel Bayesian approach to irregular histograms which excels at mode detection for larger sample sizes.</p>
+</dd>
+</dl>
+</section>
+<section id="applications">
+<h2>Applications<a class="headerlink" href="#applications" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://www.thelancet.com/journals/landig/article/PIIS2589-7500(25)00042-1/fulltext?utm_source=www.therundown.ai&amp;utm_medium=newsletter&amp;utm_campaign=ai-predicts-cancer-outcomes-from-selfies&amp;_bhlid=3add86b0a9fc4a659c9f13d7d653b3fb4f452535">FaceAge, a deep learning system to estimate biological age from face photographs to improve prognostication: a model development and validation study</a></dt><dd><p>Trains and evaluates a neural network for predicting age based on facial imagery.  In doing so, finds that the model is statistically and clinically useful for evaluating and predicting cancer outcomes.</p>
+</dd>
+<dt><a class="reference external" href="https://deepmind.google/discover/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/?utm_source=substack&amp;utm_medium=email">AlphaEvolve: A Gemini-powered coding agent for designing advanced algorithms</a></dt><dd><p>Google Deepmind releases AlphaEvolve, an agent combining together multiple models to design novel coding algorithms.  Algorithms designed by AlphaEvolve are currently deployed at Google, saving Google 0.7% of its world-wide computing resources.  AlphaEvolve has also designed other novel algorithms such as finding a more optimal method for multiplying complex-valued 4x4 matrices, improving upon a result that had not admitted innovations for 60 years.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2505.13446">Unlocking Non-Invasive Brain-to-Text</a></dt><dd><p>Proposes a novel, SOTA, paradigm for non-invasive brain-to-text (B2T) prediction leveraging (1) contextual LLM rescoring, (2) a predictive fill-in strategy, and (3) selective dataset pooling.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2505.13400">ROBIN: A MULTI-AGENT SYSTEM FOR AUTOMATING SCIENTIFIC DISCOVERY</a></dt><dd><p>Introduces Robin, a multi-agent system combining literature search and data analysis agents to automate parts of the scientific pipeline.  Robin generated hypotheses, experiment designs, data analytics, and figures for this paper in the process of discovering a novel therapeutic candidate.</p>
+</dd>
+<dt><a class="reference external" href="https://www.intology.ai/blog/zochi-acl?utm_source=www.therundown.ai&amp;utm_medium=newsletter&amp;utm_campaign=new-york-times-amazon-ink-ai-deal&amp;_bhlid=319df94b6ce0fa571b8c95741cd3306018d1fb1d">Zochi Publishes A* Paper</a></dt><dd><p>Intology has designed an AI agent, Zochi, which has written a paper that has passed peer review at the main proceedings of ACL.  The paper written was based off of earlier work submitted to ICLR and took Zochi only days to complete with minimal input from human researchers.</p>
+</dd>
+</dl>
+</section>
+<section id="new-models">
+<h2>New Models<a class="headerlink" href="#new-models" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://arxiv.org/pdf/2504.21318">Phi-4-reasoning Technical Report</a></dt><dd><p>Microsoft releases Phi-4-Reasoning, a 14B parameter model that achieves comparable performance to larger models such as DeepSeek-R1-Distill-Llama-70B.</p>
+</dd>
+<dt><a class="reference external" href="https://github.com/XiaomiMiMo/MiMo?utm_source=www.therundown.ai&amp;utm_medium=newsletter&amp;utm_campaign=visa-mastercard-give-ai-credit-cards&amp;_bhlid=32a247816b9f1ff22ef01a2889f4f02eb4d5ccca">Xiaomi MiMo</a></dt><dd><p>Xiaomi releases a suite of models, MiMo-7B, that, while small, outperform larger 32B parameter models on mathematical and coding tasks.  Available on Huggingface under an Apache 2.0 license.</p>
+</dd>
+<dt><a class="reference external" href="https://github.com/deepseek-ai/DeepSeek-Prover-V2/tree/main?tab=readme-ov-file">DeepSeek-Prover-V2: Advancing Formal Mathematical Reasoning via Reinforcement Learning for Subgoal Decomposition</a></dt><dd><p>DeepSeek releases DeepSeek-Prover-V2, an open source model optimized for formal theorem proving.  Available on Huggingface.</p>
+</dd>
+<dt><a class="reference external" href="https://assets.amazon.science/f6/c5/79dceb124593b3356566ad6723af/the-amazon-nova-premier-technical-report-and-model-card.pdf">Amazon Nova Premier: Technical Report and Model Card</a></dt><dd><p>Amazon releases Nova Premier, the most recent and best performing model in the Nova suite of models.  It features a one-million token long context window.  Available in Amazon Bedrock.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2505.00949">Llama-Nemotron: Efficient Reasoning Models</a></dt><dd><p>Nvidia releases the Llama-Nemotron suite of models, a group of reasoning models which achieve SOTA performance at lower computational cost.  Available on Huggingface under a bespoke license.</p>
+</dd>
+<dt><a class="reference external" href="https://declare-lab.github.io/nora">NORA: A Small Open-Sourced Generalist Vision Language Action Model for Embodied Tasks</a></dt><dd><p>A small, 3B parameter, visual-language-action model from Declare Lab and Lambda Labs.  Available under an MIT license.</p>
+</dd>
+<dt><a class="reference external" href="https://www.futurehouse.org/research-announcements/launching-futurehouse-platform-ai-agents?utm_source=www.therundown.ai&amp;utm_medium=newsletter&amp;utm_campaign=futurehouse-s-superhuman-science-agents&amp;_bhlid=b2b50af9254da4cf97bbad70959795fa728b14f6">FutureHouse Platform: Superintelligent AI Agents for Scientific Discovery</a></dt><dd><p>FutureHouse releases a suite of four models built from the ground up which can aid scientists in a variety of scientific tasks.  Available via API.</p>
+</dd>
+<dt><a class="reference external" href="https://allenai.org/olmo/release-notes#olmo-2-1b">OLMo 2 1B</a></dt><dd><p>Allen AI releases Olmo 2 1B, the smallest member of the Olmo 2 family, which has been trained to SOTA performance.  Available on Huggingface under an Apache 2.0 license.</p>
+</dd>
+<dt><a class="reference external" href="https://mistral.ai/news/mistral-medium-3?utm_source=www.therundown.ai&amp;utm_medium=newsletter&amp;utm_campaign=openai-goes-global-with-stargate&amp;_bhlid=d848ca86adec8ddc81539e752414611e11b9bd67">Medium is the new large.</a></dt><dd><p>Mistral releases Mistral Medium 3, which balances SOTA performance with lower cost for coding and multimodal understanding.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2505.04519">PANGU ULTRA MOE: HOW TO TRAIN YOUR BIG MOE ON ASCEND NPUS</a></dt><dd><p>Huawei releases Pangu Ultra MoE, a version of Pangu Ultra incorporating Mixture of Experts architecture and which is trained on ascend neural processing units.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2505.07608">MiMo: Unlocking the Reasoning Potential of Language Model – From Pretraining to Posttraining</a></dt><dd><p>Xiaomi presents MiMo-7B, a small reasoning model which has been trained to SOTA performance on reasoning tasks, exceeding the performance of o1-mini.  Code available on github under an Apache-2.0 license.</p>
+</dd>
+<dt><a class="reference external" href="https://storage.googleapis.com/public-technical-paper/INTELLECT_2_Technical_Report.pdf">INTELLECT-2: A Reasoning Model Trained Through Globally Decentralized Reinforcement Learning</a></dt><dd><p>Prime Intellect releases Intellect 2, the first 32B parameter model trained via globally distributed reinforcement learning.  Available on Huggingface under an Apache 2.0 license.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2505.09388">Qwen3 Technical Report</a></dt><dd><p>Qwen releases the technical report for Qwen3: it presents, summarizes, and describes all models in the Qwen3 family in one location.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2505.09498">Flash-VL 2B: Optimizing Vision-Language Model Performance for Ultra-Low Latency and High Throughput</a></dt><dd><p>Meituan releases Flash-VL 2B, a novel architecture for video language models optimized for low latency and high throughput while maintaining accuracy.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2505.10557">MathCoder-VL: Bridging Vision and Code for Enhanced Multimodal Mathematical Reasoning</a></dt><dd><p>A new vision language model which aims to solve mathematical problems presented in image data by first converting the image data to coding problems before applying reasoning capabilities.</p>
+</dd>
+<dt><a class="reference external" href="https://windsurf.com/blog/windsurf-wave-9-swe-1?utm_source=www.therundown.ai&amp;utm_medium=newsletter&amp;utm_campaign=windsurf-s-surprise-ai-model-reveal&amp;_bhlid=16b6931c57b9f439e363ac5b646b35507f347312">SWE-1: Our First Frontier Models</a></dt><dd><p>Windsurf releases SWE-1, a suite of models which aims to reproduce the entirety of the work that software engineers perform, not simply writing code.  Available via API.</p>
+</dd>
+<dt><a class="reference external" href="https://ii.inc/web/blog/post/ii-medical?utm_source=www.therundown.ai&amp;utm_medium=newsletter&amp;utm_campaign=windsurf-s-surprise-ai-model-reveal&amp;_bhlid=f635b2ff886730e92a48ba3026430cf1290c201b">II-Medical</a></dt><dd><p>Intelligent Internet releases II-Medical, a new model finetuned to medical applications which can outperform much larger frontier models on clinical reasoning tasks.  Available on Huggingface.</p>
+</dd>
+<dt><a class="reference external" href="https://openai.com/index/introducing-codex/?utm_source=www.therundown.ai&amp;utm_medium=newsletter&amp;utm_campaign=openai-s-software-development-agent&amp;_bhlid=70948b7df698f84516af5492f33dc92be6076207">Introducing Codex</a></dt><dd><p>OpenAI releases Codex, a software engineering agent based off of o3 which specializes in coding tasks.  Available via API.</p>
+</dd>
+<dt><a class="reference external" href="https://blog.google/technology/ai/io-2025-keynote/?utm_source=www.therundown.ai&amp;utm_medium=newsletter&amp;utm_campaign=google-s-massive-ai-showcase-at-i-o&amp;_bhlid=058371ce1a2067abe472244e2a001d5395c80620#google-beam">Google I/O 2025: From research to reality</a></dt><dd><p>Google releases a plethora of products at Google I/O 2025, including the Veo3 video generation model, Imagen4 for image creation, Lyrai2 for music creation, updates to search, and updates to Gemini 2.5.</p>
+</dd>
+<dt><a class="reference external" href="https://mistral.ai/news/devstral">Devstral</a></dt><dd><p>Mistral releases Devstral, an agentic LLM model finetuned for software engineering tasks.  Achieves SOTA performance.  Available under an Apache 2.0 license.</p>
+</dd>
+<dt><a class="reference external" href="https://bagel-ai.org/">Emerging Properties in Unified Multimodal Pretraining</a></dt><dd><p>Bytedance releases BAGEL, a SOTA open-source model which unifies understanding and generation.  Available under an Apache 2.0 license.</p>
+</dd>
+<dt><a class="reference external" href="https://mistral.ai/solutions/document-ai?utm_source=www.therundown.ai&amp;utm_medium=newsletter&amp;utm_campaign=anthropic-drops-world-s-best-coding-model&amp;_bhlid=fd9cf960385612797200957227d8d62d4a48c061">Document AI, powered by the world’s best OCR.</a></dt><dd><p>Mistral releases an AI agent for document processing, capable of parsing text, handwriting, tables, and images from any document at 2000 pages per second.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2505.20155">PANGU LIGHT: WEIGHT RE-INITIALIZATION FOR PRUNING AND ACCELERATING LLM’S</a></dt><dd><p>Huawei releases Pangu Light, a framework for enhancing computational performance of LLMs without suffering a large performance drop.  Demonstrates success on Qwen3-32B.</p>
+</dd>
+<dt><a class="reference external" href="https://www.anthropic.com/news/claude-4?utm_source=www.therundown.ai&amp;utm_medium=newsletter&amp;utm_campaign=anthropic-drops-world-s-best-coding-model&amp;_bhlid=65f87eb90298eebb2dd5f5e4ea6f5a40357e3ea7">Introducing Claude 4</a></dt><dd><p>Anthropic releases Claude Opus 4 and Claude Sonnet 4, the newest releases in the Claude family.  Claude Opus 4 is a dedicated coding agent which is the “best in the world”, while Claude Sonnet 4 is an upgrade to Claude Sonnet 3.7.  Available via API.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2505.21411">PANGU PRO MOE: MIXTURE OF GROUPED EXPERTS FOR EFFICIENT SPARSITY</a></dt><dd><p>Huawei releases Pangu Pro MOE, a mixture of grouped experts model which more effectively balances the load between the experts than classical MOE models.</p>
+</dd>
+<dt><a class="reference external" href="https://huggingface.co/deepseek-ai/DeepSeek-R1-0528?utm_source=www.therundown.ai&amp;utm_medium=newsletter&amp;utm_campaign=anthropic-ceo-issues-stark-employment-warning&amp;_bhlid=2c5916a830aafe6877f20bf05a98babaad97b1ec">DeepSeek-R1-0528</a></dt><dd><p>DeepSeek releases a minor update to R1.  Available on Huggingface under an mit license.</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+    
+        <div id="show_right_sidebar">
+            <p><a class="toggle_right_sidebar" href="#"><span class="icon">&lt;</span><span>Page contents</span></a></p>
+        </div>
+
+        <div id="right_sidebar">
+            <p><a class="toggle_right_sidebar" href="#"><span class="icon">&gt;</span><span>Page contents:</span></a></p>
+            <div class="page_toc">
+                <ul>
+<li><a class="reference internal" href="#">The CoVar Zeitgeist: June, 2025</a><ul>
+<li><a class="reference internal" href="#featured">Featured</a></li>
+<li><a class="reference internal" href="#llms">LLMs</a></li>
+<li><a class="reference internal" href="#llm-reasoning">LLM Reasoning</a></li>
+<li><a class="reference internal" href="#novel-architectures">Novel Architectures</a></li>
+<li><a class="reference internal" href="#object-detection">Object Detection</a></li>
+<li><a class="reference internal" href="#autonomy-safety">Autonomy &amp; Safety</a></li>
+<li><a class="reference internal" href="#reinforcement-learning">Reinforcement Learning</a></li>
+<li><a class="reference internal" href="#training-continuous-learning">Training &amp; Continuous Learning</a></li>
+<li><a class="reference internal" href="#statistics">Statistics</a></li>
+<li><a class="reference internal" href="#applications">Applications</a></li>
+<li><a class="reference internal" href="#new-models">New Models</a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+        </div>
+    
+
+      <div class="clearer"></div>
+    </div>
+    <div class="button_nav_wrapper">
+        <div class="button_nav">
+            <div class="left">
+                
+                <a href="2025-07.html">
+                    <span class="icon">&lt;</span><span>The CoVar Zeitgeist: July, 2025</span></a>
+                
+            </div>
+
+            <div class="right">
+                
+                    <a href="2025-05.html"><span>The CoVar Zeitgeist: May, 2025</span><span class="icon">&gt;</span></a>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2025, CoVar, LLC.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+
+<p id="theme_credit"></p>
+  </body>
+</html>

@@ -1,0 +1,162 @@
+The CoVar Zeitgeist: February, 2026
+===================================
+This issue of the CoVar Zeitgeist predominantly features research from January, 2026.  The Vice President of Cohere AI published an interesting position paper this month which argues that further increasing scaling is unlikely to lead to corresponding increases in performance.  This is still a controversial opinion, but consistent with other recent research, including innovations in LLM architecture from frontier labs seeking performance gains instead of simply increasing scaling and measure of how useful datasets are for fixed compute budgets.  Non-LLM research saw an increasing number of papers in 3D scene reconstruction and a focus on how best to utilize autonomous agents. We feature six papers:
+
+* A new language model architecture from DeepSeek which incorporates n-grams to store common multi-token phrases, alleviating the need to recompute such phrases and increasing the effective depth of the network.
+* A novel information theoretic measure, epiplexity, which measures the amount of information an agent with a set compute budget can learn from a dataset.
+* A trilogy of papers arguing that transformers naturally speak the language of Bayesian inference due to the nature of the attention training mechanism under cross-entropy loss.
+* A novel reinforcement learning method which incorporates a swam-based exploration layer to increase performance.
+* A new setup for scientific discovery agents which optimizes reward function design and optimizes to said reward function simultaneously.
+* An extension of Principal Components Analysis (PCA) to a multi-context setting.
+
+`Check out the CoVar website! <https://covar.com/>`_
+
+Featured
+--------
+`Conditional Memory via Scalable Lookup: A New Axis of Sparsity for Large Language Models <https://github.com/deepseek-ai/Engram/blob/main/Engram_paper.pdf>`_
+    Argues that the transformer architecture forces LLMs to derive known concepts such as multi-token phrases through brute force computation rather than retrieval, wasting valuable layers of the network. To remedy this, proposes a module named Engram which modernizes N-gram structures and greatly outperforms existing Mixture-of-Expert architectures.
+
+`From Entropy to Epiplexity: Rethinking Information for Computationally Bounded Intelligence <https://arxiv.org/pdf/2601.03220>`_
+    Creates Epiplexity, an information-theoretic measure for measuring predictable structured information an observer with a set amount of compute can learn from a dataset.  Argues that epiplexity, rather than entropy, is the relevant measure for selecting datasets to train frontier models.
+
+`Attention Is Bayesian Inference <https://medium.com/@vishalmisra/attention-is-bayesian-inference-578c25db4501>`_
+    A trilogy of papers arguing that Bayesian Inference is the natural language of transformers.  Shows that the hierarchical attention mechanism, when trained with stochastic gradient descent and cross-entropy loss, forces a two-stage updating process similar to the EM algorithm.  This causes Bayesian submanifolds to form, enabling transformers to naturally perform Bayesian inference.
+
+`ARISE: Adaptive Reinforcement Integrated with Swarm Exploration <https://arxiv.org/pdf/2601.00693>`_
+    Proposes a novel reinforcement learning algorithm, ARISE, which utilizes a particle swarm-based method to better explore the action space for an agent.  Agents trained with ARISE better withstand reward fluctuations, demonstrating better potential for generalization.
+
+`Accelerating Scientific Discovery with Autonomous Goal-evolving Agents <https://arxiv.org/pdf/2512.21782>`_
+    Proposes an AI agent for scientific discovery with two loops; the outer loop optimizes reward function design, while the inner loop optimizes to that reward function.  Mitigates reward hacking and improves performance.
+
+`Multi-context principal component analysis <https://arxiv.org/pdf/2601.15239>`_
+    Extends PCA to a multiple context setting with multi-context PCA (MCPCA).  MCPCA decomposes multi-context data into axes which explain subsets of contexts and finds factors explaining the data which elude existing methods.
+
+LLMs
+----
+`Attention Is Bayesian Inference <https://medium.com/@vishalmisra/attention-is-bayesian-inference-578c25db4501>`_
+    A trilogy of papers arguing that Bayesian Inference is the natural language of transformers.  Shows that the hierarchical attention mechanism, when trained with stochastic gradient descent and cross-entropy loss, forces a two-stage updating process similar to the EM algorithm.  This causes Bayesian submanifolds to form, enabling transformers to naturally perform Bayesian inference.
+
+`Deep sequence models tend to memorize geometrically; it is unclear why. <https://arxiv.org/pdf/2510.26745>`_
+    Finds that deep sequence models tend to learn geometric relationships which encode global relations even when not trained to do so.  Argues that this arises from training that minimizes cross-entropy loss.
+
+`Logical Phase Transitions: Understanding Collapse in LLM Logical Reasoning <https://arxiv.org/pdf/2601.02902>`_
+    Finds that LLM reasoning breaks down in phase transitions, where the logical complexity of the underlying problem passes a threshold.  Develops a curriculum training method to alleviate this issue.
+
+`Reasoning Models Generate Societies of Thought <https://arxiv.org/pdf/2601.10825>`_
+    Finds that advanced reasoning in frontier models is driven by simulation of complex multi-agent interactions such as dialogues rather than simply through extended compute.
+
+`PERSONA SWITCH: Mixing Distinct Perspectives in Decoding Time <https://arxiv.org/pdf/2601.15708>`_
+    Proposes a method for switching between personas in AI prompting, where the persona most likely to succeed based on raw logits is chosen.
+
+`Using Cognitive Models to Reveal Value Trade-Offs in Language Models <https://arxiv.org/pdf/2506.20666>`_
+    Employs cognitive models to frontier LLMs to describe how they value trade-offs in communication.  Focusses on agreeableness vs truthfulness and how different training regimes impact this trade off.
+
+Novel Architectures
+-------------------
+`mHC: Manifold-Constrained Hyper-Connections <https://arxiv.org/pdf/2512.24880>`_
+    Proposes a novel architecture for hyper-connected neural networks, where the residual stream is widened and connection complexity increased.  The proposed architecture can be thought of as taking the convex combination of an expanded residual stream at each layer, and is both higher performing and numerically stable.
+
+`Conditional Memory via Scalable Lookup: A New Axis of Sparsity for Large Language Models <https://github.com/deepseek-ai/Engram/blob/main/Engram_paper.pdf>`_
+    Argues that the transformer architecture forces LLMs to derive known concepts such as multi-token phrases through brute force computation rather than retrieval, wasting valuable layers of the network. To remedy this, proposes a module named Engram which modernizes N-gram structures and greatly outperforms existing Mixture-of-Expert architectures.
+
+Object Detection
+----------------
+`Joint Semantic and Rendering Enhancements in 3D Gaussian Modeling with Anisotropic Local Encoding <https://arxiv.org/pdf/2601.02339>`_
+    Proposes a novel method for 3D Gaussian Splatting where the semantic learning and rendering components mutually reinforce each other to increase each other's performance.
+
+`SA-ResGS: Self-Augmented Residual 3D Gaussian Splatting for Next Best View Selection <https://arxiv.org/pdf/2601.03024>`_
+    Develops a method for uncertainty quantification in Gaussian Splatting which can identify which Gaussians are most uncertain and guide next-view selection to reduce said uncertainty.
+
+`GeoDiff-SAR: A Geometric Prior Guided Diffusion Model for SAR Image Generation <https://arxiv.org/pdf/2601.03499>`_
+    Develops a diffusion model-based SAR renderer which creates images of objects in SAR from CAD models of the objects.
+
+`Out-of-Distribution Radar Detection with Complex VAEs: Theory, Whitening, and ANMF Fusion <https://arxiv.org/pdf/2601.18677>`_
+    Develops a complex-valued Variational Autoencoder (CVAE) for out-of-distribution object detection which operates directly on complex radar signals.  Develops a fusion algorithm to combine the CVAE with a classical detection method.
+
+`A New Dataset and Framework for Robust Road Surface Classification via Camera–IMU Fusion <https://arxiv.org/pdf/2601.20847>`_
+    Builds a bespoke deep learning architecture to unify sensor imagery and IMU data to enable road surface classification.  Shows that the IMU data serves primarily as a robustness enhancer during surface transitions.
+
+Testing & Evaluation
+--------------------
+`Introducing Bloom: an open source tool for automated behavioral evaluations <https://alignment.anthropic.com/2025/bloom-auto-evals/>`_
+    A testing and evaluation pipeline run by AI agents, Bloom.  Users specify behaviors they want tested and provide a few uses cases to Bloom, which automatically generates thousands of novel test cases and evaluates the system-under-test for the desired capabilities.
+
+Autonomy
+--------
+`Accelerating Scientific Discovery with Autonomous Goal-evolving Agents <https://arxiv.org/pdf/2512.21782>`_
+    Proposes an AI agent for scientific discovery with two loops; the outer loop optimizes reward function design, while the inner loop optimizes to that reward function.  Mitigates reward hacking and improves performance.
+
+`Everything is Context: Agentic File System Abstraction for Context Engineering <https://arxiv.org/pdf/2512.05470>`_
+    How to manage context for an AI agent? This paper proposes storing every bit of relevant information as a file which the agent has access to in the Persistent Context Repository.  This repository stores short and long term information.
+
+`Betting on Equilibrium: Monitoring Strategic Behavior in Multi-Agent Systems <https://arxiv.org/pdf/2601.05427>`_
+    Develops a test supermartingale to determine whether a multi-agent system is staying in or diverging from equilibrium.
+
+`Unrolling the Codex agent loop <https://openai.com/index/unrolling-the-codex-agent-loop/>`_
+    A deep dive from OpenAI on the agent loop defining its Codex CLI.
+
+`Inference-Time Scaling of Verification: Self-Evolving Deep Research Agents via Test-Time Rubric-Guided Verification <https://arxiv.org/pdf/2601.15808>`_
+    Improves Deep Research agents by having them repeatedly self-verify and provide constructive criticism.  This leverages the observation that it is easier to verify than it is to generate.  
+
+Cyber
+-----
+`ACDZero: Graph-Embedding-Based Tree Search for Mastering Automated Cyber Defense <https://arxiv.org/pdf/2601.02196>`_
+    Frames automated cyber defense (ACD) as a Markov Decision problem and trains a defense policy using Monte Carlo Tree Search and graph neural networks.
+
+Reinforcement Learning
+----------------------
+`ARISE: Adaptive Reinforcement Integrated with Swarm Exploration <https://arxiv.org/pdf/2601.00693>`_
+    Proposes a novel reinforcement learning algorithm, ARISE, which utilizes a particle swarm-based method to better explore the action space for an agent.  Agents trained with ARISE better withstand reward fluctuations, demonstrating better potential for generalization.
+
+`Stagewise Reinforcement Learning and the Geometry of the Regret Landscape <https://arxiv.org/pdf/2601.07524>`_
+    Characterizes the sort of agents that arise from deep reinforcement learning using Bayesian learning.  Finds that the resulting agents can prefer complex policies with low regret while a Bayesian learner might prefer simpler policies with higher regret.
+
+`GDPO: Group reward-Decoupled Normalization Policy Optimization for Multi-reward RL Optimization <https://arxiv.org/pdf/2601.05242>`_
+    Finds that Group Relative Policy Optimization (GRPO) in setting with multiple rewards and finds that they can collapse in common settings.  Proposes Group reward-Decoupled Normalization Policy Optimization (GDPO) which avoids these issues.
+
+Statistics
+----------
+`Bayesian Inverse Games with High-Dimensional Multi-Modal Observations <https://arxiv.org/pdf/2601.00696>`_
+    How can an agent learn the motivations of another, unknown, agent?  This paper proposes a Bayesian inverse game framework to solve this problem in the context of driverless vehicles.
+
+`From Entropy to Epiplexity: Rethinking Information for Computationally Bounded Intelligence <https://arxiv.org/pdf/2601.03220>`_
+    Creates Epiplexity, an information-theoretic measure for measuring predictable structured information an observer with a set amount of compute can learn from a dataset.  Argues that epiplexity, rather than entropy, is the relevant measure for selecting datasets to train frontier models.
+
+`Uncertainty Analysis of Experimental Parameters for Reducing Warpage in Injection Molding <https://arxiv.org/pdf/2601.05396>`_
+    Constructs Bayesian surrogates to approximate the thermodynamic interactions in injection molding.  Using this, creates level sets of optimal points in decision space.
+
+`Multi-context principal component analysis <https://arxiv.org/pdf/2601.15239>`_
+    Extends PCA to a multiple context setting with multi-context PCA (MCPCA).  MCPCA decomposes multi-context data into axes which explain subsets of contexts and finds factors explaining the data which elude existing methods.
+
+`On the origin of neural scaling laws: from random graphs to natural language <https://arxiv.org/pdf/2601.10684>`_
+    Investigates scaling in neural networks.  Finds that scaling laws arise even when the data has no natural power law structure and that scaling laws can be more naturally expressed with one-dimensional equations instead of two dimensional.
+
+`Calibration without Ground Truth <https://arxiv.org/pdf/2601.19862>`_
+    Formalizes a theoretical framework for describing how a weaker but better calibrated model can act as a teacher for a stronger model.  Finds that performance gains are possible when the two models are not mutually calibrated
+
+Position Papers
+---------------
+`On the Slow Death of Scaling <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5877662>`_
+    A position paper arguing that, unless there are innovations in neural network architecture, further scaling of training compute is unlikely to lead to corresponding increases in downstream performance.  Suggests several avenues of possible innovation.
+
+Applications
+------------
+`How AI Impacts Skill Formation <https://arxiv.org/pdf/2601.20245>`_
+    Conducts randomized trials to study the effect of AI adoption on junior employees exploring a novel code repository.  Finds that AI use can impair skill acquisition without delivering performance increases.
+
+CoVar Seminar
+-------------
+`Scaling Open-Vocabulary Object Detection <https://arxiv.org/pdf/2306.09683>`_
+    Introduces OWL-ViT v2, a scaling framework that utilizes self-training to generate a gigantic object detection dataset, achieving SOTA efficiency and performance in open-vocabulary object detection.
+
+`YOLO-World: Real-Time Open-Vocabulary Object Detection <https://arxiv.org/pdf/2401.17270>`_
+    A breakthrough approach that equips the YOLO architecture with vision-language embeddings to enable high-speed, real-time object detection for any category without retraining.
+
+`Frontier vision AI, engineered for scale (Moondream V3) <https://moondream.ai/>`_
+    An introduction for Moondream V3 which broadens the capabilities of its predecessor (semantic querying, multi-point detection, segmentation) while exceeding the performance of common LLM's like Claude and OpenAI on a diverse set of tasks, both in accuracy and timing.
+
+`The Universal Weight Subspace Hypothesis <https://arxiv.org/pdf/2512.05117>`_
+    A paper claiming that deep neural networks trained across diverse tasks exhibit remarkably similar low-dimensional parametric subspaces.
+
+`Learning Robust Rewards with Adversarial Inverse Reinforcement Learning <https://arxiv.org/pdf/1710.11248>`_
+    Given a set of expert trajectories, recovers a policy-invariant reward function which transfers well to environments with different dynamics.  Has superior performance to classic Inverse RL approaches when learning in new environments.

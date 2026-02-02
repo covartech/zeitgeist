@@ -1,0 +1,529 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>The CoVar Zeitgeist: October, 2024 &#8212; The CoVar Zeitgeist 1.0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic_mod.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytorch_theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <script src="../_static/js/petite-vue.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="The CoVar Zeitgeist: September, 2024" href="2024-09.html" />
+    <link rel="prev" title="The CoVar Zeitgeist: November, 2024" href="2024-11.html" /> 
+  </head><body data-dark_mode_code_blocks="true">
+
+<div id="top_nav">
+    
+        <div id="notification_banner" data-banner-hiding="temporary" v-show="!permanentlyHidden">
+    <p v-if="visible" id="content">The <a href="https://covar.com/">CoVar</a> Zeitgeist is a curated synopsis of the latest advances in AI/ML research specifically tailored to our mission.</p>
+    <a class="close" href="#" @click.prevent="toggleVisible()">[[ visible ? '&#x25B2; HIDE' : '&#x25BC; SHOW BANNER' ]]</a>
+</div>
+
+<script>
+(function() {
+    const topNav = document.querySelector('#top_nav')
+    const notificationContent = document.querySelector('#notification_banner p#content').innerText
+    const localStorageKey = 'readNotification'
+    const bannerHiding = document.querySelector('#notification_banner').dataset['bannerHiding']
+    const cssVariableName = '--navbarHeight'
+    const rootElement = document.documentElement
+
+    /*************************************************************************/
+    // Local storage for remembering if the user has read the notification.
+
+    function checkAlreadyRead() {
+        return localStorage.getItem(localStorageKey) == notificationContent
+    }
+
+    function setRead() {
+        localStorage.setItem(localStorageKey, notificationContent)
+    }
+
+    function clearRead() {
+        localStorage.removeItem(localStorageKey)
+    }
+
+    const alreadyRead = checkAlreadyRead()
+    const permanentlyHidden = alreadyRead && bannerHiding == 'permanent'
+
+    /*************************************************************************/
+    // Updating a CSS variable so other elements adjust to the nav bar height.
+
+    function updateNavbarHeight() {
+        // Only update it if the delta is significant. Otherwise it causes
+        // unnecessary browser repaints.
+        const documentStyles = getComputedStyle(rootElement)
+        // We store the value in REM, so need to convert to pixels
+        const currentValue = parseFloat(
+            documentStyles.getPropertyValue(cssVariableName)
+        ) * parseFloat(documentStyles.fontSize)
+
+        const newValue = topNav.clientHeight
+
+        if (newValue - 5 > currentValue) {
+            console.log(`Updating ${cssVariableName} - overlapping`)
+            rootElement.style.setProperty(
+                cssVariableName, newValue + "px"
+            );
+        } else if (currentValue - newValue >= 30) {
+            console.log(`Updating ${cssVariableName} - gap too large`)
+            rootElement.style.setProperty(
+                cssVariableName, newValue + "px"
+            );
+        }
+    }
+
+    /*************************************************************************/
+    // After loading the page, and resizing the window, recalculate the nav bar
+    // height.
+
+    if (!permanentlyHidden) {
+        // This height is approximately correct when there's a banner, so
+        // shouldn't require any page reflow:
+        rootElement.style.setProperty(
+            '--navbarHeight', "5.5rem"
+        );
+
+        document.addEventListener("DOMContentLoaded", function() {
+            updateNavbarHeight()
+        });
+
+        var interval = undefined
+
+        window.addEventListener('resize', () => {
+            if (interval) {
+                clearTimeout(interval)
+            }
+            interval = setTimeout(() => {
+                console.log("Finished resizing")
+                updateNavbarHeight()
+            }, 100)
+        })
+    }
+
+    /*************************************************************************/
+
+    PetiteVue.createApp({
+        visible: !alreadyRead,
+        permanentlyHidden: permanentlyHidden,
+        bannerHiding: bannerHiding,
+        $delimiters: ['[[', ']]'],
+        toggleVisible() {
+            this.visible = !this.visible
+
+            if (this.visible) {
+                clearRead()
+            } else {
+                setRead()
+            }
+
+            if (!this.visible && bannerHiding == 'permanent') {
+                this.permanentlyHidden = true
+            }
+
+            // Run this after Vue has had time to update the DOM:
+            setTimeout(
+                updateNavbarHeight,
+                0
+            )
+        }
+    }).mount('#notification_banner')
+})()
+</script>
+    
+
+    <nav>
+        
+            
+        
+
+        <p id="toggle_sidebar">
+            <a href="#" title="Toggle sidebar">|||</a>
+        </p>
+        <h1><a href="../index.html" title="Go to homepage"><img src="../_static/covar_logo_white.png"/></a></h1>
+
+        <a id="mode_toggle" href="#" @click.prevent="handleClick" :title="mode">
+    <template v-if="mode == 'light'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_light"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><circle cx="39.311" cy="39.524" r="15.734" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.212,4.901c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901l-0,9.614c-0,2.705 2.196,4.901 4.9,4.901c2.705,0 4.901,-2.196 4.901,-4.901l0,-9.614Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M67.48,18.073c1.913,-1.912 1.913,-5.018 0,-6.931c-1.912,-1.912 -5.018,-1.912 -6.931,0l-6.798,6.799c-1.912,1.912 -1.912,5.018 0,6.931c1.913,1.912 5.018,1.912 6.931,-0l6.798,-6.799Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.728,61.108c1.912,-1.913 1.912,-5.018 -0,-6.931c-1.913,-1.913 -5.019,-1.913 -6.931,-0l-6.799,6.798c-1.912,1.913 -1.912,5.019 0,6.931c1.913,1.913 5.019,1.913 6.931,0l6.799,-6.798Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.682,54.177c-1.913,-1.913 -5.018,-1.913 -6.931,-0c-1.912,1.913 -1.912,5.018 0,6.931l6.798,6.798c1.913,1.913 5.019,1.913 6.931,0c1.913,-1.912 1.913,-5.018 0,-6.931l-6.798,-6.798Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M4.901,34.623c-2.705,0 -4.901,2.196 -4.901,4.901c0,2.705 2.196,4.901 4.901,4.901l9.614,0c2.705,0 4.901,-2.196 4.901,-4.901c0,-2.705 -2.196,-4.901 -4.901,-4.901l-9.614,0Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.212,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901l-0,9.614c-0,2.705 2.196,4.901 4.9,4.901c2.705,-0 4.901,-2.196 4.901,-4.901l0,-9.614Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M18.929,11.142c-1.912,-1.912 -5.018,-1.912 -6.931,0c-1.912,1.913 -1.912,5.019 0,6.931l6.799,6.799c1.912,1.912 5.018,1.912 6.931,-0c1.912,-1.913 1.912,-5.019 -0,-6.931l-6.799,-6.799Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.108,34.623c-2.705,0 -4.901,2.196 -4.901,4.901c-0,2.705 2.196,4.901 4.901,4.901l9.614,0c2.705,0 4.901,-2.196 4.901,-4.901c-0,-2.705 -2.196,-4.901 -4.901,-4.901l-9.614,0Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+
+    <template v-if="mode == 'dark'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_dark"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><circle cx="39.311" cy="39.524" r="15.734" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.212,14.515c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,0 -4.901,2.196 -4.901,4.901c0,2.705 2.197,4.901 4.901,4.901c2.705,0 4.901,-2.196 4.901,-4.901Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M60.662,24.892c1.902,-1.902 1.902,-4.99 0,-6.892l-0.04,-0.039c-1.901,-1.902 -4.989,-1.902 -6.891,-0c-1.901,1.901 -1.901,4.989 0,6.891l0.04,0.04c1.902,1.901 4.989,1.901 6.891,-0Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.732,61.103c1.91,-1.91 1.91,-5.011 0,-6.921l-0.009,-0.01c-1.91,-1.91 -5.012,-1.91 -6.921,-0c-1.91,1.91 -1.91,5.011 -0,6.921l0.01,0.01c1.909,1.91 5.011,1.91 6.92,-0Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.672,54.167c-1.907,-1.907 -5.004,-1.907 -6.911,0l-0.02,0.02c-1.907,1.907 -1.907,5.004 0,6.911c1.907,1.907 5.004,1.907 6.911,-0l0.02,-0.02c1.907,-1.907 1.907,-5.004 0,-6.911Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M14.52,34.623c-2.702,0 -4.896,2.194 -4.896,4.896l0,0.01c0,2.702 2.194,4.896 4.896,4.896c2.702,0 4.896,-2.194 4.896,-4.896l-0,-0.01c-0,-2.702 -2.194,-4.896 -4.896,-4.896Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.212,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.901,2.196 -4.901,4.901c0,2.704 2.197,4.9 4.901,4.9c2.705,0 4.901,-2.196 4.901,-4.9Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M25.73,17.943c-1.911,-1.911 -5.015,-1.911 -6.926,0l-0.005,0.005c-1.911,1.911 -1.911,5.015 0,6.926c1.911,1.911 5.015,1.911 6.926,0l0.005,-0.005c1.911,-1.911 1.911,-5.014 -0,-6.926Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.098,34.623c-2.699,0 -4.891,2.192 -4.891,4.892l-0,0.019c-0,2.699 2.192,4.891 4.891,4.891c2.7,0 4.892,-2.192 4.892,-4.891l0,-0.019c0,-2.7 -2.192,-4.892 -4.892,-4.892Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+
+    <template v-if="mode == 'darkest'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_darkest"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><path d="M39.315,23.791c8.684,-0 15.734,7.05 15.734,15.733c0,8.684 -7.05,15.734 -15.734,15.734c-8.683,0 -15.733,-7.05 -15.733,-15.734c-0,-8.683 7.05,-15.733 15.733,-15.733Zm0,4.737c6.069,0 10.997,4.927 10.997,10.996c-0,6.069 -4.928,10.996 -10.997,10.996c-6.068,0 -10.996,-4.927 -10.996,-10.996c0,-6.069 4.928,-10.996 10.996,-10.996Z" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.216,14.515c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,0 -4.9,2.196 -4.9,4.901c-0,2.705 2.196,4.901 4.9,4.901c2.705,0 4.901,-2.196 4.901,-4.901Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M60.666,24.892c1.902,-1.902 1.902,-4.99 0,-6.892l-0.04,-0.039c-1.901,-1.902 -4.989,-1.902 -6.891,-0c-1.901,1.901 -1.901,4.989 0,6.891l0.04,0.04c1.902,1.901 4.99,1.901 6.891,-0Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.737,61.103c1.909,-1.91 1.909,-5.011 -0,-6.921l-0.01,-0.01c-1.91,-1.91 -5.011,-1.91 -6.921,-0c-1.91,1.91 -1.91,5.011 -0,6.921l0.01,0.01c1.91,1.91 5.011,1.91 6.921,-0Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.676,54.167c-1.907,-1.907 -5.004,-1.907 -6.911,0l-0.02,0.02c-1.907,1.907 -1.907,5.004 0,6.911c1.907,1.907 5.004,1.907 6.911,-0l0.02,-0.02c1.907,-1.907 1.907,-5.004 0,-6.911Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M14.524,34.623c-2.702,0 -4.896,2.194 -4.896,4.896l0,0.01c0,2.702 2.194,4.896 4.896,4.896c2.702,0 4.896,-2.194 4.896,-4.896l0,-0.01c0,-2.702 -2.194,-4.896 -4.896,-4.896Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.216,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901c-0,2.704 2.196,4.9 4.9,4.9c2.705,0 4.901,-2.196 4.901,-4.9Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M25.734,17.943c-1.911,-1.911 -5.015,-1.911 -6.926,0l-0.005,0.005c-1.911,1.911 -1.911,5.015 0,6.926c1.911,1.911 5.015,1.911 6.926,0l0.005,-0.005c1.911,-1.911 1.911,-5.014 0,-6.926Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.103,34.623c-2.7,0 -4.892,2.192 -4.892,4.892l-0,0.019c-0,2.699 2.192,4.891 4.892,4.891c2.699,0 4.891,-2.192 4.891,-4.891l0,-0.019c0,-2.7 -2.192,-4.892 -4.891,-4.892Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+</a>
+
+<script>
+(function() {
+    const LOCAL_STORAGE_KEY = 'piccoloThemeMode'
+
+    var initialMode = localStorage.getItem(LOCAL_STORAGE_KEY)
+
+    if (initialMode) {
+        // Make sure the value in local storage is valid
+        if (['light', 'dark', 'darkest'].indexOf(initialMode) == -1) {
+            initialMode = 'light'
+            localStorage.setItem(LOCAL_STORAGE_KEY, initialMode)
+        }
+    } else {
+        // Check if the client prefers dark mode
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            initialMode = 'dark'
+        } else {
+            initialMode = 'light'
+        }
+        localStorage.setItem(LOCAL_STORAGE_KEY, initialMode)
+    }
+
+    document.documentElement.dataset.mode = initialMode
+
+    PetiteVue.createApp({
+        'mode': initialMode,
+        handleClick() {
+            let currentMode = this.mode
+
+            if (currentMode == 'light') {
+                this.mode = 'dark'
+            } else if (currentMode == 'dark') {
+                this.mode = 'darkest'
+            } else if (currentMode == 'darkest') {
+                this.mode = 'light'
+            }
+
+            document.documentElement.dataset.mode = this.mode
+            localStorage.setItem(LOCAL_STORAGE_KEY, this.mode)
+
+            console.log(this.mode)
+        }
+    }).mount('#mode_toggle')
+})()
+</script>
+            <p class="mobile_search_link">
+                <a href="../search.html" title="Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 64" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2">
+                        <path d="M14.873 40.009c-2.315-3.943-3.642-8.532-3.642-13.429C11.231 11.91 23.141 0 37.811 0s26.58 11.91 26.58 26.58-11.91 26.58-26.58 26.58a26.44 26.44 0 0 1-14.277-4.161L9.739 62.794a3.12 3.12 0 0 1-4.413 0L.913 58.382c-1.217-1.218-1.217-3.196 0-4.413l13.96-13.96zM37.811 8.054c10.225 0 18.526 8.301 18.526 18.526s-8.301 18.526-18.526 18.526-18.526-8.301-18.526-18.526S27.586 8.054 37.811 8.054z" fill="#fff" />
+                    </svg>
+                </a>
+            </p>
+        
+
+        <div class="searchbox_wrapper">
+            
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+    </nav>
+</div>
+
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><p class="caption" role="heading"><span class="caption-text">2026</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="2026-02.html">2026-02</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2026-01.html">2026-01</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">2025</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="2025-12.html">2025-12</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2025-11.html">2025-11</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2025-10.html">2025-10</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2025-09.html">2025-09</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2025-08.html">2025-08</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2025-07.html">2025-07</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2025-06.html">2025-06</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2025-05.html">2025-05</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2025-04.html">2025-04</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2025-03.html">2025-03</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2025-02.html">2025-02</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2025-01.html">2025-01</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">2024</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="2024-12.html">2024-12</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2024-11.html">2024-11</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2024-10</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2024-09.html">2024-09</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2024-08.html">2024-08</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2024-07.html">2024-07</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2024-06.html">2024-06</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2024-05.html">2024-05</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2024-04.html">2024-04</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2024-03.html">2024-03</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2024-02.html">2024-02</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2024-01.html">2024-01</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">2023</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="2023-12.html">2023-12</a></li>
+</ul>
+
+        </div>
+      </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="the-covar-zeitgeist-october-2024">
+<h1>The CoVar Zeitgeist: October, 2024<a class="headerlink" href="#the-covar-zeitgeist-october-2024" title="Permalink to this heading">¶</a></h1>
+<p>There is a lot of interesting research this month. Featuring:</p>
+<ul class="simple">
+<li><p>An effort from Deepmind to improve VLM performance by teaching them to think more hierarchically, like humans do.</p></li>
+<li><p>Review paper for foundation models.  Worth a look if you have questions about them.</p></li>
+<li><p>An incredibly clever way to generate an infinite amount of LLM jailbreaks.  Works better on “smarter” LLMs.</p></li>
+<li><p>An investigation into different optimizers.</p></li>
+<li><p>A finding that RLHF dosen’t cause LLMs to improve performance, but instead to produce answers that seem to human evaluators like they should be correct.</p></li>
+<li><p>Fine-tuning a big model doesn’t cause it to forget old stuff - the new stuff just has a different scale and with some calibration you can fuse the new and old knowledge together.</p></li>
+</ul>
+<p><a class="reference external" href="https://covar.com/">CoVar</a></p>
+<section id="featured">
+<h2>Featured<a class="headerlink" href="#featured" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://arxiv.org/pdf/2409.06509">Aligning Machine and Human Visual Representations across Abstraction Levels</a></dt><dd><p>Humans think hierarchically, from coarse to fine-grained concepts.  This paper improves VLMs by using a teacher model to mimic this intuition and impart it to a student model.  Performance results look impressive.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2409.04267">An overview of domain-specific foundation model: key technologies, applications and challenges</a></dt><dd><p>This is a good review paper for foundation models which serves as a nice summary of the field.</p>
+</dd>
+<dt><a class="reference external" href="https://haizelabs.com/static/Endless-Jailbreaks-Bijection.pdf">ENDLESS JAILBREAKS WITH BIJECTION LEARNING</a></dt><dd><p>This paper develops an adversarial attack for LLMs which is both novel and clever.  It functions by teaching the LLM a bijection language (a = 58, b = b, c = c, d= 23, etc) before communicating with the LLM in that language.  Apparently, this avoids all current safeguards.  Works better on “smarter” (bigger) LLMs which are better able to learn the bijection language.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2409.11321">SOAP: IMPROVING AND STABILIZING SHAMPOO USING ADAM</a></dt><dd><p>Researchers investigate different methods for optimization, and find that Shampoo is equivalent to Adafactor in the eigenbasis of a preconditioner.  They propose a new optimizer named SOAP that’s equivalent to running Adam in a rotated space and which, when tested, outperforms its competitors.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2409.12822">LANGUAGE MODELS LEARN TO MISLEAD HUMANS VIA RLHF</a></dt><dd><p>Reinforcement learning from human feedback (RLHF) is a popular method for improving LLMs.  This paper examines RLHF in detail and finds that, instead of causing LLMs to generate more correct answers, the RLHF process can instead cause LLMs to prioritize answers which seem correct to human evaluators.  This may have something to do with the LLM tendency to speak confident gibberish.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2409.16223">Fine-Tuning is Fine, if Calibrated</a></dt><dd><p>Finds that fine-tuning a large foundation model does NOT result in the model forgetting old knowledge in order to learn new knowledge.  Instead, the new modified logits are simply on a different scale than the original logits.  A simple calibration allows you to recapture the original model performance while retaining increased performance on the fine-tuned task.</p>
+</dd>
+</dl>
+</section>
+<section id="llms">
+<h2>LLMs<a class="headerlink" href="#llms" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://arxiv.org/pdf/2408.15204">Can Unconfident LLM Annotations Be Used for Confident Conclusions?</a></dt><dd><p>Investigates how to best use LLMs to label a large amount of unlabelled data such that the labels are useful.  Implements an algorithm using active inference to strategically select the best datapoints to have humans label to increase the LLMs performance.  This may be a useful tool to integrate into our labelling pipeline.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2409.01666">In Defense of RAG in the Era of Long-Context Language Models</a></dt><dd><p>A new method for long-context RAGs which allows them to perform on par with, if not better than, the best LLMs.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2409.12917">Training Language Models to Self-Correct via Reinforcement Learning</a></dt><dd><p>Introduces a reinforcement learning approach called SCoRe which forces LLMs to iteratively improve upon the content they generate in order to write better algorithms.  Some cool examples and demonstrations.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2409.12822">LANGUAGE MODELS LEARN TO MISLEAD HUMANS VIA RLHF</a></dt><dd><p>Reinforcement learning from human feedback (RLHF) is a popular method for improving LLMs.  This paper examines RLHF in detail and finds that, instead of causing LLMs to generate more correct answers, the RLHF process can instead cause LLMs to prioritize answers which seem correct to human evaluators.  This may have something to do with the LLM tendency to speak confident gibberish.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2409.12183">TO COT OR NOT TO COT? CHAIN-OF-THOUGHT HELPS MAINLY ON MATH AND SYMBOLIC REASONING</a></dt><dd><p>Chain of Thought is one of the more popular ways to improve LLM performance.  This paper analyzes how/why/where it’s useful and finds that it only provides benefit when the area of application involves math/logic problems.  Moreover, a lot of the time CoT is useful a symbolic solver also improves performance and may be worth consideration.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2409.17113">Characterizing stable regions in the residual stream of LLMs</a></dt><dd><p>Transformers have stable regions with respect to inputs.  These stable regions correspond to semantic concepts in output; moreover, for prompts inside the stable region small changes in inputs lead to only small changes in outputs.  At the boundaries of these regions, however, a small change in input can lead to a dramatic change in output.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2409.18594">“Oh LLM, I’m Asking Thee, Please Give Me a Decision Tree”: Zero-Shot Decision Tree Induction and Embedding with Large Language Models</a></dt><dd><p>Proposes a novel method to use LLMs to generate zero-shot decision trees for new areas of application. Cool approach to zero-shot learning which relies on LLMs having been trained on similar enough data to the problem.</p>
+</dd>
+</dl>
+</section>
+<section id="vlms">
+<h2>VLMs<a class="headerlink" href="#vlms" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://arxiv.org/pdf/2409.06509">Aligning Machine and Human Visual Representations across Abstraction Levels</a></dt><dd><p>Humans think hierarchically, from coarse to fine-grained concepts.  This paper improves VLMs by using a teacher model to mimic this intuition and impart it to a student model.  Performance results look impressive.</p>
+</dd>
+</dl>
+</section>
+<section id="object-detection">
+<h2>Object Detection<a class="headerlink" href="#object-detection" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://arxiv.org/pdf/2409.11837">World of Forms: Deformable Geometric Templates for One-Shot Surface Meshing in Coronary CT Angiography</a></dt><dd><p>Learns CAD models of anatomical objects from medical imaging datasets using a graphical neural net and different CAD model initializations depending on the target type.  A good example of one/few shot 3D model learning.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2409.10542">SAM4MLLM: Enhance Multi-Modal Large Language Model for Referring Expression Segmentation</a></dt><dd><p>Creates a pipeline for turning text prompts into semantic segmentation masks.  Potentially useful for downstream applications.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2409.03938">Deep Clustering of Remote Sensing Scenes through Heterogeneous Transfer Learning</a></dt><dd><p>Clusters remote sensing scenes using a pretrained neural net, manifold projection, and Bayesian clustering techniques.  Opens up some interesting downstream approaches by grouping different frames together.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2409.15269">ReLoo: Reconstructing Humans Dressed in Loose Garments from Monocular Video in the Wild</a></dt><dd><p>Develops a new method for reconstructing humans wearing loose clothing from a monocular video: the clothing and the body are treated as separate objects and thus learned separately.  Can be leveraged for other areas.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2409.15246">Semantic Inference-Based Deep Learning and Modeling for Earth Observation: Cognitive Semantic Augmentation Satellite Networks</a></dt><dd><p>This paper proposes a fairly complex system for managing systems of satellites that are engaged in Earth observation and which have different capabilities.  A similar approach could be used to unify many sensors running ATR algorithms.</p>
+</dd>
+</dl>
+</section>
+<section id="reasoning">
+<h2>Reasoning<a class="headerlink" href="#reasoning" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://arxiv.org/pdf/2409.05556">SCIAGENTS: AUTOMATING SCIENTIFIC DISCOVERY THROUGH MULTI-AGENT INTELLIGENT GRAPH REASONING</a></dt><dd><p>Researchers propose a new and more effective method for reasoning over knowledge graphs.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2409.11527">Improving LLM Reasoning with Multi-Agent Tree-of-Thought Validator Agent</a></dt><dd><p>This paper has an LLM generate many potential solutions to a problem and then validates them to find the correct one using Tree of Thought methodologies.  An interesting approach for areas where (1) compute is not limited and (2) validation is substantially easier than correct generation.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2409.12147">MAGICORE: MULTI-AGENT, ITERATIVE, COARSE-TO-FINE REFINEMENT FOR REASONING</a></dt><dd><p>A cool paper which proposes a multi-agent framework for increasing LLM reasoning capabilities.  In broad terms, it devotes resources based on the expected complexity of the problem.</p>
+</dd>
+</dl>
+</section>
+<section id="tracking">
+<h2>Tracking<a class="headerlink" href="#tracking" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://arxiv.org/pdf/2409.07652">Gaussian Process Upper Confidence Bounds in Distributed Point Target Tracking over Wireless Sensor Networks</a></dt><dd><p>This paper uses a Gaussian Process approach for point-tracking with Bayesian filtering.  A similar approach could be used to do tracking across many sensors running ATR algorithms.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2409.18901">Improving Visual Object Tracking through Visual Prompting</a></dt><dd><p>Leverages CLIP to improve object tracking by describing objects across frames.  A natural application for foundation models.</p>
+</dd>
+</dl>
+</section>
+<section id="computational-enhancement">
+<h2>Computational Enhancement<a class="headerlink" href="#computational-enhancement" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://arxiv.org/pdf/2409.12184">Democratizing MLLMs in Healthcare: TinyLLaVA-Med for Efficient Healthcare Diagnostics in Resource-Constrained Settings</a></dt><dd><p>This paper describes how to get a VLM up and running on a Jetson.  Lots of interesting applications open up with this capability.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2409.14846">A-VL: Adaptive Attention for Large Vision-Language Models</a></dt><dd><p>Existing VLMs are somewhat computationally inefficient because they use the same attention structure for different modalities.  This paper proposes an adaptive attention structure which treats each modality separately, and in doing so reduces computational costs.</p>
+</dd>
+</dl>
+</section>
+<section id="adversarial-methods">
+<h2>Adversarial Methods<a class="headerlink" href="#adversarial-methods" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://haizelabs.com/static/Endless-Jailbreaks-Bijection.pdf">ENDLESS JAILBREAKS WITH BIJECTION LEARNING</a></dt><dd><p>This paper develops an adversarial attack for LLMs which is both clever and novel.  It functions by teaching the LLM a bijection language (a = 58, b = b, c = c, d= 23, etc) before communicating with the LLM in that language.  Apparently, this avoids all current safeguards.  Works better on “smarter” (bigger) LLMs which are better able to learn the bijection language.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2409.17874">DarkSAM: Fooling Segment Anything Model to Segment Nothing</a></dt><dd><p>DarkSAM is an adversarial system which seeks to modify images so that SAM cannot segment them.  A defense against this attack is likely possible, but it does serve to highlight one danger of relying on a small number of large foundation models - the “attack” space is a lot smaller for an adversary.</p>
+</dd>
+</dl>
+</section>
+<section id="theory">
+<h2>Theory<a class="headerlink" href="#theory" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://arxiv.org/pdf/2409.04267">An overview of domain-specific foundation model: key technologies, applications and challenges</a></dt><dd><p>This is a good review paper for foundation models which serves as a nice summary of the field.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2409.04431">Theory, Analysis, and Best Practices for Sigmoid Self-Attention</a></dt><dd><p>Apple investigates what happens when you use sigmoid self-attention instead of ReLu or softmax.  A nice treatment of the subject.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2408.14608">Meta Flow Matching: Integrating Vector Fields on the Wasserstein Manifold</a></dt><dd><p>Proposes a new method, based on complicated mathematics, to model systems where a large amount of interacting entities evolve continuously over time.  The envisioned area of application is single-cell drug screen tests, but you could apply the same methods to other agent-based modelling areas such as modelling warfighters.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2409.05780">BREAKING NEURAL NETWORK SCALING LAWS WITH MODULARITY</a></dt><dd><p>A research group investigates how modular neural nets can outperform and improve on normal neural nets.  They claim that regular neural nets require an exponential number of samples in task dimensionality while modular neural nets are independent.  This insight leads to a number of proposed improvements.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2409.11321">SOAP: IMPROVING AND STABILIZING SHAMPOO USING ADAM</a></dt><dd><p>Researchers investigate different methods for optimization, and find that Shampoo is equivalent to Adafactor in the eigenbasis of a preconditioner.  They propose a new optimizer named SOAP that’s equivalent to running Adam in a rotated space and which, when tested, outperforms its competitors.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2409.16223">Fine-Tuning is Fine, if Calibrated</a></dt><dd><p>Finds that fine-tuning a large foundation model does NOT result in the model forgetting old knowledge in order to learn new knowledge.  Instead, the new modified logits are simply on a different scale than the original logits.  A simple calibration allows you to recapture the original model performance while retaining increased performance on the fine-tuned task.</p>
+</dd>
+</dl>
+</section>
+<section id="applications">
+<h2>Applications<a class="headerlink" href="#applications" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://arxiv.org/pdf/2409.09894">Estimating Wage Disparities Using Foundation Models</a></dt><dd><p>Explores using foundation models for counterfactual forecasting in observational causal inference.  A cool study demonstrating how foundation models might be applied to novel areas.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2409.17048">Predictive Covert Communication Against Multi-UAV Surveillance Using Graph Koopman Autoencoder</a></dt><dd><p>This paper investigates how to have “low probability of detection” communications in the face of adversarial UAV surveillance.  This problem is likely to become larger and more interesting in time.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2409.18227">Bayesian Event Categorization Matrix Approach for Nuclear Detonations</a></dt><dd><p>Proposes a Bayesian method for categorizing nuclear explosions.</p>
+</dd>
+<dt><a class="reference external" href="https://sigops.org/s/conferences/hotos/2021/papers/hotos21-s01-hochschild.pdf">Cores that don’t count</a></dt><dd><p>What do you when you have CPUs that are malfunctioning and fail at basic tasks: what if your CPU thinks that 2 plus 2 is 5? The military has enough computers that some of them are bound to malfunction, statistically, and developing methodology to handle that eventuality is important.</p>
+</dd>
+</dl>
+</section>
+<section id="new-models">
+<h2>New Models<a class="headerlink" href="#new-models" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://arxiv.org/pdf/2409.02060">OLMoE: Open Mixture-of-Experts Language Models</a></dt><dd><p>A 7B parameter mixture of experts model that uses only 1B parameters per input token. Weights are available.</p>
+</dd>
+<dt><a class="reference external" href="https://openai.com/index/learning-to-reason-with-llms/">Introducing OpenAI o1-preview</a></dt><dd><p>OpenAI improves LLM reasoning by training o1 to think about things before speaking.  Simple idea, but the results are incredibly impressive.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2409.08202">WHAT MAKES A MAZE LOOK LIKE A MAZE?</a></dt><dd><p>A new VLM which has a better understanding of abstract concepts such as what a maze looks like.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2409.11402">NVLM: Open Frontier-Class Multimodal LLMs</a></dt><dd><p>NVIDIA releases a new family of VLMs that, in this paper, outperform all competitors.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2409.12191">Qwen2-VL: Enhancing Vision-Language Model’s Perception of the World at Any Resolution</a></dt><dd><p>New series of open source VLMs capable of processing images of different resolutions into a different number of tokens.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2409.15985">DATAGPT-SQL-7B: AN OPEN-SOURCE LANGUAGE MODEL FOR TEXT2SQL</a></dt><dd><p>A new LLM which can take a SQL database and a question in natural language form about the database and answer the question.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2409.17146">Molmo and PixMo: Open Weights and Open Data for State-of-the-Art Multimodal Models</a></dt><dd><p>A new open source VLM.  Claims to be on par with GPT-4.  Weights are not currently available, however.</p>
+</dd>
+</dl>
+</section>
+<section id="presented-at-covar-seminar">
+<h2>Presented at CoVar Seminar<a class="headerlink" href="#presented-at-covar-seminar" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt>2024-09-10</dt><dd><p><a class="reference external" href="https://arxiv.org/pdf/2205.13147">Matryoshka Representation Learning</a>
+A neat way to trade off embedding size for performance on downstream tasks - e.g., image/document retrieval/classification - without training multiple networks. This capability may be useful for multi-platform AiTR, where available bandwidth may vary depending on network conditions.</p>
+</dd>
+<dt>2024-09-17</dt><dd><p><a class="reference external" href="https://arxiv.org/pdf/2409.02095">DepthCrafter: Generating Consistent Long Depth Sequences for Open-world Videos</a>
+Depth estimation for videos.  Returns temporally consistent results for every frame.  Doesn’t need any metadata.  Supports a temporal context length of 110 frames but can also provide estimates for “extremely long” videos by dividing them up into overlapping sequences of appropriate length.</p>
+</dd>
+<dt>2024-09-24</dt><dd><p><a class="reference external" href="https://arxiv.org/pdf/2307.15339">The Radon Signed Cumulative Distribution Transform and Its Applications in Classification of Signed Images</a>
+The CDT is an interesting transform with some transform invariances that can yield linearly separable signals. There are likely some interesting use cases where Fourier would typically be applied.</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+    
+        <div id="show_right_sidebar">
+            <p><a class="toggle_right_sidebar" href="#"><span class="icon">&lt;</span><span>Page contents</span></a></p>
+        </div>
+
+        <div id="right_sidebar">
+            <p><a class="toggle_right_sidebar" href="#"><span class="icon">&gt;</span><span>Page contents:</span></a></p>
+            <div class="page_toc">
+                <ul>
+<li><a class="reference internal" href="#">The CoVar Zeitgeist: October, 2024</a><ul>
+<li><a class="reference internal" href="#featured">Featured</a></li>
+<li><a class="reference internal" href="#llms">LLMs</a></li>
+<li><a class="reference internal" href="#vlms">VLMs</a></li>
+<li><a class="reference internal" href="#object-detection">Object Detection</a></li>
+<li><a class="reference internal" href="#reasoning">Reasoning</a></li>
+<li><a class="reference internal" href="#tracking">Tracking</a></li>
+<li><a class="reference internal" href="#computational-enhancement">Computational Enhancement</a></li>
+<li><a class="reference internal" href="#adversarial-methods">Adversarial Methods</a></li>
+<li><a class="reference internal" href="#theory">Theory</a></li>
+<li><a class="reference internal" href="#applications">Applications</a></li>
+<li><a class="reference internal" href="#new-models">New Models</a></li>
+<li><a class="reference internal" href="#presented-at-covar-seminar">Presented at CoVar Seminar</a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+        </div>
+    
+
+      <div class="clearer"></div>
+    </div>
+    <div class="button_nav_wrapper">
+        <div class="button_nav">
+            <div class="left">
+                
+                <a href="2024-11.html">
+                    <span class="icon">&lt;</span><span>The CoVar Zeitgeist: November, 2024</span></a>
+                
+            </div>
+
+            <div class="right">
+                
+                    <a href="2024-09.html"><span>The CoVar Zeitgeist: September, 2024</span><span class="icon">&gt;</span></a>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2025, CoVar, LLC.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+
+<p id="theme_credit"></p>
+  </body>
+</html>

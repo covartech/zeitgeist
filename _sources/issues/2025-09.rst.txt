@@ -1,0 +1,158 @@
+The CoVar Zeitgeist: September, 2025
+====================================
+Many interesting papers were published last month. Featuring:
+
+* The first algorithm to break the time bound implied by Dijkstra's algorithm for single shortest paths (SSSP) on sparse graphs.
+* A study seeking to design a statistical paradigm which enables valid post-hoc hypothesis testing.
+* A multi-agent simulation environment to simulate friendly and adversarial UAV communication, jamming, anti-jamming, and autonomous planning strategies.
+* A novel algorithm discovery algorithm which can recover variants of the Kalman filtering algorithm optimized for the task at hand.
+* A reinforcement learning methodology which can train transformers to factor polynomials at a level competitive with Mathematica.
+* A study from Anthropic analyzing persona vectors: activations inside neural networks which control personality traits of the model.
+
+`Check out the CoVar website! <https://covar.com/>`_
+
+Featured
+--------
+`Breaking the Sorting Barrier for Directed Single-Source Shortest Paths <https://arxiv.org/pdf/2504.17033>`_
+    Presents the first single-source shortest path (SSSP) algorithm which breaks the complexity bound of Dijkstra's algorithm.
+
+`On admissibility in post-hoc hypothesis testing <https://arxiv.org/pdf/2508.00770>`_
+    Classical hypothesis testing requires significance levels to be fixed before the experiment.  This paper proposes a method, Gamma-admissibility, which allows for post-hoc hypothesis testing.
+
+`Frequency Point Game Environment for UAVs via Expert Knowledge <https://arxiv.org/pdf/2508.02757>`_
+    Creates a multi-agent simulation environment to model friendly and adversarial UAV dynamics, with a focus on communication, jamming & anti-jamming strategies, and autonomous planning.
+
+`Data-Driven Discovery of Interpretable Kalman Filter Variants through Large Language Models and Genetic Programming <https://arxiv.org/pdf/2508.11703>`_
+    Creates a novel algorithm discovery algorithm leveraging Cartesian Genetic Programming and Large Language Models.  Demonstrates that this algorithm can recover the Kalman filtering algorithm when it is optimal for the data.  When it is not, the algorithm discovery algorithm finds interpretable alternatives which outperform the Kalman filter.
+
+`Discovering Hidden Algebraic Structures via Transformers with Rank-Aware Beam GRPO <https://arxiv.org/pdf/2508.15766>`_
+    Develops a novel reinforcement learning algorithm, Beam Grouped Relative Policy Optimization (BGRPO) to train transformers to excel at polynomial factorization.  Transformers trained with BGRPO are competitive with Mathematica for factoring polynomials.
+
+`Persona vectors: Monitoring and controlling character traits in language models <https://www.anthropic.com/research/persona-vectors>`_
+    Finds that LLMs have persona vectors: activations inside the neural network which control character traits of the model.  Persona vectors enable the direction of LLM personality.
+
+LLMs
+----
+`Persona vectors: Monitoring and controlling character traits in language models <https://www.anthropic.com/research/persona-vectors>`_
+    Finds that LLMs have persona vectors: activations inside the neural network which control character traits of the model.  Persona vectors enable the direction of LLM personality.
+
+`GEPA: REFLECTIVE PROMPT EVOLUTION CAN OUTPERFORM REINFORCEMENT LEARNING <https://arxiv.org/pdf/2507.19457>`_
+    Introduces a prompt optimizer to find the optimal input prompt for a given LLM for a given context, such as coding scenarios.  Has potential to optimize test-time scaling.
+
+`Achieving 10,000x training data reduction with high-fidelity labels <https://research.google/blog/achieving-10000x-training-data-reduction-with-high-fidelity-labels/>`_
+    Proposes a novel training process for finetuning LLMs which drastically reduces sample size requirements.  First evaluates the base model on a wide variety of questions, then procures expert answers for the question which confuses the model and finetunes exclusively on that set.
+
+`Ask Good Questions for Large Language Models <https://arxiv.org/pdf/2508.14025>`_
+    Aims to improve LLMs as a dialog system by building the Ask-Good-Questions (AGQ) framework, which allows the profiling of a user or of an agent with respect to knowledge states across various domains.  Leverages these profiles to improve system performance.
+
+LLM Reasoning
+-------------
+`Discovering Hidden Algebraic Structures via Transformers with Rank-Aware Beam GRPO <https://arxiv.org/pdf/2508.15766>`_
+    Develops a novel reinforcement learning algorithm, Beam Grouped Relative Policy Optimization (BGRPO) to train transformers to excel at polynomial factorization.  Transformers trained with BGRPO are competitive with Mathematica for factoring polynomials.
+
+`STEPWISER: STEPWISE GENERATIVE JUDGES FOR WISER REASONING <https://arxiv.org/pdf/2508.19229>`_
+    Proposes StepWiser, a method to train LLM reasoning ability by reasoning about the quality of intermediate steps in step-by-step reasoning processes such as Chain-of-Thought and providing detailed feedback for these intermediate steps.
+
+Novel Architectures
+-------------------
+`MLE-STAR: A state-of-the-art machine learning engineering agent <https://research.google/blog/mle-star-a-state-of-the-art-machine-learning-engineering-agents/>`_
+    Proposes MLE-STAR, a novel LLM agent which integrates web search, targeted code block refinement, a novel ensemble method, and several another advancements to iteratively create and improve code.
+
+`Data-Driven Discovery of Interpretable Kalman Filter Variants through Large Language Models and Genetic Programming <https://arxiv.org/pdf/2508.11703>`_
+    Creates a novel algorithm discovery algorithm leveraging Cartesian Genetic Programming and Large Language Models.  Demonstrates that this algorithm can recover the Kalman filtering algorithm when it is optimal for the data.  When it is not, the algorithm discovery algorithm finds interpretable alternatives which outperform the Kalman filter.
+
+`Retrieval-Augmented Reasoning with Lean Language Models <https://arxiv.org/pdf/2508.11386>`_
+    Designs a lean language model architecture combining reasoning and retrieval augmented generation (RAG) capabilities.  Achieves SOTA performance.
+
+`Jet-Nemotron: Efficient Language Model with Post Neural Architecture Search <https://arxiv.org/pdf/2508.15884>`_
+    NVIDIA releases a new family of hybrid-architecture models which achieve the same performance of full-attention models while generating up to 50 times more throughput speedup.  Interestingly, the novel architecture was designed using Post Neural Architecture Search.
+
+Object Detection
+----------------
+`A Classification-Aware Super-Resolution Framework for Ship Targets in SAR Imagery <https://arxiv.org/pdf/2508.06407>`_
+    Develops an algorithm for detecting ship targets in SAR data by integrating classification and super-resolution techniques.
+
+`Outlier Detection of Poisson-Distributed Targets Using a Seabed Sensor Network <https://arxiv.org/pdf/2508.13099>`_
+    Develops a Gaussian Process based methodology to detect commission outliers in maritime traffic near Norfolk, VA, using acoustic sensors mounted on the seafloor.
+
+`Learning to See Through Flare <https://arxiv.org/pdf/2508.13907>`_
+    The US Naval Research Laboratory develops a method to restore images from sensors suffering from laser flare.
+
+`GaussianArt: Unified Modeling of Geometry and Motion for Articulated Objects <https://arxiv.org/pdf/2508.14891>`_
+    Develops a Gaussian Splatting method capable of handling object articulations of up to 20 moving parts.  Further contributes a dataset of articulated objects supporting this method.  
+
+`BirdRecorder’s AI on Sky: Safeguarding birds of prey by detection and classification of tiny objects around wind turbines <https://arxiv.org/pdf/2508.18136>`_
+    Builds an algorithm to detect and classify birds at ranges of up to 800 meters for collision avoidance in wind turbines.
+
+Autonomy & Safety
+-----------------
+`Deep RL Needs Deep Behavior Analysis: Exploring Implicit Planning by Model-Free Agents in Open-Ended Environments <https://arxiv.org/pdf/2506.06981>`_
+    Leverages tools from neuroscience and ethology to evaluate deep reinforcement learning (DRL) agents in a novel environment, with a focus on behavioral analysis and how agents solve tasks.  Develops methods to evaluate agents on several different capabilities.
+
+`Frequency Point Game Environment for UAVs via Expert Knowledge <https://arxiv.org/pdf/2508.02757>`_
+    Creates a multi-agent simulation environment to model friendly and adversarial UAV dynamics, with a focus on communication, jamming & anti-jamming strategies, and autonomous planning.
+
+`What Do Agents Think Others Would Do? Level-2 Inverse Games for Inferring Agents’ Estimates of Others’ Objectives <https://arxiv.org/pdf/2508.03824>`_
+    Models autonomous agents that can model the intent and objectives of other autonomous agents.  If the true goals of the other agents are not known, this is a difficult problem; if they are, this is tractable.
+
+`Agent-Based Anti-Jamming Techniques for UAV Communications in Adversarial Environments: A Comprehensive Survey <https://arxiv.org/pdf/2508.11687>`_
+    Formalizes the concept of an "anti-jamming agent" for UAVs, and proposes a closed-loop decision making framework for such agents.  Surveys existing techniques which fit into this paradigm.
+
+`Vision-driven River Following of UAV via Safe Reinforcement Learning using Semantic Dynamics Model <https://arxiv.org/pdf/2508.09971>`_
+    Builds a UAV which can navigate by using visual sensors to detect and follow rivers, even in GPS-denied settings.
+
+`Memento: Fine-tuning LLM Agents without Fine-tuning LLMs <https://arxiv.org/pdf/2508.16153>`_
+    Builds an algorithm which allows LLM agents to learn from experience without undergoing costly finetuning by incorporating Markov Decision Process methods from Case Based Reasoning paradigms.
+
+Reinforcement Learning
+----------------------
+`SELF-QUESTIONING LANGUAGE MODELS <https://arxiv.org/pdf/2508.03682>`_
+    Proposes a reinforcement learning framework, Self-Questioning Language Models (SQLM), which allows LLMs to improve themselves given an input prompt leveraging a proposer and a solver model.
+
+`ON THE GENERALIZATION OF SFT: A REINFORCEMENT LEARNING PERSPECTIVE WITH REWARD RECTIFICATION <https://arxiv.org/pdf/2508.05629>`_
+    Finds that standard Supervised Fine Tuning (SFT) gradients create a suboptimal reward with negative implications for generalization.  Proposes a small change, Dynamic Fine Tuning, which rescales the objective function for each token by the token's probability.  The new paradigm greatly outperforms the old one.
+
+`R-Zero: Self-Evolving Reasoning LLM from Zero Data <https://arxiv.org/pdf/2508.05004>`_
+    Creates an autonomous framework allowing the training of an LLM from scratch by utilizing two agents: a Challenger, which creates a problem, and a Solver, which solves the problem.  These two models develop in tandem.
+
+Statistics
+----------
+`ON THE EXPRESSIVENESS OF SOFTMAX ATTENTION: A RECURRENT NEURAL NETWORK PERSPECTIVE <https://arxiv.org/pdf/2507.23632>`_
+    Why does softmax attention outperform linear attention mechanisms?  To answer this question, this paper shows that linear attention mechanisms can be interpreted as approximations to softmax attention.
+
+`On admissibility in post-hoc hypothesis testing <https://arxiv.org/pdf/2508.00770>`_
+    Classical hypothesis testing requires significance levels to be fixed before the experiment.  This paper proposes a method, Gamma-admissibility, which allows for post-hoc hypothesis testing.
+
+`Breaking the Sorting Barrier for Directed Single-Source Shortest Paths <https://arxiv.org/pdf/2504.17033>`_
+    Presents the first single-source shortest path (SSSP) algorithm which breaks the complexity bound of Dijkstra's algorithm.
+
+`Functional Analysis of Variance for Association Studies <https://arxiv.org/pdf/2508.11069>`_
+    Proposes a functional ANOVA method for analyzing genetic data, where genotypes vary as a function of genomic position, using splines to fit to complicated data before comparing them.
+
+`The Statistical Fairness-Accuracy Frontier <https://arxiv.org/pdf/2508.17622>`_
+    Many statistical models face a tradeoff between fairness and accuracy.  This paper analyzes the fairness-accuracy Pareto frontier, constructs estimators for it in a finite sample regime, and develops tools for policymakers.
+
+Applications
+------------
+`Quantifying How Much Has Been Learned from a Research Study* <https://arxiv.org/pdf/2508.14789>`_
+    Proposes a Bayesian method to measure how influential a study is by comparing what the broader research community thinks of a topic before and after the study is published.
+
+`Disentangling the Factors of Convergence between Brains and Computer Vision Models <https://arxiv.org/pdf/2508.18226>`_
+    Investigates factors that drive the similarities between internal representations of AI models and the human brain.  Finds that model size, amount of training, and image type drive this similarity.  
+
+CoVar Seminar
+-------------
+`Value-Decomposition Networks For Cooperative Multi-Agent Learning <https://arxiv.org/pdf/1706.05296>`_
+	Introduces "centralized training decentralized execution" paradigm to overcome non-stationarity and credit assignment challenges in multi-agent RL
+
+`QMIX: Monotonic Value Function Factorisation for Deep Multi-Agent Reinforcement Learning <https://arxiv.org/pdf/1803.11485>`_
+	Improves upon Value Decomposition Network by learning a mixing network which can better handle environments where Q-functions are not additive
+
+`Boosting Multiagent Reinforcement Learning Via Permutation Invariant And Permutation Equivariant Networks <https://openreview.net/pdf?id=OxNQXyZK-K8>`_
+	Develops network architectures which are permutation invariant and permutation equivariant to entity ordering. Experiments indicate improved performance in common MARL baselines.
+
+`Depth Anything with Any Prior <https://arxiv.org/pdf/2505.10565>`_
+	A framework that combines incomplete but precise (i.e., absolute) information in depth measurement with relative depth measurement (via depth anything) to yield a dense, absolute depth map.
+
+`Efficient Streaming Language Models with Attention Sinks <https://arxiv.org/pdf/2309.17453>`_
+    Enables the attention mechanism in an LLM to handle unbounded contexts by identifying and retaining "attention sinks" inside a context window.

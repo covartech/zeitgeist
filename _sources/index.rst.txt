@@ -1,0 +1,67 @@
+.. meta::
+   :follow.it-verification-code: 57RqsdNxy4mlwxbz0bZ9
+
+The CoVar Zeitgeist
+=====================
+
+
+CoVar builds AI/ML software and hardware solutions to solve the problems that matter.  A key part of our work is staying up to date on what’s happening in the world of AI, but the pace of AI research is breathtaking.
+ 
+The CoVar Zeitgeist is intended to manage this massive flow into a list of papers we think people working at CoVar would be interested in.  Based on some feedback, we have decided to make this list public to share what we’re thinking about, what we’re reading, and hopefully help other people prioritize their reading list.
+ 
+The Zeitgeist isn’t meant to be all-encompassing. It focuses on AI work we think has relevance to our DoD customers, and the broader DoD community. We hope you enjoy.  If you have feedback, please `get in touch  <https://covar.com/contact-us/>`_.
+ 
+* Kenneth D. Morton, Ph.D. (Chief Scientist)
+* Patrick M. LeBlanc, Ph.D. (Machine Learning Engineer & Zeitgeist Editor)
+
+
+CoVar - Building Trusted AI, Ensuring a Safer World
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+.. toctree:: 
+   :maxdepth: 1
+   :caption: 2026
+
+   2026-02 </issues/2026-02.rst>
+   2026-01 </issues/2026-01.rst>
+
+.. toctree:: 
+   :maxdepth: 1
+   :caption: 2025
+
+   2025-12 </issues/2025-12.rst>
+   2025-11 </issues/2025-11.rst>
+   2025-10 </issues/2025-10.rst>
+   2025-09 </issues/2025-09.rst>
+   2025-08 </issues/2025-08.rst>
+   2025-07 </issues/2025-07.rst>
+   2025-06 </issues/2025-06.rst>
+   2025-05 </issues/2025-05.rst>
+   2025-04 </issues/2025-04.rst>
+   2025-03 </issues/2025-03.rst>
+   2025-02 </issues/2025-02.rst>
+   2025-01 </issues/2025-01.rst>
+
+.. toctree::
+   :maxdepth: 1
+   :caption: 2024
+
+   2024-12 </issues/2024-12.rst>
+   2024-11 </issues/2024-11.rst>
+   2024-10 </issues/2024-10.rst>
+   2024-09 </issues/2024-09.rst>
+   2024-08 </issues/2024-08.rst>
+   2024-07 </issues/2024-07.rst>
+   2024-06 </issues/2024-06.rst>
+   2024-05 </issues/2024-05.rst>
+   2024-04 </issues/2024-04.rst>
+   2024-03 </issues/2024-03.rst>
+   2024-02 </issues/2024-02.rst>
+   2024-01 </issues/2024-01.rst>
+
+.. toctree::
+   :maxdepth: 1
+   :caption: 2023
+
+   2023-12 </issues/2023-12.rst>

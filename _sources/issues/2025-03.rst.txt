@@ -1,0 +1,216 @@
+The CoVar Zeitgeist: March, 2025
+================================
+There is a lot of interesting research this month. Featuring:
+
+* A report from Microsoft about the effects of using AI on employees.  Among other things, it erodes critical thinking skills.
+* Deepseek proposes the novel sparse attention mechanism which achieves SOTA performance across a comprehensive set of benchmarks.
+* A novel Matryoshka Quantization technique for increasing computational efficiency.
+* A new evaluation metric for LLM reasoning which gets around the "train on the test set" problem by generating novel logic puzzles at evaluation.
+* An algorithm which can take a variety of NeRF architectures as input to do downstream tasks such as classification.
+* An interesting discussion of what it means for an AI to be reliable and how to measure reliability.
+
+`CoVar <https://covar.com/>`_
+
+Featured
+--------
+`The Impact of Generative AI on Critical Thinking: Self-Reported Reductions in Cognitive Effort and Confidence Effects From a Survey of Knowledge Workers <https://advait.org/files/lee_2025_ai_critical_thinking_survey.pdf>`_
+    Microsoft releases a detailed report on how knowledge workers interact with generative AI.  Among other things, finds that increased use of generative AI is associated with atrophied critical thinking skills.
+
+`Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention <https://arxiv.org/pdf/2502.11089>`_
+    Proposes a Natively Sparse Attention mechanism which combines several innovations for computational efficiency and long context lengths.  Has extensive benchmarking showing that NSA outperforms standard attention mechanisms.  
+
+`Matryoshka Quantization <https://arxiv.org/pdf/2502.06786>`_
+    Proposes Matryoshka Quantization, a novel quantization technique that enables a single model to be run at differing levels of precision by slicing an int8 weight to produce an int4 or an int2 weight.  Additionally improves accuracy at the int2 level.
+
+`ZebraLogic: On the Scaling Limits of LLMs for Logical Reasoning <https://arxiv.org/pdf/2502.01100>`_
+    Introduces a framework, ZebraLogic, which can generate puzzles at arbitrary levels of complexity.  Uses these to test existing reasoning LLMs, and finds that while o1 performs the best, all LLM performance declines as complexity grows.
+
+`Embed Any NeRF: Graph Meta-Networks for Neural Tasks on Arbitrary NeRF Architectures <https://arxiv.org/pdf/2502.09623>`_
+    Neural Radiance Fields (NeRFs) can be used to represent 3D objects, but downstream algorithms struggle because different NeRFs can possess different architectures.  This paper proposes the first algorithm which can take as an input a multiplicity of NeRF architectures to enable, e.g., classification tasks.
+
+`Bridging the Data Gap in AI Reliability Research and Establishing DR-AIR, a Comprehensive Data Repository for AI Reliability <https://arxiv.org/pdf/2502.12386>`_
+    An interesting discussion of what it means for an AI to be reliable and how to measure reliability.  Proposes several methods of doing so.
+
+LLMs
+----
+`Detecting Strategic Deception Using Linear Probes <https://arxiv.org/pdf/2502.03407>`_
+    Generates linear probes which interrogate LLMs to tell if the LLMs are being deceptive.  Works in more than 95% of cases with a false alarm rate of less than 1%.  
+
+`Trust Me, I’m Wrong: High-Certainty Hallucinations in LLMs <https://arxiv.org/pdf/2502.12964>`_
+    Finds that LLMs can hallucinate with high certainty even if they have possess the true information.  Has implications for methods which attempt to detect LLM hallucinations.
+
+`The Geometry of Refusal in Large Language Models: Concept Cones and Representational Independence <https://arxiv.org/pdf/2502.17420>`_
+    Employs a gradient-based method to investigate the geometry of an LLM refusing to answer a question.  Finds that there are multi-dimensional polyhedral cones governing refusal, and that there are multiple independent refusal directions. 
+
+`An Overview of Large Language Models for Statisticians <https://arxiv.org/pdf/2502.17814>`_
+    A review paper covering LLMs from a statisticians standpoint.  Worth a read.
+
+LLM Reasoning
+-------------
+`Thoughts Are All Over the Place: On the Underthinking of o1-Like LLMs <https://arxiv.org/pdf/2501.18585>`_
+    Analyzes the thinking of o1-like LLMs, can finds that a significant failure case involves the LLM switching reasoning strategies before it has had time to fully explore that line of reasoning.  Discouraging premature transitions of thought increases performance.
+
+`ZebraLogic: On the Scaling Limits of LLMs for Logical Reasoning <https://arxiv.org/pdf/2502.01100>`_
+    Introduces a framework, ZebraLogic, which can generate puzzles at arbitrary levels of complexity.  Uses these to test existing reasoning LLMs, and finds that while o1 performs the best, all LLM performance declines as complexity grows.
+
+`Can Language Models Falsify? Evaluating Algorithmic Reasoning with Counterexample Creation <https://arxiv.org/pdf/2502.19414>`_
+    Current LLM reasoning performance evaluations focus on the LLM's ability to correctly answer propositions rather than falsify incorrect ones.  This paper evaluates LLMs ability to do the latter, and finds that LLMs are much worse at this part of reasoning.
+
+`On the Emergence of Thinking in LLMs I: Searching for the Right Intuition <https://arxiv.org/pdf/2502.06773>`_
+    Proposes a reinforcement learning framework, Reinforcement Learning Via Self-Play to increase reasoning abilities in LLMs.  Finds that this improves reasoning by encouraging backtracking, exploration of ideas, and verification.
+
+`AdaptiveStep: Automatically Dividing Reasoning Step through Model Confidence <https://arxiv.org/pdf/2502.13943>`_
+    Existing training paradigms for Process Reward Models (PRMs) involve forcing models to think in discrete reasoning steps by enforcing pauses in a rigid manner.  This paper proposes AdaptiveStep, a method that pauses in meaningful places to improve the efficacy of reasoning.
+
+Novel Architectures
+-----------------------
+`DeepCrossAttention: Supercharging Transformer Residual Connections <https://arxiv.org/pdf/2502.06785>`_
+    Develops DeepCrossAttention (DCA), a novel transformer architecture which allows each layer to dynamically choose its own inputs from any of its previous layers.  This is equivalent to choosing a different model architecture for each input token.  Outperforms traditional architectures.
+
+`LLM Pretraining with Continuous Concepts <https://arxiv.org/pdf/2502.08524>`_
+    Proposes a pretraining framework for LLMs that combines next-token prediction with continuous concept prediction.  Outperforms models trained with standard next-token prediction methods.  
+
+`Large Language Diffusion Models <https://arxiv.org/pdf/2502.09992>`_
+    Researchers release LLaDa, an LLM which is based on a diffusion model rather than an autogressive model.  Trained with standard pretraining and supervised fine-tuning methods.  Achieves SOTA performance.
+
+`Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention <https://arxiv.org/pdf/2502.11089>`_
+    Proposes a Natively Sparse Attention mechanism which combines several innovations for computational efficiency and long context lengths.  Has extensive benchmarking showing that NSA outperforms standard attention mechanisms.  
+
+`Inner Thinking Transformer: Leveraging Dynamic Depth Scaling to Foster Adaptive Internal Thinking <https://arxiv.org/pdf/2502.13842>`_
+    Proposes Inner Thinking Transformer, a modified transformer framework which views layers computations as reasoning steps.  Uses this insight to dynamically allocate computation to more critical tokens, improving performance while holding network size constant.
+
+Object Detection
+----------------
+`DeepForest: Sensing Into Self-Occluding Volumes of Vegetation With Aerial Imaging <https://arxiv.org/pdf/2502.02171>`_
+    Applies pre-trained 3D convolutional neural networks to synthetic aperture imaging from overhead drones to see through dense forest canopies to estimate the level of vegetation on the ground floor.  Techniques to see through forest canopies could be applied in other contexts.
+
+`Embed Any NeRF: Graph Meta-Networks for Neural Tasks on Arbitrary NeRF Architectures <https://arxiv.org/pdf/2502.09623>`_
+    Neural Radiance Fields (NeRFs) can be used to represent 3D objects, but downstream algorithms struggle because different NeRFs can possess different architectures.  This paper proposes the first algorithm which can take as an input a multiplicity of NeRF architectures to enable, e.g., classification tasks.
+
+Computational Efficiency
+------------------------
+`Hamming Attention Distillation: Binarizing Keys and Queries for Efficient Long-Context Transformers <https://arxiv.org/pdf/2502.01770>`_
+    Introduces Hamming Attention Distillation and uses matrix sparsification techniques to reduce the computational burden of long context windows while losing only a small amount of performance.
+
+`Matryoshka Quantization <https://arxiv.org/pdf/2502.06786>`_
+    Proposes Matryoshka Quantization, a novel quantization technique that enables a single model to be run at differing levels of precision by slicing an int8 weight to produce an int4 or an int2 weight.  Additionally improves accuracy at the int2 level.
+
+`COSMOS: A Hybrid Adaptive Optimizer for Memory-Efficient Training of LLMs <https://arxiv.org/pdf/2502.17410>`_
+    Develops a novel optimizer for efficient training of LLMs, COSMOS, which applies SOAP to the leading eigenspaces and MUON to the others.  Achieves SOTA performance in fewer iterations.  Code is available.
+
+Ethics & Safety
+---------------
+`An Empirical Game-Theoretic Analysis of Autonomous Cyber-Defence Agents <https://arxiv.org/pdf/2501.19206>`_
+    The UK Defense Science and Technology Laboratory releases a game-theoretic analysis of the use of Deep Reinforcement Learning for autonomous cyber defense agents.  Shows that agents can control in novel environments and when confronted by novel red teams.
+
+`Fully Autonomous AI Agents Should Not be Developed <https://arxiv.org/pdf/2502.02649>`_
+    Argues that fully autonomous AI should not be developed as risks grow with autonomy levels.  Develops agentic levels for categorizing the autonomous readiness level of AI agents.
+
+`Bridging the Data Gap in AI Reliability Research and Establishing DR-AIR, a Comprehensive Data Repository for AI Reliability <https://arxiv.org/pdf/2502.12386>`_
+    An interesting discussion of what it means for an AI to be reliable and how to measure reliability.  Proposes several methods of doing so.
+
+Theory
+------
+`Value-Based Deep RL Scales Predictably <https://arxiv.org/pdf/2502.04327>`_
+    Finds that the behavior of value-based off-policy reinforcement learning methods are predictable: behavior in small scale experiments is replicated in large scale experiments.
+
+`Balancing the Scales: A Theoretical and Algorithmic Framework for Learning from Imbalanced Data <https://arxiv.org/pdf/2502.10381>`_
+    Analyzes class learning in imbalanced datasets.  Finds that cost-sensitive methods are not Bayes consistent, and proposes a novel algorithm for learning in this environment.
+
+`Low-Rank Thinning <https://arxiv.org/pdf/2502.12063>`_
+    Thinning methods select a subset of high-importance datapoints from a dataset.  This paper provides a theoretical analysis of low-rank sub-Gaussian thinning algorithms to prove performance, and leverages these insights to propose a more efficient attention block, improvements to stochastic gradient descent, and cheap two-sample testing.
+
+`Archetypal SAE: Adaptive and Stable Dictionary Learning for Concept Extraction in Large Vision Models <https://arxiv.org/pdf/2502.12892>`_
+    Recent literature has cast doubt on the ability of sparse autoencoders (SAEs) to provide meaningful semantic concepts inside of foundation models.  This paper proposes a method of constraining SAEs to a convex hull to render them more reliable and more useful.
+
+Applications
+------------
+`Sea-cret Agents: Maritime Abduction for Region Generation to Expose Dark Vessel Trajectories <https://arxiv.org/pdf/2502.01503>`_
+    Creates a method, using abductive inference, to predict the trajectory of sea vessels which have turned off their automatic identification systems.
+
+`CONTROLLABLE SATELLITE-TO-STREET-VIEW SYNTHESIS WITH PRECISE POSE ALIGNMENT AND ZERO-SHOT ENVIRONMENTAL CONTROL <https://arxiv.org/pdf/2502.03498>`_
+    Nanjing University of Science and Technology, one of China's "seven sons of national defense", proposes a method to generate street level views of scenes captured in remote sensing data using homography and diffusion models.
+
+Position Papers
+---------------
+`The Impact of Generative AI on Critical Thinking: Self-Reported Reductions in Cognitive Effort and Confidence Effects From a Survey of Knowledge Workers <https://advait.org/files/lee_2025_ai_critical_thinking_survey.pdf>`_
+    Microsoft releases a detailed report on how knowledge workers interact with generative AI.  Among other things, finds that increased use of generative AI is associated with atrophied critical thinking skills.
+
+New Models
+----------
+`Mistral Small 3 <https://mistral.ai/news/mistral-small-3/?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-reveals-chatgpt-agent-for-deep-research&_bhlid=5af3096cb9b1ad9e22f2421beaba6463f1335bc9>`_
+    Mistral releases a small model - 24B parameters - that aims to be Pareto optimal in terms of performance and efficiency.  Apache 2.0 license
+
+`Introducing deep research <https://openai.com/index/introducing-deep-research/>`_
+    OpenAI releases a new agent which "accomplishes in tens of minutes what would take a human many hours" for compiling research reports from the internet.  Available via API.
+
+`Goedel-Prover A New Frontier in Automated Theorem Proving <https://goedel-lm.github.io/>`_
+    Creates an LLM for formal theorem proving by creating and then training on a synthetic dataset.  Code available under an MIT license.
+
+`Long-VITA: Scaling Large Multi-modal Models to 1 Million Tokens with Leading Short-Context Accuracy <https://arxiv.org/pdf/2502.05177>`_
+    Tencent releases Long-VITA a multi-modal LLM that can process over 4K frames or 1M tokens. Code available under a bespoke license.
+
+`Gold-medalist Performance in Solving Olympiad Geometry with AlphaGeometry2 <https://arxiv.org/pdf/2502.03544>`_
+    Deepmind releases a report on AlphaGeometry2, an updated version of AlphaGeometry.  AlphaGeometry2 achieves exceptionally high performance on math olympiad questions.
+
+`Simplifying DINO via Coding Rate Regularization <https://arxiv.org/pdf/2502.10385>`_
+    Simplifies DINO and DINOv2 by cleaning up the pretraining pipeline, resulting in more streamlined and efficient models.  Code coming soon, MIT license.
+
+`Meet new Sonar: A Blazing Fast Model Optimized for Perplexity Search <https://www.perplexity.ai/hub/blog/meet-new-sonar?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=ai-tensions-rise-on-global-stage&_bhlid=5698f150cd1ea449162f3a1399606ec21f2772db>`_
+    Perplexity releases Sonar, an LLM designed for search built on top of Llama 3.3 70B, which is fast while providing high quality responses.  Available via API.
+
+`DeepScaleR: Surpassing O1-Preview with a 1.5B Model by Scaling RL <https://pretty-radio-b75.notion.site/DeepScaleR-Surpassing-O1-Preview-with-a-1-5B-Model-by-Scaling-RL-19681902c1468005bed8ca303013a4e2>`_
+    Researchers release DeepScaleR, a 1.5B parameter model refined from DeepSeek which improves performance.  Open source, MIT license.
+
+`DeepHermes 3 - Llama-3.1 8B <https://huggingface.co/NousResearch/DeepHermes-3-Llama-3-8B-Preview?utm_source=substack&utm_medium=email>`_
+    NousResearch releases DeepHermes 3, an LLM which has an inbuilt toggle for switching back and forth between "traditional" and "deep reasoning" modes.  Available on HuggingFace, Llama 3 license.
+
+`Introducing Perplexity Deep Research <https://www.perplexity.ai/hub/blog/introducing-perplexity-deep-research?utm_source=substack&utm_medium=email>`_
+    Perplexity releases Deep Research, an LLM for compiling research reports on complicated questions.  Available via API.
+
+`Exploring the Potential of Encoder-free Architectures in 3D LMMs <https://arxiv.org/pdf/2502.09620>`_
+    Proposes an encoder-free 3D LMM architecture.  Enables natural langauge interaction with 3D data formats such as point clouds.
+
+`Welcome to Grok 3: The Future of Crypto and AI on Solana! <https://grok3.io/>`_
+    xAI releases Grok 3, an LLM which achieves SOTA performance.  Available via API.
+
+`Accelerating scientific breakthroughs with an AI co-scientist <https://research.google/blog/accelerating-scientific-breakthroughs-with-an-ai-co-scientist/>`_
+    Google releases AI co-scientist, a multi-agent framework built off of Gemini 2.0 that functions as a virtual research assistant for scientists.
+
+`Qwen2.5-VL Technical Report <https://arxiv.org/pdf/2502.13923>`_
+    The Alibaba Group and the Qwen Team release Qwen2.5-VL, Qwen's newest vision-language model.  Available via HuggingFace, Apache 2.0 license.
+
+`Open-sourcing R1 1776 <https://www.perplexity.ai/hub/blog/open-sourcing-r1-1776?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=google-s-new-ai-co-scientist&_bhlid=11b807b0388d95afba554b7897a40b55e1de35c6>`_
+    Perplexity releases R1 1776, an LLM made by taking DeepSeek's R1 model and post-training it to remove censorship imposed by the CPP.  Available on HuggingFace under an MIT license.
+
+`SigLIP 2: Multilingual Vision-Language Encoders with Improved Semantic Understanding, Localization, and Dense Features <https://arxiv.org/pdf/2502.14786>`_
+    Google Deepmind releases SigLLP2, a family of vision-language encoders which improve upon SigLLP via improved training techniques.  Code is available under an Apache 2.0 license.
+
+`256M, 500M and 2.2B parameters <https://huggingface.co/blog/smolvlm2?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=truth-seeking-grok-3-gets-silenced&_bhlid=33134674cef1e6fef323293d38bc6eb686cd43fd>`_
+    SmolVLM2 is released on HuggingFace.  Clocking in at 256M, 500M and 2.2B parameter models, SmolVLM2 is the smallest VLM ever released.  Available via HuggingFace.
+
+`Muon is scalable for LLM training <https://github.com/MoonshotAI/Moonlight/blob/master/Moonlight.pdf>`_
+    MoonShot AI uses and improves the Muon optimizer to train a Mixture-of-Experts model which lies at the Pareto frontier of computational efficiency and performance.  Available under an MIT license.
+
+`Claude 3.7 Sonnet and Claude Code <https://www.anthropic.com/news/claude-3-7-sonnet>`_
+    Anthropic releases the newest version of Claude Sonnet, which is focused on "real world tasks" instead of math and science problems.  Available via API.
+
+`Empowering innovation: The next generation of the Phi family <https://azure.microsoft.com/en-us/blog/empowering-innovation-the-next-generation-of-the-phi-family/?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=amazon-s-new-ai-powered-alexa&_bhlid=b4783ed43c55362a986d95ef768228311175e2fd>`_
+    Microsoft releases Phi-4, the next version of the Phi family with multimodal capabilities.  Available on HuggingFace under an MIT license.
+
+`Introducing Mercury, the first commercial-scale diffusion large language model <https://www.inceptionlabs.ai/news?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=amazon-s-new-ai-powered-alexa&_bhlid=8a76c7961754bb445a9d9549383eec7cddc654eb>`_
+    Inception Labs, a stealth startup, releases Mercury, a diffusion-based large language model (dLLM).  Achieves SOTA performance while increasing processing power.  Available via API.
+
+Presented at CoVar Seminar
+--------------------------
+2025_02_04
+    `DeepSeek-V3 Technical Report <https://github.com/deepseek-ai/DeepSeek-V3/blob/main/DeepSeek_V3.pdf>`_
+        DeepSeek releases a technical report covering the technological innovations and development behind their new model.
+
+2025_02_11
+    `Do Large Language Model Benchmarks Test Reliability? <https://arxiv.org/pdf/2502.03461>`_
+        Investigates LLM performance on old, saturated, benchmarks to test model reliability.  Finds that LLM are unreliable even on saturated benchmarks because of label errors and ambiguity.  Proposes a new class of benchmarks, platinum benchmarks, which have neither label errors nor ambiguity and as such admit 100% success rates for testing reliability.  
+
+2025_02_18
+    `A Gentle Introduction to Graph Neural Networks <https://distill.pub/2021/gnn-intro/>`_
+        An introductory treatment of Graph Neural Networks.
