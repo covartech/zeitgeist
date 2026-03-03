@@ -1,0 +1,114 @@
+The CoVar Zeitgeist: February, 2024
+===================================
+A curated list of the latest research in AI.
+
+Enjoy!
+
+Featured
+--------
+`Large Language Models Relearn Removed Concepts <https://arxiv.org/pdf/2401.01814.pdf>`_
+    Investigates how LLMs manage to relearn concepts after the neurons associated with those concepts are deleted.  Finds that LLMs move advanced concepts to earlier layers and put the relearned concepts at semantically similar neurons.
+
+`Escalation Risks from Language Models in Military and Diplomatic Decision-Making <https://arxiv.org/pdf/2401.03408.pdf>`_
+    If LLMs are granted decision making authority, how dangerous would they be?  This paper designs a wargame and lets LLMs play it to test whether they escalate.  They do.  A lot.  Nuclear, even.  Not surprising, but highlights the risks.
+
+`Discovering group dynamics in synchronous time series via hierarchical recurrent switching-state models <https://arxiv.org/pdf/2401.14973.pdf>`_
+    Time-series paper with a co-author from US Army CCDC Soldier Center.  Learns the behavior of individual actors which are coordinated in some latent process, e.g. a squad of soldiers in a training practice.  Uses explainable Bayesian parametric methods rather than difficult-to-explain neural methods.  In their case study, the model learns that one particular soldier got assigned the job of looking around to make sure the squad wasn't getting approached unnoticed.  
+
+`High-dimensional analysis of double descent for linear regression with random projections <https://arxiv.org/pdf/2303.01372.pdf>`_
+    Demonstrates that double descent occurs in linear regression settings as well as deep learning.
+
+`Reinforcement Learning for SAR View Angle Inversion with Differentiable SAR Renderer <https://arxiv.org/pdf/2401.01165.pdf>`_
+    Uses a differentiable SAR renderer in a deep reinforcement learning algorithm to solve the inverse problem in SAR imagery - predicting incident and azimuth angle given an observation.  Assumes it knows the target type.
+
+`Reliability Analysis of Complex Systems using Subset Simulations with Hamiltonian Neural Networks <https://arxiv.org/pdf/2401.05244.pdf>`_
+    This paper analyzes large complex systems for chance of failure.  In particular, it uses a Monte Carlo simulator with subset simulation to simulate the chance of different parts of the system failing.
+
+LLMs
+----
+`Large Language Models Relearn Removed Concepts <https://arxiv.org/pdf/2401.01814.pdf>`_
+    Investigates how LLMs manage to relearn concepts after the neurons associated with those concepts are deleted.  Finds that LLMs move advanced concepts to earlier layers and put the relearned concepts at semantically similar neurons.
+
+`Escalation Risks from Language Models in Military and Diplomatic Decision-Making <https://arxiv.org/pdf/2401.03408.pdf>`_
+    If LLMs are granted decision making authority, how dangerous would they be?  This paper designs a wargame and lets LLMs play it to test whether they escalate.  They do.  A lot.  Nuclear, even.  Not surprising, but highlights the risks.
+
+`SKILL-MIX: A FLEXIBLE AND EXPANDABLE FAMILY OF EVALUATIONS FOR AI MODELS <https://arxiv.org/pdf/2310.17567.pdf>`_
+    How to evaluate LLMs?  This paper proposes having a list of skills an LLM can do, randomly combining some subset of them, and asking the LLM to perform the resulting task.  The intuition is that the new task will not be in the LLMs training set.
+
+`In-Context Learning for Extreme Multi-Label Classification <https://arxiv.org/pdf/2401.12178.pdf>`_
+    Can LLMs handle classification tasks with lots (10,000) of classes?  This paper says it can, and in a zero-shot context.
+
+`Blending Is All You Need: Cheaper, Better Alternative to Trillion-Parameters LLM <https://arxiv.org/abs/2401.02994>`_
+    Finds that mixtures of small LLMs are competitive with single trillion-parameter LLMs.
+
+`Teaching Algorithmic Reasoning via In-context Learning <https://arxiv.org/abs/2211.09066>`_
+    Finds that proper use of in-context learning can greatly improve an LLMs ability to reason.
+
+`Gemini in Reasoning: Unveiling Commonsense in Multimodal Large Language Models <https://arxiv.org/abs/2312.17661>`_
+    A big comparison of lots of LLMs trying to do reasoning.  Gemini is about as good as GPT3.5. GPT4 is still on top.
+
+Object Detection
+----------------
+`Reinforcement Learning for SAR View Angle Inversion with Differentiable SAR Renderer <https://arxiv.org/pdf/2401.01165.pdf>`_
+    Uses a differentiable SAR renderer in a deep reinforcement learning algorithm to solve the inverse problem in SAR imagery - predicting incident and azimuth angle given an observation.  Assumes it knows the target type.
+
+`Simulation Based Bayesian Optimization <https://arxiv.org/pdf/2401.10811.pdf>`_
+    Introduces a Bayesian optimization method for acquisition functions which requires sampling from the posterior.
+
+Theory
+------
+`Reliability Analysis of Complex Systems using Subset Simulations with Hamiltonian Neural Networks <https://arxiv.org/pdf/2401.05244.pdf>`_
+    This paper analyzes large complex systems for chance of failure.  In particular, it uses a Monte Carlo simulator with subset simulation to simulate the chance of different parts of the system failing.
+
+`A Survey on Statistical Theory of Deep Learning: Approximation, Training Dynamics, and Generative Models <https://arxiv.org/pdf/2401.07187.pdf>`_
+    Review paper on deep learning.  Three sections: risk, training, generative models.  Worth reading
+
+`Decision Transformer: Reinforcement Learning via Sequence Modeling <https://arxiv.org/abs/2106.01345>`_
+    Reinforcement learning is useful, but finnicky and difficult to implement.  Investigates if we could do reinforcement learning with transformers instead.  Models sequence of past state, actions, and rewards as an autoregressive trajectory and plugs into a transformer.  Seems to give decent results.
+
+`High-dimensional analysis of double descent for linear regression with random projections <https://arxiv.org/pdf/2303.01372.pdf>`_
+    Demonstrates that double descent occurs in linear regression settings as well as deep learning.
+
+`Movement of insurgent gangs: A Bayesian kernel density model for incomplete temporal data <https://arxiv.org/pdf/2401.01231.pdf>`_
+    Uses Bayesian models to predict the movement of insurgent gangs.  Worked with Indian police.  Incorporates "expert priors" into sequentially updating model.
+
+Knowledge Graphs
+----------------
+`GRAPH2TAC: LEARNING HIERARCHICAL REPRESENTATIONS OF MATH CONCEPTS IN THEOREM PROVING <https://arxiv.org/pdf/2401.02949.pdf>`_
+    This paper is developing a programming language that can assist mathematicians with creating math proofs.  Fuses together a kNN and a graph neural net to help.
+
+`Learning Big Logical Rules by Joining Small Rules <https://arxiv.org/pdf/2401.16215.pdf>`_
+    Notes that existing reasoners struggle with large rules, and proposes a novel reasoner which learns large rules by combining multiple small rules together, handling as many as 100 small rules at once.  
+
+`Capturing Knowledge Graphs and Rules with Octagon Embeddings <https://arxiv.org/pdf/2401.16270.pdf>`_
+    Uses octogan embeddings (in N^2 space where N is the dimension of your knowledge graph embedding) to improve inference in knowledge graphs.  Improves performance.
+
+`Knowledge Graphs Evolution and Preservation <https://arxiv.org/pdf/2012.11936.pdf>`_
+    Dealing with time in KGs is difficult. This is a look at approaches.
+
+`AI Thought <https://aithought.com>`_
+    Claims that the differential computer is the only known way to leap forward in super intelligence!  Or it's at least some way that a network can use working long and short term memory. See also `A Cognitive Architecture for Machine Consciousness and Artificial Superintelligence: Thought Is Structured by the Iterative Updating of Working Memory <https://arxiv.org/abs/2203.17255>`_
+
+Logistics
+---------
+`Predictive Analysis for Optimizing Port Operations <https://arxiv.org/pdf/2401.14498.pdf>`_
+    An analysis of how long ships stay in port using classical and off-the-shelf methods.  Claims that this is an emerging field.
+
+`Traffic estimation in unobserved network locations using data-driven macroscopic models <https://arxiv.org/pdf/2401.17095.pdf>`_
+    Uses network flow theory to learn transportation patterns, especially in unobserved locations.  Macroscopic models make it "completely iterable", and uses neural nets to learn specific parameters.
+
+Applications
+------------
+`Discovering group dynamics in synchronous time series via hierarchical recurrent switching-state models <https://arxiv.org/pdf/2401.14973.pdf>`_
+    Time-series paper with a co-author from US Army CCDC Soldier Center.  Learns the behavior of individual actors which are coordinated in some latent process, e.g. a squad of soldiers in a training practice.  Uses explainable Bayesian parametric methods rather than difficult-to-explain neural methods.  In their case study, the model learns that one particular soldier got assigned the job of looking around to make sure the squad wasn't getting approached unnoticed.  
+
+`Spatio-temporal data fusion for the analysis of in situ and remote sensing data using the INLA-SPDE approach <https://arxiv.org/pdf/2401.04723.pdf>`_
+    Predicts harmful algae blooms by using a hierarchical Bayesian model to align ground-level and satellite data.  Postulates the existence of a latent spatiotemporal process as a Gaussian Random Field and models it, using INLA for computational efficiency.
+
+New Models
+----------
+`DeepSeek LLM Scaling Open-Source Language Models with Longtermism <https://arxiv.org/pdf/2401.02954.pdf>`_
+    New LLM from DeepSeek.  Investigates scaling laws with LLMs by assembling a 2 trillion token dataset of english and chinese characters.  This seems to depend on a lot of things, e.g. batch size, learning rate, and dataset.
+
+`DeepSeek code <https://github.com/deepseek-ai/DeepSeek-LLM>`_
+    Link to github.  Open source.
