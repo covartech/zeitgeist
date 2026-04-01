@@ -1,0 +1,145 @@
+The CoVar Zeitgeist: April, 2026
+================================
+The April, 2026, issue of the CoVar Zeitgeist features research predominantly published in March.  March saw a flurry of research on all aspects of generative AI models.  In particular, papers have been asking what it means for a generative AI model to understand the world as it scales and concluded that general intelligence may not be possible; more practical approaches have proposed novel architectures with functioning world models.  Other research has explored the dynamics of frontier models: the dynamics of how pretraining and the choice of loss function affect model structure, or how to causally understand how the large collection of weights which make up a neural network function together.  One contributor even dug into the depths of a transformer architecture to show it can function as a classical computer! Featuring:
+
+* A blog post showing that a transformer architecture can function as a classical computer.
+* A study demonstrating that base LLMs are semantically calibrated but post-trained models may not be.
+* A novel world model architecture showing physical understanding of 3D space.
+* A position paper arguing that general superintelligence is not achievable due to energy constraints and that more targeted intelligence is preferable.
+* An analysis of the effects of gradient flow on attention heads.
+* A proposal for e-values, an alternate method for null hypothesis likelihood to p-values.
+
+`Check out the CoVar website! <https://covar.com/>`_
+
+Featured
+--------
+`Can LLMs Be Computers? <https://www.percepta.ai/blog/can-llms-be-computers>`_
+    Develops a novel decoding scheme which allows standard transformer architectures to act as classical computers and execute arbitrary programs for millions of steps.  
+
+`Trained on Tokens, Calibrated on Concepts: The Emergence of Semantic Calibration in LLMs <https://arxiv.org/pdf/2511.04869>`_
+    Provides a theoretical proof that LLMs will be semantically calibrated when they can predict their distribution over a set of semantic classes before answering a prompt.  Shows that RL fine-tuning and chain-of-thought analysis both break this calibration.
+
+`LeWorldModel: Stable End-to-End Joint-Embedding Predictive Architecture from Pixels <https://arxiv.org/pdf/2603.19312v1>`_
+    Introduces a novel Joint Embedding Predictive Architecture (JEPA) which can be stably trained end-to-end on single GPU with only two loss terms.  The resulting world model shows some physical understanding in its latent space.
+
+`An Alternative Trajectory for Generative AI <https://arxiv.org/pdf/2603.14147>`_
+    Argues that the increase in energy use as LLMs scale makes generalized superintelligence unlikely. Takes inspiration from coding and mathematics domains to propose paths forward for other specialized domains: construct symbolic abstractions encoding world knowledge and leverage them for curriculum learning.
+
+`Gradient Flow Polarizes Softmax Outputs towards Low-Entropy Solutions <https://arxiv.org/pdf/2603.06248>`_
+    Studies a value-softmax model to analyze behavior of attention head-like mechanisms in isolation.  Shows that gradient-based training implies a bias towards sparsification for softmax structures.
+
+`E-values as statistical evidence: A comparison to Bayes factors, likelihoods, and p-values <https://arxiv.org/pdf/2603.24421>`_
+    Reviews desirable properties for a statistical measure against a null hypothesis.  Proposes e-values as a measure which possesses most of these properties.
+
+LLMs
+----
+`Beyond Language Modeling: An Exploration of Multimodal Pretraining <https://arxiv.org/pdf/2603.03276>`_
+    A thorough exploration of how a model trained from scratch in a multi-modal setting learns in the pretraining phase.  Avoids confounding from language training.
+
+`Gradient Flow Polarizes Softmax Outputs towards Low-Entropy Solutions <https://arxiv.org/pdf/2603.06248>`_
+    Studies a value-softmax model to analyze behavior of attention head-like mechanisms in isolation.  Shows that gradient-based training implies a bias towards sparsification for softmax structures.
+
+`Can LLMs Be Computers? <https://www.percepta.ai/blog/can-llms-be-computers>`_
+    Develops a novel decoding scheme which allows standard transformer architectures to act as classical computers and execute arbitrary programs for millions of steps.  
+
+`Trained on Tokens, Calibrated on Concepts: The Emergence of Semantic Calibration in LLMs <https://arxiv.org/pdf/2511.04869>`_
+    Provides a theoretical proof that LLMs will be semantically calibrated when they can predict their distribution over a set of semantic classes before answering a prompt.  Shows that RL fine-tuning and chain-of-thought analysis both break this calibration.
+
+Novel Architectures
+-------------------
+`Mixture-of-Depths Attention <https://arxiv.org/pdf/2603.15619>`_
+    Optimization stability and information dilution pose challenges for scaling depth in transformers.  This paper introduces Mixture of Depths Attention (MoDa), which lets attention heads attend to depth (key, value) pairs previous layers.
+
+`LeWorldModel: Stable End-to-End Joint-Embedding Predictive Architecture from Pixels <https://arxiv.org/pdf/2603.19312v1>`_
+    Introduces a novel Joint Embedding Predictive Architecture (JEPA) which can be stably trained end-to-end on single GPU with only two loss terms.  The resulting world model shows some physical understanding in its latent space.
+
+`TurboQuant: Redefining AI efficiency with extreme compression <https://research.google/blog/turboquant-redefining-ai-efficiency-with-extreme-compression/>`_
+    Develops novel methods to improve vector quantization in large language models.  Improves substantial quantization results without sacrificing performance.
+
+Object Detection
+----------------
+`Is Bigger Always Better? Efficiency Analysis in Resource-Constrained Small Object Detection <https://arxiv.org/pdf/2603.02142>`_
+    Find that small high-resolution models are Pareto dominant in remote sensing applications: larger models are not necessarily better for a fixed resource budget.
+
+`Scalable Evaluation of the Realism of Synthetic Environmental Augmentations in Images <https://arxiv.org/pdf/2603.04325>`_
+    Finds that generative models are more effective than rules-based methods at providing environmental augmentations to image data.
+
+`Anomaly detection using surprisals <https://arxiv.org/pdf/2603.09318>`_
+    Defines the surprisal score for an observation as its negative log density under a possibly mispecified distribution.  Leverages this to reduce anomaly detection to modelling the tail of the surprisal distribution.
+
+`TinyML Enhances CubeSat Mission Capabilities <https://arxiv.org/pdf/2603.20174>`_
+    Develops an edge computing algorithm for object detection and classification on edge devices: CubeSat systems.
+
+`Zero-Shot Depth from Defocus <https://arxiv.org/pdf/2603.26658>`_
+    Develops a method to predict depth inside a scene by data collected by varying the focus of a monocular camera.
+
+Testing & Evaluation
+--------------------
+`SEED-SET: Scalable Evolving Experimental Design for System-Level Ethical Testing <https://arxiv.org/pdf/2603.01630>`_
+    Proposes a rigorous testing and evaluation pipeline for autonomous systems.  Uses Bayesian experimental design and hierarchical Gaussian Processes for objective and subjective evaluations.
+
+`Frontier Models Can Take Actions at Low Probabilities <https://arxiv.org/pdf/2603.02202>`_
+    Could an LLM take an adverse action with probability low enough to avoid testing and evaluation but high enough to occur with probability one in the field?  This paper demonstrates the possibility.
+
+`How Well Does Agent Development Reflect Real-World Work? <https://arxiv.org/pdf/2603.01203>`_
+    Analyzes current Agentic AI benchmarks to analyze their relevance to real-world work.  Finds that they mostly target software and mathematics skills, lacking other elements of important work areas.
+
+Autonomy
+--------
+`When Should Humans Step In? Optimal Human Dispatching in AI-Assisted Decisions <https://arxiv.org/pdf/2603.13688>`_
+    Proposes a decision-theoretic framework for AI agents to decide when to seek human help by attaching a cost to human intervention and maximizing a reward function.  In peer review settings, achieved the same level of performance as fully-human methods while requiring only 20-30% of the effort.
+
+`Harness design for long-running application development <https://www.anthropic.com/engineering/harness-design-long-running-apps>`_
+    Anthropic designs a harness to allow Claude to function as a full-stack engineer.  The harness design is inspired by GANs, with a planner, a generator, and an evaluator working in tandem towards a common goal.
+
+Reinforcement Learning
+----------------------
+`How Far Can Unsupervised RLVR Scale LLM Training? <https://arxiv.org/pdf/2603.08660>`_
+    A comprehensive study of unsupervised reinforcement learning with unverified rewards (URLVR).  Finds, among other things, that intrinsic rewards follow a rise-then-fall curve across methods and that extrinsic rewards may escape the confidence-correctness ceiling.
+
+`Agentic Critical Training <https://arxiv.org/pdf/2603.08706>`_
+    Proposes Agent Critical Training, a reinforcement learning method to train agents to judge which of several courses of action is superior by reasoning, not imitation.  
+
+`Neuron-Aware Data Selection in Instruction Tuning for Large Language Models <https://arxiv.org/pdf/2603.13201>`_
+    Proposes NAIT, a variant of instruction tuning which analyzes neuron activations inside LLMs to determine which instruction tuning data best improve target capabilities and finetunes on an optimal dataset.
+
+`OpenClaw-RL: Train Any Agent Simply by Talking <https://arxiv.org/pdf/2603.10165>`_
+    Develops an agentic RL framework for training agents based on next-state signals such as user replies.  Allows for agentic improvement in the field.
+
+Statistics
+----------
+`Causal Interpretation of Neural Network Computations with Contributing Decomposition <https://arxiv.org/pdf/2603.06557>`_
+    Develops CODEC (contribution decomposition) to provide causal analysis of neural networks.  CODEC identifies a targeted output, quantifies how each unit contributes to the output for given inputs, decomposes the contributions to learn how neurons act together, and maps these contributions to input features.
+
+`What is Missing? Explaining Neurons Activated by Absent Concepts <https://arxiv.org/pdf/2603.09787>`_
+    Investigates encoded absences: neurons in deep neural networks that increase when a particular input concept is absent.  Shows that encoded absences are prevalent in existing DNNs, and provides several methods for their estimation.
+
+`Gaussian Process Limit Reveals Structural Benefits of Graph Transformers <https://arxiv.org/pdf/2603.17569>`_
+    Provides a theoretical analysis of the benefits of attention-based graph transformers over graph convolutional networks for node-based prediction tasks, with a focus on the attention mechanism.  Additionally provides empirical validation.
+
+`Objective Model Prior Probabilities in Variable Selection <https://arxiv.org/pdf/2603.19728>`_
+    Notes limitations of uniform and Jeffrey's priors for variable selection in Bayesian modelling.  Proposes a new prior which includes the parsimony assumption: simpler models are favored, all else being equal.
+
+`E-values as statistical evidence: A comparison to Bayes factors, likelihoods, and p-values <https://arxiv.org/pdf/2603.24421>`_
+    Reviews desirable properties for a statistical measure against a null hypothesis.  Proposes e-values as a measure which possesses most of these properties.
+
+Position Papers
+---------------
+`AI Must Embrace Specialization via Superhuman Adaptable Intelligence <https://arxiv.org/pdf/2602.23643v1>`_
+    A position paper arguing that Artificial General Intelligence (AGI) is impossible, and that Superhuman Adaptable Intelligence (SAI) which can exceed human perform on one particular task.  From this, the authors deduce that self-supervised learning and world models will characterize future AI development.
+
+`An Alternative Trajectory for Generative AI <https://arxiv.org/pdf/2603.14147>`_
+    Argues that the increase in energy use as LLMs scale makes generalized superintelligence unlikely. Takes inspiration from coding and mathematics domains to propose paths forward for other specialized domains: construct symbolic abstractions encoding world knowledge and leverage them for curriculum learning.
+
+Applications
+------------
+`Thinking—Fast, Slow, and Artificial <https://datachutney.io/cognitive-surrender-explainer/>`_
+    Conducts a comprehensive study to evaluate the effects of AI use on the cognitive functioning of human users.  Finds that human users have a natural tendency to trust the AI even when it is incorrect, and it is difficult for users to fight this bias even if aware of it.
+
+`Pretrained Multilingual Transformers Reveal Quantitative Distance Between Human Languages <https://arxiv.org/pdf/2603.17912>`_
+    Develops Attention Transport Distance to measure how similar languages are to each other in pre-trained language models.  Measures how source tokens attend to target tokens, averages over heads, and marginalizes over target tokens to generate an ATD for a given language and compares between languages using Wasserstein Distance. 
+
+CoVar Seminar
+-------------
+`BabyVision: Visual Reasoning Beyond Language <https://arxiv.org/pdf/2601.06521>`_
+    Today's multimodal LLMs ace PhD-level knowledge benchmarks yet fail basic visual tasks — tracking lines, spotting differences, mentally folding shapes — that 3-year-olds handle effortlessly. BabyVision, a 388-task benchmark spanning four perceptual domains, reveals that the best model scores just 49.7% versus 94.1% for adults, exposing a "verbalization bottleneck" where visual information that can't be expressed in language is simply discarded. The authors further propose BabyVision-Gen, showing that letting models reason through image generation rather than text may help bypass this fundamental limitation.

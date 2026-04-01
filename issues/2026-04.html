@@ -1,0 +1,500 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>The CoVar Zeitgeist: April, 2026 &#8212; The CoVar Zeitgeist 1.0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic_mod.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato" />
+    <link rel="stylesheet" type="text/css" href="../_static/pytorch_theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <script src="../_static/js/petite-vue.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="The CoVar Zeitgeist: March, 2026" href="2026-03.html" />
+    <link rel="prev" title="The CoVar Zeitgeist" href="../index.html" /> 
+  </head><body data-dark_mode_code_blocks="true">
+
+<div id="top_nav">
+    
+        <div id="notification_banner" data-banner-hiding="temporary" v-show="!permanentlyHidden">
+    <p v-if="visible" id="content">The <a href="https://covar.com/">CoVar</a> Zeitgeist is a curated synopsis of the latest advances in AI/ML research specifically tailored to our mission.</p>
+    <a class="close" href="#" @click.prevent="toggleVisible()">[[ visible ? '&#x25B2; HIDE' : '&#x25BC; SHOW BANNER' ]]</a>
+</div>
+
+<script>
+(function() {
+    const topNav = document.querySelector('#top_nav')
+    const notificationContent = document.querySelector('#notification_banner p#content').innerText
+    const localStorageKey = 'readNotification'
+    const bannerHiding = document.querySelector('#notification_banner').dataset['bannerHiding']
+    const cssVariableName = '--navbarHeight'
+    const rootElement = document.documentElement
+
+    /*************************************************************************/
+    // Local storage for remembering if the user has read the notification.
+
+    function checkAlreadyRead() {
+        return localStorage.getItem(localStorageKey) == notificationContent
+    }
+
+    function setRead() {
+        localStorage.setItem(localStorageKey, notificationContent)
+    }
+
+    function clearRead() {
+        localStorage.removeItem(localStorageKey)
+    }
+
+    const alreadyRead = checkAlreadyRead()
+    const permanentlyHidden = alreadyRead && bannerHiding == 'permanent'
+
+    /*************************************************************************/
+    // Updating a CSS variable so other elements adjust to the nav bar height.
+
+    function updateNavbarHeight() {
+        // Only update it if the delta is significant. Otherwise it causes
+        // unnecessary browser repaints.
+        const documentStyles = getComputedStyle(rootElement)
+        // We store the value in REM, so need to convert to pixels
+        const currentValue = parseFloat(
+            documentStyles.getPropertyValue(cssVariableName)
+        ) * parseFloat(documentStyles.fontSize)
+
+        const newValue = topNav.clientHeight
+
+        if (newValue - 5 > currentValue) {
+            console.log(`Updating ${cssVariableName} - overlapping`)
+            rootElement.style.setProperty(
+                cssVariableName, newValue + "px"
+            );
+        } else if (currentValue - newValue >= 30) {
+            console.log(`Updating ${cssVariableName} - gap too large`)
+            rootElement.style.setProperty(
+                cssVariableName, newValue + "px"
+            );
+        }
+    }
+
+    /*************************************************************************/
+    // After loading the page, and resizing the window, recalculate the nav bar
+    // height.
+
+    if (!permanentlyHidden) {
+        // This height is approximately correct when there's a banner, so
+        // shouldn't require any page reflow:
+        rootElement.style.setProperty(
+            '--navbarHeight', "5.5rem"
+        );
+
+        document.addEventListener("DOMContentLoaded", function() {
+            updateNavbarHeight()
+        });
+
+        var interval = undefined
+
+        window.addEventListener('resize', () => {
+            if (interval) {
+                clearTimeout(interval)
+            }
+            interval = setTimeout(() => {
+                console.log("Finished resizing")
+                updateNavbarHeight()
+            }, 100)
+        })
+    }
+
+    /*************************************************************************/
+
+    PetiteVue.createApp({
+        visible: !alreadyRead,
+        permanentlyHidden: permanentlyHidden,
+        bannerHiding: bannerHiding,
+        $delimiters: ['[[', ']]'],
+        toggleVisible() {
+            this.visible = !this.visible
+
+            if (this.visible) {
+                clearRead()
+            } else {
+                setRead()
+            }
+
+            if (!this.visible && bannerHiding == 'permanent') {
+                this.permanentlyHidden = true
+            }
+
+            // Run this after Vue has had time to update the DOM:
+            setTimeout(
+                updateNavbarHeight,
+                0
+            )
+        }
+    }).mount('#notification_banner')
+})()
+</script>
+    
+
+    <nav>
+        
+            
+        
+
+        <p id="toggle_sidebar">
+            <a href="#" title="Toggle sidebar">|||</a>
+        </p>
+        <h1><a href="../index.html" title="Go to homepage"><img src="../_static/covar_logo_white.png"/></a></h1>
+
+        <a id="mode_toggle" href="#" @click.prevent="handleClick" :title="mode">
+    <template v-if="mode == 'light'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_light"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><circle cx="39.311" cy="39.524" r="15.734" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.212,4.901c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901l-0,9.614c-0,2.705 2.196,4.901 4.9,4.901c2.705,0 4.901,-2.196 4.901,-4.901l0,-9.614Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M67.48,18.073c1.913,-1.912 1.913,-5.018 0,-6.931c-1.912,-1.912 -5.018,-1.912 -6.931,0l-6.798,6.799c-1.912,1.912 -1.912,5.018 0,6.931c1.913,1.912 5.018,1.912 6.931,-0l6.798,-6.799Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.728,61.108c1.912,-1.913 1.912,-5.018 -0,-6.931c-1.913,-1.913 -5.019,-1.913 -6.931,-0l-6.799,6.798c-1.912,1.913 -1.912,5.019 0,6.931c1.913,1.913 5.019,1.913 6.931,0l6.799,-6.798Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.682,54.177c-1.913,-1.913 -5.018,-1.913 -6.931,-0c-1.912,1.913 -1.912,5.018 0,6.931l6.798,6.798c1.913,1.913 5.019,1.913 6.931,0c1.913,-1.912 1.913,-5.018 0,-6.931l-6.798,-6.798Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M4.901,34.623c-2.705,0 -4.901,2.196 -4.901,4.901c0,2.705 2.196,4.901 4.901,4.901l9.614,0c2.705,0 4.901,-2.196 4.901,-4.901c0,-2.705 -2.196,-4.901 -4.901,-4.901l-9.614,0Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.212,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901l-0,9.614c-0,2.705 2.196,4.901 4.9,4.901c2.705,-0 4.901,-2.196 4.901,-4.901l0,-9.614Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M18.929,11.142c-1.912,-1.912 -5.018,-1.912 -6.931,0c-1.912,1.913 -1.912,5.019 0,6.931l6.799,6.799c1.912,1.912 5.018,1.912 6.931,-0c1.912,-1.913 1.912,-5.019 -0,-6.931l-6.799,-6.799Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.108,34.623c-2.705,0 -4.901,2.196 -4.901,4.901c-0,2.705 2.196,4.901 4.901,4.901l9.614,0c2.705,0 4.901,-2.196 4.901,-4.901c-0,-2.705 -2.196,-4.901 -4.901,-4.901l-9.614,0Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+
+    <template v-if="mode == 'dark'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_dark"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><circle cx="39.311" cy="39.524" r="15.734" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.212,14.515c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,0 -4.901,2.196 -4.901,4.901c0,2.705 2.197,4.901 4.901,4.901c2.705,0 4.901,-2.196 4.901,-4.901Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M60.662,24.892c1.902,-1.902 1.902,-4.99 0,-6.892l-0.04,-0.039c-1.901,-1.902 -4.989,-1.902 -6.891,-0c-1.901,1.901 -1.901,4.989 0,6.891l0.04,0.04c1.902,1.901 4.989,1.901 6.891,-0Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.732,61.103c1.91,-1.91 1.91,-5.011 0,-6.921l-0.009,-0.01c-1.91,-1.91 -5.012,-1.91 -6.921,-0c-1.91,1.91 -1.91,5.011 -0,6.921l0.01,0.01c1.909,1.91 5.011,1.91 6.92,-0Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.672,54.167c-1.907,-1.907 -5.004,-1.907 -6.911,0l-0.02,0.02c-1.907,1.907 -1.907,5.004 0,6.911c1.907,1.907 5.004,1.907 6.911,-0l0.02,-0.02c1.907,-1.907 1.907,-5.004 0,-6.911Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M14.52,34.623c-2.702,0 -4.896,2.194 -4.896,4.896l0,0.01c0,2.702 2.194,4.896 4.896,4.896c2.702,0 4.896,-2.194 4.896,-4.896l-0,-0.01c-0,-2.702 -2.194,-4.896 -4.896,-4.896Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.212,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.901,2.196 -4.901,4.901c0,2.704 2.197,4.9 4.901,4.9c2.705,0 4.901,-2.196 4.901,-4.9Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M25.73,17.943c-1.911,-1.911 -5.015,-1.911 -6.926,0l-0.005,0.005c-1.911,1.911 -1.911,5.015 0,6.926c1.911,1.911 5.015,1.911 6.926,0l0.005,-0.005c1.911,-1.911 1.911,-5.014 -0,-6.926Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.098,34.623c-2.699,0 -4.891,2.192 -4.891,4.892l-0,0.019c-0,2.699 2.192,4.891 4.891,4.891c2.7,0 4.892,-2.192 4.892,-4.891l0,-0.019c0,-2.7 -2.192,-4.892 -4.892,-4.892Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+
+    <template v-if="mode == 'darkest'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_darkest"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><path d="M39.315,23.791c8.684,-0 15.734,7.05 15.734,15.733c0,8.684 -7.05,15.734 -15.734,15.734c-8.683,0 -15.733,-7.05 -15.733,-15.734c-0,-8.683 7.05,-15.733 15.733,-15.733Zm0,4.737c6.069,0 10.997,4.927 10.997,10.996c-0,6.069 -4.928,10.996 -10.997,10.996c-6.068,0 -10.996,-4.927 -10.996,-10.996c0,-6.069 4.928,-10.996 10.996,-10.996Z" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.216,14.515c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,0 -4.9,2.196 -4.9,4.901c-0,2.705 2.196,4.901 4.9,4.901c2.705,0 4.901,-2.196 4.901,-4.901Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M60.666,24.892c1.902,-1.902 1.902,-4.99 0,-6.892l-0.04,-0.039c-1.901,-1.902 -4.989,-1.902 -6.891,-0c-1.901,1.901 -1.901,4.989 0,6.891l0.04,0.04c1.902,1.901 4.99,1.901 6.891,-0Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.737,61.103c1.909,-1.91 1.909,-5.011 -0,-6.921l-0.01,-0.01c-1.91,-1.91 -5.011,-1.91 -6.921,-0c-1.91,1.91 -1.91,5.011 -0,6.921l0.01,0.01c1.91,1.91 5.011,1.91 6.921,-0Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.676,54.167c-1.907,-1.907 -5.004,-1.907 -6.911,0l-0.02,0.02c-1.907,1.907 -1.907,5.004 0,6.911c1.907,1.907 5.004,1.907 6.911,-0l0.02,-0.02c1.907,-1.907 1.907,-5.004 0,-6.911Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M14.524,34.623c-2.702,0 -4.896,2.194 -4.896,4.896l0,0.01c0,2.702 2.194,4.896 4.896,4.896c2.702,0 4.896,-2.194 4.896,-4.896l0,-0.01c0,-2.702 -2.194,-4.896 -4.896,-4.896Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.216,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901c-0,2.704 2.196,4.9 4.9,4.9c2.705,0 4.901,-2.196 4.901,-4.9Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M25.734,17.943c-1.911,-1.911 -5.015,-1.911 -6.926,0l-0.005,0.005c-1.911,1.911 -1.911,5.015 0,6.926c1.911,1.911 5.015,1.911 6.926,0l0.005,-0.005c1.911,-1.911 1.911,-5.014 0,-6.926Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.103,34.623c-2.7,0 -4.892,2.192 -4.892,4.892l-0,0.019c-0,2.699 2.192,4.891 4.892,4.891c2.699,0 4.891,-2.192 4.891,-4.891l0,-0.019c0,-2.7 -2.192,-4.892 -4.891,-4.892Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+</a>
+
+<script>
+(function() {
+    const LOCAL_STORAGE_KEY = 'piccoloThemeMode'
+
+    var initialMode = localStorage.getItem(LOCAL_STORAGE_KEY)
+
+    if (initialMode) {
+        // Make sure the value in local storage is valid
+        if (['light', 'dark', 'darkest'].indexOf(initialMode) == -1) {
+            initialMode = 'light'
+            localStorage.setItem(LOCAL_STORAGE_KEY, initialMode)
+        }
+    } else {
+        // Check if the client prefers dark mode
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            initialMode = 'dark'
+        } else {
+            initialMode = 'light'
+        }
+        localStorage.setItem(LOCAL_STORAGE_KEY, initialMode)
+    }
+
+    document.documentElement.dataset.mode = initialMode
+
+    PetiteVue.createApp({
+        'mode': initialMode,
+        handleClick() {
+            let currentMode = this.mode
+
+            if (currentMode == 'light') {
+                this.mode = 'dark'
+            } else if (currentMode == 'dark') {
+                this.mode = 'darkest'
+            } else if (currentMode == 'darkest') {
+                this.mode = 'light'
+            }
+
+            document.documentElement.dataset.mode = this.mode
+            localStorage.setItem(LOCAL_STORAGE_KEY, this.mode)
+
+            console.log(this.mode)
+        }
+    }).mount('#mode_toggle')
+})()
+</script>
+            <p class="mobile_search_link">
+                <a href="../search.html" title="Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 64" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2">
+                        <path d="M14.873 40.009c-2.315-3.943-3.642-8.532-3.642-13.429C11.231 11.91 23.141 0 37.811 0s26.58 11.91 26.58 26.58-11.91 26.58-26.58 26.58a26.44 26.44 0 0 1-14.277-4.161L9.739 62.794a3.12 3.12 0 0 1-4.413 0L.913 58.382c-1.217-1.218-1.217-3.196 0-4.413l13.96-13.96zM37.811 8.054c10.225 0 18.526 8.301 18.526 18.526s-8.301 18.526-18.526 18.526-18.526-8.301-18.526-18.526S27.586 8.054 37.811 8.054z" fill="#fff" />
+                    </svg>
+                </a>
+            </p>
+        
+
+        <div class="searchbox_wrapper">
+            
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+    </nav>
+</div>
+
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><p class="caption" role="heading"><span class="caption-text">2026</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2026-04</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2026-03.html">2026-03</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2026-02.html">2026-02</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2026-01.html">2026-01</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">2025</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="2025-12.html">2025-12</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2025-11.html">2025-11</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2025-10.html">2025-10</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2025-09.html">2025-09</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2025-08.html">2025-08</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2025-07.html">2025-07</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2025-06.html">2025-06</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2025-05.html">2025-05</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2025-04.html">2025-04</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2025-03.html">2025-03</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2025-02.html">2025-02</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2025-01.html">2025-01</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">2024</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="2024-12.html">2024-12</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2024-11.html">2024-11</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2024-10.html">2024-10</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2024-09.html">2024-09</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2024-08.html">2024-08</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2024-07.html">2024-07</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2024-06.html">2024-06</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2024-05.html">2024-05</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2024-04.html">2024-04</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2024-03.html">2024-03</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2024-02.html">2024-02</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2024-01.html">2024-01</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">2023</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="2023-12.html">2023-12</a></li>
+</ul>
+
+        </div>
+      </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="the-covar-zeitgeist-april-2026">
+<h1>The CoVar Zeitgeist: April, 2026<a class="headerlink" href="#the-covar-zeitgeist-april-2026" title="Permalink to this heading">¶</a></h1>
+<p>The April, 2026, issue of the CoVar Zeitgeist features research predominantly published in March.  March saw a flurry of research on all aspects of generative AI models.  In particular, papers have been asking what it means for a generative AI model to understand the world as it scales and concluded that general intelligence may not be possible; more practical approaches have proposed novel architectures with functioning world models.  Other research has explored the dynamics of frontier models: the dynamics of how pretraining and the choice of loss function affect model structure, or how to causally understand how the large collection of weights which make up a neural network function together.  One contributor even dug into the depths of a transformer architecture to show it can function as a classical computer! Featuring:</p>
+<ul class="simple">
+<li><p>A blog post showing that a transformer architecture can function as a classical computer.</p></li>
+<li><p>A study demonstrating that base LLMs are semantically calibrated but post-trained models may not be.</p></li>
+<li><p>A novel world model architecture showing physical understanding of 3D space.</p></li>
+<li><p>A position paper arguing that general superintelligence is not achievable due to energy constraints and that more targeted intelligence is preferable.</p></li>
+<li><p>An analysis of the effects of gradient flow on attention heads.</p></li>
+<li><p>A proposal for e-values, an alternate method for null hypothesis likelihood to p-values.</p></li>
+</ul>
+<p><a class="reference external" href="https://covar.com/">Check out the CoVar website!</a></p>
+<section id="featured">
+<h2>Featured<a class="headerlink" href="#featured" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://www.percepta.ai/blog/can-llms-be-computers">Can LLMs Be Computers?</a></dt><dd><p>Develops a novel decoding scheme which allows standard transformer architectures to act as classical computers and execute arbitrary programs for millions of steps.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2511.04869">Trained on Tokens, Calibrated on Concepts: The Emergence of Semantic Calibration in LLMs</a></dt><dd><p>Provides a theoretical proof that LLMs will be semantically calibrated when they can predict their distribution over a set of semantic classes before answering a prompt.  Shows that RL fine-tuning and chain-of-thought analysis both break this calibration.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2603.19312v1">LeWorldModel: Stable End-to-End Joint-Embedding Predictive Architecture from Pixels</a></dt><dd><p>Introduces a novel Joint Embedding Predictive Architecture (JEPA) which can be stably trained end-to-end on single GPU with only two loss terms.  The resulting world model shows some physical understanding in its latent space.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2603.14147">An Alternative Trajectory for Generative AI</a></dt><dd><p>Argues that the increase in energy use as LLMs scale makes generalized superintelligence unlikely. Takes inspiration from coding and mathematics domains to propose paths forward for other specialized domains: construct symbolic abstractions encoding world knowledge and leverage them for curriculum learning.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2603.06248">Gradient Flow Polarizes Softmax Outputs towards Low-Entropy Solutions</a></dt><dd><p>Studies a value-softmax model to analyze behavior of attention head-like mechanisms in isolation.  Shows that gradient-based training implies a bias towards sparsification for softmax structures.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2603.24421">E-values as statistical evidence: A comparison to Bayes factors, likelihoods, and p-values</a></dt><dd><p>Reviews desirable properties for a statistical measure against a null hypothesis.  Proposes e-values as a measure which possesses most of these properties.</p>
+</dd>
+</dl>
+</section>
+<section id="llms">
+<h2>LLMs<a class="headerlink" href="#llms" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://arxiv.org/pdf/2603.03276">Beyond Language Modeling: An Exploration of Multimodal Pretraining</a></dt><dd><p>A thorough exploration of how a model trained from scratch in a multi-modal setting learns in the pretraining phase.  Avoids confounding from language training.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2603.06248">Gradient Flow Polarizes Softmax Outputs towards Low-Entropy Solutions</a></dt><dd><p>Studies a value-softmax model to analyze behavior of attention head-like mechanisms in isolation.  Shows that gradient-based training implies a bias towards sparsification for softmax structures.</p>
+</dd>
+<dt><a class="reference external" href="https://www.percepta.ai/blog/can-llms-be-computers">Can LLMs Be Computers?</a></dt><dd><p>Develops a novel decoding scheme which allows standard transformer architectures to act as classical computers and execute arbitrary programs for millions of steps.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2511.04869">Trained on Tokens, Calibrated on Concepts: The Emergence of Semantic Calibration in LLMs</a></dt><dd><p>Provides a theoretical proof that LLMs will be semantically calibrated when they can predict their distribution over a set of semantic classes before answering a prompt.  Shows that RL fine-tuning and chain-of-thought analysis both break this calibration.</p>
+</dd>
+</dl>
+</section>
+<section id="novel-architectures">
+<h2>Novel Architectures<a class="headerlink" href="#novel-architectures" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://arxiv.org/pdf/2603.15619">Mixture-of-Depths Attention</a></dt><dd><p>Optimization stability and information dilution pose challenges for scaling depth in transformers.  This paper introduces Mixture of Depths Attention (MoDa), which lets attention heads attend to depth (key, value) pairs previous layers.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2603.19312v1">LeWorldModel: Stable End-to-End Joint-Embedding Predictive Architecture from Pixels</a></dt><dd><p>Introduces a novel Joint Embedding Predictive Architecture (JEPA) which can be stably trained end-to-end on single GPU with only two loss terms.  The resulting world model shows some physical understanding in its latent space.</p>
+</dd>
+<dt><a class="reference external" href="https://research.google/blog/turboquant-redefining-ai-efficiency-with-extreme-compression/">TurboQuant: Redefining AI efficiency with extreme compression</a></dt><dd><p>Develops novel methods to improve vector quantization in large language models.  Improves substantial quantization results without sacrificing performance.</p>
+</dd>
+</dl>
+</section>
+<section id="object-detection">
+<h2>Object Detection<a class="headerlink" href="#object-detection" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://arxiv.org/pdf/2603.02142">Is Bigger Always Better? Efficiency Analysis in Resource-Constrained Small Object Detection</a></dt><dd><p>Find that small high-resolution models are Pareto dominant in remote sensing applications: larger models are not necessarily better for a fixed resource budget.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2603.04325">Scalable Evaluation of the Realism of Synthetic Environmental Augmentations in Images</a></dt><dd><p>Finds that generative models are more effective than rules-based methods at providing environmental augmentations to image data.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2603.09318">Anomaly detection using surprisals</a></dt><dd><p>Defines the surprisal score for an observation as its negative log density under a possibly mispecified distribution.  Leverages this to reduce anomaly detection to modelling the tail of the surprisal distribution.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2603.20174">TinyML Enhances CubeSat Mission Capabilities</a></dt><dd><p>Develops an edge computing algorithm for object detection and classification on edge devices: CubeSat systems.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2603.26658">Zero-Shot Depth from Defocus</a></dt><dd><p>Develops a method to predict depth inside a scene by data collected by varying the focus of a monocular camera.</p>
+</dd>
+</dl>
+</section>
+<section id="testing-evaluation">
+<h2>Testing &amp; Evaluation<a class="headerlink" href="#testing-evaluation" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://arxiv.org/pdf/2603.01630">SEED-SET: Scalable Evolving Experimental Design for System-Level Ethical Testing</a></dt><dd><p>Proposes a rigorous testing and evaluation pipeline for autonomous systems.  Uses Bayesian experimental design and hierarchical Gaussian Processes for objective and subjective evaluations.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2603.02202">Frontier Models Can Take Actions at Low Probabilities</a></dt><dd><p>Could an LLM take an adverse action with probability low enough to avoid testing and evaluation but high enough to occur with probability one in the field?  This paper demonstrates the possibility.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2603.01203">How Well Does Agent Development Reflect Real-World Work?</a></dt><dd><p>Analyzes current Agentic AI benchmarks to analyze their relevance to real-world work.  Finds that they mostly target software and mathematics skills, lacking other elements of important work areas.</p>
+</dd>
+</dl>
+</section>
+<section id="autonomy">
+<h2>Autonomy<a class="headerlink" href="#autonomy" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://arxiv.org/pdf/2603.13688">When Should Humans Step In? Optimal Human Dispatching in AI-Assisted Decisions</a></dt><dd><p>Proposes a decision-theoretic framework for AI agents to decide when to seek human help by attaching a cost to human intervention and maximizing a reward function.  In peer review settings, achieved the same level of performance as fully-human methods while requiring only 20-30% of the effort.</p>
+</dd>
+<dt><a class="reference external" href="https://www.anthropic.com/engineering/harness-design-long-running-apps">Harness design for long-running application development</a></dt><dd><p>Anthropic designs a harness to allow Claude to function as a full-stack engineer.  The harness design is inspired by GANs, with a planner, a generator, and an evaluator working in tandem towards a common goal.</p>
+</dd>
+</dl>
+</section>
+<section id="reinforcement-learning">
+<h2>Reinforcement Learning<a class="headerlink" href="#reinforcement-learning" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://arxiv.org/pdf/2603.08660">How Far Can Unsupervised RLVR Scale LLM Training?</a></dt><dd><p>A comprehensive study of unsupervised reinforcement learning with unverified rewards (URLVR).  Finds, among other things, that intrinsic rewards follow a rise-then-fall curve across methods and that extrinsic rewards may escape the confidence-correctness ceiling.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2603.08706">Agentic Critical Training</a></dt><dd><p>Proposes Agent Critical Training, a reinforcement learning method to train agents to judge which of several courses of action is superior by reasoning, not imitation.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2603.13201">Neuron-Aware Data Selection in Instruction Tuning for Large Language Models</a></dt><dd><p>Proposes NAIT, a variant of instruction tuning which analyzes neuron activations inside LLMs to determine which instruction tuning data best improve target capabilities and finetunes on an optimal dataset.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2603.10165">OpenClaw-RL: Train Any Agent Simply by Talking</a></dt><dd><p>Develops an agentic RL framework for training agents based on next-state signals such as user replies.  Allows for agentic improvement in the field.</p>
+</dd>
+</dl>
+</section>
+<section id="statistics">
+<h2>Statistics<a class="headerlink" href="#statistics" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://arxiv.org/pdf/2603.06557">Causal Interpretation of Neural Network Computations with Contributing Decomposition</a></dt><dd><p>Develops CODEC (contribution decomposition) to provide causal analysis of neural networks.  CODEC identifies a targeted output, quantifies how each unit contributes to the output for given inputs, decomposes the contributions to learn how neurons act together, and maps these contributions to input features.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2603.09787">What is Missing? Explaining Neurons Activated by Absent Concepts</a></dt><dd><p>Investigates encoded absences: neurons in deep neural networks that increase when a particular input concept is absent.  Shows that encoded absences are prevalent in existing DNNs, and provides several methods for their estimation.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2603.17569">Gaussian Process Limit Reveals Structural Benefits of Graph Transformers</a></dt><dd><p>Provides a theoretical analysis of the benefits of attention-based graph transformers over graph convolutional networks for node-based prediction tasks, with a focus on the attention mechanism.  Additionally provides empirical validation.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2603.19728">Objective Model Prior Probabilities in Variable Selection</a></dt><dd><p>Notes limitations of uniform and Jeffrey’s priors for variable selection in Bayesian modelling.  Proposes a new prior which includes the parsimony assumption: simpler models are favored, all else being equal.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2603.24421">E-values as statistical evidence: A comparison to Bayes factors, likelihoods, and p-values</a></dt><dd><p>Reviews desirable properties for a statistical measure against a null hypothesis.  Proposes e-values as a measure which possesses most of these properties.</p>
+</dd>
+</dl>
+</section>
+<section id="position-papers">
+<h2>Position Papers<a class="headerlink" href="#position-papers" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://arxiv.org/pdf/2602.23643v1">AI Must Embrace Specialization via Superhuman Adaptable Intelligence</a></dt><dd><p>A position paper arguing that Artificial General Intelligence (AGI) is impossible, and that Superhuman Adaptable Intelligence (SAI) which can exceed human perform on one particular task.  From this, the authors deduce that self-supervised learning and world models will characterize future AI development.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2603.14147">An Alternative Trajectory for Generative AI</a></dt><dd><p>Argues that the increase in energy use as LLMs scale makes generalized superintelligence unlikely. Takes inspiration from coding and mathematics domains to propose paths forward for other specialized domains: construct symbolic abstractions encoding world knowledge and leverage them for curriculum learning.</p>
+</dd>
+</dl>
+</section>
+<section id="applications">
+<h2>Applications<a class="headerlink" href="#applications" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://datachutney.io/cognitive-surrender-explainer/">Thinking—Fast, Slow, and Artificial</a></dt><dd><p>Conducts a comprehensive study to evaluate the effects of AI use on the cognitive functioning of human users.  Finds that human users have a natural tendency to trust the AI even when it is incorrect, and it is difficult for users to fight this bias even if aware of it.</p>
+</dd>
+<dt><a class="reference external" href="https://arxiv.org/pdf/2603.17912">Pretrained Multilingual Transformers Reveal Quantitative Distance Between Human Languages</a></dt><dd><p>Develops Attention Transport Distance to measure how similar languages are to each other in pre-trained language models.  Measures how source tokens attend to target tokens, averages over heads, and marginalizes over target tokens to generate an ATD for a given language and compares between languages using Wasserstein Distance.</p>
+</dd>
+</dl>
+</section>
+<section id="covar-seminar">
+<h2>CoVar Seminar<a class="headerlink" href="#covar-seminar" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference external" href="https://arxiv.org/pdf/2601.06521">BabyVision: Visual Reasoning Beyond Language</a></dt><dd><p>Today’s multimodal LLMs ace PhD-level knowledge benchmarks yet fail basic visual tasks — tracking lines, spotting differences, mentally folding shapes — that 3-year-olds handle effortlessly. BabyVision, a 388-task benchmark spanning four perceptual domains, reveals that the best model scores just 49.7% versus 94.1% for adults, exposing a “verbalization bottleneck” where visual information that can’t be expressed in language is simply discarded. The authors further propose BabyVision-Gen, showing that letting models reason through image generation rather than text may help bypass this fundamental limitation.</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+    
+        <div id="show_right_sidebar">
+            <p><a class="toggle_right_sidebar" href="#"><span class="icon">&lt;</span><span>Page contents</span></a></p>
+        </div>
+
+        <div id="right_sidebar">
+            <p><a class="toggle_right_sidebar" href="#"><span class="icon">&gt;</span><span>Page contents:</span></a></p>
+            <div class="page_toc">
+                <ul>
+<li><a class="reference internal" href="#">The CoVar Zeitgeist: April, 2026</a><ul>
+<li><a class="reference internal" href="#featured">Featured</a></li>
+<li><a class="reference internal" href="#llms">LLMs</a></li>
+<li><a class="reference internal" href="#novel-architectures">Novel Architectures</a></li>
+<li><a class="reference internal" href="#object-detection">Object Detection</a></li>
+<li><a class="reference internal" href="#testing-evaluation">Testing &amp; Evaluation</a></li>
+<li><a class="reference internal" href="#autonomy">Autonomy</a></li>
+<li><a class="reference internal" href="#reinforcement-learning">Reinforcement Learning</a></li>
+<li><a class="reference internal" href="#statistics">Statistics</a></li>
+<li><a class="reference internal" href="#position-papers">Position Papers</a></li>
+<li><a class="reference internal" href="#applications">Applications</a></li>
+<li><a class="reference internal" href="#covar-seminar">CoVar Seminar</a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+        </div>
+    
+
+      <div class="clearer"></div>
+    </div>
+    <div class="button_nav_wrapper">
+        <div class="button_nav">
+            <div class="left">
+                
+                <a href="../index.html">
+                    <span class="icon">&lt;</span><span>The CoVar Zeitgeist</span></a>
+                
+            </div>
+
+            <div class="right">
+                
+                    <a href="2026-03.html"><span>The CoVar Zeitgeist: March, 2026</span><span class="icon">&gt;</span></a>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2025, CoVar, LLC.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+
+<p id="theme_credit"></p>
+  </body>
+</html>
