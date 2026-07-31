@@ -1,0 +1,212 @@
+The CoVar Zeitgeist: May, 2025
+================================
+There is a lot of interesting research this month. Featuring:
+
+* A novel sparse attention module which achieves the theoretical maximum possible speedup.  
+* An investigation of grokking which finds that grokking can be accelerated by leveraging embeddings from a smaller and weaker model.
+* A Yee Whye Teh paper which proposes a gradient-free learning method for neural networks based on diffusion literature.
+* A paper which argues that existing benchmarks and evaluations for LLM reasoning are suboptimal and proposes a reasonable alternative.
+* An examination from Google about difficulties encountered in optimizing machine translation methods for (1) preserving the semantic information of the source text and (2) generating natural sounding language simultaneously.  Optimization methods cannot serve two masters.
+* A nature paper proposing a novel reinforcement learning algorithm that can generalize to many tasks.  Claims to be the first model to successfully collect diamonds in Minecraft "from scratch".
+
+`CoVar <https://covar.com/>`_
+
+Featured
+--------
+`Generalized Neighborhood Attention: Multi-dimensional Sparse Attention at the Speed of Light <https://arxiv.org/pdf/2504.16922>`_
+    Develops a class of sparse attention mechanisms focussing on locality, particularly the Generalized Neighborhood Attention (GNA) which features strided and unstrided sliding windows as well as blocked attention.  Realizes the theoretical maximum speedup while maintaining performance.
+    
+`LET ME GROK FOR YOU: ACCELERATING GROKKING VIA EMBEDDING TRANSFER FROM A WEAKER MODEL <https://arxiv.org/pdf/2504.13292>`_
+    Investigates grokking, where a neural network quickly transitions from poor-to-high performance after a long period of training.  Finds that grokking can be accelerated by (1) training a small  model to achieve some non-optimal performance, (2) extracting the input embedding, and (3) initializing a larger model at this embedding.
+
+`NOPROP: TRAINING NEURAL NETWORKS WITHOUT BACK-PROPAGATION OR FORWARD-PROPAGATION <https://arxiv.org/pdf/2503.24322>`_
+    Proposes a  back propagation-free method for neural networks, NoProp, which is based on the denoising score matching approach from the diffusion model literature.  Claims that this leads to better performance and less training time than traditional back propagation methods.
+
+`A Sober Look at Progress in Language Model Reasoning: Pitfalls and Paths to Reproducibility <https://arxiv.org/pdf/2504.07086>`_
+    Asserts that much recent research in LLM reasoning, in particular on math benchmarks, lacks rigor and is sensitive to a large number of variance-causing factors such as random seeds, prompt choices, and hardware configuration.  Verifies this empirically and proposes a unified testing framework for future use.
+
+`You Cannot Feed Two Birds with One Score: the Accuracy-Naturalness Tradeoff in Translation <https://arxiv.org/pdf/2503.24013>`_
+    Machine translation seeks to (1) accurately translate the meaning of the source text and (2) appear natural in the target language.  This paper proves, using recent information theory techniques, that single score summaries cannot adequately capture performance on both tasks simultaneously.  Advocates comparisons in the accuracy-naturalness plane instead.
+
+`Mastering diverse control tasks through world models <https://www.nature.com/articles/s41586-025-08744-2>`_
+    Proposes Dreamer v3 - a general algorithm that that performs well on many different RL tasks under the same hyperparameter configurations. Trains a world model which predicts future state representations and rewards, which is leveraged to train a policy on "imagined" data.  Is the first model to collect diamonds in Minecraft from scratch.
+
+LLMs
+----
+`Scaling Laws for Native Multimodal Models <https://arxiv.org/pdf/2504.07951>`_
+    Conducts extensive experiments to derive scaling laws for native multimodal LLMs (NMMs): LLMs that were trained from scratch on all modalities.
+
+`Why do LLMs attend to the first token? <https://www.arxiv.org/pdf/2504.02732>`_
+    Investigates why LLMs place a disproportionate amount of attention on the first token.  Hypothesizes that this is to prevent over-mixing, and investigates empirically.
+
+`Sleep-time Compute: Beyond Inference Scaling at Test-time <https://arxiv.org/pdf/2504.13171>`_
+    Test-time compute has become a common method to enable language models in practice, but requires significant computations at test-time.  This paper proposes sleep-time compute: the language model can predict queries and perform pre-test time compute.
+
+`TTRL: Test-Time Reinforcement Learning <https://www.arxiv.org/pdf/2504.16084>`_
+    Explores how to effectively perform reinforcement learning on data without labels.  Develops methods which leverage the information already contained in pre-trained LLMs to bootstrap labels and enable post-training on unlabelled data.
+
+LLM Reasoning
+-------------
+`A Sober Look at Progress in Language Model Reasoning: Pitfalls and Paths to Reproducibility <https://arxiv.org/pdf/2504.07086>`_
+    Asserts that much recent research in LLM reasoning, in particular on math benchmarks, lacks rigor and is sensitive to a large number of variance-causing factors such as random seeds, prompt choices, and hardware configuration.  Verifies this empirically and proposes a unified testing framework for future use.
+
+`Echo Chamber: RL Post-training Amplifies Behaviors Learned in Pretraining <https://arxiv.org/pdf/2504.07912>`_
+    How much does post-training RL matter for mathematical reasoning?  This paper investigates by examining the entire training pipeline, end-to-end.  Reports many findings, including that RL fine-training tends to converge towards one distribution observed during training.
+
+`d1: Scaling Reasoning in Diffusion Large Language Models via Reinforcement Learning <https://dllm-reasoning.github.io/media/preprint.pdf>`_
+    Proposes a framework for converting diffusion-based LLMs into reasoning models by using supervised fine-tuning and RL algorithms.  This framework leads to SOTA performance for reasoning dLLMs.
+
+`PHYBench: Holistic Evaluation of Physical Perception and Reasoning in Large Language Models <https://arxiv.org/pdf/2504.16074>`_
+    Investigates reasoning capabilities of LLMs by compiling a high quality set of physics questions, prompting LLMs for answers, and measuring the correctness of answers by finding the graph edit distance between the LLM response and the correct answer.
+
+`Optimizing Language Models for Inference Time Objectives using Reinforcement Learning <https://arxiv.org/pdf/2503.19595>`_
+    Directly optimizes language models for inference time using reinforcement learning.  Can improve performance for pass@k and majority voting.
+
+Novel Architectures
+-------------------
+`Roll the dice & look before you leap: Going beyond the creative limits of next-token prediction <https://arxiv.org/pdf/2504.15266>`_
+    Examines LLM performance on a suite of tasks which require stochastic planning.  Finds that current architectures are limited at these tasks, and proposes a novel transformer architecture which (1) plans multiple tokens ahead and (2) injects noise into the input layer rather than rely on temperature.
+
+`Generalized Neighborhood Attention: Multi-dimensional Sparse Attention at the Speed of Light <https://arxiv.org/pdf/2504.16922>`_
+    Develops a class of sparse attention mechanisms focussing on locality, particularly the Generalized Neighborhood Attention (GNA) which features strided and unstrided sliding windows as well as blocked attention.  Realizes the theoretical maximum speedup while maintaining performance.
+
+Object Detection
+----------------
+`Efficient Self-Supervised Learning for Earth Observation via Dynamic Dataset Curation <https://arxiv.org/pdf/2504.06962>`_
+    Building a foundation model for SAR earth observation data - as well as building foundation models in general - is highly dependent on the data used in training.  This paper proposes a dynamic pruning strategy to prune strongly redundant datasets.
+
+Autonomy & Safety
+-----------------
+`Attack-Defense Trees with Offensive and Defensive Attributes (with Appendix) <https://arxiv.org/pdf/2504.12748>`_
+    Attack-defense trees provide a method to analyze attacker-defender strategies in cybersecurity problems.  This paper incorporates defender resources into such analysis to improve accuracy.
+
+`Expected Free Energy-based Planning as Variational Inference <https://arxiv.org/pdf/2504.14898>`_
+    Expected Free Energy minimization methods have potential for AI agents to employ in the explore-exploit dilemma but face computational issues.  This paper proposes a variational inference method which is tractable.
+
+`Scaling Laws For Scalable Oversight <https://arxiv.org/pdf/2504.18530>`_
+    Can a weak AI model effectively provide oversight to a stronger AI model?  This paper investigates and finds that such a practice is unreliable.
+
+`Cognitive swarming in complex environments with attractor dynamics and oscillatory computing <https://pmc.ncbi.nlm.nih.gov/articles/PMC7183509/>`_
+    Investigates swarming behavior by comparing a swarm of autonomous agents as a whole to a single entity with a hippocampus model.  In this paradigm, individual agents are analogous to individual neurons.  
+
+Computational Efficiency
+------------------------
+`Task-Circuit Quantization: Leveraging Knowledge Localization and Interpretability for Compression <https://arxiv.org/pdf/2504.07389>`_
+    Introduces a novel quantization technique which seeks to preserve performance at specific tasks by contrasting normal weights to uniformly quantized weights and using the gradient to predict expected task degradation.  With 3.1 bits, a model quantized in this manner can maintain 96% of the performance of Llama-3-8B-Instruct. 
+
+`Hardware/Software Co-Design of RISC-V Extensions for Accelerating Sparse DNNs on FPGAs <https://arxiv.org/pdf/2504.19659>`_
+    Designs a novel scheme for putting deep neural nets on FPGAs leveraging the semi-structured sparsity in DNNs.
+
+Reinforcement Learning
+----------------------
+`AssistanceZero: Scalably Solving Assistance Games <https://arxiv.org/pdf/2504.07091>`_
+    Assistance games are an alternative to RLHF where a human and an assistant play together to complete a goal known only to the player.  This paper develops a scalable approach to assistance games and applies it to a Minecraft setting.
+
+`Mastering diverse control tasks through world models <https://www.nature.com/articles/s41586-025-08744-2>`_
+    Proposes Dreamer v3 - a general algorithm that that performs well on many different RL tasks under the same hyperparameter configurations. Trains a world model which predicts future state representations and rewards, which is leveraged to train a policy on "imagined" data.  Is the first model to collect diamonds in Minecraft from scratch.
+
+`Does Reinforcement Learning Really Incentivize Reasoning Capacity in LLMs Beyond the Base Model? <https://arxiv.org/pdf/2504.13837>`_
+    Finds that reinforcement learning with verifiable rewards (RLVR) does not improve the capabilities of an LLM for reasoning, but instead influences the LLM to be more likely to select paths it always had the capacity for.  
+
+Training & Continuous Learning
+------------------------------
+`NOPROP: TRAINING NEURAL NETWORKS WITHOUT BACK-PROPAGATION OR FORWARD-PROPAGATION <https://arxiv.org/pdf/2503.24322>`_
+    Proposes a  back propagation-free method for neural networks, NoProp, which is based on the denoising score matching approach from the diffusion model literature.  Claims that this leads to better performance and less training time than traditional back propagation methods.
+
+`Sculpting Subspaces: Constrained Full Fine-Tuning in LLMs for Continual Learning <https://arxiv.org/pdf/2504.07097>`_
+    Continual learning - that is, learning new information while remembering old information - can pose challenges for LLMs.  This paper proposes an SVD-based method where a subspace storing critical information is identified and updates are made orthogonally to this space.
+
+`Gradient Descent Robustly Learns the Intrinsic Dimension of Data in Training Convolutional Neural Networks <https://arxiv.org/pdf/2504.08628>`_
+    Investigates using gradient descent to train a convolutional neural network (CNN) in the presence of background image noise.  Finds that the CNNs learn the dimension of the noiseless data.
+
+`LET ME GROK FOR YOU: ACCELERATING GROKKING VIA EMBEDDING TRANSFER FROM A WEAKER MODEL <https://arxiv.org/pdf/2504.13292>`_
+    Investigates grokking, where a neural network quickly transitions from poor-to-high performance after a long period of training.  Finds that grokking can be accelerated by (1) training a small  model to achieve some non-optimal performance, (2) extracting the input embedding, and (3) initializing a larger model at this embedding.
+
+Conformal Prediction
+--------------------
+`LEAVE-ONE-OUT STABLE CONFORMAL PREDICTION <https://arxiv.org/pdf/2504.12189>`_
+    Proposes a novel method for implementing conformal prediction - Leave-One-Out Stable Conformal Prediction - which is faster and more stable than existing methods.  Derives some theoretical properties of the new method.
+
+Statistics
+----------
+`When do Random Forests work? <https://arxiv.org/pdf/2504.12860>`_
+    The application of random forests involves two operations: bagging and split randomization.  This paper provides a detailed exploration of the positive effects of the latter.  
+
+`You Cannot Feed Two Birds with One Score: the Accuracy-Naturalness Tradeoff in Translation <https://arxiv.org/pdf/2503.24013>`_
+    Machine translation seeks to (1) accurately translate the meaning of the source text and (2) appear natural in the target language.  This paper proves, using recent information theory techniques, that single score summaries cannot adequately capture performance on both tasks simultaneously.  Advocates comparisons in the accuracy-naturalness plane instead.
+
+`Behavior of prediction performance metrics with rare events <https://arxiv.org/pdf/2504.16185>`_
+    Investigates the efficacy of AUC as a performance metric for rare events.  Finds that poor performance is correlated with minimum class size rather than small event rate and that AUC is reliable so long as datasets are reasonably well-sized.
+
+Applications
+------------
+`Large Language Models Pass the Turing Test <https://arxiv.org/pdf/2503.23674>`_
+    Puts LLMs to the Turing test.  Finds that the most advanced LLMs can pass, achieving 76% win rates, if they are prompted correctly.
+
+`SCENT: Robust Spatiotemporal Learning for Continuous Scientific Data via Scalable Conditioned Neural Fields <https://arxiv.org/pdf/2504.12262>`_
+    Brookhaven National Laboratory develops a transformer-based method for spatiotemporal learning for predicting, e.g., pollution, which is capable of "joint interpolation, reconstruction, and forecasting".  Outperforms SOTA methods.  
+
+`Gaussian Processes at the Helm(holtz): A More Fluid Model for Ocean Currents <https://arxiv.org/pdf/2302.10364>`_
+    Develops novel kernels for Gaussian Processes in order to model the movement of ocean buoys based on ocean currents.
+
+New Models
+----------
+`Gemini 2.0 Flash <https://deepmind.google/technologies/gemini/flash/?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=google-s-massive-ai-day&_bhlid=2237e6b7d9b7da3dad953494d355313624afe021>`_
+    Google releases Gemini 2.0 Flash, a fast version of Gemini 2.0 which maintains performance.  Available via API.
+
+`KIMI-VL TECHNICAL REPORT <https://github.com/MoonshotAI/Kimi-VL/blob/main/Kimi-VL.pdf>`_
+    Kimi releases Kimi-VL, a mixture of experts model with advanced multimodal reasoning capabilities and long context.  Available at Huggingface under an MIT license.
+
+`Llama-3.1-Nemotron-Ultra-253B-v1 <https://huggingface.co/nvidia/Llama-3_1-Nemotron-Ultra-253B-v1?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=ai-creates-1-minute-cartoons&_bhlid=1307e2dd8d36bc7a1b5fde452c98f9446705b03d#evaluation-results>`_
+    NVIDIA releases Llama-3.1-Nemotron-Ultra-253B-v1, a model distilled from Llama-3.1-Nemotron-405B-Instruct, which offers a competitive tradeoff between computational efficiency and efficacy.  Available on Huggingface under a bespoke license.
+
+`DeepCoder: A Fully Open-Source 14B Coder at O3-mini Level <https://www.together.ai/blog/deepcoder>`_
+    Agentica and Together AI release DeepCoder-14B-Preview, a reasoning model distilled from Deepseek-R1-Distilled-Qwen-14B via distributed RL.  Available under an MIT license.
+
+`The Llama 4 herd: The beginning of a new era of natively multimodal AI innovation <https://ai.meta.com/blog/llama-4-multimodal-intelligence/>`_
+    Meta releases the newest herd of Llama models, Llama 4, offering a variety of models in different weight classes which achieve SOTA performance.  Available under a bespoke license.
+
+`Cogito v1 Preview Introducing IDA as a path to general superintelligence <https://www.deepcogito.com/research/cogito-v1-preview?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=ai-creates-1-minute-cartoons&_bhlid=5be19b3ab222b938146199191734c984aa6f75c3>`_
+    Stealth startup DeepCogito releases a set of LLMs  at the 3B, 8B, 14B, 32B and 70B sizes - trained using iterated distillation and amplification - and claims them to be the strongest in their weight class.  Available at Huggingface under a variety of licenses.
+
+`Deep Research is now available on Gemini 2.5 Pro Experimental. <https://blog.google/products/gemini/deep-research-gemini-2-5-pro-experimental/?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=ai-creates-1-minute-cartoons&_bhlid=3d204af191e8b8b63d655102b78a67320e0eff20>`_
+    Google has added Deep Research capabilities to the existing Gemini 2.5 Pro Experimental model.  Available via API.
+
+`Seed-Thinking-v1.5: Advancing Superb Reasoning Models with Reinforcement Learning <https://github.com/ByteDance-Seed/Seed-Thinking-v1.5/tree/main?tab=readme-ov-file#readme>`_
+    ByteDance introduces Seed-Thinking-v1.5, a mixture of experts model which achieves or surpasses SOTA performance on reasoning and math tasks.  
+
+`Seaweed-7B: Cost-Effective Training of Video Generation Foundation Model <https://arxiv.org/pdf/2504.08685>`_
+    ByteDance introduces SeaWeed-7B, a video generation model trained with novel techniques which can compete with other SOTA models.
+
+`Introducing GPT-4.1 in the API <https://openai.com/index/gpt-4-1/?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-s-dev-focused-gpt-4-1&_bhlid=548d71e290cb6ad70df0b9414831c5344be62bb7>`_
+    OpenAI releases ChatGPT-4.1, which achieves superior performance to ChatGPT-o4 and ChatGPT-4.5.  Available via API.
+
+`InternVL3: Exploring Advanced Training and Test-Time Recipes for Open-Source Multimodal Models <https://arxiv.org/pdf/2504.10479>`_
+    A team of Chinese researchers release InternVL3, a new multi-modal LLM trained that achieves SOTA performance.  Available on Huggingface under an MIT license.
+
+`PANGU ULTRA: PUSHING THE LIMITS OF DENSE LARGE LANGUAGE MODELS ON ASCEND NPUS <https://arxiv.org/pdf/2504.07866>`_
+    Huawei releases Pangu Ultra, a SOTA LLM trained on Ascend Neural Processing Units (NPUs) without any NVIDIA hardware.  Available for commercial customers only.
+
+`KIMINA-PROVER PREVIEW: TOWARDS LARGE FORMAL REASONING MODELS WITH REINFORCEMENT LEARNING <https://arxiv.org/pdf/2504.11354>`_
+    Kimi releases Kimina-Prover-Preview, an LLM tuned for formal reasoning via a reinforcement learning process which emphasizes formal reasoning patterns.  Available on Huggingface under an Apache 2.0 license.
+
+`BitNet b1.58 2B4T Technical Report <https://arxiv.org/pdf/2504.12285>`_
+    Microsoft releases an open-source, native 1 bit LLM.  Achieves SOTA performance with only 2B parameters.  Available on Huggingface under an MIT license.
+
+`Introducing OpenAI o3 and o4-mini <https://openai.com/index/introducing-o3-and-o4-mini/?utm_source=substack&utm_medium=email>`_
+    The newest from OpenAI. The new models can "agentically use and combine every tool within ChatGPT" enabling the solving of ever more complicated problems. Achieves SOTA performance on math, coding, and visual tasks.  Available via API.
+
+`Developers can now start building with Gemini 2.5 Flash. <https://blog.google/products/gemini/gemini-2-5-flash-preview/?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=gemini-2-5-flash-thinks-on-a-budget&_bhlid=063906b7c325d903bc4f503aaba19d241740e3e0>`_
+    Google releases Gemini 2.5 Flash, providing an increase in capabilities compared to Gemini Flash 2.0 while maintaining the low computational overhead.  Available via the Gemini app.
+
+`Advancing AI systems through progress in perception, localization, and reasoning <https://ai.meta.com/blog/meta-fair-updates-perception-localization-reasoning/?utm_source=twitter&utm_medium=organic%20social&utm_content=video&utm_campaign=fair&_bhlid=ba0491d03eb721f9fcc821800c7e3484f687cb68>`_
+    Meta FAIR releases a suite of embedding models for, among other things, 2D and 3D object detection.  Papers and code available for each model.
+
+`Gemma 3 QAT Models: Bringing state-of-the-Art AI to consumer GPUs <https://developers.googleblog.com/en/gemma-3-quantized-aware-trained-state-of-the-art-ai-to-consumer-gpus/?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=new-ai-startup-wants-to-automate-everyone&_bhlid=a461dfc6c571e04c103a79e7e8367c7ef3de936a>`_
+    Google releases Gemma 3 QAT, a suite of Gemma 3 models which have been optimized with quantization aware training to maintain performance while reducing footprint.  Gemma 3 27B can run on an NVIDIA RTX 3090.  Available on Huggingface under a bespoke license.
+
+`Convolutional Multi-Hybrids for Edge Devices <https://www.liquid.ai/research/convolutional-multi-hybrids-for-edge-devices?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=china-declares-ai-independence&_bhlid=5fbf67ad824e1609c0da9046c0f0741829b95794>`_
+    Liquid introduces Hyena Edge, a suite of models using a convolutional architecture and optimized for deployment on edge devices such as phones.  Open source.
+
+`Qwen3: Think Deeper, Act Faster <https://qwenlm.github.io/blog/qwen3/>`_
+    Alibaba releases Qwen 3, the newest and best performing members the Qwen suite of models.  Qwen 3 utilizes hybrid approach to problem solving, using thinking and no-thinking modes as appropriate.  Available under an Apache 2.0 license.

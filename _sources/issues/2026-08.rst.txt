@@ -1,0 +1,46 @@
+The CoVar Zeitgeist: August, 2026
+===============================
+
+A curated list of the latest research in AI.
+
+`Check out the CoVar website! <https://covar.com/>`_
+
+Featured
+--------
+`Verbalizable Representations Form a Global Workspace in Language Models <https://transformer-circuits.pub/2026/workspace/index.html>`_
+    Introduces the Jacobian lens technique to identify a small, privileged set of verbalizable representations known as J-space, which can be used to inspect and manipulate the model's internal reasoning.
+
+`TTT3R: 3D Reconstruction as Test-Time Training <https://arxiv.org/pdf/2509.26645>`_
+    TTT3R reframes recurrent 3D reconstruction as an online test-time training problem, using a confidence-adaptive memory update rule that improves long-sequence reconstruction and camera pose estimation while preserving real-time, memory-efficient inference.
+
+Autonomy
+--------
+`Real-Time Elevation and Orientation-Aware Visual Localization for GNSS-Denied Drone Navigation <https://www.mdpi.com/2504-446X/10/6/445>`_
+    REOLA introduces a performant pipeline for absolute drone geolocalization based on scale- and rotation-aware matching to satellite imagery. The authors show performance exceeding that of state of the art transformer-based approaches in both accuracy and speed, enabling near-real-time operation on board a drone.
+
+Foundation Models
+-----------------
+`Can Machines Really See Objects in Images? A Study Based on Syntactic Distance and Visual Self-Referential Instances <https://arxiv.org/abs/2606.29416>`_
+    This paper presents a study to see how well current vision network architecture (CNN and visual transformers) can "see" (i.e., how well can an algorithm perform on classifying globally entities vs. local entities).  Long story short, both CNNs and visual transformers are not good at classifying global entities.
+
+`Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture <https://arxiv.org/abs/2301.08243>`_
+    The paper introduces Joint-Embedding Predictive Architectures (JEPA) which learn representations by predicting the embedding of hidden or future parts of the image context, rather than trying to predict pixel values. This encourages the model to learn high-level semantics and spatial relations.
+
+`Video Depth Anything: Consistent Depth Estimation for Super-Long Videos <https://arxiv.org/abs/2501.12375>`_
+    Generates depth maps across long videos. Leverages Depth Anything v2 as an encoder, and introduces a spatio-temporal head to encourage temporal consistency
+
+`MobileGeo: Exploring Hierarchical Knowledge Distillation for Resource-Efficient Cross-view Drone Geo-Localization <https://arxiv.org/abs/2510.22582>`_
+    MobileGeo introduces a resource-efficient framework for cross-view drone geo-localization using hierarchical knowledge distillation and view selection refinement, achieving superior performance while significantly reducing inference costs.
+
+`TransGeo: Transformer Is All You Need for Cross-view Image Geo-localization <https://arxiv.org/abs/2204.00097>`_
+    TransGeo introduces a transformer-based approach for cross-view image geo-localization, eliminating the need for polar transforms and achieving state-of-the-art performance with reduced computational cost.
+
+Statistics
+----------
+`Simulation-Based Empirical Bayes <https://arxiv.org/abs/2607.21843>`_
+    Develops simulation-based empirical Bayes (SBEB) to perform accurate simultaneous inference across latent variables when the likelihood is only available through a simulator, improving upon traditional methods by iteratively refining estimates.
+
+Object Detection
+----------------
+`End-to-End Object Detection with Transformers <https://arxiv.org/abs/2005.12872>`_
+    DETR reframes object detection as a direct set-prediction problem, replacing hand-crafted components like anchor generation and non-maximum suppression with a parallel-decoding transformer trained under a set-matching loss, while achieving performance comparable to a highly-optimized Faster R-CNN on COCO.

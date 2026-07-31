@@ -1,0 +1,159 @@
+The CoVar Zeitgeist: March, 2026
+================================
+The March, 2026, issue of the CoVar Zeitgeist predominantly features cutting-edge research from February, 2026.   February saw many papers proposing novel Bayesian methods: novel surrogacy frameworks fusing Bayesian and deep learning methods, nonparametric methods for quantifying uncertainty in neural networks, improved experimental design, and frameworks to model the effects of autonomous decision makers. Other work focused on understanding large foundation models.  One paper showed that randomly initialized transformers exhibit biases which can persist to production, another argued that increased depth increases performance by allowing additional layers to act as members in a noisy ensemble, and another produced a game-theoretic treatment of multi-head attention. There is continued interest in Agentic AI, with premier industry labs releasing frameworks for how and when to delegate.  We feature six papers:
+
+* A game theoretic analysis of the behavior of multi-head attention architectures under cross-entropy loss.
+* An alternative to the popular class of Gaussian Process surrogate models combining Bayesian and deep learning methods.
+* A method to quantify uncertainty in deep neural networks using Gaussian Processes at the activation function level.
+* A novel reinforcement learning method for LLMs which allows them to reflect on their experiences instead of moving at random.
+* A novel method for trajectory-optimization in Bayesian Optimal Experimental Design.
+* A study of why LLM performance increases with depth.
+
+`Check out the CoVar website! <https://covar.com/>`_
+
+Featured
+--------
+`Multi-Head Attention is a Multi-Player Game <https://arxiv.org/pdf/2602.00861>`_
+    Analyzes multi-head attention from a game-theoretic perspective.  Finds that cross-entropy training induces an implicit potential game amongst the heads; utilizes this to propose a training paradigm with fewer hallucinations and less redundancy between heads.
+
+`Generative Bayesian Computation as a Scalable Alternative to Gaussian Process Surrogates <https://arxiv.org/pdf/2602.21408>`_
+    Proposes Generative Bayesian Computation (GBC) as an alternative to Gaussian Processes for surrogates and emulators.  GBC uses implicit quartile networks (IQN) to address limitations of Gaussian Processes such as computational efficiency, non-stationarity, heteroskedasticity, and jump discontinuities.
+    
+`Activation-Space Uncertainty Quantification for Pretrained Networks <https://arxiv.org/pdf/2602.14934>`_
+    Uses Gaussian Process Activations to quantify uncertainty in neural networks by replacing standard nonlinear activation functions with Gaussian Processes tuned such that the posterior means match the original activation. Achieves SOTA performance in calibration tests.
+
+`Experiential Reinforcement Learning <https://arxiv.org/pdf/2602.13949>`_
+    Proposes a novel reinforcement learning paradigm for LLMs which allows them to reflect on their actions and incorporate that reflection into future actions rather than sample them at random.  More efficient than RLVR.
+
+`Supercharging Simulation-Based Inference for Bayesian Optimal Experimental Design <https://arxiv.org/pdf/2602.06900>`_
+    This paper provides a novel method for per-trajectory optimization for Bayesian Optimal Experimental Design which adapts to already sampled data and improves performance by avoiding local optima.  Provides a statistical framework and demonstrates performance.
+
+`Inverse Depth Scaling From Most Layers Being Similar <https://arxiv.org/pdf/2602.05970>`_
+    Finds convincing evidence that increasing depth in LLMs contributes to increased improvements by ensemble averaging: additional layers act as redundant noisy estimators, decreasing variance through averaging.  Concludes that this is a robust but inefficient architecture.
+
+LLMs
+----
+`UPA: Unsupervised Prompt Agent via Tree-Based Search and Selection <https://arxiv.org/pdf/2601.23273>`_
+    Develops a method to optimize the best prompt for a language model in a scenario with supervised feedback.  Uses tree-search and a Bradley-Terry-Luce algorithm to infer the best prompt.
+
+`Multi-Head Attention is a Multi-Player Game <https://arxiv.org/pdf/2602.00861>`_
+    Analyzes multi-head attention from a game-theoretic perspective.  Finds that cross-entropy training induces an implicit potential game amongst the heads; utilizes this to propose a training paradigm with fewer hallucinations and less redundancy between heads.
+
+`Transformers Are Born Biased: Structural Inductive Biases at Random Initialization and Their Practical Consequences <https://arxiv.org/pdf/2602.05927>`_
+    Shows that randomly initialized transformers exhibit strong biases towards certain tokens.  Explains the mechanics behind this behavior and shows that it persists beyond training.
+
+`Inverse Depth Scaling From Most Layers Being Similar <https://arxiv.org/pdf/2602.05970>`_
+    Finds convincing evidence that increasing depth in LLMs contributes to increased improvements by ensemble averaging: additional layers act as redundant noisy estimators, decreasing variance through averaging.  Concludes that this is a robust but inefficient architecture.
+
+`Position: Causality is Key for Interpretability Claims to Generalise <https://arxiv.org/pdf/2602.16698>`_
+    Argues that the mechanistic interpretability view of LLMs is coherent if and only if it is rigorously framed according to causal paradigms with estimands/interventions/etc.
+
+Novel Architectures
+-------------------
+`Next Concept Prediction in Discrete Latent Space Leads to Stronger Language Models <https://arxiv.org/pdf/2602.08984>`_
+    Proposes Next-Concept Prediction (NCP), a novel pretraining paradigm extending Next Token Prediction (NTP), which trains base models to predict concepts spanning multiple tokens. Shows that NCP outperforms and scales better than NTP.
+
+`Attention Sink Forges Native MoE in Attention Layers: Sink-Aware Training to Address Head Collapse <https://arxiv.org/pdf/2602.01203>`_
+    Demonstrates that the attention sinks in Vanilla Attention and Sink Attention give rise to a Mixture-of-Expert architecture within Attention Layers; this leads to attention head collapse as a parallel to expert collapse.  Proposes a novel architecture which avoids this.
+
+`Recursive Language Models <https://arxiv.org/pdf/2512.24601>`_
+    Proposes Recursive Language Models (RLMs), a novel architecture which allows LLMs to process long context by treating the context as part of a coding environment where the LLM can be recursively invoked.  Improves performance on long-context tasks.
+
+Object Detection
+----------------
+`Annotation Free Spacecraft Detection and Segmentation using Vision Language Models <https://arxiv.org/pdf/2602.04699>`_
+    Uses off-the-shelf VLMs and a teacher-student framework to bootstrap labels for a data-spare environment: detection and segmentation of spacecraft in space.
+
+`wrivinder: Towards Spatial Intelligence for Geo-locating Ground Images onto Satellite Imagery <https://arxiv.org/pdf/2602.14929>`_
+    Develops Wrivinder, a framework that aligns never-before-seen ground photographs into a 3D world render which can be aligned with satellite imagery for geolocation.
+
+`A Real-Time UAS Hyperspectral Anomaly Detection System <https://arxiv.org/pdf/2602.13509>`_
+    The Army Research Laboratory develops an unmanned aerial platform capable of processing hyperspectral data in real-time.
+
+`JUCAL: Jointly Calibrating Aleatoric and Epistemic Uncertainty in Classification Tasks <https://arxiv.org/pdf/2602.20153>`_
+    Designs JUCAL, an algorithm which jointly calibrates aleatoric and epistemic uncertainty across any ensemble of classifiers, regardless of the underlying architecture.
+
+Testing & Evaluation
+--------------------
+`Decision Quality Evaluation Framework at Pinterest <https://arxiv.org/pdf/2602.15809>`_
+    Pinterest explains methods it uses to maintain an automated content moderation system run by AI agents.  Covers how to keep the AI agents aligned and how to update them with new policies.
+
+`Towards a Science of AI Agent Reliability <https://arxiv.org/pdf/2602.16666>`_
+    Decomposes reliability into consistency, robustness, predictability, and safety.  Rigorously benchmarks 14 AI agents according to this framework.
+
+`2-Step Agent: A Framework for the Interaction of a Decision Maker with AI Decision Support <https://arxiv.org/pdf/2602.21889>`_
+    Models the machine learning decision support process using a 2-step causal Bayesian model.  Shows that an autonomous decision misaligned in its priors can make suboptimal decisions.
+
+Autonomy
+--------
+`The Devil Behind Moltbook: Anthropic Safety is Always Vanishing in Self-Evolving AI Societies <https://arxiv.org/pdf/2602.09877>`_
+    Proves that closed societies of self-evolving AI agents will inevitably drift away from alignment.
+
+`Accelerating Mathematical and Scientific Discovery with Gemini Deep Think <https://deepmind.google/blog/accelerating-mathematical-and-scientific-discovery-with-gemini-deep-think/>`_
+    Google releases a report on its Aletheia math agent, which can iteratively generate, verify, and revise solutions for research-level math problems.  Demonstrates progress on a host of open research problems.
+
+`Intelligent AI Delegation <https://arxiv.org/pdf/2602.11865>`_
+    Proposes a framework for intelligent AI delegation: what should be delegated to AI agents, when should it be delegated, and how should it be delegated?  Focusses on proper transfer of authority, responsibility, etc.
+
+Reinforcement Learning
+----------------------
+`Agile Reinforcement Learning through Separable Neural Architecture <https://arxiv.org/pdf/2601.23225>`_
+    Introduces Spline-Based Adaptive Networks (SPAN) to achieve a more computationally efficient reinforcement learning paradigm than multi-layer perceptrons.  SPAN uses B-splines to achieve 30-50% improvement in sample efficiency while improving success rates.
+
+`Reinforced Attention Learning <https://arxiv.org/pdf/2602.04884>`_
+    Introduces Reinforced Attention Learning (RAL) which optimizes internal attention distributions rather than output sequences of tokens.  This increases efficacy in multi-modal settings.
+
+`Beyond Alignment: Expanding Reasoning Capacity via Manifold-Reshaping Policy Optimization <https://arxiv.org/pdf/2602.02545>`_
+    Proposes a novel reinforcement learning method, Manifold-Reshaping Policy Optimization, for LLMs which shows that the latent reasoning space of a pretrained model can be expanded with post-training.
+
+`Experiential Reinforcement Learning <https://arxiv.org/pdf/2602.13949>`_
+    Proposes a novel reinforcement learning paradigm for LLMs which allows them to reflect on their actions and incorporate that reflection into future actions rather than sample them at random.  More efficient than RLVR.
+
+Statistics
+----------
+`Transfer Learning Through Conditional Quantile Matching <https://arxiv.org/pdf/2602.02358>`_
+    Proposes a novel transfer learning framework for regression tasks which synthesizes data from multiple domains to improve prediction in a data-sparse target domain.
+
+`Supercharging Simulation-Based Inference for Bayesian Optimal Experimental Design <https://arxiv.org/pdf/2602.06900>`_
+    This paper provides a novel method for per-trajectory optimization for Bayesian Optimal Experimental Design which adapts to already sampled data and improves performance by avoiding local optima.  Provides a statistical framework and demonstrates performance.
+
+`The Catastrophic Failure of the k-Means Algorithm in High Dimensions, and How Hartigan’s Algorithm Avoids It <https://arxiv.org/pdf/2602.09936>`_
+    Shows that Lloyd's k-means algorithm fails for even trivial cases in high dimensions while Hartigan's algorithm succeeds.
+
+`AdaGrad-Diff: A New Version of the Adaptive Gradient Algorithm <https://arxiv.org/pdf/2602.13112>`_
+    Proposes an adaptive gradient method which adjusts the gradient size to depend on previous gradients: if they are stable the gradient remains stable, while if they are fluctuating the gradient decreases.
+
+`Activation-Space Uncertainty Quantification for Pretrained Networks <https://arxiv.org/pdf/2602.14934>`_
+    Uses Gaussian Process Activations to quantify uncertainty in neural networks by replacing standard nonlinear activation functions with Gaussian Processes tuned such that the posterior means match the original activation. Achieves SOTA performance in calibration tests.
+
+`Generative Bayesian Computation as a Scalable Alternative to Gaussian Process Surrogates <https://arxiv.org/pdf/2602.21408>`_
+    Proposes Generative Bayesian Computation (GBC) as an alternative to Gaussian Processes for surrogates and emulators.  GBC uses implicit quartile networks (IQN) to address limitations of Gaussian Processes such as computational efficiency, non-stationarity, heteroskedasticity, and jump discontinuities.
+
+Survey Papers
+-------------
+`A Survey on Hyperdimensional Computing aka Vector Symbolic Architectures, Part I: Models and Data Transformations <https://arxiv.org/pdf/2111.06077>`_
+    The first part of a thorough two-part survey on hyperdimensional computing.
+`A Survey on Hyperdimensional Computing aka Vector Symbolic Architectures, Part II: Applications, Cognitive Models, and Challenges <https://arxiv.org/pdf/2112.15424>`_
+    The second part of a thorough two-part survey on hyperdimensional computing.
+
+Applications
+------------
+`Integrating Unsupervised and Supervised Learning for the Prediction of Defensive Schemes in American football <https://arxiv.org/pdf/2602.10784>`_
+    Develops a classifier to predict whether football coverages are playing man or zone.  Uses an elastic net logistic regression or a gradient-boosted decision tree as classifier, with a Hidden Markov Model providing latent factors such as guarding assignments.
+
+`Prognostics of Multisensor Systems with Unknown and Unlabeled Failure Modes via Bayesian Nonparametric Process Mixtures <https://arxiv.org/pdf/2602.19263>`_
+    Creates a novel Bayesian nonparametric framework which combines a Dirichlet Process mixture model with a neural net with an iterative feedback mechanism for joint learning.  The method both identifies failure modes and offers prognoses.
+
+CoVar Seminar
+-------------
+`On the Slow Death of Scaling <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5877662>`_
+    Argues that further scaling of the size of networks (especially LLMs) is unlikely going to lead to much better performance
+
+`Modeling Others’ Minds as Code <https://arxiv.org/pdf/2510.01272>`_
+    Proposes ROTE, a method for learning another agent's behavior by using LLMs to generate code scripts which replicates the behavior of other agents and using Bayesian inference to reason over which is most likely.
+
+`Self-Supervised Spatial Correspondence Across Modalities <https://arxiv.org/pdf/2506.03148>`_
+    Proposes a self-supervised method for finding cross-modal space-time correspondences between different image modalities - including RGB, thermal, sketch, and depth map - based on contrastive random walks.
+
+`Mortality Rate Estimation and Standardization for Public Reporting: Medicare’s Hospital Compare <https://www.tandfonline.com/doi/abs/10.1080/01621459.2016.1276021>`_
+    Explores the use of mixed effects modeling for comparing hospitals based on mortality rates for patients with heart attacks. Demonstrates issues with simplistic approaches and advocates for direct standardization for low volume hospitals.

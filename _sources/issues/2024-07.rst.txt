@@ -1,0 +1,157 @@
+The CoVar Zeitgeist: July, 2024
+===============================
+A curated list of the latest research in AI.
+
+Enjoy!
+
+Featured
+--------
+`Flash3D: Feed-Forward Generalisable 3D Scene Reconstruction from a Single Image <https://arxiv.org/pdf/2406.04343>`_
+    Reconstructs a 3D render of a scene from a single image using 3D Gaussians, monocular depth estimation, and an interactive process model entities/parts of entities that are out of line of sight.  Examples look impressive. 
+
+`Mitigate the Gap: Investigating Approaches for Improving Cross-Modal Alignment in CLIP <https://arxiv.org/pdf/2406.17639>`_
+    Observes that CLIP embeddings can exhibit a modality gap: a given modality is densely distributed in a subregion of embedding space, but different modalities are not close to each other.  This paper investigates two methods of remedying this modality gap.
+
+`To Believe or Not to Believe Your LLM <https://arxiv.org/pdf/2406.02543>`_
+    Introduces an information-theory based approach to detect when hallucinations are occurring by measuring epistemic uncertainty about knowledge.
+
+`Injecting Undetectable Backdoors in Deep Learning and Language Models <https://arxiv.org/pdf/2406.05660>`_
+    This paper claims/shows that you can insert undetectable back doors into deep neural nets vai cryptographic methods.  If you know the backdoor you can take any input data, modify it slightly, and receive the desired model output.  This raises concerns with using open source models from untrusted sources.
+
+`YOLOv10: Real-Time End-to-End Object Detection <https://arxiv.org/abs/2405.14458>`_
+    Another YOLO version that seeks to improve performance. This one drops the NMS step and builds it into the network.  Potentially an improvement on current model architectures.
+
+`Movie reconstruction from mouse visual cortex activity <https://www.biorxiv.org/content/10.1101/2024.06.19.599691v1.full.pdf>`_
+    Uses deep learning techniques to reconstruct a video from neuron activations in mouse brains.  Despite seeming like science fiction, it gets surprisingly good results.
+
+LLMs
+----
+`Knowledge Circuits in Pretrained Transformers <https://arxiv.org/pdf/2405.17969>`_
+    Examines the "computation graph" of small LLMs such as GPT2 and TinyLLAMA to uncover "knowledge circuits" that shed light on how LLMs work.  Among other things, has implications towards hallucinations and in-context learning.
+
+`To Believe or Not to Believe Your LLM <https://arxiv.org/pdf/2406.02543>`_
+    Introduces an information-theory based approach to detect when hallucinations are occurring by measuring epistemic uncertainty about knowledge.
+    
+`Large Language Models Must Be Taught to Know What They Don’t Know <https://arxiv.org/pdf/2406.08391>`_
+    This paper devises a method for LLM confidence calibration which involves finetuning the LLM allow the LLM to estimate confidences for its own output.  The finetuned LLM can then also be used to provide confidence estimates for other LLMs.
+
+`Large language model validity via enhanced conformal prediction methods <https://arxiv.org/pdf/2406.09714>`_
+    A conformal-based post-processing method for LLMs which estimates the probability that the output contains zero false statements.  Could be useful in evaluating LLMs for mission-critical contexts.
+
+`Refusal in Language Models Is Mediated by a Single Direction <https://arxiv.org/abs/2406.11717>`_
+    RLHF is sometimes used to teach LLMs to refuse to answer certain sorts of questions.  This paper finds that the RLHF is findable in the gradients during runtime; if you remove that dimension with a hack, you can create an uncensored LLM from censored weights.
+
+Object Detection
+----------------
+`Scene Graph Generation in Large-Size VHR Satellite Imagery: A Large-Scale Dataset and A Context-Aware Approach <https://arxiv.org/pdf/2406.09410>`_
+    Develops a method to take satellite imagery as input, run detectors, and formulate a graph containing triples of objects and how they're related.  
+
+`SATSPLATYOLO: 3D GAUSSIAN SPLATTING-BASED VIRTUAL OBJECT DETECTION ENSEMBLES FOR SATELLITE FEATURE RECOGNITION <https://arxiv.org/pdf/2406.02533>`_
+    Learns Gaussian splats from remote sensing data and then applies Yolo-3D on the resulting point cloud to generate detections.  
+
+Ethics
+------
+`The Impossibility of Fair LLMs <https://arxiv.org/pdf/2406.03198>`_
+    Examines traditional definitions of fairness, finds limitations as they apply to LLMs, and ponders about new ones.
+
+`Collective Constitutional AI: Aligning a Language Model with Public Input <https://arxiv.org/pdf/2406.07814>`_
+    Who gets to make decisions about how LLMs should behave?  This paper says it should be "all of us" and develops a method for crowdsourcing ethics via surveys.
+
+`STAR: SocioTechnical Approach to Red Teaming Language Models <https://arxiv.org/pdf/2406.11757>`_
+    Proposes a new method for sociotechnical redteaming of LLMs focussing on steerability, signal quality, and arbitration.
+
+`"You Gotta be a Doctor, Lin": An Investigation of Name-Based Bias of Large Language Models in Employment Recommendations <https://arxiv.org/pdf/2406.12232>`_
+    If you put an LLM in charge of hiring decisions, it will assume the applicants race and gender based on their resume and make hiring decisions using gendered/racial stereotypes.  This is not ideal, but it demonstrates the ongoing difficulty in having LLMs behave ethically.
+
+`LLM Dataset Inference Did you train on my dataset? <https://arxiv.org/pdf/2406.06443>`_
+    This paper develops a new method for testing whether an LLM has been trained on a given dataset.  The motivating example is detecting whether copyright law has been violated.
+
+Theory
+------
+`einspace: Searching for Neural Architectures from Fundamental Operations <https://arxiv.org/pdf/2405.20838>`_
+    Proposes a method to search for the best neural architecture for a given task.  Can find novel as well as existing architecture, and leads to performance increases.
+
+`Beyond Model Collapse: Scaling Up with Synthesized Data Requires Reinforcement <https://arxiv.org/pdf/2406.07515>`_
+    Investigates how to train models on (partially) synthetic data to avoid the model collapse phenomena.  The answer they develop is to use reinforcement learning to select the best data: this works because it's a relatively easy task to tell between good and bad data.
+
+`Neural Redshift: Random Networks are not Random Functions <https://arxiv.org/pdf/2403.02241>`_
+    Neural networks have been thought to have a simplicity bias favoring simple simple solutions to problems.  This paper demonstrates that this is not an inherent feature of neural networks but instead an emergent feature of neural architecture and activation functions, with, e.g., ReLu's favoring simple responses and tanh's favoring complicated ones.  
+
+`Why Warmup the Learning Rate? Underlying Mechanisms and Improvements <https://arxiv.org/pdf/2406.09405>`_
+    Warming up the learning rate (usually linearly) tends to improve model performance.  This paper analyzes why, and finds it has to do with forcing the network to accept a larger learning rate by getting it to well-behaved areas of the loss function.  Given this, they devise a better/faster warmup method.
+
+`Injecting Undetectable Backdoors in Deep Learning and Language Models <https://arxiv.org/pdf/2406.05660>`_
+    This paper claims/shows that you can insert undetectable back doors into deep neural nets vai cryptographic methods.  If you know the backdoor you can take any input data, modify it slightly, and receive the desired model output.  This raises concerns with using open source models from untrusted sources.
+
+`Improving the Validity and Practical Usefulness of AI/ML Evaluations Using an Estimands Framework <https://arxiv.org/pdf/2406.10366v1>`_
+    Existing benchmarks for AI models and LLMs can be deceiving - good performance on the generic test sets does not lead to good performance in the wild.  The authors propose some novel estimands for model evaluation based on a causal framework.
+
+`Mitigate the Gap: Investigating Approaches for Improving Cross-Modal Alignment in CLIP <https://arxiv.org/pdf/2406.17639>`_
+    Observes that CLIP embeddings can exhibit a modality gap: a given modality is densely distributed in a subregion of embedding space, but different modalities are not close to each other.  This paper investigates two methods of remedying this modality gap.
+
+Gaussian Splatting
+------------------
+`Flash3D: Feed-Forward Generalisable 3D Scene Reconstruction from a Single Image <https://arxiv.org/pdf/2406.04343>`_
+    Reconstructs a 3D render of a scene from a single image using 3D Gaussians, monocular depth estimation, and an interactive process model entities/parts of entities that are out of line of sight.  Examples look impressive.
+
+`Trim 3D Gaussian Splatting for Accurate Geometry Representation <https://arxiv.org/pdf/2406.07499>`_
+    Introduces a new method into Gaussian splatting which trims the Gaussians to enforce geometric patterns.  In normal Gaussian splatting parts of the render can look blurry - this method ameliorates that problem. 
+
+`ICE-G: Image Conditional Editing of 3D Gaussian Splats <https://arxiv.org/pdf/2406.08488>`_
+    A method to edit a 3D Gaussian splatting render using DINO.
+
+Computational Enhancement
+-------------------------
+`Scalable MatMul-free Language Modeling <https://arxiv.org/pdf/2406.02528>`_
+    This paper finds that matrix multiplication in LLMs is completely optional.  This leads to huge computational benefits, including running LLMs on FPGAs.
+
+Knowledge Graphs
+----------------
+`Start from Zero: Triple Set Prediction for Automatic Knowledge Graph Completion <https://arxiv.org/pdf/2406.18166>`_
+    This paper approaches knowledge graph reconstruction from a different angle - instead of assuming you know part of a triple and filling in the blanks, you instead attempt to guess the entire triple.  This states of affairs is closer to problems encountered in the wild.
+
+Applications
+------------
+`Movie reconstruction from mouse visual cortex activity <https://www.biorxiv.org/content/10.1101/2024.06.19.599691v1.full.pdf>`_
+    Uses deep learning techniques to reconstruct a video from neuron activations in mouse brains.  Despite seeming like science fiction, it gets surprisingly good results.
+
+New Models
+----------
+`U-KAN Makes Strong Backbone for Medical Image Segmentation and Generation <https://arxiv.org/pdf/2406.02918>`_
+    Implements a KAN-based NN modelled after U-Net for computer vision.  Claims that it outperforms traditional MLPs and provides comparisons to off-the-shelf models.
+
+`4M-21: An Any-to-Any Vision Model for Tens of Tasks and Modalities <https://arxiv.org/pdf/2406.09406>`_
+    Makes a foundation model that accepts a wide variety of input and output modalities, including RGB imagery, metadata, feature map, and semantic modalities.
+
+`SCKansformer: Fine-Grained Classification of Bone Marrow Cells via Kansformer Backbone and Hierarchical Attention Mechanisms <https://arxiv.org/pdf/2406.09931>`_
+    This paper proposes a transformer architecture using KANs.  Medical applications are a motivating example.
+
+`YOLOv9: Learning What You Want to Learn Using Programmable Gradient Information <https://arxiv.org/abs/2402.13616>`_
+    Another YOLO version that seeks to improve performance. This one tweaks the layer type in the backbone.
+
+`YOLOv10: Real-Time End-to-End Object Detection <https://arxiv.org/abs/2405.14458>`_
+    Another YOLO version that seeks to improve performance. This one drops the NMS step and builds it into the network. 
+
+`Claude 3.5 Sonnet <https://www.anthropic.com/news/claude-3-5-sonnet>`_
+    Anthropic releases their newest LLM, Claude 3.5 Sonnet.  Claims that it is smarter than other LLMs.
+
+`Point-SAM: Promptable 3D Segmentation Model for Point Clouds <https://arxiv.org/pdf/2406.17741>`_
+    SAM for 3D point clouds.  Lots of potential.
+
+Presented at CoVar Seminar
+--------------------------
+2024-06-04
+    `Matching Anything by Segmenting Anything <https://arxiv.org/abs/2406.04221>`_
+        Building a generalized tracker using SAM as a backbone. Provided adapter empowers foundational models to track any objects they have detected, and shows strong zero-shot tracking ability in complex domains. Interesting synthetic training method with good results.
+
+2024-06-11
+    `Code as Policies: Language Model Programs for Embodied Control <https://code-as-policies.github.io>`_
+        Using LLMs to control robots. the LLM builds up its own library of functionality using a provided robot API. Recursively defines functions to do complex geometric tasks in real world. Interesting use of knowledge graphs and reasoning.
+
+2024-06-18
+    `Depth Anything V2 <https://arxiv.org/abs/2406.09414>`_
+        Depth Anything V2 provides improved depth estimates for monocular images compared to Depth Anything. 
+
+2024-06-25
+    `Transcendence: Generative Models Can Outperform The Experts That Train Them <https://arxiv.org/pdf/2406.11741>`_
+        When training with low-temperature sampling, LLMs can outperform the training data: this paper showed this by training an LLM to play chess with an elo rating of 1400 on games played by players with 1000 elo rating.  Low temperature sampling encourages the model to behave like an ensemble model with majority voting over the input games when choosing a move.
