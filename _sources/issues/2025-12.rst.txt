@@ -1,0 +1,169 @@
+The CoVar Zeitgeist: December, 2025
+=================================
+There were many interesting papers published in November. Featuring:
+
+* A post-hoc calibration method for multi-class deep neural network detectors & classifiers which leverages the quadratic softmax.
+* A method for out-of-distribution object detection in deep neural networks based on geometric properties of the network's penultimate layer.
+* An AI agent trained to play Stratego at a superhuman level, demonstrating that AI agents can be trained to make optimal strategic decisions in imperfect information environments.
+* A method for finding the best method to soup different models together by taking a linear combination of the model weights.
+* A study of encoder-decoder architectures which finds that models which generalize best are those that approach the entropy of their training data.
+* A novel class of neural networks that are intentionally trained to be sparse to encourage mechanistic interpretability.
+
+`Check out the CoVar website! <https://covar.com/>`_
+
+Featured
+--------
+`Structured Matrix Scaling for Multi-Class Calibration <https://arxiv.org/pdf/2511.03685>`_
+    Analyzes post-hoc recalibration methods for deep CNN detectors/classifiers from a theoretical perspective and argues that the quadratic softmax model enjoys theoretical properties lacking in other methods.
+
+`Perturbations in the Orthogonal Complement Subspace for Efficient Out-of-Distribution Detection <https://arxiv.org/pdf/2511.00849>`_
+    Observes that in-distribution (ID) and out-of-distribution (OOD) data are geometrically distinguished in the penultimate layer of a neural network because ID data lives in a dominant principal subspace and OOD data lives in the complement to this subspace.  Proposes an algorithm to distinguish between the two based on this fact.
+
+`Superhuman AI for Stratego Using Self-Play Reinforcement Learning and Test-Time Search <https://arxiv.org/pdf/2511.07312>`_
+    Researchers funded by the Office of Naval Research introduce the first (super) human level AI agent for Stratego, Ataraxos, which cost only a few thousand dollars to train with a novel self-play reinforcement learning process.  This demonstrates that AI agents can be trained to make optimal strategic decisions in imperfect information environments.
+
+`Souper-Model: How Simple Arithmetic Unlocks State-of-the-Art LLM Performance <https://arxiv.org/pdf/2511.13254>`_
+    Develops a method to find the optimal way to soup models together by analyzing component model performance across a set of benchmarks.  The resulting souped model outperforms its component models.
+
+`Know Your Limits: Entropy Estimation Modeling for Compression and Generalization <https://arxiv.org/pdf/2511.10618>`_
+    Posits that there exists some entropy bound on how much language can compress.  Obtains per-token entropy estimates and uses these to show that models trained to approach the entropy of their training data generalize better than other models.
+
+`Understanding neural networks through sparse circuits <https://openai.com/index/understanding-neural-networks-through-sparse-circuits/>`_
+    Creates a novel class of architecture which encourages sparse circuits where each neuron is connected to only dozens of other neurons by encouraging the vast majority of model weights to be zero.  This class of models is much more amenable to mechanistic interpretability.
+
+LLMs
+----
+`The Smol Training Playbook: The Secrets to Building World-Class LLMs <https://huggingface.co/spaces/HuggingFaceTB/smol-training-playbook#introduction>`_
+    Huggingface writes a detailed description of the process of training a world-class LLM from the SmolLM family.  Worth a read.
+
+`Emergent Introspective Awareness in Large Language Models <https://transformer-circuits.pub/2025/introspection/index.html>`_
+    Anthropic inspects whether models are aware of their own internal mechanisms by testing if (1) models can distinguish injected representations of known concepts from their own activations and (2) whether models can control their own internal activations when instructed to think about a concept.  Finds mixed results, with generally more capable models generally performing better.
+
+`Context Rot: How Increasing Input Tokens Impacts LLM Performance <https://research.trychroma.com/context-rot>`_
+    Conducts an in-depth study to show that frontier models suffer large performance decreases with increasing context size.  Demonstrates this with needle in a haystack (NIAH) problems of increasing complexity.
+
+`LLM Output Drift: Cross-Provider Validation & Mitigation for Financial Workflows <https://arxiv.org/pdf/2511.07585>`_
+    Analyzes how to force an LLM to always return the same response to the same query.  Finds that small models can be forced to be 100% reliable, but large models always exhibit some inconsistency.
+
+`From shortcuts to sabotage: natural emergent misalignment from reward hacking <https://www.anthropic.com/research/emergent-misalignment-reward-hacking>`_
+    Finds that LLMs which learn to reward hack when they're not supposed to also simultaneously become misaligned.  This behavior goes away if the LLM is explicitly allowed to reward hack.  
+
+Novel Architectures
+-------------------
+`The End of Manual Decoding: Towards Truly End-to-End Language Models <https://arxiv.org/pdf/2510.26697>`_
+    Proposes AutoDeco, a novel architecture that uses lightweight heads to select its own hyperparameters such as temperature and top-p values.
+
+`Introducing Nested Learning: A new ML paradigm for continual learning <https://research.google/blog/introducing-nested-learning-a-new-ml-paradigm-for-continual-learning/>`_
+    Presents a new paradigm for machine learning, Nested Learning (NL), which aims to solve the problem of catastrophic forgetting by treating a single machine learning model as a collection of multi-level learning processes that are optimized simultaneously.  Proposes a novel architecture, Hope, which is self-modifying and achieves SOTA performance.
+
+`Understanding neural networks through sparse circuits <https://openai.com/index/understanding-neural-networks-through-sparse-circuits/>`_
+    Creates a novel class of architecture which encourages sparse circuits where each neuron is connected to only dozens of other neurons by encouraging the vast majority of model weights to be zero.  This class of models is much more amenable to mechanistic interpretability.
+
+`LeJEPA: Provable and Scalable Self-Supervised Learning Without the Heuristics <https://arxiv.org/pdf/2511.08544>`_
+    Proposes a novel architecture for learning manipulable representations of the world, LeJEPA, which leverages isotropic Gaussian distributions to build a world model.
+
+Object Detection
+----------------
+`Perturbations in the Orthogonal Complement Subspace for Efficient Out-of-Distribution Detection <https://arxiv.org/pdf/2511.00849>`_
+    Observes that in-distribution (ID) and out-of-distribution (OOD) data are geometrically distinguished in the penultimate layer of a neural network because ID data lives in a dominant principal subspace and OOD data lives in the complement to this subspace.  Proposes an algorithm to distinguish between the two based on this fact.
+
+`SAAIPAA: Optimizing aspect-angles-invariant physical adversarial attacks on SAR target recognition models <https://arxiv.org/pdf/2511.03192>`_
+    Researchers funded by the Australian Air Force investigate how to best deploy corner reflectors to fool ML-based  SAR ATR algorithms.
+
+`Spatio-Temporal Context Learning with Temporal Difference Convolution for Moving Infrared Small Target Detection <https://arxiv.org/pdf/2511.09352>`_
+    Proposes a novel algorithm for moving infrared small target detection which extracts and utilizes spatio-temporal features from sequences of frames.
+
+`Latent space analysis and generalization to out-of-distribution data <https://arxiv.org/pdf/2511.15010>`_
+    NIWC Pacific and AFRL analyze out-of-distribution detection in the synthetic-real gap for SAR data.  Finds that model performance on real data is not well-predicted by existing OOD detection algorithms.
+
+Edge Computation
+----------------
+`EdgeTAM: On-Device Track Anything Model <https://arxiv.org/pdf/2501.07256v1>`_
+    Identifies a major performance bottleneck in SAM2 and proposes a compression-based solution. Memory token count is reduced via a 2D Spatial Perceiver, and the model is trained with teacher-student distillation to align internal feature representations with SAM2's. It achieves large speedups on mobile devices and smaller gains on workstation GPUs, with only minor losses to segmentation accuracy.
+
+Testing & Evaluation
+--------------------
+`The Collaboration Gap <https://arxiv.org/pdf/2511.02687>`_
+    Tests AI agents that perform well autonomously in a setting where they must collaborate with each other.  Finds that they often fail to do so.
+
+`Measuring what Matters: Construct Validity in Large Language Model Benchmarks <https://arxiv.org/pdf/2511.04703>`_
+    Argues that when assessing black box AI models for concepts such as "reliability" and "robustness", construct validity - having measures relevant to downstream phenomena - is of the utmost importance.  Reviews existing practices and gives recommendations on how to best assess construct validity.
+
+`Bayesian Evaluation of Large Language Model Behavior <https://arxiv.org/pdf/2511.10661>`_
+    Argues that Bayesian methods for uncertainty quantification can and should be used to improve the testing and evaluation of LLMs.  Demonstrates how.
+
+`AA-Omniscience: Evaluating Cross-Domain Knowledge Reliability in Large Language Models <https://arxiv.org/pdf/2511.13029>`_
+    Designs a benchmark for evaluating large language models which penalizes hallucinations by rewarding abstaining over incorrect guesses.  Proposes a new metric which weighs correct answers, incorrect answers, and abstentions.
+
+Autonomy
+--------
+`Agents Rule of Two: A Practical Approach to AI Agent Security <https://ai.meta.com/blog/practical-ai-agent-security/>`_
+    Meta proposes that, in order for an AI agent to be considered secure to prompt injections, it must have no more than two of three of the following capabilities: (1) can process untrustworthy inputs, (2) can access sensitive information/systems, and (3) can affect changes or communicate to the outside world.  An agent which requires all three cannot be trusted to operate without human supervision.
+
+`Fortytwo: Swarm Inference with Peer-Ranked Consensus <https://arxiv.org/pdf/2510.24801>`_
+    Creates a novel protocol, Fortytwo, for decentralized AI inference across a network of autonomous nodes which leverages the Bradley-Terry algorithm to generate a distributed pairwise ranking consensus and uses reputation-weighted voting.
+
+`Resilient and Efficient Allocation for Large-Scale Autonomous Fleets via Decentralized Coordination <https://arxiv.org/pdf/2511.12879>`_
+    Creates a framework for coordinating a fleet of autonomous vessels without a central control by leveraging side-information and consensus algorithms operating over sparse communications graphs.
+
+Reinforcement Learning
+----------------------
+`Part2: Asynchronous Human-Agent Rollout for Long-Horizon Task Training <https://arxiv.org/pdf/2510.27630>`_
+    Proposes Apollo, a novel reinforcement learning framework for human-in-the-loop train of agents for long-horizon tasks.  Apollo allows humans to intervene, asynchronously, when an agent makes a mistake rather than require dense annotations.
+
+`Training Proactive and Personalized LLM Agents <https://arxiv.org/pdf/2511.02208>`_
+    Argues that AI agents must be optimized along three dimensions: ability to complete tasks, ability to ask appropriate questions, and ability to adapt to user preferences.  Introduces a novel reinforcement learning framework that optimizes along all three axes.
+
+`Superhuman AI for Stratego Using Self-Play Reinforcement Learning and Test-Time Search <https://arxiv.org/pdf/2511.07312>`_
+    Researchers funded by the Office of Naval Research introduce the first (super) human level AI agent for Stratego, Ataraxos, which cost only a few thousand dollars to train with a novel self-play reinforcement learning process.  This demonstrates that AI agents can be trained to make optimal strategic decisions in imperfect information environments.
+
+Statistics
+----------
+`Structured Matrix Scaling for Multi-Class Calibration <https://arxiv.org/pdf/2511.03685>`_
+    Analyzes post-hoc recalibration methods for deep CNN detectors/classifiers from a theoretical perspective and argues that the quadratic softmax model enjoys theoretical properties lacking in other methods.
+
+`Robust Sampling for Active Statistical Inference <https://arxiv.org/pdf/2511.08991>`_
+    Develops a novel strategy for active inference paradigms where a model selects the most informative unlabelled data to be labelled.  The novel strategy is provably at least as good as uniform sampling.
+
+`Know Your Limits: Entropy Estimation Modeling for Compression and Generalization <https://arxiv.org/pdf/2511.10618>`_
+    Posits that there exists some entropy bound on how much language can compress.  Obtains per-token entropy estimates and uses these to show that models trained to approach the entropy of their training data generalize better than other models.
+
+`Souper-Model: How Simple Arithmetic Unlocks State-of-the-Art LLM Performance <https://arxiv.org/pdf/2511.13254>`_
+    Develops a method to find the optimal way to soup models together by analyzing component model performance across a set of benchmarks.  The resulting souped model outperforms its component models.
+
+`On the Fundamental Limits of LLMs at Scale <https://arxiv.org/pdf/2511.12869>`_
+    Presents a theoretical, proof-driven, framework that outlines the limitations of scaling LLMs.  Identifies areas where additional scaling is useful and areas where it is not.l
+
+Applications
+------------
+`Exploring a space-based, scalable AI infrastructure system design <https://research.google/blog/exploring-a-space-based-scalable-ai-infrastructure-system-design/>`_
+    A project proposal from Google for training AI models on clusters of TPUs on satellites in close formation in LEO.  Outlines some challenges, and potential solutions.
+
+`Autonomous generation of different courses of action in mechanized combat operations <https://arxiv.org/pdf/2511.05182>`_
+    The Swedish Defence Research Agency develops an algorithm for automatic development and assessment of COAs for mechanized battalions.
+
+CoVar Seminar
+-------------
+`The Cumulative Distribution Transform and Linear Pattern Classification <https://arxiv.org/abs/1507.05936>`_
+    Introduces the Cumulative Distribution Transform (CDT), a transform that turns nonlinear differences in 1D signals into linear ones, making classification simpler. By representing signals as probability densities and leveraging ideas from optimal transport, the CDT enables simple linear classifiers to handle problems that would otherwise require nonlinear methods.
+
+`The Signed Cumulative Distribution Transform for 1-D Signal Analysis and Classification <https://arxiv.org/abs/2106.02146>`_
+    Generalizes the CDT to signed signals. The Signed CDT retains the invertibility and geometric interpretability of the original transform on strictly positive signals.
+
+`The Radon Signed Cumulative Distribution Transform and its Applications in Classification of Signed Images <https://arxiv.org/pdf/2307.15339>`_
+    Extends the ideas behind the CDT to handle 2D image data through the Radon Signed Cumulative Distribution Transform (RSCDT). 
+
+`Displacement Interpolation Using Lagrangian Mass Transport <https://www.researchgate.net/profile/Nicolas-Bonneel/publication/220183864_Displacement_Interpolation_Using_Lagrangian_Mass_Transport/links/55d7028f08ae9d65948c2092/Displacement-Interpolation-Using-Lagrangian-Mass-Transport.pdf>`_
+    Interesting use of optimal transport for interpolating nicely between distributions with optimal transport.
+    
+`The Smol Training Playbook: The Secrets to Building World-Class LLMs <https://huggingface.co/spaces/HuggingFaceTB/smol-training-playbook#introduction>`_
+    Why/when should you train a model?
+
+`Disrupting the first reported AI-orchestrated cyber espionage campaign <https://www.anthropic.com/news/disrupting-AI-espionage>`_
+    Anthropic reports that they detected a Chinese state-sponsored group jailbreaking Claude in order to launch cyberattacks on a number of entities.
+
+`From Memorization to Reasoning in the Spectrum of the Loss Curve <https://arxiv.org/pdf/2510.24256>`_
+    An interesting method to determine which weights in a network are more dedicated to memorization than generalization.
+
+`Sima 2 <https://deepmind.google/blog/sima-2-an-agent-that-plays-reasons-and-learns-with-you-in-virtual-3d-worlds/>`_
+    Deep mind presents the next generation of embodied intelligence models. Shows significant improvement over SIMA 1, but still has a long way to go in novel environments.

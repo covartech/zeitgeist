@@ -1,0 +1,183 @@
+The CoVar Zeitgeist: November, 2024
+===================================
+There is a lot of interesting research this month. Featuring:
+
+* Google investigates how to do model merging: combining weights from multiple networks to improve performance.  
+* A novel method for combatting catastrophic forgetting using Gradient Episodic Memory.
+* A novel compression method for LLMs that gets Mistral 7B down to 0.04B parameters without sacrificing much in the way of performance.  
+* An investigation of LLM hallucinations that finds that you can tell when an LLM is hallucinating
+* Amazon trains LLMs to generate sequences of tokens instead of tokens.
+* An analysis of how much of LLM behavior is captured by "circuit analysis".  Finds that its pretty plausible.
+
+`CoVar <https://covar.com/>`_
+
+Featured
+--------
+`WHAT MATTERS FOR MODEL MERGING AT SCALE? <https://arxiv.org/pdf/2410.03617>`_
+    Investigates model merging, a method of enhancing performance by combining multiple neural nets by (among other methods) averaging the model weights.  Finds and lists five insights about the practice.
+
+`Fine-Grained Gradient Restriction: A Simple Approach for Mitigating Catastrophic Forgetting <https://arxiv.org/pdf/2410.00868>`_
+    A new method for combatting catastrophic forgetting which works by modifying Gradient Episodic Memory (GEM).  The paper finds that restricting the search space of the update direction reduces the generalization gap.
+
+`LoLCATS: On Low-Rank Linearizing of Large Language Models <https://github.com/HazyResearch/lolcats/blob/main/lolcats_preprint_v0.pdf>`_
+    A new method for linearizing and compressing LLMs.  Appears to be exceptionally effective, reducing Mistral 7B down to 0.04B tokens while suffering only slight performance degradation.
+
+`LLMS KNOW MORE THAN THEY SHOW: ON THE INTRINSIC REPRESENTATION OF LLM HALLUCINATION <https://arxiv.org/pdf/2410.02707>`_
+    Investigates what LLMs know about hallucinating and when they know it. Finds that there is a "truthfulness encoding" which encodes how truthful the answer is, though the particular change across datasets changes from dataset to dataset, as well as several additional methods of extricating other useful information.
+
+`Bridging the Training-Inference Gap in LLMs by Leveraging Self-Generated Tokens <https://arxiv.org/pdf/2410.14655>`_
+    A simple but incisive insight motivates this paper: LLMs are trained to predict the next token, but in practical use they generate sequences of tokens.  This can cause misalignment between training and inference paradigms.  Training LLMs on sequences of tokens instead leads to increased performance.
+
+`Hypothesis Testing the Circuit Hypothesis in LLMs <https://arxiv.org/pdf/2410.13032>`_
+    This paper investigates how much circuits matter for LLMs, and in the process proposes several new hypothesis testing methods.  It finds that synthetic circuits satisfy most of the hypothesized circuit behavior while naturally occurring circuits satisfy only some.  Circuits may prove an insightful method to analyze LLM behavior.
+
+LLMs
+----
+`The Perfect Blend: Redefining RLHF with Mixture of Judges <https://arxiv.org/pdf/2409.20370>`_
+    Proposes a new method for RLHF using mixture of judges which can remedy most reward-hacking behaviors as well as other undesirable RLHF behaviors.  Worth reading for LLM training purposes.  
+
+`LASER: LEARNING TO ADAPTIVELY SELECT REWARD MODELS WITH MULTI-ARMED BANDITS <https://arxiv.org/pdf/2410.01735>`_
+    There are multiple reward models you can use for finetuning LLMs (e.g., RLHF) and it's not always obvious which one will give the best results.  The insight here is intuitive - just used a multi-armed bandit instead.
+
+`LARGE LANGUAGE MODELS AS MARKOV CHAINS <https://arxiv.org/pdf/2410.02724>`_
+    Finds that an autoregressive model like an LLM is equivalent to a Markov Chain on a finite (but large) state space.  The immediate implication is that a lot of intuition about Markov Chains can be ported over to LLMs.
+
+`LLMS KNOW MORE THAN THEY SHOW: ON THE INTRINSIC REPRESENTATION OF LLM HALLUCINATION <https://arxiv.org/pdf/2410.02707>`_
+    Investigates what LLMs know about hallucinating and when they know it. Finds that there is a "truthfulness encoding" which encodes how truthful the answer is, though the particular change across datasets changes from dataset to dataset, as well as several additional methods of extricating other useful information.
+
+`Hypothesis Testing the Circuit Hypothesis in LLMs <https://arxiv.org/pdf/2410.13032>`_
+    This paper investigates how much circuits matter for LLMs, and in the process proposes several new hypothesis testing methods.  It finds that synthetic circuits satisfy most of the hypothesized circuit behavior while naturally occurring circuits satisfy only some.  Circuits may prove an insightful method to analyze LLM behavior.
+
+`TOPOLM: BRAIN-LIKE SPATIO-FUNCTIONAL ORGANIZATION IN A TOPOGRAPHIC LANGUAGE MODEL <https://arxiv.org/pdf/2410.11516>`_
+    Neural networks are "supposed" to behave like neurons, but they don't in practice.  This paper seeks to remedy the situation by introducing an LLM semantically structured like the brain.
+
+`Bridging the Training-Inference Gap in LLMs by Leveraging Self-Generated Tokens <https://arxiv.org/pdf/2410.14655>`_
+    A simple but incisive insight motivates this paper: LLMs are trained to predict the next token, but in practical use they generate sequences of tokens.  This can cause misalignment between training and inference paradigms.  Training LLMs on sequences of tokens instead leads to increased performance.
+
+VLMs
+----
+`PLOTS UNLOCK TIME-SERIES UNDERSTANDING IN MULTIMODAL MODELS <https://arxiv.org/pdf/2410.02637>`_
+    A multi-modal LLM can accept input data in multiple modalities.  Not all modalities are created equal, however - the model performs better when the input data is formatted as a plot instead of a sequence of text.
+
+`Visual Scratchpads: Enabling Global Reasoning in Vision <https://arxiv.org/pdf/2410.08165>`_
+    Proposes a method for enabling global reasoning in VLMs which is morally similar to chain of thought and text scratchpads in test models.  The idea is to break complex global tasks into manageable smaller tasks that the VLM can handle
+
+Object Detection
+----------------
+`SpaceMesh: A Continuous Representation for Learning Manifold Surface Meshes <https://arxiv.org/pdf/2409.20562>`_
+    A neural net for turning bad meshes, or mesh-like objects, into good, well-behaved meshes.  This may be worth integrating into any pipeline that generates meshes to standardize/improve representations.
+
+`Supervised Multi-Modal Fission Learning <https://arxiv.org/pdf/2409.20559>`_
+    This paper proposes a multi-modal model for early prediction of Alzheimer's using MRI, PEI, and SNP data.  The most interesting part is that it doesn't use neural nets, instead relying on matrix factorization techniques. 
+
+`SegEarth-OV: Towards Traning-Free Open-Vocabulary Segmentation for Remote Sensing Images <https://arxiv.org/pdf/2410.01768>`_
+    A pipeline for open-vocabulary segmentation of remote sensing imagery, based on CLIP and FeatUp.  Relevant to remote sensing work.
+
+Tracking
+--------
+`SAMBA: SYNCHRONIZED SET-OF-SEQUENCES MODELING FOR MULTIPLE OBJECT TRACKING <https://arxiv.org/pdf/2410.01806>`_
+    Uses state-space models to do multi-object tracking.  Seems to be an improvement over state-of-the-art methods, especially in complicated environments.
+
+Gaussian Splatting
+------------------
+`VARIATIONAL BAYES GAUSSIAN SPLATTING <https://arxiv.org/pdf/2410.03592>`_
+    Proposes a method to do Gaussian Splatting with Variational Bayes. The proposed method outperforms existing methods when continual learning on sequentially streamed data.
+
+Computational Enhancement
+-------------------------
+`LoLCATS: On Low-Rank Linearizing of Large Language Models <https://github.com/HazyResearch/lolcats/blob/main/lolcats_preprint_v0.pdf>`_
+    A new method for linearizing and compressing LLMs.  Appears to be exceptionally effective, reducing Mistral 7B down to 0.04B tokens while suffering only slight performance degradation.
+
+`Fundamental Limitations on Subquadratic Alternatives to Transformers <https://arxiv.org/pdf/2410.04271>`_
+    Notes fundamental limits in attempting to linearize a quadratic transformer.  In particular, if the problem is itself quadratic, then linearizing the model only helps so much.  
+
+`WHAT MATTERS IN TRANSFORMERS? NOT ALL ATTENTION IS NEEDED <https://arxiv.org/pdf/2406.15786>`_
+    This paper notes that many layers in transformers are extremely similar to each other.  A smart pruning strategy can then prune many attention layers with only minimal degradation in performance: Llama-2-70B can be sped up by 48.5% while losing only 2.4% of performance.
+
+Catastrophic Forgetting 
+-----------------------
+`Fine-Grained Gradient Restriction: A Simple Approach for Mitigating Catastrophic Forgetting <https://arxiv.org/pdf/2410.00868>`_
+    A new method for combatting catastrophic forgetting which works by modifying Gradient Episodic Memory (GEM).  The paper finds that restricting the search space of the update direction reduces the generalization gap.
+
+`LINES: POST-TRAINING LAYER SCALING PREVENTS FORGETTING AND ENHANCES MODEL MERGING <https://arxiv.org/pdf/2410.17146>`_
+    Seeks to ameliorate catastrophic forgetting in continual learning by linearly rescaling weights depending on layer.  Results seem convincing.
+
+Model Merging 
+-------------
+`WHAT MATTERS FOR MODEL MERGING AT SCALE? <https://arxiv.org/pdf/2410.03617>`_
+    Investigates model merging, a method of enhancing performance by combining multiple neural nets by (among other methods) averaging the model weights.  Finds and lists five insights about the practice.
+
+`MODEL MERGING WITH SVD TO TIE THE KNOTS <https://arxiv.org/pdf/2410.19735>`_
+    Model merging is difficult for LoRA-trained models because the weights are not aligned properly between model.  This paper proposes using SVD to calibrate the LoRA-trained models and then merge them in the calibrated space.
+
+Theory
+------
+`Old Optimizer, New Norm: An Anthology <https://arxiv.org/pdf/2409.20325>`_
+    Interesting analysis that finds that different optimizers (Adam, Shampoo, Prodigy) are really just steepest descent under different norms if exponential moving averages are turned off.  This generates new insights for creating additional optimizers.
+
+`Classical Statistical (In-Sample) Intuitions Don’t Generalize Well: A Note on Bias-Variance Tradeoffs, Overfitting and Moving from Fixed to Random Designs <https://arxiv.org/pdf/2409.18842>`_
+    An easy-to-read exploration of why classical statistical intuition breaks down for ML topics such as double descent/overfitting, with a focus on experimental design.  Illuminating for those with statistician backgrounds.
+
+`Were RNNs All We Needed? <https://arxiv.org/pdf/2410.01201>`_
+    Examines older RNN model architectures (LSTMs, GRUs) and, after training them with modern techniques, compares their performance with transformers.  Finds approximately equivalent performance.  Implies that models are more limited by data/training than by architecture.
+
+`Visualising Feature Learning in Deep Neural Networks by Diagonalizing the Forward Feature Map <https://arxiv.org/pdf/2410.04264>`_
+    Studies how feature learning works in deep neural networks by studying the "feature function", which is formed by taking the entire net except for the final layer.  Since the final layer should be able to linearly separate its inputs, this is a creative way of generating features and leads to some interesting results.
+
+`Active-Dormant Attention Heads: Mechanistically Demystifying Extreme-Token Phenomena in LLMs <https://arxiv.org/pdf/2410.13835>`_
+    Analyzes why extreme token phenomena occur in LLMs.  Analyzes a toy model as well as large pretrained models like Llama. 
+
+`THEORETICAL LIMITATIONS OF ENSEMBLES IN THE AGE OF OVERPARAMETERIZATION <https://arxiv.org/pdf/2410.16201>`_
+    Investigates why ensemble methods don't work less than might be anticipated for deep learning architectures.  The finding is that adding additional neural nets to the ensemble is like making an already existing neural net larger.  For already large neural nets, the benefits of an ensemble might thus be marginal.
+
+`TOKENFORMER: RETHINKING TRANSFORMER SCALING WITH TOKENIZED MODEL PARAMETERS <https://arxiv.org/pdf/2410.23168>`_
+    A novel transformer architecture which is both scalable and flexible.  Works by treating parameters as tokens. 
+
+Applications
+------------
+`Few-shot target-driven instance detection based on open-vocabulary object detection models <https://arxiv.org/pdf/2410.16028>`_
+    Proposes a methodology to use a large foundation model to label data from open-vocabulary few-shot scenarios which is then used to train a student model.
+
+`Guidance Disentanglement Network for Optics-Guided Thermal UAV Image Super-Resolution <https://arxiv.org/pdf/2410.20466>`_
+    A new paper from Northwestern Polytechnical University, a university that's considered of the "seven sons of national defense" in China, investigating how to do EO/IR sensor fusion on UAVs. They create a neural net to do so, with available code and weights.
+
+New Models
+----------
+`MM1.5: Methods, Analysis & Insights from Multimodal LLM Fine-tuning <https://arxiv.org/pdf/2409.20566>`_
+    A new multimodal LLM from Apple.  Lots of capabilities and good performance, but is not currently open source.
+
+`Maia-2: A Unified Model for Human-AI Alignment in Chess <https://arxiv.org/pdf/2409.20553>`_
+    A new model for chess which can align itself to human elo values.
+
+`LEOPARD : A Vision Language Model for Text-Rich Multi-Image Tasks <https://arxiv.org/pdf/2410.01744>`_
+    A new VLM designed to work in a text-rich multi-image environment.  Thorough benchmarking.
+
+`Pixtral 12B <https://arxiv.org/pdf/2410.07073>`_
+    A new multimodal LLM from Mistral, which achieves SOTA performance on both text and image related tasks.  Apache 2.0 license, open weights.
+
+`Zamba2-7B <https://www.zyphra.com/post/zamba2-7b>`_
+    A new LLM that claims to be the best in its weight class and has open source weights.
+
+`Movie Gen: A Cast of Media Foundation Models <https://arxiv.org/pdf/2410.13720>`_
+    A new movie generation foundation model suite from Meta with a large report.
+
+`Developing a computer use model <https://www.anthropic.com/research/developing-computer-use>`_
+    Anthropic lets Claude 3.5 use computers directly.  Seems like a cool new capability, but it does go off the rails a bit by, e.g., googling pictures of Yellowstone.
+
+`Introducing Aya <https://cohere.com/research/aya>`_
+    A new multilingual LLM from Cohere.
+
+`Granite 3.0 Language Models <https://github.com/ibm-granite/granite-3.0-language-models/blob/main/paper.pdf>`_
+    A new suite of foundation models from IBM.  Apache 2.0 license.  Performance seems equivalent to SOTA.
+
+Presented at CoVar Seminar
+--------------------------
+2024-10-01
+    `LANGUAGE MODELS LEARN TO MISLEAD HUMANS VIA RLHF <https://arxiv.org/pdf/2409.12822>`_
+    RLHF is a popular method for aligning LLMs.  This paper examines RLHF in detail and finds that, instead of improving LLM performance by causing LLMs to generate more correct answers, it instead can cause LLMs to prioritize answers which seem correct to human evaluators.
+    `Fine-Tuning Language Models from Human Preferences <https://arxiv.org/pdf/1909.08593>`_
+    The OpenAI paper that first proposed, and described, RLHF. 
+
+2024-10-15
+    `DIFFERENTIAL TRANSFORMER <https://arxiv.org/pdf/2410.05258>`_
+    How to improve transformers by reducing hallucinations and improving in-context learning performance?  Use DiffAttention, which is the difference between two different softmax attention maps on the query and key vectors.  The intuition is that this reduces noise, allowing the transformer to pay more attention on the important bits.

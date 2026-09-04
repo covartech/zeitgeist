@@ -1,0 +1,226 @@
+The CoVar Zeitgeist: June, 2025
+================================
+A larger than normal amount of interesting papers published this month.  Featuring:
+
+* A method to combine Depth Anything with any sort of absolute depth information to string together absolute depth estimates from monocular imagery.
+* A paper from MIT that applies a thermodynamic-based approach to understanding LLM/neural net training.  Finds a river-valley loss landscape and uses that to guide training methods.
+* Current approaches towards AI agency focus are focused on empowerment - the ability of an AI agent to influence the future - but Google Deepmind thinks plasticity - the agent's ability to learn from its past - is equally important.  Unfortunately, there's a tension between these concepts.
+* Applying RL techniques to LLMs only updates a sparse subset of weights.  RLing only on this sparse subset of weights achieves 99% of RLing the entire model.  
+* Proposes Bonsai, a tree-based alternative to UMAP and t-SNE for representing high-dimensional data.  Developed for omics data, it generalizes at least to football data.
+* Google Brain develops a novel RL method using video prediction methods to train models to play Atari.
+
+`CoVar <https://covar.com/>`_
+
+Featured
+--------
+`Depth Anything with Any Prior <https://arxiv.org/pdf/2505.10565>`_
+    Develops a method to combine relative depth maps with depth priors that provide absolute depth information to produce accurate absolute depth estimates from monocular imagery.
+    
+`Neural Thermodynamic Laws for Large Language Model Training <https://arxiv.org/pdf/2505.10559>`_
+    Introduces a novel framework, neural thermodynamic laws, which characterize the LLM training process using analogies to thermodynamics.  Posits the existence of a river-valley loss landscape, and uses this to recommend training processes.
+    
+`Plasticity as the Mirror of Empowerment <https://arxiv.org/pdf/2505.10361>`_
+    Agents have been measured by empowerment: their ability to influence the future.  Equally important, this paper argues, is their plasticity: their ability to be influenced by the past.  This paper identifies and proves that there is a tension between these two foundational abilities.
+
+`Reinforcement Learning Finetunes Small Subnetworks in Large Language Models <https://arxiv.org/pdf/2505.11711>`_
+    A deep dive into the behavior of various reinforcement learning algorithms on improving LLM performance.  Finds that each method of RL updates only a sparse subset of weights; moreover, training only on that sparse subset of weights achieves the same effect as training on the entire network.
+    
+`Bonsai: Tree representations for distortion-free visualization and exploratory analysis of single-cell omics data <https://www.biorxiv.org/content/10.1101/2025.05.08.652944v1.full.pdf>`_
+    Proposes Bonsai, an alternative method to t-SNE and UMAP for representing latent structure in high dimensional data.  Bonsai reconstructs a tree relating the high-dimensional data and, among a number of other improvements, is wholly deterministic. 
+
+`Model Based Reinforcement Learning for Atari <https://arxiv.org/pdf/1903.00374>`_
+    Trains a policy by acting in a world model which performs next-frame and reward prediction. The world model is trained with interaction data from the policy acting in the real environment.
+
+LLMs
+----
+`Large Language Models Are More Persuasive Than Incentivized Human Persuaders <https://arxiv.org/pdf/2505.09662>`_
+    Conducts a study to test the effectiveness of AI as a persuader compared to a human.  Found that AI persuaders are more persuasive even when humans are incentivized by economic means.
+
+`Circuit Tracing: Revealing Computational Graphs in Language Models <https://transformer-circuits.pub/2025/attribution-graphs/methods.html#global-weights>`_
+    Proposes novel algorithms for divining the underlying behavior of LLMs, and develops a large number of analytic tools to enable such analysis.  In a companion paper, applies these methods to Claude 3.5
+
+`Harnessing the Universal Geometry of Embeddings <https://arxiv.org/pdf/2505.12540>`_
+    Posits that text embeddings have a universal structure - following the Platonic Representation Hypothesis - and shows this by constructing a method to map text embeddings from different models onto each other without leveraging any paired data or any encoders.  Demonstrates robustness to out-of-distribution data.
+
+`Position: Mechanistic Interpretability Should Prioritize Feature Consistency in SAEs <https://arxiv.org/pdf/2505.20254>`_
+    Sparse Autoencoders are potentially useful for finding interpretable features in neural networks, but can be unreliable in that they can produce sets of features.  This paper proposes a metric which prioritizes consistency, and argues that applications following this metric learn consistent semantic features corresponding to ground truth.
+
+LLM Reasoning
+-------------
+`Language Agents Mirror Human Causal Reasoning Biases. How Can We Help Them Think Like Scientists? <https://arxiv.org/pdf/2505.09614>`_
+    Deploys the Blicket test to assess patterns of though in LLMs.  Finds that LLMs perform well at discovering disjunctive causal relationships, but fail to discover conjunctive ones.
+
+`The Coverage Principle: A Framework for Understanding Compositional Generalization <https://arxiv.org/pdf/2505.20278>`_
+    Notes that LLMs that rely solely on pattern matching struggle to generalize in compositional tasks, and leverages this observation to provide a coverage-based metric for LLM reasoning performance.  Finds that there are three ways in which neural networks can generalize: structure-based, property-based, and shared-operator.
+
+`The Unreasonable Effectiveness of Entropy Minimization in LLM Reasoning <https://www.arxiv.org/pdf/2505.15134>`_
+    If a model is capable, it is likely to be correct when it is confident.  This paper uses entropy minimization to leverage this insight and force the model to place more probability in its already-confident responses.  
+
+Novel Architectures
+-------------------
+`UniversalRAG: Retrieval-Augmented Generation over Multiple Corpora with Diverse Modalities and Granularities <https://arxiv.org/pdf/2504.20734>`_
+    Existing RAG methods are either limited to a textual corpus, or include only a small number of other modalities.  This paper proposes UniversalRAG, a RAG framework which can contain a wide variety of diverse object types.
+
+`Continuous Thought Machines <https://arxiv.org/pdf/2505.05522>`_
+    Sakana AI proposes a novel neural net architecture, the Continuous Thought Machine (CTM), which is motivated by the desire to make the function of neural nets more similar to how human brains process information.  CTMs do so by incorporating neuron-level temporal processing and enabling capture of temporal dynamics while remaining computationally tractable.
+
+`PUZZLE: DISTILLATION-BASED NAS FOR INFERENCE-OPTIMIZED LLMS <https://arxiv.org/pdf/2411.19146>`_
+    Presents Puzzle, a framework for LLM inference which operates by utilizing neural architecture search at a large scale.  Given a parent model, Puzzle searches a wide number of architectures to find the optimal one for a given task.
+
+Object Detection
+----------------
+`LISAT: Language-Instructed Segmentation Assistant for Satellite Imagery <https://arxiv.org/pdf/2505.02829>`_
+    Current phrase grounding segmentation capabilities for remote sensing are limited for complex queries.  This paper proposes a new method, LISAT, which can handle queries such as "Locate the truck that is elongated and light-colored, diagonally positioned on the road, contrasting with the surrounding darker pavement."
+
+`Depth Anything with Any Prior <https://arxiv.org/pdf/2505.10565>`_
+    Develops a method to combine relative depth maps with depth priors that provide absolute depth information to produce accurate absolute depth estimates from monocular imagery.
+
+Autonomy & Safety
+-----------------
+`Reasoning Models Don’t Always Say What They Think <https://arxiv.org/pdf/2505.05410>`_
+    Anthropic's Alignment Science Team investigates whether chain of thought accurately represents a model's reasoning process.  Finds equivocal results: Chain of Though often but not always represents the model's reasoning process, allowing for nontrivial but insufficient monitoring.
+
+`Predicting and explaining AI model performance: A new approach to evaluation <https://www.microsoft.com/en-us/research/blog/predicting-and-explaining-ai-model-performance-a-new-approach-to-evaluation/?msockid=15a11d4c6a9565bf107b0e6b6e956bd2>`_
+    Microsoft proposes an evaluation framework for AI models which involves decomposing benchmarks into tasks, grading AI performance according to these tasks to create and ability profile, and using this ability profile to predict future performance.  This benchmarking system generalizes more reliably and provides more fine-grained information than current methods.
+
+`Plasticity as the Mirror of Empowerment <https://arxiv.org/pdf/2505.10361>`_
+    Agents have been measured by empowerment: their ability to influence the future.  Equally important, this paper argues, is their plasticity: their ability to be influenced by the past.  This paper identifies and proves that there is a tension between these two foundational abilities.
+
+Reinforcement Learning
+----------------------
+`Absolute Zero: Reinforced Self-play Reasoning with Zero Data <https://arxiv.org/pdf/2505.03335>`_
+    Is it possible to develop a reinforcement learning with verifiable rewards (RLVR) training paradigm that uses zero real examples?  To answer, this paper proposes AbsoluteZero, a paradigm where a model (1) proposes tasks to optimize its own learning and (2) learns how to solve these tasks.  Despite using zero real data, models post-trained in this paradigm achieve SOTA results.
+
+`Reinforcement Learning Finetunes Small Subnetworks in Large Language Models <https://arxiv.org/pdf/2505.11711>`_
+    A deep dive into the behavior of various reinforcement learning algorithms on improving LLM performance.  Finds that each method of RL updates only a sparse subset of weights; moreover, training only on that sparse subset of weights achieves the same effect as training on the entire network.
+
+`Reinforcement Learning from User Feedback <https://arxiv.org/pdf/2505.14946>`_
+    Proposes Reinforcement Learning from User Feedback (RLUF), a generalization of RLHF which aligns LLMs with user preferences by finetuning them with user feedback.
+
+`Spurious Rewards: Rethinking Training Signals in RLVR <https://github.com/ruixin31/Rethink_RLVR/blob/main/paper/rethink-rlvr.pdf?utm_source=substack&utm_medium=email>`_
+    Demonstrates that Reinforcement Learning with Verifiable Rewards (RLVR) induces a performance increase in Qwen models even if there are spurious rewards. No other models exhibit this behavior, and the paper speculates it occurs because the RLVR drives code reasoning.
+
+`Recurrent World Models Facilitate Policy Evolution <https://papers.nips.cc/paper_files/paper/2018/file/2de5d16682c3c35007e4e92982f1a2ba-Paper.pdf>`_
+    Learns RNN world model from random policy rollouts which can predict the next embedded state given current embedded state and action. Policy trains on embedded observation and world model RNN hidden state.
+
+`Model Based Reinforcement Learning for Atari <https://arxiv.org/pdf/1903.00374>`_
+    Trains a policy by acting in a world model which performs next-frame and reward prediction. The world model is trained with interaction data from the policy acting in the real environment.
+
+Training & Continuous Learning
+------------------------------
+`DD-Ranking: Rethinking the Evaluation of Dataset Distillation <https://arxiv.org/pdf/2505.13300>`_
+    Dataset distillation methods which involve distilling a large training set into a smaller, synthetic, one for computational purposes have seen advances recently.  However, this paper argues that improved metrics are due to improved techniques applied elsewhere in the training pipeline rather than due to image quality, and proposes a new, fairer, evaluation metric.
+
+`Neural Thermodynamic Laws for Large Language Model Training <https://arxiv.org/pdf/2505.10559>`_
+    Introduces a novel framework, neural thermodynamic laws, which characterize the LLM training process using analogies to thermodynamics.  Posits the existence of a river-valley loss landscape, and uses this to recommend training processes.
+
+Statistics
+----------
+`Generate-then-Verify: Reconstructing Data from Limited Published Statistics <https://arxiv.org/pdf/2504.21199>`_
+    Differential privacy is a data privacy method which allows public datasets to be released without allowing for recovery of full information about any individual in the dataset.  This paper devises an attack method for differentially private datasets which allows for the guaranteed recovery of some subset of individuals in the dataset.
+
+`Bonsai: Tree representations for distortion-free visualization and exploratory analysis of single-cell omics data <https://www.biorxiv.org/content/10.1101/2025.05.08.652944v1.full.pdf>`_
+    Proposes Bonsai, an alternative method to t-SNE and UMAP for representing latent structure in high dimensional data.  Bonsai reconstructs a tree relating the high-dimensional data and, among a number of other improvements, is wholly deterministic. 
+
+`Modular Jump Gaussian Processes <https://arxiv.org/pdf/2505.15557>`_
+    Jump Gaussian Processes (JGPs) were developed to model processes with sudden, nonstationary, jumps but are difficult to apply in practice.  This paper proposes a new paradigm for JGPs which enables easier inference.
+
+`Random irregular histograms <https://arxiv.org/pdf/2505.22034>`_
+    The Norwegian Defence Research Establishment publishes a novel Bayesian approach to irregular histograms which excels at mode detection for larger sample sizes.
+
+Applications
+------------
+`FaceAge, a deep learning system to estimate biological age from face photographs to improve prognostication: a model development and validation study <https://www.thelancet.com/journals/landig/article/PIIS2589-7500(25)00042-1/fulltext?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=ai-predicts-cancer-outcomes-from-selfies&_bhlid=3add86b0a9fc4a659c9f13d7d653b3fb4f452535>`_
+    Trains and evaluates a neural network for predicting age based on facial imagery.  In doing so, finds that the model is statistically and clinically useful for evaluating and predicting cancer outcomes.
+
+`AlphaEvolve: A Gemini-powered coding agent for designing advanced algorithms <https://deepmind.google/discover/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/?utm_source=substack&utm_medium=email>`_
+    Google Deepmind releases AlphaEvolve, an agent combining together multiple models to design novel coding algorithms.  Algorithms designed by AlphaEvolve are currently deployed at Google, saving Google 0.7% of its world-wide computing resources.  AlphaEvolve has also designed other novel algorithms such as finding a more optimal method for multiplying complex-valued 4x4 matrices, improving upon a result that had not admitted innovations for 60 years.
+
+`Unlocking Non-Invasive Brain-to-Text <https://arxiv.org/pdf/2505.13446>`_
+    Proposes a novel, SOTA, paradigm for non-invasive brain-to-text (B2T) prediction leveraging (1) contextual LLM rescoring, (2) a predictive fill-in strategy, and (3) selective dataset pooling.
+
+`ROBIN: A MULTI-AGENT SYSTEM FOR AUTOMATING SCIENTIFIC DISCOVERY <https://arxiv.org/pdf/2505.13400>`_
+    Introduces Robin, a multi-agent system combining literature search and data analysis agents to automate parts of the scientific pipeline.  Robin generated hypotheses, experiment designs, data analytics, and figures for this paper in the process of discovering a novel therapeutic candidate.
+
+`Zochi Publishes A* Paper <https://www.intology.ai/blog/zochi-acl?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=new-york-times-amazon-ink-ai-deal&_bhlid=319df94b6ce0fa571b8c95741cd3306018d1fb1d>`_
+    Intology has designed an AI agent, Zochi, which has written a paper that has passed peer review at the main proceedings of ACL.  The paper written was based off of earlier work submitted to ICLR and took Zochi only days to complete with minimal input from human researchers.
+
+New Models
+----------
+`Phi-4-reasoning Technical Report <https://arxiv.org/pdf/2504.21318>`_
+    Microsoft releases Phi-4-Reasoning, a 14B parameter model that achieves comparable performance to larger models such as DeepSeek-R1-Distill-Llama-70B.
+
+`Xiaomi MiMo <https://github.com/XiaomiMiMo/MiMo?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=visa-mastercard-give-ai-credit-cards&_bhlid=32a247816b9f1ff22ef01a2889f4f02eb4d5ccca>`_
+    Xiaomi releases a suite of models, MiMo-7B, that, while small, outperform larger 32B parameter models on mathematical and coding tasks.  Available on Huggingface under an Apache 2.0 license.
+
+`DeepSeek-Prover-V2: Advancing Formal Mathematical Reasoning via Reinforcement Learning for Subgoal Decomposition <https://github.com/deepseek-ai/DeepSeek-Prover-V2/tree/main?tab=readme-ov-file>`_
+    DeepSeek releases DeepSeek-Prover-V2, an open source model optimized for formal theorem proving.  Available on Huggingface.
+
+`Amazon Nova Premier: Technical Report and Model Card <https://assets.amazon.science/f6/c5/79dceb124593b3356566ad6723af/the-amazon-nova-premier-technical-report-and-model-card.pdf>`_
+    Amazon releases Nova Premier, the most recent and best performing model in the Nova suite of models.  It features a one-million token long context window.  Available in Amazon Bedrock.
+
+`Llama-Nemotron: Efficient Reasoning Models <https://arxiv.org/pdf/2505.00949>`_
+    Nvidia releases the Llama-Nemotron suite of models, a group of reasoning models which achieve SOTA performance at lower computational cost.  Available on Huggingface under a bespoke license.
+
+`NORA: A Small Open-Sourced Generalist Vision Language Action Model for Embodied Tasks <https://declare-lab.github.io/nora>`_
+    A small, 3B parameter, visual-language-action model from Declare Lab and Lambda Labs.  Available under an MIT license.
+
+`FutureHouse Platform: Superintelligent AI Agents for Scientific Discovery <https://www.futurehouse.org/research-announcements/launching-futurehouse-platform-ai-agents?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=futurehouse-s-superhuman-science-agents&_bhlid=b2b50af9254da4cf97bbad70959795fa728b14f6>`_
+    FutureHouse releases a suite of four models built from the ground up which can aid scientists in a variety of scientific tasks.  Available via API.
+
+`OLMo 2 1B  <https://allenai.org/olmo/release-notes#olmo-2-1b>`_
+    Allen AI releases Olmo 2 1B, the smallest member of the Olmo 2 family, which has been trained to SOTA performance.  Available on Huggingface under an Apache 2.0 license.
+
+`Medium is the new large. <https://mistral.ai/news/mistral-medium-3?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-goes-global-with-stargate&_bhlid=d848ca86adec8ddc81539e752414611e11b9bd67>`_
+    Mistral releases Mistral Medium 3, which balances SOTA performance with lower cost for coding and multimodal understanding.
+
+`PANGU ULTRA MOE: HOW TO TRAIN YOUR BIG MOE ON ASCEND NPUS <https://arxiv.org/pdf/2505.04519>`_
+    Huawei releases Pangu Ultra MoE, a version of Pangu Ultra incorporating Mixture of Experts architecture and which is trained on ascend neural processing units.
+
+`MiMo: Unlocking the Reasoning Potential of Language Model – From Pretraining to Posttraining <https://arxiv.org/pdf/2505.07608>`_
+    Xiaomi presents MiMo-7B, a small reasoning model which has been trained to SOTA performance on reasoning tasks, exceeding the performance of o1-mini.  Code available on github under an Apache-2.0 license.
+
+`INTELLECT-2: A Reasoning Model Trained Through Globally Decentralized Reinforcement Learning <https://storage.googleapis.com/public-technical-paper/INTELLECT_2_Technical_Report.pdf>`_
+    Prime Intellect releases Intellect 2, the first 32B parameter model trained via globally distributed reinforcement learning.  Available on Huggingface under an Apache 2.0 license.
+
+`Qwen3 Technical Report <https://arxiv.org/pdf/2505.09388>`_
+    Qwen releases the technical report for Qwen3: it presents, summarizes, and describes all models in the Qwen3 family in one location.
+
+`Flash-VL 2B: Optimizing Vision-Language Model Performance for Ultra-Low Latency and High Throughput <https://arxiv.org/pdf/2505.09498>`_
+    Meituan releases Flash-VL 2B, a novel architecture for video language models optimized for low latency and high throughput while maintaining accuracy.  
+
+`MathCoder-VL: Bridging Vision and Code for Enhanced Multimodal Mathematical Reasoning <https://arxiv.org/pdf/2505.10557>`_
+    A new vision language model which aims to solve mathematical problems presented in image data by first converting the image data to coding problems before applying reasoning capabilities.
+
+`SWE-1: Our First Frontier Models <https://windsurf.com/blog/windsurf-wave-9-swe-1?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=windsurf-s-surprise-ai-model-reveal&_bhlid=16b6931c57b9f439e363ac5b646b35507f347312>`_
+    Windsurf releases SWE-1, a suite of models which aims to reproduce the entirety of the work that software engineers perform, not simply writing code.  Available via API.
+
+`II-Medical <https://ii.inc/web/blog/post/ii-medical?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=windsurf-s-surprise-ai-model-reveal&_bhlid=f635b2ff886730e92a48ba3026430cf1290c201b>`_
+    Intelligent Internet releases II-Medical, a new model finetuned to medical applications which can outperform much larger frontier models on clinical reasoning tasks.  Available on Huggingface.
+
+`Introducing Codex <https://openai.com/index/introducing-codex/?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-s-software-development-agent&_bhlid=70948b7df698f84516af5492f33dc92be6076207>`_
+    OpenAI releases Codex, a software engineering agent based off of o3 which specializes in coding tasks.  Available via API.
+
+`Google I/O 2025: From research to reality <https://blog.google/technology/ai/io-2025-keynote/?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=google-s-massive-ai-showcase-at-i-o&_bhlid=058371ce1a2067abe472244e2a001d5395c80620#google-beam>`_
+    Google releases a plethora of products at Google I/O 2025, including the Veo3 video generation model, Imagen4 for image creation, Lyrai2 for music creation, updates to search, and updates to Gemini 2.5.
+
+`Devstral <https://mistral.ai/news/devstral>`_
+    Mistral releases Devstral, an agentic LLM model finetuned for software engineering tasks.  Achieves SOTA performance.  Available under an Apache 2.0 license.
+
+`Emerging Properties in Unified Multimodal Pretraining <https://bagel-ai.org/>`_
+    Bytedance releases BAGEL, a SOTA open-source model which unifies understanding and generation.  Available under an Apache 2.0 license.
+
+`Document AI, powered by the world’s best OCR. <https://mistral.ai/solutions/document-ai?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=anthropic-drops-world-s-best-coding-model&_bhlid=fd9cf960385612797200957227d8d62d4a48c061>`_
+    Mistral releases an AI agent for document processing, capable of parsing text, handwriting, tables, and images from any document at 2000 pages per second.  
+
+`PANGU LIGHT: WEIGHT RE-INITIALIZATION FOR PRUNING AND ACCELERATING LLM'S <https://arxiv.org/pdf/2505.20155>`_
+    Huawei releases Pangu Light, a framework for enhancing computational performance of LLMs without suffering a large performance drop.  Demonstrates success on Qwen3-32B.
+
+`Introducing Claude 4 <https://www.anthropic.com/news/claude-4?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=anthropic-drops-world-s-best-coding-model&_bhlid=65f87eb90298eebb2dd5f5e4ea6f5a40357e3ea7>`_
+    Anthropic releases Claude Opus 4 and Claude Sonnet 4, the newest releases in the Claude family.  Claude Opus 4 is a dedicated coding agent which is the "best in the world", while Claude Sonnet 4 is an upgrade to Claude Sonnet 3.7.  Available via API.
+
+`PANGU PRO MOE: MIXTURE OF GROUPED EXPERTS FOR EFFICIENT SPARSITY <https://arxiv.org/pdf/2505.21411>`_
+    Huawei releases Pangu Pro MOE, a mixture of grouped experts model which more effectively balances the load between the experts than classical MOE models.  
+
+`DeepSeek-R1-0528 <https://huggingface.co/deepseek-ai/DeepSeek-R1-0528?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=anthropic-ceo-issues-stark-employment-warning&_bhlid=2c5916a830aafe6877f20bf05a98babaad97b1ec>`_
+    DeepSeek releases a minor update to R1.  Available on Huggingface under an mit license.

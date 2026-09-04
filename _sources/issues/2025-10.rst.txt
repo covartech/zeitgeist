@@ -1,0 +1,154 @@
+The CoVar Zeitgeist: October, 2025
+=================================
+CoVar is pleased to present the CoVar Zeitgeiest - our monthly overview of cutting edge-AI/ML from September 2025. Featuring:
+
+* OpenAI's study into the root cause of hallucinations in Large Language Models and how they might be reduced.
+* An algorithm discovery algorithm from Google that discovered dozens of novel methods across several fields of study.
+* A novel training paradigm for AI agents which dynamically varies the environment to force adaptation.
+* A novel tracking system which leverages depth information from foundation models to estimate spatial location and improve tracking.
+* A paper from Google delineating the limitations of embedding-based retrieval with theoretical and empirical results.
+* A novel Bayesian nonparametric clustering data that adapts the Hierarchical Dirichlet Process to allow different groups to possess different covariates.
+
+`Check out the CoVar website! <https://covar.com/>`_
+
+Featured
+--------
+`Why Language Models Hallucinate <https://openai.com/index/why-language-models-hallucinate/>`_
+    Argues that hallucinations arise in LLMs because the training and evaluation pipelines reward correct answers only: LLMs are incentivized to make confident, if often incorrect guesses rather than abstaining when unsure.  By restructuring these processes hallucinations can be reduced.
+
+`An AI system to help scientists write expert-level empirical software <https://arxiv.org/pdf/2509.06503>`_
+    Designs an AI system that leverages LLMs and Tree Search to design software to maximize a quality metric.  Uses this system to discover a plethora of SOTA techniques across a wide variety of fields.  
+    
+`AbideGym: Turning Static RL Worlds into Adaptive Challenges <https://arxiv.org/pdf/2509.21234>`_
+    Agents trained with static environments fail when environments change.  This paper proposes more robust RL training including perturbations and scaleable complexity to overcome this limitation.
+
+`DepTR-MOT: Unveiling the Potential of Depth-Informed Trajectory Refinement for Multi-Object Tracking <https://arxiv.org/pdf/2509.17323>`_
+    Develops a method to improve multi-object tracking by incorporating depth estimates into the pipeline.  Depth estimates are formed first at a frame level by using foundation models, and then distilled into a general depth estimate.
+
+`On the Theoretical Limitations of Embedding-Based Retrieval <https://arxiv.org/pdf/2508.21038>`_
+    Proves a theoretical limit of embedding-based document retrieval: the ability of systems to successfully return top-k lists of documents is limited by the embedding dimension.  Demonstrates  this on a real-world dataset.
+
+`Global-Local Dirichlet Processes for Identifying Pan-Cancer Subpopulations Using Both Shared and Cancer-Specific Data <https://arxiv.org/pdf/2509.22884>`_
+    Proposes the Global-Local Dirichlet Process, a Bayesian nonparametric clustering method for clustering datapoints across groups where (1) all datapoints share a common set of covariates and (2) each group has its own, specific, set of covariates.
+
+LLMs
+----
+`Why Language Models Hallucinate <https://openai.com/index/why-language-models-hallucinate/>`_
+    Argues that hallucinations arise in LLMs because the training and evaluation pipelines reward correct answers only: LLMs are incentivized to make confident, if often incorrect guesses rather than abstaining when unsure.  By restructuring these processes hallucinations can be reduced.
+
+`Defeating Nondeterminism in LLM Inference <https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference/#conclusion-2-2>`_
+    A detailed analysis on the causes of nondeterminism in LLMs.  Argues that a large part of the cause is that CPU/GPU/TPU kernels are nondeterministic with respect to batch size.  Proposes a novel computational method which ensures that LLMs prompted with the same prompt at zero temperature generate the same output. 
+
+`Speculative cascades — A hybrid approach for smarter, faster LLM inference <https://research.google/blog/speculative-cascades-a-hybrid-approach-for-smarter-faster-llm-inference/>`_
+    Google combines two existing methodologies for LLM inference - cascades, where a small LLM answers what it can and defers what it cannot to a larger LLM, and speculative decoding, which uses a small LLM to draft and a large LLM to verify - into one method, speculative cascades.  The new method generates better output at a lower cost than either of its substituent methods.
+
+`Pre-training under infinite compute <https://arxiv.org/pdf/2509.14786>`_
+    Examines pretraining dynamics in a data-limited, rather than a compute-limited, paradigm.  Finds that current methods are suboptimal in this paradigm, and develops alternative methods such as increasing regularization.
+
+LLM Reasoning
+-------------
+`ParaThinker: Native Parallel Thinking as a New Paradigm to Scale LLM Test-time Compute <https://arxiv.org/pdf/2509.04475>`_
+    Argues that test time scaling for LLMs can encounter a bottleneck because of initial suboptimal steps locking the model into a poor reasoning path.  Introduces a methodology where the LLM generates multiple paths and synthesizes them together into one final answer to overcome this limitation.
+
+`Emgergent Hierarchical Reasoning in LLMS Through Reinforcement Learning <https://arxiv.org/pdf/2509.03646>`_
+    Investigates how reinforcement learning drives reasoning in LLMs and uncovers a hierarchical two-phase pattern where low-level skills are learned before high-level skills.  Proposes a novel reinforcement learning algorithm focussed on high-impact planning tokens to leverage this discovery.
+
+`The Majority is not always right: RL training for solution aggregation <https://arxiv.org/pdf/2509.06870>`_
+    Seeks to improve test-time LLM reasoning by training an aggregator component to choose between multiple generated answers.  Outperforms rules and rewards based models.
+
+Novel Architectures
+-------------------
+`SpikingBrain Technical Report: Spiking Brain-inspired Large Models <https://arxiv.org/pdf/2509.05276>`_
+    Introduces the SpikingBrain architecture, an alternative to transformers inspired by the neurological processes of the human brain and optimized to run on non-NVIDIA GPUS.  Demonstrates potential in a low resource environment.
+
+`Analog in-memory computing attention mechanism for fast and energy-efficient large language models <https://www.nature.com/articles/s43588-025-00854-1>`_
+    Develops a self-attention implementation which functions on novel analog gain-cell hardware to enable in-memory computation for LLMs.  Reduces attention latency and energy consumption by multiple orders of magnitude compared to GPUs.
+
+`Attention Schema-based Attention Control (ASAC): A Cognitive-Inspired Approach for Attention Management in Transformers <https://arxiv.org/pdf/2509.16058>`_
+    Adds a module to artificial neural networks which allows them to model and control attention allocation, mimicking how the human brain allocates attention.  Improves performance.
+
+Object Detection
+----------------
+`DepTR-MOT: Unveiling the Potential of Depth-Informed Trajectory Refinement for Multi-Object Tracking <https://arxiv.org/pdf/2509.17323>`_
+    Develops a method to improve multi-object tracking by incorporating depth estimates into the pipeline.  Depth estimates are formed first at a frame level by using foundation models, and then distilled into a general depth estimate.
+
+`VolSplat: Rethinking Feed-Forward 3D Gaussian Splatting with Voxel-Aligned Prediction <https://arxiv.org/pdf/2509.19297>`_
+    Introduces a novel Gaussian Splatting paradigm which aligns Gaussians with voxels instead of pixels.  Improves Gaussian Splatting in case of sparse views and reduces reliance on aligning features in 2D.
+
+`On the Status of Foundation Models for SAR Imagery <https://arxiv.org/pdf/2509.21722>`_
+    AFRL develops foundation models for use in SAR imagery.
+
+`Fifty Years of SAR Automatic Target Recognition: The Road Forward <https://arxiv.org/pdf/2509.22159>`_
+    A review paper on SAR ATR methods from one of the "Seven Sons of National Defense" in China, with a focus on historical development of methods and possible avenues of future research.
+
+Cyber
+-----
+`Strategic Cyber Defense via Reinforcement Learning-Guided Combinatorial Auctions <https://arxiv.org/pdf/2509.10983>`_
+    Constructs a game-theoretic auction-based framework for modelling cyber defense and attack strategies.  Uses this to train a transformer-based agent.
+
+`Automated Cyber Defense with Generalizable Graph-Based Reinforcement Learning Agents <https://arxiv.org/pdf/2509.16151>`_
+    Traditional automatic cyber defense (ACD) agents are overfit to the structure of the computer network they were trained to protect.  This paper introduces a graph-based RL framework for modelling computer networks, and trains cyber defense agents to better than SOTA capabilities.
+
+Testing & Evaluation
+--------------------
+`Fluid Language Model Benchmarking <https://arxiv.org/pdf/2509.11106>`_
+    Develops a method, Fluid Benchmarking, to evaluate LLMs by dynamically adjusting the difficulty of benchmark questions based on LLM performance.  Outperforms existing benchmarks.
+
+`GDPval: Evaluating AI Model Performance on Real-World Economically Valuable Tasks <https://cdn.openai.com/pdf/d5eb7428-c4e9-4a33-bd86-86dd4bcf12ce/GDPval.pdf>`_
+    How to compare an AI model's performance on a task to a human?  This paper suggests establishing a benchmark with human pairwise comparisons.
+
+Autonomy
+--------
+`An AI system to help scientists write expert-level empirical software <https://arxiv.org/pdf/2509.06503>`_
+    Designs an AI system that leverages LLMs and Tree Search to design software to maximize a quality metric.  Uses this system to discover a plethora of SOTA techniques across a wide variety of fields.  
+
+`Tool-space interference in the MCP era: Designing for agent compatibility at scale <https://www.microsoft.com/en-us/research/blog/tool-space-interference-in-the-mcp-era-designing-for-agent-compatibility-at-scale/>`_
+    Microsoft analyzes how MCP servers interact with multi-agent systems and makes recommendations for their improvement.
+
+`LIMI: Less is More for Agency <https://arxiv.org/pdf/2509.17567>`_
+    Investigates training paradigms for autonomous agents.  Finds that, contrary to existing conventional wisdom, the best agents result from small but high quality training sets.  Implies that scaling training data is not the path forward for developing training agents.
+
+`AbideGym: Turning Static RL Worlds into Adaptive Challenges <https://arxiv.org/pdf/2509.21234>`_
+    Agents trained with static environments fail when environments change.  This paper proposes more robust RL training including perturbations scaleable complexity to overcome this limitation.
+
+Reinforcement Learning
+----------------------
+`RL’S Razor: Why Online Reinforcement Learning Forgets Less <https://arxiv.org/pdf/2509.04259>`_
+    Investigates why reinforcement learning tends to forget less than supervised finetuning for fine-tuning models.  Finds that reinforcement learning methods are biased towards KL-minimal solutions, which tend to stay close to the original model, while SFT methods can diverge arbitrarily.
+
+`Abduct, Act, Predict: Scaffolding Causal Inference for Automated Failure Attribution in Multi-Agent Systems <https://arxiv.org/pdf/2509.10401>`_
+    Develops a method for blame attribution in a MARL setting by leveraging counterfactual reasoning.  Identifies errors, finds interventions which remedy the errors, and simulates a counterfactual to verify the remedy.  Demonstrates the efficacy of this method on the Who&When benchmark.
+
+`Compute as Teacher: Turning Inference Compute Into Reference-Free Supervision <https://arxiv.org/pdf/2509.14234>`_
+    Develops a method for post-training with no ground truth by allowing a model to generate several responses, synthesizing these into a single response, and treating it as a teacher to be learned from for both verifiable and non-verifiable tasks.
+
+`Reinforcement Learning on Pre-Training Data <https://arxiv.org/pdf/2509.19249>`_
+    As training LLMs enters a data-limited environment, this paper proposes a novel reinforcement learning method, Reinforcement Learning on Pre-Training Data (RLPT), to overcome this bottleneck.  RLPT leverages a new next-segment reasoning objective to encourage reasoning and generalization abilities.
+
+Statistics
+----------
+`On the Theoretical Limitations of Embedding-Based Retrieval <https://arxiv.org/pdf/2508.21038>`_
+    Proves a theoretical limit of embedding-based document retrieval: the ability of systems to successfully return top-k lists of documents is limited by the embedding dimension.  Demonstrates  this on a real-world dataset.
+
+`Learning Discrete Bayesian Networks with Hierarchical Dirichlet Shrinkage <https://arxiv.org/pdf/2509.13267>`_
+    Develops a Bayesian framework for learning Discrete Bayesian Networks in categorical data by proposing and leveraging novel MCMC techniques.  
+
+`Next-Depth Lookahead Tree <https://arxiv.org/pdf/2509.15143>`_
+    Introduces Next-Depth Lookahead Tree (NDLT), a single-tree variant of the classic decision tree model which considers the optimality of the current split and the next split jointly when making splits.
+
+`Hierarchical Bayesian Operator-induced Symbolic Regression Trees for Structural Learning of Scientific Expressions <https://arxiv.org/pdf/2509.19710>`_
+    Develops a hierarchical Bayesian framework for symbolic regression which leverages tree priors to learn physical laws such as the Feynman equations.
+
+`Global-Local Dirichlet Processes for Identifying Pan-Cancer Subpopulations Using Both Shared and Cancer-Specific Data <https://arxiv.org/pdf/2509.22884>`_
+    Proposes the Global-Local Dirichlet Process, a Bayesian nonparametric clustering method for clustering datapoints across groups where (1) all datapoints share a common set of covariates and (2) each group has its own, specific, set of covariates.
+
+CoVar Seminar
+-------------
+`Resilient Active Information Acquisition with Teams of Robots <https://arxiv.org/pdf/2103.02733>`_
+    Introduces the Resilient Active Information acquisitioN (RAIN) algorithm, for computing resilient robotic control inputs in the face of attackers.
+
+`Data-Driven Discovery of Interpretable Kalman Filter Variants through Large Language Models and Genetic Programming <https://arxiv.org/pdf/2508.11703>`_
+    Creates a novel algorithm discovery algorithm leveraging Cartesian Genetic Programming and Large Language Models.  Demonstrates that this algorithm can recover the Kalman filtering algorithm when it is optimal for the data.  When it is not, the algorithm discovery algorithm finds interpretable alternatives which outperform the Kalman filter.
+
+`Disentangling the Factors of Convergence between Brains and Computer Vision Models <https://arxiv.org/pdf/2508.18226>`_
+    Investigates factors that drive the similarities between internal representations of AI models and the human brain.  Finds that model size, amount of training, and image type drive this similarity.  

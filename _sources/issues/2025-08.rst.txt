@@ -1,0 +1,158 @@
+The CoVar Zeitgeist: August, 2025
+=================================
+A curated list of interesting research papers from the last month. Featuring:
+
+* A method to utilize coresets - high quality subsets of training datasets which are of higher average quality than the entire training set - to improve classification accuracy.
+* A Bayesian algorithm which learns a decision-makers implicit utility functions in situations with difficult trade-offs - such as explore-exploit or patient triage - and uses this learned function to assist the decision-maker.
+* A paper arguing that agentic benchmarks must possess both task and outcome validity to be useful, and leverages these insights to analyze existing benchmarks.
+* A randomized controlled trial from METR which finds that, while software engineers rated themselves as being up to 20% more productive using AI, they were actually 19% less efficient, on average.
+* A demonstration of an end-to-end autonomous agent capable of designing, implementing, and testing novel neural architectures which exceed SOTA performance.
+* A study from Anthropic showing that, if a teacher and a student model share the same base model, the teacher can transmit traits via data with no apparent relevance to those traits.
+
+`CoVar <https://covar.com/>`_
+
+Featured
+--------
+`Improving Model Classification by Optimizing the Training Dataset <https://arxiv.org/pdf/2507.16729>`_
+    Coresets are subsets of training data sets which allow models trained on them to obtain equivalent performance to models trained on the entire dataset.  This paper explores methods of generating coresets which function for classification accuracy.
+
+`Bayesian preference elicitation for decision support in multi-objective optimization <https://arxiv.org/pdf/2507.16999>`_
+    Designs a Bayesian algorithm to estimate the decision-makers utility function from past actions when the user is operating on a Pareto frontier balancing multiple objectives.  Leverages this model to assist with user decision-making.
+
+`Establishing Best Practices for Building Rigorous Agentic Benchmarks <https://arxiv.org/pdf/2507.02825>`_
+    Argues that many existing agentic benchmarks fail along one of two axes: (1) they evaluate as positive responses which do not truly indicate success, or (2) tasks are solvable if the agents do not possess the target capability.
+
+`Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity <https://metr.org/Early_2025_AI_Experienced_OS_Devs_Study.pdf>`_
+    METR implements a Randomized Controlled Trial to evaluate the effect of AI tool use on software engineers.  Finds that, while software engineers rated themselves as being up to 20% more productive using AI, they were actually 19% less efficient, on average.
+    
+`AlphaGo Moment for Model Architecture Discovery <https://arxiv.org/pdf/2507.18074>`_
+    Develops a novel end-to-end pipeline, ASI-ARCH, for autonomous innovation in designing novel neural architectures.  In experiments, ASI-ARCH autonomously conducted thousands of experiments to discover one hundred novel, SOTA, attention mechanisms.  The paper claims that this establishes a "scaling law for scientific discovery itself", as discovery is now no longer human-limited.
+
+`SUBLIMINAL LEARNING: LANGUAGE MODELS TRANSMIT BEHAVIORAL TRAITS VIA HIDDEN SIGNALS IN DATA <https://arxiv.org/pdf/2507.14805>`_
+    Demonstrates the phenomena of subliminal learning: if a teacher model and a student model share the same base model, the teacher can transmit behavior traits via data which appears to have no relation to these traits.
+
+LLMs
+----
+`Inference-Time Scaling and Collective Intelligence for Frontier AI <https://sakana.ai/ab-mcts/>`_
+    Sakana AI develops a novel methodology for combining multiple language models into one coherent system using inference time scaling.  The proposed methodology outperforms any of the constituent models taken in isolation.
+
+`Machine Bullshit: Characterizing the Emergent Disregard for Truth in Large Language Models <https://arxiv.org/pdf/2507.07484>`_
+    Introduces the Bullshit Index, a method to quantify large language model's indifference to the truth based one four factors: "empty rhetoric, paltering, weasel words, and unverified claims".  Finds that RLHF and inference-time chain of thought increase the bullshit index.
+
+`SUBLIMINAL LEARNING: LANGUAGE MODELS TRANSMIT BEHAVIORAL TRAITS VIA HIDDEN SIGNALS IN DATA <https://arxiv.org/pdf/2507.14805>`_
+    Demonstrates the phenomena of subliminal learning: if a teacher model and a student model share the same base model, the teacher can transmit behavior traits via data which appears to have no relation to these traits.
+
+`Learning without training: The implicit dynamics of in-context learning <https://arxiv.org/pdf/2507.16003>`_
+    Investigates the mechanism by which in-context learning improves model performance.  Finds that the combination of a self-attention layer with a MLP allows the context to implicitly modify the weights of the MLP. 
+
+LLM Reasoning
+-------------
+`Frontier LLMs Still Struggle with Simple Reasoning Tasks <https://arxiv.org/pdf/2507.07313>`_
+    Develops a method to procedurally generate simple reasoning tasks for LLMs including easy logic puzzles and unpuzzles, which superficially resemble puzzles but admit trivial answers.  LLMs can pass the first set while failing the second, indicating that they are relying on memorizing puzzle patterns.
+
+`Mastering Board Games by External and Internal Planning with Language Models <https://arxiv.org/pdf/2412.12119>`_
+    Explores external and internal planning in LLMs, and develops a method combining search with domain knowledge that achieves grandmaster-level performance in chess.
+
+`BEYOND BINARY REWARDS: TRAINING LMS TO REASON ABOUT THEIR UNCERTAINTY <https://arxiv.org/pdf/2507.16806>`_
+    Introduces a novel reinforcement learning method, Reinforcement Learning with Calibration Rewards (RLCR), which uses a calibrated, rather than a binary, reward function during training to encourage more reliable reasoning.
+
+`T3DM: Test-Time Training-Guided Distribution Shift Modelling for Temporal Knowledge Graph Reasoning <https://arxiv.org/pdf/2507.01597>`_
+    China's National University of Defense Technology develops novel methods based on distributional feature modelling to enable improved reasoning with temporal knowledge graphs.
+
+Novel Architectures
+-------------------
+`Differential Mamba <https://arxiv.org/pdf/2507.06204>`_
+    Introduces Differential Mamba, a novel Mamba-based architecture inspired by the Differential Transformer architecture, which can be thought of as incorporating residual information between state space layers.
+
+`Dynamic Chunking for End-to-End Hierarchical Sequence Modeling <https://arxiv.org/pdf/2507.07955>`_
+    Proposes a novel architecture which uses hierarchical networks and dynamic chunking to replace tokenization and de-tokenization in language models.  Promises improved performance for modalities which are not easily tokenized, such as Chinese characters.
+
+`Deep Researcher with Test-Time Diffusion <https://arxiv.org/pdf/2507.16075>`_
+    Google DeepMind releases Deep Researcher, a research agent which takes a novel approach to generating research reports inspired by the iterative process employed by human researchers.  Deep Researcher generates a preliminary draft before applying iterative steps involving denoising and dynamic search.
+
+`Sapient Intelligence Open-Sources Hierarchical Reasoning Model, a Brain-Inspired Architecture That Solves Complex Reasoning Tasks With 27 Million Parameters <https://www.sapient.inc/blog/5>`_
+    Sapient AI releases its hierarchical reasoning model, a 27 million parameter model integrating fast and slow modes to mimic human cognition.  Trained on only 1000 examples, it can succeed at reasoning questions which frustrate frontier models.
+
+`AlphaGo Moment for Model Architecture Discovery <https://arxiv.org/pdf/2507.18074>`_
+    Develops a novel end-to-end pipeline, ASI-ARCH, for autonomous innovation in designing novel neural architectures.  In experiments, ASI-ARCH autonomously conducted thousands of experiments to discover one hundred novel, SOTA, attention mechanisms.  The paper claims that this establishes a "scaling law for scientific discovery itself", as discovery is now no longer human-limited.
+
+Object Detection
+----------------
+`OoDDINO:A Multi-level Framework for Anomaly Segmentation on Complex Road Scenes <https://arxiv.org/pdf/2507.01455>`_
+    Constructs a pipeline to identify anomalous objects such as large rocks and traffic cones in complex road scenes leveraging spatial correlation amongst pixels as well as information about which region objects are located in.
+
+`Improving Model Classification by Optimizing the Training Dataset <https://arxiv.org/pdf/2507.16729>`_
+    Coresets are subsets of training data sets which allow models trained on them to obtain equivalent performance to models trained on the entire dataset.  This paper explores methods of generating coresets which function for classification accuracy.
+
+Autonomy & Safety
+-----------------
+`Establishing Best Practices for Building Rigorous Agentic Benchmarks <https://arxiv.org/pdf/2507.02825>`_
+    Argues that many existing agentic benchmarks fail along one of two axes: (1) they evaluate as positive responses which do not truly indicate success, or (2) tasks are solvable if the agents do not possess the target capability.
+
+`Safety Assurance for Quadrotor Kinodynamic Motion Planning <https://arxiv.org/pdf/2507.17679>`_
+    Proposes a safety assurance filter for end-to-end safe motion planning. Also provides a good overview of current methods of guaranteeing safety.
+
+`Building and evaluating alignment auditing agents <https://alignment.anthropic.com/2025/automated-auditing/>`_
+    Anthropic develops autonomous agents which can reliably audit LLMs by uncovering hidden goals, assess behavioral patterns, and note concerning LLM behaviors.
+
+`Chain of Thought Monitorability: A New and Fragile Opportunity for AI Safety <https://arxiv.org/pdf/2507.11473>`_
+    Argues that, for all of its limitations, chain-of-thought monitorability is likely to be the best way of monitoring LLMs.  Following this, LLMs should be developed in such a way that allows chain-of-thought monitoring.
+
+Reinforcement Learning
+----------------------
+`Boosting Multiagent Reinforcement Learning via Permutation Invariant and Permutation Equivariant Networks <https://openreview.net/pdf?id=OxNQXyZK-K8>`_
+    Reduces the size of the state space in Multi-Agent RL (MARL) problems by developing networks which are permutation invariant and permutation equivariant to entity ordering. Experiments indicate improved performance in common MARL baselines.
+
+`SMACv2: An Improved Benchmark for Cooperative Multi-Agent Reinforcement Learning <https://arxiv.org/pdf/2212.07489>`_
+    Introduces an improved StarCraft multi-agent benchmark which introduces randomness in unit composition and positions, requiring policies to condition on observations of the game state. The previous baseline was found to be solvable with only timestep information.
+
+`Bayesian preference elicitation for decision support in multi-objective optimization <https://arxiv.org/pdf/2507.16999>`_
+    Designs a Bayesian algorithm to estimate the decision-makers utility function from past actions when the user is operating on a Pareto frontier balancing multiple objectives.  Leverages this model to assist with user decision-making.
+
+`Checklists Are Better Than Reward Models For Aligning Language Models <https://arxiv.org/pdf/2507.18624>`_
+    Proposes a novel reinforcement learning algorithm, Reinforcement Learning from Checklist Feedback (RLCF), in which rewards are computed based on flexible, instruction-specific, criteria.  Allows classic RL techniques to apply to domains which had previously admitted only RLHF methods.
+
+`Group Sequence Policy Optimization <https://arxiv.org/pdf/2507.18071v1>`_
+    Proposes a novel reinforcement learning algorithm for LLMs which operates on a sequence, rather than a token, level.  Improves upon existing methods, notably stabilizing Mixture-of-Experts training.
+
+Statistics
+----------
+`Bayesian Invariance Modeling of Multi-Environment Data <https://arxiv.org/pdf/2506.22675>`_
+    Develops a Bayesian method for invariant prediction: learning which features have invariant effects across a range of environments and data-generating processes as well as learning the effect sizes of those features.
+
+`THE JOYS OF CATEGORICAL CONFORMAL PREDICTION <https://arxiv.org/pdf/2507.04441>`_
+    Utilizes a category theoretic approach to analyze conformal prediction methodologies to show that conformal prediction is a functional uncertainty quantification method which bridges existing methods.
+
+`Bayesian Double Descent <https://arxiv.org/pdf/2507.07338>`_
+    Investigates the double-descent phenomena through a Bayesian model complexity lens.  Resolves an apparent contradiction between double descent and the Occam's Razor-type behavior encouraged by, e.g., the BIC.
+
+`Step-DAD: Semi-Amortized Policy-Based Bayesian Experimental Design <https://arxiv.org/pdf/2507.14057>`_
+    Proposes a policy-based approach for Bayesian experiment design which allows the policy to update during the experiment.
+
+Applications
+------------
+`The Discovery Engine: A Framework for AI-Driven Synthesis and Navigation of Scientific Knowledge Landscapes <https://arxiv.org/pdf/2505.17500>`_
+    Introduces the discovery engine, which leverages LLMs and knowledge graphs to assist researchers in finding interesting "knowledge artifacts" from the literature.
+
+`Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity <https://metr.org/Early_2025_AI_Experienced_OS_Devs_Study.pdf>`_
+    METR implements a Randomized Controlled Trial to evaluate the effect of AI tool use on software engineers.  Finds that, while software engineers rated themselves as being up to 20% more productive using AI, they were actually 19% less efficient, on average.
+
+`Gemini 2.5 Pro Capable of Winning Gold at IMO 2025 <https://arxiv.org/pdf/2507.15855>`_
+    An explanation of how Gemini 2.5 Pro performed well enough to win a gold medal at the 2025 IMO.
+
+CoVar Seminar
+-------------
+`Segment Concealed Objects with Incomplete Supervision <https://arxiv.org/pdf/2506.08955>`_
+    Leverages a unified mean-teacher framework to produce coarse annotations that are used as prompts for Meta's Segment Anything Model (SAM). SAM is then able to produce high-quality segmentation masks from the prompts output.
+
+`AbsoluteZero: Reinforced Self-play Reasoning with Zero Data <https://arxiv.org/pdf/2505.03335>`_
+    Proposes a novel architecture to implement LLM fine-tuning with zero real data, by using the LLM to both produce problems and solve them.
+
+`Omni-Scale Feature Learning for Person Re-Identification <https://arxiv.org/pdf/1905.00953>`_
+    Proposes a new type of convolutional neural network (OSNet) to extract and combine features from an image at multiple scales for ReID tasks. OSNet is extremely light weight and achieves the same performance as other larger models, making it good for realtime tracking systems.
+
+`Advancing AI-Scientist Understanding: Making LLM Think Like a Physicist with Interpretable Reasoning <https://arxiv.org/pdf/2504.01911>`_
+    Proposes a framework to align large language models with domain-like reasoning by incorporating interpretable, scientific logic to enhance AI-aided scientific discovery.
+
+`Dynamic neuron approach to deep neural networks: Decoupling neurons for renormalization group analysis <https://arxiv.org/abs/2410.00396>`_
+    Proposes an approach borrowed from statistical physics to analyze scaling behaviors of a deep neural network.  Resolves "critical points" for the scaling of the network as a function of neurons, weights, and depth. 

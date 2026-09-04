@@ -1,0 +1,160 @@
+The CoVar Zeitgeist: June, 2024
+===============================
+A curated list of the latest research in AI.
+
+Enjoy!
+
+Featured
+--------
+`KAN: Kolmogorov–Arnold Networks <https://arxiv.org/pdf/2404.19756>`_
+    Proposes Kolmogorov-Arnold Networks (KANs) as an alternative to Multi-Layer Perceptrons (MLPs).  First describes what KANs are, and then makes some pretty startling claims - smaller KANs are better than larger MLPs at data fitting and PDE solving (orders of magnitude, both ways), KANs have faster scaling laws than MLPs, are more interpretable, naturally avoid catastrophic forgetting in continual learning, etc etc.  Main drawback is slow training speed.  Woth keeping an eye on.
+
+`Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet <https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html>`_
+    The authors extract interpretable features from LLMs by using a sparse autoencoder.  These are abstract concepts spanning languages and modalities, and can be turned up or down to affect the behavior of the LLM.  Turning up "Golden Gate Bridge" to the max, for instance, makes the LLM think it is the Golden Gate Bridge.
+
+`PLAN-SEQ-LEARN: LANGUAGE MODEL GUIDED RL FOR SOLVING LONG HORIZON ROBOTICS TASKS <https://arxiv.org/pdf/2405.01534>`_
+    This paper places LLMs in charge of robots for high-level planning, and lets more standard autonomy/reinforcement learning algorithms handle the details.  An interesting approach to autonomy.
+
+`Grokked Transformers are Implicit Reasoners: A Mechanistic Journey to the Edge of Generalization <https://arxiv.org/pdf/2405.15071>`_
+    Transformers are bad at implicit reasoning over parametric knowledge, unless you train them beyond the realm of overfitting in which case they become good at implicit reasoning.  One possible implication of this is that transformers/LLMs may be underfit.
+
+`Detect Everything with Few Examples <https://arxiv.org/abs/2309.12969>`_
+    Proposes DE-ViT, a vision transformer with DINOv2 as a backbone that the paper claims is capable of detecting anything with a few examples.  Tests by integrating with a robot.
+
+`What We Learned from a Year of Building with LLMs (Part I) <https://www.oreilly.com/radar/what-we-learned-from-a-year-of-building-with-llms-part-i/>`_
+    This is a great summary of experiences and recommendations when trying to build things with LLMs. Well worth the read.
+
+LLM Applications
+----------------
+`Agent Hospital: A Simulacrum of Hospital with Evolvable Medical Agents <https://arxiv.org/pdf/2405.02957>`_
+    Simulates a hospital with LLMs agents actings as doctors, staff, patients, etc and trains the doctor-LLMs via this simulated social interaction.  After treating 10,000 cases, the doctor-LLMs achieve SOTA performance on the MedQA dataset.  An interesting method to train LLMs.
+
+`SWE-AGENT: AGENT-COMPUTER INTERFACES ENABLE AUTOMATED SOFTWARE ENGINEERING <https://swe-agent.com/paper.pdf>`_
+    The paper attempts to create an LLM that can code. Builds a custom agent-computer-interface that greatly enhances performance. 
+    
+`ENHANCING MARITIME TRAJECTORY FORECASTING VIA H3 INDEX AND CAUSAL LANGUAGE MODELLING (CLM) <https://arxiv.org/pdf/2405.09596>`_
+    Transforms a spatio-temporal problem into a natural language problem by converting spatial coordinates into a nested hexgrid system, turning these into tokens, and feeding these into Mistral. Outperforms a standard Kalman filter.
+
+`Large language models can be zero-shot anomaly detectors for time series? <https://arxiv.org/pdf/2405.14755>`_
+    The paper shows that LLMs, if handled in an appropriate manner, can detect anomalies in time series.  This involves turning time series data into text data and using a prompt-based detection method for anomaly detection. 
+
+`What We Learned from a Year of Building with LLMs (Part I) <https://www.oreilly.com/radar/what-we-learned-from-a-year-of-building-with-llms-part-i/>`_
+    This is a great summary of experiences and recommendations when trying to build things with LLMs. Well worth the read.
+
+LLM Theory
+----------
+`Better & Faster Large Language Models via Multi-token Prediction <https://arxiv.org/pdf/2404.19737>`_
+    LLMs are trained with next-token prediction loss.  This paper instead trains LLMs by doing loss on the next n tokens using n independent heads.  Seems to improve performance. 
+
+`Not All Language Model Features Are Linear <https://arxiv.org/pdf/2405.14860>`_
+    Are LLMs linear?  That is, do they operate by manipulating one-dimensional features?  This paper investigates and discovers that the answer is no - some features such as days of week and months of year are strikingly circular.  Further argues that these circular features are the fundamental unit of LLMs in Mistral and Llama. 
+
+`Transformers Can Do Arithmetic with the Right Embeddings <https://arxiv.org/pdf/2405.17399>`_
+    Transformers are bad at arithmetic because they forget which numbers correspond to which digits.  If you give them encodings telling them which numbers are which digits, their performance on math tasks greatly increases.
+
+`Grokked Transformers are Implicit Reasoners: A Mechanistic Journey to the Edge of Generalization <https://arxiv.org/pdf/2405.15071>`_
+    Transformers are bad at implicit reasoning over parametric knowledge, unless you train them beyond the realm of overfitting in which case they become good at implicit reasoning.  One possible implication of this is that transformers/LLMs may be underfit.
+
+Object Detection
+----------------
+`IDENTIFYING EVERY BUILDING’S FUNCTION IN LARGE-SCALE URBAN AREAS WITH MULTI-MODALITY REMOTE-SENSING DATA <https://arxiv.org/pdf/2405.05133>`_
+    Builds a neural net to segment buildings and predict building use based off of several different types of input data: daytime remote sensing data at 1 GSD, night-time remote sensing for light generation, and a lookup table of building heights. 
+
+`OPEN ACCESS BATTLE DAMAGE DETECTION VIA PIXEL-WISE T-TEST ON SENTINEL-1 IMAGERY <https://arxiv.org/pdf/2405.06323>`_
+    Fast and simple method for detecting battle-damage in overhead satellite imagery with an eye towards Ukraine and Gaza.  Seems to work pretty well, rivaling deep-learning based methodologies.  
+
+Autonomy
+--------
+`PLAN-SEQ-LEARN: LANGUAGE MODEL GUIDED RL FOR SOLVING LONG HORIZON ROBOTICS TASKS <https://arxiv.org/pdf/2405.01534>`_
+    This paper places LLMs in charge of robots for high-level planning, and lets more standard autonomy/reinforcement learning algorithms handle the details.  An interesting approach to autonomy.
+
+Theory
+------
+`KAN: Kolmogorov–Arnold Networks <https://arxiv.org/pdf/2404.19756>`_
+    Proposes Kolmogorov-Arnold Networks (KANs) as an alternative to Multi-Layer Perceptrons (MLPs).  First describes what KANs are, and then makes some pretty startling claims - smaller KANs are better than larger MLPs at data fitting and PDE solving (orders of magnitude, both ways), KANs have faster scaling laws than MLPs, are more interpretable, naturally avoid catastrophic forgetting in continual learning, etc etc.  Main drawback is slow training speed.  Worth keeping an eye on.
+
+`MambaOut: Do We Really Need Mamba for Vision? <https://arxiv.org/pdf/2405.07992>`_
+    Mamba is more suited to long-sequence and autoregressive tasks than it is to vision tasks, but detection and segmentation are somewhat long-sequence.  This paper proposes a new Mamba model, MambaOut, based on this insight which eliminates the state space model and outperforms other Mamba versions on vision tasks.
+
+`The Platonic Representation Hypothesis <https://arxiv.org/pdf/2405.07987>`_
+    The authors note that, over time and across vision and language modalities, as NNs get deeper they measure distance between datapoints in similar ways.  They tie this in with some philosophical concepts, but the intuition is that all models are attempting to represent reality, and as they grow larger they arrive ever closer to a "true" statistical representation of reality.
+
+`Kolmogorov-Arnold Networks (KANs) for Time Series Analysis <https://arxiv.org/pdf/2405.08790>`_
+    KANs applied to time-series data.  This paper shows that 3 and 4 layer KANs outperform 3 and 4 layer MLPs.
+
+`Wav-KAN: Wavelet Kolmogorov-Arnold Networks <https://arxiv.org/pdf/2405.12832>`_
+    KANs but with wavelets instead of splines.  Increases training speeds.
+
+Tracking
+--------
+`DisBeaNet: A Deep Neural Network to augment Unmanned Surface Vessels for maritime situational awareness <https://arxiv.org/pdf/2405.06149>`_
+    A tracking system for a USV which operates by using a neural net to estimate the distance and bearing of objects from a camera and record them in GeoTracks.
+
+`Delving into the Trajectory Long-tail Distribution for Muti-object Tracking <https://arxiv.org/abs/2403.04700>`_
+    Pedestrian Re-ID datasets are lacking in a few dimensions and thus have long tails, which poses challenges for many trackers. This paper makes up a few augmentation ideas to alleviate this problem in training.
+
+Gaussian Splatting
+------------------
+`SUNDAE: Spectrally Pruned Gaussian Fields with Neural Compensation <https://arxiv.org/pdf/2405.00676>`_
+    Gaussian splatting can be slow and memory intensive.  This paper exploits relationships between primitives to develop a new Gaussian splatting algorithm that is simultaneously less memory intensive than other methods.
+
+`Lightplane: Highly-Scalable Components for Neural 3D Fields <https://arxiv.org/pdf/2404.19760>`_
+    Introduces new method for efficient 2D to 3D Gaussian splatting with an emphasis the memory efficiency. 
+
+`HoloGS: Instant Depth-based 3D Gaussian Splatting with Microsoft HoloLens 2 <https://arxiv.org/pdf/2405.02005>`_
+    This paper implements Gaussian splatting on a Hololens.  Results look good. 
+
+Applications
+------------
+`THE IMPACT OF COVID-19 ON CO-AUTHORSHIP AND ECONOMICS SCHOLARS’ PRODUCTIVITY <https://arxiv.org/pdf/2404.18980>`_
+    This paper analyzes how the pandemic effected collaboration in economics academia.  Before the pandemic, economists were more likely to coauthor with authors of similar productivity; during, things were more mixed.
+
+`Return to Office and the Tenure Distribution <https://arxiv.org/pdf/2405.04352>`_
+    How does return to office impact employee tenure?   This study finds that return-to-office causes employees, especially senior employees, to leave in larger-than-expected numbers.  Further, they tend to be replaced by people who are younger/less experienced.
+
+`Measuring Strategization in Recommendation: Users Adapt Their Behavior to Shape Future Content <https://arxiv.org/pdf/2405.05596>`_
+    This study conducts a randomized control trial which determines that users change how they interact with recommender systems if they're told how the recommender system works in an attempt to influence the recommendations they are given.  This is an extremely intuitive result.
+
+New Models
+----------
+`Granite Code Models: A Family of Open Foundation Models for Code Intelligence <https://arxiv.org/pdf/2405.04324>`_
+    IBM releases a code-focussed LLM.  Decoder only, trained in 116 languages.  Github available.  Reaches (and sometimes exceeds) SOTA performance. 
+
+`DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model <https://arxiv.org/pdf/2405.04434>`_
+    DeepSeek-AI releases another Mixture-of-Experts LLM.  Total of 236B parameters.  Context length of 128K tokens.   Even with "only" 21B parameters, achieves SOTA performance amongst open-source models.  
+
+`xLSTM: Extended Long Short-Term Memory <https://arxiv.org/pdf/2405.04517>`_
+    Introduces a new LSTM architecture by making two modifications of traditional LSTMs - exponential gating and novel memory structures - to remedy some of the structural defects of LSTMs compared to transformers.
+
+`Grounding DINO 1.5: Advance the “Edge” of Open-Set Object Detection <https://arxiv.org/pdf/2405.10300>`_
+    A new suite of Grounding DINO models which do more or less the same thing as the old one (detect object given language prompts) but comes in two flavors, one of which has better performance and one of which is faster.
+
+`Gemini 1.5: Unlocking multimodal understanding across millions of tokens of context <https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf>`_
+    Google releases Gemini 1.5.  Impressive looking results.
+
+`Chameleon: Mixed-Modal Early-Fusion Foundation Models <https://arxiv.org/pdf/2405.09818>`_
+    Meta releases Chameleon, a "family of early-fusion token-based mixed-modal models capable of understanding and generating images and text in any arbitrary sequence."
+
+`Detect Everything with Few Examples <https://arxiv.org/abs/2309.12969>`_
+    Proposes DE-ViT, a vision transformer with DINOv2 as a backbone that the paper claims is capable of detecting anything with a few examples.  Tests by integrating with a robot.
+
+
+Presented at CoVar Seminar
+--------------------------
+2024-05-07 
+    `Gaussian Splatting on the Move: Blur and Rolling Shutter Compensation for Natural Camera Motion <https://arxiv.org/abs/2403.13327>`_
+    `Gaussian Splatting Example: Key Bridge <https://voluma.ai/view/jack/test/baltimore>`_ 
+    `NERFStudio <https://github.com/nerfstudio-project/nerfstudio/?tab=readme-ov-file#dependencies>`_
+
+2024-05-21
+    `THE LANDSCAPE OF EMERGING AI AGENT ARCHITECTURES FOR REASONING, PLANNING, AND TOOL CALLING: A SURVEY <https://arxiv.org/pdf/2404.11584>`_
+        Researchers from Neudesic look at more recent AI Agent architectures and posit that this is the way the field will continue to head (tools instead of RAG).  They identify the importance of reasoning structures and useful tools, as well as the benefits and downsides of multi-agent approaches.  `Related slides <https://docs.google.com/presentation/d/1RF884dELODX-Yxqbx5J9qJIqEVhcmfLox_jcbc5eG0Q/edit?usp=sharing>`_.
+    `memary <https://github.com/kingjulio8238/memary>`_
+        Really interesting full implementation of an Agent based off of the ReAct architecture.  Uses a knowledge graph for relating topics of conversation.
+
+2024-05-28
+    `Towards Monosemanticity: Decomposing Language Models With Dictionary Learning <https://transformer-circuits.pub/2023/monosemantic-features>`_
+        Researchers from Anthropic use sparse autoencoders to isolate monosemantic features with high sensitivity and specificity.
+
+    `Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet <https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html>`_
+        The authors extract interpretable features from LLMs by using a sparse autoencoder.  These are abstract concepts spanning languages and modalities, and can be turned up or down to affect the behavior of the LLM.  Turning up "Golden Gate Bridge" to the max, for instance, makes the LLM think it is the Golden Gate Bridge.

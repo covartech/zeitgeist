@@ -1,0 +1,50 @@
+The CoVar Zeitgeist: September, 2026
+===============================
+
+A curated list of the latest research in AI.
+
+`Check out the CoVar website! <https://covar.com/>`_
+
+Featured
+--------
+`MapAnything: Universal Feed-Forward Metric 3D Reconstruction <https://arxiv.org/abs/2509.13414>`_
+    MapAnything introduces a transformer-based model for metric 3D reconstruction from imagery and optional geometric input. It directly outputs depths, ray directions, confidences, and poses useful for metric 3D reconstruction.
+
+`From Sim to 6DOF: Deep Learning for Real-Time Satellite Pose Estimation from Resolved Ground-Based Imagery <https://www.preprints.org/frontend/manuscript/a6549817b18c1acb1306413fe8767a1f/download_pub>`_
+    Presents a deep-learning approach that uses CAD models as synthetic training data to enable real-time 6DOF satellite pose estimation from ground-based imagery
+
+Reinforcement Learning
+----------------------
+`FlowDAgger: Human-in-the-Loop Adaptation of Generative Robot Policies in Latent Space <https://arxiv.org/abs/2607.08877>`_
+    FlowDAgger uses human interventions in latent space to adapt generative robot policies efficiently, closing real-world gaps without extensive data collection or online learning.
+
+`Generalize and Guide: Decomposing Rewards for Few-Shot Inverse Reinforcement Learning <https://arxiv.org/abs/2607.17760>`_
+    Introduces MPG for few-shot inverse reinforcement learning, combining a generalizable discriminator with a proximity function to learn new tasks from limited demonstrations and diverse related behaviors.
+
+Foundation Models
+-----------------
+`Position: LLMs can't jump <https://openreview.net/pdf?id=klU4737opt>`_
+    Argues that LLMs are strong at induction and deduction but lack the abductive “jump” needed to invent new scientific concepts, and argues that multimodal world models may be necessary for AI to make such inventions.
+
+Computer Vision
+---------------
+`Depth Anything 3: Recovering the Visual Space from Any Views <https://arxiv.org/abs/2511.10647>`_
+    Depth Anything 3 (DA3) uses a single plain transformer to predict spatially consistent geometry from any number of visual inputs and camera poses, setting new benchmarks in camera pose accuracy and geometric detail across various tasks.
+
+`RASR: Range-Aware Scale Recovery for Metric UAV Navigation <https://arxiv.org/abs/2607.09815>`_
+    RASR separates scale recovery from calibration in UAV navigation models, achieving accurate metric outputs under GNSS denial by using global calibration and range-specific corrections.
+
+Statistics
+----------
+`Strategic Inference of Adversarial Navigation Objectives for Unmanned Underwater Vehicles <https://arxiv.org/pdf/2607.21945>`_
+    Develops a continuous-time likelihood model to infer adversarial destination paths for unmanned underwater vehicles, linking current-field geometry with destination identifiability and extending to active sweep design.
+
+Tracking
+--------
+`WaspMOT: A Benchmark for Long-Term Multi-Object Tracking of Trichogramma Wasps <https://arxiv.org/abs/2607.08729>`_
+    WaspMOT introduces a new benchmark for long-term multi-object tracking of Trichogramma wasps, evaluating identity preservation over extended durations and revealing limitations in current tracking methods.
+
+Theory
+------
+`Physics Filtering Favors the Generalization of Robot Learning <https://arxiv.org/abs/2608.22701>`_
+    The paper introduces PhyFilter, a model-agnostic module that enhances robotic generalization by filtering learning residuals with physics-based corrections, enabling effective adaptation to unseen environments without extensive training data.
