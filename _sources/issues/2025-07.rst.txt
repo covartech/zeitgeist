@@ -1,0 +1,251 @@
+The CoVar Zeitgeist: July, 2025
+================================
+Lots of interesting research was published this month. Featuring:
+
+* Apple's investigation into the reasoning capabilities of Large Reasoning Models (LRMs) which demonstrated their limitations on high complexity tasks.
+* A novel LLM architecture from Meta which leverages an autoregressive U-Net to allow the model to learn a novel tokenization scheme from raw bytes.
+* A study demonstrating that the reasoning capability of LLMs is language agnostic.
+* A comprehensive report from Meta AI research on building embodied AI agents which argues for necessity of a physical and mental world model.
+* A novel reinforcement learning algorithm which allows UAVs to navigate under adversarial conditions such as GPS spoofing. 
+* A generalization of neural cellular automata (NCA) to mixtures of neural cellular automata (MNCA), which better allows such agent-based models to handle stochasticity.
+
+`CoVar <https://covar.com/>`_
+
+Featured
+--------
+`The Illusion of Thinking: Understanding the Strengths and Limitations of Reasoning Models via the Lens of Problem Complexity <https://machinelearning.apple.com/research/illusion-of-thinking>`_
+    Apple investigates Large Reasoning Model (LRM) and Large Language Model (LLM) reasoning capabilities by constructing sequences of puzzles which increase complexity while maintaining the same underlying logical patterns.  Finds that LLMs outperform LRMs for low complexity tasks, LRMs outperform LLMs for medium complexity tasks, and that both collapse after a certain complexity threshold.  
+
+`From Bytes to Ideas: Language Modeling with Autoregressive U-Nets <https://arxiv.org/pdf/2506.14761>`_
+    Existing tokenization schemes split text into tokens and leave models with that tokenization scheme.  This paper proposes using an autoregressive U-Net to embed tokens during training.  This results in a network where shallow layers focus on fine-grained byte-level tokens and deeper levels deal with semantic concepts.
+    
+`The Emergence of Abstract Thought in Large Language Models Beyond Any Language <https://arxiv.org/pdf/2506.09890>`_
+    Finds that LLMs, even though trained on language data, develop a core set of neurons that are language agnostic and support much of the model's capability.  Moreover, the size of this set of neurons has grown over time, indicating that LLMs are developing capabilities in some other latent space.
+
+`Embodied AI Agents: Modeling the World <https://arxiv.org/pdf/2506.22355>`_
+    Meta AI Research reflects on an impressive amount of experience building and designing a variety of embodied AI agents: wearable devices, virtual avatars, and robotics.  Argues that embodied agents need (1) physical world models to understand the world and formulate plans and (2) mental world models to interact effectively with humans.
+
+`ARMOR: Robust Reinforcement Learning-based Control for UAVs under Physical Attacks <https://arxiv.org/pdf/2506.22423>`_
+    Proposes a novel two-stage reinforcement learning algorithm, ARMOR, to allow a UAV to function properly while subjected to adverse-sensor manipulation attacks such as GPS spoofing.  ARMOR allows the UAV to approximate its physical state vector as a function of only onboard sensors.
+    
+`Mixtures of Neural Cellular Automata: A Stochastic Framework for Growth Modelling and Self-Organization <https://arxiv.org/pdf/2506.20486>`_
+    One limitation of traditional neural cellular automata (NCA) models is that, because of their deterministic nature, they can fail to capture real-world stochasticity.  To address this limitation, this paper introduces mixtures of NCAs (MNCAs) which are better equipped to handle stochasticity.
+
+LLMs
+----
+`How much do language models memorize? <https://arxiv.org/pdf/2505.24832>`_
+    Splits LLM memorization into two parts: (1) unintended memorization and (2) generalization.  Finds that grokking occurs when model capacity saturates and LLMs devote less resources to unintended memorization and more to generalization.
+
+`The Geometries of Truth Are Orthogonal Across Tasks <https://arxiv.org/pdf/2506.08572>`_
+    Can a linear classifier, applied to the internal dynamics of an LLM, predict whether LLM responses are truthful?  This paper finds that the answer is no, in part because truth is defined on a per-task level and that classifiers trained across tasks have little in common.
+
+`The Emergence of Abstract Thought in Large Language Models Beyond Any Language <https://arxiv.org/pdf/2506.09890>`_
+    Finds that LLMs, even though trained on language data, develop a core set of neurons that are language agnostic and support much of the model's capability.  Moreover, the size of this set of neurons has grown over time, indicating that LLMs are developing capabilities in some other latent space.
+
+`Dense SAE Latents Are Features, Not Bugs <https://arxiv.org/pdf/2506.15679>`_
+    Applying Semantic Auto Encoders (SAEs) to LLMs has resulted in a nontrivial amount of dense latents, which have been suspected to be meaningless and result from noise.  This paper investigates dense latents and finds that they result from the residual space, have meaningful roles, and should not be dismissed.
+
+`Your Brain on ChatGPT: Accumulation of Cognitive Debt when Using an AI Assistant for Essay Writing Task <https://arxiv.org/pdf/2506.08872>`_
+    Researchers from MIT comprehensively evaluate the effects of LLM useage on brain activity and learning when students are asked to write essays.  They find that using LLMs greatly degrades learning.
+
+LLM Reasoning
+-------------
+`The Illusion of Thinking: Understanding the Strengths and Limitations of Reasoning Models via the Lens of Problem Complexity <https://machinelearning.apple.com/research/illusion-of-thinking>`_
+    Apple investigates Large Reasoning Model (LRM) and Large Language Model (LLM) reasoning capabilities by constructing sequences of puzzles which increase complexity while maintaining the same underlying logical patterns.  Finds that LLMs outperform LRMs for low complexity tasks, LRMs outperform LLMs for medium complexity tasks, and that both collapse after a certain complexity threshold.  
+
+`AbstentionBench: Reasoning LLMs Fail on Unanswerable Questions <https://arxiv.org/pdf/2506.09038>`_
+    For an LLM to be reliable, it must be able to abstain from answering unanswerable questions.  This paper introduces a dataset to test this capability, and finds that current frontier reasoning LLMs struggle to abstain and that finetuning for reasoning capabilities actually degrades performance.
+
+Novel Architectures
+-------------------
+`Darwin Gödel Machine: Open-Ended Evolution of Self-Improving Agents <https://arxiv.org/pdf/2505.22954>`_
+    Sakana AI proposes the Darwin-Godel Machine (DGM), an AI model that has the capability to improve/modify its own code.  Leveraging this, the DGM can curate a library of AI agents while improving the AI agents.  This paper shows the DGM can improve its performance on SWE-bench from 20% to 50%.  
+
+`Text-to-LoRA: Instant Transformer Adaption <https://arxiv.org/pdf/2506.06105>`_
+    Foundation models often must be finetuned for specific applications.  This paper proposes Text-to-LoRA, a novel architecture that takes a natural language description of the desired task and constructs a LoRA for that task in a single forward pass.  
+
+`Self-Adapting Language Models <https://arxiv.org/pdf/2506.10943>`_
+    Introduces a novel framework, Self-Adapting Language Models (SEAL), which allows LLMs to edit themselves in a variety of ways by generating their own finetuning data and applying supervised fine-tuning.
+
+`From Bytes to Ideas: Language Modeling with Autoregressive U-Nets <https://arxiv.org/pdf/2506.14761>`_
+    Existing tokenization schemes split text into tokens and leave models with that tokenization scheme.  This paper proposes using an autoregressive U-Net to embed tokens during training.  This results in a network where shallow layers focus on fine-grained byte-level tokens and deeper levels deal with semantic concepts.
+
+`Erwin: A Tree-based Hierarchical Transformer for Large-scale Physical Systems <https://arxiv.org/pdf/2502.17019>`_
+    Proposes Erwin, a hierarchical transformer which employs ball attention to leverage the strengths of both attention and tree-based decompositions.  Reduces runtime over, say, molecular graphs from O(n squared) to O(n).
+
+Object Detection
+----------------
+`Learning Spatio-Temporal Vessel Behavior using AIS Trajectory Data and Markovian Models in the Gulf of St. Lawrence <https://arxiv.org/pdf/2506.00025>`_
+    Models the spatio-temporal behavior of maritime vessels by discretizing world-space into hexagon cells and modelling transitions between cells and time spent in each cell.  The resulting signatures can distinguish between passenger and fishing vessels.
+
+`PartCrafter: Structured 3D Mesh Generation via Compositional Latent Diffusion Transformers <https://arxiv.org/pdf/2506.05573>`_
+    Introduces a method to part segmentations of 3D objects from monocular RGB imagery.  Leverages two key innovations - a compositional latent space and a hierarchical attention mechanism.
+
+`UAV Object Detection and Positioning in a Mining Industrial Metaverse with Custom Geo-Referenced Data <https://arxiv.org/pdf/2506.13505>`_
+    Develops a pipeline for creating a 3D world model of a quarry using LiDAR and geolocalizing detections from UAVs onto this world model.
+
+`Multi-Rank Subspace Change-Point Detection for Monitoring Robotic Swarms <https://arxiv.org/pdf/2506.18562>`_
+    Builds an algorithm for changepoint detection in robotic swarms based off of the position and velocity vectors of the individual drones.
+
+Autonomy & Safety
+-----------------
+`Towards a Multi-Agent Simulation of Cyber-attackers and Cyber-defenders Battles <https://arxiv.org/pdf/2506.04849>`_
+    Thales Land and Air Systems presents a multi-agent framework using Markovian models to simulate cyber-battles between attackers and defenders.
+
+`General agents need world models <https://www.arxiv.org/pdf/2506.01622>`_
+    Presents a formal proof that a predictive world model is necessary for an agent to achieve proficiency at multi-step goal-directed tasks.  Increasing desired performance or goal complexity necessitates a corresponding increase in world model complexity.
+
+`SwarmAgentic: Towards Fully Automated Agentic System Generation via Swarm Intelligence <https://arxiv.org/pdf/2506.15672>`_
+    Proposes SwarmAgentic, a framework for generating agentic systems from nothing which draws inspiration from Particle Swarm Optimization to generate swarm agents, leading to a 261% performance increase.
+
+`Mixtures of Neural Cellular Automata: A Stochastic Framework for Growth Modelling and Self-Organization <https://arxiv.org/pdf/2506.20486>`_
+    One limitation of traditional neural cellular automata (NCA) models is that, because of their deterministic nature, they can fail to capture real-world stochasticity.  To address this limitation, this paper introduces mixtures of NCAs (MNCAs) which are better equipped to handle stochasticity.
+
+`Embodied AI Agents: Modeling the World <https://arxiv.org/pdf/2506.22355>`_
+    Meta AI Research reflects on an impressive amount of experience building and designing a variety of embodied AI agents: wearable devices, virtual avatars, and robotics.  Argues that embodied agents need (1) physical world models to understand the world and formulate plans and (2) mental world models to interact effectively with humans.
+ 
+Reinforcement Learning
+----------------------
+`Beyond the 80/20 Rule: High-Entropy Minority Tokens Drive Effective Reinforcement Learning for LLM Reasoning <https://arxiv.org/pdf/2506.01939>`_
+    The Qwen team investigates how RLVR interacts with Qwen.  Finds that a small fraction of tokens exhibit high entropy in Chain-of-Thought patterns and that RLVR modifies primarily those tokens: RLVR can be improved by restricting it to high entropy tokens.  
+
+`Network Sparsity Unlocks the Scaling Potential of Deep Reinforcement Learning <https://arxiv.org/pdf/2506.17204>`_
+    Enforces network sparsity into deep reinforcement learning algorithms via one-shot random pruning.  Shows that sparse networks greatly outperform their dense counterparts.
+
+`Reinforcement Learning Teachers of Test Time Scaling <https://sakana.ai/rlt/>`_
+    Proposes Reinforcement Learned Teachers (RLT), which are explicitly trained to output detailed, step-by-step, solutions to problems.  Even small 7B RLTs are much more efficient teachers than much larger models such as DeepSeek-R1 (671B parameters). 
+
+`ARMOR: Robust Reinforcement Learning-based Control for UAVs under Physical Attacks <https://arxiv.org/pdf/2506.22423>`_
+    Proposes a novel two-stage reinforcement learning algorithm, ARMOR, to allow a UAV to function properly while subjected to adverse-sensor manipulation attacks such as GPS spoofing.  ARMOR allows the UAV to approximate its physical state vector as a function of only onboard sensors.
+
+Statistics
+----------
+`The Resurrection of the ReLU <https://arxiv.org/pdf/2505.22074>`_
+    ReLU has been an effective activation function, but suffers from the dying ReLU problem where neurons become irreversibly inactive.  This paper proposes surrogate gradient learning for ReLU (SUGAR) which adds a smooth surrogate to the ReLU's derivative in the backwards pass which avoids zeroing out neurons.
+
+`The Gittins Index: A Design Principle for Decision-Making Under Uncertainty <https://arxiv.org/pdf/2506.10872>`_
+    Highlights that the Gittins index can be used as a tool to provide extremely good solutions to multi-armed bandit problems and the explore-exploit dilemma.  Formalizes the index in terms of Markov Decision Processes.
+
+`Do more observations bring more information in rare events? <https://arxiv.org/pdf/2506.13671>`_
+    Demonstrates that increasing sample size does not increase statistical power for rare events; instead, power for rare events depends on the number of rare events which occur.  Proposes new methodologies and proves effectiveness accounting for this phenomena.
+
+`On the Hardness of Bandit Learning <https://arxiv.org/pdf/2506.14746>`_
+    A comprehensive theoretical analysis dedicated to best-arm identification in multi-armed bandits.  Shows that computational hardness is an intrinsic quality of the problem.
+
+`These are Not All the Features You are Looking For: A Fundamental Bottleneck In Supervised Pretraining <https://arxiv.org/pdf/2506.18221>`_
+    Demonstrates a significant, and likely widespread, failure case for finetuning large foundation models to specific tasks: the foundation model can reach an "information saturation bottleneck" in pretraining.  When this occurs, features similar to the features which are saturated will not be learned.
+
+`A General Test for Independent and Identically Distributed Hypothesis <https://arxiv.org/pdf/2506.22361>`_
+    Develops a nonparametric test leveraging off-diagonal sequential U-processes and multiplier jackknife bootstrapping which evaluates whether data is iid.
+
+CoVar Seminar
+-------------
+`Structured Sparsity Learning for Efficient Video Super-Resolution <https://openaccess.thecvf.com/content/CVPR2023/papers/Xia_Structured_Sparsity_Learning_for_Efficient_Video_Super-Resolution_CVPR_2023_paper.pdf>`_
+    Introduces pruning mechanisms to improve inference efficiency in key components of video super-resolution models including residual blocks, recurrent networks, and upsampling networks to support deployment on resource-limited devices.  
+
+`Continuous Thought Machines <https://arxiv.org/pdf/2505.05522>`_
+    Sakana AI proposes a novel neural net architecture, the Continuous Thought Machine (CTM), which is motivated by the desire to make the function of neural nets more similar to how human brains process information.  CTMs do so by incorporating neuron-level temporal processing and enabling capture of temporal dynamics while remaining computationally tractable.
+
+`Differentiable Logic Cellular Automata <https://google-research.github.io/self-organising-systems/difflogic-ca/?hn>`_
+    Learning simple automata networks that can be implemented on a FPGA (i.e., with logic gates). This paper brings two concepts together `Growing Neural Cellular Automata <https://arxiv.org/pdf/2205.01681>`_ and `Differentiable Logic Gate Networks <https://arxiv.org/pdf/2210.08277>`_.
+
+New Models
+----------
+`BioReason: Incentivizing Multimodal Biological Reasoning within a DNA-LLM Model <https://bowang-lab.github.io/BioReason/?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=ai-godfather-launches-new-safety-startup&_bhlid=67e106a130a9ea9642be8c97a9dfbec71895366c>`_
+    BioReason is the first model to integrate a DNA foundation model with an LLM.  Produces a large performance increase over strong baselines.  
+
+`Surfer-H Meets Holo1 Cost-Efficient Web Agent Powered by Open Weights <https://arxiv.org/pdf/2506.02865>`_
+    H Company releases Surfer-H, a web agent integrated with Holo1, a new suite of open-weight VLMs. 
+
+`EUROLLM-9B: TECHNICAL REPORT <https://arxiv.org/pdf/2506.04079>`_
+    EuroLLM-9B is an LLM trained to serve the needs of the European Union by operating in all 24 official EU languages and an 11 further additional languages.  Is the best open source European LLM of its size.
+
+`OpenThoughts: DATA RECIPES FOR REASONING MODELS <https://arxiv.org/pdf/2506.04178>`_
+    Researchers from the OpenThoughts initiative assemble open-source datasets for training reasoning models and release a model trained on these open-source datasets which matches the performance of Deepseek-R1-Distill-32B.
+
+`Introducing Mistral Code <https://mistral.ai/news/mistral-code?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=reddit-takes-claude-to-court&_bhlid=8a35d6cd992a8208363748c68d166e2130f36163>`_
+    Mistral releases Mistral Code, an AI coding assistant that combines a number of tools to improve developer productivity.
+
+`Claude Gov Models for U.S. National Security Customers <https://www.anthropic.com/news/claude-gov-models-for-u-s-national-security-customers?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=google-s-gemini-update-raises-the-bar&_bhlid=1a6dfad73ec47f4b9f0de78396f57ab8c29e1a80>`_
+    Anthropic releases a suite of Claude models for government use, with a focus on national security applications and the ability to handle classified data.
+
+`The Common Pile v0.1: An 8TB Dataset of Public Domain and Openly Licensed Text <https://arxiv.org/pdf/2506.05209>`_
+    Compiles the Common Pile v0.1, an 8 TB open source dataset for LLM training.  Trains a suite of models, Comma v0.1, using this dataset.
+
+`ether0: a scientific reasoning model for chemistry <https://www.futurehouse.org/research-announcements/ether0-a-scientific-reasoning-model-for-chemistry?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-s-big-privacy-problem&_bhlid=2d7bf3862fc81c506495bc4d5ed5ffe60f7eb4de>`_
+    FutureHouse releases 24B open-weight model, ether0, which has been trained for chemistry-reasoning tasks.
+
+`MiniCPM4: Ultra-Efficient LLMs on End Devices <https://arxiv.org/pdf/2506.07900>`_
+    OpenBMB releases MiniCPM4, a pair of models sized at 0.5B and 8B parameters that are optimized for deployment on edge devices.  Available under an Apache 2.0 license.
+
+`O3 is 80% cheaper and introducing o3-pro <https://community.openai.com/t/o3-is-80-cheaper-and-introducing-o3-pro/1284925>`_
+    OpenAI releases o3pro via API, improving performance over the basic version of o3.
+
+`Stands to Reason: Magistral <https://mistral.ai/news/magistral?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-s-cheap-new-frontier-model&_bhlid=d86a3af5eb14cf53b2bc69d6ecf6df4dc0040638>`_
+    Mistral releases their first reasoning models,Magistral-Small and Magistral-Medium, which are competitive with Deepseek's models.  Magistral-Small is available under an Apache 2.0 license.
+
+`Ming-Omni: A Unified Multimodal Model for Perception and Generation <https://arxiv.org/pdf/2506.09344>`_
+    The AntGroup releases Ming-Omni, a multi-modal MoE model which can process and generate image, text, audio, and video data.  Available on github under an MIT license.
+
+`Introducing the V-JEPA 2 world model and new benchmarks for physical reasoning <https://ai.meta.com/blog/v-jepa-2-world-model-benchmarks/>`_
+     Meta releases V-JEPA 2, a world model seeking to maximize physics-based understanding and performance in the real world, with the aim of guiding robotic agents.
+
+`Seedance 1.0 <https://seed.bytedance.com/en/seedance>`_
+    Bytedance releases Seedance 1.0, a video generation model which achieves SOTA performance but is much faster than peer models.
+
+`Hunyuan3D-2.1 <https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1?tab=readme-ov-file>`_
+    Tencent releases Hunyuan3D-2.1, an open source VLM that creates 3D objects from 2D imagery.
+
+`How we built our multi-agent research system <https://www.anthropic.com/engineering/built-multi-agent-research-system>`_
+    Anthropic adds a Research capability to its Claude suite of language models, and details the inner workings of this multi-agent based system. 
+
+`Introducing Kimi-Dev: A Strong and Open-source Coding LLM for Issue Resolution <https://huggingface.co/moonshotai/Kimi-Dev-72B?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=openai-microsoft-reach-boiling-point&_bhlid=e9ad9eb2c29e3da51056f0f74bacd1f9c6bf9c98>`_
+    Moonshot AI releases Kimi-Dev-72B, an open-source LLM designed for coding and software engineering tasks trained via reinforcement learning that achieves SOTA performance.
+
+`MiniMax-M1: Scaling Test-Time Compute Efficiently with Lightning Attention <https://arxiv.org/pdf/2506.13585>`_
+    MiniMax AI releases MiniMax-M1, an open source mixture of experts model designed for reasoning tasks.  Supports a context length of 1 million tokens with low computational overhead.
+
+`Ring-lite: Scalable Reasoning via C3PO-Stabilized Reinforcement Learning for LLMs <https://arxiv.org/pdf/2506.14731>`_
+    The Ant Group releases Ring-lite, a mixture of experts LLM trained via a novel reinforcement learning method that achieves SOTA performance in its weight class.
+
+`We’re expanding our Gemini 2.5 family of models <https://blog.google/products/gemini/gemini-2-5-model-family-expands/?utm_source=superhuman&utm_medium=newsletter&utm_campaign=gemini-2-5-unleashed&_bhlid=037d66af6d9f1c8bd6d3cda168d3783b4f0e54be>`_
+    Google releases stable versions of Gemini 2.5 Flash and Gemini 2.5 Pro.  Also introduces a preview version of Gemini 2.5 Flash-Lite.
+
+`Advancing Multimodal Reasoning: From Optimized Cold Start to Staged Reinforcement Learning <https://arxiv.org/pdf/2506.04207>`_
+    Researchers release ReVisual-R1, a multimodal reasoning model trained with novel techniques inspired by Deepseek-R1.  Achieves SOTA performance.
+
+`Kimi-Researcher End-to-End RL Training for Emerging Agentic Capabilities <https://moonshotai.github.io/Kimi-Researcher/?utm_source=www.therundown.ai&utm_medium=newsletter&utm_campaign=big-tech-s-ai-shopping-spree&_bhlid=8fa3ee82f4c4d99e6f6b0e2201aae0998428d9f3>`_
+    Moonshot AI releases Kimi-Researcher, an AI agent for research tasks which achieves SOTA performance.  Available via API.
+
+`Introducing Mu language model and how it enabled the agent in Windows Settings <https://blogs.windows.com/windowsexperience/2025/06/23/introducing-mu-language-model-and-how-it-enabled-the-agent-in-windows-settings/>`_
+    Microsoft introduces MU, an on-device small LLM designed to run on a Neural Processing Unit (NPU) intended for deployment in Microsoft CoPilot and on Windows PCs.  
+
+`Gemini Robotics On-Device brings AI to local robotic devices <https://deepmind.google/discover/blog/gemini-robotics-on-device-brings-ai-to-local-robotic-devices/>`_
+    Google releases Gemini Robotics On-Device, a vision language model optimized to run on edge devices.
+
+`AlphaGenome: AI for better understanding the genome <https://deepmind.google/discover/blog/alphagenome-ai-for-better-understanding-the-genome/>`_
+    Google Deepmind releases AlphaGenome, a model which takes sequences of up to a million DNA base pairs and predicts resulting molecular properties.
+
+`Gemini CLI: your open-source AI agent <https://blog.google/technology/developers/introducing-gemini-cli-open-source-ai-agent/>`_
+    Google releases Gemini CLI, an AI agent based on Gemini and intended for software engineers which allows Gemini to function in the terminal
+
+`PsyLite Technical Report <https://arxiv.org/pdf/2506.21536>`_
+    Releases PsyLite, a small LLM finetuned for psychological counselling.
+
+`Introducing Gemma 3n: The developer guide <https://developers.googleblog.com/en/introducing-gemma-3n-developer-guide/>`_
+    Google releases Gemma 3n, a suite of models optimized for edge computing which leverages Matryoshka transformer architectures for efficiency.
+
+`Announcing the Open Source Release of the ERNIE 4.5 Model Family <https://ernie.baidu.com/blog/posts/ernie4.5/>`_
+    Baidu open sources the ERNIE 4.5 model family, containing multi-modal mixture of experts models of varying sizes.
+
+`Mercury: Ultra-Fast Language Models Based on Diffusion <https://arxiv.org/pdf/2506.17298>`_
+    Inception Labs releases Mercury Coder, an LLM employing a transformer architecture based on diffusion models which is optimized for coding tasks.
+
+`TOWER+: Bridging Generality and Translation Specialization in Multilingual LLMs <https://arxiv.org/pdf/2506.17080>`_
+    Tower+ is a suite of language models designed for text translation which strike a Pareto-optimal balance between translation and general purpose capabilities.
+
+`Qwen VLo: From "Understanding" the World to "Depicting" It <https://qwenlm.github.io/blog/qwen-vlo/>`_
+    Alibaba releases Qwen VLo, a multimodal model for understanding and generation which attempts to "bridge the gap between perception and generation".
+
+`Tencent Hunyuan A13B (short as Hunyuan-A13B), an innovative and open-source LLM built on a fine-grained MoE architecture. <https://github.com/Tencent-Hunyuan/Hunyuan-A13B>`_
+    Tencent releases Hunyuan-A13B, a mixture of experts model which achieves SOTA performance across several domains.

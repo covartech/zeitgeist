@@ -1,0 +1,159 @@
+The CoVar Zeitgeist: January, 2026
+==================================
+This issue of the CoVar Zeitgeist features research papers from December, 2025. December featured an unusually high number of papers from National Laboratories and various militaries across the world on areas ranging from developing autonomous navigational policies for USVs to finding the best radar placement in the face of adversarial jamming. New algorithms were proposed to better train autonomous agents for a variety of application purposes, including machine translation and tuning AI agents to user preferences. Premier industry labs developed new methods for training LLMs to allow models to explain when they engaged in undesired behavior and eliminate undesired knowledge from LLMs.  We feature six papers:
+
+* A novel method to evaluate machine translation only using knowledge of the output language.  Applied to such exotic uses as whale-human translation.
+* A cool paper which shows that a swarm of individual agents following certain rules, such as a hive of bees, is equivalent to a single agent.
+* A novel training method from OpenAI which trains frontier models to confess when they are engaging in undesired actions.
+* A method to distill video data into highly informative frames which provide the same amount of information for training purposes.
+* A game-theoretic inference time training framework that allows AI agents to adapt to user preferences in the field.
+* A new conformal prediction method which extends guarantees from marginal to conditional.
+
+`Check out the CoVar website! <https://covar.com/>`_
+
+Featured
+--------
+`On Non-interactive Evaluation of Animal Communication Translators <https://arxiv.org/pdf/2510.15768v1>`_
+    Argues that the quality of machine translation can be evaluated solely by examining the output in the output language, without any reference to the input language.  Demonstrates the potential of such a method with theory and case studies on human-to-human and whale-to-human translation.
+
+`The Hive Mind is a Single Reinforcement Learning Agent <https://arxiv.org/pdf/2410.17517>`_
+    Draws inspiration from the swarm behavior bees to create the Maynard-Cross Learning algorithm for hive mind agents. Shows that a single RL agent, duplicated across every agent in the swarm, interacting with the environment in parallel, and imitating its own duplicates when necessary, is sufficient for swarm intelligence.
+
+`How confessions can keep language models honest <https://openai.com/index/how-confessions-can-keep-language-models-honest/>`_
+    Trains a generative model to generate (1) standard output in a standard manner and (2) a confession explaining whether the standard output engaged in undesired actions such as instruction violation.  The confession achieves 96% accuracy at identifying undesired behavior.
+
+`Distill Video Datasets into Images <https://arxiv.org/pdf/2512.14621>`_
+    Develops Single Frame Video Set Distillation (SFVD), a method for compressing video data into highly informative frames for each class of interest.  Models trained on only the compressed data maintain effective performance. 
+
+`Stackelberg Learning from Human Feedback: Preference Optimization as a Sequential Game <https://arxiv.org/pdf/2512.16626>`_
+    Proposes Stackelburg Learning from Human Feedback (SLHF), a two-player sequential game theoretic framework which allows an AI agent to adapt itself to its user's preferences at inference time.
+
+`Conditional Coverage Diagnostics for Conformal Prediction <https://arxiv.org/pdf/2512.11779>`_
+    Proposes a method to extend conformal prediction methods from marginal guarantees to conditional guarantees.  Does so by reframing conditional coverage as a supervised prediction task.
+
+LLMs
+----
+`How confessions can keep language models honest <https://openai.com/index/how-confessions-can-keep-language-models-honest/>`_
+    Trains a generative model to generate (1) standard output in a standard manner and (2) a confession explaining whether the standard output engaged in undesired actions such as instruction violation.  The confession achieves 96% accuracy at identifying undesired behavior.
+
+`Rectifying LLM Thought from Lens of Optimization <https://arxiv.org/pdf/2512.01925>`_
+    Reframes chain-of-thought as a variant of gradient descent where each step is an update.  Leverages this insight to propose a post-training optimization algorithm to increase efficacy.  
+
+`Beyond Data Filtering: Knowledge Localization for Capability Removal in LLMs <https://alignment.anthropic.com/2025/selective-gradient-masking/>`_
+    Anthropic develops a method, Selective Gradient Masking (SGTM), to remove information about chemical, biological, radiological, and nuclear weapons from an LLM.  SGTM localizes knowledge that the LLM should not know into a small set of weights which can be zeroed out at runtime.  
+
+`The Universal Weight Subspace Hypothesis <https://arxiv.org/pdf/2512.05117>`_
+    Analyzes a variety of neural network architectures trained in a wide variety of application domains, and finds that there are sparse, joint subspaces which are consistently used by all networks.  Explores the resulting implications.
+
+`Constructive Circuit Amplification: Improving  Math Reasoning in LLMs via Targeted Sub-Network Updates <https://arxiv.org/pdf/2512.16914>`_
+    Improves LLM performance via targeted interventions on circuits: sparse subsets of weights which contribute disproportionately to performance on given tasks.
+
+Novel Architectures
+-------------------
+`Evolution Strategies at the Hyperscale <https://eshyperscale.github.io/imgs/paper.pdf>`_
+    Introduces a method to scale evolution strategies methods to large scale neural networks and provide backprop-free optimization which functions in nondifferentiable settings such as cellular automata.  Overcomes substantial computational bottlenecks associated with evolution strategies to do so.  
+
+`AutoNeural: Co-Designing Vision–Language Models for NPU Inference <https://arxiv.org/pdf/2512.02924>`_
+    Proposes AutoNeural, a VLM architecture designed for integer-only inference on NPUs that avoids problems traditional SOTA LLMs encounter in such settings.
+
+`Stronger Normalization-Free Transformers <https://arxiv.org/pdf/2512.10938>`_
+    Introduces Derf, a pointwise function that is a rescaled Gaussian cdf, which can replace normalization layers in transformer architectures.  Shows that Derf layers can surpass the performance of normalization layers.
+
+Object Detection
+----------------
+`MANTA: Physics-Informed Generalized Underwater Object Tracking <https://arxiv.org/pdf/2511.23405>`_
+    Proposes a physics-based method to improve tracking of underwater objects in visual sensors.
+
+`A Fast Anti-Jamming Cognitive Radar Deployment Algorithm Based on Reinforcement Learning <https://arxiv.org/pdf/2512.05753>`_
+    Develops a method to guide cognitive radar deployment in the face of radar jamming, achieving SOTA performance while decreasing computational time by a factor of 7000.
+
+`A Unified Theory of Dynamic Programming Algorithms in Small Target Detection <https://arxiv.org/pdf/2512.11170>`_
+    Sandia National Lab proposes a dynamic programming based approach for small target detection which is designed to function in the presence of a low signal-to-noise ratio.
+
+`Distill Video Datasets into Images <https://arxiv.org/pdf/2512.14621>`_
+    Develops Single Frame Video Set Distillation (SFVD), a method for compressing video data into highly informative frames for each class of interest.  Models trained on only the compressed data maintain effective performance. 
+
+Testing & Evaluation
+--------------------
+`How Far Are We from Genuinely Useful Deep Research Agents? <https://arxiv.org/pdf/2512.01948>`_
+    Creates a novel benchmark to both assess deep research agents and diagnose the specific capabilities they either have or lack.
+
+`A Latent Variable Framework for Scaling Laws in Large Language Models <https://arxiv.org/pdf/2512.06553>`_
+    Creates a benchmarking method for scaling frontier models of different architectures using a latent variables model where different latent variables correspond to different model capabilities.
+
+`Evaluating Weather Forecasts from a Decision Maker's Perspective <https://arxiv.org/pdf/2512.14779>`_
+    Argues that the utility of a weather forecast lies in its ability to help decision makers make better decisions, rather than absolute ability at the forecast level.  Develops a method for evaluating the first of these.
+
+Autonomy
+--------
+`CUDA-L2: Surpassing cuBLAS Performance for Matrix Multiplication through Reinforcement Learning <https://arxiv.org/pdf/2512.02551>`_
+    Designs a novel algorithm exploration agent, CUDA-L2, which discovers a new method for Half-precision General Matrix Multiplication CUDA kernels that outperforms current implementations.
+
+`Dynamic one-time delivery of critical data by small and sparse UAV swarms: a model problem for MARL scaling studies <https://arxiv.org/pdf/2512.09682>`_
+    The Swedish Defence Research Agency conducts a study to determine how a drone swarm could deliver a single packet of information in the presence of adversarial action.
+
+`Towards a Science of Scaling Agent Systems <https://arxiv.org/pdf/2512.08296>`_
+    A comprehensive investigation and development of rigorous scaling laws for deploying AI agents.  Finds, e.g., where upgrading a single-agent system to a multi-agent system can provide improved performance and where it can harm performance.
+
+`A Decision-Theoretic Approach for Managing Misalignment <https://arxiv.org/pdf/2512.15584>`_
+    Develops a framework to characterize when decisions should be delegated to AI agents, even when those agents are incapable of making decisions optimally.
+
+Reinforcement Learning
+----------------------
+`The Hive Mind is a Single Reinforcement Learning Agent <https://arxiv.org/pdf/2410.17517>`_
+    Draws inspiration from the swarm behavior bees to create the Maynard-Cross Learning algorithm for hive mind agents. Shows that a single RL agent, duplicated across every agent in the swarm, interacting with the environment in parallel, and imitating its own duplicates when necessary, is sufficient for swarm intelligence.
+
+`Latent Collaboration in Multi-Agent Systems <https://arxiv.org/pdf/2511.20639>`_
+    Introduces a framework, LatentMAS, which allows foundation models in a multi-agent setting to communicate directly to each other via latent space rather than using natural language.  Improves system performance.
+
+`Digital Twin–Supervised Reinforcement Learning Framework for Autonomous Underwater Navigation <https://arxiv.org/pdf/2512.10925>`_
+    The French navy proposes a reinforcement learning algorithm to train USVs to navigate without GPS in the presence of degraded visibility and obstacles.  Outperforms deterministic kinematics planners.
+
+`On the Interplay of Pre-Training, Mid-Training, and RL on Reasoning Language Models <https://arxiv.org/pdf/2512.07783>`_
+    An in-depth analysis of the relative effects of pre-training, mid-training, and post-training RL on LLM performance.  Finds conditions to maximize the improvement offered by each.
+
+`Differentiable Evolutionary Reinforcement Learning <https://arxiv.org/pdf/2512.13399>`_
+    Proposes a novel reinforcement learning algorithm, which trains a model to respond to a reward while also updating the reward function to ensure that optimization aligns with desired capabilities.  Agents trained in this framework achieve SOTA performance.  
+
+`Stackelberg Learning from Human Feedback: Preference Optimization as a Sequential Game <https://arxiv.org/pdf/2512.16626>`_
+    Proposes Stackelburg Learning from Human Feedback (SLHF), a two-player sequential game theoretic framework which allows an AI agent to adapt itself to its user's preferences at inference time.
+
+Statistics
+----------
+`On Non-interactive Evaluation of Animal Communication Translators <https://arxiv.org/pdf/2510.15768v1>`_
+    Argues that the quality of machine translation can be evaluated solely by examining the output in the output language, without any reference to the input language.  Demonstrates the potential of such a method with theory and case studies on human-to-human and whale-to-human translation.
+
+`Discriminative classification with generative features: bridging Naive Bayes and logistic regression <https://arxiv.org/pdf/2512.01097>`_
+    Proposes Smart Bayes, a new classifier combining elements of Naive Bayes and logistic regression which outperforms both constituent methods.
+
+`Algorithmic Thinking Theory <https://arxiv.org/pdf/2512.04923>`_
+    Reasoning algorithms have shown potential to greatly increase frontier model performance on difficult benchmarks such as IMO questions.  This paper develops a theoretical explanation of how and why such algorithms work.
+
+`Empirical Decision Theory <https://arxiv.org/pdf/2512.05677>`_
+    A theoretical approach which develops a framework for decision theory for an agent with uncertainty regarding the true state of the world.
+
+`Conditional Coverage Diagnostics for Conformal Prediction <https://arxiv.org/pdf/2512.11779>`_
+    Proposes a method to extend conformal prediction methods from marginal guarantees to conditional guarantees.  Does so by reframing conditional coverage as a supervised prediction task.
+
+`Actively Learning Joint Contours of Multiple Computer Experiments <https://arxiv.org/pdf/2512.13530>`_
+    Proposes a joint contour location sequential design to find optimal design points for engineering problems from multiple independent computer experiments.
+
+CoVar Seminar
+-------------
+`Spatio-Temporal Context Learning with Temporal Difference Convolution for Moving Infrared Small Target Detection <https://arxiv.org/pdf/2511.09352>`_
+    Proposes a novel algorithm for moving infrared small target detection which extracts and utilizes spatio-temporal features from sequences of frames. The spatio-temporal features are extracted using an architecture leveraging differences between frames as well as 3D convolutions.
+
+`SAM2MOT: A Novel Paradigm of Multi-Object Tracking by Segmentation <https://arxiv.org/pdf/2504.04519v5>`_
+    Demonstrates a zero-shot multi-object detection and tracking framework built on SAM 2 yielding SOTA performance on DanceTrack, UAVDT and other benchmarks.
+
+`SAM 2: Segment Anything in Images and Videos <https://github.com/facebookresearch/sam2>`_
+    Original SAM 2 paper to accompany the above; promptable zero-shot multi-object segmentation and tracking foundation model and associated dataset generation engine.
+
+`Emerging Properties in Self-Supervised Vision Transformers <https://arxiv.org/abs/2104.14294>`_
+    Introduces DINO, which combines the representational power of large-scale Vision Transformers (ViTs) with a novel Self-Supervised Learning optimization approach to learn highly generalizable image features. This features facilitate impressive downstream task performance with no task-specific fine-tuning.
+
+`DINOv2: Learning Robust Visual Features without Supervision <https://arxiv.org/abs/2304.07193>`_
+    Introduces DINOv2, which scales up the data and model size of DINO(v1). Importantly, it introduces a patch-level objective to the optimization criterion that helps the model learn higher quality dense local features.
+
+`DINOv3 <https://arxiv.org/abs/2508.10104>`_
+    Introduces DINOv3, which addresses the issue of local feature collapse that occurs when dramatically scaling DINOv2. They counteract this using intelligent data curation and a clever optimization trick called Gram Anchoring. DINOv3 is shown to be a strong backbone feature extractor for challenging dense visual tasks, including segmentation, depth estimation, and 3D reconstruction.

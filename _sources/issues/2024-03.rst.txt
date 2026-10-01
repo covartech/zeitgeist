@@ -1,0 +1,126 @@
+The CoVar Zeitgeist: March, 2024
+================================
+A curated list of the latest research in AI.
+
+Enjoy!
+
+Featured
+--------
+`On Limitations of the Transformer Architecture <https://arxiv.org/pdf/2402.08164.pdf>`_
+    Finds that hallucinations happen because transformers have difficulty composing functions (e.g.  birthday of Chopin's father) if the domain is large enough, though this persists in small domains as well.  This is why mathematical tasks that are compositions can pose difficulties. 
+
+`The boundary of neural network trainability is fractal <2402.06184.pdf (arxiv.org)>`_
+    This paper finds that the boundary between convergent and divergent zones in neural net parameter space are fractal.  Has some discouraging implications for perfectly optimizing neural nets.
+
+`GaussianObject: Just Taking Four Images to Get A High-Quality 3D Object with Gaussian Splatting <https://gaussianobject.github.io>`_
+    Implements gaussian splatting from very few images to make a CAD-like model. Results look really good and better than previous methods.
+
+`Grandmaster-Level Chess Without Search <https://arxiv.org/pdf/2402.04494.pdf>`_
+    A decision transformer plays chess without using explicit heuristics or move searches.  It does pretty well, achieving grandmaster level performance in blitz.
+
+`Self-Rewarding Language Models <https://arxiv.org/abs/2401.10020>`_
+    Self-rewarding language models use the same LLM with different prompts to do RLHF instead of human labellers. The second prompt picks which of the first prompt's potential responses was the "best".  This is potentially a scalable RLHF solution.
+
+`Intelligent Known and Novel Aircraft Recognition - A Shift from Classification to Similarity Learning for Combat Identification <https://arxiv.org/pdf/2402.16486.pdf>`_
+    Overhead ATR for combat identification of airplanes from Pakistani and Saudi Arabian researchers.  Uses an embedder to embed input images into some space, and then uses metrics inside of this space to do classification/novel aircraft identification.
+
+LLMs
+----
+`SELF-DISCOVER: Large Language Models Self-Compose Reasoning Structures <https://arxiv.org/pdf/2402.03620.pdf>`_
+    Proposes SELF-DISCOVER, a method to force LLMs to reason which outperforms Chain-of-Thought.  For a given task, it first proposes a reasoning structure appropriate to that task and then uses the structure to solve the task. 
+
+`V-STaR: Training Verifiers for Self-Taught Reasoners <https://arxiv.org/pdf/2402.06457.pdf>`_
+    Proposes a solution to reasoning problems if you also train a verifier: let an LLM generate a many solutions to the problem and have the verifier select the correct one.  This approach trains the verifier on incorrect as well as correct approaches, which seems to improve performance.
+
+`OmniPred: Language Models as Universal Regressors <https://arxiv.org/pdf/2402.14547.pdf>`_
+    LLMs can act as universal regressors over any (x,y) dataset.  Can potentially automate away model selection.
+
+`Back to Basics: Revisiting REINFORCE Style Optimization for Learning from Human Feedback in LLMs <2402.14740.pdf (arxiv.org)>`_
+    Finetuning LLMs to give desired behaviors has traditionally been though of as a difficult reinforcement learning problem.  This paper argues that the reinforcement learning is actually quite simple and can proceed using some classical RL approaches.
+
+`Retrieval-Augmented Generation for Large Language Models: A Survey <https://arxiv.org/abs/2312.10997>`_
+    Survey on RAG approaches. 
+
+`Self-Rewarding Language Models <https://arxiv.org/abs/2401.10020>`_
+    Self-rewarding language models use the same LLM with different prompts to do RLHF instead of human labellers. The second prompt picks which of the first prompt's potential responses was the "best".  This is potentially a scalable RLHF solution.
+
+`Same Task, More Tokens: the Impact of Input Length on the Reasoning Performance of Large Language Models <https://arxiv.org/pdf/2402.14848.pdf>`_
+    LLM performance decreases with longer prompts, though different LLMs scale differently.
+
+`On Limitations of the Transformer Architecture <https://arxiv.org/pdf/2402.08164.pdf>`_
+    Finds that hallucinations happen because transformers have difficulty composing functions (e.g.  birthday of Chopin's father) if the domain is large enough, though this persists in small domains as well.  This is why mathematical tasks that are compositions can pose difficulties. 
+
+Object Detection
+----------------
+`Tiered approach for rapid damage characterisation of infrastructure enabled by remote sensing and deep learning technologies <https://arxiv.org/ftp/arxiv/papers/2401/2401.17759.pdf>`_
+    Builds a pipeline that assesses infrastructure damage from space using a three-tiered approach.  Applied to a case study in Ukraine. 
+
+`ON THE MODELLING OF SHIP WAKES IN S-BAND SAR IMAGES AND AN APPLICATION TO SHIP IDENTIFICATION <https://arxiv.org/pdf/2402.04066.pdf>`_
+    Develops a simulator for S-Band SAR data to simulate ships wakes.  Train a deep learning model on this data for ship classification which works on real data.  
+
+`Mind the Modality Gap: Towards a Remote Sensing Vision-Language Model via Cross-modal Alignment <https://arxiv.org/pdf/2402.09816.pdf>`_
+    Finetunes CLIP for remote sensing for scene classification.  Transforms information from pictures into CLIP space to improve performance.  
+
+`Intelligent Known and Novel Aircraft Recognition - A Shift from Classification to Similarity Learning for Combat Identification <https://arxiv.org/pdf/2402.16486.pdf>`_
+    Overhead ATR for combat identification of airplanes from Pakistani and Saudi Arabian researchers.  Uses an embedder to embed input images into some space, and then uses metrics inside of this space to do classification/novel aircraft identification.
+
+Autonomy
+--------
+`Grandmaster-Level Chess Without Search <https://arxiv.org/pdf/2402.04494.pdf>`_
+    A decision transformer plays chess without using explicit heuristics or move searches.  It does pretty well, achieving grandmaster level performance in blitz.
+
+`Deep Learning Based Situation Awareness for Multiple Missiles Evasion <https://arxiv.org/pdf/2402.10101.pdf>`_
+    What do you do when your drone is getting shot at by multiple missiles?  This paper from SAAB uses deep learning to learn what is happening and guide decision making.
+
+`Contingency Planning Using Bi-level Markov Decision Processes for Space Missions <https://arxiv.org/pdf/2402.16342.pdf>`_
+    NASA talks about the autonomous methods they're using to manage their rovers, using VIPER as an example.
+
+Gaussian Splatting
+------------------
+`GaussianObject: Just Taking Four Images to Get A High-Quality 3D Object with Gaussian Splatting <https://gaussianobject.github.io>`_
+    Implements gaussian splatting from very few images to make a CAD-like model. Results look really good and better than previous methods.
+
+Theory
+------
+`Understanding Adam Optimizer via Online Learning of Updates: Adam is FTRL in Disguise <2402.01567.pdf (arxiv.org)>`_
+    Recasts optimizers as online learners and finds that "Adam corresponds to a principled online learning framework called Follow-the-Regularized-Leader (FTRL)."  Worth reading if you want to understand how Adam works.
+
+`The boundary of neural network trainability is fractal <2402.06184.pdf (arxiv.org)>`_
+    This paper finds that the boundary between convergent and divergent zones in neural net parameter space are fractal.  Has some discouraging implications for perfectly optimizing neural nets.
+
+`Estimating Unknown Population Sizes Using the Hypergeometric Distribution <https://arxiv.org/pdf/2402.14220.pdf>`_
+    How to estimate the total number of entities given a set of observations?  Similar to the German Tank problem and relevant for imperfect information scenarios.
+
+Comptuational Efficiency
+------------------------
+`Accelerating Local Laplacian Filters on FPGAs <https://arxiv.org/pdf/2402.12407.pdf>`_
+    Faster way to optimize computations on FPGAs. 
+
+`The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits <https://arxiv.org/pdf/2402.17764.pdf>`_
+    Gets LLMs running on 1.58 bits ({-1,0,1}) to increase computational performance.  Claims to be as effective as 16 bit transformers.
+
+Knowledge Graphs
+----------------
+`SPARQL Generation: an analysis on fine-tuning OpenLLaMA for Question Answering over a Life Science Knowledge Graph <https://arxiv.org/pdf/2402.04627.pdf>`_
+    Investigates how to turn natural language questions into SPARQL queries for use in knowledge graphs.  Useful for any of our KG projects.
+
+Applications
+------------
+`CHIRP-Like Signals: Estimation, Detection and Processing A Sequential Model-Based Approach <https://www.osti.gov/biblio/1297653>`_
+    A starting place to learn about signal classification for HF radar.
+
+Position Papers
+---------------
+`Position Paper: Bayesian Deep Learning in the Age of Large-Scale AI <https://arxiv.org/pdf/2402.00809.pdf>`_
+    Approximately 20 authors, including Yee Whye Teh, think that Bayesian deep learning has great potential to solve a diverse array of problems, particularly in combination with foundation models.
+
+`Mission Critical – Satellite Data is a Distinct Modality in Machine Learning <Mission Critical – Satellite Data is a Distinct Modality in Machine Learning (arxiv.org)>`_
+    Position paper arguing that satellite data is a domain unto itself deserving of its own techniques and methods. 
+
+`Position Paper: Challenges and Opportunities in Topological Deep Learning <https://arxiv.org/pdf/2402.08871.pdf>`_
+    Position paper on Topological Deep Learning which could be useful for anything involving CAD models/object estimation.
+
+New Models
+----------
+`Gemma: Introducing new state-of-the-art open models <https://blog.google/technology/developers/gemma-open-models/>`_
+    Google's new open, source, LLM.  Has 2B and 7B model weights available for download, claims SOTA performance.

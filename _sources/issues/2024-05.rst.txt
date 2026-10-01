@@ -1,0 +1,141 @@
+The CoVar Zeitgeist: May, 2024
+==============================
+A curated list of the latest research in AI.
+
+Featured
+--------
+`MLAgentBench: Evaluating Language Agents on Machine Learning Experimentation <https://arxiv.org/pdf/2310.03302>`_
+    Can LLMs act as Machine Learning Engineers and conduct effective ML experimentation when presented with a dataset?  This paper investigates, to mixed results.
+
+`Is Model Collapse Inevitable? Breaking the Curse of Recursion by Accumulating Real and Synthetic Data <https://arxiv.org/pdf/2404.01413.pdf>`_
+    Investigates model collapse, where generative models trained on their own outputs tend to collapse.  Part of the reason this occurs is because new generated data replaces old real data; instead, if old data is supplemented by rather than replaced with new generated data then model collapse does not occur.
+
+`TransformerFAM: Feedback attention is working memory <https://arxiv.org/pdf/2404.09173.pdf>`_
+    Introduces a feedback loop into the transformer model to allow it to self-attend to its own latent representations.  Authors claim this is like giving a transformer working memory and allows it to process indefinitely long sequences. 
+
+`Dynamic Gaussians Mesh: Consistent Mesh Reconstruction from Monocular Videos <https://arxiv.org/pdf/2404.12379.pdf>`_
+    Recovers object meshes from a video of an object. 
+
+`KGExplainer: Towards Exploring Connected Subgraph Explanations for Knowledge Graph Completion <https://arxiv.org/pdf/2404.03893.pdf>`_
+    Proposes a method to explain knowledge graph completions done with knowledge graph embeddings by investigating connected subgraphs.  Makes intuitive sense and seems to improve performance in practice.  
+
+LLMs
+----
+`Automated Social Science: Language Models as Scientist and Subjects <https://arxiv.org/pdf/2404.11794.pdf>`_
+    This paper has LLMs roleplay and act as human agents in simulated situations to test social science hypotheses in silico.  Finds that LLMs as roleplay agents can reproduce results form the social science literature that they claim not to know when asked directly.
+
+`MLAgentBench: Evaluating Language Agents on Machine Learning Experimentation <https://arxiv.org/pdf/2310.03302>`_
+    Can LLMs act as Machine Learning Engineers and conduct effective ML experimentation when presented with a dataset?  This paper investigates, to mixed results.
+
+`Preference Fine-Tuning of LLMs Should Leverage Suboptimal, On-Policy Data <https://arxiv.org/pdf/2404.14367.pdf>`_
+    A deep dive into how to optimally fine-tune LLMs in a variety of situations.  
+
+`The Instruction Hierarchy: Training LLMs to Prioritize Privileged Instructions <https://arxiv.org/pdf/2404.13208.pdf>`_
+    Proposes that LLMs be trained to prioritize some instructions over others, instead of treating all instructions equally.  This can help with alignment concerns.  
+
+`Why do small language models underperform? Studying LM Saturation via the Softmax Bottleneck <https://arxiv.org/pdf/2404.07647.pdf>`_
+    Investigates why smaller LLMs experience performance drops and plateaus during training.  The answer is that the hidden dimension of smaller LLMs is too small to capture the distribution it is targeting and encounters the softmax bottleneck.
+
+`Let’s Think Dot by Dot: Hidden Computation in Transformer Language Models <https://arxiv.org/pdf/2404.15758>`_
+    Chain-of-thought may be outperforming other methods because it provides LLMs with more computing power rather than because it increases reasoning capabilities.  To test this, the authors give LLMs filler tokens and demonstrate that it can use these like it would Chain-of-Thought, but needs to be trained in a very specific manner. 
+
+Object Detection
+----------------
+`Improving Detection in Aerial Images by Capturing Inter-Object Relationships <https://arxiv.org/pdf/2404.04140.pdf>`_
+    Entities tend to be spatially correlated, but existing overhead ATR methods don't take this into account.  This paper does so by putting a transformer on top of traditional two-stage detectors to examine regions of interest. 
+
+`DiffDet4SAR: Diffusion-based Aircraft Target Detection Network for SAR Images <https://arxiv.org/pdf/2404.03595.pdf>`_
+    ConvNets/transformers for overhead sensing in SAR are limited by varying target size, spikiness of SAR data, and general noise.  The papers attempts to ameliorate these problems by (1) using a denoising diffusion process and (2) using a scattering feature enhancement to model the SAR data.  Seems to improve results. 
+
+`Dynamic Gaussians Mesh: Consistent Mesh Reconstruction from Monocular Videos <https://arxiv.org/pdf/2404.12379.pdf>`_
+    Recovers object meshes from a video of an object. 
+
+`Bridging Remote Sensors with Multisensor Geospatial Foundation Models <https://arxiv.org/pdf/2404.01260.pdf>`_
+    Investigates how to fuse together multiple modalities in remote sensing.  Creates distinct embedding layers for each sensor, inputs all of them into a shared encoder, and decodes on a per-sensor level.
+
+`A Satellite Band Selection Framework for Amazon Forest Deforestation Detection Task <https://arxiv.org/pdf/2404.02659.pdf>`_
+    Uses the Univariate Marginal Distribution Algorithm (UMDA) to select the optimal Landsat band for overhead monitoring. 
+
+`LiDAR-Guided Cross-Attention Fusion for Hyperspectral Band Selection and Image Classification <https://arxiv.org/pdf/2404.03883.pdf>`_
+    Makes use of LiDAR to select the best hyperspectral bands using self-attention encoders, then uses these for image classification. 
+
+Autonomy
+--------
+`Laser Learning Environment: A new environment for coordination-critical multi-agent tasks <https://arxiv.org/pdf/2404.03596.pdf>`_
+    Introduces a new environment for multi-agent reinforcement learning.  One problem they encounter and highlight is that the agents can get stuck in a state space.
+
+`Advancing Forest Fire Prevention: Deep Reinforcement Learning for Effective Firebreak Placement <https://arxiv.org/pdf/2404.08523.pdf>`_
+    Implements deep reinforcement learning on satellite pictures to discover optimal placement for firebreaks in case of forest fires.  We could implement a similar approach to find optimal spots for, e.g., fortifications.
+
+`Learn to Tour: Operator Design For Solution Feasibility Mapping in Pickup-and-delivery Traveling Salesman Problem <https://arxiv.org/pdf/2404.11458.pdf>`_
+    Uses reinforcement learning for the pickup and delivery traveling salesman problem.  Could be an interesting route-finding algorithm for autonomous vehicles.
+
+`A survey of air combat behavior modeling using machine learning <https://arxiv.org/ftp/arxiv/papers/2404/2404.13954.pdf>`_
+    Norwegian Defence researchers analyze how well current reinforcement learning methods are producing en silico agents for simulation of aerial combat.
+
+Theory
+------
+`Is Model Collapse Inevitable? Breaking the Curse of Recursion by Accumulating Real and Synthetic Data <https://arxiv.org/pdf/2404.01413.pdf>`_
+    Investigates model collapse, where generative models trained on their own outputs tend to collapse.  Part of the reason this occurs is because new generated data replaces old real data; instead, if old data is supplemented by rather than replaced with new generated data then model collapse does not occur.
+
+`Variational Stochastic Gradient Descent for Deep Neural Networks <https://arxiv.org/pdf/2404.06549.pdf>`_
+    Proposes a new method for gradient descent, Variational Stochastic Gradient Descent, which outperforms both ADAM and regular SGD on the image classification examples in the paper. VSGD is a generalization of regular SGD and ADAM.
+
+`The Illusion of State in State-Space Models <https://arxiv.org/pdf/2404.08819.pdf>`_
+    Finds that state-space models with finite layers have no advantage over transformers in state-space tracking: SSMs are limited at keeping track of entities in narratives, playing chess, or evaluating code.  
+
+`TransformerFAM: Feedback attention is working memory <https://arxiv.org/pdf/2404.09173.pdf>`_
+    Introduces a feedback loop into the transformer model to allow it to self-attend to its own latent representations.  Authors claim this is like giving a transformer working memory and allows it to process indefinitely long sequences. 
+
+`Leave No Context Behind: Efficient Infinite Context Transformers with Infini-attention <https://arxiv.org/pdf/2404.07143.pdf>`_
+    Uses compressive memory to store input tokens as parameters which can be updated.  This, theoretically, enables handling and processing of infinite input data.
+
+`An exactly solvable model for emergence and scaling laws <https://arxiv.org/pdf/2404.17563>`_
+    Explicitly models where scaling begins for neural net training in terms of training time, training data, and model size in two-layer NNs.
+
+`On the Learnability of Out-of-distribution Detection <https://arxiv.org/pdf/2404.04865.pdf>`_
+    Investigates and proves when OOD detection is theoretically impossible and when it's possible.   
+
+`HELLINGER-UCB: A NOVEL ALGORITHM FOR STOCHASTIC MULTI-ARMED BANDIT PROBLEM AND COLD START PROBLEM IN RECOMMENDER SYSTEM <https://arxiv.org/pdf/2404.10207.pdf>`_
+    Proposes new multi-armed bandit algorithm with applications to cold-start scenarios in recommender systems.
+
+`Estimating the Number of Components in Finite Mixture Models via Variational Approximation <https://arxiv.org/pdf/2404.16746>`_
+    ELBO-based method to try to estimate number of components in mixture models. 
+
+Computational Efficiency
+------------------------
+`GCV-Turbo: End-to-end Acceleration of GNN-based Computer Vision Tasks on FPGA <https://arxiv.org/pdf/2404.07188.pdf>`_
+    From DEVCOM Army Research Office.  Investigates how to pu CNNs and GNNs for computer-vision tasks on FPGAs.  
+
+Knowledge Graphs
+----------------
+`FLawN-T5: An Empirical Examination of Effective Instruction Tuning Data Mixtures for Legal Reasoning <https://arxiv.org/pdf/2404.02127.pdf>`_
+    Claims that legal reasoners tend to have poor performances because there isn't a proper legal reasoning dataset.  This paper introduces one, finetunes a model, and demonstrates much better performance.
+
+`Chain event graphs for assessing activity-level propositions in forensic science in relation to drug traces on banknotes <https://arxiv.org/pdf/2404.02778.pdf>`_
+    Implements legal reasoning via turning arguments into graphical models, assigning probabilities to edges, and turning the crank.
+
+`KGExplainer: Towards Exploring Connected Subgraph Explanations for Knowledge Graph Completion <https://arxiv.org/pdf/2404.03893.pdf>`_
+    Proposes a method to explain knowledge graph completions done with knowledge graph embeddings by investigating connected subgraphs.
+
+Applications
+------------
+`Mapping the Increasing Use of LLMs in Scientific Papers <https://arxiv.org/pdf/2404.01268.pdf>`_
+    Trawls arXiv to investigate out how much of it is LLM generated, looking at near a million papers.  Finds that 17.5 percent of CS papers are LLM-generated.
+
+New Models
+----------
+`RecurrentGemma: Moving Past Transformers for Efficient Open Language Models <https://arxiv.org/pdf/2404.07839.pdf>`_
+    Deepmind proposes a new LLM.  Doesn't use global attention, but instead uses local attention and linear recurrences. 
+
+`Reka Core, Flash, and Edge: A Series of Powerful Multimodal Language Models <https://publications.reka.ai/reka-core-tech-report.pdf>`_
+    A multimodal foundation model.  Does not seem to be open source.
+
+`Llama 3 <https://llama.meta.com/llama3/>`_
+    Meta's new LLM.  
+
+`Phi-3 Technical Report: A Highly Capable Language Model Locally on Your Phone <https://arxiv.org/pdf/2404.14219.pdf>`_
+    New LLM from Microsoft that is small enough to run natively on an iPhone 14 but achieves comparable results to GPT-4.  Most of the penalty it pays for its small size takes the form of less factual knowledge.
+
+`Capabilities of Gemini Models in Medicine <https://arxiv.org/pdf/2404.18416>`_
+    Google release Med-Gemini, which is Gemini but fine-tuned to the medical domain.

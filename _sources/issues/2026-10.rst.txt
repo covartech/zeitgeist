@@ -1,0 +1,47 @@
+The CoVar Zeitgeist: October, 2026
+===============================
+
+A curated list of the latest research in AI.
+
+`Check out the CoVar website! <https://covar.com/>`_
+
+Featured
+--------
+`LeWorldModel: Stable End-to-End Joint-Embedding Predictive Architecture from Pixels <https://arxiv.org/pdf/2603.19312>`_
+    LeWorldModel introduces a stable end-to-end JEPA trained from raw pixels with minimal loss terms, achieving competitive performance in control tasks and demonstrating meaningful latent space representations.
+
+`Agentick: A Unified Benchmark for General Sequential Decision-Making Agents <https://arxiv.org/abs/2605.06869>`_
+    Agentick introduces a unified benchmark with 37 tasks across various capabilities and modalities to fairly compare RL, LLM, VLM, hybrid, and human agents, revealing significant room for improvement and driving progress toward general autonomous agents.
+
+Adversarial Methods
+-------------------
+`T-SEA: Transfer-based Self-Ensemble Attack on Object Detection <https://arxiv.org/abs/2211.09773>`_
+    T-SEA proposes a self-ensemble approach for single-model transfer-based black-box attacks on object detection, enhancing adversarial patch transferability and performance without requiring multiple target models.
+
+Autonomy
+--------
+`Mini Amusement Parks (MAPs): A Testbed for Modelling Business Decisions <https://arxiv.org/abs/2511.15830>`_
+    Mini Amusement Parks (MAPs) is an amusement-park simulator designed to evaluate holistic decision-making capabilities in complex, real-world scenarios, revealing significant gaps between state-of-the-art AI and human performance.
+
+`A Survey of Agentic Reasoning for Large Language Models: Towards Recursively Self-Improving and Collective Agents <https://arxiv.org/abs/2601.12538>`_
+    Surveys agentic reasoning approaches for LLMs, organizing them into foundational, self-evolving, and collective layers to facilitate recursive self-improvement and collective intelligence, addressing current limitations in dynamic environments.
+
+`PhysAI-Bench: A Benchmark for LLM-Based Agentic Decision-Making in Autonomous UAV-Centric Physical AI <https://arxiv.org/abs/2609.23695>`_
+    Introduces a benchmark for evaluating agentic decision-making in autonomous UAVs, using 10,178 instances to assess 29 foundation models, highlighting the challenges in achieving reliable autonomy.
+
+Computer Vision
+---------------
+`Vins-mono: A robust and versatile monocular visual-inertial state estimator <https://arxiv.org/abs/1708.03852>`_
+    A monocular visual inertial system (VINS) that uses optimization for SLAM and relocalization.
+
+`Good features to track <https://ieeexplore.ieee.org/document/323794>`_
+    Pairing feature track selection with the Lucas Kanade optical flow framework.
+
+`An iterative image registration technique with an application to stereo vision <https://dl.acm.org/doi/10.5555/1623264.1623280>`_
+    Using image gradients to track motion in imagery.
+
+Testing & Evaluation
+--------------------
+`AI Exposure and AI Resilience: A Two-Dimensional Assessment Framework for Software and Software-Based Business Model <https://arxiv.org/abs/2609.11321>`_
+    Develops AI Exposure and Resilience (AI-ER) as a two-dimensional framework to assess how artificial intelligence impacts software business models, enhancing traditional due diligence with metrics for both pressure and adaptability.
+

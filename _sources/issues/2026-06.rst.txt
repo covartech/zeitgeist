@@ -1,0 +1,103 @@
+The CoVar Zeitgeist: June, 2026
+===============================
+
+The June, 2026, issue of the CoVar Zeitgeist features research predominantly published in May, 2026.  
+
+This issue features:
+
+* A method to analyze LLM activations as natural language.
+* A study of shortcut learning when training deep neural nets.
+* A comparison of multi-agent and single-agent LLM systems under simlar compute budgets.
+* An RL framework to encourage long-term capabilities in LLMs.
+* A study on optimal pass rate for Binary-Reward RL.
+* A method to solve the cold-start problem by matching with an AI persona.
+
+`Check out the CoVar website! <https://covar.com/>`_
+
+Featured
+--------
+`Natural Language Autoencoders: Turning Claude’s thoughts into text <https://www.anthropic.com/research/natural-language-autoencoders>`_
+    Anthropic Natural Language Autoencoders, probes which convert internal LLM activations into natural language descriptions, allowing users to "read the thoughts" of a language model.  Demonstrates on internal versions of Claude.
+
+`Deciphering Shortcut Learning from an Evolutionary Game Theory Perspective <https://arxiv.org/pdf/2605.02658>`_
+    Studies the emergence of shortcuts in the training of deep neural networks.  Finds that gradient descent and stochastic gradient descent lead to different outcomes, with the former much more likely to use shortcuts.
+
+`Single-Agent LLMs Outperform Multi-Agent Systems on Multi-Hop Reasoning Under Equal Thinking Token Budgets <https://arxiv.org/pdf/2604.02460>`_
+    Finds that the better performance of multi-agent systems can be explained by an increase in compute compared to single-agent systems; when compute is normalized, single-agents may be more efficient.
+
+`StraTA: Incentivizing Agentic Reinforcement Learning with Strategic Trajectory Abstraction <https://arxiv.org/pdf/2605.06642>`_
+    How to encourage long-term capabilities in frontier LLM-based agents?  This paper develops a new type of RL framework which encodes explicit trajectory-level strategy to guide the agent.  
+    
+`Rollout Pass-Rate Control: Steering Binary-Reward RL Toward Its Most Informative Regime <https://arxiv.org/pdf/2605.05112>`_
+    Shows that 50% pass rate is optimal for rollouts, and uses this benchmark to future compute.
+
+`Adaptive Querying with AI Persona Priors <https://arxiv.org/pdf/2605.00696>`_
+    Seeks to solve the cold-start problem by comparing user behavior to the behavior of a set of AI personas.  Uses Bayesian experimental design methods to find which AI persona best matches the user.
+
+LLMs
+----
+`How LLMs Distort Our Written Language <https://sites.google.com/view/llmwritingdistortion/home>`_
+    Analyzes the differences between human and language model generated writing.  Finds that LLMs alter both the style and the meaning of the written word.
+
+`Segmenting Human–LLM Co-authored Text via Change Point Detection <https://arxiv.org/pdf/2605.03723>`_
+    Develops a changepoint detection method to detect when writing in a document switches from human-generated to model-generated.  
+
+`Implicit Representations of Grammaticality in Language Models <https://arxiv.org/pdf/2605.05197>`_
+    Builds a probe to investigate whether language models have a sense of grammaticality distinct from string probabilities.  Finds weak evidence supporting this hypothesis.
+
+`Natural Language Autoencoders: Turning Claude’s thoughts into text <https://www.anthropic.com/research/natural-language-autoencoders>`_
+    Anthropic Natural Language Autoencoders, probes which convert internal LLM activations into natural language descriptions, allowing users to "read the thoughts" of a language model.  Demonstrates on internal versions of Claude.
+
+Testing & Evaluation
+--------------------
+`MathDuels: Evaluating LLMs as Problem Posers and Solvers <https://arxiv.org/pdf/2604.21916>`_
+    Decomposes frontier model mathematical abilities into question posing and question solving components: finds that these capabilities are uncoupled.  
+
+Autonomy
+--------
+`Single-Agent LLMs Outperform Multi-Agent Systems on Multi-Hop Reasoning Under Equal Thinking Token Budgets <https://arxiv.org/pdf/2604.02460>`_
+    Finds that the better performance of multi-agent systems can be explained by an increase in compute compared to single-agent systems; when compute is normalized, single-agents may be more efficient.
+
+Reinforcement Learning
+----------------------
+`Model Spec Midtraining: Improving How Alignment Training Generalizes <https://arxiv.org/pdf/2605.02087>`_
+    Introduces model spec midtraining, a reinforcement learning step applied between pretraining and dedicated alignment training which leads to improved alignment.
+
+`Rollout Pass-Rate Control: Steering Binary-Reward RL Toward Its Most Informative Regime <https://arxiv.org/pdf/2605.05112>`_
+    Shows that 50% pass rate is optimal for rollouts, and uses this benchmark to future compute.
+
+`StraTA: Incentivizing Agentic Reinforcement Learning with Strategic Trajectory Abstraction <https://arxiv.org/pdf/2605.06642>`_
+    How to encourage long-term capabilities in frontier LLM-based agents?  This paper develops a new type of RL framework which encodes explicit trajectory-level strategy to guide the agent.  
+
+Statistics
+----------
+`Adaptive Querying with AI Persona Priors <https://arxiv.org/pdf/2605.00696>`_
+    Seeks to solve the cold-start problem by comparing user behavior to the behavior of a set of AI personas.  Uses Bayesian experimental design methods to find which AI persona best matches the user.
+
+`Deciphering Shortcut Learning from an Evolutionary Game Theory Perspective <https://arxiv.org/pdf/2605.02658>`_
+    Studies the emergence of shortcuts in the training of deep neural networks.  Finds that gradient descent and stochastic gradient descent lead to different outcomes, with the former much more likely to use shortcuts.
+
+Position Papers
+---------------
+`Position: agentic AI orchestration should be Bayes-consistent <https://arxiv.org/pdf/2605.00742>`_
+    Advocates for the creation of agentic AI systems where the component parts such as tools and LLMs remain black boxes while a controlling layer operates according to a transparent Bayesian decision-theoretic approach.
+
+CoVar Seminar
+-------------
+`Asynchronous Methods for Deep Reinforcement Learning <https://arxiv.org/pdf/1602.01783>`_
+    Early work in Distributed RL which runs multiple actor-learners asynchronously which collect experiences and update the policy in parallel.
+
+`IMPALA: Scalable Distributed Deep-RL with Importance Weighted Actor-Learner Architectures <https://arxiv.org/pdf/1802.01561>`_
+    Distributed RL work in which actors are separeted from learners. Actors collect experiences in parallel, while learners update policy from these experiences.
+
+`SEED RL: Scalable and Efficient Deep-RL with Accelerated Central Inference <https://arxiv.org/pdf/1910.06591>`_
+    Distributed RL work which further separates actors from learners. Actors only step through the environment and have no access to the policy. Leverages TPUs for substantial speedup.
+
+`EnvPool: A Highly Parallel Reinforcement Learning Environment Execution Engine <https://arxiv.org/pdf/2206.10558>`_
+    Designs and implements a framework for efficient parallel execution of RL environments leveraging C++ threadpool.
+
+`RaPD: Resolution-Agnostic Pixel Diffusion via Semantics-Enriched Implicit Representations <https://arxiv.org/pdf/2605.15908>`_
+    Perform text to image diffusion in embedding space instead of the final image size, then use an attention based model to decode to arbitrary resolution, significantly decreasing runtime for high resolution image diffusion.
+
+`Bayesian Test-time Adaptation for Object Recognition and Detection with Vision-language Models <https://arxiv.org/pdf/2510.02750>`_
+    Test-time adaptation method which fuses predictions of a VLM with a cache-based prediction for object recognition and detection tasks.

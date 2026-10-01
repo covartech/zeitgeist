@@ -1,0 +1,50 @@
+The CoVar Zeitgeist: July, 2026
+===============================
+
+A curated list of the latest research in AI.
+
+`Check out the CoVar website! <https://covar.com/>`_
+
+Featured
+--------
+`Efficiently Reconstructing Dynamic Scenes One D4RT at a Time <https://arxiv.org/pdf/2512.08924>`_
+    This paper introduces D4RT, a simple yet powerful feedforward model designed to efficiently reconstruct complex dynamic scenes. D4RT utilizes a unified transformer architecture to jointly infer depth, spatio-temporal correspondence, and full camera parameters from a single video.
+
+`RF-DETR: Neural Architecture Search for Real-Time Detection Transformers <https://arxiv.org/pdf/2511.09554>`_
+    RF-DETR ("Roboflow Detection Transformer") builds on the LW-DETR ("Lightweight DETR") framework, leveraging what they call a neural architecture search (NAS) to select models that tradeoff accuracy and latency from a single training run. During training run, they vary hyperparameters of the transformer including number of patches, context window size, decoder layers, number of queries, and input image resolution. They find that this variation during training produces more-robust models as well as yields multiple models from a single run."
+
+Autonomy
+--------
+`World Models: A Comprehensive Survey of Architectures, Methodologies, Reasoning Paradigms, and Applications <https://arxiv.org/abs/2606.00133>`_
+    Provides a comprehensive taxonomy of world models, surveying diverse architectures, reasoning strategies, and applications to unify the field and guide future research directions.
+
+Reinforcement Learning
+----------------------
+`Scaling World-Model Reinforcement Learning Through Diffusion Policy Optimization <https://arxiv.org/abs/2605.26282>`_
+    Introduces Model-Based Diffusion Policy Optimization (MBDPO), a framework that unifies search and policy optimization using diffusion processes to improve world model scalability and mitigate training misalignment.
+
+`AutoTool: Dynamic Tool Selection and Integration for Agentic Reasoning <https://arxiv.org/abs/2512.13278>`_
+    AutoTool introduces a dynamic framework enabling LLM agents to select and integrate tools adaptively during complex reasoning, improving performance across diverse tasks and unseen toolsets.
+
+Theory
+------
+`Why Larger Models Learn More: Effects of Capacity, Interference, and Rare-Task Retention <https://arxiv.org/abs/2605.29548>`_
+    Investigates why larger models learn rare tasks better than smaller ones, proposing that increased capacity reduces data-induced interference and allows for better resource allocation across diverse tasks.
+
+VLMs
+----
+`PerceptionDLM: Parallel Region Perception with Multimodal Diffusion Language Models <https://arxiv.org/abs/2606.19534>`_
+    Introduces a multimodal diffusion language model and benchmark for multi-region captioning. Experiments indicate competitive performance with significant speedup.
+
+Adversarial Methods
+-------------------
+`DarkLLM: Learning Language-Driven Adversarial Attacks with Large Language Models <https://arxiv.org/abs/2605.18868>`_
+    DarkLLM trains an LLM to translate natural language instructions into visual adversarial perturbations, creating a unified, flexible framework for generating effective attacks against diverse foundation models.
+
+`Localization then Neutralization: Gradient-guided Token Suppression against Visual Prompt Injection Attack <https://arxiv.org/abs/2605.25194>`_
+    Proposes Gradient Token Masking (GTM) to defend multimodal models against visual prompt injection by localizing and neutralizing critical image tokens using hidden-state gradient norms.
+
+Object Detection
+----------------
+`RadarSim: Simulating Single-Chip Radar via Multimodal Neural Fields <https://arxiv.org/abs/2605.26328>`_
+    RadarSim proposes a differentiable renderer that leverages camera data to generate high-resolution range-Doppler radar images, improving geometry reconstruction beyond the physical constraints of radar-only methods.

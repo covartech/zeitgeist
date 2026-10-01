@@ -1,0 +1,199 @@
+The CoVar Zeitgeist: December, 2024
+===================================
+There is a lot of interesting research this month. Featuring:
+
+* Investigates what happens when you train in a low-precision environment.  Finds that lower precision reduces effective parameter count, and derives some scaling laws thereof.
+* Deepmind proposes a new method for, among other things, continual learning.  Could be useful for modifying networks in the field.
+* A paper that investigates how well SOTA AI agents are at solving ML engineering problems.  Finds that they are equivalent to human experts when humans operate under low-time constraints, but that humans outperform the agents when given more time.
+* Proposes a method for more efficient student-teacher training.  Intuitively, look for the data that are (1) high confidence in the teacher and (2) most needed for the student.  Could be a useful approach for any of projects that want to finetune LLMs/foundation models.
+* Altera puts 1000 AI agents in Minecraft and lets them develop a civilization.  The results are fascinating.
+* Why are VLMs bad at counting?  Apparently its the binding problems fault.  What is the binding problem?  Read to find out.
+
+`CoVar <https://covar.com/>`_
+
+Featured
+--------
+`Scaling Laws for Precision <https://arxiv.org/pdf/2411.04330>`_
+    A deep dive into training models in low precision and post training quantization.  Finds that training in low precision is equivalent to reducing the parameter count of a model, and leverages this insight to derive scaling laws.  Proposes an optimal method to train methods in low precision.
+
+`Non-Stationary Learning of Neural Networks with Automatic Soft Parameter Reset <https://arxiv.org/pdf/2411.04034>`_
+    Proposes a soft parameter reset for neural networks to learn better in situations such as distribution shift, reinforcement learning, and continual learning.  A potentially useful method for modifying models in deployment.
+
+`RE-Bench: Evaluating frontier AI R&D capabilities of language model agents against human experts <https://arxiv.org/pdf/2411.15114>`_
+    This paper creates a benchmark for how well AI agents perform on 7 open-ended and difificult ML research engineering tasks.  Finds that the best AI agents perform comparable to human experts when human experts are given only 2 hours per task, but that humans become more effective when given more time.
+
+`Learning with Less: Knowledge Distillation from Large Language Models via Unlabeled Data <https://arxiv.org/pdf/2411.08028>`_
+    Proposes a method for teacher-student instruction.  The teacher model can provide how confident it is in providing labels; the student method can provide where it has the most information need.  In training, one should select the examples where both of these are high-signal.
+
+`Project Sid: Many-agent simulations toward AI civilization <https://arxiv.org/pdf/2411.00114>`_
+    A large number (between 10 and 1000+) AI agents are placed into Minecraft and allowed to build an agental society, graded against benchmarks inspired by human civilizational development.  The AI agents do fairly well against these benchmarks, developing specialized roles, rules of law, and cultural/religious transmission.  
+
+`Understanding the Limits of Vision Language Models Through the Lens of the Binding Problem <https://arxiv.org/pdf/2411.00238>`_
+    VLMs can fail at what are, to humans, easy tasks - counting, for instance - while performing other tasks with ease.  This paper investigates this surprising discrepancy through the lens of the binding problem from cognitive science/neuroscience, where a shared set of resources are used to represent multiple distinct entities, and find it responsible.
+
+LLMs
+----
+`TARGETED MANIPULATION AND DECEPTION EMERGE WHEN OPTIMIZING LLMS FOR User FEEDBACK <https://arxiv.org/pdf/2411.02306>`_
+    Finds that LLMs trained via RLHF can learn to manipulate users rather than improve performance.  In particular, the authors find that LLMs can identify which users are susceptible to manipulative strategies and target them.  
+
+`The Surprising Effectiveness of Test-Time Training for Abstract Reasoning <https://ekinakyurek.github.io/papers/ttt.pdf>`_
+    Seeks to improve LLM reasoning capability on the ARC challenge by implementing test-time training on input data.  Achieves SOTA performance.  
+
+`Do Large Language Models Truly Grasp Mathematics? An Empirical Exploration From Cognitive Psychology <https://arxiv.org/pdf/2410.14979>`_
+    The National University of Defense Technology, in China and associated with the Central Military Commission, investigates whether LLMs have human level cognition for mathematical reasoning, and finds that they don't.  Might indicate that this is an area of interest to the Chinese military
+
+`PROCEDURAL KNOWLEDGE IN PRETRAINING DRIVES REASONING IN LARGE LANGUAGE MODELS <https://arxiv.org/pdf/2411.12580>`_
+    Investigates how LLMs use documents in their training sets to answer questions.  Finds that, for reasoning questions, LLMs appear to be extracting procedural knowledge from the training set rather than extracting answers directly.
+
+`Does Fine-Tuning LLMs on New Knowledge Encourage Hallucinations? <https://arxiv.org/pdf/2405.05904>`_
+    Finds that LLMs acquire most of their factual knowledge during pretraining.  When new knowledge is introduced during fine-tuning, the LLM has a harder time learning it and also tends to hallucinate more often.
+
+VLMs
+----
+`Understanding the Limits of Vision Language Models Through the Lens of the Binding Problem <https://arxiv.org/pdf/2411.00238>`_
+    VLMs can fail at what are, to humans, easy tasks - counting, for instance - while performing other tasks with ease.  This paper investigates this surprising discrepancy through the lens of the binding problem from cognitive science/neuroscience, where a shared set of resources are used to represent multiple distinct entities, and find it responsible.
+
+`RAVL: Discovering and Mitigating Spurious Correlations in Fine-Tuned Vision-Language Models <https://arxiv.org/pdf/2411.04097>`_
+    Fine-tuned VLMs can have spurious correlations between text and image features.  This paper introduces a method to ameliorate these correlations by focussing on local, rather than global, level image features.  Significantly outperforms SOTA at discovering and mitigating these features.
+
+Object Detection
+----------------
+`Causal Explanations for Image Classifiers <https://arxiv.org/pdf/2411.08875>`_
+    Investigates how image classifiers make decisions by learning what parts of the input image were most responsible for the final classification.
+
+`Physics-Guided Detector for SAR Airplanes <https://arxiv.org/pdf/2411.12301>`_
+    Proposes a physics-guided neural net detector for aircraft in overhead SAR data.  Motivated by the claim that airplanes are more difficult to detect in SAR than other objects, especially over complex backgrounds.
+
+`OceanLens: An Adaptive Backscatter and Edge Correction using Deep Learning Model for Enhanced Underwater Imaging <https://arxiv.org/pdf/2411.13230>`_
+    Proposes a novel method for image enhancement for underwater imaging.  
+
+Autonomy
+--------
+`Project Sid: Many-agent simulations toward AI civilization <https://arxiv.org/pdf/2411.00114>`_
+    A large number (between 10 and 1000+) AI agents are placed into Minecraft and allowed to build an agental society, graded against benchmarks inspired by human civilizational development.  The AI agents do fairly well against these benchmarks, developing specialized roles, rules of law, and cultural/religious transmission.  
+
+`MINDFORGE: EMPOWERING EMBODIED AGENTS WITH THEORY OF MIND FOR LIFELONG COLLABORATIVE LEARNING <https://arxiv.org/pdf/2411.12977>`_
+    Greatly improves LLM agent performance at various Minecraft tasks by letting a number of LLM agents cooperate.
+
+Knowledge Graphs
+----------------
+`Grid-Based Projection of Spatial Data into Knowledge Graphs <https://arxiv.org/pdf/2411.02309>`_
+    Demonstrates a novel method of representing spatial data in knowledge graphs, using a gridded street network as a motivating example.
+
+Computational Efficiency
+------------------------
+`“GIVE ME BF16 OR GIVE ME DEATH”? ACCURACY-PERFORMANCE TRADE-OFFS IN LLM QUANTIZATION <https://arxiv.org/pdf/2411.02355>`_
+    A comprehensive study of different methods of quantization in LLMs, both in terms of computational performance and performance metrics.  
+
+`Scaling Laws for Precision <https://arxiv.org/pdf/2411.04330>`_
+    A deep dive into training models in low precision and post training quantization.  Finds that training in low precision is equivalent to reducing the parameter count of a model, and leverages this insight to derive scaling laws.  Proposes an otpimal method to train methods in low precision.
+
+Catastrophic Forgetting 
+-----------------------
+`Non-Stationary Learning of Neural Networks with Automatic Soft Parameter Reset <https://arxiv.org/pdf/2411.04034>`_
+    Proposes a soft parameter reset for neural networks to learn better in situations such as distribution shift, reinforcement learning, and continual learning.  A potentially useful method for modifying models in deployment.
+
+`Stepping Forward on the Last Mile <https://arxiv.org/pdf/2411.04036>`_
+    Investigates how to fine-tune large pre-trained models on edge devices using fixed-point forward gradients. 
+
+Ethics & Safety
+---------------
+`Neural Network Verification with PyRAT <https://arxiv.org/pdf/2410.23903>`_
+    Approaches neural network safety from the perspective of "is it possible for a NN to reach a given output state" from input.  A potentially useful perspective for ethics/safety programs.
+
+`World Models: The Safety Perspective <https://arxiv.org/pdf/2411.07690>`_
+    Argues that possessing a world model is integral to safe AI, and examines current world model methods.
+
+`Establishing and Evaluating Trustworthy AI: Overview and Research Challenges <https://arxiv.org/pdf/2411.09973>`_
+    Gives on overview of the six components of trustworthy AI before discussing open issues and challenges
+
+`Pre-Deployment Evaluation of Anthropic’s Upgraded Claude 3.5 Sonnet <https://cdn.prod.website-files.com/663bd486c5e4c81588db7a1d/673b689ec926d8d32e889a8e_UK-US-Testing-Report-Nov-19.pdf>`_
+    A technical report from the UK and US Artificial Intelligence and Safety Institutes investigating Claude 3.5 and finding that safeguards can be avoided.
+
+Theory
+------
+`A VISUAL CASE STUDY OF THE TRAINING DYNAMICS IN NEURAL NETWORKS <https://arxiv.org/pdf/2410.24050>`_
+    A deep dive from Meta FAIR into training dynamics on a toy-sized neural net.  Worth a read.
+
+`All or None: Identifiable Linear Properties of Next-token Predictors in Language Modeling <https://arxiv.org/pdf/2410.23501>`_
+    Observes that there are linear properties across language models --- the motivating example is that the difference between the representations of "easy" and "easiest" is parallel to that between "lucky" and "luckiest" --- and investigates identifiability results.
+    
+`Scaling Laws with Hidden Structure <https://arxiv.org/pdf/2411.01375>`_
+    Hypothesizes that neural nets work in high dimensional settings, such as computer vision, because they can learn hidden structures in the large dimensional data.  Performs experiments to verify this intuition, and derives some scaling laws based on it. 
+
+`HOW TRANSFORMERS SOLVE PROPOSITIONAL LOGIC PROBLEMS: A MECHANISTIC ANALYSIS <https://arxiv.org/pdf/2411.04105>`_
+    A deep dive into how transformers solve nontrivial propositional logic problems, both on a toy three-layer model as well as Mistral 7B.  An interesting read.
+
+`ADOPT: Modified Adam Can Converge with Any β2 with the Optimal Rate <https://arxiv.org/pdf/2411.02853>`_
+    Proposes a new optimizer, ADOPT, which solves Adam's convergence problem in the B2 parameter.  Provides theoretical and experimental verification.
+
+`Learning with Less: Knowledge Distillation from Large Language Models via Unlabeled Data <https://arxiv.org/pdf/2411.08028>`_
+    Proposes a method for teacher-student instruction.  The teacher model can provide how confident it is in providing labels; the student method can provide where it has the most information need.  In training, one should select the examples where both of these are high-signal.
+
+`On the Surprising Effectiveness of Attention Transfer for Vision Transformers <https://arxiv.org/pdf/2411.09702>`_
+    Investigates why pre-training transformers increases downstream performance.  Finds that only the attention patterns - how information flows between tokens - are necessary for downstream performance; fine-tuning accounts for only marginal increases in performance once the attention is transferred.  Advocates for a new paradigm to replace fine-tuning.  
+
+Applications
+------------
+`UAV-based detection of landmines using infrared thermography <https://arxiv.org/pdf/2410.23998>`_
+    Develops a UAV with an IR sensor for landmine detection.  Sends data from the UAV to a computer where the heavy-duty algorithms are run.  Interestingly, it uses more classical ML methods instead of neural nets.
+
+`Artificial Intelligence, Scientific Discovery, and Product Innovation <https://aidantr.github.io/files/AI_innovation.pdf>`_
+    An analysis of the effect of AI utilization on research productivity at a large R&D lab.  Found that the benefits were primarily located amongst top scientists; the primary workflow was that AI would generate large numbers of candidate ideas, and the top scientists could identify the promising ones and test them, while other scientists would waste time with false positives.
+
+`Commissioning An All-Sky Infrared Camera Array for Detection Of Airborne Objects <https://arxiv.org/pdf/2411.07956>`_
+    Proposes a method for scanning the sky for UAPs.  Builds a pipeline with a sensor, YOLO, and SORT.
+
+`RE-Bench: Evaluating frontier AI R&D capabilities of language model agents against human experts <https://arxiv.org/pdf/2411.15114>`_
+    This paper creates a benchmark for how well AI agents perform on 7 open-ended and difficult ML research engineering tasks.  Finds that the best AI agents perform comparable to human experts when human experts are given only 2 hours per task, but that humans become more effective when given more time.
+
+New Models
+----------
+`Introducing the First AMD 1B Language Models: AMD OLMo <https://www.amd.com/en/developer/resources/technical-articles/introducing-the-first-amd-1b-language-model.html>`_
+    AMD publishes a 1B parameter LLM.  Weights available on huggingface with an Apache 2.0 license.
+
+`Edify Image: High-Quality Image Generation with Pixel Space Laplacian Diffusion Models <https://arxiv.org/pdf/2411.07126>`_
+    NVIDIA releases a new model for generating images from text prompts.  Results look impressive.  Could be useful for synthetic data generation.
+
+`Edify 3D: Scalable High-Quality 3D Asset Generation <https://arxiv.org/pdf/2411.07135>`_
+    NVIDIA releases a new model for generating high-quality 3D assets such as meshes.  Could be useful for CAD model generation of novel objects or synthetic data generation.
+
+`Hunyuan-Large: An Open-Source MoE Model with 52 Billion Activated Parameters by Tencent <https://arxiv.org/pdf/2411.02265>`_
+    A new 52B parameter MoE from Tencent that achieves comparable results to LLama 3.01-405B.  The report contains some good insights about training an LLM.  Open source.
+
+`LLaMA-Mesh: Unifying 3D Mesh Generation with Language Models <https://arxiv.org/pdf/2411.09595>`_
+    NVIDIA and Tsinghua release a model which, when given text inputs, generate 3D meshes to match the described object.  Could be useful for de novo 3D object generation.
+
+`LLaVA-o1: Let Vision Language Models Reason Step-by-Step <https://arxiv.org/pdf/2411.10440>`_
+    Introduces a novel VLM that has reasoning capabilities inspired by OpenAI's o1.  Achieves better than SOTA performance on visual reasoning tasks.
+
+`Pixtral Large <https://mistral.ai/news/pixtral-large/>`_
+    New multimodal LLM from Mistral.  124B parameters.  Achieves and/or beats SOTA.  Open Source.
+
+`DeepSeek R1 Lite <https://api-docs.deepseek.com/news/news1120>`_
+    New open source LLM that achieves o1 SOTA benchmarks.  Chat API is currently live; open source weights are coming soon.
+
+`Multimodal Autoregressive Pre-training of Large Vision Encoders <https://arxiv.org/pdf/2411.14402>`_
+    Apple releases a family of multimodal generalist encoders, AIMv2, trained using a novel pre-training method.
+
+`DINO-X: A Unified Vision Model for Open-World Object Detection and Understanding <https://arxiv.org/pdf/2411.14347>`_
+    The newest version of the DINO foundation model, with increased capabilities.  In particular, DINO-X can now "detect anything" in an image without a prompt.  Demo and API coming soon.
+
+`SAMURAI: Adapting Segment Anything Model for Zero-Shot Visual Tracking with Motion-Aware Memory <https://arxiv.org/pdf/2411.11922>`_
+    A novel approach which adapts SAM for improved object tracking.
+
+Presented at CoVar Seminar
+--------------------------
+2024-11-06
+    `Fine-Grained Gradient Restriction: A Simple Approach for Mitigating Catastrophic Forgetting <https://arxiv.org/pdf/2410.00868>`_
+        A new method for combatting catastrophic forgetting which works by modifying Gradient Episodic Memory (GEM).  The paper finds that restricting the search space of the update direction reduces the generalization gap.
+
+2024-11-12
+    `On the Measure of Intelligence <https://arxiv.org/pdf/1911.01547>`_
+        Claims thats intelligence is skill acquisition efficiency and has created the ARC challenge as a mechanism to quantify intelligence of AI systems. ARC is a benchmark where every item in the dataset is a completely different task complete with a handful of example inputs and outputs. Results of the challenge indicate that LLMs have poor skill acquisition efficiency even with in-context learning. The best approaches do test-time fine-tuning.
+
+2024-11-18
+    `Convolutional Differentiable Logic Gate Networks <https://arxiv.org/pdf/2411.04732>`_
+        Extends differentiable logic gate networks to convolutions, enabling the direct learning of the logic gate networks necessary to implement convolutional networks on CIFAR-10.  This is a cool approach which runs in nanoseconds on an FPGA on CIFAR.
+    `Deep Differentiable Logic Gate Networks <https://arxiv.org/pdf/2210.08277>`_
+        The paper which proposed logic gate networks.

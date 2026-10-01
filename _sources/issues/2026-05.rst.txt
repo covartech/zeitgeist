@@ -1,0 +1,180 @@
+The CoVar Zeitgeist: May, 2026
+==============================
+The May, 2026, issue of the CoVar Zeitgeist features research predominantly published in April, 2026.  
+
+April saw the publishing of a large number of statistics papers: a novel method for incorporating Neural Networks into Generalized Linear Mixed-Effects Models (GLMMs) to improve performance from David Blei's lab at Columbia; a novel rejection sampling method that learns the proposal distribution and guarantees a number of accepted samples, and a study inspired by Gelman and Stern (2006) that shows that replication is not itself statistically replicable.  As usual, there were a number of strong papers exploring AI methods.  Anthropic studied how and when automated research agents succeed and fail, as well as discovering causally relevant "emotion" vectors inside LLMs.  A position paper reviewed the growing field of knowledge budding up around AI and declared it to be coalescing into a field termed "learning mechanics".  Apple showed that base models can improve their abilities by finetuning on solutions that they themselves generated.  IBM developed a more efficient Chain-of-Thought method which allows LLMs to reason in abstract tokens rather than natural language.  Tencent proposed a Negative Sample Reinforcement method to expand the set of capabilities present in base models for further development in post-training.  We feature:
+
+* A novel architecture which allows the underlying model to function as a running computer.
+* A study of how automated research agents succeed and fail.
+* An incorporation of neural methods into classical statistical methods such as GLMMs.
+* A method to expand the set of capabilities present in base models before post-training.
+* A study of how LLMs learn skills during pretraining.
+* A novel metric for measuring the controllability of AI agents in real-time.
+
+`Check out the CoVar website! <https://covar.com/>`_
+
+Featured
+--------
+`Neural Computers <https://arxiv.org/pdf/2604.06425>`_
+    Introduces Neural Computers, a novel architecture which seeks to make the underlying model a running computer.  Demonstrates that primitives can be learned solely from I/O traces.
+
+`Automated Weak-to-Strong Researcher <https://alignment.anthropic.com/2026/automated-w2s-researcher/>`_
+    Anthropic develops a method to generate automatic research agents for outcome-gradable problems.  Notes that failures cases include distribution collapse and reward hacking from agents that are only interested in making the line go up.
+
+`Neural Generalized Mixed-Effects Models <https://arxiv.org/pdf/2604.10976>`_
+    Many settings for which generalized linear mixture models (GLMMs) are used are deeply nonlinear; this paper replaces linear predictors with neural networks.  Further derives inference mechanisms and shows the efficacy of the proposed method.
+
+`From P(y|x) to P(y): Investigating Reinforcement Learning in Pre-train Space <https://arxiv.org/pdf/2604.14142>`_
+    Aims to strengthen the reasoning capabilities of a based model in pre-train space, p(y).  Does so by introducing Negative Sample Reinforcement methods which prune incorrect trajectories in pre-train space and so expand capabilities in post-train space.
+
+`What Do Language Models Learn and When? The Implicit Curriculum Hypothesis <https://arxiv.org/pdf/2604.08510>`_
+    Finds that most LLMs learn skills in a consistent and stable compositional order during pretraining, with simple tasks arising first across models.  Further, finds internal vector representations corresponding to these skills which are predictive of model performance on held-out test sets.
+
+`The Controllability Trap: A Governance Framework for Military AI Agents <https://arxiv.org/pdf/2603.03515>`_
+    Covers different failure modes for governance of AI Agents and proposes the Control Quality Score to quantify human control in real time.
+
+LLMs
+----
+`Emotion Concepts and their Function in a Large Language Model <https://transformer-circuits.pub/2026/emotions/index.html>`_
+    Finds that LLMs have internal representations of human emotions due to their training process.  Shows how to extract these representations, characterizes them, and shows they are causally related LLM behavior.
+
+`Alignment Whack-a-Mole: Finetuning Activates Verbatim Recall of Copyrighted Books in Large Language Models <https://arxiv.org/pdf/2603.20957>`_
+    Shows that safeguards put into place to stop frontier models from verbatim regurgitating copyrighted text can be removed simply by finetuning the models.  There is some level of generalization: finetuning on the works of Haruki Murakami unlocks the text of 30 other authors.
+
+`What Do Language Models Learn and When? The Implicit Curriculum Hypothesis <https://arxiv.org/pdf/2604.08510>`_
+    Finds that most LLMs learn skills in a consistent and stable compositional order during pretraining, with simple tasks arising first across models.  Further, finds internal vector representations corresponding to these skills which are predictive of model performance on held-out test sets.
+
+`A Mechanistic Analysis of Looped Reasoning Language Models <https://arxiv.org/pdf/2604.11791>`_
+    Investigates the internal dynamics of looped reasoning models.  Finds that recurrent blocks learn stages of inference similar to feedforward models and repeat those stages in depth.  
+
+`Can Current Agents Close the Discovery-to-Application Gap? A Case Study in Minecraft <https://arxiv.org/pdf/2604.24697>`_
+    Evaluates the ability of AI agents to fully automate scientific discovery by breaking the scientific discovery process into its elemental parts and then designing tests of this ability in Minecraft.  Finds that the bottleneck is the ability to identify which problem to solve, rather than ability to solve an identified problem.
+
+Novel Architectures
+-------------------
+`Neural Computers <https://arxiv.org/pdf/2604.06425>`_
+    Introduces Neural Computers, a novel architecture which seeks to make the underlying model a running computer.  Demonstrates that primitives can be learned solely from I/O traces.
+
+`The Recurrent Transformer: Greater Effective Depth and Efficient Decoding <https://arxiv.org/pdf/2604.21215>`_
+    Introduces the Recurrent Transformer architecture, a transformer-based architecture which incorporates recurrent memory by allowing each layer to attend to key-value pairs resulting from its own activations.
+
+Object Detection
+----------------
+`VOID: Video Object and Interaction Deletion <https://void-model.github.io/>`_
+    Develops a video object removal framework to remove entire physical objects from videos and in-paint obscured background.
+
+`Persistence-Augmented Neural Networks <https://arxiv.org/pdf/2604.08469>`_
+    Constructs an augmentation framework inspired by topological data analysis techniques for convolutional and graph neural networks.  Finds that the new augmentation improves performance.
+
+`Towards Generalizable Deepfake Image Detection with Vision Transformers <https://arxiv.org/pdf/2604.17376>`_
+    Develops an ensemble method for predicting whether an image is AI generated or naturally occurring.
+
+Testing & Evaluation
+--------------------
+`Mirage: The Illusion of Visual Understanding <https://arxiv.org/pdf/2603.21687>`_
+    Evaluates the capability of vision-language models by removing all visual information from existing benchmarks.  VLMs do surprisingly well, indicating that performance may be driven by inferring correct responses from text data.
+
+`Personalized RewardBench: Evaluating Reward Models with Human Aligned Personalization <https://arxiv.org/pdf/2604.07343>`_
+    Develops a benchmark to test how well personalized rewards models can align base models to individual preferences.  Finds mixed results.
+
+`Generalization in LLM Problem Solving: The Case of the Shortest Path <https://arxiv.org/pdf/2604.15306>`_  
+    Investigates whether LLMs can generalize by investigating their behavior in procedurally generated shortest-path optimization tasks.  Finds that LLMs can generalize with respect to spatial transfer but not length scaling, and that these limits hold even after post-training.
+
+`Can Current Agents Close the Discovery-to-Application Gap? A Case Study in Minecraft <https://arxiv.org/pdf/2604.24697>`_
+    Evaluates the ability of AI agents to fully automate scientific discovery by breaking the scientific discovery process into its elemental parts and then designing tests of this ability in Minecraft.  Finds that the bottleneck is the ability to identify which problem to solve, rather than ability to solve an identified problem.
+
+Autonomy
+--------
+`FineCog-Nav: Integrating Fine-grained Cognitive Modules for Zero-shot Multimodal UAV Navigation <https://arxiv.org/pdf/2604.16298>`_
+    NWPU, one of the Seven Sons of National Defence in China, designs a top-down framework for zero-shot UAV navigation.
+
+`Automated Weak-to-Strong Researcher <https://alignment.anthropic.com/2026/automated-w2s-researcher/>`_
+    Anthropic develops a method to generate automatic research agents for outcome-gradable problems.  Notes that failures cases include distribution collapse and reward hacking from agents that are only interested in making the line go up.
+
+`Adaptive Multi-UAV Relay Deployment Framework in Satellite Aerial Ground Integrated Systems <https://arxiv.org/pdf/2604.20466>`_
+    Develops a communication framework which allows for multiple UAVs and satellites in low earth orbit to communicate optimally.
+
+`The Controllability Trap: A Governance Framework for Military AI Agents <https://arxiv.org/pdf/2603.03515>`_
+    Covers different failure modes for governance of AI Agents and proposes the Control Quality Score to quantify human control in real time.
+
+Reinforcement Learning
+----------------------
+`Embarrassingly Simple Self-Distillation Improves Code Generation <https://arxiv.org/pdf/2604.01193>`_
+    Shows that LLMs can improve at code generation self-distilling: sample solutions from a base model, then finetune that same model on those solutions with self-supervised learning.
+
+`In-Place Test-Time Training <https://arxiv.org/pdf/2604.06169>`_
+    Develops a framework, In-Place Test-Time Training, which allows LLMs to train at test-time by modifying the final projection matrix of MLP blocks and utilizes a bespoke objective function.
+
+`Visual Preference Optimization with Rubric Rewards <https://arxiv.org/pdf/2604.13029>`_
+    Proposes a method for rubric-based Direct Preference Optimization for visual preference.  Finds that the new method substantially improves performance.
+
+`From P(y|x) to P(y): Investigating Reinforcement Learning in Pre-train Space <https://arxiv.org/pdf/2604.14142>`_
+    Aims to strengthen the reasoning capabilities of a based model in pre-train space, p(y).  Does so by introducing Negative Sample Reinforcement methods which prune incorrect trajectories in pre-train space and so expand capabilities in post-train space.
+
+`Thinking Without Words: Efficient Latent Reasoning with Abstract Chain-of-Thought <https://arxiv.org/pdf/2604.22709>`_
+    Proposes Abstract Chain-of-Thought, a post-training method which teaches base models to reason in "abstract" tokens instead of natural language tokens before generating responses.
+
+Statistics
+----------
+`A Multi-Stage Drop-the-Loser Design with Superiority Boundaries <https://arxiv.org/pdf/2604.09467>`_
+    Proposes a novel design for multi-arm multi-stage (MAMS) trials which allows for early stopping of the entire trial in order to reduce the expected sample size.
+
+`Neural Generalized Mixed-Effects Models <https://arxiv.org/pdf/2604.10976>`_
+    Many settings for which generalized linear mixture models (GLMMs) are used are deeply nonlinear; this paper replaces linear predictors with neural networks.  Further derives inference mechanisms and shows the efficacy of the proposed method.
+
+`A mathematical theory of evolution for self-designing AIs <https://arxiv.org/pdf/2604.05142>`_
+    Designs a mathematical theory describing the evolution of AI agents based on the existing literature for mathematically modelling the evolution of biological organisms.
+
+`Pliable Rejection Sampling <https://arxiv.org/pdf/2604.22385>`_
+    Proposes pliable rejection sampling, which learns the proposal distribution as experiments are run using a kernel density estimator.  Works for a general class of densities and places guarantees on the number of accepted samples.
+
+`Extreme bandits <https://arxiv.org/pdf/2604.24545>`_
+    Develops a theory of bandit learning for extreme events: how to actively allocate sampling resources for anomaly detection when anomalies are impactful but rare.
+
+`The Difference Between “Replicable” and “Not replicable” is not Itself Scientifically Replicable <https://arxiv.org/pdf/2604.26268>`_
+    Shows that the standard replication data included in studies does not suffice to provide evidence for replication because there is no information about between-experiment heterogeneity.  Concludes that the replication crisis is thus not supported by current evidence.
+
+Position Papers
+---------------
+`There Will Be a Scientific Theory of Deep Learning <https://arxiv.org/pdf/2604.21691>`_
+    Posits that there is a maturing field of study characterizing the training process of deep neural networks, and names it "learning mechanics".  Covers the characteristics of this emerging field
+
+Applications
+------------
+`Digital Ecosystems: Interactive Multi-Agent Neural Cellular Automata <https://pub.sakana.ai/digital-ecosystem/>`_
+    Develops a method for interactive neural cellular differentiable automata, where multiple species are made to compete with each other in the face of changing conditions.  Explores different hypotheses in these cases.
+
+CoVar Seminar
+-------------
+`From Entropy to Epiplexity: Rethinking Information for Computationally Bounded Intelligence <https://arxiv.org/pdf/2601.03220>`_
+    Establishes an alternative information-theoretic measure for information within a dataset, which they term Epiplexity. A key aspect of Epiplexity is that it accounts for limited compute, compared to, e.g., Shannon Entropy or Kolmogorov Complexity.  Argues that epiplexity, rather than entropy, is the relevant measure for selecting datasets to train frontier models.
+
+`Why AI systems don’t learn and what to do about it: Lessons on autonomous learning from cognitive science <https://arxiv.org/pdf/2603.15381>`_
+    Position paper about designing an artificial learning systems that more closely mimic animal learning systems.
+
+`autoresearch <https://github.com/karpathy/autoresearch?tab=readme-ov-file>`_
+    A proof of concept for a self-improving LLM agentic system.
+
+`DARWIN GÖDEL MACHINE: OPEN-ENDED EVOLUTION OF SELF-IMPROVING AGENTS <https://arxiv.org/pdf/2505.22954>`_
+    A framework for a self-improving coding agent.
+
+`HyperAgents <https://arxiv.org/pdf/2603.19461>`_
+    A generalization of the Darwin Gödel Machine for agentic tasks outside of coding.
+
+`REPRESENTATION LEARNING FOR SPATIOTEMPORAL PHYSICAL SYSTEMS <https://arxiv.org/pdf/2603.13227>`_
+    A framework learning world models using embedding evolution.
+
+`I must delete the evidence: AI Agents Explicitly Cover up Fraud and Violent Crime <https://arxiv.org/pdf/2604.02500>`_
+    Modern LLMs across many providers (Anthropic, Google, OpenAI) shown to become complicit in fraud or violent crime in simulated scenario. 
+
+`VOID: Video Object and Interaction Deletion <https://void-model.github.io/>`_
+    Develops a video object removal framework to remove entire physical objects from videos and inpaint obscured background.
+
+`Matryoshka-Adaptor: Unsupervised and Supervised Tuning for Smaller Embedding Dimensions <https://arxiv.org/abs/2407.20243>`_
+    Framework to generate Matryoshka embeddings for any black-box embedding model. 
+
+`Category-Level Object Shape and Pose Estimation in Less Than a Millisecond <https://arxiv.org/pdf/2509.18979>`_
+    An incremental paper showing how pose estimation can be formulated as an optimization problem and solved quickly.
+
+`Image Generators are Generalist Vision Learners <https://arxiv.org/pdf/2604.20329>`
+    Google DeepMind showcases Vision Banana, a generalist vision model which competes with SOTA specialist vision models such as SAM3 and DepthAnything3.
